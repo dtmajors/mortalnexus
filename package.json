@@ -10,7 +10,7 @@
     "check": "node --check server.js && node --check src/config.js && node --check src/db.js && node --check src/security.js && node --check src/keyauth.js && node --check src/email.js && node --check src/discord.js && node --check src/firebase-admin.js && node --check src/releases.js && node --check src/fulfillment.js"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "dependencies": {
     "bcryptjs": "latest",
