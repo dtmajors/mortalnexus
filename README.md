@@ -29,7 +29,7 @@ No client application can be made mathematically impossible to patch. The shippe
 
 ## Local Preview
 
-Node.js 20 or newer is required.
+Node.js 22 or newer is required.
 
 ```powershell
 npm install
