@@ -1,0 +1,155 @@
+<%- include('partials/header', { title, bodyClass: 'home-page' }) %>
+
+<section class="hero">
+  <div class="hero-media" aria-hidden="true">
+    <img src="/assets/app-shell.png" alt="">
+  </div>
+  <div class="hero-shade"></div>
+  <div class="hero-content page-width">
+    <div class="hero-copy">
+      <span class="eyebrow"><span class="status-dot"></span> Built for Mortal Online 2</span>
+      <h1>Mortal Nexus</h1>
+      <p class="hero-lead">Live maps, exact crafting tools, decoded loot data, spell planning, macros, and field guides in one focused desktop companion.</p>
+      <div class="hero-actions">
+        <a class="button button-primary button-large" href="#pricing"><i data-lucide="key-round"></i>Get lifetime access</a>
+        <a class="button button-glass button-large" href="#inside"><i data-lucide="play"></i>See the app</a>
+      </div>
+      <div class="hero-proof" aria-label="Product highlights">
+        <span><i data-lucide="badge-check"></i>One-time purchase</span>
+        <span><i data-lucide="refresh-cw"></i>Future updates included</span>
+        <span><i data-lucide="monitor-down"></i>Windows desktop app</span>
+      </div>
+    </div>
+  </div>
+  <a class="hero-next" href="#features" aria-label="Explore Mortal Nexus features"><span>Explore the Nexus</span><i data-lucide="arrow-down"></i></a>
+</section>
+
+<section class="signal-strip" aria-label="Mortal Nexus tools">
+  <div class="page-width signal-grid">
+    <span><strong>2</strong> live regions</span>
+    <span><strong>1,800+</strong> reference entries</span>
+    <span><strong>400+</strong> creature records</span>
+    <span><strong>1</strong> connected toolkit</span>
+  </div>
+</section>
+
+<section class="section page-width" id="features">
+  <div class="section-heading split-heading">
+    <div><span class="eyebrow">One application</span><h2>Everything you reach for while playing.</h2></div>
+    <p>Mortal Nexus keeps location data, calculations, drop research, and repetitive controls in a single dark, fast interface built for a second screen.</p>
+  </div>
+
+  <div class="feature-ledger">
+    <article class="feature-row feature-row-primary">
+      <div class="feature-icon cyan"><i data-lucide="map"></i></div>
+      <div><h3>Live maps for Myrland and Sarducaa</h3><p>Search, pulse, filter, inspect, and edit detailed points of interest without losing the landmarks around your destination.</p></div>
+      <ul><li>Creature and resource locations</li><li>POI screenshots and details</li><li>Persistent category filters</li></ul>
+    </article>
+    <article class="feature-row">
+      <div class="feature-icon coral"><i data-lucide="hammer"></i></div>
+      <div><h3>Crafting that does the arithmetic</h3><p>Compare equipment, materials, extraction, refining, alchemy, cooking, and building requirements before committing resources.</p></div>
+      <ul><li>Material comparisons</li><li>Reverse search</li><li>Cost and result totals</li></ul>
+    </article>
+    <article class="feature-row">
+      <div class="feature-icon violet"><i data-lucide="skull"></i></div>
+      <div><h3>Creature and loot intelligence</h3><p>Look up combat profiles, butcher yields, known drops, containers, and resources from the data already assembled in the Nexus.</p></div>
+      <ul><li>Drop chances and quantities</li><li>Creature stats</li><li>Butchery materials</li></ul>
+    </article>
+    <article class="feature-row">
+      <div class="feature-icon amber"><i data-lucide="wand-sparkles"></i></div>
+      <div><h3>Spells, guides, and controlled macros</h3><p>Plan reagent totals, find focused community knowledge, and use configurable training controls with a visible master hotkey switch.</p></div>
+      <ul><li>Spell component tally</li><li>Curated guides</li><li>Background hotkeys</li></ul>
+    </article>
+  </div>
+</section>
+
+<section class="section product-stage" id="inside">
+  <div class="page-width">
+    <div class="section-heading centered-heading">
+      <span class="eyebrow">Inside Mortal Nexus</span>
+      <h2>Real tools. Real data. One consistent interface.</h2>
+      <p>Switch views below to inspect the application customers receive.</p>
+    </div>
+    <div class="product-tabs" data-gallery>
+      <div class="gallery-tabs" role="tablist" aria-label="Application screenshots">
+        <button class="gallery-tab active" type="button" role="tab" aria-selected="true" data-image="/assets/app-shell.png" data-alt="Mortal Nexus Sarducaa live map"><i data-lucide="sun"></i>Sarducaa</button>
+        <button class="gallery-tab" type="button" role="tab" aria-selected="false" data-image="/assets/app-myrland.png" data-alt="Mortal Nexus Myrland live map"><i data-lucide="mountain"></i>Myrland</button>
+        <button class="gallery-tab" type="button" role="tab" aria-selected="false" data-image="/assets/app-myrland-alt.png" data-alt="Mortal Nexus alternate Myrland map"><i data-lucide="map-pinned"></i>Alt map</button>
+        <button class="gallery-tab" type="button" role="tab" aria-selected="false" data-image="/assets/app-reference.png" data-alt="Mortal Nexus reference archive"><i data-lucide="library"></i>Reference</button>
+        <button class="gallery-tab" type="button" role="tab" aria-selected="false" data-image="/assets/app-loot.png" data-alt="Mortal Nexus creature loot database"><i data-lucide="skull"></i>Loot</button>
+        <button class="gallery-tab" type="button" role="tab" aria-selected="false" data-image="/assets/app-spells.png" data-alt="Mortal Nexus spell planner"><i data-lucide="sparkles"></i>Spells</button>
+        <button class="gallery-tab" type="button" role="tab" aria-selected="false" data-image="/assets/app-character.png" data-alt="Mortal Nexus character builder"><i data-lucide="user-round-cog"></i>Character</button>
+        <button class="gallery-tab" type="button" role="tab" aria-selected="false" data-image="/assets/app-crafting.png" data-alt="Mortal Nexus crafting calculator"><i data-lucide="hammer"></i>Crafting</button>
+        <button class="gallery-tab" type="button" role="tab" aria-selected="false" data-image="/assets/app-creatures.png" data-alt="Mortal Nexus creature codex"><i data-lucide="paw-print"></i>Creatures</button>
+        <button class="gallery-tab" type="button" role="tab" aria-selected="false" data-image="/assets/app-macros.png" data-alt="Mortal Nexus macro controls"><i data-lucide="zap"></i>Macros</button>
+        <button class="gallery-tab" type="button" role="tab" aria-selected="false" data-image="/assets/app-guides.png" data-alt="Mortal Nexus guides library"><i data-lucide="book-open"></i>Guides</button>
+        <button class="gallery-tab" type="button" role="tab" aria-selected="false" data-image="/assets/app-settings.png" data-alt="Mortal Nexus settings and commands"><i data-lucide="settings"></i>Settings</button>
+      </div>
+      <div class="app-window">
+        <div class="window-bar"><span></span><span></span><span></span><strong>Mortal Nexus</strong></div>
+        <img data-gallery-image src="/assets/app-shell.png" alt="Mortal Nexus Sarducaa live map">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section workflow-section">
+  <div class="page-width workflow-grid">
+    <div class="workflow-copy">
+      <span class="eyebrow">Made to stay out of the way</span>
+      <h2>Find the answer, then get back to Nave.</h2>
+      <p>The interface is designed for quick scanning on your main display or a second screen. Search once, keep your filters, and move between maps and reference tools without opening another browser maze.</p>
+      <a class="text-link" href="#pricing">View lifetime access <i data-lucide="arrow-right"></i></a>
+    </div>
+    <ol class="workflow-steps">
+      <li><span>01</span><div><strong>Search</strong><p>Type a creature, drop, town, resource, spell, or material.</p></div></li>
+      <li><span>02</span><div><strong>Inspect</strong><p>Read the relevant map card, calculation, table, or guide.</p></div></li>
+      <li><span>03</span><div><strong>Act</strong><p>Use the location, route context, totals, or timing in game.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section pricing-section" id="pricing">
+  <div class="page-width pricing-layout">
+    <div class="pricing-copy">
+      <span class="eyebrow">Simple access</span>
+      <h2>Buy it once. Keep the Nexus.</h2>
+      <p>No subscription and no feature tiers. Your purchase includes the Windows application, a personal license key, and all future Mortal Nexus updates.</p>
+      <div class="secure-note"><i data-lucide="shield-check"></i><span><strong>Secure checkout</strong>Payment is handled by Stripe. Your license is generated after payment and saved to your account.</span></div>
+    </div>
+    <div class="price-panel">
+      <div class="price-top"><span>Lifetime license</span><strong><%= price %></strong><small>one-time payment</small></div>
+      <ul class="included-list">
+        <li><i data-lucide="check"></i>Live Myrland and Sarducaa maps</li>
+        <li><i data-lucide="check"></i>Crafting and material calculators</li>
+        <li><i data-lucide="check"></i>Loot, creature, spell, and guide databases</li>
+        <li><i data-lucide="check"></i>Macros and second-screen tools</li>
+        <li><i data-lucide="check"></i>All future updates</li>
+      </ul>
+      <% if (user) { %>
+        <form method="post" action="/checkout">
+          <input type="hidden" name="csrf_token" value="<%= csrfToken %>">
+          <button class="button button-primary button-large button-full" type="submit"><i data-lucide="credit-card"></i>Continue to secure checkout</button>
+        </form>
+      <% } else { %>
+        <a class="button button-primary button-large button-full" href="/register?next=/buy"><i data-lucide="key-round"></i>Create account and purchase</a>
+      <% } %>
+      <div class="payment-methods"><span><i data-lucide="credit-card"></i>Cards</span><span><i data-lucide="smartphone"></i>Wallets</span><span><i data-lucide="landmark"></i>Eligible local methods</span></div>
+      <p class="microcopy">License keys are personal and may be hardware-bound by the application.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section faq-section">
+  <div class="page-width faq-layout">
+    <div><span class="eyebrow">Before you buy</span><h2>Common questions.</h2><p>Need something else? The support page has direct contact and setup help.</p><a class="button button-quiet" href="/support">Open support</a></div>
+    <div class="faq-list">
+      <details><summary>How do I receive my key?<i data-lucide="plus"></i></summary><p>After Stripe confirms payment, the site generates your personal KeyAuth license and places it in your account. It can also be emailed when transactional email is enabled.</p></details>
+      <details><summary>Are updates included?<i data-lucide="plus"></i></summary><p>Yes. Lifetime access includes future application updates and content added to Mortal Nexus.</p></details>
+      <details><summary>What system does it support?<i data-lucide="plus"></i></summary><p>Mortal Nexus is a Windows desktop application. The current installer is always available from your account.</p></details>
+      <details><summary>Is this an official Mortal Online 2 product?<i data-lucide="plus"></i></summary><p>No. Mortal Nexus is an independent community companion and is not affiliated with Star Vault.</p></details>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,3 @@
+<%- include('partials/header', { title, bodyClass: 'content-page' }) %>
+<section class="result-page page-width"><div class="result-mark error"><i data-lucide="triangle-alert"></i></div><span class="eyebrow">Error <%= status %></span><h1><%= status === 404 ? 'That path leads nowhere.' : 'The request could not be completed.' %></h1><p><%= message %></p><div class="result-actions"><a class="button button-primary" href="/">Return home</a><a class="button button-quiet" href="/support">Support</a></div></section>
+<%- include('partials/footer') %>

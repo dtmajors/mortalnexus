@@ -1,0 +1,13 @@
+<%- include('partials/header', { title, bodyClass: 'content-page' }) %>
+<section class="narrow-form-page page-width">
+  <span class="eyebrow">One-time setup</span>
+  <h1>Create the primary administrator.</h1>
+  <p>Enter the private bootstrap secret stored in Railway. This setup closes as soon as the first administrator is created.</p>
+  <% if (formError) { %><div class="form-alert"><i data-lucide="circle-alert"></i><%= formError %></div><% } %>
+  <form class="stack-form" method="post" action="/admin/bootstrap">
+    <input type="hidden" name="csrf_token" value="<%= csrfToken %>">
+    <label>Bootstrap secret<input type="password" name="bootstrap_secret" minlength="24" autocomplete="off" required></label>
+    <button class="button button-primary button-large" type="submit"><i data-lucide="shield-check"></i>Create administrator</button>
+  </form>
+</section>
+<%- include('partials/footer') %>

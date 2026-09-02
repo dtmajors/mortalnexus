@@ -1,0 +1,11 @@
+<%- include('partials/header', { title, bodyClass: 'portal-page' }) %>
+<section class="result-page page-width">
+  <% if (state === 'complete' || state === 'demo') { %>
+    <div class="result-mark success"><i data-lucide="check"></i></div><span class="eyebrow"><%= state === 'demo' ? 'Local checkout preview' : 'Payment complete' %></span><h1>Mortal Nexus is ready.</h1><p>Your personal license key is below and has been saved to your account.</p>
+    <div class="result-license"><code><%= licenseKey %></code><button class="icon-button copy-button" type="button" data-copy="<%= licenseKey %>" title="Copy license key"><i data-lucide="copy"></i></button></div>
+    <div class="result-actions"><a class="button button-primary button-large" href="<%= downloadUrl %>"><i data-lucide="download"></i>Download Mortal Nexus</a><a class="button button-quiet button-large" href="/account">Open account</a></div>
+  <% } else { %>
+    <div class="result-mark pending"><i data-lucide="loader-circle"></i></div><span class="eyebrow">Payment received</span><h1>Your license is processing.</h1><p>Key delivery usually takes only a few seconds. Your account will show the license as soon as fulfillment completes.</p><div class="result-actions"><a class="button button-primary" href="/account">Check your account</a><a class="button button-quiet" href="/support">Get help</a></div>
+  <% } %>
+</section>
+<%- include('partials/footer') %>

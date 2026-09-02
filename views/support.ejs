@@ -1,0 +1,21 @@
+<%- include('partials/header', { title, bodyClass: 'content-page' }) %>
+<section class="page-hero page-width">
+  <span class="eyebrow">Mortal Nexus support</span><h1>Get back into the app.</h1><p>Installation, license, update, and account help without digging through unrelated posts.</p>
+</section>
+<section class="section compact-section page-width support-layout">
+  <div class="support-main">
+    <h2>Quick answers</h2>
+    <div class="faq-list">
+      <details open><summary>Where is my license key?<i data-lucide="plus"></i></summary><p>Sign in and open your account. Every fulfilled license appears above the latest installer button. Use the copy icon to copy it exactly.</p></details>
+      <details><summary>The installer or updater is blocked<i data-lucide="plus"></i></summary><p>Close Mortal Nexus before running an update. If Windows has the installer partially locked, restart the computer and run the current installer from your account.</p></details>
+      <details><summary>My key says it is already used<i data-lucide="plus"></i></summary><p>Licenses may be bound to one computer. Contact support with the email used at checkout and the last six characters of the key. Never post the full key publicly.</p></details>
+      <details><summary>I paid but do not see a key<i data-lucide="plus"></i></summary><p>Refresh your account after a minute. If the order says fulfillment failed or the key is still missing, contact support so the payment can be verified and delivery retried.</p></details>
+    </div>
+  </div>
+  <aside class="support-contact">
+    <span class="eyebrow">Direct help</span><h2>Still stuck?</h2><p>Include your account email, what you expected to happen, and a screenshot of the error. Do not send your full license key in a public channel.</p>
+    <a class="button button-primary button-full" href="<%= discordUrl %>" target="_blank" rel="noreferrer"><i data-lucide="message-circle"></i>Open Discord</a>
+    <a class="button button-quiet button-full" href="mailto:<%= supportEmail %>"><i data-lucide="mail"></i>Email support</a>
+  </aside>
+</section>
+<%- include('partials/footer') %>

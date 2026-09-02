@@ -1,0 +1,28 @@
+<%- include('partials/header', { title, bodyClass: 'account-page' }) %>
+<section class="account-hero"><div class="page-width account-heading"><div><span class="eyebrow">Private administration</span><h1>Store operations</h1><p>Sales, fulfillment, accounts, Discord, and app editing access.</p></div><a class="button button-quiet" href="/account">Customer view</a></div></section>
+<section class="section compact-section page-width admin-page">
+  <div class="metric-grid"><div><span>Orders</span><strong><%= metrics.orders %></strong></div><div><span>Fulfilled revenue</span><strong><%= new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(metrics.revenue / 100) %></strong></div><div><span>Failed fulfillment</span><strong class="danger-text"><%= metrics.failures %></strong></div><div><span>Customers shown</span><strong><%= users.length %></strong></div></div>
+
+  <section class="admin-security-strip">
+    <div><span class="eyebrow">Editor security</span><h2>Firebase write access</h2><p>Permissions are issued per app account. Legacy usernames are not trusted by the new database rules.</p></div>
+    <form method="post" action="/admin/editors/revoke-all" onsubmit="return confirm('Revoke map editing from every Firebase account? Public map viewing and POI data will not be changed.');">
+      <input type="hidden" name="csrf_token" value="<%= csrfToken %>">
+      <button class="button button-danger" type="submit"><i data-lucide="shield-off"></i>Revoke all editors</button>
+    </form>
+  </section>
+
+  <section class="orders-section"><div class="section-heading mini-heading"><div><span class="eyebrow">Latest activity</span><h2>Orders</h2></div></div><div class="data-table-wrap"><table class="data-table"><thead><tr><th>Customer</th><th>Stripe session</th><th>Status</th><th>Total</th><th>Created</th><th></th></tr></thead><tbody>
+    <% orders.forEach((order) => { %><tr><td><%= order.customer_email %></td><td><code><%= order.stripe_session_id.slice(0, 18) %>...</code></td><td><span class="status-pill <%= order.status %>"><%= order.status.replace('_', ' ') %></span></td><td><%= new Intl.NumberFormat('en-US', { style: 'currency', currency: order.currency.toUpperCase() }).format(order.amount_total / 100) %></td><td><%= new Date(order.created_at).toLocaleString() %></td><td><% if (order.status === 'fulfillment_failed') { %><form method="post" action="/admin/orders/<%= order.id %>/retry"><input type="hidden" name="csrf_token" value="<%= csrfToken %>"><button class="button button-small button-quiet" type="submit">Retry</button></form><% } %></td></tr><% }) %>
+  </tbody></table></div></section>
+
+  <section class="orders-section"><div class="section-heading mini-heading"><div><span class="eyebrow">Accounts</span><h2>Customers and permissions</h2></div></div><div class="data-table-wrap"><table class="data-table admin-users-table"><thead><tr><th>Account</th><th>Discord</th><th>Site role</th><th>App editing</th><th>Created</th></tr></thead><tbody>
+    <% users.forEach((customer) => { %><tr>
+      <td><strong><%= customer.display_name %></strong><small><%= customer.email %></small></td>
+      <td><% if (customer.discord_id) { %><span class="provider-state connected"><i data-lucide="check"></i><%= customer.discord_username %></span><% } else { %><span class="provider-state">Not connected</span><% } %></td>
+      <td><form class="inline-admin-form" method="post" action="/admin/users/<%= customer.id %>/role"><input type="hidden" name="csrf_token" value="<%= csrfToken %>"><select name="role" aria-label="Role for <%= customer.display_name %>"><option value="customer" <%= customer.role === 'customer' ? 'selected' : '' %>>Customer</option><option value="admin" <%= customer.role === 'admin' ? 'selected' : '' %>>Admin</option></select><button class="button button-small button-quiet" type="submit">Save</button></form></td>
+      <td><form class="inline-admin-form editor-permission-form" method="post" action="/admin/users/<%= customer.id %>/editor"><input type="hidden" name="csrf_token" value="<%= csrfToken %>"><input type="hidden" name="enabled" value="<%= customer.can_edit ? 'false' : 'true' %>"><input name="editor_username" value="<%= customer.firebase_editor_email ? customer.firebase_editor_email.split('@')[0] : '' %>" placeholder="App username" aria-label="Mortal Nexus app username" <%= customer.can_edit ? 'readonly' : 'required' %>><button class="button button-small <%= customer.can_edit ? 'button-danger' : 'button-quiet' %>" type="submit"><%= customer.can_edit ? 'Revoke' : 'Grant' %></button></form></td>
+      <td><%= new Date(customer.created_at).toLocaleDateString() %></td>
+    </tr><% }) %>
+  </tbody></table></div></section>
+</section>
+<%- include('partials/footer') %>

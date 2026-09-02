@@ -1,0 +1,32 @@
+<%- include('partials/header', { title, bodyClass: 'portal-page' }) %>
+<section class="portal-shell">
+  <div class="portal-visual">
+    <img src="/assets/app-shell.png" alt="Mortal Nexus application">
+    <div class="portal-visual-copy"><img src="/assets/mortal-nexus-icon.png" alt="" width="72" height="72"><h1>Know Nave.<br>Move with purpose.</h1><p>Maps, crafting, loot, spells, and field intelligence in one place.</p></div>
+  </div>
+  <div class="portal-form-wrap">
+    <div class="portal-form">
+      <span class="eyebrow"><%= mode === 'login' ? 'Welcome back' : 'Start here' %></span>
+      <h1><%= mode === 'login' ? 'Sign in to Mortal Nexus' : 'Create your account' %></h1>
+      <p><%= mode === 'login' ? 'Access your license, downloads, and order history.' : 'Your account keeps your license and installer available whenever you need them.' %></p>
+      <% if (typeof formError !== 'undefined' && formError) { %><div class="form-alert"><i data-lucide="circle-alert"></i><%= formError %></div><% } %>
+      <% if (discordAuthEnabled) { %>
+        <a class="button discord-auth-button button-large button-full" href="/auth/discord?next=<%= encodeURIComponent(next) %>"><i data-lucide="message-circle"></i>Continue with Discord</a>
+        <div class="auth-divider"><span>or use email</span></div>
+      <% } %>
+      <form class="stack-form" method="post" action="/<%= mode %>">
+        <input type="hidden" name="csrf_token" value="<%= csrfToken %>">
+        <input type="hidden" name="next" value="<%= next %>">
+        <% if (mode === 'register') { %>
+          <label>Display name<input type="text" name="display_name" minlength="2" maxlength="60" autocomplete="name" required placeholder="Marshal Law"></label>
+        <% } %>
+        <label>Email address<input type="email" name="email" autocomplete="email" required placeholder="you@example.com"></label>
+        <label>Password<input type="password" name="password" minlength="10" autocomplete="<%= mode === 'login' ? 'current-password' : 'new-password' %>" required placeholder="At least 10 characters"></label>
+        <% if (mode === 'login') { %><a class="form-side-link" href="/forgot-password">Forgot password?</a><% } %>
+        <button class="button button-primary button-large button-full" type="submit"><i data-lucide="<%= mode === 'login' ? 'log-in' : 'user-plus' %>"></i><%= mode === 'login' ? 'Sign in' : 'Create account' %></button>
+      </form>
+      <p class="auth-switch"><%= mode === 'login' ? 'New to Mortal Nexus?' : 'Already have an account?' %> <a href="/<%= mode === 'login' ? 'register' : 'login' %>"><%= mode === 'login' ? 'Create an account' : 'Sign in' %></a></p>
+    </div>
+  </div>
+</section>
+<%- include('partials/footer') %>

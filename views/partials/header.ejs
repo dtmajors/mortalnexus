@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07090e">
+  <meta name="description" content="Mortal Nexus brings live maps, crafting calculators, loot data, spell planning, guides, and game tools into one Mortal Online 2 companion.">
+  <title><%= title %></title>
+  <link rel="icon" href="/assets/mortal-nexus-icon.png" type="image/png">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/vendor/lucide.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body class="<%= bodyClass || '' %>">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" data-header>
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="Mortal Nexus home">
+        <img src="/assets/mortal-nexus-icon.png" alt="" width="44" height="44">
+        <span><strong>Mortal Nexus</strong><small>Mortal Online 2 companion</small></span>
+      </a>
+      <button class="nav-toggle icon-button" type="button" data-nav-toggle aria-label="Open navigation" aria-expanded="false"><i data-lucide="menu"></i></button>
+      <nav class="main-nav" data-nav>
+        <a href="/#features">Features</a>
+        <a href="/#inside">Inside the app</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/support">Support</a>
+      </nav>
+      <div class="header-actions">
+        <% if (user) { %>
+          <a class="button button-quiet" href="/account"><i data-lucide="user-round"></i>Account</a>
+        <% } else { %>
+          <a class="button button-quiet" href="/login">Sign in</a>
+        <% } %>
+        <a class="button button-primary header-buy" href="/#pricing">Get Mortal Nexus</a>
+      </div>
+    </div>
+  </header>
+  <% if (notice) { %><div class="global-message success"><i data-lucide="check-circle-2"></i><%= notice %></div><% } %>
+  <% if (error) { %><div class="global-message error"><i data-lucide="circle-alert"></i><%= error %></div><% } %>
+  <main id="main">

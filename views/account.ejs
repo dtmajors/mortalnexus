@@ -1,0 +1,42 @@
+<%- include('partials/header', { title, bodyClass: 'account-page' }) %>
+<section class="account-hero">
+  <div class="page-width account-heading">
+    <div><span class="eyebrow">Customer account</span><h1>Welcome back, <%= user.display_name %>.</h1><p>Your Mortal Nexus access, installer, and purchase history live here.</p></div>
+    <form method="post" action="/logout"><input type="hidden" name="csrf_token" value="<%= csrfToken %>"><button class="button button-quiet" type="submit"><i data-lucide="log-out"></i>Sign out</button></form>
+  </div>
+</section>
+<section class="section compact-section page-width">
+  <% if (licenses.length) { %>
+    <div class="account-grid">
+      <section class="license-panel">
+        <div class="panel-title"><div><span class="eyebrow">Your access</span><h2>Lifetime license</h2></div><span class="active-badge"><span></span>Active</span></div>
+        <% licenses.forEach((license) => { %>
+          <div class="license-key-row"><code data-license><%= license.license_key %></code><button class="icon-button copy-button" type="button" data-copy="<%= license.license_key %>" title="Copy license key"><i data-lucide="copy"></i></button></div>
+          <p class="microcopy">Purchased <%= new Date(license.created_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) %> · Keep this key private.</p>
+        <% }) %>
+        <a class="button button-primary button-large" href="<%= downloadUrl %>"><i data-lucide="download"></i>Download latest installer</a>
+      </section>
+      <aside class="account-side">
+        <div class="side-block"><i data-lucide="message-circle"></i><div><strong><%= user.discord_id ? 'Discord connected' : 'Discord not connected' %></strong><p><%= user.discord_id ? `Signed in as ${user.discord_username}. Server membership is active.` : 'Connect by signing out and choosing Continue with Discord.' %></p></div></div>
+        <div class="side-block"><i data-lucide="pencil-ruler"></i><div><strong>Map editing</strong><p><%= user.can_edit ? `Granted to ${user.firebase_editor_email || 'your app account'}.` : 'Viewer access. An administrator can grant editing when needed.' %></p></div></div>
+        <div class="side-block"><i data-lucide="refresh-cw"></i><div><strong>Updates included</strong><p>Your license includes every future Mortal Nexus update.</p></div></div>
+        <div class="side-block"><i data-lucide="message-circle-question"></i><div><strong>Need help?</strong><p>Use the support page for installation or license assistance.</p><a href="/support">Open support</a></div></div>
+      </aside>
+    </div>
+  <% } else { %>
+    <div class="empty-access">
+      <div class="empty-icon"><i data-lucide="key-round"></i></div><span class="eyebrow">No license yet</span><h2>Unlock the complete Mortal Nexus toolkit.</h2><p>One purchase gives this account lifetime application access and future updates.</p>
+      <form method="post" action="/checkout"><input type="hidden" name="csrf_token" value="<%= csrfToken %>"><button class="button button-primary button-large" type="submit">Purchase for <%= price %></button></form>
+    </div>
+  <% } %>
+
+  <section class="orders-section">
+    <div class="section-heading mini-heading"><div><span class="eyebrow">Billing</span><h2>Order history</h2></div></div>
+    <% if (orders.length) { %>
+      <div class="data-table-wrap"><table class="data-table"><thead><tr><th>Order</th><th>Date</th><th>Status</th><th>Total</th></tr></thead><tbody>
+        <% orders.forEach((order) => { %><tr><td><code><%= order.id.slice(0, 8).toUpperCase() %></code></td><td><%= new Date(order.created_at).toLocaleDateString() %></td><td><span class="status-pill <%= order.status %>"><%= order.status.replace('_', ' ') %></span></td><td><%= new Intl.NumberFormat('en-US', { style: 'currency', currency: order.currency.toUpperCase() }).format(order.amount_total / 100) %></td></tr><% }) %>
+      </tbody></table></div>
+    <% } else { %><p class="muted">No orders have been placed from this account.</p><% } %>
+  </section>
+</section>
+<%- include('partials/footer') %>
