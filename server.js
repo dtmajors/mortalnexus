@@ -43,6 +43,7 @@ app.use(helmet({
       styleSrc: ["'self'"],
       scriptSrc: ["'self'"],
       connectSrc: ["'self'"],
+      formAction: ["'self'", 'https://checkout.stripe.com'],
       frameAncestors: ["'none'"]
     }
   },
