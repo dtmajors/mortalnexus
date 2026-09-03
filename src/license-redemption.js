@@ -36,7 +36,7 @@ async function redeemLicense({ licenseKey, userId }) {
   const inserted = await db.query(
     `INSERT INTO licenses (id, order_id, user_id, encrypted_key, key_hint, key_hash, provider)
      VALUES ($1, NULL, $2, $3, $4, $5, 'keyauth')
-     ON CONFLICT (key_hash) DO NOTHING RETURNING id`,
+     ON CONFLICT DO NOTHING RETURNING id`,
     [crypto.randomUUID(), userId, encryptLicense(key), key.slice(-6), keyHash]
   );
   if (inserted.rows[0]) return { created: true };
