@@ -77,6 +77,24 @@ document.addEventListener('DOMContentLoaded', () => {
     schedule();
   });
 
+  const lightbox = document.querySelector('[data-image-lightbox]');
+  const lightboxImage = lightbox?.querySelector('[data-image-lightbox-image]');
+  const lightboxTitle = lightbox?.querySelector('[data-image-lightbox-title]');
+  document.querySelectorAll('[data-image-popout]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const source = button.querySelector('img');
+      if (!lightbox || !lightboxImage || !source) return;
+      lightboxImage.src = source.currentSrc || source.src;
+      lightboxImage.alt = source.alt;
+      if (lightboxTitle) lightboxTitle.textContent = button.dataset.imageTitle || source.alt;
+      lightbox.showModal();
+    });
+  });
+  lightbox?.querySelector('[data-image-lightbox-close]')?.addEventListener('click', () => lightbox.close());
+  lightbox?.addEventListener('click', (event) => {
+    if (event.target === lightbox) lightbox.close();
+  });
+
   document.querySelectorAll('[data-copy]').forEach((button) => {
     button.addEventListener('click', async () => {
       try {
