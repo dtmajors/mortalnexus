@@ -37,13 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!progress) return;
       progress.classList.remove('running');
       void progress.offsetWidth;
-      if (!reducedMotion) progress.classList.add('running');
+      progress.classList.add('running');
     };
 
     const schedule = () => {
       window.clearTimeout(timer);
       restartProgress();
-      if (!reducedMotion) timer = window.setTimeout(() => show((activeIndex + 1) % tabs.length), intervalMs);
+      timer = window.setTimeout(() => show((activeIndex + 1) % tabs.length), intervalMs);
     };
 
     const show = (index) => {
