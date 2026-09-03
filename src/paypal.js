@@ -122,16 +122,18 @@ async function verifyPayPalWebhook(headers, event) {
   return verification.verification_status === 'SUCCESS';
 }
 
-function completedPayPalPayment(order) {
+function completedPayPalPayment(order, expectedPayment = null) {
   const unit = order.purchase_units?.[0];
   const capture = unit?.payments?.captures?.find((item) => item.status === 'COMPLETED');
+  const expectedCurrency = expectedPayment?.currency || config.paypalCurrency;
+  const expectedValue = expectedPayment?.value || config.paypalPrice;
   if (order.status !== 'COMPLETED' || !unit || !capture) throw new Error('PayPal payment has not completed.');
   if (unit.reference_id !== 'mortal_nexus_lifetime') throw new Error('PayPal returned an unexpected product.');
   if (
-    unit.amount?.currency_code !== config.paypalCurrency ||
-    unit.amount?.value !== config.paypalPrice ||
-    capture.amount?.currency_code !== config.paypalCurrency ||
-    capture.amount?.value !== config.paypalPrice
+    unit.amount?.currency_code !== expectedCurrency ||
+    unit.amount?.value !== expectedValue ||
+    capture.amount?.currency_code !== expectedCurrency ||
+    capture.amount?.value !== expectedValue
   ) {
     throw new Error('PayPal returned an unexpected payment amount.');
   }

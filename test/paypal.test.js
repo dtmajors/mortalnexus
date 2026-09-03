@@ -33,6 +33,12 @@ test('rejects a payment with a changed amount', () => {
   );
 });
 
+test('accepts a recorded historical price during fulfillment retry', () => {
+  const order = completedOrder({ amount: { currency_code: 'USD', value: '1.00' } });
+  order.purchase_units[0].payments.captures[0].amount.value = '1.00';
+  assert.equal(completedPayPalPayment(order, { currency: 'USD', value: '1.00' }).amountTotal, 100);
+});
+
 test('rejects a partial capture', () => {
   const order = completedOrder();
   order.purchase_units[0].payments.captures[0].amount.value = '1.00';

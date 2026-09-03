@@ -109,9 +109,9 @@ async function fulfillCheckoutSession(sessionId) {
   return fulfillRecordedOrder(orderResult.rows[0]);
 }
 
-async function fulfillPayPalOrder(orderId, suppliedOrder = null) {
+async function fulfillPayPalOrder(orderId, suppliedOrder = null, expectedPayment = null) {
   const paypalOrder = suppliedOrder || await getPayPalOrder(orderId);
-  const payment = completedPayPalPayment(paypalOrder);
+  const payment = completedPayPalPayment(paypalOrder, expectedPayment);
   const userResult = await db.query('SELECT id, email FROM users WHERE id = $1', [payment.userId]);
   const user = userResult.rows[0];
   if (!user) throw new Error('The PayPal order does not match a Mortal Nexus account.');
@@ -136,7 +136,12 @@ async function retryOrderFulfillment(orderId) {
   const result = await db.query('SELECT * FROM orders WHERE id = $1', [orderId]);
   const order = result.rows[0];
   if (!order) throw new Error('Order not found.');
-  if (order.provider === 'paypal') return fulfillPayPalOrder(order.provider_order_id);
+  if (order.provider === 'paypal') {
+    return fulfillPayPalOrder(order.provider_order_id, null, {
+      currency: order.currency.toUpperCase(),
+      value: (order.amount_total / 100).toFixed(2)
+    });
+  }
   return fulfillCheckoutSession(order.stripe_session_id);
 }
 
