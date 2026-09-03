@@ -19,34 +19,31 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-gallery]').forEach((gallery) => {
     const image = gallery.querySelector('[data-gallery-image]');
     const tabs = Array.from(gallery.querySelectorAll('[data-image]'));
-    const count = gallery.querySelector('[data-gallery-count]');
     const title = gallery.querySelector('[data-gallery-title]');
-    const toggle = gallery.querySelector('[data-gallery-toggle]');
+    const description = gallery.querySelector('[data-gallery-description]');
+    const icon = gallery.querySelector('[data-gallery-icon]');
     const progress = gallery.querySelector('[data-gallery-progress]');
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const intervalMs = 6000;
+    const intervalMs = 4000;
     let activeIndex = 0;
     let timer = null;
-    let paused = reducedMotion;
+
+    tabs.forEach((tab) => {
+      const preload = new Image();
+      preload.src = tab.dataset.image;
+    });
 
     const restartProgress = () => {
       if (!progress) return;
       progress.classList.remove('running');
       void progress.offsetWidth;
-      if (!paused) progress.classList.add('running');
+      if (!reducedMotion) progress.classList.add('running');
     };
 
     const schedule = () => {
       window.clearTimeout(timer);
       restartProgress();
-      if (!paused) timer = window.setTimeout(() => show((activeIndex + 1) % tabs.length), intervalMs);
-    };
-
-    const updateToggle = () => {
-      if (!toggle) return;
-      toggle.innerHTML = `<i data-lucide="${paused ? 'play' : 'pause'}"></i><span>${paused ? 'Resume tour' : 'Pause tour'}</span>`;
-      toggle.setAttribute('aria-label', `${paused ? 'Resume' : 'Pause'} automatic screenshot tour`);
-      window.lucide?.createIcons();
+      if (!reducedMotion) timer = window.setTimeout(() => show((activeIndex + 1) % tabs.length), intervalMs);
     };
 
     const show = (index) => {
@@ -63,8 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
         image.alt = selected.dataset.alt;
         image.classList.remove('changing');
       }, 130);
-      if (count) count.textContent = `${String(activeIndex + 1).padStart(2, '0')} / ${String(tabs.length).padStart(2, '0')}`;
       if (title) title.textContent = selected.dataset.title || selected.textContent.trim();
+      if (description) description.textContent = selected.dataset.description || '';
+      if (icon) {
+        icon.innerHTML = `<i data-lucide="${selected.dataset.icon || 'monitor'}"></i>`;
+        window.lucide?.createIcons();
+      }
       const rail = selected.parentElement;
       rail?.scrollTo({ left: selected.offsetLeft - (rail.clientWidth - selected.clientWidth) / 2, behavior: reducedMotion ? 'auto' : 'smooth' });
       schedule();
@@ -73,18 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
     tabs.forEach((button, index) => button.addEventListener('click', () => show(index)));
     gallery.querySelector('[data-gallery-prev]')?.addEventListener('click', () => show(activeIndex - 1));
     gallery.querySelector('[data-gallery-next]')?.addEventListener('click', () => show(activeIndex + 1));
-    toggle?.addEventListener('click', () => {
-      paused = !paused;
-      updateToggle();
-      schedule();
-    });
-    gallery.addEventListener('mouseenter', () => window.clearTimeout(timer));
-    gallery.addEventListener('mouseleave', schedule);
-    gallery.addEventListener('focusin', () => window.clearTimeout(timer));
-    gallery.addEventListener('focusout', (event) => {
-      if (!gallery.contains(event.relatedTarget)) schedule();
-    });
-    updateToggle();
     schedule();
   });
 
