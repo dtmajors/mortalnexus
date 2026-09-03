@@ -85,4 +85,13 @@ async function revokeAllEditors() {
   return { scanned, revoked };
 }
 
-module.exports = { normalizeEditorEmail, setEditorPermission, revokeAllEditors };
+async function createDesktopFirebaseToken(user) {
+  if (!user?.id) throw new Error('A website account is required for Firebase access.');
+  return firebaseAuth().createCustomToken(String(user.id), {
+    editor: user.can_edit === true,
+    accountName: String(user.display_name || '').slice(0, 60),
+    websiteAccount: true
+  });
+}
+
+module.exports = { normalizeEditorEmail, setEditorPermission, revokeAllEditors, createDesktopFirebaseToken };

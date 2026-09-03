@@ -12,6 +12,18 @@ function githubHeaders(accept = 'application/vnd.github+json') {
 }
 
 async function fetchLatestInstaller() {
+  const { asset } = await fetchLatestRelease();
+  const assetResponse = await fetch(asset.url, {
+    headers: githubHeaders('application/octet-stream'),
+    redirect: 'follow'
+  });
+  if (!assetResponse.ok || !assetResponse.body) {
+    throw new Error(`GitHub release download failed (${assetResponse.status}).`);
+  }
+  return assetResponse;
+}
+
+async function fetchLatestRelease() {
   const releaseResponse = await fetch(`https://api.github.com/repos/${config.githubReleaseRepo}/releases/latest`, {
     headers: githubHeaders()
   });
@@ -24,15 +36,7 @@ async function fetchLatestInstaller() {
   if (!asset) {
     throw new Error(`Release asset ${config.githubReleaseAsset} was not found.`);
   }
-
-  const assetResponse = await fetch(asset.url, {
-    headers: githubHeaders('application/octet-stream'),
-    redirect: 'follow'
-  });
-  if (!assetResponse.ok || !assetResponse.body) {
-    throw new Error(`GitHub release download failed (${assetResponse.status}).`);
-  }
-  return assetResponse;
+  return { release, asset };
 }
 
 async function streamLatestInstaller(res) {
@@ -49,4 +53,4 @@ async function streamLatestInstaller(res) {
   await pipeline(Readable.fromWeb(assetResponse.body), res);
 }
 
-module.exports = { streamLatestInstaller };
+module.exports = { streamLatestInstaller, fetchLatestRelease };

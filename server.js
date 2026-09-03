@@ -24,9 +24,10 @@ const { sendPasswordResetEmail } = require('./src/email');
 const { stripeClient, fulfillCheckoutSession, fulfillPayPalOrder, retryOrderFulfillment, retryFailedOrders, getLicensesForUser } = require('./src/fulfillment');
 const { paypalEnabled, createPayPalOrder, completePayPalOrder, verifyPayPalWebhook } = require('./src/paypal');
 const { authorizationUrl, authenticateDiscord } = require('./src/discord');
-const { normalizeEditorEmail, setEditorPermission, revokeAllEditors } = require('./src/firebase-admin');
-const { streamLatestInstaller } = require('./src/releases');
+const { revokeAllEditors } = require('./src/firebase-admin');
+const { streamLatestInstaller, fetchLatestRelease } = require('./src/releases');
 const { backfillLicenseHashes, redeemLicense } = require('./src/license-redemption');
+const appAuth = require('./src/app-auth');
 
 validateProductionConfig();
 
@@ -110,8 +111,123 @@ const authLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 20, standardHea
 const checkoutLimiter = rateLimit({ windowMs: 10 * 60 * 1000, limit: 10, standardHeaders: 'draft-8', legacyHeaders: false });
 const downloadLimiter = rateLimit({ windowMs: 60 * 60 * 1000, limit: 10, standardHeaders: 'draft-8', legacyHeaders: false });
 const licenseLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 10, standardHeaders: 'draft-8', legacyHeaders: false });
+const appAuthLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 30, standardHeaders: 'draft-8', legacyHeaders: false });
+
+function isPrimaryAdmin(email, discordId = '') {
+  return (config.adminEmail && String(email || '').toLowerCase() === config.adminEmail)
+    || (config.adminDiscordId && String(discordId || '') === config.adminDiscordId);
+}
 
 app.get('/health', (req, res) => res.json({ ok: true, service: 'mortal-nexus-store' }));
+
+function appAuthError(res, error) {
+  const message = error?.message || 'Mortal Nexus sign-in failed.';
+  const unauthorized = /incorrect|expired|revoked|not linked|different license/i.test(message);
+  return res.status(unauthorized ? 401 : 400).json({ success: false, message });
+}
+
+app.post('/api/app/login', appAuthLimiter, async (req, res) => {
+  try {
+    const result = await appAuth.login({
+      email: req.body.email,
+      password: req.body.password,
+      licenseKey: req.body.licenseKey,
+      deviceName: req.body.deviceName,
+      appVersion: req.body.appVersion
+    });
+    res.json(result);
+  } catch (error) {
+    appAuthError(res, error);
+  }
+});
+
+app.post('/api/app/resume', appAuthLimiter, async (req, res) => {
+  try {
+    const result = await appAuth.resume({
+      token: appAuth.bearerToken(req),
+      licenseKey: req.body.licenseKey,
+      deviceName: req.body.deviceName,
+      appVersion: req.body.appVersion
+    });
+    res.json(result);
+  } catch (error) {
+    appAuthError(res, error);
+  }
+});
+
+app.post('/api/app/logout', async (req, res) => {
+  await appAuth.logout(appAuth.bearerToken(req));
+  res.json({ success: true });
+});
+
+app.get('/api/app/update/latest', async (req, res) => {
+  try {
+    if (!(await appAuth.authenticate(appAuth.bearerToken(req)))) return res.status(401).json({ success: false, message: 'Your app session has expired.' });
+    const { release, asset } = await fetchLatestRelease();
+    res.json({
+      success: true,
+      version: String(release.tag_name || '').replace(/^v/i, ''),
+      sha256: String(asset.digest || '').replace(/^sha256:/i, ''),
+      downloadUrl: `${config.baseUrl}/api/app/update/download`
+    });
+  } catch (error) {
+    res.status(503).json({ success: false, message: error.message });
+  }
+});
+
+app.get('/api/app/update/download', downloadLimiter, async (req, res, next) => {
+  try {
+    if (!(await appAuth.authenticate(appAuth.bearerToken(req)))) return res.status(401).json({ success: false, message: 'Your app session has expired.' });
+    await streamLatestInstaller(res);
+  } catch (error) {
+    next(error);
+  }
+});
+
+app.post('/api/app/device/start', appAuthLimiter, async (req, res) => {
+  try {
+    res.json({ success: true, ...(await appAuth.startDeviceLogin()) });
+  } catch (error) {
+    appAuthError(res, error);
+  }
+});
+
+app.post('/api/app/device/complete', appAuthLimiter, async (req, res) => {
+  try {
+    const result = await appAuth.completeDeviceLogin({
+      deviceToken: req.body.deviceToken,
+      licenseKey: req.body.licenseKey,
+      deviceName: req.body.deviceName,
+      appVersion: req.body.appVersion
+    });
+    res.json(result);
+  } catch (error) {
+    appAuthError(res, error);
+  }
+});
+
+app.get('/app/connect', requireUser, async (req, res, next) => {
+  try {
+    const code = String(req.query.code || '').trim().toUpperCase();
+    const pending = await db.query(
+      'SELECT display_code, expires_at FROM app_device_codes WHERE display_code = $1 AND expires_at > NOW() AND used_at IS NULL',
+      [code]
+    );
+    if (!pending.rows[0]) return res.status(410).render('error', { title: 'Sign-in Expired | Mortal Nexus', status: 410, message: 'That app sign-in request has expired. Start it again from Mortal Nexus.' });
+    res.render('app-connect', { title: 'Approve App Sign-in | Mortal Nexus', code });
+  } catch (error) {
+    next(error);
+  }
+});
+
+app.post('/app/connect', requireUser, verifyCsrf, async (req, res, next) => {
+  try {
+    await appAuth.approveDeviceLogin(req.body.code, req.user.id);
+    res.render('app-connect', { title: 'App Sign-in Approved | Mortal Nexus', code: req.body.code, approved: true });
+  } catch (error) {
+    next(error);
+  }
+});
 
 app.get('/', (req, res) => res.render('home', { title: 'Mortal Nexus | The Mortal Online 2 Companion' }));
 app.get('/features', (req, res) => res.redirect('/#features'));
@@ -138,7 +254,7 @@ app.post('/register', authLimiter, verifyCsrf, async (req, res, next) => {
     const existing = await db.query('SELECT id FROM users WHERE email = $1', [email]);
     if (existing.rows[0]) return res.status(409).render('auth', { title: 'Create Account | Mortal Nexus', mode: 'register', next: nextUrl, formError: 'An account already exists for that email.' });
 
-    const role = 'customer';
+    const role = isPrimaryAdmin(email) ? 'admin' : 'customer';
     const id = crypto.randomUUID();
     await db.query(
       'INSERT INTO users (id, email, display_name, password_hash, role) VALUES ($1, $2, $3, $4, $5)',
@@ -166,7 +282,7 @@ app.post('/login', authLimiter, verifyCsrf, async (req, res, next) => {
     if (!user || !user.password_hash || !(await verifyPassword(password, user.password_hash))) {
       return res.status(401).render('auth', { title: 'Sign In | Mortal Nexus', mode: 'login', next: nextUrl, formError: 'The email or password is incorrect.' });
     }
-    await db.query('UPDATE users SET last_login_at = NOW(), updated_at = NOW() WHERE id = $1', [user.id]);
+    await db.query("UPDATE users SET last_login_at = NOW(), role = CASE WHEN $2 THEN 'admin' ELSE role END, updated_at = NOW() WHERE id = $1", [user.id, isPrimaryAdmin(user.email, user.discord_id)]);
     await createSession(res, user.id);
     res.redirect(nextUrl);
   } catch (error) {
@@ -210,7 +326,7 @@ app.get('/auth/discord/callback', authLimiter, async (req, res, next) => {
     let user = existing.rows[0];
     if (!user) {
       const id = crypto.randomUUID();
-      const role = 'customer';
+      const role = isPrimaryAdmin(email, profile.id) ? 'admin' : 'customer';
       await db.query(
         `INSERT INTO users (id, email, display_name, password_hash, discord_id, discord_username, discord_avatar, discord_joined_at, last_login_at, role)
          VALUES ($1, $2, $3, NULL, $4, $5, $6, NOW(), NOW(), $7)`,
@@ -220,9 +336,10 @@ app.get('/auth/discord/callback', authLimiter, async (req, res, next) => {
     } else {
       await db.query(
         `UPDATE users SET discord_id = $1, discord_username = $2, discord_avatar = $3,
+         role = CASE WHEN $5 THEN 'admin' ELSE role END,
          discord_joined_at = COALESCE(discord_joined_at, NOW()), last_login_at = NOW(), updated_at = NOW()
          WHERE id = $4`,
-        [profile.id, profile.username, profile.avatar || null, user.id]
+        [profile.id, profile.username, profile.avatar || null, user.id, isPrimaryAdmin(email, profile.id)]
       );
     }
     await createSession(res, user.id);
@@ -482,14 +599,46 @@ app.get('/checkout/paypal/return', requireUser, async (req, res) => {
 
 app.get('/admin', requireAdmin, async (req, res, next) => {
   try {
-    const [users, orders, metrics] = await Promise.all([
-      db.query(`SELECT id, email, display_name, role, discord_id, discord_username,
-                discord_joined_at, can_edit, firebase_editor_email, created_at
-                FROM users ORDER BY created_at DESC LIMIT 100`),
+    const [users, orders, licenses, appSessions, auditLog, metrics] = await Promise.all([
+      db.query(`SELECT u.id, u.email, u.display_name, u.role, u.discord_id, u.discord_username,
+                u.discord_joined_at, u.can_edit, u.created_at, u.last_login_at,
+                COUNT(DISTINCT l.id)::int AS license_count,
+                COUNT(DISTINCT s.token_hash) FILTER (WHERE s.revoked_at IS NULL AND s.expires_at > NOW())::int AS active_sessions,
+                MAX(s.last_seen_at) AS last_app_seen
+                FROM users u
+                LEFT JOIN licenses l ON l.user_id = u.id
+                LEFT JOIN app_sessions s ON s.user_id = u.id
+                GROUP BY u.id ORDER BY u.created_at DESC LIMIT 200`),
       db.query('SELECT * FROM orders ORDER BY created_at DESC LIMIT 100'),
-      db.query("SELECT COUNT(*)::int AS orders, COALESCE(SUM(amount_total) FILTER (WHERE status = 'fulfilled'), 0)::int AS revenue, COUNT(*) FILTER (WHERE status = 'fulfillment_failed')::int AS failures FROM orders")
+      db.query(`SELECT l.id, l.key_hint, l.provider, l.created_at, u.id AS user_id,
+                u.email, u.display_name, o.provider AS payment_provider, o.status AS order_status,
+                MAX(s.last_seen_at) AS last_seen_at,
+                COUNT(s.token_hash) FILTER (WHERE s.revoked_at IS NULL AND s.expires_at > NOW())::int AS active_sessions
+                FROM licenses l
+                LEFT JOIN users u ON u.id = l.user_id
+                LEFT JOIN orders o ON o.id = l.order_id
+                LEFT JOIN app_sessions s ON s.license_id = l.id
+                GROUP BY l.id, u.id, o.id ORDER BY l.created_at DESC LIMIT 200`),
+      db.query(`SELECT s.token_hash, s.device_name, s.app_version, s.created_at, s.last_seen_at,
+                s.expires_at, s.revoked_at, u.id AS user_id, u.email, u.display_name, l.key_hint
+                FROM app_sessions s JOIN users u ON u.id = s.user_id JOIN licenses l ON l.id = s.license_id
+                ORDER BY s.last_seen_at DESC LIMIT 200`),
+      db.query(`SELECT a.action, a.details, a.created_at, admin.email AS admin_email, target.email AS target_email
+                FROM admin_audit_log a LEFT JOIN users admin ON admin.id = a.admin_user_id
+                LEFT JOIN users target ON target.id = a.target_user_id ORDER BY a.created_at DESC LIMIT 50`),
+      db.query(`SELECT
+                (SELECT COUNT(*) FROM users)::int AS customers,
+                (SELECT COUNT(*) FROM licenses)::int AS licenses,
+                (SELECT COUNT(*) FROM users WHERE can_edit = TRUE)::int AS editors,
+                (SELECT COUNT(*) FROM app_sessions WHERE revoked_at IS NULL AND expires_at > NOW())::int AS active_sessions,
+                (SELECT COUNT(*) FROM orders)::int AS orders,
+                (SELECT COALESCE(SUM(amount_total), 0) FROM orders WHERE status = 'fulfilled')::int AS revenue,
+                (SELECT COUNT(*) FROM orders WHERE status = 'fulfillment_failed')::int AS failures`)
     ]);
-    res.render('admin', { title: 'Store Admin | Mortal Nexus', users: users.rows, orders: orders.rows, metrics: metrics.rows[0] });
+    res.render('admin', {
+      title: 'Administration | Mortal Nexus', users: users.rows, orders: orders.rows,
+      licenses: licenses.rows, appSessions: appSessions.rows, auditLog: auditLog.rows, metrics: metrics.rows[0]
+    });
   } catch (error) {
     next(error);
   }
@@ -514,15 +663,19 @@ app.post('/admin/users/:id/role', requireAdmin, verifyCsrf, async (req, res, nex
 app.post('/admin/users/:id/editor', requireAdmin, verifyCsrf, async (req, res) => {
   try {
     const enabled = req.body.enabled === 'true';
-    const target = await db.query('SELECT id, firebase_editor_email FROM users WHERE id = $1', [req.params.id]);
+    const target = await db.query('SELECT id, email FROM users WHERE id = $1', [req.params.id]);
     if (!target.rows[0]) throw new Error('Account not found.');
-    const editorEmail = normalizeEditorEmail(req.body.editor_username || target.rows[0].firebase_editor_email);
-    await setEditorPermission(editorEmail, enabled);
     await db.query(
-      'UPDATE users SET can_edit = $1, firebase_editor_email = $2, updated_at = NOW() WHERE id = $3',
-      [enabled, editorEmail, req.params.id]
+      'UPDATE users SET can_edit = $1, firebase_editor_email = NULL, updated_at = NOW() WHERE id = $2',
+      [enabled, req.params.id]
     );
-    res.redirect(`/admin?notice=${encodeURIComponent(enabled ? 'Editor access granted. The user must sign in again.' : 'Editor access revoked immediately.')}`);
+    await db.query(
+      `INSERT INTO admin_audit_log (id, admin_user_id, target_user_id, action, details)
+       VALUES ($1, $2, $3, $4, $5)`,
+      [crypto.randomUUID(), req.user.id, req.params.id, enabled ? 'editor.granted' : 'editor.revoked', target.rows[0].email]
+    );
+    await db.query('UPDATE app_sessions SET revoked_at = NOW() WHERE user_id = $1 AND revoked_at IS NULL', [req.params.id]);
+    res.redirect(`/admin?notice=${encodeURIComponent(enabled ? 'Editor access granted. The user can sign in again now.' : 'Editor access and active app sessions revoked.')}`);
   } catch (error) {
     res.redirect(`/admin?error=${encodeURIComponent(error.message)}`);
   }
@@ -532,7 +685,29 @@ app.post('/admin/editors/revoke-all', requireAdmin, verifyCsrf, async (req, res)
   try {
     const result = await revokeAllEditors();
     await db.query('UPDATE users SET can_edit = FALSE, updated_at = NOW() WHERE can_edit = TRUE');
+    await db.query('UPDATE app_sessions SET revoked_at = NOW() WHERE revoked_at IS NULL');
+    await db.query(
+      `INSERT INTO admin_audit_log (id, admin_user_id, action, details) VALUES ($1, $2, $3, $4)`,
+      [crypto.randomUUID(), req.user.id, 'editors.revoked_all', `${result.revoked} legacy Firebase editor accounts revoked`]
+    );
     res.redirect(`/admin?notice=${encodeURIComponent(`Revoked editor access from ${result.revoked} of ${result.scanned} Firebase accounts.`)}`);
+  } catch (error) {
+    res.redirect(`/admin?error=${encodeURIComponent(error.message)}`);
+  }
+});
+
+app.post('/admin/users/:id/sessions/revoke', requireAdmin, verifyCsrf, async (req, res) => {
+  try {
+    const result = await db.query(
+      'UPDATE app_sessions SET revoked_at = NOW() WHERE user_id = $1 AND revoked_at IS NULL RETURNING token_hash',
+      [req.params.id]
+    );
+    await db.query(
+      `INSERT INTO admin_audit_log (id, admin_user_id, target_user_id, action, details)
+       VALUES ($1, $2, $3, 'sessions.revoked', $4)`,
+      [crypto.randomUUID(), req.user.id, req.params.id, `${result.rowCount} app sessions revoked`]
+    );
+    res.redirect(`/admin?notice=${encodeURIComponent(`Revoked ${result.rowCount} active app session(s).`)}`);
   } catch (error) {
     res.redirect(`/admin?error=${encodeURIComponent(error.message)}`);
   }
@@ -557,6 +732,12 @@ app.use((error, req, res, next) => {
 async function start() {
   await db.initializeDatabase();
   await backfillLicenseHashes();
+  if (config.adminEmail) {
+    await db.query("UPDATE users SET role = 'admin', updated_at = NOW() WHERE LOWER(email) = $1", [config.adminEmail]);
+  }
+  if (config.adminDiscordId) {
+    await db.query("UPDATE users SET role = 'admin', updated_at = NOW() WHERE discord_id = $1", [config.adminDiscordId]);
+  }
   await retryFailedOrders();
   httpServer = app.listen(config.port, '0.0.0.0', () => {
     const address = httpServer.address();

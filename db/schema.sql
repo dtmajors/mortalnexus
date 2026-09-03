@@ -84,6 +84,36 @@ CREATE TABLE IF NOT EXISTS password_resets (
   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
+CREATE TABLE IF NOT EXISTS app_sessions (
+  token_hash TEXT PRIMARY KEY,
+  user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  license_id TEXT NOT NULL REFERENCES licenses(id) ON DELETE CASCADE,
+  device_name TEXT,
+  app_version TEXT,
+  expires_at TIMESTAMPTZ NOT NULL,
+  last_seen_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  revoked_at TIMESTAMPTZ,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS app_device_codes (
+  token_hash TEXT PRIMARY KEY,
+  display_code TEXT NOT NULL UNIQUE,
+  approved_user_id TEXT REFERENCES users(id) ON DELETE CASCADE,
+  expires_at TIMESTAMPTZ NOT NULL,
+  used_at TIMESTAMPTZ,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS admin_audit_log (
+  id TEXT PRIMARY KEY,
+  admin_user_id TEXT REFERENCES users(id) ON DELETE SET NULL,
+  target_user_id TEXT REFERENCES users(id) ON DELETE SET NULL,
+  action TEXT NOT NULL,
+  details TEXT,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
 CREATE INDEX IF NOT EXISTS idx_sessions_user_id ON sessions(user_id);
 CREATE INDEX IF NOT EXISTS idx_orders_user_id ON orders(user_id);
 CREATE UNIQUE INDEX IF NOT EXISTS idx_orders_provider_order ON orders(provider, provider_order_id);
@@ -91,3 +121,8 @@ CREATE INDEX IF NOT EXISTS idx_licenses_user_id ON licenses(user_id);
 CREATE UNIQUE INDEX IF NOT EXISTS idx_licenses_key_hash ON licenses(key_hash) WHERE key_hash IS NOT NULL;
 CREATE INDEX IF NOT EXISTS idx_password_resets_user_id ON password_resets(user_id);
 CREATE INDEX IF NOT EXISTS idx_users_discord_id ON users(discord_id);
+CREATE INDEX IF NOT EXISTS idx_app_sessions_user_id ON app_sessions(user_id);
+CREATE INDEX IF NOT EXISTS idx_app_sessions_license_id ON app_sessions(license_id);
+CREATE INDEX IF NOT EXISTS idx_app_sessions_last_seen ON app_sessions(last_seen_at DESC);
+CREATE INDEX IF NOT EXISTS idx_admin_audit_created ON admin_audit_log(created_at DESC);
+CREATE INDEX IF NOT EXISTS idx_app_device_codes_expiry ON app_device_codes(expires_at);

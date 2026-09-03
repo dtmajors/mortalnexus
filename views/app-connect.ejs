@@ -1,0 +1,22 @@
+<%- include('partials/header', { title, bodyClass: 'auth-page' }) %>
+<main class="auth-shell">
+  <section class="auth-card app-connect-card">
+    <% if (typeof approved !== 'undefined' && approved) { %>
+      <span class="eyebrow">Approved</span>
+      <h1>Mortal Nexus is signed in.</h1>
+      <p>You can close this page and return to the application.</p>
+      <div class="app-connect-success"><i data-lucide="circle-check-big"></i><span>Connected as <strong><%= user.display_name %></strong></span></div>
+    <% } else { %>
+      <span class="eyebrow">Desktop sign-in</span>
+      <h1>Connect Mortal Nexus?</h1>
+      <p>This gives the desktop application access to your account, claimed license, and permissions. It does not share your Discord password.</p>
+      <div class="app-connect-account"><span>Signed in as</span><strong><%= user.display_name %></strong><small><%= user.email %></small></div>
+      <form method="post" action="/app/connect">
+        <input type="hidden" name="csrf_token" value="<%= csrfToken %>">
+        <input type="hidden" name="code" value="<%= code %>">
+        <button class="button button-primary button-wide" type="submit"><i data-lucide="monitor-check"></i>Approve app sign-in</button>
+      </form>
+    <% } %>
+  </section>
+</main>
+<%- include('partials/footer') %>

@@ -42,6 +42,7 @@ const config = {
   firebaseDatabaseUrl: value('FIREBASE_DATABASE_URL', 'https://momap-9cb64-default-rtdb.firebaseio.com'),
   supportEmail: value('SUPPORT_EMAIL', 'support@mortalnexus.com'),
   adminEmail: value('ADMIN_EMAIL').toLowerCase(),
+  adminDiscordId: value('ADMIN_DISCORD_ID'),
   adminBootstrapSecret: value('ADMIN_BOOTSTRAP_SECRET'),
   resendApiKey: value('RESEND_API_KEY'),
   emailFrom: value('EMAIL_FROM', 'Mortal Nexus <noreply@mortalnexus.com>')
