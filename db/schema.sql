@@ -23,6 +23,9 @@ ALTER TABLE users ADD COLUMN IF NOT EXISTS discord_joined_at TIMESTAMPTZ;
 ALTER TABLE users ADD COLUMN IF NOT EXISTS last_login_at TIMESTAMPTZ;
 ALTER TABLE users ADD COLUMN IF NOT EXISTS can_edit BOOLEAN NOT NULL DEFAULT FALSE;
 ALTER TABLE users ADD COLUMN IF NOT EXISTS firebase_editor_email TEXT;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS in_game_name TEXT;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS guild_name TEXT;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS timezone TEXT;
 
 CREATE TABLE IF NOT EXISTS sessions (
   token_hash TEXT PRIMARY KEY,
@@ -114,6 +117,14 @@ CREATE TABLE IF NOT EXISTS admin_audit_log (
   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
+CREATE TABLE IF NOT EXISTS brave_login_tickets (
+  token_hash TEXT PRIMARY KEY,
+  user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  expires_at TIMESTAMPTZ NOT NULL,
+  used_at TIMESTAMPTZ,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
 CREATE INDEX IF NOT EXISTS idx_sessions_user_id ON sessions(user_id);
 CREATE INDEX IF NOT EXISTS idx_orders_user_id ON orders(user_id);
 CREATE UNIQUE INDEX IF NOT EXISTS idx_orders_provider_order ON orders(provider, provider_order_id);
@@ -126,3 +137,4 @@ CREATE INDEX IF NOT EXISTS idx_app_sessions_license_id ON app_sessions(license_i
 CREATE INDEX IF NOT EXISTS idx_app_sessions_last_seen ON app_sessions(last_seen_at DESC);
 CREATE INDEX IF NOT EXISTS idx_admin_audit_created ON admin_audit_log(created_at DESC);
 CREATE INDEX IF NOT EXISTS idx_app_device_codes_expiry ON app_device_codes(expires_at);
+CREATE INDEX IF NOT EXISTS idx_brave_login_tickets_expiry ON brave_login_tickets(expires_at);

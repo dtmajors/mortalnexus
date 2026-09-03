@@ -356,6 +356,24 @@ app.get('/auth/discord/callback', authLimiter, async (req, res, next) => {
   }
 });
 
+app.get('/auth/brave/start', authLimiter, async (req, res, next) => {
+  try {
+    if (!req.user || !req.user.discord_id) {
+      return res.redirect('/auth/discord?next=/auth/brave/start');
+    }
+    const ticket = randomToken(32);
+    const expiresAt = new Date(Date.now() + 5 * 60 * 1000);
+    await db.query('DELETE FROM brave_login_tickets WHERE expires_at < NOW() OR used_at IS NOT NULL');
+    await db.query(
+      'INSERT INTO brave_login_tickets (token_hash, user_id, expires_at) VALUES ($1, $2, $3)',
+      [hashToken(ticket), req.user.id, expiresAt]
+    );
+    res.redirect(`${config.braveBaseUrl}/auth/complete?ticket=${encodeURIComponent(ticket)}`);
+  } catch (error) {
+    next(error);
+  }
+});
+
 app.post('/logout', verifyCsrf, async (req, res, next) => {
   try {
     await destroySession(req, res);

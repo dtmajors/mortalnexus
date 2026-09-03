@@ -12,6 +12,7 @@ const config = {
   isProduction,
   port: Number(value('PORT', '3000')),
   baseUrl: value('APP_BASE_URL', 'http://localhost:3000').replace(/\/$/, ''),
+  braveBaseUrl: value('BRAVE_BASE_URL', 'https://brave.mortalnexus.com').replace(/\/$/, ''),
   databaseUrl: value('DATABASE_URL'),
   sessionSecret: value('SESSION_SECRET', 'mortal-nexus-local-development-secret-change-me'),
   licenseEncryptionKey: value('LICENSE_ENCRYPTION_KEY', 'mortal-nexus-local-license-secret-change-me'),
