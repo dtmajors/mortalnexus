@@ -6,6 +6,7 @@
   </div>
 </section>
 <section class="section compact-section page-width">
+  <% const failedOrder = orders.find((order) => order.status === 'fulfillment_failed' || order.license_email_status === 'failed'); %>
   <% if (licenses.length) { %>
     <div class="account-grid">
       <section class="license-panel">
@@ -23,6 +24,11 @@
         <div class="side-block"><i data-lucide="message-circle-question"></i><div><strong>Need help?</strong><p>Use the support page for installation or license assistance.</p><a href="/support">Open support</a></div></div>
       </aside>
     </div>
+  <% } else if (failedOrder) { %>
+    <div class="empty-access">
+      <div class="empty-icon"><i data-lucide="refresh-cw"></i></div><span class="eyebrow">Payment received</span><h2>Finish your license delivery.</h2><p>Your payment is complete. Retry delivery now to create your key and send the confirmation email. You will not be charged again.</p>
+      <form method="post" action="/account/orders/<%= failedOrder.id %>/retry"><input type="hidden" name="csrf_token" value="<%= csrfToken %>"><button class="button button-primary button-large" type="submit"><i data-lucide="refresh-cw"></i>Retry license delivery</button></form>
+    </div>
   <% } else { %>
     <div class="empty-access">
       <div class="empty-icon"><i data-lucide="key-round"></i></div><span class="eyebrow">No license yet</span><h2>Unlock the complete Mortal Nexus toolkit.</h2><p>One purchase gives this account lifetime application access and future updates.</p>
@@ -36,8 +42,8 @@
   <section class="orders-section">
     <div class="section-heading mini-heading"><div><span class="eyebrow">Billing</span><h2>Order history</h2></div></div>
     <% if (orders.length) { %>
-      <div class="data-table-wrap"><table class="data-table"><thead><tr><th>Order</th><th>Date</th><th>Status</th><th>Total</th></tr></thead><tbody>
-        <% orders.forEach((order) => { %><tr><td><code><%= order.id.slice(0, 8).toUpperCase() %></code></td><td><%= new Date(order.created_at).toLocaleDateString() %></td><td><span class="status-pill <%= order.status %>"><%= order.status.replace('_', ' ') %></span></td><td><%= new Intl.NumberFormat('en-US', { style: 'currency', currency: order.currency.toUpperCase() }).format(order.amount_total / 100) %></td></tr><% }) %>
+      <div class="data-table-wrap"><table class="data-table"><thead><tr><th>Order</th><th>Date</th><th>Status</th><th>Total</th><th></th></tr></thead><tbody>
+        <% orders.forEach((order) => { %><tr><td><code><%= order.id.slice(0, 8).toUpperCase() %></code></td><td><%= new Date(order.created_at).toLocaleDateString() %></td><td><span class="status-pill <%= order.status %>"><%= order.status.replace('_', ' ') %></span></td><td><%= new Intl.NumberFormat('en-US', { style: 'currency', currency: order.currency.toUpperCase() }).format(order.amount_total / 100) %></td><td><% if (order.status === 'fulfillment_failed' || order.license_email_status === 'failed') { %><form method="post" action="/account/orders/<%= order.id %>/retry"><input type="hidden" name="csrf_token" value="<%= csrfToken %>"><button class="button button-small button-quiet" type="submit">Retry delivery</button></form><% } %></td></tr><% }) %>
       </tbody></table></div>
     <% } else { %><p class="muted">No orders have been placed from this account.</p><% } %>
   </section>

@@ -299,6 +299,31 @@ app.get('/account', requireUser, async (req, res, next) => {
   }
 });
 
+app.post('/account/orders/:id/retry', requireUser, verifyCsrf, async (req, res) => {
+  try {
+    const result = await db.query(
+      'SELECT id, user_id, status, license_email_status FROM orders WHERE id = $1 AND user_id = $2',
+      [req.params.id, req.user.id]
+    );
+    const order = result.rows[0];
+    if (!order) {
+      return res.status(404).render('error', {
+        title: 'Order Not Found | Mortal Nexus',
+        status: 404,
+        message: 'That order could not be found on this account.'
+      });
+    }
+    if (order.status !== 'fulfillment_failed' && order.license_email_status !== 'failed') {
+      return res.redirect('/account?notice=This%20order%20does%20not%20need%20to%20be%20retried.');
+    }
+    await retryOrderFulfillment(order.id);
+    res.redirect('/account?notice=Your%20license%20is%20ready%20and%20the%20delivery%20email%20was%20sent.');
+  } catch (error) {
+    console.error(`Customer fulfillment retry failed for order ${req.params.id}:`, error.message);
+    res.redirect(`/account?error=${encodeURIComponent('License delivery could not be completed yet. Please try again in a moment.')}`);
+  }
+});
+
 app.get('/download/latest', downloadLimiter, requireUser, async (req, res, next) => {
   try {
     const access = await db.query('SELECT 1 FROM licenses WHERE user_id = $1 LIMIT 1', [req.user.id]);
