@@ -19,6 +19,12 @@ const config = {
   stripeWebhookSecret: value('STRIPE_WEBHOOK_SECRET'),
   stripePriceId: value('STRIPE_PRICE_ID'),
   productPriceDisplay: value('PRODUCT_PRICE_DISPLAY', '$19.99'),
+  paypalClientId: value('PAYPAL_CLIENT_ID'),
+  paypalClientSecret: value('PAYPAL_CLIENT_SECRET'),
+  paypalWebhookId: value('PAYPAL_WEBHOOK_ID'),
+  paypalMode: value('PAYPAL_MODE', 'live').toLowerCase(),
+  paypalPrice: value('PAYPAL_PRICE', '19.99'),
+  paypalCurrency: value('PAYPAL_CURRENCY', 'USD').toUpperCase(),
   keyAuthSellerKey: value('KEYAUTH_SELLER_KEY'),
   keyAuthMask: value('KEYAUTH_LICENSE_MASK', 'MNX-****-****-****-****'),
   keyAuthExpiry: value('KEYAUTH_LICENSE_EXPIRY', '9999'),
@@ -47,9 +53,12 @@ config.discordEnabled = Boolean(
   config.discordBotToken &&
   config.discordGuildId
 );
+config.paypalEnabled = Boolean(config.paypalClientId && config.paypalClientSecret && config.paypalWebhookId);
 
 function validateProductionConfig() {
   if (!isProduction) return;
+  if (!['live', 'sandbox'].includes(config.paypalMode)) throw new Error('PAYPAL_MODE must be live or sandbox.');
+  if (!/^\d+\.\d{2}$/.test(config.paypalPrice) || Number(config.paypalPrice) <= 0) throw new Error('PAYPAL_PRICE must be a positive amount such as 19.99.');
   const required = [
     ['DATABASE_URL', config.databaseUrl],
     ['SESSION_SECRET', process.env.SESSION_SECRET],
@@ -57,6 +66,10 @@ function validateProductionConfig() {
     ['STRIPE_SECRET_KEY', config.stripeSecretKey],
     ['STRIPE_WEBHOOK_SECRET', config.stripeWebhookSecret],
     ['STRIPE_PRICE_ID', config.stripePriceId],
+    ['PAYPAL_CLIENT_ID', config.paypalClientId],
+    ['PAYPAL_CLIENT_SECRET', config.paypalClientSecret],
+    ['PAYPAL_WEBHOOK_ID', config.paypalWebhookId],
+    ['PAYPAL_PRICE', config.paypalPrice],
     ['KEYAUTH_SELLER_KEY', config.keyAuthSellerKey],
     ['DISCORD_CLIENT_ID', config.discordClientId],
     ['DISCORD_CLIENT_SECRET', config.discordClientSecret],
@@ -64,7 +77,9 @@ function validateProductionConfig() {
     ['DISCORD_GUILD_ID', config.discordGuildId],
     ['FIREBASE_SERVICE_ACCOUNT_JSON', config.firebaseServiceAccountJson],
     ['ADMIN_EMAIL', config.adminEmail],
-    ['ADMIN_BOOTSTRAP_SECRET', config.adminBootstrapSecret]
+    ['ADMIN_BOOTSTRAP_SECRET', config.adminBootstrapSecret],
+    ['RESEND_API_KEY', config.resendApiKey],
+    ['EMAIL_FROM', process.env.EMAIL_FROM]
   ];
   if (config.downloadUrl === '/download/latest') {
     required.push(

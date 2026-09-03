@@ -21,7 +21,8 @@ const {
   safeNext
 } = require('./src/security');
 const { sendPasswordResetEmail } = require('./src/email');
-const { stripeClient, fulfillCheckoutSession, getLicensesForUser } = require('./src/fulfillment');
+const { stripeClient, fulfillCheckoutSession, fulfillPayPalOrder, retryOrderFulfillment, getLicensesForUser } = require('./src/fulfillment');
+const { paypalEnabled, createPayPalOrder, completePayPalOrder, verifyPayPalWebhook } = require('./src/paypal');
 const { authorizationUrl, authenticateDiscord } = require('./src/discord');
 const { normalizeEditorEmail, setEditorPermission, revokeAllEditors } = require('./src/firebase-admin');
 const { streamLatestInstaller } = require('./src/releases');
@@ -70,6 +71,24 @@ app.post('/webhooks/stripe', express.raw({ type: 'application/json' }), async (r
 
 app.use(express.urlencoded({ extended: false, limit: '32kb' }));
 app.use(express.json({ limit: '32kb' }));
+
+app.post('/webhooks/paypal', async (req, res) => {
+  try {
+    if (!paypalEnabled() || !(await verifyPayPalWebhook(req.headers, req.body))) {
+      return res.status(400).send('Webhook verification failed.');
+    }
+    if (req.body.event_type === 'PAYMENT.CAPTURE.COMPLETED' || req.body.event_type === 'CHECKOUT.ORDER.COMPLETED') {
+      const orderId = req.body.resource?.supplementary_data?.related_ids?.order_id || req.body.resource?.id;
+      if (!orderId) throw new Error('PayPal webhook did not include an order ID.');
+      await fulfillPayPalOrder(String(orderId));
+    }
+    res.json({ received: true });
+  } catch (error) {
+    console.error('PayPal webhook failed:', error.message);
+    res.status(500).send('Webhook failed.');
+  }
+});
+
 app.use(cookieParser());
 app.use(loadUser);
 app.use(ensureCsrf);
@@ -80,6 +99,7 @@ app.use((req, res, next) => {
   res.locals.discordUrl = config.discordUrl;
   res.locals.supportEmail = config.supportEmail;
   res.locals.discordAuthEnabled = config.discordEnabled;
+  res.locals.paypalEnabled = config.paypalEnabled;
   res.locals.notice = req.query.notice || '';
   res.locals.error = req.query.error || '';
   next();
@@ -368,6 +388,16 @@ app.post('/checkout', checkoutLimiter, requireUser, verifyCsrf, async (req, res,
   }
 });
 
+app.post('/checkout/paypal', checkoutLimiter, requireUser, verifyCsrf, async (req, res, next) => {
+  try {
+    if (!paypalEnabled()) throw new Error('PayPal checkout is not configured.');
+    const order = await createPayPalOrder({ userId: req.user.id });
+    res.redirect(303, order.approvalUrl);
+  } catch (error) {
+    next(error);
+  }
+});
+
 app.get('/checkout/demo', requireUser, async (req, res, next) => {
   try {
     if (config.isProduction) return res.status(404).end();
@@ -386,6 +416,22 @@ app.get('/checkout/success', requireUser, async (req, res, next) => {
     res.render('checkout-success', { title: 'Mortal Nexus Is Ready', state: 'complete', licenseKey: result.licenseKey, order: result.order });
   } catch (error) {
     console.error('Checkout confirmation failed:', error.message);
+    res.status(202).render('checkout-success', { title: 'Purchase Processing | Mortal Nexus', state: 'pending', licenseKey: null, order: null });
+  }
+});
+
+app.get('/checkout/paypal/return', requireUser, async (req, res) => {
+  try {
+    const orderId = String(req.query.token || '');
+    if (!orderId) throw new Error('PayPal did not return an order ID.');
+    const paypalOrder = await completePayPalOrder(orderId);
+    const result = await fulfillPayPalOrder(orderId, paypalOrder);
+    if (result.order.user_id !== req.user.id) {
+      return res.status(403).render('error', { title: 'Access denied', status: 403, message: 'This purchase belongs to another account.' });
+    }
+    res.render('checkout-success', { title: 'Mortal Nexus Is Ready', state: 'complete', licenseKey: result.licenseKey, order: result.order });
+  } catch (error) {
+    console.error('PayPal confirmation failed:', error.message);
     res.status(202).render('checkout-success', { title: 'Purchase Processing | Mortal Nexus', state: 'pending', licenseKey: null, order: null });
   }
 });
@@ -450,8 +496,7 @@ app.post('/admin/editors/revoke-all', requireAdmin, verifyCsrf, async (req, res)
 
 app.post('/admin/orders/:id/retry', requireAdmin, verifyCsrf, async (req, res, next) => {
   try {
-    const result = await db.query('SELECT stripe_session_id FROM orders WHERE id = $1', [req.params.id]);
-    if (result.rows[0]) await fulfillCheckoutSession(result.rows[0].stripe_session_id);
+    await retryOrderFulfillment(req.params.id);
     res.redirect('/admin?notice=Fulfillment%20checked.');
   } catch (error) {
     res.redirect(`/admin?error=${encodeURIComponent(error.message)}`);

@@ -34,17 +34,33 @@ CREATE TABLE IF NOT EXISTS sessions (
 CREATE TABLE IF NOT EXISTS orders (
   id TEXT PRIMARY KEY,
   user_id TEXT REFERENCES users(id) ON DELETE SET NULL,
-  stripe_session_id TEXT NOT NULL UNIQUE,
+  stripe_session_id TEXT UNIQUE,
   stripe_payment_intent_id TEXT,
+  provider TEXT NOT NULL DEFAULT 'stripe',
+  provider_order_id TEXT,
+  provider_payment_id TEXT,
   customer_email TEXT NOT NULL,
   amount_total INTEGER NOT NULL DEFAULT 0,
   currency TEXT NOT NULL DEFAULT 'usd',
   status TEXT NOT NULL DEFAULT 'pending',
   failure_reason TEXT,
+  license_email_status TEXT NOT NULL DEFAULT 'pending',
+  license_email_error TEXT,
+  license_email_sent_at TIMESTAMPTZ,
   paid_at TIMESTAMPTZ,
   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
+
+ALTER TABLE orders ALTER COLUMN stripe_session_id DROP NOT NULL;
+ALTER TABLE orders ADD COLUMN IF NOT EXISTS provider TEXT NOT NULL DEFAULT 'stripe';
+ALTER TABLE orders ADD COLUMN IF NOT EXISTS provider_order_id TEXT;
+ALTER TABLE orders ADD COLUMN IF NOT EXISTS provider_payment_id TEXT;
+ALTER TABLE orders ADD COLUMN IF NOT EXISTS license_email_status TEXT NOT NULL DEFAULT 'pending';
+ALTER TABLE orders ADD COLUMN IF NOT EXISTS license_email_error TEXT;
+ALTER TABLE orders ADD COLUMN IF NOT EXISTS license_email_sent_at TIMESTAMPTZ;
+UPDATE orders SET provider = 'stripe' WHERE provider IS NULL;
+UPDATE orders SET provider_order_id = stripe_session_id WHERE provider_order_id IS NULL AND stripe_session_id IS NOT NULL;
 
 CREATE TABLE IF NOT EXISTS licenses (
   id TEXT PRIMARY KEY,
@@ -66,6 +82,7 @@ CREATE TABLE IF NOT EXISTS password_resets (
 
 CREATE INDEX IF NOT EXISTS idx_sessions_user_id ON sessions(user_id);
 CREATE INDEX IF NOT EXISTS idx_orders_user_id ON orders(user_id);
+CREATE UNIQUE INDEX IF NOT EXISTS idx_orders_provider_order ON orders(provider, provider_order_id);
 CREATE INDEX IF NOT EXISTS idx_licenses_user_id ON licenses(user_id);
 CREATE INDEX IF NOT EXISTS idx_password_resets_user_id ON password_resets(user_id);
 CREATE INDEX IF NOT EXISTS idx_users_discord_id ON users(discord_id);

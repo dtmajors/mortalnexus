@@ -8,7 +8,7 @@ Production storefront, customer portal, license delivery, and administration for
 - Local email/password accounts and Discord OAuth sign-in
 - Automatic Discord server join after Discord authorization
 - Stripe Checkout with dynamic payment methods
-- Signed, idempotent Stripe webhook fulfillment
+- Signed, idempotent Stripe and PayPal fulfillment
 - Server-side KeyAuth Seller API license generation
 - Encrypted CD-key storage and customer purchase history
 - License-only installer downloads from a private GitHub release
@@ -100,6 +100,10 @@ The website requests `identify`, `email`, and `guilds.join`. Discord sign-in the
 
 Checkout intentionally does not hardcode `payment_method_types`; Stripe dynamically shows eligible methods enabled in the Dashboard. See [Stripe Checkout payment methods](https://docs.stripe.com/payments/checkout/payment-methods).
 
+### PayPal
+
+Create a PayPal REST application and set `PAYPAL_CLIENT_ID`, `PAYPAL_CLIENT_SECRET`, `PAYPAL_MODE`, `PAYPAL_PRICE`, and `PAYPAL_CURRENCY`. Add `https://www.mortalnexus.com/webhooks/paypal` as the application's webhook for `PAYMENT.CAPTURE.COMPLETED`, then store its ID as `PAYPAL_WEBHOOK_ID`. The return page captures approved orders server-side; the verified webhook provides recovery when a buyer closes the browser before returning.
+
 ## KeyAuth
 
 The paid webhook calls the KeyAuth Seller API `type=add` action. Confirm these values match the same KeyAuth application used by the desktop build:
@@ -171,4 +175,4 @@ From `/admin`, the primary administrator can:
 
 ## Email
 
-Email is optional. Set `RESEND_API_KEY` and a verified `EMAIL_FROM` domain to send license and password-reset messages. CD keys remain available in the customer account if email is unavailable.
+Production requires `RESEND_API_KEY` and a verified `EMAIL_FROM` domain. License delivery is awaited and recorded on every order, with the CD key also retained in the customer account.
