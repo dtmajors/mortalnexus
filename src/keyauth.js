@@ -59,4 +59,22 @@ async function createLicense({ orderId }) {
   return key;
 }
 
-module.exports = { createLicense, extractLicenseKey };
+async function validateLicense(licenseKey) {
+  if (!config.keyAuthSellerKey) throw new Error('KeyAuth validation is not configured.');
+  const data = await sellerRequest(new URLSearchParams({
+    sellerkey: config.keyAuthSellerKey,
+    type: 'info',
+    format: 'json',
+    key: licenseKey
+  }));
+  const status = String(data.status || '');
+  if (status.toLowerCase().includes('ban')) throw new Error('This license key is banned.');
+  return {
+    valid: true,
+    status,
+    level: String(data.level || ''),
+    duration: String(data.duration || '')
+  };
+}
+
+module.exports = { createLicense, validateLicense, extractLicenseKey };

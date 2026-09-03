@@ -13,7 +13,7 @@
         <div class="panel-title"><div><span class="eyebrow">Your access</span><h2>Lifetime license</h2></div><span class="active-badge"><span></span>Active</span></div>
         <% licenses.forEach((license) => { %>
           <div class="license-key-row"><code data-license><%= license.license_key %></code><button class="icon-button copy-button" type="button" data-copy="<%= license.license_key %>" title="Copy license key"><i data-lucide="copy"></i></button></div>
-          <p class="microcopy">Purchased <%= new Date(license.created_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) %> · Keep this key private.</p>
+          <p class="microcopy"><%= license.order_id ? 'Purchased' : 'Redeemed' %> <%= new Date(license.created_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) %> · Keep this key private.</p>
         <% }) %>
         <a class="button button-primary button-large" href="<%= downloadUrl %>"><i data-lucide="download"></i>Download latest installer</a>
       </section>
@@ -38,6 +38,11 @@
       </div>
     </div>
   <% } %>
+
+  <section class="redeem-license">
+    <div class="redeem-copy"><span class="eyebrow">Already have a key?</span><h2>Redeem a license</h2><p>Link a valid KeyAuth license to this account to unlock the installer.</p></div>
+    <form method="post" action="/account/redeem"><input type="hidden" name="csrf_token" value="<%= csrfToken %>"><label for="license-key">License key</label><div class="redeem-controls"><input id="license-key" name="license_key" type="text" minlength="8" maxlength="200" autocomplete="off" spellcheck="false" placeholder="Enter your license key" required><button class="button button-primary" type="submit"><i data-lucide="key-round"></i>Redeem</button></div></form>
+  </section>
 
   <section class="orders-section">
     <div class="section-heading mini-heading"><div><span class="eyebrow">Billing</span><h2>Order history</h2></div></div>

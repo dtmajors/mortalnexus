@@ -3,7 +3,7 @@ const Stripe = require('stripe');
 const db = require('./db');
 const { config } = require('./config');
 const { createLicense } = require('./keyauth');
-const { encryptLicense, decryptLicense } = require('./security');
+const { hashToken, encryptLicense, decryptLicense } = require('./security');
 const { sendLicenseEmail } = require('./email');
 const { getPayPalOrder, completedPayPalPayment } = require('./paypal');
 
@@ -68,10 +68,10 @@ async function fulfillRecordedOrder(order) {
   try {
     const licenseKey = await createLicense({ orderId: order.id, email: order.customer_email });
     await db.query(
-      `INSERT INTO licenses (id, order_id, user_id, encrypted_key, key_hint)
-       VALUES ($1, $2, $3, $4, $5)
+      `INSERT INTO licenses (id, order_id, user_id, encrypted_key, key_hint, key_hash)
+       VALUES ($1, $2, $3, $4, $5, $6)
        ON CONFLICT (order_id) DO NOTHING`,
-      [crypto.randomUUID(), order.id, order.user_id, encryptLicense(licenseKey), licenseKey.slice(-6)]
+      [crypto.randomUUID(), order.id, order.user_id, encryptLicense(licenseKey), licenseKey.slice(-6), hashToken(licenseKey)]
     );
     await db.query("UPDATE orders SET status = 'fulfilled', failure_reason = NULL, updated_at = NOW() WHERE id = $1", [order.id]);
     order.status = 'fulfilled';
@@ -167,7 +167,7 @@ async function getLicensesForUser(userId) {
   const result = await db.query(
     `SELECT l.id, l.encrypted_key, l.key_hint, l.created_at,
             o.id AS order_id, o.amount_total, o.currency, o.status, o.paid_at, o.provider
-     FROM licenses l JOIN orders o ON o.id = l.order_id
+     FROM licenses l LEFT JOIN orders o ON o.id = l.order_id
      WHERE l.user_id = $1 ORDER BY l.created_at DESC`,
     [userId]
   );

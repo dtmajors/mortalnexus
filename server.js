@@ -26,6 +26,7 @@ const { paypalEnabled, createPayPalOrder, completePayPalOrder, verifyPayPalWebho
 const { authorizationUrl, authenticateDiscord } = require('./src/discord');
 const { normalizeEditorEmail, setEditorPermission, revokeAllEditors } = require('./src/firebase-admin');
 const { streamLatestInstaller } = require('./src/releases');
+const { backfillLicenseHashes, redeemLicense } = require('./src/license-redemption');
 
 validateProductionConfig();
 
@@ -108,6 +109,7 @@ app.use((req, res, next) => {
 const authLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 20, standardHeaders: 'draft-8', legacyHeaders: false });
 const checkoutLimiter = rateLimit({ windowMs: 10 * 60 * 1000, limit: 10, standardHeaders: 'draft-8', legacyHeaders: false });
 const downloadLimiter = rateLimit({ windowMs: 60 * 60 * 1000, limit: 10, standardHeaders: 'draft-8', legacyHeaders: false });
+const licenseLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 10, standardHeaders: 'draft-8', legacyHeaders: false });
 
 app.get('/health', (req, res) => res.json({ ok: true, service: 'mortal-nexus-store' }));
 
@@ -296,6 +298,19 @@ app.get('/account', requireUser, async (req, res, next) => {
     res.render('account', { title: 'Your Account | Mortal Nexus', licenses, orders: orders.rows });
   } catch (error) {
     next(error);
+  }
+});
+
+app.post('/account/redeem', licenseLimiter, requireUser, verifyCsrf, async (req, res) => {
+  try {
+    const result = await redeemLicense({ licenseKey: req.body.license_key, userId: req.user.id });
+    const notice = result.created
+      ? 'License%20key%20accepted.%20Your%20download%20is%20ready.'
+      : 'This%20license%20is%20already%20linked%20to%20your%20account.';
+    res.redirect(`/account?notice=${notice}`);
+  } catch (error) {
+    console.error(`License redemption failed for user ${req.user.id.slice(0, 8)}:`, error.message);
+    res.redirect(`/account?error=${encodeURIComponent('That license key is invalid or has already been claimed.')}`);
   }
 });
 
@@ -541,6 +556,7 @@ app.use((error, req, res, next) => {
 
 async function start() {
   await db.initializeDatabase();
+  await backfillLicenseHashes();
   await retryFailedOrders();
   httpServer = app.listen(config.port, '0.0.0.0', () => {
     const address = httpServer.address();
