@@ -388,15 +388,19 @@ app.post('/checkout', checkoutLimiter, requireUser, verifyCsrf, async (req, res,
   }
 });
 
-app.post('/checkout/paypal', checkoutLimiter, requireUser, verifyCsrf, async (req, res, next) => {
+async function startPayPalCheckout(req, res) {
   try {
     if (!paypalEnabled()) throw new Error('PayPal checkout is not configured.');
     const order = await createPayPalOrder({ userId: req.user.id });
     res.redirect(303, order.approvalUrl);
   } catch (error) {
-    next(error);
+    console.error('PayPal checkout start failed:', error.message);
+    res.redirect(`/account?error=${encodeURIComponent('PayPal checkout could not start. Please try again or use card checkout.')}`);
   }
-});
+}
+
+app.get('/checkout/paypal', checkoutLimiter, requireUser, startPayPalCheckout);
+app.post('/checkout/paypal', checkoutLimiter, requireUser, verifyCsrf, startPayPalCheckout);
 
 app.get('/checkout/demo', requireUser, async (req, res, next) => {
   try {

@@ -28,7 +28,7 @@
       <div class="empty-icon"><i data-lucide="key-round"></i></div><span class="eyebrow">No license yet</span><h2>Unlock the complete Mortal Nexus toolkit.</h2><p>One purchase gives this account lifetime application access and future updates.</p>
       <div class="checkout-options account-checkout-options">
         <form method="post" action="/checkout"><input type="hidden" name="csrf_token" value="<%= csrfToken %>"><button class="button button-primary button-large" type="submit"><i data-lucide="credit-card"></i>Pay <%= price %> with card</button></form>
-        <% if (paypalEnabled) { %><form method="post" action="/checkout/paypal"><input type="hidden" name="csrf_token" value="<%= csrfToken %>"><button class="button button-paypal button-large" type="submit">Pay <%= price %> with <strong>PayPal</strong></button></form><% } %>
+        <% if (paypalEnabled) { %><a class="button button-paypal button-large" href="/checkout/paypal">Pay <%= price %> with <strong>PayPal</strong></a><% } %>
       </div>
     </div>
   <% } %>

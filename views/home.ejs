@@ -132,10 +132,7 @@
           </form>
           <% if (paypalEnabled) { %>
             <div class="checkout-divider"><span>or</span></div>
-            <form method="post" action="/checkout/paypal">
-              <input type="hidden" name="csrf_token" value="<%= csrfToken %>">
-              <button class="button button-paypal button-large button-full" type="submit"><strong>PayPal</strong></button>
-            </form>
+            <a class="button button-paypal button-large button-full" href="/checkout/paypal"><strong>PayPal</strong></a>
           <% } %>
         </div>
       <% } else { %>
