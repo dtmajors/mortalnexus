@@ -112,6 +112,7 @@ const checkoutLimiter = rateLimit({ windowMs: 10 * 60 * 1000, limit: 10, standar
 const downloadLimiter = rateLimit({ windowMs: 60 * 60 * 1000, limit: 10, standardHeaders: 'draft-8', legacyHeaders: false });
 const licenseLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 10, standardHeaders: 'draft-8', legacyHeaders: false });
 const appAuthLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 30, standardHeaders: 'draft-8', legacyHeaders: false });
+const devicePollLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 240, standardHeaders: 'draft-8', legacyHeaders: false });
 
 function isPrimaryAdmin(email, discordId = '') {
   return (config.adminEmail && String(email || '').toLowerCase() === config.adminEmail)
@@ -192,7 +193,7 @@ app.post('/api/app/device/start', appAuthLimiter, async (req, res) => {
   }
 });
 
-app.post('/api/app/device/complete', appAuthLimiter, async (req, res) => {
+app.post('/api/app/device/complete', devicePollLimiter, async (req, res) => {
   try {
     const result = await appAuth.completeDeviceLogin({
       deviceToken: req.body.deviceToken,

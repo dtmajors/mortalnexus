@@ -28,6 +28,7 @@
       </nav>
       <div class="header-actions">
         <% if (user) { %>
+          <% if (user.role === 'admin') { %><a class="button button-quiet" href="/admin"><i data-lucide="shield"></i>Admin</a><% } %>
           <a class="button button-quiet" href="/account"><i data-lucide="user-round"></i>Account</a>
         <% } else { %>
           <a class="button button-quiet" href="/login">Sign in</a>
