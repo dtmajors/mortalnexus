@@ -466,7 +466,7 @@ app.use((error, req, res, next) => {
 
 async function start() {
   await db.initializeDatabase();
-  httpServer = app.listen(config.port, () => console.log(`Mortal Nexus website running at ${config.baseUrl}`));
+  httpServer = app.listen(config.port, '0.0.0.0', () => console.log(`Mortal Nexus website running at ${config.baseUrl}`));
 }
 
 start().catch((error) => {
