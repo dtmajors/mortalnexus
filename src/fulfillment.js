@@ -140,6 +140,24 @@ async function retryOrderFulfillment(orderId) {
   return fulfillCheckoutSession(order.stripe_session_id);
 }
 
+async function retryFailedOrders(limit = 20) {
+  const result = await db.query(
+    `SELECT id FROM orders
+     WHERE status = 'fulfillment_failed' OR license_email_status = 'failed'
+     ORDER BY created_at ASC LIMIT $1`,
+    [limit]
+  );
+  for (const order of result.rows) {
+    try {
+      await retryOrderFulfillment(order.id);
+      console.log(`Recovered fulfillment for order ${order.id.slice(0, 8)}.`);
+    } catch (error) {
+      console.error(`Automatic fulfillment retry failed for order ${order.id.slice(0, 8)}:`, error.message);
+    }
+  }
+  return result.rows.length;
+}
+
 async function getLicensesForUser(userId) {
   const result = await db.query(
     `SELECT l.id, l.encrypted_key, l.key_hint, l.created_at,
@@ -156,5 +174,6 @@ module.exports = {
   fulfillCheckoutSession,
   fulfillPayPalOrder,
   retryOrderFulfillment,
+  retryFailedOrders,
   getLicensesForUser
 };

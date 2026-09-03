@@ -21,7 +21,7 @@ const {
   safeNext
 } = require('./src/security');
 const { sendPasswordResetEmail } = require('./src/email');
-const { stripeClient, fulfillCheckoutSession, fulfillPayPalOrder, retryOrderFulfillment, getLicensesForUser } = require('./src/fulfillment');
+const { stripeClient, fulfillCheckoutSession, fulfillPayPalOrder, retryOrderFulfillment, retryFailedOrders, getLicensesForUser } = require('./src/fulfillment');
 const { paypalEnabled, createPayPalOrder, completePayPalOrder, verifyPayPalWebhook } = require('./src/paypal');
 const { authorizationUrl, authenticateDiscord } = require('./src/discord');
 const { normalizeEditorEmail, setEditorPermission, revokeAllEditors } = require('./src/firebase-admin');
@@ -541,6 +541,7 @@ app.use((error, req, res, next) => {
 
 async function start() {
   await db.initializeDatabase();
+  await retryFailedOrders();
   httpServer = app.listen(config.port, '0.0.0.0', () => {
     const address = httpServer.address();
     console.log(`Mortal Nexus website running at ${config.baseUrl} on ${address.address}:${address.port}`);
