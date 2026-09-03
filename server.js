@@ -32,6 +32,9 @@ const appAuth = require('./src/app-auth');
 validateProductionConfig();
 
 const app = express();
+const assetVersion = process.env.RAILWAY_GIT_COMMIT_SHA?.slice(0, 12)
+  || process.env.RAILWAY_DEPLOYMENT_ID
+  || Date.now().toString(36);
 let httpServer;
 app.set('trust proxy', 1);
 app.set('view engine', 'ejs');
@@ -102,6 +105,7 @@ app.use((req, res, next) => {
   res.locals.supportEmail = config.supportEmail;
   res.locals.discordAuthEnabled = config.discordEnabled;
   res.locals.paypalEnabled = config.paypalEnabled;
+  res.locals.assetVersion = assetVersion;
   res.locals.notice = req.query.notice || '';
   res.locals.error = req.query.error || '';
   next();

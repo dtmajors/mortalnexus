@@ -7,9 +7,9 @@
   <meta name="description" content="Mortal Nexus brings live maps, crafting calculators, loot data, spell planning, guides, and game tools into one Mortal Online 2 companion.">
   <title><%= title %></title>
   <link rel="icon" href="/assets/mortal-nexus-icon.png" type="image/png">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles.css?v=<%= encodeURIComponent(assetVersion) %>">
   <script src="/vendor/lucide.js" defer></script>
-  <script src="/app.js" defer></script>
+  <script src="/app.js?v=<%= encodeURIComponent(assetVersion) %>" defer></script>
 </head>
 <body class="<%= bodyClass || '' %>">
   <a class="skip-link" href="#main">Skip to content</a>
