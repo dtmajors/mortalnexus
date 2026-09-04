@@ -99,6 +99,8 @@ CREATE TABLE IF NOT EXISTS app_sessions (
   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
+ALTER TABLE app_sessions ALTER COLUMN license_id DROP NOT NULL;
+
 CREATE TABLE IF NOT EXISTS app_device_codes (
   token_hash TEXT PRIMARY KEY,
   display_code TEXT NOT NULL UNIQUE,

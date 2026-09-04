@@ -136,7 +136,6 @@ app.post('/api/app/login', appAuthLimiter, async (req, res) => {
     const result = await appAuth.login({
       email: req.body.email,
       password: req.body.password,
-      licenseKey: req.body.licenseKey,
       deviceName: req.body.deviceName,
       appVersion: req.body.appVersion
     });
@@ -150,7 +149,6 @@ app.post('/api/app/resume', appAuthLimiter, async (req, res) => {
   try {
     const result = await appAuth.resume({
       token: appAuth.bearerToken(req),
-      licenseKey: req.body.licenseKey,
       deviceName: req.body.deviceName,
       appVersion: req.body.appVersion
     });
@@ -201,7 +199,6 @@ app.post('/api/app/device/complete', devicePollLimiter, async (req, res) => {
   try {
     const result = await appAuth.completeDeviceLogin({
       deviceToken: req.body.deviceToken,
-      licenseKey: req.body.licenseKey,
       deviceName: req.body.deviceName,
       appVersion: req.body.appVersion
     });
@@ -644,7 +641,7 @@ app.get('/admin', requireAdmin, async (req, res, next) => {
                 GROUP BY l.id, u.id, o.id ORDER BY l.created_at DESC LIMIT 200`),
       db.query(`SELECT s.token_hash, s.device_name, s.app_version, s.created_at, s.last_seen_at,
                 s.expires_at, s.revoked_at, u.id AS user_id, u.email, u.display_name, l.key_hint
-                FROM app_sessions s JOIN users u ON u.id = s.user_id JOIN licenses l ON l.id = s.license_id
+                FROM app_sessions s JOIN users u ON u.id = s.user_id LEFT JOIN licenses l ON l.id = s.license_id
                 ORDER BY s.last_seen_at DESC LIMIT 200`),
       db.query(`SELECT a.action, a.details, a.created_at, admin.email AS admin_email, target.email AS target_email
                 FROM admin_audit_log a LEFT JOIN users admin ON admin.id = a.admin_user_id

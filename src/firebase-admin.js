@@ -85,10 +85,11 @@ async function revokeAllEditors() {
   return { scanned, revoked };
 }
 
-async function createDesktopFirebaseToken(user) {
+async function createDesktopFirebaseToken(user, { premium = false } = {}) {
   if (!user?.id) throw new Error('A website account is required for Firebase access.');
   return firebaseAuth().createCustomToken(String(user.id), {
     editor: user.can_edit === true,
+    premium: premium === true,
     accountName: String(user.display_name || '').slice(0, 60),
     websiteAccount: true
   });

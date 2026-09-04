@@ -1,7 +1,6 @@
 const os = require('node:os');
 const db = require('./db');
-const { randomToken, hashToken, verifyPassword } = require('./security');
-const { normalizeLicenseKey } = require('./license-redemption');
+const { randomToken, hashToken, verifyPassword, decryptLicense } = require('./security');
 const { validateLicense } = require('./keyauth');
 const { createDesktopFirebaseToken } = require('./firebase-admin');
 
@@ -26,26 +25,33 @@ function publicUser(user) {
   };
 }
 
-async function ownedLicense(userId, licenseKey) {
-  const key = normalizeLicenseKey(licenseKey);
+async function ownedLicense(userId) {
   const result = await db.query(
-    `SELECT id, key_hint FROM licenses
-     WHERE user_id = $1 AND key_hash = $2 LIMIT 1`,
-    [userId, hashToken(key)]
+    `SELECT id, key_hint, encrypted_key FROM licenses
+     WHERE user_id = $1 ORDER BY created_at DESC LIMIT 1`,
+    [userId]
   );
-  if (!result.rows[0]) throw new Error('This license key is not linked to this account. Claim it from your website account first.');
-  await validateLicense(key);
-  return result.rows[0];
+  const license = result.rows[0] || null;
+  if (!license) return null;
+  try {
+    await validateLicense(decryptLicense(license.encrypted_key));
+    return license;
+  } catch (error) {
+    console.warn(`Premium entitlement validation failed for account ${String(userId).slice(0, 8)}: ${error.message}`);
+    return null;
+  }
 }
 
 async function responseFor(user, license, sessionToken, expiresAt) {
+  const premium = Boolean(license);
   return {
     success: true,
     sessionToken,
     expiresAt: expiresAt.toISOString(),
     account: publicUser(user),
-    license: { hint: license.key_hint },
-    firebaseToken: await createDesktopFirebaseToken(user)
+    license: license ? { hint: license.key_hint } : null,
+    entitlement: { tier: premium ? 'premium' : 'free', premium },
+    firebaseToken: await createDesktopFirebaseToken(user, { premium })
   };
 }
 
@@ -56,20 +62,20 @@ async function createAppSession(user, license, deviceName, appVersion) {
     `INSERT INTO app_sessions
       (token_hash, user_id, license_id, device_name, app_version, expires_at)
      VALUES ($1, $2, $3, $4, $5, $6)`,
-    [hashToken(token), user.id, license.id, cleanText(deviceName || os.hostname(), 120), cleanText(appVersion, 32), expiresAt]
+    [hashToken(token), user.id, license?.id || null, cleanText(deviceName || os.hostname(), 120), cleanText(appVersion, 32), expiresAt]
   );
   await db.query('UPDATE users SET last_login_at = NOW(), updated_at = NOW() WHERE id = $1', [user.id]);
   return responseFor(user, license, token, expiresAt);
 }
 
-async function login({ email, password, licenseKey, deviceName, appVersion }) {
+async function login({ email, password, deviceName, appVersion }) {
   const normalizedEmail = cleanText(email, 254).toLowerCase();
   const found = await db.query('SELECT * FROM users WHERE email = $1', [normalizedEmail]);
   const user = found.rows[0];
   if (!user || !user.password_hash || !(await verifyPassword(String(password || ''), user.password_hash))) {
     throw new Error('The email or password is incorrect.');
   }
-  const license = await ownedLicense(user.id, licenseKey);
+  const license = await ownedLicense(user.id);
   return createAppSession(user, license, deviceName, appVersion);
 }
 
@@ -98,7 +104,7 @@ async function approveDeviceLogin(displayCode, userId) {
   if (!result.rows[0]) throw new Error('This app sign-in request expired. Start again from Mortal Nexus.');
 }
 
-async function completeDeviceLogin({ deviceToken, licenseKey, deviceName, appVersion }) {
+async function completeDeviceLogin({ deviceToken, deviceName, appVersion }) {
   const found = await db.query(
     `SELECT c.*, u.* FROM app_device_codes c
      LEFT JOIN users u ON u.id = c.approved_user_id
@@ -115,29 +121,27 @@ async function completeDeviceLogin({ deviceToken, licenseKey, deviceName, appVer
     role: row.role,
     can_edit: row.can_edit
   };
-  const license = await ownedLicense(user.id, licenseKey);
+  const license = await ownedLicense(user.id);
   await db.query('UPDATE app_device_codes SET used_at = NOW() WHERE token_hash = $1', [hashToken(deviceToken)]);
   return createAppSession(user, license, deviceName, appVersion);
 }
 
-async function resume({ token, licenseKey, deviceName, appVersion }) {
+async function resume({ token, deviceName, appVersion }) {
   if (!token) throw new Error('Your Mortal Nexus sign-in has expired.');
   const found = await db.query(
-    `SELECT s.*, u.email, u.display_name, u.role, u.can_edit, l.key_hint
+    `SELECT s.*, u.email, u.display_name, u.role, u.can_edit
      FROM app_sessions s
      JOIN users u ON u.id = s.user_id
-     JOIN licenses l ON l.id = s.license_id
      WHERE s.token_hash = $1 AND s.expires_at > NOW() AND s.revoked_at IS NULL`,
     [hashToken(token)]
   );
   const session = found.rows[0];
   if (!session) throw new Error('Your Mortal Nexus sign-in has expired or was revoked.');
-  const license = await ownedLicense(session.user_id, licenseKey);
-  if (license.id !== session.license_id) throw new Error('This app session belongs to a different license.');
+  const license = await ownedLicense(session.user_id);
   await db.query(
-    `UPDATE app_sessions SET last_seen_at = NOW(), device_name = $1, app_version = $2
-     WHERE token_hash = $3`,
-    [cleanText(deviceName, 120), cleanText(appVersion, 32), hashToken(token)]
+    `UPDATE app_sessions SET last_seen_at = NOW(), device_name = $1, app_version = $2, license_id = $3
+     WHERE token_hash = $4`,
+    [cleanText(deviceName, 120), cleanText(appVersion, 32), license?.id || null, hashToken(token)]
   );
   return responseFor({
     id: session.user_id,
@@ -156,7 +160,6 @@ async function authenticate(token) {
   if (!token) return null;
   const result = await db.query(
     `SELECT s.user_id, s.license_id FROM app_sessions s
-     JOIN licenses l ON l.id = s.license_id AND l.user_id = s.user_id
      WHERE s.token_hash = $1 AND s.expires_at > NOW() AND s.revoked_at IS NULL`,
     [hashToken(token)]
   );
