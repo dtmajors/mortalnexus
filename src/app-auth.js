@@ -26,7 +26,25 @@ function publicUser(user) {
   };
 }
 
-async function ownedLicense(userId) {
+function versionAtLeast(current, minimum) {
+  const parts = (value) => String(value || '')
+    .split('.')
+    .slice(0, 4)
+    .map((part) => Number.parseInt(part, 10) || 0);
+  const currentParts = parts(current);
+  const minimumParts = parts(minimum);
+  for (let index = 0; index < Math.max(currentParts.length, minimumParts.length); index += 1) {
+    const difference = (currentParts[index] || 0) - (minimumParts[index] || 0);
+    if (difference !== 0) return difference > 0;
+  }
+  return true;
+}
+
+function freeDesktopAllowed(appVersion) {
+  return config.freeDesktopEnabled && versionAtLeast(appVersion, config.freeDesktopMinVersion);
+}
+
+async function ownedLicense(userId, appVersion) {
   const result = await db.query(
     `SELECT id, key_hint, encrypted_key FROM licenses
      WHERE user_id = $1 ORDER BY created_at DESC LIMIT 1`,
@@ -34,7 +52,7 @@ async function ownedLicense(userId) {
   );
   const license = result.rows[0] || null;
   if (!license) {
-    if (!config.freeDesktopEnabled) {
+    if (!freeDesktopAllowed(appVersion)) {
       throw new Error('This account does not have Mortal Nexus Premium. Claim or purchase a license on mortalnexus.com, then sign in again.');
     }
     return null;
@@ -44,7 +62,7 @@ async function ownedLicense(userId) {
     return license;
   } catch (error) {
     console.warn(`Premium entitlement validation failed for account ${String(userId).slice(0, 8)}: ${error.message}`);
-    if (!config.freeDesktopEnabled) {
+    if (!freeDesktopAllowed(appVersion)) {
       throw new Error('The license linked to this account could not be validated. Check your account or try again shortly.');
     }
     return null;
@@ -84,7 +102,7 @@ async function login({ email, password, deviceName, appVersion }) {
   if (!user || !user.password_hash || !(await verifyPassword(String(password || ''), user.password_hash))) {
     throw new Error('The email or password is incorrect.');
   }
-  const license = await ownedLicense(user.id);
+  const license = await ownedLicense(user.id, appVersion);
   return createAppSession(user, license, deviceName, appVersion);
 }
 
@@ -130,7 +148,7 @@ async function completeDeviceLogin({ deviceToken, deviceName, appVersion }) {
     role: row.role,
     can_edit: row.can_edit
   };
-  const license = await ownedLicense(user.id);
+  const license = await ownedLicense(user.id, appVersion);
   await db.query('UPDATE app_device_codes SET used_at = NOW() WHERE token_hash = $1', [hashToken(deviceToken)]);
   return createAppSession(user, license, deviceName, appVersion);
 }
@@ -146,7 +164,7 @@ async function resume({ token, deviceName, appVersion }) {
   );
   const session = found.rows[0];
   if (!session) throw new Error('Your Mortal Nexus sign-in has expired or was revoked.');
-  const license = await ownedLicense(session.user_id);
+  const license = await ownedLicense(session.user_id, appVersion);
   await db.query(
     `UPDATE app_sessions SET last_seen_at = NOW(), device_name = $1, app_version = $2, license_id = $3
      WHERE token_hash = $4`,
@@ -178,4 +196,4 @@ async function authenticate(token) {
   return result.rows[0] || null;
 }
 
-module.exports = { bearerToken, login, resume, logout, authenticate, startDeviceLogin, approveDeviceLogin, completeDeviceLogin };
+module.exports = { bearerToken, login, resume, logout, authenticate, startDeviceLogin, approveDeviceLogin, completeDeviceLogin, versionAtLeast };
