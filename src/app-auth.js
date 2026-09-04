@@ -3,6 +3,7 @@ const db = require('./db');
 const { randomToken, hashToken, verifyPassword, decryptLicense } = require('./security');
 const { validateLicense } = require('./keyauth');
 const { createDesktopFirebaseToken } = require('./firebase-admin');
+const { config } = require('./config');
 
 const SESSION_DAYS = 30;
 
@@ -32,12 +33,20 @@ async function ownedLicense(userId) {
     [userId]
   );
   const license = result.rows[0] || null;
-  if (!license) return null;
+  if (!license) {
+    if (!config.freeDesktopEnabled) {
+      throw new Error('This account does not have Mortal Nexus Premium. Claim or purchase a license on mortalnexus.com, then sign in again.');
+    }
+    return null;
+  }
   try {
     await validateLicense(decryptLicense(license.encrypted_key));
     return license;
   } catch (error) {
     console.warn(`Premium entitlement validation failed for account ${String(userId).slice(0, 8)}: ${error.message}`);
+    if (!config.freeDesktopEnabled) {
+      throw new Error('The license linked to this account could not be validated. Check your account or try again shortly.');
+    }
     return null;
   }
 }

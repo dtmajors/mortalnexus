@@ -30,6 +30,7 @@ const config = {
   keyAuthMask: value('KEYAUTH_LICENSE_MASK', 'MNX-****-****-****-****'),
   keyAuthExpiry: value('KEYAUTH_LICENSE_EXPIRY', '9999'),
   keyAuthLevel: value('KEYAUTH_LICENSE_LEVEL', '1'),
+  freeDesktopEnabled: value('FREE_DESKTOP_ENABLED', 'false').toLowerCase() === 'true',
   downloadUrl: value('DOWNLOAD_URL', '/download/latest'),
   githubReleaseRepo: value('GITHUB_RELEASE_REPO', 'dtmajors/mortalnexus'),
   githubReleaseToken: value('GITHUB_RELEASE_TOKEN'),
