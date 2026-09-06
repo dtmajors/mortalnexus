@@ -27,11 +27,12 @@
   <% } else if (failedOrder) { %>
     <div class="empty-access">
       <div class="empty-icon"><i data-lucide="refresh-cw"></i></div><span class="eyebrow">Payment received</span><h2>Finish your license delivery.</h2><p>Your payment is complete. Retry delivery now to create your key and send the confirmation email. You will not be charged again.</p>
-      <form method="post" action="/account/orders/<%= failedOrder.id %>/retry"><input type="hidden" name="csrf_token" value="<%= csrfToken %>"><button class="button button-primary button-large" type="submit"><i data-lucide="refresh-cw"></i>Retry license delivery</button></form>
+      <div class="result-actions"><form method="post" action="/account/orders/<%= failedOrder.id %>/retry"><input type="hidden" name="csrf_token" value="<%= csrfToken %>"><button class="button button-primary button-large" type="submit"><i data-lucide="refresh-cw"></i>Retry license delivery</button></form><a class="button button-quiet button-large" href="<%= downloadUrl %>"><i data-lucide="download"></i>Download free version</a></div>
     </div>
   <% } else { %>
     <div class="empty-access">
-      <div class="empty-icon"><i data-lucide="key-round"></i></div><span class="eyebrow">No license yet</span><h2>Unlock the complete Mortal Nexus toolkit.</h2><p>One purchase gives this account lifetime application access and future updates.</p>
+      <div class="empty-icon"><i data-lucide="download"></i></div><span class="eyebrow">Free access active</span><h2>Download Mortal Nexus.</h2><p>Sign into the application with this account to use the Free version. Premium unlocks automatically if you purchase or redeem a key later.</p>
+      <a class="button button-primary button-large" href="<%= downloadUrl %>"><i data-lucide="download"></i>Download free version</a>
       <div class="checkout-options account-checkout-options">
         <form method="post" action="/checkout"><input type="hidden" name="csrf_token" value="<%= csrfToken %>"><button class="button button-primary button-large" type="submit"><i data-lucide="credit-card"></i>Pay <%= price %> with card</button></form>
         <% if (paypalEnabled) { %><a class="button button-paypal button-large" href="/checkout/paypal">Pay <%= price %> with <strong>PayPal</strong></a><% } %>
@@ -40,7 +41,7 @@
   <% } %>
 
   <section class="redeem-license">
-    <div class="redeem-copy"><span class="eyebrow">Already have a key?</span><h2>Redeem a Mortal Nexus Key</h2><p>Link a valid Mortal Nexus Key to this account to unlock the installer.</p></div>
+    <div class="redeem-copy"><span class="eyebrow">Already have a key?</span><h2>Redeem a Mortal Nexus Key</h2><p>Link a valid Mortal Nexus Key to this account to unlock Premium features.</p></div>
     <form method="post" action="/account/redeem"><input type="hidden" name="csrf_token" value="<%= csrfToken %>"><label for="license-key">Mortal Nexus Key</label><div class="redeem-controls"><input id="license-key" name="license_key" type="text" minlength="8" maxlength="200" autocomplete="off" spellcheck="false" placeholder="Enter your Mortal Nexus Key" required><button class="button button-primary" type="submit"><i data-lucide="key-round"></i>Redeem</button></div></form>
   </section>
 

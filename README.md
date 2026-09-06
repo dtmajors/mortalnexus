@@ -11,7 +11,7 @@ Production storefront, customer portal, license delivery, and administration for
 - Signed, idempotent Stripe and PayPal fulfillment
 - Server-side KeyAuth Seller API license generation
 - Encrypted CD-key storage and customer purchase history
-- License-only installer downloads from a private GitHub release
+- Signed-in installer downloads from a private GitHub release
 - Admin controls for orders, customer roles, and Firebase map editors
 - One-click revocation of every legacy Firebase editor account
 - Optional license and password-reset email through Resend
@@ -21,7 +21,7 @@ Production storefront, customer portal, license delivery, and administration for
 
 - The production desktop build opens the KeyAuth license gate before its local server or UI starts. The preview bypass is opt-in at build time and is disabled in the release build.
 - Stripe, KeyAuth Seller, Discord bot, Firebase Admin, GitHub, session, and encryption secrets exist only in Railway environment variables.
-- `/download/latest` requires a signed-in customer with a fulfilled license. Railway streams the installer from the private GitHub release without exposing the GitHub token.
+- `/download/latest` requires a signed-in account. Railway streams the installer from the private GitHub release without exposing the GitHub token; the desktop account entitlement selects Free or Premium access after sign-in.
 - Firebase write access is controlled by a live UID allowlist. Revoking a user in `/admin` removes that UID immediately and revokes its refresh tokens.
 - House Hunter stays visible in the desktop navigation but its local route is server-gated behind the shared under-construction password.
 
@@ -135,7 +135,7 @@ Create a GitHub release and upload this exact asset name:
 gh release create v1.13.0 .\dist\MortalNexusSetup.exe --repo dtmajors/mortalnexus --title "Mortal Nexus 1.13.0"
 ```
 
-The customer download button streams the latest release asset only after confirming that the signed-in account owns a fulfilled license.
+The customer download button streams the latest release asset after confirming that the visitor is signed in. License ownership is checked separately by desktop authentication to select Free or Premium access.
 
 ## Firebase Editor Administration
 
@@ -168,7 +168,7 @@ From `/admin`, the primary administrator can:
 - `www.mortalnexus.com` and the apex domain show valid HTTPS
 - Discord sign-in creates or links the customer and joins the server
 - Stripe test purchase creates exactly one order and one KeyAuth license
-- The licensed account can download `MortalNexusSetup.exe`; an unlicensed account receives 403
+- Any signed-in account can download `MortalNexusSetup.exe`; unsigned visitors are redirected to sign in
 - The production desktop app rejects invalid keys and opens with a valid key
 - The Firebase rules are deployed and **Revoke all editors** has been run once
 - The v1.13.0 installer removes public, Iron Codex Preview, and Private installs before installing the single production version

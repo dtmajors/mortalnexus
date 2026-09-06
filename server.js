@@ -478,14 +478,6 @@ app.post('/account/orders/:id/retry', requireUser, verifyCsrf, async (req, res) 
 
 app.get('/download/latest', downloadLimiter, requireUser, async (req, res, next) => {
   try {
-    const access = await db.query('SELECT 1 FROM licenses WHERE user_id = $1 LIMIT 1', [req.user.id]);
-    if (!access.rows.length) {
-      return res.status(403).render('error', {
-        title: 'License Required | Mortal Nexus',
-        status: 403,
-        message: 'A fulfilled Mortal Nexus license is required to download the installer.'
-      });
-    }
     await streamLatestInstaller(res);
   } catch (error) {
     if (res.headersSent) {
