@@ -231,7 +231,7 @@ app.post('/app/connect', requireUser, verifyCsrf, async (req, res, next) => {
   }
 });
 
-app.get('/', (req, res) => res.render('home', { title: 'Mortal Nexus | The Mortal Online 2 Companion' }));
+app.get('/', (req, res) => res.render('home', { title: 'Mortal Nexus | Free Mortal Online 2 Companion' }));
 app.get('/features', (req, res) => res.redirect('/#features'));
 app.get('/pricing', (req, res) => res.redirect('/#pricing'));
 app.get('/buy', requireUser, (req, res) => res.redirect('/#pricing'));
