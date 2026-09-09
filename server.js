@@ -20,7 +20,7 @@ const {
   verifyCsrf,
   safeNext
 } = require('./src/security');
-const { sendPasswordResetEmail } = require('./src/email');
+const { sendPasswordResetEmail, sendOwnerAccountCreatedEmail } = require('./src/email');
 const { stripeClient, fulfillCheckoutSession, fulfillPayPalOrder, retryOrderFulfillment, retryFailedOrders, getLicensesForUser } = require('./src/fulfillment');
 const { paypalEnabled, createPayPalOrder, completePayPalOrder, verifyPayPalWebhook } = require('./src/paypal');
 const { authorizationUrl, authenticateDiscord } = require('./src/discord');
@@ -140,6 +140,14 @@ const devicePollLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 240, stan
 function isPrimaryAdmin(email, discordId = '') {
   return (config.adminEmail && String(email || '').toLowerCase() === config.adminEmail)
     || (config.adminDiscordId && String(discordId || '') === config.adminDiscordId);
+}
+
+async function notifyOwnerOfNewAccount(account) {
+  try {
+    await sendOwnerAccountCreatedEmail(account);
+  } catch (error) {
+    console.error(`Owner account notification failed for user ${account.userId}:`, error.message);
+  }
 }
 
 app.get('/health', (req, res) => res.json({ ok: true, service: 'mortal-nexus-store' }));
@@ -348,6 +356,7 @@ app.post('/register', authLimiter, verifyCsrf, async (req, res, next) => {
       'INSERT INTO users (id, email, display_name, password_hash, role) VALUES ($1, $2, $3, $4, $5)',
       [id, email, displayName, await hashPassword(password), role]
     );
+    await notifyOwnerOfNewAccount({ userId: id, email, displayName, method: 'email' });
     await createSession(res, id);
     res.redirect(nextUrl);
   } catch (error) {
@@ -412,6 +421,7 @@ app.get('/auth/discord/callback', authLimiter, async (req, res, next) => {
     const displayName = String(profile.global_name || profile.username || 'Mortal Nexus user').trim().slice(0, 60);
     const existing = await db.query('SELECT * FROM users WHERE discord_id = $1 OR email = $2 ORDER BY discord_id = $1 DESC LIMIT 1', [profile.id, email]);
     let user = existing.rows[0];
+    let created = false;
     if (!user) {
       const id = crypto.randomUUID();
       const role = isPrimaryAdmin(email, profile.id) ? 'admin' : 'customer';
@@ -421,6 +431,7 @@ app.get('/auth/discord/callback', authLimiter, async (req, res, next) => {
         [id, email, displayName, profile.id, profile.username, profile.avatar || null, role]
       );
       user = { id };
+      created = true;
     } else {
       await db.query(
         `UPDATE users SET discord_id = $1, discord_username = $2, discord_avatar = $3,
@@ -429,6 +440,15 @@ app.get('/auth/discord/callback', authLimiter, async (req, res, next) => {
          WHERE id = $4`,
         [profile.id, profile.username, profile.avatar || null, user.id, isPrimaryAdmin(email, profile.id)]
       );
+    }
+    if (created) {
+      await notifyOwnerOfNewAccount({
+        userId: user.id,
+        email,
+        displayName,
+        method: 'discord',
+        discordUsername: profile.username
+      });
     }
     await createSession(res, user.id);
     res.redirect(nextUrl);

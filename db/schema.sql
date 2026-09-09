@@ -50,6 +50,9 @@ CREATE TABLE IF NOT EXISTS orders (
   license_email_status TEXT NOT NULL DEFAULT 'pending',
   license_email_error TEXT,
   license_email_sent_at TIMESTAMPTZ,
+  owner_email_status TEXT NOT NULL DEFAULT 'pending',
+  owner_email_error TEXT,
+  owner_email_sent_at TIMESTAMPTZ,
   paid_at TIMESTAMPTZ,
   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
@@ -62,6 +65,12 @@ ALTER TABLE orders ADD COLUMN IF NOT EXISTS provider_payment_id TEXT;
 ALTER TABLE orders ADD COLUMN IF NOT EXISTS license_email_status TEXT NOT NULL DEFAULT 'pending';
 ALTER TABLE orders ADD COLUMN IF NOT EXISTS license_email_error TEXT;
 ALTER TABLE orders ADD COLUMN IF NOT EXISTS license_email_sent_at TIMESTAMPTZ;
+ALTER TABLE orders ADD COLUMN IF NOT EXISTS owner_email_status TEXT;
+ALTER TABLE orders ADD COLUMN IF NOT EXISTS owner_email_error TEXT;
+ALTER TABLE orders ADD COLUMN IF NOT EXISTS owner_email_sent_at TIMESTAMPTZ;
+UPDATE orders SET owner_email_status = 'sent' WHERE owner_email_status IS NULL;
+ALTER TABLE orders ALTER COLUMN owner_email_status SET DEFAULT 'pending';
+ALTER TABLE orders ALTER COLUMN owner_email_status SET NOT NULL;
 UPDATE orders SET provider = 'stripe' WHERE provider IS NULL;
 UPDATE orders SET provider_order_id = stripe_session_id WHERE provider_order_id IS NULL AND stripe_session_id IS NOT NULL;
 

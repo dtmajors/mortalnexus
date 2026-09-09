@@ -14,7 +14,7 @@ Production storefront, customer portal, license delivery, and administration for
 - Signed-in installer downloads from a private GitHub release
 - Admin controls for orders, customer roles, and Firebase map editors
 - One-click revocation of every legacy Firebase editor account
-- Optional license and password-reset email through Resend
+- License delivery, password resets, and owner signup/purchase alerts through Resend
 - Railway PostgreSQL initialization and health check
 
 ## Security Model
@@ -176,3 +176,5 @@ From `/admin`, the primary administrator can:
 ## Email
 
 Production requires `RESEND_API_KEY` and a verified `EMAIL_FROM` domain. License delivery is awaited and recorded on every order, with the CD key also retained in the customer account.
+
+New-account and successful-payment notifications are sent to `OWNER_NOTIFICATION_EMAIL`, or to `ADMIN_EMAIL` when the separate notification address is not set. Purchase notifications cover both Stripe and PayPal and are recorded on the order so webhook retries do not create duplicate alerts.

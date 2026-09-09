@@ -4,7 +4,7 @@ const db = require('./db');
 const { config } = require('./config');
 const { createLicense } = require('./keyauth');
 const { hashToken, encryptLicense, decryptLicense } = require('./security');
-const { sendLicenseEmail } = require('./email');
+const { sendLicenseEmail, sendOwnerPurchaseEmail } = require('./email');
 const { getPayPalOrder, completedPayPalPayment } = require('./paypal');
 
 const stripe = config.stripeSecretKey ? new Stripe(config.stripeSecretKey) : null;
@@ -40,7 +40,44 @@ async function sendOrderLicenseEmail(order, licenseKey) {
   }
 }
 
+async function sendOrderOwnerEmail(order) {
+  if (!config.resendApiKey || !config.ownerNotificationEmail || order.owner_email_status === 'sent') return;
+  const claim = await db.query(
+    `UPDATE orders SET owner_email_status = 'sending', owner_email_error = NULL, updated_at = NOW()
+     WHERE id = $1 AND owner_email_status IN ('pending', 'failed') RETURNING *`,
+    [order.id]
+  );
+  if (!claim.rows[0]) return;
+
+  try {
+    const userResult = order.user_id
+      ? await db.query('SELECT display_name FROM users WHERE id = $1', [order.user_id])
+      : { rows: [] };
+    await sendOwnerPurchaseEmail({
+      orderId: order.id,
+      email: order.customer_email,
+      displayName: userResult.rows[0]?.display_name,
+      provider: order.provider,
+      amountTotal: order.amount_total,
+      currency: order.currency,
+      status: order.status
+    });
+    await db.query(
+      "UPDATE orders SET owner_email_status = 'sent', owner_email_error = NULL, owner_email_sent_at = NOW(), updated_at = NOW() WHERE id = $1",
+      [order.id]
+    );
+    order.owner_email_status = 'sent';
+  } catch (error) {
+    await db.query(
+      "UPDATE orders SET owner_email_status = 'failed', owner_email_error = $2, updated_at = NOW() WHERE id = $1",
+      [order.id, error.message.slice(0, 500)]
+    );
+    console.error(`Owner purchase notification failed for order ${order.id}:`, error.message);
+  }
+}
+
 async function fulfillRecordedOrder(order) {
+  await sendOrderOwnerEmail(order);
   const existing = await db.query('SELECT * FROM licenses WHERE order_id = $1', [order.id]);
   if (existing.rows[0]) {
     const licenseKey = decryptLicense(existing.rows[0].encrypted_key);
@@ -149,6 +186,7 @@ async function retryFailedOrders(limit = 20) {
   const result = await db.query(
     `SELECT id FROM orders
      WHERE status = 'fulfillment_failed' OR license_email_status = 'failed'
+        OR owner_email_status IN ('pending', 'failed')
      ORDER BY created_at ASC LIMIT $1`,
     [limit]
   );
