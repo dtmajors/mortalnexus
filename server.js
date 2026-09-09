@@ -35,11 +35,25 @@ const app = express();
 const assetVersion = process.env.RAILWAY_GIT_COMMIT_SHA?.slice(0, 12)
   || process.env.RAILWAY_DEPLOYMENT_ID
   || Date.now().toString(36);
+const seoPages = [
+  { path: '/', changefreq: 'weekly', priority: '1.0' },
+  { path: '/mortal-online-2-map', changefreq: 'weekly', priority: '0.9' },
+  { path: '/mortal-online-2-crafting-calculator', changefreq: 'weekly', priority: '0.8' },
+  { path: '/support', changefreq: 'monthly', priority: '0.4' },
+  { path: '/privacy', changefreq: 'yearly', priority: '0.2' },
+  { path: '/terms', changefreq: 'yearly', priority: '0.2' }
+];
+const indexablePaths = new Set(seoPages.map((page) => page.path));
 let httpServer;
 app.set('trust proxy', 1);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.disable('x-powered-by');
+
+app.use((req, res, next) => {
+  res.locals.cspNonce = crypto.randomBytes(16).toString('base64');
+  next();
+});
 
 app.use(helmet({
   contentSecurityPolicy: {
@@ -47,7 +61,7 @@ app.use(helmet({
       defaultSrc: ["'self'"],
       imgSrc: ["'self'", 'data:'],
       styleSrc: ["'self'"],
-      scriptSrc: ["'self'"],
+      scriptSrc: ["'self'", (req, res) => `'nonce-${res.locals.cspNonce}'`],
       connectSrc: ["'self'"],
       formAction: ["'self'", 'https://checkout.stripe.com'],
       frameAncestors: ["'none'"]
@@ -106,6 +120,11 @@ app.use((req, res, next) => {
   res.locals.discordAuthEnabled = config.discordEnabled;
   res.locals.paypalEnabled = config.paypalEnabled;
   res.locals.assetVersion = assetVersion;
+  res.locals.metaDescription = 'Download Mortal Nexus Free, a Mortal Online 2 companion with interactive maps, character planning, player trading, crafting tools, guides, and more.';
+  res.locals.canonicalUrl = `${config.baseUrl}${req.path === '/' ? '/' : req.path}`;
+  res.locals.ogImageUrl = `${config.baseUrl}/assets/app-shell.png`;
+  res.locals.robots = indexablePaths.has(req.path) ? 'index, follow' : 'noindex, nofollow';
+  res.locals.structuredData = [];
   res.locals.notice = req.query.notice || '';
   res.locals.error = req.query.error || '';
   next();
@@ -231,7 +250,74 @@ app.post('/app/connect', requireUser, verifyCsrf, async (req, res, next) => {
   }
 });
 
-app.get('/', (req, res) => res.render('home', { title: 'Mortal Nexus | Free Mortal Online 2 Companion' }));
+app.get('/robots.txt', (req, res) => {
+  res.type('text/plain').set('Cache-Control', 'public, max-age=3600');
+  res.send(`User-agent: *\nAllow: /\nDisallow: /account\nDisallow: /admin\nDisallow: /app/\nDisallow: /checkout/\nDisallow: /login\nDisallow: /register\nDisallow: /reset-password\nSitemap: ${config.baseUrl}/sitemap.xml\n`);
+});
+
+app.get('/sitemap.xml', (req, res) => {
+  const urls = seoPages.map((page) => `  <url>\n    <loc>${config.baseUrl}${page.path}</loc>\n    <changefreq>${page.changefreq}</changefreq>\n    <priority>${page.priority}</priority>\n  </url>`).join('\n');
+  res.type('application/xml').set('Cache-Control', 'public, max-age=3600');
+  res.send(`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
+});
+
+app.get('/', (req, res) => res.render('home', {
+  title: 'Mortal Online 2 Map & Companion App | Mortal Nexus',
+  metaDescription: 'Download Mortal Nexus Free for interactive Mortal Online 2 maps, character planning, player trading, crafting calculators, creature data, guides, and more.',
+  structuredData: [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'SoftwareApplication',
+      name: 'Mortal Nexus',
+      url: config.baseUrl,
+      image: `${config.baseUrl}/assets/app-shell.png`,
+      description: 'A free and premium Windows companion application for Mortal Online 2 with interactive maps, planning tools, player trading, crafting calculators, creature data, and guides.',
+      applicationCategory: 'GameApplication',
+      operatingSystem: 'Windows',
+      offers: [
+        { '@type': 'Offer', name: 'Mortal Nexus Free', price: '0.00', priceCurrency: 'USD', availability: 'https://schema.org/InStock' },
+        { '@type': 'Offer', name: 'Mortal Nexus Premium Lifetime', price: config.productPriceDisplay.replace(/[^0-9.]/g, '') || '19.99', priceCurrency: 'USD', availability: 'https://schema.org/InStock' }
+      ]
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Can I use Mortal Nexus for free?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Free accounts include the Mortal Online 2 maps, character planning, market, messages, friends, and community features.' } },
+        { '@type': 'Question', name: 'What system does Mortal Nexus support?', acceptedAnswer: { '@type': 'Answer', text: 'Mortal Nexus is a Windows desktop application.' } },
+        { '@type': 'Question', name: 'Is Mortal Nexus an official Mortal Online 2 product?', acceptedAnswer: { '@type': 'Answer', text: 'No. Mortal Nexus is an independent community companion and is not affiliated with Star Vault.' } }
+      ]
+    }
+  ]
+}));
+app.get('/mortal-online-2-map', (req, res) => res.render('map', {
+  title: 'Mortal Online 2 Map for Myrland & Sarducaa | Mortal Nexus',
+  metaDescription: 'Explore a searchable Mortal Online 2 map for Myrland and Sarducaa with 2,800+ markers, detailed filters, community corrections, and private map pins.',
+  ogImageUrl: `${config.baseUrl}/assets/app-myrland.png`,
+  structuredData: [{
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Mortal Online 2 Map for Myrland and Sarducaa',
+    url: `${config.baseUrl}/mortal-online-2-map`,
+    description: 'A searchable Mortal Online 2 map for Myrland and Sarducaa with detailed filters, community corrections, and private markers.',
+    isPartOf: { '@type': 'WebSite', name: 'Mortal Nexus', url: config.baseUrl },
+    about: { '@type': 'VideoGame', name: 'Mortal Online 2' }
+  }]
+}));
+app.get('/mortal-online-2-crafting-calculator', (req, res) => res.render('crafting', {
+  title: 'Mortal Online 2 Crafting Calculator | Mortal Nexus',
+  metaDescription: 'Compare materials and calculate Mortal Online 2 weapons, armor, bows, shields, extraction, refining, alchemy, cooking, and building requirements.',
+  ogImageUrl: `${config.baseUrl}/assets/app-crafting.png`,
+  structuredData: [{
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Mortal Online 2 Crafting Calculator',
+    url: `${config.baseUrl}/mortal-online-2-crafting-calculator`,
+    description: 'Mortal Online 2 crafting, material comparison, extraction, refining, alchemy, cooking, and building calculators in Mortal Nexus.',
+    isPartOf: { '@type': 'WebSite', name: 'Mortal Nexus', url: config.baseUrl },
+    about: { '@type': 'VideoGame', name: 'Mortal Online 2' }
+  }]
+}));
 app.get('/features', (req, res) => res.redirect('/#features'));
 app.get('/pricing', (req, res) => res.redirect('/#pricing'));
 app.get('/buy', requireUser, (req, res) => res.redirect('/#pricing'));

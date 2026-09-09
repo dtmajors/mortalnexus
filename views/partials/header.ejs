@@ -4,12 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#07090e">
-  <meta name="description" content="Download Mortal Nexus Free for live Mortal Online 2 maps, community tools, and character planning. Upgrade once for the complete Premium toolkit.">
+  <meta name="description" content="<%= metaDescription %>">
+  <meta name="robots" content="<%= robots %>">
+  <link rel="canonical" href="<%= canonicalUrl %>">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mortal Nexus">
+  <meta property="og:title" content="<%= title %>">
+  <meta property="og:description" content="<%= metaDescription %>">
+  <meta property="og:url" content="<%= canonicalUrl %>">
+  <meta property="og:image" content="<%= ogImageUrl %>">
+  <meta property="og:image:alt" content="Mortal Nexus companion application for Mortal Online 2">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="<%= title %>">
+  <meta name="twitter:description" content="<%= metaDescription %>">
+  <meta name="twitter:image" content="<%= ogImageUrl %>">
   <title><%= title %></title>
   <link rel="icon" href="/assets/mortal-nexus-icon.png" type="image/png">
   <link rel="stylesheet" href="/styles.css?v=<%= encodeURIComponent(assetVersion) %>">
   <script src="/vendor/lucide.js" defer></script>
   <script src="/app.js?v=<%= encodeURIComponent(assetVersion) %>" defer></script>
+  <% structuredData.forEach((entry) => { %><script type="application/ld+json" nonce="<%= cspNonce %>"><%- JSON.stringify(entry).replace(/</g, '\\u003c') %></script><% }) %>
 </head>
 <body class="<%= bodyClass || '' %>">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -21,6 +35,7 @@
       </a>
       <button class="nav-toggle icon-button" type="button" data-nav-toggle aria-label="Open navigation" aria-expanded="false"><i data-lucide="menu"></i></button>
       <nav class="main-nav" data-nav>
+        <a href="/mortal-online-2-map">MO2 Map</a>
         <a href="/#features">Features</a>
         <a href="/#inside">Inside the app</a>
         <a href="/#pricing">Free &amp; Premium</a>
