@@ -1,7 +1,6 @@
 const os = require('node:os');
 const db = require('./db');
-const { randomToken, hashToken, verifyPassword, decryptLicense } = require('./security');
-const { validateLicense } = require('./keyauth');
+const { randomToken, hashToken, verifyPassword } = require('./security');
 const { createDesktopFirebaseToken } = require('./firebase-admin');
 const { config } = require('./config');
 
@@ -46,7 +45,7 @@ function freeDesktopAllowed(appVersion) {
 
 async function ownedLicense(userId, appVersion) {
   const result = await db.query(
-    `SELECT id, key_hint, encrypted_key FROM licenses
+    `SELECT id, key_hint FROM licenses
      WHERE user_id = $1 ORDER BY created_at DESC LIMIT 1`,
     [userId]
   );
@@ -57,16 +56,7 @@ async function ownedLicense(userId, appVersion) {
     }
     return null;
   }
-  try {
-    await validateLicense(decryptLicense(license.encrypted_key));
-    return license;
-  } catch (error) {
-    console.warn(`Premium entitlement validation failed for account ${String(userId).slice(0, 8)}: ${error.message}`);
-    if (!freeDesktopAllowed(appVersion)) {
-      throw new Error('The license linked to this account could not be validated. Check your account or try again shortly.');
-    }
-    return null;
-  }
+  return license;
 }
 
 async function responseFor(user, license, sessionToken, expiresAt) {
