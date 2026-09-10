@@ -122,9 +122,9 @@
         <div class="price-top"><span>Free access</span><strong>$0</strong><small>no time limit</small></div>
         <ul class="included-list">
           <li><i data-lucide="check"></i>Interactive Myrland and Sarducaa maps</li>
-          <li><i data-lucide="check"></i>Character planning tools</li>
           <li><i data-lucide="check"></i>Shared market, messages, and friends</li>
           <li><i data-lucide="check"></i>Personal and community map features</li>
+          <li><i data-lucide="check"></i>Search, filtering, and map contributions</li>
           <li><i data-lucide="check"></i>Free-version updates</li>
         </ul>
         <a class="button button-free button-large button-full" href="/download/latest"><i data-lucide="download"></i>Download Free</a>
@@ -141,6 +141,7 @@
         <ul class="included-list">
           <li><i data-lucide="check"></i>Everything included with Free</li>
           <li><i data-lucide="check"></i>Crafting, extraction, refining, and material tools</li>
+          <li><i data-lucide="check"></i>Complete Character Builder with clades, mastery, gear, and magic</li>
           <li><i data-lucide="check"></i>Loot, dungeons, creatures, spells, and guides</li>
           <li><i data-lucide="check"></i>Macros and second-screen controls</li>
           <li><i data-lucide="check"></i>All future Premium updates</li>
@@ -159,6 +160,7 @@
         <% } else { %>
           <a class="button button-primary button-large button-full" href="/register?next=/buy"><i data-lucide="key-round"></i>Create account and upgrade</a>
         <% } %>
+        <a class="button button-trial button-large button-full" href="<%= user ? '/account#premium-trial' : '/register?next=/account' %>"><i data-lucide="timer"></i>Try Premium free for 24 hours</a>
         <div class="payment-methods"><span><i data-lucide="credit-card"></i>Cards</span><span><i data-lucide="smartphone"></i>Wallets</span><span><i data-lucide="badge-dollar-sign"></i>PayPal</span></div>
         <p class="microcopy">Premium is attached to your account and activates automatically when you sign into the application.</p>
       </article>

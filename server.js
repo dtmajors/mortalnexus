@@ -89,7 +89,7 @@ app.post('/webhooks/stripe', express.raw({ type: 'application/json' }), async (r
 });
 
 app.use(express.urlencoded({ extended: false, limit: '32kb' }));
-app.use(express.json({ limit: '32kb' }));
+app.use(express.json({ limit: '64kb' }));
 
 app.post('/webhooks/paypal', async (req, res) => {
   try {
@@ -134,6 +134,7 @@ const authLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 20, standardHea
 const checkoutLimiter = rateLimit({ windowMs: 10 * 60 * 1000, limit: 10, standardHeaders: 'draft-8', legacyHeaders: false });
 const downloadLimiter = rateLimit({ windowMs: 60 * 60 * 1000, limit: 10, standardHeaders: 'draft-8', legacyHeaders: false });
 const licenseLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 10, standardHeaders: 'draft-8', legacyHeaders: false });
+const trialLimiter = rateLimit({ windowMs: 24 * 60 * 60 * 1000, limit: 5, standardHeaders: 'draft-8', legacyHeaders: false });
 const appAuthLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 30, standardHeaders: 'draft-8', legacyHeaders: false });
 const devicePollLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 240, standardHeaders: 'draft-8', legacyHeaders: false });
 
@@ -188,6 +189,88 @@ app.post('/api/app/resume', appAuthLimiter, async (req, res) => {
 app.post('/api/app/logout', async (req, res) => {
   await appAuth.logout(appAuth.bearerToken(req));
   res.json({ success: true });
+});
+
+async function appSessionUser(req, res, requirePremium = false) {
+  const session = await appAuth.authenticate(appAuth.bearerToken(req));
+  if (!session) {
+    res.status(401).json({ success: false, message: 'Your app session has expired.' });
+    return null;
+  }
+  if (requirePremium && !session.license_id) {
+    const trial = await db.query(
+      'SELECT premium_trial_expires_at FROM users WHERE id = $1 AND premium_trial_expires_at > NOW()',
+      [session.user_id]
+    );
+    if (!trial.rows[0]) {
+      res.status(403).json({ success: false, message: 'Sharing character builds requires Mortal Nexus Premium.' });
+      return null;
+    }
+  }
+  return session;
+}
+
+app.get('/api/app/builds', async (req, res, next) => {
+  try {
+    const result = await db.query(
+      `SELECT b.share_code, b.name, b.description, b.views, b.updated_at,
+              u.display_name AS author_name, u.discord_id AS author_discord_id,
+              u.discord_avatar AS author_avatar
+       FROM character_builds b JOIN users u ON u.id = b.user_id
+       WHERE b.is_public = TRUE ORDER BY b.updated_at DESC LIMIT 60`
+    );
+    res.json({ success: true, builds: result.rows });
+  } catch (error) { next(error); }
+});
+
+app.get('/api/app/builds/:code', async (req, res, next) => {
+  try {
+    const code = String(req.params.code || '').trim().toUpperCase();
+    const result = await db.query(
+      `SELECT b.share_code, b.name, b.description, b.build_json, b.views, b.updated_at,
+              u.display_name AS author_name
+       FROM character_builds b JOIN users u ON u.id = b.user_id
+       WHERE b.share_code = $1 AND b.is_public = TRUE`,
+      [code]
+    );
+    if (!result.rows[0]) return res.status(404).json({ success: false, message: 'No public build uses that code.' });
+    await db.query('UPDATE character_builds SET views = views + 1 WHERE share_code = $1', [code]);
+    res.json({ success: true, build: { ...result.rows[0], views: Number(result.rows[0].views || 0) + 1 } });
+  } catch (error) { next(error); }
+});
+
+app.post('/api/app/builds', appAuthLimiter, async (req, res, next) => {
+  try {
+    const session = await appSessionUser(req, res, true); if (!session) return;
+    const name = String(req.body.name || 'Untitled build').trim().slice(0, 70);
+    const description = String(req.body.description || '').trim().slice(0, 500);
+    const build = req.body.build;
+    const serialized = JSON.stringify(build || null);
+    if (!build || serialized.length > 40_000) return res.status(400).json({ success: false, message: 'This build is incomplete or too large to share.' });
+    let created;
+    for (let attempt = 0; attempt < 5 && !created; attempt += 1) {
+      const code = crypto.randomBytes(4).toString('hex').toUpperCase();
+      try {
+        const result = await db.query(
+          `INSERT INTO character_builds (id, share_code, user_id, name, description, build_json)
+           VALUES ($1, $2, $3, $4, $5, $6) RETURNING share_code, name, description, views, updated_at`,
+          [crypto.randomUUID(), code, session.user_id, name, description, JSON.stringify(build)]
+        );
+        created = result.rows[0];
+      } catch (error) { if (error.code !== '23505') throw error; }
+    }
+    if (!created) throw new Error('A unique build code could not be created.');
+    res.status(201).json({ success: true, build: created });
+  } catch (error) { next(error); }
+});
+
+app.delete('/api/app/builds/:code', async (req, res, next) => {
+  try {
+    const session = await appSessionUser(req, res, true); if (!session) return;
+    const result = await db.query('DELETE FROM character_builds WHERE share_code = $1 AND user_id = $2 RETURNING share_code', [String(req.params.code || '').toUpperCase(), session.user_id]);
+    if (!result.rows[0]) return res.status(404).json({ success: false, message: 'That build was not found on your account.' });
+    res.json({ success: true });
+  } catch (error) { next(error); }
 });
 
 app.get('/api/app/update/latest', async (req, res) => {
@@ -538,9 +621,30 @@ app.get('/account', requireUser, async (req, res, next) => {
   try {
     const licenses = await getLicensesForUser(req.user.id);
     const orders = await db.query('SELECT * FROM orders WHERE user_id = $1 ORDER BY created_at DESC', [req.user.id]);
-    res.render('account', { title: 'Your Account | Mortal Nexus', licenses, orders: orders.rows });
+    const trial = await db.query('SELECT premium_trial_started_at, premium_trial_expires_at FROM users WHERE id = $1', [req.user.id]);
+    res.render('account', { title: 'Your Account | Mortal Nexus', licenses, orders: orders.rows, trial: trial.rows[0] || {} });
   } catch (error) {
     next(error);
+  }
+});
+
+app.post('/account/trial/start', trialLimiter, requireUser, verifyCsrf, async (req, res) => {
+  try {
+    const license = await db.query('SELECT 1 FROM licenses WHERE user_id = $1 LIMIT 1', [req.user.id]);
+    if (license.rows.length) return res.redirect('/account?notice=Premium%20is%20already%20active%20on%20this%20account.');
+    const startedAt = new Date();
+    const expiresAt = new Date(startedAt.getTime() + 24 * 60 * 60 * 1000);
+    const result = await db.query(
+      `UPDATE users SET premium_trial_started_at = $2, premium_trial_expires_at = $3, updated_at = NOW()
+       WHERE id = $1 AND premium_trial_started_at IS NULL RETURNING id`,
+      [req.user.id, startedAt, expiresAt]
+    );
+    if (!result.rows[0]) return res.redirect('/account?error=The%2024-hour%20trial%20has%20already%20been%20used%20on%20this%20account.');
+    await db.query('UPDATE app_sessions SET revoked_at = NOW() WHERE user_id = $1 AND revoked_at IS NULL', [req.user.id]);
+    res.redirect('/account?notice=Your%2024-hour%20Premium%20trial%20is%20active.%20Sign%20in%20to%20the%20app%20again%20to%20begin.');
+  } catch (error) {
+    console.error(`Premium trial start failed for user ${req.user.id.slice(0, 8)}:`, error.message);
+    res.redirect('/account?error=The%20Premium%20trial%20could%20not%20start.%20Please%20try%20again.');
   }
 });
 

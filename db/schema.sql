@@ -26,6 +26,8 @@ ALTER TABLE users ADD COLUMN IF NOT EXISTS firebase_editor_email TEXT;
 ALTER TABLE users ADD COLUMN IF NOT EXISTS in_game_name TEXT;
 ALTER TABLE users ADD COLUMN IF NOT EXISTS guild_name TEXT;
 ALTER TABLE users ADD COLUMN IF NOT EXISTS timezone TEXT;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS premium_trial_started_at TIMESTAMPTZ;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS premium_trial_expires_at TIMESTAMPTZ;
 
 CREATE TABLE IF NOT EXISTS sessions (
   token_hash TEXT PRIMARY KEY,
@@ -128,6 +130,19 @@ CREATE TABLE IF NOT EXISTS admin_audit_log (
   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
+CREATE TABLE IF NOT EXISTS character_builds (
+  id TEXT PRIMARY KEY,
+  share_code TEXT NOT NULL UNIQUE,
+  user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  name TEXT NOT NULL,
+  description TEXT NOT NULL DEFAULT '',
+  build_json JSONB NOT NULL,
+  is_public BOOLEAN NOT NULL DEFAULT TRUE,
+  views INTEGER NOT NULL DEFAULT 0,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
 CREATE TABLE IF NOT EXISTS brave_login_tickets (
   token_hash TEXT PRIMARY KEY,
   user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
@@ -149,3 +164,5 @@ CREATE INDEX IF NOT EXISTS idx_app_sessions_last_seen ON app_sessions(last_seen_
 CREATE INDEX IF NOT EXISTS idx_admin_audit_created ON admin_audit_log(created_at DESC);
 CREATE INDEX IF NOT EXISTS idx_app_device_codes_expiry ON app_device_codes(expires_at);
 CREATE INDEX IF NOT EXISTS idx_brave_login_tickets_expiry ON brave_login_tickets(expires_at);
+CREATE INDEX IF NOT EXISTS idx_character_builds_public ON character_builds(is_public, updated_at DESC);
+CREATE INDEX IF NOT EXISTS idx_character_builds_user ON character_builds(user_id, updated_at DESC);
