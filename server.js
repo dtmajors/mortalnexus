@@ -70,6 +70,14 @@ app.use(helmet({
   crossOriginEmbedderPolicy: false
 }));
 
+app.use((req, res, next) => {
+  const hostname = String(req.hostname || '').toLowerCase();
+  if (req.path === '/' && hostname.endsWith('.up.railway.app')) {
+    return res.redirect(308, 'https://www.mortalnexus.com/');
+  }
+  next();
+});
+
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: config.isProduction ? '30d' : 0 }));
 app.use('/vendor/lucide.js', express.static(path.join(__dirname, 'node_modules', 'lucide', 'dist', 'umd', 'lucide.js')));
 
