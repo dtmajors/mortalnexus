@@ -34,7 +34,7 @@ async function sendPasswordResetEmail({ email, token }) {
   });
 }
 
-async function sendOwnerAccountCreatedEmail({ userId, email, displayName, method, discordUsername }) {
+async function sendOwnerAccountCreatedEmail({ userId, email, displayName, method, discordUsername, signupIp }) {
   if (!config.ownerNotificationEmail) return { skipped: true };
   const signupMethod = method === 'discord' ? 'Discord' : 'email and password';
   const discordRow = discordUsername
@@ -46,7 +46,7 @@ async function sendOwnerAccountCreatedEmail({ userId, email, displayName, method
     html: ownerEmailLayout({
       eyebrow: 'NEW ACCOUNT',
       title: 'A player created an account',
-      body: `<table style="border-collapse:collapse;margin-top:18px"><tr><td style="padding:6px 16px 6px 0;color:#98a3b5">Name</td><td style="padding:6px 0"><strong>${escapeHtml(displayName || 'Not provided')}</strong></td></tr><tr><td style="padding:6px 16px 6px 0;color:#98a3b5">Email</td><td style="padding:6px 0">${escapeHtml(email)}</td></tr><tr><td style="padding:6px 16px 6px 0;color:#98a3b5">Signup</td><td style="padding:6px 0">${escapeHtml(signupMethod)}</td></tr>${discordRow}</table>`
+      body: `<table style="border-collapse:collapse;margin-top:18px"><tr><td style="padding:6px 16px 6px 0;color:#98a3b5">Name</td><td style="padding:6px 0"><strong>${escapeHtml(displayName || 'Not provided')}</strong></td></tr><tr><td style="padding:6px 16px 6px 0;color:#98a3b5">Email</td><td style="padding:6px 0">${escapeHtml(email)}</td></tr><tr><td style="padding:6px 16px 6px 0;color:#98a3b5">Signup</td><td style="padding:6px 0">${escapeHtml(signupMethod)}</td></tr><tr><td style="padding:6px 16px 6px 0;color:#98a3b5">Signup IP</td><td style="padding:6px 0"><code>${escapeHtml(signupIp || 'Unavailable')}</code></td></tr>${discordRow}</table>`
     }),
     idempotencyKey: `mortal-nexus-owner-account-${userId}`
   });

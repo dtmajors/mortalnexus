@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS users (
   discord_username TEXT,
   discord_avatar TEXT,
   discord_joined_at TIMESTAMPTZ,
+  signup_ip TEXT,
   last_login_at TIMESTAMPTZ,
   can_edit BOOLEAN NOT NULL DEFAULT FALSE,
   firebase_editor_email TEXT,
@@ -20,6 +21,7 @@ ALTER TABLE users ADD COLUMN IF NOT EXISTS discord_id TEXT UNIQUE;
 ALTER TABLE users ADD COLUMN IF NOT EXISTS discord_username TEXT;
 ALTER TABLE users ADD COLUMN IF NOT EXISTS discord_avatar TEXT;
 ALTER TABLE users ADD COLUMN IF NOT EXISTS discord_joined_at TIMESTAMPTZ;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS signup_ip TEXT;
 ALTER TABLE users ADD COLUMN IF NOT EXISTS last_login_at TIMESTAMPTZ;
 ALTER TABLE users ADD COLUMN IF NOT EXISTS can_edit BOOLEAN NOT NULL DEFAULT FALSE;
 ALTER TABLE users ADD COLUMN IF NOT EXISTS firebase_editor_email TEXT;
@@ -158,6 +160,7 @@ CREATE INDEX IF NOT EXISTS idx_licenses_user_id ON licenses(user_id);
 CREATE UNIQUE INDEX IF NOT EXISTS idx_licenses_key_hash ON licenses(key_hash) WHERE key_hash IS NOT NULL;
 CREATE INDEX IF NOT EXISTS idx_password_resets_user_id ON password_resets(user_id);
 CREATE INDEX IF NOT EXISTS idx_users_discord_id ON users(discord_id);
+CREATE INDEX IF NOT EXISTS idx_users_signup_ip ON users(signup_ip) WHERE signup_ip IS NOT NULL;
 CREATE INDEX IF NOT EXISTS idx_app_sessions_user_id ON app_sessions(user_id);
 CREATE INDEX IF NOT EXISTS idx_app_sessions_license_id ON app_sessions(license_id);
 CREATE INDEX IF NOT EXISTS idx_app_sessions_last_seen ON app_sessions(last_seen_at DESC);

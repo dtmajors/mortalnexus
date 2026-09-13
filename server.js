@@ -1,4 +1,5 @@
 const crypto = require('node:crypto');
+const { isIP } = require('node:net');
 const path = require('node:path');
 const express = require('express');
 const cookieParser = require('cookie-parser');
@@ -141,6 +142,13 @@ const devicePollLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 240, stan
 function isPrimaryAdmin(email, discordId = '') {
   return (config.adminEmail && String(email || '').toLowerCase() === config.adminEmail)
     || (config.adminDiscordId && String(discordId || '') === config.adminDiscordId);
+}
+
+function signupIp(req) {
+  let address = String(req.ip || req.socket?.remoteAddress || '').trim();
+  if (!address) return null;
+  if (address.startsWith('::ffff:')) address = address.slice(7);
+  return isIP(address) ? address : null;
 }
 
 async function notifyOwnerOfNewAccount(account) {
@@ -435,11 +443,12 @@ app.post('/register', authLimiter, verifyCsrf, async (req, res, next) => {
 
     const role = isPrimaryAdmin(email) ? 'admin' : 'customer';
     const id = crypto.randomUUID();
+    const accountSignupIp = signupIp(req);
     await db.query(
-      'INSERT INTO users (id, email, display_name, password_hash, role) VALUES ($1, $2, $3, $4, $5)',
-      [id, email, displayName, await hashPassword(password), role]
+      'INSERT INTO users (id, email, display_name, password_hash, role, signup_ip) VALUES ($1, $2, $3, $4, $5, $6)',
+      [id, email, displayName, await hashPassword(password), role, accountSignupIp]
     );
-    await notifyOwnerOfNewAccount({ userId: id, email, displayName, method: 'email' });
+    await notifyOwnerOfNewAccount({ userId: id, email, displayName, method: 'email', signupIp: accountSignupIp });
     await createSession(res, id);
     res.redirect(nextUrl);
   } catch (error) {
@@ -508,12 +517,13 @@ app.get('/auth/discord/callback', authLimiter, async (req, res, next) => {
     if (!user) {
       const id = crypto.randomUUID();
       const role = isPrimaryAdmin(email, profile.id) ? 'admin' : 'customer';
+      const accountSignupIp = signupIp(req);
       await db.query(
-        `INSERT INTO users (id, email, display_name, password_hash, discord_id, discord_username, discord_avatar, discord_joined_at, last_login_at, role)
-         VALUES ($1, $2, $3, NULL, $4, $5, $6, NOW(), NOW(), $7)`,
-        [id, email, displayName, profile.id, profile.username, profile.avatar || null, role]
+        `INSERT INTO users (id, email, display_name, password_hash, discord_id, discord_username, discord_avatar, discord_joined_at, last_login_at, role, signup_ip)
+         VALUES ($1, $2, $3, NULL, $4, $5, $6, NOW(), NOW(), $7, $8)`,
+        [id, email, displayName, profile.id, profile.username, profile.avatar || null, role, accountSignupIp]
       );
-      user = { id };
+      user = { id, signup_ip: accountSignupIp };
       created = true;
     } else {
       await db.query(
@@ -530,7 +540,8 @@ app.get('/auth/discord/callback', authLimiter, async (req, res, next) => {
         email,
         displayName,
         method: 'discord',
-        discordUsername: profile.username
+        discordUsername: profile.username,
+        signupIp: user.signup_ip
       });
     }
     await createSession(res, user.id);
@@ -823,7 +834,7 @@ app.get('/admin', requireAdmin, async (req, res, next) => {
   try {
     const [users, orders, licenses, appSessions, auditLog, metrics] = await Promise.all([
       db.query(`SELECT u.id, u.email, u.display_name, u.role, u.discord_id, u.discord_username,
-                u.discord_joined_at, u.can_edit, u.created_at, u.last_login_at,
+                u.discord_joined_at, u.signup_ip, u.can_edit, u.created_at, u.last_login_at,
                 COUNT(DISTINCT l.id)::int AS license_count,
                 COUNT(DISTINCT s.token_hash) FILTER (WHERE s.revoked_at IS NULL AND s.expires_at > NOW())::int AS active_sessions,
                 MAX(s.last_seen_at) AS last_app_seen

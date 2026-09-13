@@ -29,7 +29,8 @@ test('owner account and purchase emails use stable idempotency keys', async (t) 
     email: 'player@example.com',
     displayName: 'Player',
     method: 'discord',
-    discordUsername: 'player.discord'
+    discordUsername: 'player.discord',
+    signupIp: '203.0.113.42'
   });
   await sendOwnerPurchaseEmail({
     orderId: 'order-456',
@@ -45,5 +46,7 @@ test('owner account and purchase emails use stable idempotency keys', async (t) 
   assert.equal(requests[0].options.headers['Idempotency-Key'], 'mortal-nexus-owner-account-user-123');
   assert.equal(requests[1].options.headers['Idempotency-Key'], 'mortal-nexus-owner-purchase-order-456');
   assert.deepEqual(requests.map((request) => request.body.to), [['owner@example.com'], ['owner@example.com']]);
+  assert.match(requests[0].body.html, /Signup IP/);
+  assert.match(requests[0].body.html, /203\.0\.113\.42/);
   assert.match(requests[1].body.subject, /\$19\.99 via PayPal/);
 });
