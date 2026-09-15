@@ -43,35 +43,37 @@ function freeDesktopAllowed(appVersion) {
   return config.freeDesktopEnabled && versionAtLeast(appVersion, config.freeDesktopMinVersion);
 }
 
-function activeTrialExpiry(value, now = Date.now()) {
+function activeTemporaryPremiumExpiry(value, now = Date.now()) {
   if (!value) return null;
   const expiry = new Date(value);
   return Number.isFinite(expiry.getTime()) && expiry.getTime() > now ? expiry : null;
 }
 
 async function accountAccess(userId, appVersion) {
-  const [result, trialResult] = await Promise.all([db.query(
+  const [result, temporaryResult] = await Promise.all([db.query(
     `SELECT id, key_hint FROM licenses
      WHERE user_id = $1 ORDER BY created_at DESC LIMIT 1`,
     [userId]
   ), db.query(
-    `SELECT premium_trial_started_at, premium_trial_expires_at FROM users WHERE id = $1`,
+    `SELECT temporary_premium_expires_at, temporary_premium_reason FROM users WHERE id = $1`,
     [userId]
   )]);
   const license = result.rows[0] || null;
-  const trialExpiresAt = !license ? activeTrialExpiry(trialResult.rows[0]?.premium_trial_expires_at) : null;
-  const trialActive = Boolean(trialExpiresAt);
-  if (!license && !trialActive) {
+  const temporaryPremiumExpiresAt = !license
+    && temporaryResult.rows[0]?.temporary_premium_reason === 'payment_recovery'
+    ? activeTemporaryPremiumExpiry(temporaryResult.rows[0]?.temporary_premium_expires_at)
+    : null;
+  if (!license && !temporaryPremiumExpiresAt) {
     if (!freeDesktopAllowed(appVersion)) {
       throw new Error('This account does not have Mortal Nexus Premium. Claim or purchase a license on mortalnexus.com, then sign in again.');
     }
   }
-  return { license, trialExpiresAt };
+  return { license, temporaryPremiumExpiresAt };
 }
 
 async function responseFor(user, access, sessionToken, expiresAt) {
-  const { license, trialExpiresAt } = access;
-  const premium = Boolean(license || trialExpiresAt);
+  const { license, temporaryPremiumExpiresAt } = access;
+  const premium = Boolean(license || temporaryPremiumExpiresAt);
   return {
     success: true,
     sessionToken,
@@ -81,8 +83,8 @@ async function responseFor(user, access, sessionToken, expiresAt) {
     entitlement: {
       tier: premium ? 'premium' : 'free',
       premium,
-      source: license ? 'license' : trialExpiresAt ? 'trial' : 'free',
-      trialExpiresAt: trialExpiresAt?.toISOString() || null
+      source: license ? 'license' : temporaryPremiumExpiresAt ? 'payment_recovery' : 'free',
+      trialExpiresAt: null
     },
     firebaseToken: await createDesktopFirebaseToken(user, { premium })
   };
@@ -90,7 +92,10 @@ async function responseFor(user, access, sessionToken, expiresAt) {
 
 async function createAppSession(user, access, deviceName, appVersion) {
   const token = randomToken(40);
-  const expiresAt = new Date(Date.now() + SESSION_DAYS * 24 * 60 * 60 * 1000);
+  const standardExpiry = new Date(Date.now() + SESSION_DAYS * 24 * 60 * 60 * 1000);
+  const expiresAt = access.temporaryPremiumExpiresAt && access.temporaryPremiumExpiresAt < standardExpiry
+    ? access.temporaryPremiumExpiresAt
+    : standardExpiry;
   await db.query(
     `INSERT INTO app_sessions
       (token_hash, user_id, license_id, device_name, app_version, expires_at)
@@ -202,4 +207,4 @@ async function authenticate(token) {
   return result.rows[0] || null;
 }
 
-module.exports = { bearerToken, login, resume, logout, authenticate, startDeviceLogin, approveDeviceLogin, completeDeviceLogin, versionAtLeast, activeTrialExpiry };
+module.exports = { bearerToken, login, resume, logout, authenticate, startDeviceLogin, approveDeviceLogin, completeDeviceLogin, versionAtLeast, activeTemporaryPremiumExpiry };

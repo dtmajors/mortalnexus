@@ -49,7 +49,8 @@ const config = {
   adminDiscordId: value('ADMIN_DISCORD_ID'),
   adminBootstrapSecret: value('ADMIN_BOOTSTRAP_SECRET'),
   resendApiKey: value('RESEND_API_KEY'),
-  emailFrom: value('EMAIL_FROM', 'Mortal Nexus <noreply@mortalnexus.com>')
+  emailFrom: value('EMAIL_FROM', 'Mortal Nexus <noreply@mortalnexus.com>'),
+  proxycheckApiKey: value('PROXYCHECK_API_KEY')
 };
 
 config.discordEnabled = Boolean(

@@ -16,11 +16,12 @@ test('a paid order can grant temporary Premium while license fulfillment is unav
     user_id: 'emergency-premium-user',
   });
   const result = await db.query(
-    'SELECT premium_trial_started_at, premium_trial_expires_at FROM users WHERE id = $1',
+    'SELECT temporary_premium_started_at, temporary_premium_expires_at, temporary_premium_reason FROM users WHERE id = $1',
     ['emergency-premium-user']
   );
 
   assert.equal(granted, true);
-  assert.ok(result.rows[0].premium_trial_started_at);
-  assert.ok(new Date(result.rows[0].premium_trial_expires_at).getTime() > Date.now() + (6 * 24 * 60 * 60 * 1000));
+  assert.ok(result.rows[0].temporary_premium_started_at);
+  assert.equal(result.rows[0].temporary_premium_reason, 'payment_recovery');
+  assert.ok(new Date(result.rows[0].temporary_premium_expires_at).getTime() > Date.now() + (6 * 24 * 60 * 60 * 1000));
 });

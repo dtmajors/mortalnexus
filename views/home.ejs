@@ -160,7 +160,7 @@
         <% } else { %>
           <a class="button button-primary button-large button-full" href="/register?next=/buy"><i data-lucide="key-round"></i>Create account and upgrade</a>
         <% } %>
-        <a class="button button-trial button-large button-full" href="<%= user ? '/account#premium-trial' : '/register?next=/account' %>"><i data-lucide="timer"></i>Try Premium free for 24 hours</a>
+        <a class="button button-quiet button-large button-full" href="<%= user ? '/account' : '/register?next=/account' %>"><i data-lucide="download"></i>Download the free version</a>
         <div class="payment-methods"><span><i data-lucide="credit-card"></i>Cards</span><span><i data-lucide="smartphone"></i>Wallets</span><span><i data-lucide="badge-dollar-sign"></i>PayPal</span></div>
         <p class="microcopy">Premium is attached to your account and activates automatically when you sign into the application.</p>
       </article>

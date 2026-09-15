@@ -82,12 +82,13 @@ async function grantEmergencyPremium(order) {
   const expiresAt = new Date(Date.now() + (emergencyPremiumDays * 24 * 60 * 60 * 1000));
   const result = await db.query(
     `UPDATE users
-        SET premium_trial_started_at = COALESCE(premium_trial_started_at, NOW()),
-            premium_trial_expires_at = CASE
-              WHEN premium_trial_expires_at IS NULL OR premium_trial_expires_at < $2::timestamptz
+        SET temporary_premium_started_at = COALESCE(temporary_premium_started_at, NOW()),
+            temporary_premium_expires_at = CASE
+              WHEN temporary_premium_expires_at IS NULL OR temporary_premium_expires_at < $2::timestamptz
                 THEN $2::timestamptz
-              ELSE premium_trial_expires_at
+              ELSE temporary_premium_expires_at
             END,
+            temporary_premium_reason = 'payment_recovery',
             updated_at = NOW()
       WHERE id = $1
       RETURNING id`,

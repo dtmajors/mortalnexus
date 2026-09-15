@@ -29,6 +29,8 @@ const { revokeAllEditors } = require('./src/firebase-admin');
 const { streamLatestInstaller, fetchLatestRelease } = require('./src/releases');
 const { backfillLicenseHashes, redeemLicense } = require('./src/license-redemption');
 const appAuth = require('./src/app-auth');
+const { removeTrialsAndRevokeAllSessions } = require('./src/access-cleanup');
+const { assertSignupAllowed } = require('./src/ip-reputation');
 
 validateProductionConfig();
 
@@ -135,7 +137,6 @@ const authLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 20, standardHea
 const checkoutLimiter = rateLimit({ windowMs: 10 * 60 * 1000, limit: 10, standardHeaders: 'draft-8', legacyHeaders: false });
 const downloadLimiter = rateLimit({ windowMs: 60 * 60 * 1000, limit: 10, standardHeaders: 'draft-8', legacyHeaders: false });
 const licenseLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 10, standardHeaders: 'draft-8', legacyHeaders: false });
-const trialLimiter = rateLimit({ windowMs: 24 * 60 * 60 * 1000, limit: 5, standardHeaders: 'draft-8', legacyHeaders: false });
 const appAuthLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 30, standardHeaders: 'draft-8', legacyHeaders: false });
 const devicePollLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 240, standardHeaders: 'draft-8', legacyHeaders: false });
 
@@ -206,11 +207,14 @@ async function appSessionUser(req, res, requirePremium = false) {
     return null;
   }
   if (requirePremium && !session.license_id) {
-    const trial = await db.query(
-      'SELECT premium_trial_expires_at FROM users WHERE id = $1 AND premium_trial_expires_at > NOW()',
+    const temporaryAccess = await db.query(
+      `SELECT temporary_premium_expires_at FROM users
+       WHERE id = $1
+         AND temporary_premium_reason = 'payment_recovery'
+         AND temporary_premium_expires_at > NOW()`,
       [session.user_id]
     );
-    if (!trial.rows[0]) {
+    if (!temporaryAccess.rows[0]) {
       res.status(403).json({ success: false, message: 'Sharing character builds requires Mortal Nexus Premium.' });
       return null;
     }
@@ -444,6 +448,14 @@ app.post('/register', authLimiter, verifyCsrf, async (req, res, next) => {
     const role = isPrimaryAdmin(email) ? 'admin' : 'customer';
     const id = crypto.randomUUID();
     const accountSignupIp = signupIp(req);
+    try {
+      await assertSignupAllowed(accountSignupIp);
+    } catch (error) {
+      if (error.code === 'SIGNUP_NETWORK_BLOCKED') {
+        return res.status(403).render('auth', { title: 'Create Account | Mortal Nexus', mode: 'register', next: nextUrl, formError: error.message });
+      }
+      throw error;
+    }
     await db.query(
       'INSERT INTO users (id, email, display_name, password_hash, role, signup_ip) VALUES ($1, $2, $3, $4, $5, $6)',
       [id, email, displayName, await hashPassword(password), role, accountSignupIp]
@@ -518,6 +530,7 @@ app.get('/auth/discord/callback', authLimiter, async (req, res, next) => {
       const id = crypto.randomUUID();
       const role = isPrimaryAdmin(email, profile.id) ? 'admin' : 'customer';
       const accountSignupIp = signupIp(req);
+      await assertSignupAllowed(accountSignupIp);
       await db.query(
         `INSERT INTO users (id, email, display_name, password_hash, discord_id, discord_username, discord_avatar, discord_joined_at, last_login_at, role, signup_ip)
          VALUES ($1, $2, $3, NULL, $4, $5, $6, NOW(), NOW(), $7, $8)`,
@@ -632,30 +645,9 @@ app.get('/account', requireUser, async (req, res, next) => {
   try {
     const licenses = await getLicensesForUser(req.user.id);
     const orders = await db.query('SELECT * FROM orders WHERE user_id = $1 ORDER BY created_at DESC', [req.user.id]);
-    const trial = await db.query('SELECT premium_trial_started_at, premium_trial_expires_at FROM users WHERE id = $1', [req.user.id]);
-    res.render('account', { title: 'Your Account | Mortal Nexus', licenses, orders: orders.rows, trial: trial.rows[0] || {} });
+    res.render('account', { title: 'Your Account | Mortal Nexus', licenses, orders: orders.rows });
   } catch (error) {
     next(error);
-  }
-});
-
-app.post('/account/trial/start', trialLimiter, requireUser, verifyCsrf, async (req, res) => {
-  try {
-    const license = await db.query('SELECT 1 FROM licenses WHERE user_id = $1 LIMIT 1', [req.user.id]);
-    if (license.rows.length) return res.redirect('/account?notice=Premium%20is%20already%20active%20on%20this%20account.');
-    const startedAt = new Date();
-    const expiresAt = new Date(startedAt.getTime() + 24 * 60 * 60 * 1000);
-    const result = await db.query(
-      `UPDATE users SET premium_trial_started_at = $2, premium_trial_expires_at = $3, updated_at = NOW()
-       WHERE id = $1 AND premium_trial_started_at IS NULL RETURNING id`,
-      [req.user.id, startedAt, expiresAt]
-    );
-    if (!result.rows[0]) return res.redirect('/account?error=The%2024-hour%20trial%20has%20already%20been%20used%20on%20this%20account.');
-    await db.query('UPDATE app_sessions SET revoked_at = NOW() WHERE user_id = $1 AND revoked_at IS NULL', [req.user.id]);
-    res.redirect('/account?notice=Your%2024-hour%20Premium%20trial%20is%20active.%20Sign%20in%20to%20the%20app%20again%20to%20begin.');
-  } catch (error) {
-    console.error(`Premium trial start failed for user ${req.user.id.slice(0, 8)}:`, error.message);
-    res.redirect('/account?error=The%20Premium%20trial%20could%20not%20start.%20Please%20try%20again.');
   }
 });
 
@@ -965,6 +957,10 @@ app.use((error, req, res, next) => {
 async function start() {
   await db.initializeDatabase();
   await backfillLicenseHashes();
+  const cleanup = await removeTrialsAndRevokeAllSessions();
+  if (cleanup.applied) {
+    console.log(`Removed ${cleanup.trialsRevoked} Premium trials and revoked ${cleanup.websiteSessionsRevoked} website sessions, ${cleanup.appSessionsRevoked} app sessions, and ${cleanup.pendingDeviceLoginsRevoked} pending sign-ins.`);
+  }
   if (config.adminEmail) {
     await db.query("UPDATE users SET role = 'admin', updated_at = NOW() WHERE LOWER(email) = $1", [config.adminEmail]);
   }

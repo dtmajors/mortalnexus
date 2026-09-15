@@ -30,6 +30,9 @@ ALTER TABLE users ADD COLUMN IF NOT EXISTS guild_name TEXT;
 ALTER TABLE users ADD COLUMN IF NOT EXISTS timezone TEXT;
 ALTER TABLE users ADD COLUMN IF NOT EXISTS premium_trial_started_at TIMESTAMPTZ;
 ALTER TABLE users ADD COLUMN IF NOT EXISTS premium_trial_expires_at TIMESTAMPTZ;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS temporary_premium_started_at TIMESTAMPTZ;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS temporary_premium_expires_at TIMESTAMPTZ;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS temporary_premium_reason TEXT;
 
 CREATE TABLE IF NOT EXISTS sessions (
   token_hash TEXT PRIMARY KEY,
@@ -132,6 +135,14 @@ CREATE TABLE IF NOT EXISTS admin_audit_log (
   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
+CREATE TABLE IF NOT EXISTS ip_reputation_checks (
+  ip TEXT PRIMARY KEY,
+  blocked BOOLEAN NOT NULL,
+  reason TEXT,
+  provider TEXT NOT NULL DEFAULT 'proxycheck.io',
+  checked_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
 CREATE TABLE IF NOT EXISTS character_builds (
   id TEXT PRIMARY KEY,
   share_code TEXT NOT NULL UNIQUE,
@@ -165,6 +176,7 @@ CREATE INDEX IF NOT EXISTS idx_app_sessions_user_id ON app_sessions(user_id);
 CREATE INDEX IF NOT EXISTS idx_app_sessions_license_id ON app_sessions(license_id);
 CREATE INDEX IF NOT EXISTS idx_app_sessions_last_seen ON app_sessions(last_seen_at DESC);
 CREATE INDEX IF NOT EXISTS idx_admin_audit_created ON admin_audit_log(created_at DESC);
+CREATE INDEX IF NOT EXISTS idx_ip_reputation_checked ON ip_reputation_checks(checked_at DESC);
 CREATE INDEX IF NOT EXISTS idx_app_device_codes_expiry ON app_device_codes(expires_at);
 CREATE INDEX IF NOT EXISTS idx_brave_login_tickets_expiry ON brave_login_tickets(expires_at);
 CREATE INDEX IF NOT EXISTS idx_character_builds_public ON character_builds(is_public, updated_at DESC);
