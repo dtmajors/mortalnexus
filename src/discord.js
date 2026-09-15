@@ -13,8 +13,7 @@ function authorizationUrl(state) {
     response_type: 'code',
     redirect_uri: redirectUri(),
     scope: 'identify email guilds.join',
-    state,
-    prompt: 'consent'
+    state
   });
   return `https://discord.com/oauth2/authorize?${params.toString()}`;
 }

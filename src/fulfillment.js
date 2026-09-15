@@ -8,6 +8,7 @@ const { sendLicenseEmail, sendOwnerPurchaseEmail } = require('./email');
 const { getPayPalOrder, completedPayPalPayment } = require('./paypal');
 
 const stripe = config.stripeSecretKey ? new Stripe(config.stripeSecretKey) : null;
+const emergencyPremiumDays = 7;
 
 function stripeClient() {
   if (!stripe) throw new Error('Stripe is not configured.');
@@ -76,6 +77,25 @@ async function sendOrderOwnerEmail(order) {
   }
 }
 
+async function grantEmergencyPremium(order) {
+  if (!order.user_id) return false;
+  const expiresAt = new Date(Date.now() + (emergencyPremiumDays * 24 * 60 * 60 * 1000));
+  const result = await db.query(
+    `UPDATE users
+        SET premium_trial_started_at = COALESCE(premium_trial_started_at, NOW()),
+            premium_trial_expires_at = CASE
+              WHEN premium_trial_expires_at IS NULL OR premium_trial_expires_at < $2::timestamptz
+                THEN $2::timestamptz
+              ELSE premium_trial_expires_at
+            END,
+            updated_at = NOW()
+      WHERE id = $1
+      RETURNING id`,
+    [order.user_id, expiresAt]
+  );
+  return Boolean(result.rows[0]);
+}
+
 async function fulfillRecordedOrder(order) {
   await sendOrderOwnerEmail(order);
   const existing = await db.query('SELECT * FROM licenses WHERE order_id = $1', [order.id]);
@@ -115,6 +135,13 @@ async function fulfillRecordedOrder(order) {
     await sendOrderLicenseEmail(order, licenseKey);
     return { order, licenseKey, created: true };
   } catch (error) {
+    try {
+      if (await grantEmergencyPremium(order)) {
+        console.log(`Granted temporary Premium while order ${order.id.slice(0, 8)} awaits fulfillment.`);
+      }
+    } catch (grantError) {
+      console.error(`Temporary Premium grant failed for order ${order.id.slice(0, 8)}:`, grantError.message);
+    }
     await db.query("UPDATE orders SET status = 'fulfillment_failed', failure_reason = $2, updated_at = NOW() WHERE id = $1", [order.id, error.message.slice(0, 500)]);
     throw error;
   }
@@ -218,5 +245,6 @@ module.exports = {
   fulfillPayPalOrder,
   retryOrderFulfillment,
   retryFailedOrders,
-  getLicensesForUser
+  getLicensesForUser,
+  grantEmergencyPremium
 };
