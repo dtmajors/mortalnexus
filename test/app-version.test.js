@@ -1,17 +1,8 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { versionAtLeast, activeTemporaryPremiumExpiry } = require('../src/app-auth');
+const { accountAccess } = require('../src/app-auth');
 
-test('free desktop minimum version comparison rejects older clients', () => {
-  assert.equal(versionAtLeast('1.15.0', '1.15.1'), false);
-  assert.equal(versionAtLeast('1.15.1', '1.15.1'), true);
-  assert.equal(versionAtLeast('1.16.0', '1.15.1'), true);
-  assert.equal(versionAtLeast('1.14.99', '1.15.1'), false);
-});
-
-test('payment recovery access ends at its exact expiry time', () => {
-  const now = Date.parse('2026-09-10T12:00:00.000Z');
-  assert.equal(activeTemporaryPremiumExpiry('2026-09-10T11:59:59.999Z', now), null);
-  assert.equal(activeTemporaryPremiumExpiry('2026-09-10T12:00:00.000Z', now), null);
-  assert.equal(activeTemporaryPremiumExpiry('2026-09-11T12:00:00.000Z', now).toISOString(), '2026-09-11T12:00:00.000Z');
+test('desktop account access remains an async entitlement check', () => {
+  assert.equal(typeof accountAccess, 'function');
+  assert.equal(accountAccess.constructor.name, 'AsyncFunction');
 });

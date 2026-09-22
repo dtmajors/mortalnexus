@@ -1,7 +1,12 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const db = require('../src/db');
-const { CLEANUP_ACTION, removeTrialsAndRevokeAllSessions } = require('../src/access-cleanup');
+const {
+  CLEANUP_ACTION,
+  PAID_ONLY_ACTION,
+  removeTrialsAndRevokeAllSessions,
+  enforcePaidOnlyAppAccess
+} = require('../src/access-cleanup');
 
 test('trial removal clears old access and invalidates every existing sign-in once', async () => {
   await db.initializeDatabase();
@@ -54,4 +59,40 @@ test('trial removal clears old access and invalidates every existing sign-in onc
   );
   assert.deepEqual(await removeTrialsAndRevokeAllSessions(), { applied: false });
   assert.equal((await db.query("SELECT 1 FROM sessions WHERE token_hash = 'new-website-token'")).rows.length, 1);
+});
+
+test('paid-only migration revokes unlicensed sessions and preserves licensed sessions', async () => {
+  await db.initializeDatabase();
+  await db.query(
+    `INSERT INTO users (id, email, display_name) VALUES
+      ('free-user', 'free@example.com', 'Free User'),
+      ('paid-user', 'paid@example.com', 'Paid User')`
+  );
+  await db.query(
+    `INSERT INTO licenses (id, user_id, encrypted_key, key_hint)
+     VALUES ('paid-license', 'paid-user', 'encrypted', '...PAID')`
+  );
+  await db.query(
+    `INSERT INTO app_sessions (token_hash, user_id, license_id, expires_at) VALUES
+      ('free-session', 'free-user', NULL, NOW() + INTERVAL '1 day'),
+      ('paid-session', 'paid-user', 'paid-license', NOW() + INTERVAL '1 day')`
+  );
+  await db.query(
+    `INSERT INTO app_device_codes (token_hash, display_code, expires_at)
+     VALUES ('pending-device', 'PENDING', NOW() + INTERVAL '1 day')`
+  );
+
+  assert.deepEqual(await enforcePaidOnlyAppAccess(), {
+    applied: true,
+    appSessionsRevoked: 1,
+    pendingDeviceLoginsRevoked: 1
+  });
+  const sessions = await db.query(
+    `SELECT token_hash, revoked_at FROM app_sessions ORDER BY token_hash`
+  );
+  assert.ok(sessions.rows.find((row) => row.token_hash === 'free-session').revoked_at);
+  assert.equal(sessions.rows.find((row) => row.token_hash === 'paid-session').revoked_at, null);
+  assert.equal((await db.query('SELECT 1 FROM app_device_codes')).rows.length, 0);
+  assert.equal((await db.query('SELECT 1 FROM admin_audit_log WHERE action = $1', [PAID_ONLY_ACTION])).rows.length, 1);
+  assert.deepEqual(await enforcePaidOnlyAppAccess(), { applied: false });
 });

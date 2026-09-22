@@ -2,6 +2,7 @@ const crypto = require('node:crypto');
 const db = require('./db');
 
 const CLEANUP_ACTION = 'system.free_trials_removed_and_sessions_revoked_v1';
+const PAID_ONLY_ACTION = 'system.paid_only_app_access_v1';
 
 async function removeTrialsAndRevokeAllSessions() {
   return db.transaction(async (client) => {
@@ -43,4 +44,40 @@ async function removeTrialsAndRevokeAllSessions() {
   });
 }
 
-module.exports = { CLEANUP_ACTION, removeTrialsAndRevokeAllSessions };
+async function enforcePaidOnlyAppAccess() {
+  return db.transaction(async (client) => {
+    const priorRun = await client.query(
+      'SELECT id FROM admin_audit_log WHERE action = $1 LIMIT 1',
+      [PAID_ONLY_ACTION]
+    );
+    if (priorRun.rows[0]) return { applied: false };
+
+    const appSessions = await client.query(
+      `UPDATE app_sessions
+          SET revoked_at = NOW()
+        WHERE revoked_at IS NULL
+          AND license_id IS NULL
+        RETURNING token_hash`
+    );
+    const deviceCodes = await client.query('DELETE FROM app_device_codes RETURNING token_hash');
+    const result = {
+      applied: true,
+      appSessionsRevoked: appSessions.rows.length,
+      pendingDeviceLoginsRevoked: deviceCodes.rows.length
+    };
+
+    await client.query(
+      `INSERT INTO admin_audit_log (id, action, details)
+       VALUES ($1, $2, $3)`,
+      [crypto.randomUUID(), PAID_ONLY_ACTION, JSON.stringify(result)]
+    );
+    return result;
+  });
+}
+
+module.exports = {
+  CLEANUP_ACTION,
+  PAID_ONLY_ACTION,
+  removeTrialsAndRevokeAllSessions,
+  enforcePaidOnlyAppAccess
+};

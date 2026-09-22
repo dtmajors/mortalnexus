@@ -2,7 +2,6 @@ const os = require('node:os');
 const db = require('./db');
 const { randomToken, hashToken, verifyPassword } = require('./security');
 const { createDesktopFirebaseToken } = require('./firebase-admin');
-const { config } = require('./config');
 
 const SESSION_DAYS = 30;
 
@@ -25,77 +24,40 @@ function publicUser(user) {
   };
 }
 
-function versionAtLeast(current, minimum) {
-  const parts = (value) => String(value || '')
-    .split('.')
-    .slice(0, 4)
-    .map((part) => Number.parseInt(part, 10) || 0);
-  const currentParts = parts(current);
-  const minimumParts = parts(minimum);
-  for (let index = 0; index < Math.max(currentParts.length, minimumParts.length); index += 1) {
-    const difference = (currentParts[index] || 0) - (minimumParts[index] || 0);
-    if (difference !== 0) return difference > 0;
-  }
-  return true;
-}
-
-function freeDesktopAllowed(appVersion) {
-  return config.freeDesktopEnabled && versionAtLeast(appVersion, config.freeDesktopMinVersion);
-}
-
-function activeTemporaryPremiumExpiry(value, now = Date.now()) {
-  if (!value) return null;
-  const expiry = new Date(value);
-  return Number.isFinite(expiry.getTime()) && expiry.getTime() > now ? expiry : null;
-}
-
-async function accountAccess(userId, appVersion) {
-  const [result, temporaryResult] = await Promise.all([db.query(
+async function accountAccess(userId) {
+  const result = await db.query(
     `SELECT id, key_hint FROM licenses
      WHERE user_id = $1 ORDER BY created_at DESC LIMIT 1`,
     [userId]
-  ), db.query(
-    `SELECT temporary_premium_expires_at, temporary_premium_reason FROM users WHERE id = $1`,
-    [userId]
-  )]);
+  );
   const license = result.rows[0] || null;
-  const temporaryPremiumExpiresAt = !license
-    && temporaryResult.rows[0]?.temporary_premium_reason === 'payment_recovery'
-    ? activeTemporaryPremiumExpiry(temporaryResult.rows[0]?.temporary_premium_expires_at)
-    : null;
-  if (!license && !temporaryPremiumExpiresAt) {
-    if (!freeDesktopAllowed(appVersion)) {
-      throw new Error('This account does not have Mortal Nexus Premium. Claim or purchase a license on mortalnexus.com, then sign in again.');
-    }
+  if (!license) {
+    throw new Error('Mortal Nexus now requires Premium. Purchase or redeem a license at mortalnexus.com, then sign in again.');
   }
-  return { license, temporaryPremiumExpiresAt };
+  return { license };
 }
 
 async function responseFor(user, access, sessionToken, expiresAt) {
-  const { license, temporaryPremiumExpiresAt } = access;
-  const premium = Boolean(license || temporaryPremiumExpiresAt);
+  const { license } = access;
   return {
     success: true,
     sessionToken,
     expiresAt: expiresAt.toISOString(),
     account: publicUser(user),
-    license: license ? { hint: license.key_hint } : null,
+    license: { hint: license.key_hint },
     entitlement: {
-      tier: premium ? 'premium' : 'free',
-      premium,
-      source: license ? 'license' : temporaryPremiumExpiresAt ? 'payment_recovery' : 'free',
+      tier: 'premium',
+      premium: true,
+      source: 'license',
       trialExpiresAt: null
     },
-    firebaseToken: await createDesktopFirebaseToken(user, { premium })
+    firebaseToken: await createDesktopFirebaseToken(user, { premium: true })
   };
 }
 
 async function createAppSession(user, access, deviceName, appVersion) {
   const token = randomToken(40);
-  const standardExpiry = new Date(Date.now() + SESSION_DAYS * 24 * 60 * 60 * 1000);
-  const expiresAt = access.temporaryPremiumExpiresAt && access.temporaryPremiumExpiresAt < standardExpiry
-    ? access.temporaryPremiumExpiresAt
-    : standardExpiry;
+  const expiresAt = new Date(Date.now() + SESSION_DAYS * 24 * 60 * 60 * 1000);
   await db.query(
     `INSERT INTO app_sessions
       (token_hash, user_id, license_id, device_name, app_version, expires_at)
@@ -113,7 +75,7 @@ async function login({ email, password, deviceName, appVersion }) {
   if (!user || !user.password_hash || !(await verifyPassword(String(password || ''), user.password_hash))) {
     throw new Error('The email or password is incorrect.');
   }
-  const access = await accountAccess(user.id, appVersion);
+  const access = await accountAccess(user.id);
   return createAppSession(user, access, deviceName, appVersion);
 }
 
@@ -159,7 +121,7 @@ async function completeDeviceLogin({ deviceToken, deviceName, appVersion }) {
     role: row.role,
     can_edit: row.can_edit
   };
-  const access = await accountAccess(user.id, appVersion);
+  const access = await accountAccess(user.id);
   await db.query('UPDATE app_device_codes SET used_at = NOW() WHERE token_hash = $1', [hashToken(deviceToken)]);
   return createAppSession(user, access, deviceName, appVersion);
 }
@@ -175,7 +137,7 @@ async function resume({ token, deviceName, appVersion }) {
   );
   const session = found.rows[0];
   if (!session) throw new Error('Your Mortal Nexus sign-in has expired or was revoked.');
-  const access = await accountAccess(session.user_id, appVersion);
+  const access = await accountAccess(session.user_id);
   await db.query(
     `UPDATE app_sessions SET last_seen_at = NOW(), device_name = $1, app_version = $2, license_id = $3
      WHERE token_hash = $4`,
@@ -198,6 +160,7 @@ async function authenticate(token) {
   if (!token) return null;
   const result = await db.query(
     `SELECT s.user_id, s.license_id FROM app_sessions s
+     JOIN licenses l ON l.id = s.license_id AND l.user_id = s.user_id
      WHERE s.token_hash = $1 AND s.expires_at > NOW() AND s.revoked_at IS NULL`,
     [hashToken(token)]
   );
@@ -207,4 +170,4 @@ async function authenticate(token) {
   return result.rows[0] || null;
 }
 
-module.exports = { bearerToken, login, resume, logout, authenticate, startDeviceLogin, approveDeviceLogin, completeDeviceLogin, versionAtLeast, activeTemporaryPremiumExpiry };
+module.exports = { bearerToken, login, resume, logout, authenticate, accountAccess, startDeviceLogin, approveDeviceLogin, completeDeviceLogin };

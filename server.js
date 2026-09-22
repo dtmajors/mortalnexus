@@ -29,7 +29,7 @@ const { revokeAllEditors } = require('./src/firebase-admin');
 const { streamLatestInstaller, fetchLatestRelease } = require('./src/releases');
 const { backfillLicenseHashes, redeemLicense } = require('./src/license-redemption');
 const appAuth = require('./src/app-auth');
-const { removeTrialsAndRevokeAllSessions } = require('./src/access-cleanup');
+const { removeTrialsAndRevokeAllSessions, enforcePaidOnlyAppAccess } = require('./src/access-cleanup');
 const { assertSignupAllowed } = require('./src/ip-reputation');
 
 validateProductionConfig();
@@ -123,7 +123,7 @@ app.use((req, res, next) => {
   res.locals.discordAuthEnabled = config.discordEnabled;
   res.locals.paypalEnabled = config.paypalEnabled;
   res.locals.assetVersion = assetVersion;
-  res.locals.metaDescription = 'Download Mortal Nexus Free, a Mortal Online 2 companion with interactive maps, character planning, player trading, crafting tools, guides, and more.';
+  res.locals.metaDescription = 'Get Mortal Nexus Premium, a Mortal Online 2 companion with interactive maps, character planning, player trading, crafting tools, guides, and more.';
   res.locals.canonicalUrl = `${config.baseUrl}${req.path === '/' ? '/' : req.path}`;
   res.locals.ogImageUrl = `${config.baseUrl}/assets/app-shell.png`;
   res.locals.robots = indexablePaths.has(req.path) ? 'index, follow' : 'noindex, nofollow';
@@ -145,6 +145,20 @@ function isPrimaryAdmin(email, discordId = '') {
     || (config.adminDiscordId && String(discordId || '') === config.adminDiscordId);
 }
 
+async function requirePremiumWebsiteUser(req, res, next) {
+  try {
+    const result = await db.query('SELECT 1 FROM licenses WHERE user_id = $1 LIMIT 1', [req.user.id]);
+    if (result.rows[0]) return next();
+    return res.status(403).render('error', {
+      title: 'Premium Required | Mortal Nexus',
+      status: 403,
+      message: 'Mortal Nexus requires a Premium license. Purchase or redeem a key from your account to continue.'
+    });
+  } catch (error) {
+    next(error);
+  }
+}
+
 function signupIp(req) {
   let address = String(req.ip || req.socket?.remoteAddress || '').trim();
   if (!address) return null;
@@ -164,7 +178,7 @@ app.get('/health', (req, res) => res.json({ ok: true, service: 'mortal-nexus-sto
 
 function appAuthError(res, error) {
   const message = error?.message || 'Mortal Nexus sign-in failed.';
-  const unauthorized = /incorrect|expired|revoked|not linked|different license/i.test(message);
+  const unauthorized = /incorrect|expired|revoked|not linked|different license|requires premium/i.test(message);
   return res.status(unauthorized ? 401 : 400).json({ success: false, message });
 }
 
@@ -207,17 +221,8 @@ async function appSessionUser(req, res, requirePremium = false) {
     return null;
   }
   if (requirePremium && !session.license_id) {
-    const temporaryAccess = await db.query(
-      `SELECT temporary_premium_expires_at FROM users
-       WHERE id = $1
-         AND temporary_premium_reason = 'payment_recovery'
-         AND temporary_premium_expires_at > NOW()`,
-      [session.user_id]
-    );
-    if (!temporaryAccess.rows[0]) {
-      res.status(403).json({ success: false, message: 'Sharing character builds requires Mortal Nexus Premium.' });
-      return null;
-    }
+    res.status(403).json({ success: false, message: 'Mortal Nexus Premium is required.' });
+    return null;
   }
   return session;
 }
@@ -287,7 +292,7 @@ app.delete('/api/app/builds/:code', async (req, res, next) => {
 
 app.get('/api/app/update/latest', async (req, res) => {
   try {
-    if (!(await appAuth.authenticate(appAuth.bearerToken(req)))) return res.status(401).json({ success: false, message: 'Your app session has expired.' });
+    if (!(await appSessionUser(req, res, true))) return;
     const { release, asset } = await fetchLatestRelease();
     res.json({
       success: true,
@@ -302,7 +307,7 @@ app.get('/api/app/update/latest', async (req, res) => {
 
 app.get('/api/app/update/download', downloadLimiter, async (req, res, next) => {
   try {
-    if (!(await appAuth.authenticate(appAuth.bearerToken(req)))) return res.status(401).json({ success: false, message: 'Your app session has expired.' });
+    if (!(await appSessionUser(req, res, true))) return;
     await streamLatestInstaller(res);
   } catch (error) {
     next(error);
@@ -330,7 +335,7 @@ app.post('/api/app/device/complete', devicePollLimiter, async (req, res) => {
   }
 });
 
-app.get('/app/connect', requireUser, async (req, res, next) => {
+app.get('/app/connect', requireUser, requirePremiumWebsiteUser, async (req, res, next) => {
   try {
     const code = String(req.query.code || '').trim().toUpperCase();
     const pending = await db.query(
@@ -344,7 +349,7 @@ app.get('/app/connect', requireUser, async (req, res, next) => {
   }
 });
 
-app.post('/app/connect', requireUser, verifyCsrf, async (req, res, next) => {
+app.post('/app/connect', requireUser, requirePremiumWebsiteUser, verifyCsrf, async (req, res, next) => {
   try {
     await appAuth.approveDeviceLogin(req.body.code, req.user.id);
     res.render('app-connect', { title: 'App Sign-in Approved | Mortal Nexus', code: req.body.code, approved: true });
@@ -366,7 +371,7 @@ app.get('/sitemap.xml', (req, res) => {
 
 app.get('/', (req, res) => res.render('home', {
   title: 'Mortal Online 2 Map & Companion App | Mortal Nexus',
-  metaDescription: 'Download Mortal Nexus Free for interactive Mortal Online 2 maps, character planning, player trading, crafting calculators, creature data, guides, and more.',
+  metaDescription: 'Get Mortal Nexus Premium for interactive Mortal Online 2 maps, character planning, player trading, crafting calculators, creature data, guides, and more.',
   structuredData: [
     {
       '@context': 'https://schema.org',
@@ -374,19 +379,22 @@ app.get('/', (req, res) => res.render('home', {
       name: 'Mortal Nexus',
       url: config.baseUrl,
       image: `${config.baseUrl}/assets/app-shell.png`,
-      description: 'A free and premium Windows companion application for Mortal Online 2 with interactive maps, planning tools, player trading, crafting calculators, creature data, and guides.',
+      description: 'A Premium Windows companion application for Mortal Online 2 with interactive maps, planning tools, player trading, crafting calculators, creature data, and guides.',
       applicationCategory: 'GameApplication',
       operatingSystem: 'Windows',
-      offers: [
-        { '@type': 'Offer', name: 'Mortal Nexus Free', price: '0.00', priceCurrency: 'USD', availability: 'https://schema.org/InStock' },
-        { '@type': 'Offer', name: 'Mortal Nexus Premium Lifetime', price: config.productPriceDisplay.replace(/[^0-9.]/g, '') || '19.99', priceCurrency: 'USD', availability: 'https://schema.org/InStock' }
-      ]
+      offers: {
+        '@type': 'Offer',
+        name: 'Mortal Nexus Premium Lifetime',
+        price: config.productPriceDisplay.replace(/[^0-9.]/g, '') || '19.99',
+        priceCurrency: 'USD',
+        availability: 'https://schema.org/InStock'
+      }
     },
     {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'Can I use Mortal Nexus for free?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Free accounts include the Mortal Online 2 maps, character planning, market, messages, friends, and community features.' } },
+        { '@type': 'Question', name: 'Does Mortal Nexus require Premium?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. A lifetime Premium license is required to use the Mortal Nexus desktop application.' } },
         { '@type': 'Question', name: 'What system does Mortal Nexus support?', acceptedAnswer: { '@type': 'Answer', text: 'Mortal Nexus is a Windows desktop application.' } },
         { '@type': 'Question', name: 'Is Mortal Nexus an official Mortal Online 2 product?', acceptedAnswer: { '@type': 'Answer', text: 'No. Mortal Nexus is an independent community companion and is not affiliated with Star Vault.' } }
       ]
@@ -689,7 +697,7 @@ app.post('/account/orders/:id/retry', requireUser, verifyCsrf, async (req, res) 
   }
 });
 
-app.get('/download/latest', downloadLimiter, requireUser, async (req, res, next) => {
+app.get('/download/latest', downloadLimiter, requireUser, requirePremiumWebsiteUser, async (req, res, next) => {
   try {
     await streamLatestInstaller(res);
   } catch (error) {
@@ -960,6 +968,10 @@ async function start() {
   const cleanup = await removeTrialsAndRevokeAllSessions();
   if (cleanup.applied) {
     console.log(`Removed ${cleanup.trialsRevoked} Premium trials and revoked ${cleanup.websiteSessionsRevoked} website sessions, ${cleanup.appSessionsRevoked} app sessions, and ${cleanup.pendingDeviceLoginsRevoked} pending sign-ins.`);
+  }
+  const paidOnly = await enforcePaidOnlyAppAccess();
+  if (paidOnly.applied) {
+    console.log(`Enabled paid-only desktop access and revoked ${paidOnly.appSessionsRevoked} unlicensed app sessions and ${paidOnly.pendingDeviceLoginsRevoked} pending app sign-ins.`);
   }
   if (config.adminEmail) {
     await db.query("UPDATE users SET role = 'admin', updated_at = NOW() WHERE LOWER(email) = $1", [config.adminEmail]);

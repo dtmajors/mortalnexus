@@ -7,16 +7,16 @@
   <div class="hero-shade"></div>
   <div class="hero-content page-width">
     <div class="hero-copy">
-      <span class="eyebrow"><span class="status-dot"></span> Free to download &middot; Premium available</span>
+      <span class="eyebrow"><span class="status-dot"></span> Premium lifetime access</span>
       <h1>Mortal Nexus</h1>
-      <p class="hero-lead">Start free with searchable Mortal Online 2 maps for Myrland and Sarducaa, character planning, the player market, messages, and friends. Upgrade once when you want the complete research and crafting toolkit.</p>
+      <p class="hero-lead">Get searchable Mortal Online 2 maps for Myrland and Sarducaa, character planning, crafting, loot, guides, the player market, messages, friends, and the complete Nexus toolkit with one lifetime purchase.</p>
       <div class="hero-actions">
-        <a class="button button-primary button-large" href="/download/latest"><i data-lucide="download"></i>Download Mortal Nexus Free</a>
-        <a class="button button-glass button-large" href="#pricing"><i data-lucide="crown"></i>Compare Free &amp; Premium</a>
+        <a class="button button-primary button-large" href="#pricing"><i data-lucide="crown"></i>Get Lifetime Access</a>
+        <a class="button button-glass button-large" href="<%= user ? '/account' : '/login' %>"><i data-lucide="log-in"></i><%= user ? 'Open Your Account' : 'Sign In' %></a>
       </div>
       <div class="hero-proof" aria-label="Product highlights">
-        <span><i data-lucide="circle-dollar-sign"></i>Free version available</span>
-        <span><i data-lucide="badge-check"></i>Premium is one payment</span>
+        <span><i data-lucide="circle-dollar-sign"></i>One-time payment</span>
+        <span><i data-lucide="badge-check"></i>Complete application access</span>
         <span><i data-lucide="monitor-down"></i>Windows desktop app</span>
         <span><i data-lucide="signature"></i>Created by Marshal Law</span>
       </div>
@@ -96,7 +96,7 @@
       <span class="eyebrow">Made to stay out of the way</span>
       <h2>Find the answer, then get back to Nave.</h2>
       <p>The interface is designed for quick scanning on your main display or a second screen. Search once, keep your filters, and move between maps and reference tools without opening another browser maze.</p>
-      <a class="text-link" href="#pricing">Compare Free and Premium <i data-lucide="arrow-right"></i></a>
+      <a class="text-link" href="#pricing">See lifetime access <i data-lucide="arrow-right"></i></a>
     </div>
     <ul class="workflow-steps">
       <li><i data-lucide="search"></i><div><strong>Search</strong><p>Type a creature, drop, town, resource, spell, or material.</p></div></li>
@@ -109,28 +109,11 @@
 <section class="section pricing-section" id="pricing">
   <div class="page-width">
     <div class="pricing-intro">
-      <span class="eyebrow">Choose your access</span>
-      <h2>Start with Mortal Nexus Free.</h2>
-      <p>The installer is free and the useful core of Mortal Nexus stays available without a purchase. Premium unlocks the full research, crafting, and automation suite.</p>
+      <span class="eyebrow">Lifetime access</span>
+      <h2>One purchase. The complete Nexus.</h2>
+      <p>Mortal Nexus requires a Premium license. Your one-time purchase unlocks the entire desktop application and future updates on your account.</p>
     </div>
-    <div class="plan-grid">
-      <article class="price-panel free-plan">
-        <div class="plan-heading">
-          <span class="plan-icon"><i data-lucide="map"></i></span>
-          <div><span class="plan-label">No payment required</span><h3>Mortal Nexus Free</h3></div>
-        </div>
-        <div class="price-top"><span>Free access</span><strong>$0</strong><small>no time limit</small></div>
-        <ul class="included-list">
-          <li><i data-lucide="check"></i>Interactive Myrland and Sarducaa maps</li>
-          <li><i data-lucide="check"></i>Shared market, messages, and friends</li>
-          <li><i data-lucide="check"></i>Personal and community map features</li>
-          <li><i data-lucide="check"></i>Search, filtering, and map contributions</li>
-          <li><i data-lucide="check"></i>Free-version updates</li>
-        </ul>
-        <a class="button button-free button-large button-full" href="/download/latest"><i data-lucide="download"></i>Download Free</a>
-        <p class="microcopy">Create or sign into an account, then download the same Windows installer used by Premium members.</p>
-      </article>
-
+    <div class="plan-grid single-plan">
       <article class="price-panel premium-plan">
         <div class="premium-ribbon"><i data-lucide="crown"></i>Complete toolkit</div>
         <div class="plan-heading">
@@ -139,7 +122,8 @@
         </div>
         <div class="price-top"><span>Lifetime access</span><strong><%= price %></strong><small>one-time payment</small></div>
         <ul class="included-list">
-          <li><i data-lucide="check"></i>Everything included with Free</li>
+          <li><i data-lucide="check"></i>Interactive Myrland and Sarducaa maps</li>
+          <li><i data-lucide="check"></i>Market, messages, friends, guilds, and map contributions</li>
           <li><i data-lucide="check"></i>Crafting, extraction, refining, and material tools</li>
           <li><i data-lucide="check"></i>Complete Character Builder with clades, mastery, gear, and magic</li>
           <li><i data-lucide="check"></i>Loot, dungeons, creatures, spells, and guides</li>
@@ -160,12 +144,12 @@
         <% } else { %>
           <a class="button button-primary button-large button-full" href="/register?next=/buy"><i data-lucide="key-round"></i>Create account and upgrade</a>
         <% } %>
-        <a class="button button-quiet button-large button-full" href="<%= user ? '/account' : '/register?next=/account' %>"><i data-lucide="download"></i>Download the free version</a>
+        <a class="button button-quiet button-large button-full" href="<%= user ? '/account' : '/login' %>"><i data-lucide="key-round"></i>Already have a license?</a>
         <div class="payment-methods"><span><i data-lucide="credit-card"></i>Cards</span><span><i data-lucide="smartphone"></i>Wallets</span><span><i data-lucide="badge-dollar-sign"></i>PayPal</span></div>
-        <p class="microcopy">Premium is attached to your account and activates automatically when you sign into the application.</p>
+        <p class="microcopy">Your license is attached to your account and activates automatically when you sign into the application.</p>
       </article>
     </div>
-    <div class="secure-note pricing-secure-note"><i data-lucide="shield-check"></i><span><strong>Free means free</strong>No card is requested for Free access. Premium checkout is handled securely through Stripe or PayPal.</span></div>
+    <div class="secure-note pricing-secure-note"><i data-lucide="shield-check"></i><span><strong>Lifetime license</strong>Pay once through Stripe or PayPal and keep access to the complete application and future updates.</span></div>
   </div>
 </section>
 
@@ -173,7 +157,7 @@
   <div class="page-width faq-layout">
     <div><span class="eyebrow">Before you buy</span><h2>Common questions.</h2><p>Need something else? The support page has direct contact and setup help.</p><a class="button button-quiet" href="/support">Open support</a></div>
     <div class="faq-list">
-      <details open><summary>Can I use Mortal Nexus for free?<i data-lucide="plus"></i></summary><p>Yes. Create an account and download the application without paying. Free accounts include the maps, character planning, market, messages, friends, and community features. Premium is an optional lifetime upgrade for the complete toolset.</p></details>
+      <details open><summary>Does Mortal Nexus require Premium?<i data-lucide="plus"></i></summary><p>Yes. A lifetime Premium license is required to sign into and use the Mortal Nexus desktop application.</p></details>
       <details><summary>How do I receive my key?<i data-lucide="plus"></i></summary><p>After Stripe or PayPal confirms payment, the site generates your personal Mortal Nexus Key, places it in your account, and emails it to your account address.</p></details>
       <details><summary>Are updates included?<i data-lucide="plus"></i></summary><p>Yes. Lifetime access includes future application updates and content added to Mortal Nexus.</p></details>
       <details><summary>What system does it support?<i data-lucide="plus"></i></summary><p>Mortal Nexus is a Windows desktop application. The current installer is always available from your account.</p></details>

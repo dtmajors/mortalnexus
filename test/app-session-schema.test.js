@@ -1,8 +1,9 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const db = require('../src/db');
+const { accountAccess } = require('../src/app-auth');
 
-test('app sessions support accounts without a license', async () => {
+test('desktop access requires a linked Premium license', async () => {
   await db.initializeDatabase();
   const user = await db.query(
     `INSERT INTO users (id, email, display_name)
@@ -11,16 +12,16 @@ test('app sessions support accounts without a license', async () => {
     ['free-account-id', 'free-account@example.com', 'Free Account']
   );
 
-  await db.query(
-    `INSERT INTO app_sessions (token_hash, user_id, license_id, expires_at)
-     VALUES ($1, $2, NULL, NOW() + INTERVAL '1 day')`,
-    ['free-session-token', user.rows[0].id]
+  await assert.rejects(
+    accountAccess(user.rows[0].id),
+    /requires Premium/
   );
 
-  const session = await db.query(
-    'SELECT license_id FROM app_sessions WHERE token_hash = $1',
-    ['free-session-token']
+  await db.query(
+    `INSERT INTO licenses (id, user_id, encrypted_key, key_hint)
+     VALUES ($1, $2, $3, $4)`,
+    ['premium-license-id', user.rows[0].id, 'encrypted', '...PAID']
   );
-  assert.equal(session.rows.length, 1);
-  assert.equal(session.rows[0].license_id, null);
+  const access = await accountAccess(user.rows[0].id);
+  assert.equal(access.license.id, 'premium-license-id');
 });
