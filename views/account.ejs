@@ -33,8 +33,8 @@
     <div class="empty-access">
       <div class="empty-icon"><i data-lucide="crown"></i></div><span class="eyebrow">Premium required</span><h2>Get Mortal Nexus lifetime access.</h2><p>A Premium license is required to download, sign into, and use the desktop application. Purchase once or redeem an existing key below.</p>
       <div class="checkout-options account-checkout-options">
-        <form method="post" action="/checkout"><input type="hidden" name="csrf_token" value="<%= csrfToken %>"><button class="button button-primary button-large" type="submit"><i data-lucide="credit-card"></i>Pay <%= price %> with card</button></form>
-        <% if (paypalEnabled) { %><a class="button button-paypal button-large" href="/checkout/paypal">Pay <%= price %> with <strong>PayPal</strong></a><% } %>
+        <a class="button button-primary button-large" href="<%= discordUrl %>"><i data-lucide="message-circle"></i>Purchase Premium through Discord</a>
+        <p>Open a purchase ticket in Discord. A staff member will arrange payment and send your standalone license.</p>
       </div>
     </div>
   <% } %>

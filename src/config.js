@@ -35,6 +35,7 @@ const config = {
   githubReleaseToken: value('GITHUB_RELEASE_TOKEN'),
   githubReleaseAsset: value('GITHUB_RELEASE_ASSET', 'MortalNexusSetup.exe'),
   discordUrl: value('DISCORD_URL', 'https://discord.gg/MmV7gNV5ZG'),
+  releasePageUrl: 'https://github.com/dtmajors/mortalnexus/releases/latest',
   discordClientId: value('DISCORD_CLIENT_ID'),
   discordClientSecret: value('DISCORD_CLIENT_SECRET'),
   discordBotToken: value('DISCORD_BOT_TOKEN'),
