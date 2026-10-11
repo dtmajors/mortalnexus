@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0d0c" />
+    <title>Alchemy Calculator | Mortal Nexus</title>
+    <meta
+      name="description"
+      content="Scale Mortal Online II Alchemy, Herbalism, and Milling extraction recipes."
+    />
+    <link rel="icon" href="/assets/mortal-nexus-app-icon-v2.png" type="image/png" />
+    <link rel="stylesheet" href="/styles.css?v=4" />
+    <link rel="stylesheet" href="/alchemy.css?v=1" />
+    <link rel="stylesheet" href="/site-shell.css?v=24" />
+  </head>
+  <body class="alchemy-page">
+    <header class="masthead alchemy-masthead">
+      <div class="masthead-main alchemy-masthead-main">
+        <a class="brand" href="/" aria-label="Mortal Nexus home">
+          <img src="/assets/mortal-nexus-app-icon-v2.png" alt="" width="40" height="40" />
+          <span class="brand-copy">
+            <strong>Mortal Nexus</strong>
+            <small>Mortal Online II Reference</small>
+          </span>
+        </a>
+
+        <nav class="alchemy-site-nav" aria-label="Site navigation">
+          <a class="text-button" href="/">Reference</a>
+          <a class="text-button" href="/crafting">Crafting</a>
+          <a class="text-button" href="/extraction">Extraction</a>
+          <a class="text-button" href="/refining">Refining</a>
+          <a class="text-button" href="/butchery">Butchery</a>
+          <a class="text-button active" href="/alchemy" aria-current="page">Alchemy</a>
+          <a class="text-button" href="/cooking">Cooking</a>
+          <a class="text-button" href="/reverse">Reverse</a>
+          <a class="text-button" href="/building">Building</a>
+          <a class="text-button" href="/creatures">Creature Codex</a>
+          <a class="text-button" href="/map">Live map</a>
+          <a class="text-button donate-button" href="https://www.paypal.com/donate/?hosted_button_id=677CRL426BE9Q" target="_blank" rel="noreferrer">Donate</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="alchemy-main">
+      <header class="alchemy-intro">
+        <div>
+          <p class="kicker">Botany extraction</p>
+          <h1>Alchemy Calculator</h1>
+          <p>Scale Fabricula, Herbologium, Press, Grinder, and other botany recipes from any input amount.</p>
+        </div>
+        <div class="alchemy-data-badge">
+          <span><strong id="knownRecipeCount">0</strong> / <strong id="recipeCount">0</strong></span>
+          <small>numeric yield sets documented</small>
+        </div>
+      </header>
+
+      <section class="alchemy-shell" aria-labelledby="alchemyHeading">
+        <div class="alchemy-controls">
+          <div class="alchemy-heading">
+            <div>
+              <span class="eyebrow">Recipe setup</span>
+              <h2 id="alchemyHeading">What are you processing?</h2>
+            </div>
+          </div>
+
+          <div id="sectionControl" class="alchemy-section-control" aria-label="Recipe category">
+            <button class="active" type="button" data-section="Alchemy" aria-pressed="true">Alchemy</button>
+            <button type="button" data-section="Herbalism" aria-pressed="false">Herbalism</button>
+            <button type="button" data-section="Milling" aria-pressed="false">Milling</button>
+          </div>
+
+          <div class="alchemy-field-grid">
+            <label class="alchemy-field">
+              <span>Input material</span>
+              <select id="materialSelect"></select>
+            </label>
+            <label class="alchemy-field">
+              <span>Method</span>
+              <select id="recipeSelect"></select>
+            </label>
+            <label class="alchemy-field amount-field">
+              <span>Amount to process</span>
+              <input id="amountInput" type="number" min="1" step="1" inputmode="numeric" value="10000" />
+            </label>
+          </div>
+
+          <div class="alchemy-quick-amounts" aria-label="Quick amounts">
+            <span>Quick amount</span>
+            <button type="button" data-amount="1000">1,000</button>
+            <button type="button" data-amount="5000">5,000</button>
+            <button type="button" data-amount="10000">10,000</button>
+            <button type="button" data-amount="20000">20,000</button>
+          </div>
+
+          <label class="alchemy-bonus-toggle">
+            <input id="cladeBonus" type="checkbox" />
+            <span class="alchemy-toggle-track" aria-hidden="true"></span>
+            <span>
+              <strong>Herbalism clade bonus</strong>
+              <small>Add 5% to calculated yields</small>
+            </span>
+          </label>
+        </div>
+
+        <div class="alchemy-results" aria-live="polite">
+          <div class="alchemy-result-heading">
+            <div>
+              <span class="eyebrow">Required load</span>
+              <h2 id="resultRecipeName">Calamine in Fabricula</h2>
+            </div>
+            <span id="methodBadge" class="method-badge">Fabricula</span>
+          </div>
+
+          <dl class="alchemy-load-summary">
+            <div>
+              <dt>Main material</dt>
+              <dd><strong id="mainAmount">10,000</strong><span id="mainMaterial">Calamine</span></dd>
+            </div>
+            <div>
+              <dt>Catalyst</dt>
+              <dd><strong id="catalystAmount">5,000</strong><span id="catalystName">Shimmering Solution</span></dd>
+            </div>
+            <div>
+              <dt>Total carried</dt>
+              <dd><strong id="totalAmount">15,000</strong><span>units</span></dd>
+            </div>
+          </dl>
+
+          <div class="alchemy-output-heading">
+            <span>Expected output</span>
+            <small>Maximum relevant skills and lores</small>
+          </div>
+          <div id="outputGrid" class="alchemy-output-grid"></div>
+          <p id="recipeNote" class="alchemy-recipe-note"></p>
+        </div>
+      </section>
+
+      <section class="alchemy-library" aria-labelledby="alchemyLibraryHeading">
+        <div class="alchemy-library-heading">
+          <div>
+            <p class="kicker">Recipe library</p>
+            <h2 id="alchemyLibraryHeading">Alchemy, Herbalism, and Milling</h2>
+          </div>
+          <div class="alchemy-library-filters">
+            <label class="alchemy-search">
+              <i data-lucide="search" aria-hidden="true"></i>
+              <input id="recipeSearch" type="search" placeholder="Search material, catalyst, or output..." />
+            </label>
+            <select id="librarySection" aria-label="Filter recipe category">
+              <option>All categories</option>
+              <option>Alchemy</option>
+              <option>Herbalism</option>
+              <option>Milling</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="alchemy-table-shell">
+          <table class="alchemy-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Input</th>
+                <th>Machine</th>
+                <th>Catalyst per 10,000</th>
+                <th>Outputs per 10,000</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="recipeTableBody"></tbody>
+          </table>
+        </div>
+        <p id="recipeTableEmpty" class="alchemy-empty" hidden>No recipes match that search.</p>
+      </section>
+
+      <footer class="site-footer alchemy-footer">
+        <span>Yields come from the MO2 INFO workbook and exclude clade bonuses by default.</span>
+        <span id="dataStamp"></span>
+      </footer>
+    </main>
+
+    <script src="/data.js"></script>
+    <script src="/assets/vendor/lucide.min.js"></script>
+    <script src="/alchemy.js?v=2"></script>
+    <script src="/site-shell.js?v=22"></script>
+  </body>
+</html>

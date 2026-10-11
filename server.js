@@ -54,11 +54,14 @@ app.set('views', path.join(__dirname, 'views'));
 app.disable('x-powered-by');
 
 // Keep migration links available without a website account or database session.
-app.get(['/', '/download', '/download/latest', '/pricing'], (req, res) => {
+app.get(['/', '/pricing'], (req, res) => {
+  res.redirect(302, 'https://github.com/dtmajors/mortalnexus');
+});
+app.get(['/download', '/download/latest'], (req, res) => {
   res.redirect(302, config.releasePageUrl);
 });
 app.all(['/buy', '/checkout', '/checkout/paypal'], (req, res) => {
-  res.redirect(303, config.discordUrl);
+  res.redirect(303, 'https://www.paypal.com/donate/?hosted_button_id=677CRL426BE9Q');
 });
 
 app.use((req, res, next) => {
@@ -147,50 +150,6 @@ const downloadLimiter = rateLimit({ windowMs: 60 * 60 * 1000, limit: 10, standar
 const licenseLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 10, standardHeaders: 'draft-8', legacyHeaders: false });
 const appAuthLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 30, standardHeaders: 'draft-8', legacyHeaders: false });
 const devicePollLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 240, standardHeaders: 'draft-8', legacyHeaders: false });
-
-// One-time owner backup during the standalone migration.
-app.post('/api/admin/standalone-inventory', authLimiter, async (req, res) => {
-  const supplied = Buffer.from(String(req.get('X-Migration-Token') || ''));
-  const expected = Buffer.from(config.adminBootstrapSecret);
-  if (!expected.length || supplied.length !== expected.length || !crypto.timingSafeEqual(supplied, expected)) {
-    return res.status(403).json({ success: false, message: 'Access denied.' });
-  }
-  try {
-    const { decryptLicense } = require('./src/security');
-    const result = await db.query(
-      'SELECT l.*, u.email, u.display_name, u.discord_id, u.discord_username FROM licenses l LEFT JOIN users u ON u.id = l.user_id'
-    );
-    const records = result.rows.map(row => ({
-      key: decryptLicense(row.encrypted_key),
-      status: 'Sold',
-      customer: row.discord_username || row.email || row.display_name || '',
-      email: row.email || '',
-      discordId: row.discord_id || '',
-      order: row.order_id || '',
-      created: row.created_at,
-      assignedAt: row.created_at,
-      source: 'Website customer migration',
-      note: 'Existing website customer',
-    }));
-    let providerKeys = [];
-    let providerError = '';
-    try {
-      const params = new URLSearchParams({
-        sellerkey: config.keyAuthSellerKey, type: 'fetchallkeys', format: 'json',
-      });
-      const response = await fetch('https://keyauth.win/api/seller/?' + params, {
-        headers: { Accept: 'application/json' }, signal: AbortSignal.timeout(15000),
-      });
-      const data = await response.json();
-      if (response.ok && data.success && Array.isArray(data.keys)) providerKeys = data.keys;
-      else providerError = 'KeyAuth inventory unavailable (HTTP ' + response.status + ').';
-    } catch { providerError = 'KeyAuth inventory unavailable.'; }
-    res.set('Cache-Control', 'private, no-store');
-    res.json({ success: true, records, providerKeys, providerError });
-  } catch {
-    res.status(500).json({ success: false, message: 'License backup failed.' });
-  }
-});
 
 function isPrimaryAdmin(email, discordId = '') {
   return (config.adminEmail && String(email || '').toLowerCase() === config.adminEmail)

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Convolvulaceae">
+  <g stroke="#1c284b" stroke-width="2.5" stroke-linejoin="round">
+    <path d="M31 57V27m0 18L17 36m14 2 15-12" fill="none" stroke="#397445" stroke-width="4"/>
+    <path fill="#7256bd" d="M8 16c9-9 21-7 25 3-2 12-10 19-19 19 2-7 0-14-6-22Z"/>
+    <path fill="#8d72dd" d="M56 10c-11-5-21 1-22 12 5 11 14 15 23 11-4-6-5-13-1-23Z"/>
+    <circle cx="25" cy="22" r="5" fill="#f2d7ff"/><circle cx="40" cy="21" r="5" fill="#f2d7ff"/>
+  </g>
+</svg>

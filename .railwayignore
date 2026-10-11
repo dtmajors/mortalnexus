@@ -1,0 +1,5 @@
+desktop/
+netlify-redirect/
+release-public/
+node_modules/
+.git/

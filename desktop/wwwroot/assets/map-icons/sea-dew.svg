@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Sea Dew">
+  <path fill="none" stroke="#153f42" stroke-width="7" stroke-linecap="round" d="M32 57V25M31 43 17 31m15 5 14-14m-14 8L23 17"/>
+  <path fill="none" stroke="#4dc2b2" stroke-width="4" stroke-linecap="round" d="M32 57V25M31 43 17 31m15 5 14-14m-14 8L23 17"/>
+  <path fill="#8fe4d4" stroke="#153f42" stroke-width="3" d="M13 17c0-5 5-11 5-11s5 6 5 11a5 5 0 1 1-10 0Zm30 0c0-5 5-11 5-11s5 6 5 11a5 5 0 1 1-10 0ZM7 34c0-5 5-11 5-11s5 6 5 11a5 5 0 1 1-10 0Z"/>
+</svg>

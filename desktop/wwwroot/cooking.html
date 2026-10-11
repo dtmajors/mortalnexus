@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0d0c" />
+    <title>Cooking Calculator | Mortal Nexus</title>
+    <meta
+      name="description"
+      content="Build Mortal Online II cooking recipes from exact ingredient attributes and documented cooking-tool ratios."
+    />
+    <link rel="icon" href="/assets/mortal-nexus-app-icon-v2.png" type="image/png" />
+    <link rel="stylesheet" href="/styles.css?v=4" />
+    <link rel="stylesheet" href="/cooking.css?v=3" />
+    <link rel="stylesheet" href="/site-shell.css?v=24" />
+  </head>
+  <body class="cooking-page">
+    <header class="masthead cooking-masthead">
+      <div class="masthead-main cooking-masthead-main">
+        <a class="brand" href="/" aria-label="Mortal Nexus home">
+          <img src="/assets/mortal-nexus-app-icon-v2.png" alt="" width="40" height="40" />
+          <span class="brand-copy">
+            <strong>Mortal Nexus</strong>
+            <small>Mortal Online II Reference</small>
+          </span>
+        </a>
+
+        <nav class="cooking-site-nav" aria-label="Site navigation">
+          <a class="text-button" href="/">Reference</a>
+          <a class="text-button" href="/crafting">Crafting</a>
+          <a class="text-button" href="/extraction">Extraction</a>
+          <a class="text-button" href="/refining">Refining</a>
+          <a class="text-button" href="/butchery">Butchery</a>
+          <a class="text-button" href="/alchemy">Alchemy</a>
+          <a class="text-button active" href="/cooking" aria-current="page">Cooking</a>
+          <a class="text-button" href="/reverse">Reverse</a>
+          <a class="text-button" href="/building">Building</a>
+          <a class="text-button" href="/creatures">Creature Codex</a>
+          <a class="text-button" href="/map">Live map</a>
+          <a class="text-button donate-button" href="https://www.paypal.com/donate/?hosted_button_id=677CRL426BE9Q" target="_blank" rel="noreferrer">Donate</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="cooking-main">
+      <header class="cooking-intro">
+        <div>
+          <p class="kicker">Recipe workbench</p>
+          <h1>Cooking Calculator</h1>
+          <p>Build a ratio, compare its base nourishment, and identify the dish your cooking tool will produce.</p>
+        </div>
+        <div class="cooking-data-badge">
+          <span><strong id="materialCount">0</strong> cooking ingredients</span>
+          <small><strong id="templateCount">0</strong> ratios · <strong id="testedRecipeCount">0</strong> tested recipes</small>
+        </div>
+      </header>
+
+      <nav class="cooking-view-tabs" aria-label="Cooking calculator sections">
+        <button class="is-active" type="button" data-cooking-view="quick"><i data-lucide="chef-hat"></i><span>Cook a recipe</span></button>
+        <button type="button" data-cooking-view="recipes"><i data-lucide="search"></i><span>Find recipes</span></button>
+        <button type="button" data-cooking-view="ingredients"><i data-lucide="wheat"></i><span>Ingredient stats</span></button>
+      </nav>
+
+      <section class="cooking-workbench cooking-view-panel is-active" data-cooking-panel="quick" aria-labelledby="recipeHeading">
+        <div class="cooking-controls">
+          <div class="cooking-heading">
+            <div>
+              <span class="eyebrow">Recipe setup</span>
+              <h2 id="recipeHeading">Choose a recipe</h2>
+            </div>
+            <button id="clearRecipeBtn" class="quiet-command" type="button">
+              <i data-lucide="rotate-ccw" aria-hidden="true"></i>
+              Reset
+            </button>
+          </div>
+
+          <div class="cooking-setup-grid">
+            <label class="cooking-field">
+              <span>Cooking tool</span>
+              <select id="toolSelect"></select>
+            </label>
+            <label class="cooking-field">
+              <span>Tested recipe</span>
+              <select id="presetSelect"></select>
+            </label>
+            <button id="loadPresetBtn" class="primary-command" type="button">
+              <i data-lucide="chef-hat" aria-hidden="true"></i>
+              Load recipe
+            </button>
+          </div>
+
+          <div class="ingredient-list-heading">
+            <span>Ingredients</span>
+            <small id="ingredientCount">0 selected</small>
+          </div>
+          <div id="ingredientRows" class="ingredient-rows"></div>
+
+          <button id="addIngredientBtn" class="add-ingredient" type="button">
+            <i data-lucide="plus" aria-hidden="true"></i>
+            Add ingredient
+          </button>
+        </div>
+
+        <aside class="cooking-results" aria-live="polite">
+          <div class="dish-result-heading">
+            <div>
+              <span class="eyebrow">Dish identity</span>
+              <h2 id="dishName">Bread</h2>
+            </div>
+            <span id="ratioBadge" class="ratio-badge">Ratio matched</span>
+          </div>
+          <p id="dishSummary" class="dish-summary"></p>
+
+          <dl class="cooking-summary-metrics">
+            <div>
+              <dt>Total mixture</dt>
+              <dd><strong id="totalAmount">0</strong><span> units</span></dd>
+            </div>
+            <div>
+              <dt>Known profile</dt>
+              <dd><strong id="knownAmount">0</strong><span> units</span></dd>
+            </div>
+            <div>
+              <dt>Ingredients</dt>
+              <dd><strong id="resultIngredientCount">0</strong><span> kinds</span></dd>
+            </div>
+          </dl>
+
+          <div class="nourishment-heading">
+            <span id="profileHeading">Weighted base profile</span>
+            <small id="profileContext">Before hidden tool, skill, and lore modifiers</small>
+          </div>
+          <div id="primaryStats" class="primary-stat-grid"></div>
+          <div id="reserveBalance" class="reserve-balance"></div>
+
+          <div class="secondary-stat-heading">
+            <span>Secondary effects</span>
+          </div>
+          <div id="secondaryStats" class="secondary-stat-grid"></div>
+          <div id="recipeWarnings" class="recipe-warnings"></div>
+        </aside>
+      </section>
+
+      <section class="recipe-reference cooking-view-panel" data-cooking-panel="recipes" aria-labelledby="reverseHeading">
+        <div class="recipe-reference-heading">
+          <div>
+            <p class="kicker">Ingredient-first search</p>
+            <h2 id="reverseHeading">Reverse Recipe Finder</h2>
+            <p>Select what you have, then find every tested dish that uses it.</p>
+          </div>
+          <button id="clearReverseBtn" class="quiet-command" type="button">
+            <i data-lucide="eraser" aria-hidden="true"></i>
+            Clear ingredients
+          </button>
+        </div>
+
+        <div class="reverse-picker">
+          <label class="reverse-search-field">
+            <span>Ingredient</span>
+            <div>
+              <input id="reverseIngredientInput" list="reverseIngredientOptions" type="search" placeholder="Type an ingredient name..." autocomplete="off" />
+              <datalist id="reverseIngredientOptions"></datalist>
+              <button id="addReverseIngredientBtn" class="primary-command" type="button">
+                <i data-lucide="plus" aria-hidden="true"></i>
+                Add
+              </button>
+            </div>
+          </label>
+          <div id="reverseIngredientChips" class="reverse-ingredient-chips" aria-live="polite"></div>
+        </div>
+
+        <div class="recipe-reference-filters">
+          <label class="library-search recipe-search">
+            <i data-lucide="search" aria-hidden="true"></i>
+            <input id="recipeSearch" type="search" placeholder="Search dish, product, or ingredient..." />
+          </label>
+          <select id="recipeMatchMode" aria-label="Ingredient match mode">
+            <option value="all">Uses every selected ingredient</option>
+            <option value="craftable">Craftable using only selected ingredients</option>
+            <option value="any">Uses any selected ingredient</option>
+          </select>
+          <select id="recipeToolFilter" aria-label="Filter recipe tool"></select>
+          <select id="recipeTierFilter" aria-label="Filter recipe tier"></select>
+          <select id="recipeSort" aria-label="Sort tested recipes">
+            <option value="quality">Best quality</option>
+            <option value="stamina">Highest stamina</option>
+            <option value="health">Highest health</option>
+            <option value="mana">Highest mana</option>
+            <option value="name">Ingredient name</option>
+          </select>
+        </div>
+
+        <div class="recipe-results-heading">
+          <span id="recipeResultCount">0 tested recipes</span>
+          <small>Exact recorded outcomes; your skills and lores can change in-game results.</small>
+        </div>
+
+        <div class="recipe-table-shell">
+          <table class="recipe-table">
+            <thead>
+              <tr>
+                <th>Ingredients</th>
+                <th>Tool</th>
+                <th>Product</th>
+                <th>Quality</th>
+                <th>Health</th>
+                <th>Stamina</th>
+                <th>Mana</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="recipeTableBody"></tbody>
+          </table>
+        </div>
+        <p id="recipeTableEmpty" class="cooking-empty" hidden>No tested recipes match those ingredients and filters.</p>
+        <div class="recipe-pager">
+          <button id="recipePrevBtn" class="quiet-command" type="button" aria-label="Previous recipe page">
+            <i data-lucide="chevron-left" aria-hidden="true"></i>
+          </button>
+          <span id="recipePageLabel">Page 1 of 1</span>
+          <button id="recipeNextBtn" class="quiet-command" type="button" aria-label="Next recipe page">
+            <i data-lucide="chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="ingredient-library cooking-view-panel" data-cooking-panel="ingredients" aria-labelledby="libraryHeading">
+        <div class="ingredient-library-heading">
+          <div>
+            <p class="kicker">Ingredient index</p>
+            <h2 id="libraryHeading">Compare cooking materials</h2>
+          </div>
+          <div class="ingredient-library-filters">
+            <label class="library-search">
+              <i data-lucide="search" aria-hidden="true"></i>
+              <input id="materialSearch" type="search" placeholder="Search ingredients..." />
+            </label>
+            <select id="materialTypeFilter" aria-label="Filter ingredient type"></select>
+            <select id="materialSort" aria-label="Sort ingredients">
+              <option value="stamina">Highest stamina</option>
+              <option value="health">Highest health</option>
+              <option value="mana">Highest mana</option>
+              <option value="healing">Highest direct healing</option>
+              <option value="safe">Lowest food poison</option>
+              <option value="name">Name</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="ingredient-table-shell">
+          <table class="ingredient-table">
+            <thead>
+              <tr>
+                <th>Ingredient</th>
+                <th>Type</th>
+                <th>Health</th>
+                <th>Stamina</th>
+                <th>Mana</th>
+                <th>Food poison</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="materialTableBody"></tbody>
+          </table>
+        </div>
+        <p id="materialTableEmpty" class="cooking-empty" hidden>No ingredients match that search.</p>
+      </section>
+
+      <footer class="site-footer cooking-footer">
+        <span></span>
+        <span id="dataStamp"></span>
+      </footer>
+    </main>
+
+    <script src="/data.js"></script>
+    <script src="/cooking-reference-data.js?v=1"></script>
+    <script src="/assets/vendor/lucide.min.js"></script>
+    <script src="/cooking.js?v=4"></script>
+    <script src="/site-shell.js?v=22"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ancient ruins">
+  <g stroke="#282b2d" stroke-width="3" stroke-linejoin="round">
+    <path fill="#92938e" d="M7 55V25h13v30Zm37 0V19h13v36Z"/>
+    <path fill="#b8b8b1" d="M4 22h19v7H4Zm37-6h19v7H41Z"/>
+    <path fill="#747874" d="M10 30h7v25h-7Zm37-6h7v31h-7Z"/>
+    <path fill="#a8a79f" d="M17 17 29 8l10 9-4 7H20Z"/>
+    <path fill="none" stroke="#b8b8b1" stroke-width="5" d="M17 22q15-13 30 0"/>
+    <path fill="#5c665c" d="M3 55h58v6H3Z"/>
+    <path fill="#657864" stroke="none" d="m6 55 11-9 8 9m16 0 8-8 10 8Z"/>
+  </g>
+</svg>

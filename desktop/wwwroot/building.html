@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0d0c" />
+    <title>Building Calculator | Mortal Nexus</title>
+    <meta
+      name="description"
+      content="Plan Mortal Online II houses, guild structures, defenses, and siege equipment with cumulative resource totals."
+    />
+    <link rel="icon" href="/assets/mortal-nexus-app-icon-v2.png" type="image/png" />
+    <link rel="stylesheet" href="/styles.css?v=4" />
+    <link rel="stylesheet" href="/building.css?v=2" />
+    <link rel="stylesheet" href="/site-shell.css?v=24" />
+  </head>
+  <body class="building-page">
+    <header class="masthead building-masthead">
+      <div class="masthead-main building-masthead-main">
+        <a class="brand" href="/" aria-label="Mortal Nexus home">
+          <img src="/assets/mortal-nexus-app-icon-v2.png" alt="" width="40" height="40" />
+          <span class="brand-copy">
+            <strong>Mortal Nexus</strong>
+            <small>Mortal Online II Reference</small>
+          </span>
+        </a>
+
+        <nav class="building-site-nav" aria-label="Site navigation">
+          <a class="text-button" href="/">Reference</a>
+          <a class="text-button" href="/crafting">Crafting</a>
+          <a class="text-button" href="/extraction">Extraction</a>
+          <a class="text-button" href="/refining">Refining</a>
+          <a class="text-button" href="/butchery">Butchery</a>
+          <a class="text-button" href="/alchemy">Alchemy</a>
+          <a class="text-button" href="/cooking">Cooking</a>
+          <a class="text-button" href="/reverse">Reverse</a>
+          <a class="text-button active" href="/building" aria-current="page">Building</a>
+          <a class="text-button" href="/creatures">Creature Codex</a>
+          <a class="text-button" href="/map">Live map</a>
+          <a class="text-button donate-button" href="https://www.paypal.com/donate/?hosted_button_id=677CRL426BE9Q" target="_blank" rel="noreferrer">Donate</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="building-main">
+      <header class="building-intro">
+        <div>
+          <p class="kicker">Construction planner</p>
+          <h1>Building Calculator</h1>
+          <p>Combine structures, upgrades, and quantities into one exact material plan.</p>
+        </div>
+        <div class="building-data-badge">
+          <span><strong id="structureCount">0</strong> structures</span>
+          <small><strong id="stageCount">0</strong> documented stages</small>
+        </div>
+      </header>
+
+      <section class="building-planner" aria-labelledby="plannerHeading">
+        <div class="building-controls">
+          <div class="building-section-heading">
+            <div>
+              <span class="eyebrow">Add to plan</span>
+              <h2 id="plannerHeading">Choose a structure</h2>
+            </div>
+          </div>
+
+          <div class="building-field-grid">
+            <label class="building-field">
+              <span>Category</span>
+              <select id="categorySelect"></select>
+            </label>
+            <label class="building-field">
+              <span>Structure</span>
+              <select id="structureSelect"></select>
+            </label>
+            <label class="building-field">
+              <span>Target stage</span>
+              <select id="stageSelect"></select>
+            </label>
+            <label class="building-field">
+              <span>Quantity</span>
+              <input id="quantityInput" type="number" min="1" max="999" step="1" inputmode="numeric" value="1" />
+            </label>
+          </div>
+
+          <div class="cost-mode-row">
+            <span>Cost basis</span>
+            <div id="costModeControl" class="cost-mode-control" aria-label="Cost basis">
+              <button class="active" type="button" data-mode="total" aria-pressed="true">From scratch</button>
+              <button type="button" data-mode="stage" aria-pressed="false">Upgrade stage only</button>
+            </div>
+          </div>
+
+          <div id="selectionPreview" class="selection-preview" aria-live="polite"></div>
+
+          <div class="selection-actions">
+            <div id="selectionDetails" class="selection-details"></div>
+            <button id="addStructureBtn" class="building-primary-button" type="button">
+              <i data-lucide="plus" aria-hidden="true"></i>
+              Add to plan
+            </button>
+          </div>
+        </div>
+
+        <div class="build-plan">
+          <div class="building-section-heading">
+            <div>
+              <span class="eyebrow">Current plan</span>
+              <h2>Your build list</h2>
+            </div>
+            <button id="clearPlanBtn" class="building-icon-button" type="button" title="Clear plan" aria-label="Clear build plan">
+              <i data-lucide="trash-2" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div id="planRows" class="plan-rows"></div>
+          <div id="emptyPlan" class="empty-plan">
+            <i data-lucide="construction" aria-hidden="true"></i>
+            <strong>No structures added</strong>
+            <span>Your material totals will appear here.</span>
+          </div>
+
+          <div class="plan-total-heading">
+            <span>Total resources</span>
+            <small id="planCount">0 structures</small>
+          </div>
+          <dl id="planTotals" class="plan-totals"></dl>
+        </div>
+      </section>
+
+      <section class="building-catalog" aria-labelledby="catalogHeading">
+        <div class="catalog-heading">
+          <div>
+            <p class="kicker">Construction catalog</p>
+            <h2 id="catalogHeading">Every documented stage</h2>
+          </div>
+          <div class="catalog-filters">
+            <label class="catalog-search">
+              <i data-lucide="search" aria-hidden="true"></i>
+              <input id="catalogSearch" type="search" placeholder="Search structures or notes..." />
+            </label>
+            <select id="catalogCategory" aria-label="Filter catalog by category"></select>
+          </div>
+        </div>
+
+        <div class="building-table-shell">
+          <table class="building-table">
+            <thead>
+              <tr>
+                <th>Structure</th>
+                <th>Stage</th>
+                <th>Type</th>
+                <th>Direct stage cost</th>
+                <th>Health</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="catalogBody"></tbody>
+          </table>
+        </div>
+        <p id="catalogEmpty" class="catalog-empty" hidden>No structures match that search.</p>
+      </section>
+
+      <footer class="site-footer building-footer">
+        <span>Construction costs come from the MO2 INFO workbook. Tier totals add every required stage.</span>
+        <span id="dataStamp"></span>
+      </footer>
+    </main>
+
+    <script src="/data.js"></script>
+    <script src="/assets/vendor/lucide.min.js"></script>
+    <script src="/building.js?v=2"></script>
+    <script src="/site-shell.js?v=22"></script>
+  </body>
+</html>

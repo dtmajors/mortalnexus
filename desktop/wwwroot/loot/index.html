@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Loot Database | Mortal Nexus</title>
+  <link rel="icon" href="/assets/mortal-nexus-app-icon-v2.png" type="image/png">
+  <link rel="stylesheet" href="/loot/styles.css">
+  <link rel="stylesheet" href="/site-shell.css?v=24">
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand" href="/loot" aria-label="Mortal Nexus Loot Database">
+      <img class="brand-mark" src="/assets/mortal-nexus-app-icon-v2.png" alt="">
+      <span>
+        <strong>Loot Database</strong>
+        <small>Mortal Nexus · decoded Content.db</small>
+      </span>
+    </a>
+
+    <label class="global-search">
+      <span class="search-icon" aria-hidden="true"></span>
+      <input id="searchInput" type="search" placeholder="Search a mob or an item drop" autocomplete="off">
+      <kbd>/</kbd>
+    </label>
+
+    <div class="header-actions">
+      <a class="command-button nexus-button" href="/">Back to Nexus</a>
+      <button id="exportButton" class="command-button" type="button">Export current view</button>
+    </div>
+  </header>
+
+  <nav id="modeTabs" class="mode-tabs" aria-label="Loot categories">
+    <button class="mode-tab active" data-mode="mob" type="button">Creatures <span data-count="mob">0</span></button>
+    <button class="mode-tab" data-mode="object" type="button">Containers <span data-count="object">0</span></button>
+    <button class="mode-tab" data-mode="resource" type="button">Resources <span data-count="resource">0</span></button>
+    <button class="mode-tab" data-mode="raw" type="button" hidden>Raw evidence <span data-count="raw">0</span></button>
+    <button class="mode-tab warning" data-mode="unresolved" type="button" hidden>Unresolved <span data-count="unresolved">0</span></button>
+  </nav>
+
+  <section class="evidence-strip" aria-label="How to read this data" hidden>
+    <div><span class="evidence-dot exact"></span><strong>Exact roll</strong><span>Recorded directly on this definition</span></div>
+    <div><span class="evidence-dot linked"></span><strong>Spawner referenced</strong><span>A spawner definition points to it; placement is not proven</span></div>
+    <div><span class="evidence-dot caution"></span><strong>Content only</strong><span>Defined in the catalog, but no spawner reference was found</span></div>
+  </section>
+
+  <main class="workspace">
+    <aside class="source-pane">
+      <div class="source-controls">
+        <div class="pane-heading">
+          <div>
+            <p id="sourceEyebrow">Creature definitions</p>
+            <h1 id="sourceHeading">Mob profiles</h1>
+          </div>
+          <strong id="sourceCount">0</strong>
+        </div>
+
+        <label id="evidenceFilterLabel" hidden>
+          <span>Spawner evidence</span>
+          <select id="evidenceFilter">
+            <option value="all">All definitions</option>
+            <option value="linked">Spawner referenced</option>
+            <option value="content">Content only</option>
+          </select>
+        </label>
+
+        <label id="regionFilterLabel">
+          <span>Region</span>
+          <select id="regionFilter">
+            <option value="all">All regions</option>
+            <option value="sarducca">Sarducca</option>
+            <option value="myrland">Myrland</option>
+            <option value="haven">Haven</option>
+            <option value="shared">Shared / unspecified</option>
+          </select>
+        </label>
+
+        <label id="testFilterLabel" class="check-row" hidden>
+          <input id="hideTestDefinitions" type="checkbox" checked>
+          <span>Hide obvious test and developer records</span>
+        </label>
+      </div>
+
+      <div id="sourceList" class="source-list" role="listbox" aria-label="Loot sources"></div>
+    </aside>
+
+    <section id="profilePane" class="profile-pane" aria-live="polite">
+      <div id="emptyState" class="empty-state">
+        <strong>Select a mob</strong>
+            <p>Choose a creature or container to see its known drops.</p>
+      </div>
+
+      <div id="profileContent" hidden>
+        <header class="profile-header">
+          <div>
+            <p id="profileEyebrow">Mob loot profile</p>
+            <h2 id="profileTitle"></h2>
+            <p id="profileSubtitle"></p>
+          </div>
+          <div id="profileBadges" class="profile-badges"></div>
+        </header>
+
+        <section id="profileExplanation" class="explanation" hidden></section>
+        <div id="profileTabs" class="profile-tabs" aria-label="Loot profiles"></div>
+
+        <section class="definition-band" hidden>
+          <div>
+            <span>Definitions using this table</span>
+            <strong id="definitionCount">0</strong>
+          </div>
+          <div id="definitionNames" class="definition-names"></div>
+        </section>
+
+        <section id="combatSection" class="combat-section" hidden>
+          <div class="section-heading">
+            <div>
+              <p>Creature stats</p>
+              <h3>Combat profile</h3>
+            </div>
+            <span class="combat-source" hidden></span>
+          </div>
+          <div id="combatProfiles" class="combat-profiles"></div>
+          <p class="combat-note" hidden></p>
+        </section>
+
+        <section class="drop-section">
+          <div class="section-heading">
+            <div>
+              <p>Loot table</p>
+              <h3 id="dropHeading">Drops</h3>
+            </div>
+            <div id="dropSummary" class="drop-summary"></div>
+          </div>
+
+          <div class="drop-table-shell">
+            <table class="drop-table">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Chance</th>
+                  <th>Quantity</th>
+                </tr>
+              </thead>
+              <tbody id="dropRows"></tbody>
+            </table>
+          </div>
+          <p class="roll-note" hidden></p>
+        </section>
+
+        <details class="technical-details" hidden>
+          <summary>Technical evidence</summary>
+          <dl id="technicalList"></dl>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <span id="sourceTimestamp"></span>
+    <span>Percentages describe the current decoded Content.db, not observed community estimates.</span>
+    <strong>By Marshal Law</strong>
+  </footer>
+
+  <dialog id="detailsDialog">
+    <div class="dialog-header">
+      <div>
+        <p id="detailEyebrow"></p>
+        <h2 id="detailTitle">Evidence details</h2>
+      </div>
+      <button id="closeDialog" class="icon-button" type="button" title="Close" aria-label="Close">X</button>
+    </div>
+    <dl id="detailList"></dl>
+  </dialog>
+
+  <script src="/loot/data.js"></script>
+  <script src="/loot/app.js"></script>
+    <script src="/site-shell.js?v=22"></script>
+</body>
+</html>

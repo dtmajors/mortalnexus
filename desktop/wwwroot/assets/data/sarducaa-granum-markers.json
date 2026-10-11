@@ -1,0 +1,2435 @@
+{
+  "format": "mortal-nexus-sarducaa-granum-catalog",
+  "version": 1,
+  "generatedAt": "2026-09-11T12:12:52.076Z",
+  "source": "sarducaa-game-world-markers.local.pre-spongewood-production.json",
+  "counts": {
+    "sourceSummaries": 169,
+    "condensedMarkers": 99,
+    "mappedRockSurfaces": 26656
+  },
+  "markers": [
+    {
+      "id": "archive-granum-02ac670a5fc4c4c03083a189",
+      "label": "Granum - Bone Pit",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed multi-node Granum location covering 1,423 mapped rock surfaces across 15 dungeon sections.",
+      "x": 708.295,
+      "y": 2338.15,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Dungeons\\Jungle\\Jungle_Dungeon_BossRoom.umap",
+        "Dungeons\\Jungle\\Jungle_Dungeon_Entrance_01_Exterior.umap",
+        "Dungeons\\Jungle\\Jungle_Dungeon_Entrance_02_Exterior.umap",
+        "Dungeons\\Jungle\\Jungle_Dungeon_Entrance_03_Exterior.umap",
+        "Dungeons\\Jungle\\Jungle_Dungeon_Level01_Section01.umap",
+        "Dungeons\\Jungle\\Jungle_Dungeon_Level01_Section02.umap",
+        "Dungeons\\Jungle\\Jungle_Dungeon_Level01_Section03.umap",
+        "Dungeons\\Jungle\\Jungle_Dungeon_Level01_Section04.umap",
+        "Dungeons\\Jungle\\Jungle_Dungeon_Level01_Section05.umap",
+        "Dungeons\\Jungle\\Jungle_Dungeon_Level01_Section06.umap",
+        "Dungeons\\Jungle\\Jungle_Dungeon_Level01_Section07.umap",
+        "Dungeons\\Jungle\\Jungle_Dungeon_Level02_Section01.umap",
+        "Dungeons\\Jungle\\Jungle_Dungeon_Level02_Section02.umap",
+        "Dungeons\\Jungle\\Jungle_Dungeon_Level02_Section03.umap",
+        "Dungeons\\Jungle\\Jungle_Dungeon_Level02_Section04.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-02b9b5247320d7f5",
+        "pak-mining-granum-7663d07caba708e0",
+        "pak-mining-granum-57786d358632d518",
+        "pak-mining-granum-f108f87f889c2dcc",
+        "pak-mining-granum-3b80a32e0aaf197d",
+        "pak-mining-granum-47c2122518a4287a",
+        "pak-mining-granum-320b92bfaf3a9650",
+        "pak-mining-granum-7c26ab44c5efedce",
+        "pak-mining-granum-8e95fc303617fbef",
+        "pak-mining-granum-bb2e294a0bd9de72",
+        "pak-mining-granum-23861f318e7d036c",
+        "pak-mining-granum-a2466ce3beabed81",
+        "pak-mining-granum-089a78c92410a636",
+        "pak-mining-granum-1156da2c09871198",
+        "pak-mining-granum-7d40443e8603e2e9"
+      ],
+      "nodeCount": 1423,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 15,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-39783fec85b8a7ef97ba71da",
+      "label": "Granum - Halls of Kepher",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed multi-node Granum location covering 248 mapped rock surfaces across 15 dungeon sections.",
+      "x": 1791.678,
+      "y": 1770.738,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_BossRoom.umap",
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Entrance_01.umap",
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Entrance_02.umap",
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Entrance_03.umap",
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Level_01_Section_02.umap",
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Level_01_Section_03.umap",
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Level_01_Section_04.umap",
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Level_01_Section_05.umap",
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Level_01_Section_06.umap",
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Level_01_Section_07.umap",
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Level_01_Section_08.umap",
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Level_02_Section_01.umap",
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Level_02_Section_02.umap",
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Level_02_Section_05.umap",
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Level_02_Section_06.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-7df6c9eb49760679",
+        "pak-mining-granum-96138c4e27aa8455",
+        "pak-mining-granum-2a5cd796bdd39311",
+        "pak-mining-granum-a8f769bd878e6121",
+        "pak-mining-granum-078d6ed95cda7c45",
+        "pak-mining-granum-23ff50c8b1c18b2f",
+        "pak-mining-granum-ac893760887cf407",
+        "pak-mining-granum-bb69394950f419e4",
+        "pak-mining-granum-8e3cc111ba130470",
+        "pak-mining-granum-811da00d19c9dd53",
+        "pak-mining-granum-11da60987ff79a66",
+        "pak-mining-granum-0fe7f2a7d57414ea",
+        "pak-mining-granum-ee4793289756198a",
+        "pak-mining-granum-dcc87b69390ad502",
+        "pak-mining-granum-480f44cc7847cfac"
+      ],
+      "nodeCount": 248,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 15,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-dfdf41caf283eecbf0de2945",
+      "label": "Granum - Kam",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 28 mapped rock surfaces.",
+      "x": 3108.0035,
+      "y": 555.8129,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Cities\\Kam\\City_Kam.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-8538d2f39fa2b8e4"
+      ],
+      "nodeCount": 28,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-f335b4f12b42e59340fed5f0",
+      "label": "Granum - Mine 1",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1,319 mapped rock surfaces. Includes 3 high-yield surfaces.",
+      "x": 3063.27,
+      "y": 2712.705,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Mines\\Mine_01.umap",
+        "Mines\\Mine_01_Entrance.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-36fcd8b44d78d429"
+      ],
+      "nodeCount": 1319,
+      "highYieldNodeCount": 3,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-0159a2fcbafd0cb096a40db7",
+      "label": "Granum - Mine 2",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1,013 mapped rock surfaces. Includes 12 high-yield surfaces.",
+      "x": 1984.345,
+      "y": 2360.345,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Mines\\Mine_02.umap",
+        "Mines\\Mine_02_Entrance.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-1514bb424702a218"
+      ],
+      "nodeCount": 1013,
+      "highYieldNodeCount": 12,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-e3b686372002271331d39c8d",
+      "label": "Granum - Mine 3",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1,309 mapped rock surfaces. Includes 10 high-yield surfaces.",
+      "x": 1544.185,
+      "y": 873.625,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Mines\\Mine_03.umap",
+        "Mines\\Mine_03_Entrance.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-b5fdb4bab84b516b"
+      ],
+      "nodeCount": 1309,
+      "highYieldNodeCount": 10,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-9b827f133442cf9756eea131",
+      "label": "Granum - Mine 4",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 885 mapped rock surfaces. Includes 4 high-yield surfaces.",
+      "x": 364.555,
+      "y": 1588.395,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Mines\\Mine_04.umap",
+        "Mines\\Mine_04_Entrance.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-7936c9e56aaac2a2"
+      ],
+      "nodeCount": 885,
+      "highYieldNodeCount": 4,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-4291729a27037d3f50bda2e5",
+      "label": "Granum - Mine 5",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 609 mapped rock surfaces. Includes 131 high-yield surfaces.",
+      "x": 1552.84,
+      "y": 2294.03,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Mines\\Mine_05.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-33d7425693e0001d"
+      ],
+      "nodeCount": 609,
+      "highYieldNodeCount": 131,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-5aa88e4060a8d812d5e72c30",
+      "label": "Granum - Mine 6",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 478 mapped rock surfaces. Includes 75 high-yield surfaces.",
+      "x": 2336.23,
+      "y": 2670.33,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Mines\\Mine_06.umap",
+        "Mines\\Mine_06_Entrance.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-c64268586366e0d2"
+      ],
+      "nodeCount": 478,
+      "highYieldNodeCount": 75,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-496c8f9d714ce8cdf572ba94",
+      "label": "Granum - Mine 8",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 703 mapped rock surfaces. Includes 48 high-yield surfaces.",
+      "x": 1614.66,
+      "y": 1862.025,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Mines\\Mine_08.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-5dbe8f518a11c252"
+      ],
+      "nodeCount": 703,
+      "highYieldNodeCount": 48,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-7d05f02aaf84923f195d52e2",
+      "label": "Granum - Mine 9",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 488 mapped rock surfaces. Includes 78 high-yield surfaces.",
+      "x": 1086.09,
+      "y": 2086.38,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Mines\\Mine_09.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-5fed0f020996d8be"
+      ],
+      "nodeCount": 488,
+      "highYieldNodeCount": 78,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-b0101869dffe51e8a31b58e8",
+      "label": "Granum - Ratzar Cave 1",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed multi-node Granum location covering 1,134 mapped rock surfaces across 2 mapped clusters.",
+      "x": 3343.42,
+      "y": 927.43,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Caves\\RatzarCaves\\RatzarCave_01.umap",
+        "Caves\\RatzarCaves\\RatzarCave_01_Entrance.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-20661437afac25d1",
+        "pak-mining-granum-963971e5ade8b600"
+      ],
+      "nodeCount": 1134,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 2,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-58d07384e369549069107dfb",
+      "label": "Granum - Ratzar Cave 2",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed multi-node Granum location covering 801 mapped rock surfaces across 2 mapped clusters.",
+      "x": 959.46,
+      "y": 1014.14,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Caves\\RatzarCaves\\RatzarCave_02.umap",
+        "Caves\\RatzarCaves\\RatzarCave_02_Entrance.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-d4c029c38d1cdde3",
+        "pak-mining-granum-7d3f17ecd38e749b"
+      ],
+      "nodeCount": 801,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 2,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-88dc29257ed9b8ca5b7b7150",
+      "label": "Granum - Ratzar Cave 3",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed multi-node Granum location covering 1,203 mapped rock surfaces across 2 mapped clusters.",
+      "x": 1324.82,
+      "y": 1422.67,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Caves\\RatzarCaves\\RatzarCave_03.umap",
+        "Caves\\RatzarCaves\\RatzarCave_03_Entrance.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-a70a47ba20b53309",
+        "pak-mining-granum-c13b7032971d67ab"
+      ],
+      "nodeCount": 1203,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 2,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-c435dc13cca1248e7567791b",
+      "label": "Granum - Ratzar Cave 4",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed multi-node Granum location covering 1,127 mapped rock surfaces across 2 mapped clusters.",
+      "x": 1606.3,
+      "y": 841.54,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Caves\\RatzarCaves\\RatzarCave_04.umap",
+        "Caves\\RatzarCaves\\RatzarCave_04_Entrance.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-acad05cca4e9a846",
+        "pak-mining-granum-6dffeac4fbbe7400"
+      ],
+      "nodeCount": 1127,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 2,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-ab2d02afb0186d739939ecd0",
+      "label": "Granum - Ratzar Cave 5",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed multi-node Granum location covering 1,148 mapped rock surfaces across 2 mapped clusters.",
+      "x": 1624.77,
+      "y": 803.03,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Caves\\RatzarCaves\\RatzarCave_05.umap",
+        "Caves\\RatzarCaves\\RatzarCave_05_Entrance.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-45e1d73180522385",
+        "pak-mining-granum-2eae0d877d688620"
+      ],
+      "nodeCount": 1148,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 2,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-47ad338ebc597d13a7e9286a",
+      "label": "Granum - Ratzar Cave 7",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed multi-node Granum location covering 499 mapped rock surfaces across 2 mapped clusters.",
+      "x": 1226.02,
+      "y": 1283.76,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Caves\\RatzarCaves\\RatzarCave_07.umap",
+        "Caves\\RatzarCaves\\RatzarCave_07_Entrance.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-8be3bd18d5f663ef",
+        "pak-mining-granum-95cf4a401120520c"
+      ],
+      "nodeCount": 499,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 2,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-5303af2b3c8cb9e3c95339fb",
+      "label": "Granum - Spider Cave 1",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed multi-node Granum location covering 1,678 mapped rock surfaces across 2 mapped clusters.",
+      "x": 404.44,
+      "y": 2883.03,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Caves\\SpiderCaves\\SpiderCave_01.umap",
+        "Caves\\SpiderCaves\\SpiderCave_01_Entrance.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-2f6b4c21c51d13ab",
+        "pak-mining-granum-4c80eaf5b513d49e"
+      ],
+      "nodeCount": 1678,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 2,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-64c73fc8dff66857d28bda18",
+      "label": "Granum - Spider Cave 2",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed multi-node Granum location covering 944 mapped rock surfaces across 2 mapped clusters.",
+      "x": 864.9,
+      "y": 2156.02,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Caves\\SpiderCaves\\SpiderCave_02.umap",
+        "Caves\\SpiderCaves\\SpiderCave_02_Entrance.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-a84e771aa0425b1e",
+        "pak-mining-granum-70fa1ef531cd9367"
+      ],
+      "nodeCount": 944,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 2,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-def34e7de8d5d2dd668e3fb3",
+      "label": "Granum - Spider Cave 3",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed multi-node Granum location covering 936 mapped rock surfaces across 2 mapped clusters.",
+      "x": 1188.58,
+      "y": 2967.38,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Caves\\SpiderCaves\\SpiderCave_03.umap",
+        "Caves\\SpiderCaves\\SpiderCave_03_Entrance.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-b5453728463552a1",
+        "pak-mining-granum-565374ef272afbc9"
+      ],
+      "nodeCount": 936,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 2,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-42be8875892b2546bc159e06",
+      "label": "Granum - Spider Cave 4",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed multi-node Granum location covering 866 mapped rock surfaces across 2 mapped clusters.",
+      "x": 1664.95,
+      "y": 2991.45,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Caves\\SpiderCaves\\SpiderCave_04.umap",
+        "Caves\\SpiderCaves\\SpiderCave_04_Entrance.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-22141a742e815884",
+        "pak-mining-granum-4686001a59013e40"
+      ],
+      "nodeCount": 866,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 2,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-cf7e476e679e0d029d089e2d",
+      "label": "Granum - Spider Cave 5",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed multi-node Granum location covering 349 mapped rock surfaces across 2 mapped clusters.",
+      "x": 1782.17,
+      "y": 2691.64,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Caves\\SpiderCaves\\SpiderCave_05.umap",
+        "Caves\\SpiderCaves\\SpiderCave_05_Entrance.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-acccf7634ffc34a8",
+        "pak-mining-granum-6bf2e6f6fd408a93"
+      ],
+      "nodeCount": 349,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 2,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-148a413abe76d17d117e8c41",
+      "label": "Granum - Spider Cave 6",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed multi-node Granum location covering 1,612 mapped rock surfaces across 2 mapped clusters.",
+      "x": 2754.58,
+      "y": 3150.29,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Caves\\SpiderCaves\\SpiderCave_06.umap",
+        "Caves\\SpiderCaves\\SpiderCave_06_Entrance.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-a6f85f23c607c0c9",
+        "pak-mining-granum-2dc0154071d7a04c"
+      ],
+      "nodeCount": 1612,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 2,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-12e1208f93c1715eb87fe42c",
+      "label": "Granum - Tuz Salt Mines",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed multi-node Granum location covering 5,285 mapped rock surfaces across 25 dungeon sections. Includes 158 high-yield surfaces.",
+      "x": 1108.0017,
+      "y": 1232.095,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Entrance_01_Exterior.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Entrance_02_Exterior.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Entrance_03_Exterior.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_01_Entrance_01.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_01_Entrance_02.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_01_Entrance_03.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_01_Section01.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_01_Section02.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_01_Section04.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_01_Section05.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_01_Section07.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_01_Section08.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_01_Section09.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_01_Section12.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_02_Section01.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_02_Section02.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_02_Section03.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_02_Section04.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_02_Section05.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_02_Section06.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_02_Section08.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_02_Section09.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_03_Boss.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_03_Section01.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_03_Section02.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-6550abafbec83a40",
+        "pak-mining-granum-a0cf0e78cf9382c7",
+        "pak-mining-granum-981bb63898fb4ae7",
+        "pak-mining-granum-ffacf49fa40f66db",
+        "pak-mining-granum-8c657dc95fb87d28",
+        "pak-mining-granum-79fa3b7af3a007dd",
+        "pak-mining-granum-cd1e28d1829f7a35",
+        "pak-mining-granum-caf8e86d4df1b4a2",
+        "pak-mining-granum-fe112ae0d59065c9",
+        "pak-mining-granum-3baa068fbc62dab2",
+        "pak-mining-granum-293ca26aeff93bcb",
+        "pak-mining-granum-bf546926a65285c9",
+        "pak-mining-granum-d5c9221b32ac1f5a",
+        "pak-mining-granum-b89b2b51122323c9",
+        "pak-mining-granum-885aa3e23a52d177",
+        "pak-mining-granum-f4bd80c1ddfae6b7",
+        "pak-mining-granum-a84f56b366302b5d",
+        "pak-mining-granum-b8a5899ee9d56e20",
+        "pak-mining-granum-387b609bbda7fb08",
+        "pak-mining-granum-a211b6239ceb5b20",
+        "pak-mining-granum-ebe0f5b52e8cda2e",
+        "pak-mining-granum-cc48e54cdfd319d4",
+        "pak-mining-granum-631986892b251991",
+        "pak-mining-granum-505a935b93d47c8b",
+        "pak-mining-granum-6ee9a3a569d7a6f4"
+      ],
+      "nodeCount": 5285,
+      "highYieldNodeCount": 158,
+      "condensedLocationCount": 25,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-245fff07b595f1c254af37d3",
+      "label": "Granum - Yel Keskar Hideout",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed multi-node Granum location covering 345 mapped rock surfaces across 7 dungeon sections.",
+      "x": 2460.1483,
+      "y": 3354.645,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Dungeons\\YelKeskarHideout\\YelKeskarHideout_Dungeon_BossRoom.umap",
+        "Dungeons\\YelKeskarHideout\\YelKeskarHideout_Dungeon_Entrance_01.umap",
+        "Dungeons\\YelKeskarHideout\\YelKeskarHideout_Dungeon_Entrance_02.umap",
+        "Dungeons\\YelKeskarHideout\\YelKeskarHideout_Dungeon_Level_01_Section_02.umap",
+        "Dungeons\\YelKeskarHideout\\YelKeskarHideout_Dungeon_Level_01_Section_06.umap",
+        "Dungeons\\YelKeskarHideout\\YelKeskarHideout_Dungeon_Level_01_Section_08.umap",
+        "Dungeons\\YelKeskarHideout\\YelKeskarHideout_Dungeon_Level_02_Section_08.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-052375609d4de715",
+        "pak-mining-granum-96e5f40c93e36d46",
+        "pak-mining-granum-2e3599a426fc46bb",
+        "pak-mining-granum-e806016523c53155",
+        "pak-mining-granum-4bbbdfe43b8653ec",
+        "pak-mining-granum-7ec5da73ae295848",
+        "pak-mining-granum-f79143ced63c96f2"
+      ],
+      "nodeCount": 345,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 7,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-aa48c618d97d5dac9548739c",
+      "label": "Granum field - X03/Y01",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 1183.7426,
+      "y": 2972.3395,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x03_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-788a1634ea074c42"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-f6e7c741b77043ed7d8a8d10",
+      "label": "Granum field - X03/Y06",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 1099.9712,
+      "y": 1218.5018,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x03_y06.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-fc53137e06572bb3"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-a1aaa00c5983f69513f8a42c",
+      "label": "Granum field - X04/Y01 area 1",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 13 mapped rock surfaces.",
+      "x": 1603.8013,
+      "y": 3059.7713,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x04_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-edc08e24d43ae037"
+      ],
+      "nodeCount": 13,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-1cd573f610d12f0a33d86e46",
+      "label": "Granum field - X04/Y01 area 2",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 10 mapped rock surfaces.",
+      "x": 1481.8328,
+      "y": 3016.2127,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x04_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-0b72ae05c7c873a6"
+      ],
+      "nodeCount": 10,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-75c15d1ba195297a6c1b3c86",
+      "label": "Granum field - X04/Y01 area 3",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 10 mapped rock surfaces.",
+      "x": 1512.4379,
+      "y": 2913.6175,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x04_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-90a86e946ed5590d"
+      ],
+      "nodeCount": 10,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-8fb85f369da66e00fcf8d729",
+      "label": "Granum field - X04/Y01 area 4",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 9 mapped rock surfaces.",
+      "x": 1584.3565,
+      "y": 3043.0352,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x04_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-ce831f9b079e21fd"
+      ],
+      "nodeCount": 9,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-3faf99118ede18b366f202db",
+      "label": "Granum field - X04/Y01 area 5",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 9 mapped rock surfaces.",
+      "x": 1669.6145,
+      "y": 2921.3185,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x04_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-1f360501dd9effc2"
+      ],
+      "nodeCount": 9,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-f45abf09a76a3c5b082d3c41",
+      "label": "Granum field - X04/Y01 area 6",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 9 mapped rock surfaces.",
+      "x": 1694.5677,
+      "y": 2943.3134,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x04_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-d52999cbfcc682bc"
+      ],
+      "nodeCount": 9,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-d97fa9241be3614c8c5425c1",
+      "label": "Granum field - X04/Y01 area 7",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 8 mapped rock surfaces.",
+      "x": 1518.2028,
+      "y": 3002.6714,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x04_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-026316e872dd5916"
+      ],
+      "nodeCount": 8,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-3df731d870ec38282113bcb9",
+      "label": "Granum field - X04/Y01 area 8",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 8 mapped rock surfaces.",
+      "x": 1530.2021,
+      "y": 2939.5839,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x04_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-50579ce9fb7c16aa"
+      ],
+      "nodeCount": 8,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-d6f2ee443512341de39bfe51",
+      "label": "Granum field - X04/Y01 area 9",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 8 mapped rock surfaces.",
+      "x": 1601.1213,
+      "y": 2879.8518,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x04_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-5b492515c8ddffd8"
+      ],
+      "nodeCount": 8,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-decd667d09dad387e201cac6",
+      "label": "Granum field - X04/Y01 area 10",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 7 mapped rock surfaces.",
+      "x": 1532.7594,
+      "y": 2988.7085,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x04_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-a6e03a71de83b367"
+      ],
+      "nodeCount": 7,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-17e908d1c0efe813f0559ad7",
+      "label": "Granum field - X04/Y01 area 11",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 6 mapped rock surfaces.",
+      "x": 1574.4382,
+      "y": 2872.8735,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x04_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-5c9630a4408bb7c2"
+      ],
+      "nodeCount": 6,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-6e4f84b89aac93201ae2c8f5",
+      "label": "Granum field - X04/Y01 area 12",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 5 mapped rock surfaces.",
+      "x": 1504.4314,
+      "y": 3034.4914,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x04_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-e291738c78e5ff58"
+      ],
+      "nodeCount": 5,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-8ff1298d20e2f468c25b2d75",
+      "label": "Granum field - X04/Y01 area 13",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 4 mapped rock surfaces.",
+      "x": 1469.049,
+      "y": 3144.3109,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x04_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-1d9cbf36d80f1ed0"
+      ],
+      "nodeCount": 4,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-c6aaea6ded096fa47da26b24",
+      "label": "Granum field - X04/Y01 area 14",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 4 mapped rock surfaces.",
+      "x": 1576.8467,
+      "y": 3110.1308,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x04_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-51d93c4adf83c3ef"
+      ],
+      "nodeCount": 4,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-088670108c76df097e9df3b4",
+      "label": "Granum field - X04/Y01 area 15",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 4 mapped rock surfaces.",
+      "x": 1618.7811,
+      "y": 2874.9708,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x04_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-8f33eb2227fb5128"
+      ],
+      "nodeCount": 4,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-7bcbdc5029d2632a174177a7",
+      "label": "Granum field - X04/Y01 area 16",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 3 mapped rock surfaces.",
+      "x": 1581.2237,
+      "y": 3076.1222,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x04_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-3fd0920bdb6eaf06"
+      ],
+      "nodeCount": 3,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-764c4a273d9313662c808201",
+      "label": "Granum field - X04/Y01 area 17",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 1528.8708,
+      "y": 2925.5594,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x04_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-089f74db75bc5064"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-4aa92bd1d20d8be7a99d3da8",
+      "label": "Granum field - X04/Y01 area 18",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 1617.3241,
+      "y": 3073.3932,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x04_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-8318f4c490573cbb"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-8d598452adbc9b209baa4303",
+      "label": "Granum field - X04/Y03",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 1553.472,
+      "y": 2292.8913,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x04_y03.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-6678c7f0775607b8"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-cee402c6ab509094e9d05676",
+      "label": "Granum field - X06/Y00 area 1",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 4 mapped rock surfaces.",
+      "x": 2446.4006,
+      "y": 3525.4787,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x06_y00.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-9a0ad08859578c33"
+      ],
+      "nodeCount": 4,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-5db0f3b57d3c9dd3d37b276a",
+      "label": "Granum field - X06/Y00 area 2",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 4 mapped rock surfaces.",
+      "x": 2462.5822,
+      "y": 3360.6,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x06_y00.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-a82ab3a2b4f5bb1e"
+      ],
+      "nodeCount": 4,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-1241a2e15d6784dd566f8e98",
+      "label": "Granum field - X06/Y00 area 3",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 4 mapped rock surfaces.",
+      "x": 2468.3271,
+      "y": 3523.9458,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x06_y00.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-77be263aa1ade90d"
+      ],
+      "nodeCount": 4,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-24a7f097393aa4773bdeabb6",
+      "label": "Granum field - X06/Y00 area 4",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 3 mapped rock surfaces.",
+      "x": 2434.1702,
+      "y": 3378.5432,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x06_y00.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-1db0147ba9b1287a"
+      ],
+      "nodeCount": 3,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-5dcb0a31f9f042b668d4617a",
+      "label": "Granum field - X06/Y00 area 5",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 2465.6348,
+      "y": 3427.2954,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x06_y00.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-a7e9cac1afd1c6c2"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-3095222ec780044db72c2884",
+      "label": "Granum field - X06/Y00 area 6",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 2485.1079,
+      "y": 3490.9412,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x06_y00.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-b5d0dd14c3c6b652"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-dca9901beea1e14415cac468",
+      "label": "Granum field - X06/Y06 area 1",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 3 mapped rock surfaces.",
+      "x": 2175.7997,
+      "y": 995.4634,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x06_y06.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-7d8668076878b5de"
+      ],
+      "nodeCount": 3,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-b388c58160e91ac05c736750",
+      "label": "Granum field - X06/Y06 area 2",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 2 mapped rock surfaces.",
+      "x": 2186.1672,
+      "y": 1257.1574,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x06_y06.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-f5d42aadf07c9dfd"
+      ],
+      "nodeCount": 2,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-5a57594f5ebd7b655e01b2ad",
+      "label": "Granum field - X06/Y06 area 3",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 2202.5094,
+      "y": 1256.3656,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x06_y06.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-f84a7214bd7f4504"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-bf6b5a1de5f9b7d1f2bf7483",
+      "label": "Granum field - X07/Y00 area 1",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 9 mapped rock surfaces.",
+      "x": 2495.3306,
+      "y": 3358.1936,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x07_y00.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-63f3f66db11b0d38"
+      ],
+      "nodeCount": 9,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-0d0ac40803da00166b101f6c",
+      "label": "Granum field - X07/Y00 area 2",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 2 mapped rock surfaces.",
+      "x": 2517.956,
+      "y": 3347.086,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x07_y00.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-9b0a46368e7a6bc9"
+      ],
+      "nodeCount": 2,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-7ed10782b332ba806d19b02d",
+      "label": "Granum field - X07/Y00 area 3",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 2531.0386,
+      "y": 3262.2923,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x07_y00.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-a97ea61f64772888"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-117dc3b15dca779fdf63324a",
+      "label": "Granum field - X07/Y01 area 1",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 4 mapped rock surfaces.",
+      "x": 2718.8668,
+      "y": 3126.7448,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x07_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-96e4a5b7d8b00662"
+      ],
+      "nodeCount": 4,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-30b309fd46f59bfe3d93b77a",
+      "label": "Granum field - X07/Y01 area 2",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 4 mapped rock surfaces.",
+      "x": 2746.0807,
+      "y": 3115.6239,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x07_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-49e02d5ea439e9e0"
+      ],
+      "nodeCount": 4,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-066b5a2c9a98998aaeb19246",
+      "label": "Granum field - X07/Y01 area 3",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 3 mapped rock surfaces.",
+      "x": 2663.5782,
+      "y": 3157.8234,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x07_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-38dcd6d013ae43a5"
+      ],
+      "nodeCount": 3,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-6d7bc981b2b03c899ac5b4b2",
+      "label": "Granum field - X07/Y01 area 4",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 2 mapped rock surfaces.",
+      "x": 2651.0908,
+      "y": 3186.9715,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x07_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-3c353b2168c2789a"
+      ],
+      "nodeCount": 2,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-ff7310cae73960a4f9fece17",
+      "label": "Granum field - X07/Y01 area 5",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 2 mapped rock surfaces.",
+      "x": 2771.6781,
+      "y": 3087.4399,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x07_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-70ba2813ab885d88"
+      ],
+      "nodeCount": 2,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-794aecff3c410d9fe736c6f7",
+      "label": "Granum field - X07/Y01 area 6",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 2 mapped rock surfaces.",
+      "x": 2806.4576,
+      "y": 3126.2689,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x07_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-158aa3fd3dfcaebb"
+      ],
+      "nodeCount": 2,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-957be2bc20337d808fa8bcec",
+      "label": "Granum field - X07/Y01 area 7",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 2 mapped rock surfaces.",
+      "x": 2818.7242,
+      "y": 3056.0304,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x07_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-920c1bddd2581ee5"
+      ],
+      "nodeCount": 2,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-bdfc39d917757306a92873a5",
+      "label": "Granum field - X07/Y01 area 8",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 2606.573,
+      "y": 3238.153,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x07_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-7a0cca9c9839fa87"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-ec1eca23f8c7ac45985e3360",
+      "label": "Granum field - X07/Y01 area 9",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 2609.5476,
+      "y": 3202.8888,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x07_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-e93106a85d06c197"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-afb4d43d26cafbbdba2fe14b",
+      "label": "Granum field - X07/Y01 area 10",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 2613.7332,
+      "y": 3175.5678,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x07_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-7643b90385a94eea"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-43228dfdbe04ef96ba84a394",
+      "label": "Granum field - X07/Y01 area 11",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 2650.3705,
+      "y": 3220.0296,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x07_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-f7f3cc4bda5824bf"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-0cb22767d18f08144940349c",
+      "label": "Granum field - X07/Y01 area 12",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 2695.3702,
+      "y": 3154.605,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x07_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-55c39e537507b788"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-7982094d568f3bc06e023773",
+      "label": "Granum field - X07/Y01 area 13",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 2815.8233,
+      "y": 3097.6054,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x07_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-82be486a7e7e1df9"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-bd06181894ab1a5708bb34e0",
+      "label": "Granum field - X08/Y01 area 1",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 4 mapped rock surfaces.",
+      "x": 3066.7355,
+      "y": 3161.779,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-66eaebba6621f3e7"
+      ],
+      "nodeCount": 4,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-043e1784d6950215afa60fab",
+      "label": "Granum field - X08/Y01 area 2",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 2 mapped rock surfaces.",
+      "x": 2887.734,
+      "y": 3084.3396,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-ea4cfd906c7f682b"
+      ],
+      "nodeCount": 2,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-887d7c2eba7ba9d3c273ec8f",
+      "label": "Granum field - X08/Y01 area 3",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 2 mapped rock surfaces.",
+      "x": 3055.0993,
+      "y": 3134.1458,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-ea69688fee93f6d6"
+      ],
+      "nodeCount": 2,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-a463c1f4059926f76732090b",
+      "label": "Granum field - X08/Y01 area 4",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 2 mapped rock surfaces.",
+      "x": 3096.2839,
+      "y": 3177.1379,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-50203a5f2927e6d3"
+      ],
+      "nodeCount": 2,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-54711cf4e350337a22d607b1",
+      "label": "Granum field - X08/Y01 area 5",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 2 mapped rock surfaces.",
+      "x": 3142.1943,
+      "y": 3174.1129,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-75b9ed961bf90c22"
+      ],
+      "nodeCount": 2,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-27d2e92062a8973bed338a4e",
+      "label": "Granum field - X08/Y01 area 6",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 2 mapped rock surfaces.",
+      "x": 3194.375,
+      "y": 3181.3,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-fa44eb0001f9d1b2"
+      ],
+      "nodeCount": 2,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-75a2ea6c6f138d7a2bc5bd31",
+      "label": "Granum field - X08/Y01 area 7",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 2843.4419,
+      "y": 3124.7646,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-6cbe9f52741e145f"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-5e9cc0540c513ec0e47d75c6",
+      "label": "Granum field - X08/Y01 area 8",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 2900.9919,
+      "y": 3131.2518,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-d4acd7c69e5f52b1"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-d5e174740eee75adcfc0e73c",
+      "label": "Granum field - X08/Y01 area 9",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 2935.7598,
+      "y": 3084.3879,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-a2c0f9978888bb48"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-d5f6bc01651dd5f2856169ee",
+      "label": "Granum field - X08/Y01 area 10",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 2937.2081,
+      "y": 3141.5241,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-e9f79cd246cb9a09"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-32b7010adb019cddf404baca",
+      "label": "Granum field - X08/Y01 area 11",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 2952.2718,
+      "y": 3175.9334,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-2bd5390744d3154c"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-35872b2d37423cc2b994fbbe",
+      "label": "Granum field - X08/Y01 area 12",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 2999.0266,
+      "y": 3125.0197,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-6df1dd5000fea20a"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-cc96db90d2ed0f75e843b3fd",
+      "label": "Granum field - X08/Y01 area 13",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 3020.1801,
+      "y": 3106.4321,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-d1d1299af80ad605"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-55e0db83a2ea0a054576e7b7",
+      "label": "Granum field - X08/Y01 area 14",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 3022.8774,
+      "y": 3188.4938,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-c0b6378c9db25dd2"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-30683c1943cff99bb0265d12",
+      "label": "Granum field - X08/Y01 area 15",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 3085.5011,
+      "y": 3214.2236,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-27b8f1728f10d6ea"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-a472865cea8ddb43de4ae252",
+      "label": "Granum field - X08/Y01 area 16",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 3235.3948,
+      "y": 3219.7489,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y01.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-1dbb6f85f376b64a"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-fddd4cbb06f4d201f3212b1c",
+      "label": "Granum field - X08/Y08 area 1",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 3 mapped rock surfaces.",
+      "x": 3057.8084,
+      "y": 396.5308,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y08.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-d268a6aebf8ae1b6"
+      ],
+      "nodeCount": 3,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-9a886651c2ca1ae5f8939d65",
+      "label": "Granum field - X08/Y08 area 2",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 3 mapped rock surfaces.",
+      "x": 3074.9874,
+      "y": 433.064,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y08.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-fecc88062ebdbb1f"
+      ],
+      "nodeCount": 3,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-03dab7f1a8f0a14eb6d277ea",
+      "label": "Granum field - X08/Y08 area 3",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 2 mapped rock surfaces.",
+      "x": 3240.6733,
+      "y": 602.7089,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y08.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-21dfbf16560d7050"
+      ],
+      "nodeCount": 2,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-f3732dfa1795ef4aa950e85d",
+      "label": "Granum field - X08/Y08 area 4",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 2968.2848,
+      "y": 296.7587,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y08.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-a37b264efc5a2079"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-661467bb86f92e6669ba4aac",
+      "label": "Granum field - X08/Y08 area 5",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 3025.2977,
+      "y": 479.2948,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y08.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-2b96730e3e4b5da4"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-e98fa87e6bad37c5e5cea4ff",
+      "label": "Granum field - X08/Y08 area 6",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 3084.1631,
+      "y": 380.0307,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y08.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-d6f3d3f7881aadb6"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-b14fb1acbb82d3edb1dbffcd",
+      "label": "Granum field - X08/Y08 area 7",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 3108.2649,
+      "y": 299.6208,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y08.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-a48745dab4c5dc92"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-677f1a6a73ec6c521852da0c",
+      "label": "Granum field - X08/Y08 area 8",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 3243.2799,
+      "y": 543.9817,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y08.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-b5d37e4867b01171"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-74f7da045916af64897ef972",
+      "label": "Granum field - X08/Y09 area 1",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 2 mapped rock surfaces.",
+      "x": 3001.9092,
+      "y": 153.9053,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y09.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-13210d51f5cd557e"
+      ],
+      "nodeCount": 2,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-df3f0d84d1df3e202a743911",
+      "label": "Granum field - X08/Y09 area 2",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 2 mapped rock surfaces.",
+      "x": 3028.1812,
+      "y": 173.3877,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y09.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-ca2b70ad2818f5a9"
+      ],
+      "nodeCount": 2,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-1736404b5685b1759b308eae",
+      "label": "Granum field - X08/Y09 area 3",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 2 mapped rock surfaces.",
+      "x": 3052.4646,
+      "y": 202.7366,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y09.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-9ec398e4acf4b0b7"
+      ],
+      "nodeCount": 2,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    },
+    {
+      "id": "archive-granum-efe73f8c347363dbc21be8d0",
+      "label": "Granum field - X08/Y09 area 4",
+      "category": "ore",
+      "icon": "granum",
+      "notes": "Condensed Granum location covering 1 mapped rock surface.",
+      "x": 2946.304,
+      "y": 216.4019,
+      "archived": true,
+      "sourceType": "Granum",
+      "source": "Mortal Online 2 Sarducaa cooked mining material dependencies",
+      "sourcePackages": [
+        "Sarducaa_x08_y09.umap"
+      ],
+      "sourceIds": [
+        "pak-mining-granum-7884bc1b3f73ebc7"
+      ],
+      "nodeCount": 1,
+      "highYieldNodeCount": 0,
+      "condensedLocationCount": 1,
+      "confidence": "pak-exact-world-affine-map",
+      "verified": true
+    }
+  ]
+}

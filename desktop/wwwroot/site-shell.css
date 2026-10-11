@@ -1,0 +1,3313 @@
+:root {
+  --app-sidebar-wide: 272px;
+  --app-sidebar-rail: 70px;
+}
+
+body.site-shell-enabled {
+  --app-sidebar-width: var(--app-sidebar-wide);
+  padding-left: var(--app-sidebar-width);
+  overflow-x: clip;
+  transition: padding-left 180ms ease;
+}
+
+body.site-shell-enabled.site-nav-collapsed {
+  --app-sidebar-width: var(--app-sidebar-rail);
+}
+
+.site-shell-enabled {
+  --page-accent: #b99a61;
+  --page-accent-soft: #dbc18a;
+  --page-surface: #111612;
+  --page-surface-raised: #171c18;
+  --page-line: #39433c;
+  background: #0b0f0c;
+  color: #eee9dc;
+}
+
+.site-shell-enabled.furnace-page { --page-accent: #7897a3; --page-accent-soft: #a8c3cc; }
+.site-shell-enabled.refining-page { --page-accent: #b87958; --page-accent-soft: #daa083; }
+.site-shell-enabled.butchery-page { --page-accent: #a76b58; --page-accent-soft: #d29885; }
+.site-shell-enabled.alchemy-page { --page-accent: #789271; --page-accent-soft: #abc1a4; }
+.site-shell-enabled.cooking-page { --page-accent: #bc8c53; --page-accent-soft: #dfb77e; }
+.site-shell-enabled.reverse-page { --page-accent: #718fa1; --page-accent-soft: #a4bdca; }
+.site-shell-enabled.building-page { --page-accent: #9e805f; --page-accent-soft: #c5aa87; }
+.site-shell-enabled.pets-page { --page-accent: #78916f; --page-accent-soft: #a8bea0; }
+.site-shell-enabled.builder-page { --page-accent: #8a8397; --page-accent-soft: #bbb2c6; }
+.site-shell-enabled.crafting-page { --page-accent: #b76953; --page-accent-soft: #df9680; }
+.site-shell-enabled.shambles-page { --page-accent: #76906c; --page-accent-soft: #a7bd9e; }
+.site-shell-enabled.dungeons-page { --page-accent: #b48758; --page-accent-soft: #d7b77d; }
+
+.site-shell-enabled :is(
+  .main-content,
+  .furnace-main,
+  .refining-main,
+  .butchery-main,
+  .alchemy-main,
+  .cooking-main,
+  .reverse-main,
+  .building-main,
+  .pets-main,
+  .crafting-main,
+  .tool-main
+) {
+  position: relative;
+}
+
+.site-shell-enabled :is(
+  .furnace-intro,
+  .refining-intro,
+  .butchery-intro,
+  .alchemy-intro,
+  .cooking-intro,
+  .reverse-intro,
+  .building-intro,
+  .pets-intro,
+  .crafting-intro,
+  .tool-titlebar
+) {
+  position: relative;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--page-line);
+}
+
+.site-shell-enabled :is(
+  .furnace-intro,
+  .refining-intro,
+  .butchery-intro,
+  .alchemy-intro,
+  .cooking-intro,
+  .reverse-intro,
+  .building-intro,
+  .pets-intro,
+  .crafting-intro,
+  .tool-titlebar
+)::after {
+  content: "";
+  position: absolute;
+  inset: auto auto -1px 0;
+  width: 74px;
+  height: 2px;
+  background: var(--page-accent);
+}
+
+.site-shell-enabled :is(
+  .furnace-intro,
+  .refining-intro,
+  .butchery-intro,
+  .alchemy-intro,
+  .cooking-intro,
+  .reverse-intro,
+  .building-intro,
+  .pets-intro,
+  .crafting-intro,
+  .tool-titlebar
+) h1 {
+  color: #f1ebdd;
+  font-family: "Palatino Linotype", Palatino, Georgia, serif;
+  font-weight: 600;
+  line-height: 1.06;
+}
+
+.site-shell-enabled :is(.kicker, .eyebrow, .tool-kicker) {
+  color: var(--page-accent-soft);
+  font-weight: 750;
+}
+
+.site-shell-enabled :is(
+  .catalog-status,
+  .data-badge,
+  .ratio-badge,
+  .catalog-badge,
+  .alchemy-data-badge,
+  .cooking-data-badge,
+  .reverse-data-badge,
+  .building-data-badge,
+  .pets-data-badge,
+  .status-line
+) {
+  border-color: var(--page-line);
+  background: #101511;
+}
+
+.site-shell-enabled :is(
+  .crafting-workbench,
+  .calculator-shell,
+  .refining-shell,
+  .butchery-shell,
+  .alchemy-shell,
+  .cooking-workbench,
+  .reverse-tool,
+  .building-planner,
+  .pet-planner,
+  .builder-shell,
+  .shambles-layout
+) {
+  border-color: var(--page-line);
+  background: var(--page-surface);
+  box-shadow: inset 0 2px var(--page-accent), 0 18px 42px rgb(0 0 0 / 18%);
+}
+
+.site-shell-enabled main select {
+  min-width: 0;
+  border-color: #465149;
+  background-color: #171c18;
+  color: #f0eadc;
+  text-overflow: ellipsis;
+}
+
+.site-shell-enabled main :is(input[type="text"], input[type="search"], input[type="number"], textarea) {
+  border-color: #465149;
+  background-color: #151a16;
+  color: #f0eadc;
+}
+
+.site-shell-enabled main :is(select, input, textarea):focus {
+  border-color: var(--page-accent);
+  outline: 1px solid color-mix(in srgb, var(--page-accent) 45%, transparent);
+  outline-offset: 0;
+}
+
+.site-shell-enabled main :is(
+  .primary-command,
+  .forge-command,
+  .tool-button.primary
+) {
+  border-color: color-mix(in srgb, var(--page-accent) 74%, #2e352f);
+  background: color-mix(in srgb, var(--page-accent) 54%, #2a302b);
+  color: #fff8eb;
+  box-shadow: inset 0 1px rgb(255 255 255 / 8%);
+}
+
+.site-shell-enabled main :is(
+  .primary-command,
+  .forge-command,
+  .tool-button.primary
+):hover:not(:disabled) {
+  background: color-mix(in srgb, var(--page-accent) 68%, #2a302b);
+}
+
+.site-shell-enabled main :is(table th, .tool-column-title) {
+  color: #a8aea7;
+}
+
+.site-shell-enabled main tbody tr:hover td {
+  background: color-mix(in srgb, var(--page-accent) 7%, #141915);
+}
+
+.marshal-footer {
+  min-height: 58px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 34px;
+  border-top: 1px solid #303932;
+  padding: 18px 0 2px;
+  color: #888f88;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.site-shell-enabled .masthead-main {
+  min-height: 64px;
+}
+
+.site-global-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid #294064;
+  padding: 6px 14px;
+  background:
+    repeating-linear-gradient(90deg, rgb(120 166 224 / 1.4%) 0, rgb(120 166 224 / 1.4%) 1px, transparent 1px, transparent 7px),
+    #050810;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 38%), inset 0 -1px #111a29;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+}
+
+.site-global-toolbar-start,
+.site-global-toolbar-actions,
+.site-global-toolbar-label {
+  display: flex;
+  align-items: center;
+}
+
+.site-global-toolbar-start,
+.site-global-toolbar-actions { gap: 8px; }
+
+.site-global-toolbar-start { flex: 0 0 auto; }
+.site-global-toolbar-actions {
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+
+.site-global-toolbar-label {
+  gap: 7px;
+  color: #aebdcb;
+  font: 700 12px/1 "Segoe UI", sans-serif;
+  text-transform: uppercase;
+}
+
+.site-global-toolbar-label svg {
+  width: 16px;
+  height: 16px;
+  color: #69a6ff;
+}
+
+.site-global-tool-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-right: 1px solid #27354a;
+  padding-right: 8px;
+}
+
+.site-global-tool-links a {
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #2b3b54;
+  border-radius: 4px;
+  padding: 0 9px;
+  color: #d3deeb;
+  background: #0a111d;
+  font: 700 11px/1 "Segoe UI", sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-global-tool-links a:hover,
+.site-global-tool-links a:focus-visible {
+  border-color: #5e8dcc;
+  color: #fff;
+  background: #111d2e;
+  outline: 0;
+}
+
+.site-global-tool-links svg {
+  width: 15px;
+  height: 15px;
+  color: #77adf6;
+}
+
+.site-shell-enabled .masthead {
+  top: 50px !important;
+}
+
+.site-shell-enabled .masthead-main > nav,
+.site-shell-enabled .masthead-actions > a {
+  display: none;
+}
+
+.site-shell-enabled .masthead-main:not(:has(.global-search)) {
+  grid-template-columns: minmax(190px, 1fr) auto;
+}
+
+.site-shell-enabled .masthead-actions {
+  overflow: visible;
+  padding-bottom: 0;
+}
+
+.app-sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 70;
+  width: var(--app-sidebar-width);
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #384139;
+  background: #0c100d;
+  box-shadow: 12px 0 34px rgb(0 0 0 / 18%);
+  color: var(--paper);
+  overflow: hidden;
+  transition: width 180ms ease, transform 180ms ease;
+}
+
+.app-sidebar::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: linear-gradient(90deg, #c19a5b 0 28%, #668f74 28% 53%, #6e8ea0 53% 77%, #a8665c 77%);
+}
+
+.app-sidebar-head {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid #29312b;
+  padding: 10px 12px;
+}
+
+.app-sidebar-brand {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--paper);
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.app-sidebar-brand img {
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+}
+
+.app-sidebar-brand-copy {
+  min-width: 150px;
+}
+
+.app-sidebar-brand-copy strong,
+.app-sidebar-brand-copy small {
+  display: block;
+  white-space: nowrap;
+}
+
+.app-sidebar-brand-copy strong {
+  font: 700 18px/1.1 "Palatino Linotype", Palatino, Georgia, serif;
+}
+
+.app-sidebar-brand-copy small {
+  margin-top: 3px;
+  color: #89928a;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.app-sidebar-toggle,
+.site-menu-button {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid #3b453d;
+  border-radius: 4px;
+  background: #141a15;
+  color: #d8d4c9;
+}
+
+.app-sidebar-toggle:hover,
+.site-menu-button:hover {
+  border-color: var(--brass);
+  background: #1b211c;
+  color: #fff7df;
+}
+
+.app-sidebar-toggle svg,
+.site-menu-button svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 1.8;
+}
+
+.site-menu-button {
+  display: none;
+}
+
+.app-sidebar-body {
+  min-height: 0;
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 13px 9px 20px;
+  scrollbar-width: thin;
+  scrollbar-color: #384139 transparent;
+}
+
+.app-nav-section + .app-nav-section {
+  margin-top: 15px;
+  padding-top: 12px;
+  border-top: 1px solid #222a24;
+}
+
+.app-nav-section-title {
+  height: 22px;
+  padding: 0 10px;
+  color: #747d75;
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 22px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.app-nav-link {
+  --nav-accent: #c19a5b;
+  position: relative;
+  min-height: 44px;
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  margin: 2px 0;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 5px 8px;
+  color: #c5c7c1;
+  text-decoration: none;
+}
+
+.app-nav-link::before {
+  content: "";
+  position: absolute;
+  inset: 8px auto 8px 0;
+  width: 2px;
+  border-radius: 2px;
+  background: var(--nav-accent);
+  opacity: 0;
+}
+
+.app-nav-link:hover {
+  border-color: #303932;
+  background: #151b16;
+  color: #f3efe5;
+}
+
+.app-nav-link.active {
+  border-color: color-mix(in srgb, var(--nav-accent) 34%, #303932);
+  background: color-mix(in srgb, var(--nav-accent) 11%, #121713);
+  color: #fffaf0;
+}
+
+.app-nav-link.active::before {
+  opacity: 1;
+}
+
+.app-nav-icon {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--nav-accent) 32%, #2b332d);
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--nav-accent) 9%, #111612);
+  color: var(--nav-accent);
+}
+
+.app-nav-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 1.8;
+}
+
+.app-nav-copy {
+  min-width: 160px;
+}
+
+.app-nav-copy strong,
+.app-nav-copy small {
+  display: block;
+  white-space: nowrap;
+}
+
+.app-nav-copy strong {
+  font-size: 12.5px;
+  font-weight: 650;
+}
+
+.app-nav-copy small {
+  display: none;
+}
+
+.app-sidebar-foot {
+  border-top: 1px solid #29312b;
+  padding: 10px 9px 13px;
+}
+
+.app-update-button {
+  width: 100%;
+  min-height: 46px;
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 8px;
+  border: 1px solid #384b5e;
+  border-radius: 5px;
+  padding: 5px 8px;
+  background: #111b25;
+  color: #d0deeb;
+  text-align: left;
+  cursor: pointer;
+}
+
+.app-update-button:hover {
+  border-color: #5d7892;
+  background: #172535;
+  color: #ffffff;
+}
+
+.app-update-button[data-state="available"],
+.app-update-button[data-state="required"] {
+  border-color: #ff5b63;
+  background: #8d1e28;
+  color: #fff7f7;
+  box-shadow: inset 3px 0 #ff8d93, 0 0 16px rgba(255, 49, 62, .34);
+  animation: sidebar-update-alert 2.2s ease-in-out infinite;
+}
+
+.app-update-button[data-state="available"] .app-nav-icon,
+.app-update-button[data-state="required"] .app-nav-icon {
+  border-color: #ff9a9f;
+  background: #b52430;
+  color: #ffffff;
+}
+
+.app-update-button[data-state="checking"] .app-nav-icon,
+.app-update-button[data-state="downloading"] .app-nav-icon,
+.app-update-button[data-state="installing"] .app-nav-icon {
+  animation: site-update-spin 1s linear infinite;
+}
+
+.app-update-button[data-state="current"] {
+  border-color: #376351;
+  background: #10231b;
+  color: #c8ebdc;
+}
+
+.app-update-button[data-state="error"] {
+  border-color: #81434a;
+  background: #2b1519;
+  color: #ffd0d3;
+}
+
+.app-update-button:disabled { cursor: wait; }
+
+@keyframes sidebar-update-alert {
+  0%, 48%, 100% { background: #751922; box-shadow: inset 3px 0 #ff747c, 0 0 8px rgba(255, 49, 62, .2); }
+  15%, 32% { background: #d12635; box-shadow: inset 3px 0 #ffd3d5, 0 0 24px rgba(255, 49, 62, .72); }
+}
+
+@keyframes site-update-spin { to { transform: rotate(360deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .app-update-button[data-state="available"] { animation: none; }
+}
+
+.app-sidebar-foot .app-nav-link {
+  margin: 0;
+}
+
+.app-sidebar-foot .app-nav-link {
+  border: 1px solid #b74749;
+  background: #70282a;
+  box-shadow: inset 3px 0 #ff6568;
+  color: #fff3f1;
+}
+
+.app-sidebar-foot .app-nav-link:hover {
+  border-color: #ef6669;
+  background: #8a3033;
+  color: #ffffff;
+}
+
+.app-sidebar-foot .app-nav-link .app-nav-icon {
+  background: #9d383b;
+  color: #fff1ee;
+}
+
+.app-sidebar-foot .app-nav-link .app-nav-copy small {
+  color: #e7b7b5;
+}
+
+.site-nav-collapsed .app-sidebar-head {
+  justify-content: center;
+  padding-inline: 8px;
+}
+
+.site-nav-collapsed .app-sidebar-brand,
+.site-nav-collapsed .app-sidebar-brand-copy,
+.site-nav-collapsed .app-nav-section-title,
+.site-nav-collapsed .app-nav-copy {
+  display: none;
+}
+
+.site-nav-collapsed .app-sidebar-body,
+.site-nav-collapsed .app-sidebar-foot {
+  padding-inline: 7px;
+}
+
+.site-nav-collapsed .app-nav-section + .app-nav-section {
+  margin-top: 8px;
+  padding-top: 8px;
+}
+
+.site-nav-collapsed .app-nav-link {
+  grid-template-columns: 38px;
+  justify-content: center;
+  padding-inline: 6px;
+}
+
+.app-sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 65;
+  display: none;
+  border: 0;
+  background: rgb(2 4 3 / 72%);
+}
+
+@media (max-width: 1320px) and (min-width: 1101px) {
+  .site-shell-enabled .masthead-main {
+    grid-template-areas: none;
+    grid-template-columns: minmax(180px, 205px) minmax(220px, 1fr) auto;
+  }
+
+  .site-shell-enabled .brand,
+  .site-shell-enabled .global-search,
+  .site-shell-enabled .masthead-actions {
+    grid-area: auto;
+  }
+}
+
+@media (max-width: 1360px) and (min-width: 1101px) {
+  .site-shell-enabled:not(.site-nav-collapsed) .shambles-layout {
+    grid-template-columns: 280px minmax(0, 1fr);
+  }
+
+  .site-shell-enabled:not(.site-nav-collapsed) .shambles-layout .pet-scaler {
+    grid-column: 1 / -1;
+    border-left: 0;
+    border-top: 1px solid var(--tool-line);
+  }
+
+  .site-shell-enabled:not(.site-nav-collapsed) .cooking-workbench {
+    grid-template-columns: 1fr;
+  }
+
+  .site-shell-enabled:not(.site-nav-collapsed) .cooking-controls {
+    border-right: 0;
+    border-bottom: 1px solid var(--rule-strong);
+  }
+}
+
+@media (max-width: 1450px) and (min-width: 1101px) {
+  .site-shell-enabled:not(.site-nav-collapsed) .crafting-workbench {
+    grid-template-columns: minmax(280px, .8fr) minmax(0, 1.2fr);
+  }
+
+  .site-shell-enabled:not(.site-nav-collapsed) .crafting-config {
+    border-right: 1px solid var(--rule-strong);
+  }
+
+  .site-shell-enabled:not(.site-nav-collapsed) .field-grid.three-up {
+    grid-template-columns: repeat(2, minmax(130px, 1fr));
+    gap: 14px;
+  }
+
+  .site-shell-enabled:not(.site-nav-collapsed) .forge-sidebar {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    border-top: 1px solid var(--rule-strong);
+    border-left: 0;
+  }
+
+  .site-shell-enabled:not(.site-nav-collapsed) .forge-sidebar section + section {
+    margin: 0;
+    padding: 0 0 0 18px;
+    border-top: 0;
+    border-left: 1px solid var(--rule-strong);
+  }
+}
+
+@media (max-width: 1180px) and (min-width: 1101px) {
+  .site-shell-enabled:not(.site-nav-collapsed) .crafting-workbench {
+    grid-template-columns: 1fr;
+  }
+
+  .site-shell-enabled:not(.site-nav-collapsed) .crafting-config {
+    border-right: 0;
+    border-bottom: 1px solid var(--rule-strong);
+  }
+
+  .site-shell-enabled:not(.site-nav-collapsed) .forge-sidebar {
+    grid-column: auto;
+  }
+}
+
+@media (min-width: 1101px) {
+  .site-shell-enabled .masthead:not(:has(.global-search)) {
+    display: none;
+  }
+
+  .site-shell-enabled:not(.site-nav-collapsed) .masthead:has(.global-search) .brand {
+    display: none;
+  }
+
+  .site-shell-enabled:not(.site-nav-collapsed) .masthead-main:has(.global-search) {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: none;
+  }
+
+  .site-shell-enabled:not(.site-nav-collapsed) .global-search,
+  .site-shell-enabled:not(.site-nav-collapsed) .masthead-actions {
+    grid-area: auto;
+  }
+}
+
+@media (max-width: 1100px) {
+  body.site-shell-enabled,
+  body.site-shell-enabled.site-nav-collapsed {
+    padding-left: 0;
+  }
+
+  .app-sidebar {
+    width: min(292px, 88vw);
+    transform: translateX(-104%);
+  }
+
+  .site-nav-collapsed .app-sidebar-brand,
+  .site-nav-collapsed .app-sidebar-brand-copy,
+  .site-nav-collapsed .app-nav-section-title,
+  .site-nav-collapsed .app-nav-copy {
+    display: block;
+  }
+
+  .site-nav-collapsed .app-sidebar-brand {
+    display: flex;
+  }
+
+  .site-nav-collapsed .app-sidebar-head {
+    justify-content: space-between;
+    padding-inline: 12px;
+  }
+
+  .site-nav-collapsed .app-sidebar-body,
+  .site-nav-collapsed .app-sidebar-foot {
+    padding-inline: 9px;
+  }
+
+  .site-nav-collapsed .app-nav-section + .app-nav-section {
+    margin-top: 15px;
+    padding-top: 12px;
+  }
+
+  .site-nav-collapsed .app-nav-link {
+    grid-template-columns: 38px minmax(0, 1fr);
+    justify-content: stretch;
+    padding-inline: 8px;
+  }
+
+  .site-nav-mobile-open .app-sidebar {
+    transform: translateX(0);
+  }
+
+  .site-nav-mobile-open .app-sidebar-overlay {
+    display: block;
+  }
+
+  .site-menu-button {
+    display: inline-grid;
+  }
+
+  .site-shell-enabled .masthead-main:not(:has(.global-search)) {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .site-shell-enabled .masthead-actions > #mobileNavBtn {
+    display: none;
+  }
+
+  .site-shell-enabled .masthead-main:has(.global-search) {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "brand actions"
+      "search search";
+  }
+}
+
+/* Mortal Nexus workspace theme */
+:root {
+  --app-sidebar-wide: 252px;
+  --app-sidebar-rail: 64px;
+}
+
+.site-shell-enabled {
+  --page-surface: #121614;
+  --page-surface-raised: #171b19;
+  --page-line: #2c332f;
+  background: #0d100f;
+  color: #e8e6df;
+}
+
+.site-shell-enabled :is(h1, h2, h3),
+.site-shell-enabled :is(
+  .furnace-intro,
+  .refining-intro,
+  .butchery-intro,
+  .alchemy-intro,
+  .cooking-intro,
+  .reverse-intro,
+  .building-intro,
+  .pets-intro,
+  .crafting-intro,
+  .tool-titlebar
+) h1 {
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  font-size: 34px;
+  font-weight: 650;
+}
+
+.site-shell-enabled .masthead {
+  border-bottom: 1px solid #2b312e;
+  background: rgb(14 17 16 / 96%);
+  backdrop-filter: blur(10px);
+}
+
+.site-shell-enabled .masthead-main {
+  min-height: 62px;
+  padding-block: 10px;
+}
+
+.site-shell-enabled .global-search {
+  height: 40px;
+  border-color: #363e39;
+  border-radius: 3px;
+  background: #121614;
+  transition: border-color 130ms ease, background 130ms ease;
+}
+
+.site-shell-enabled .global-search:focus-within {
+  border-color: #8e7857;
+  background: #171b19;
+}
+
+.site-shell-enabled .category-strip {
+  min-height: 38px;
+  border-top: 1px solid #222724;
+}
+
+.site-shell-enabled .category-tab {
+  font-size: 12px;
+  transition: color 120ms ease, background 120ms ease;
+}
+
+.site-shell-enabled .category-tab:hover {
+  background: #151917;
+}
+
+.app-sidebar {
+  border-right-color: #2a302d;
+  background: #0a0d0c;
+  box-shadow: none;
+}
+
+.app-sidebar::before {
+  height: 2px;
+  background: #b88852;
+}
+
+.app-sidebar-head {
+  min-height: 66px;
+  border-bottom-color: #252b28;
+  padding: 10px 11px;
+}
+
+.app-sidebar-brand {
+  gap: 10px;
+}
+
+.app-sidebar-brand img {
+  flex-basis: 38px;
+  width: 38px;
+  height: 38px;
+}
+
+.app-sidebar-brand-copy strong {
+  font: 650 15px/1.15 "Segoe UI", system-ui, sans-serif;
+}
+
+.app-sidebar-brand-copy small {
+  color: #78817c;
+  font-size: 8.5px;
+  font-weight: 650;
+}
+
+.app-sidebar-toggle,
+.site-menu-button {
+  width: 34px;
+  height: 34px;
+  flex-basis: 34px;
+  border-color: #303733;
+  border-radius: 3px;
+  background: #101412;
+  color: #aeb4b0;
+  transition: border-color 120ms ease, background 120ms ease, color 120ms ease;
+}
+
+.app-sidebar-toggle:hover,
+.site-menu-button:hover {
+  border-color: #756447;
+  background: #171b19;
+  color: #eeeae1;
+}
+
+.app-sidebar-body {
+  padding: 12px 8px 18px;
+}
+
+.app-nav-section + .app-nav-section {
+  margin-top: 11px;
+  padding-top: 10px;
+  border-top-color: #202522;
+}
+
+.app-nav-section-title {
+  height: 21px;
+  padding-inline: 9px;
+  color: #69716c;
+  font-size: 8.5px;
+  line-height: 21px;
+}
+
+.app-nav-link {
+  min-height: 46px;
+  grid-template-columns: 32px minmax(0, 1fr);
+  gap: 8px;
+  margin: 1px 0;
+  border: 0;
+  border-radius: 2px;
+  padding: 5px 8px;
+  color: #b8bdb9;
+  transition: background 120ms ease, color 120ms ease;
+}
+
+.app-nav-link::before {
+  inset: 7px auto 7px 0;
+  width: 2px;
+  border-radius: 0;
+}
+
+.app-nav-link:hover {
+  border-color: transparent;
+  background: #141816;
+  color: #ece9e2;
+}
+
+.app-nav-link.active {
+  border-color: transparent;
+  background: #191d1b;
+  color: #f3f0e9;
+}
+
+.app-nav-icon {
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 3px;
+  background: transparent;
+  color: color-mix(in srgb, var(--nav-accent) 72%, #9ca49f);
+  transition: background 120ms ease, color 120ms ease, transform 120ms ease;
+}
+
+.app-nav-link:hover .app-nav-icon,
+.app-nav-link.active .app-nav-icon {
+  background: color-mix(in srgb, var(--nav-accent) 12%, #151917);
+  color: color-mix(in srgb, var(--nav-accent) 86%, #d9ddd9);
+  transform: translateX(1px);
+}
+
+.app-nav-icon svg {
+  width: 17px;
+  height: 17px;
+  stroke-width: 1.7;
+}
+
+.app-nav-copy strong {
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.app-nav-copy small {
+  display: block;
+  margin-top: 1px;
+  overflow: hidden;
+  color: #747d77;
+  font-size: 9px;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+}
+
+.app-sidebar-foot {
+  border-top-color: #252b28;
+  padding: 8px;
+}
+
+.site-nav-collapsed .app-nav-link {
+  grid-template-columns: 32px;
+}
+
+.site-shell-enabled :is(
+  .furnace-intro,
+  .refining-intro,
+  .butchery-intro,
+  .alchemy-intro,
+  .cooking-intro,
+  .reverse-intro,
+  .building-intro,
+  .pets-intro,
+  .crafting-intro,
+  .tool-titlebar
+) {
+  padding-bottom: 18px;
+}
+
+.site-shell-enabled :is(
+  .furnace-intro,
+  .refining-intro,
+  .butchery-intro,
+  .alchemy-intro,
+  .cooking-intro,
+  .reverse-intro,
+  .building-intro,
+  .pets-intro,
+  .crafting-intro,
+  .tool-titlebar
+)::after {
+  width: 42px;
+  height: 1px;
+}
+
+.site-shell-enabled :is(
+  .crafting-workbench,
+  .calculator-shell,
+  .refining-shell,
+  .butchery-shell,
+  .alchemy-shell,
+  .cooking-workbench,
+  .reverse-tool,
+  .building-planner,
+  .pet-planner,
+  .builder-shell,
+  .shambles-layout
+) {
+  border-color: var(--page-line);
+  background: var(--page-surface);
+  box-shadow: none;
+}
+
+.site-shell-enabled main :is(select, input[type="text"], input[type="search"], input[type="number"], textarea) {
+  border-color: #38413c;
+  border-radius: 3px;
+  background-color: #111513;
+  color: #ebe8e0;
+  transition: border-color 120ms ease, background 120ms ease;
+}
+
+.site-shell-enabled main :is(select, input, textarea):focus {
+  border-color: color-mix(in srgb, var(--page-accent) 65%, #5c655f);
+  background-color: #171b19;
+  outline: 0;
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--page-accent) 15%, transparent);
+}
+
+.site-shell-enabled main :is(button, a, select) {
+  transition: border-color 120ms ease, background 120ms ease, color 120ms ease, transform 120ms ease;
+}
+
+.site-shell-enabled main :is(.primary-command, .forge-command, .tool-button.primary) {
+  border-color: color-mix(in srgb, var(--page-accent) 68%, #343a36);
+  background: color-mix(in srgb, var(--page-accent) 38%, #202522);
+  color: #f5f1e8;
+  box-shadow: none;
+}
+
+.site-shell-enabled main :is(.primary-command, .forge-command, .tool-button.primary):hover:not(:disabled) {
+  background: color-mix(in srgb, var(--page-accent) 50%, #202522);
+  transform: translateY(-1px);
+}
+
+.marshal-footer {
+  min-height: 52px;
+  margin-top: 28px;
+  border-top-color: #292f2c;
+  padding: 16px 0 0;
+  color: #707872;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: none;
+}
+
+.site-shell-enabled .main-content {
+  padding: 34px 40px 26px;
+}
+
+.site-shell-enabled :is(.directory-view, .browse-view, .site-footer) {
+  max-width: 1180px;
+}
+
+.site-shell-enabled .intro {
+  max-width: 820px;
+  margin-bottom: 38px;
+}
+
+.site-shell-enabled .intro h1 {
+  max-width: 760px;
+  margin-bottom: 12px;
+  font-size: 42px;
+  line-height: 1.08;
+}
+
+.site-shell-enabled .intro-copy {
+  max-width: 720px;
+  margin-bottom: 18px;
+  color: #afb5b0;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.site-shell-enabled :is(.kicker, .eyebrow, .tool-kicker) {
+  font-size: 9px;
+  font-weight: 750;
+}
+
+.site-shell-enabled :is(.search-shortcut, .filter-pill) {
+  border-color: #303733;
+  border-radius: 3px;
+  background: #111513;
+  color: #9da49f;
+}
+
+.site-shell-enabled .search-shortcut:hover {
+  border-color: #756447;
+  background: #171b19;
+  color: #e7e4dc;
+  transform: translateY(-1px);
+}
+
+.site-shell-enabled .section-rule {
+  min-height: 43px;
+  border-bottom-color: #353d38;
+}
+
+.site-shell-enabled .section-rule h2 {
+  margin-bottom: 11px;
+  font-size: 19px;
+  font-weight: 650;
+}
+
+.site-shell-enabled .category-directory {
+  column-gap: 44px;
+}
+
+.site-shell-enabled .directory-group {
+  padding: 23px 0 20px;
+  border-bottom-color: #292f2c;
+}
+
+.site-shell-enabled .directory-group-head {
+  grid-template-columns: 2px minmax(0, 1fr);
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.site-shell-enabled .directory-accent {
+  width: 2px;
+  min-height: 42px;
+}
+
+.site-shell-enabled .directory-group h3 {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 650;
+}
+
+.site-shell-enabled .directory-group-head p {
+  color: #828a84;
+  font-size: 12px;
+}
+
+.site-shell-enabled .directory-link {
+  min-height: 39px;
+  border-top-color: #252b28;
+  padding: 8px 6px;
+  color: #b7bcb7;
+}
+
+.site-shell-enabled .directory-link:hover {
+  padding-left: 10px;
+  padding-right: 8px;
+  background: #141816;
+  color: #edeae2;
+}
+
+.site-shell-enabled .browse-header {
+  min-height: 84px;
+  padding-bottom: 19px;
+  border-bottom-color: #353d38;
+}
+
+.site-shell-enabled .browse-header h1 {
+  margin-bottom: 6px;
+  font-size: 30px;
+  font-weight: 650;
+}
+
+.site-shell-enabled .record-row {
+  min-height: 88px;
+  border-bottom-color: #292f2c;
+  padding-block: 13px;
+}
+
+.site-shell-enabled .record-row:hover {
+  background: #141816;
+}
+
+.site-shell-enabled .record-title {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.site-shell-enabled .tool-main {
+  width: min(1460px, calc(100% - 34px));
+  padding: 22px 0 34px;
+}
+
+.site-shell-enabled .tool-titlebar {
+  min-height: 66px;
+}
+
+.site-shell-enabled .tool-titlebar h1 {
+  font-size: 27px;
+  line-height: 1.12;
+}
+
+.site-shell-enabled .tool-titlebar p {
+  color: #858d87;
+  font-size: 11px;
+}
+
+.site-shell-enabled :is(.tool-button, .tool-icon-button) {
+  border-color: #353d38;
+  border-radius: 3px;
+  background: #111513;
+}
+
+.site-shell-enabled .tool-button {
+  font-size: 10.5px;
+  font-weight: 650;
+  text-transform: none;
+}
+
+.site-shell-enabled :is(.tool-button, .tool-icon-button):hover {
+  border-color: color-mix(in srgb, var(--page-accent) 55%, #414843);
+  background: #181d1a;
+  transform: translateY(-1px);
+}
+
+.site-shell-enabled .tool-rail {
+  border-color: #2d3430;
+  background: #0f1311;
+}
+
+.site-shell-enabled .tool-tab {
+  min-height: 44px;
+  border-right-color: #282f2b;
+}
+
+.site-shell-enabled .tool-tab.active {
+  background: #171b19;
+  color: #e9e5dd;
+}
+
+.site-shell-enabled .tool-grid {
+  border-color: #2d3430;
+  background: #121614;
+}
+
+.site-shell-enabled .tool-column {
+  padding: 17px;
+}
+
+.site-shell-enabled .tool-column + .tool-column {
+  border-left-color: #2d3430;
+}
+
+.site-shell-enabled .tool-column-title {
+  border-bottom-color: #303733;
+  color: color-mix(in srgb, var(--page-accent-soft) 78%, #b8beb9);
+}
+
+.site-shell-enabled .metric-grid {
+  border-color: #303733;
+}
+
+.site-shell-enabled .metric strong {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 650;
+}
+
+.site-shell-enabled .tool-list-button {
+  border-color: #2d3430;
+  border-radius: 3px;
+  background: #101412;
+}
+
+.site-shell-enabled .tool-list-button:hover,
+.site-shell-enabled .tool-list-button.active {
+  border-color: color-mix(in srgb, var(--page-accent) 52%, #3b433e);
+  background: #181d1a;
+}
+
+@media (max-width: 720px) {
+  .site-shell-enabled .main-content {
+    padding: 24px 18px;
+  }
+
+  .site-shell-enabled .category-directory {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Readability and visual identity correction */
+:root {
+  --app-sidebar-wide: 268px;
+  --app-sidebar-rail: 68px;
+}
+
+body.site-shell-enabled {
+  background: #0d0e10;
+  color: #f0ede5;
+  font-size: 16px;
+}
+
+.site-shell-enabled {
+  --page-surface: #141619;
+  --page-surface-raised: #1a1c20;
+  --page-line: #35383d;
+}
+
+.site-shell-enabled .masthead {
+  border-bottom-color: #383a40;
+  background: rgb(14 15 17 / 97%);
+}
+
+.site-shell-enabled .masthead-main {
+  min-height: 68px;
+  padding-block: 12px;
+}
+
+.site-shell-enabled .global-search {
+  height: 44px;
+  border-color: #44474e;
+  background: #15171a;
+}
+
+.site-shell-enabled .global-search input {
+  color: #f0ede5;
+  font-size: 15px;
+}
+
+.site-shell-enabled .global-search input::placeholder {
+  color: #8f9298;
+}
+
+.site-shell-enabled .category-strip {
+  min-height: 44px;
+  border-top-color: #292b30;
+}
+
+.site-shell-enabled .category-tab {
+  padding-inline: 16px;
+  color: #a7a9ad;
+  font-size: 14px;
+}
+
+.site-shell-enabled .category-tab:hover,
+.site-shell-enabled .category-tab.active {
+  background: #17191c;
+  color: #f2efe8;
+}
+
+.site-shell-enabled .category-tab.active {
+  border-bottom-color: #c8a364;
+}
+
+.app-sidebar {
+  border-right-color: #383a40;
+  background: #0c0d0f;
+}
+
+.app-sidebar::before {
+  height: 3px;
+  background: #b94649;
+}
+
+.app-sidebar-head {
+  min-height: 72px;
+  border-bottom-color: #2e3035;
+  padding: 11px 12px;
+}
+
+.app-sidebar-brand img {
+  flex-basis: 42px;
+  width: 42px;
+  height: 42px;
+}
+
+.app-sidebar-brand-copy strong {
+  color: #f4f0e8;
+  font: 700 18px/1.15 Georgia, "Times New Roman", serif;
+}
+
+.app-sidebar-brand-copy small {
+  margin-top: 4px;
+  color: #9a9ca0;
+  font-size: 11px;
+}
+
+.app-sidebar-toggle,
+.site-menu-button {
+  width: 38px;
+  height: 38px;
+  flex-basis: 38px;
+  border-color: #44474d;
+  background: #17191c;
+  color: #d1d1cf;
+}
+
+.app-sidebar-body {
+  padding: 14px 9px 20px;
+}
+
+.app-nav-section + .app-nav-section {
+  margin-top: 14px;
+  padding-top: 13px;
+  border-top-color: #2c2e32;
+}
+
+.app-nav-section-title {
+  height: 25px;
+  padding-inline: 10px;
+  color: #8b8d91;
+  font-size: 11px;
+  line-height: 25px;
+}
+
+.app-nav-link {
+  min-height: 58px;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 10px;
+  margin-block: 2px;
+  padding: 7px 9px;
+  color: #d0cfcb;
+}
+
+.app-nav-link::before {
+  inset-block: 6px;
+  width: 3px;
+  background: #c14e50;
+}
+
+.app-nav-link:hover {
+  background: #181a1d;
+  color: #ffffff;
+}
+
+.app-nav-link.active {
+  background: #21191b;
+  color: #fff8ef;
+}
+
+.app-nav-icon {
+  width: 34px;
+  height: 34px;
+  color: #c5a56f;
+}
+
+.app-nav-link:hover .app-nav-icon,
+.app-nav-link.active .app-nav-icon {
+  background: #2c2021;
+  color: #e0b46d;
+}
+
+.app-nav-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.9;
+}
+
+.app-nav-copy strong {
+  color: inherit;
+  font-size: 15px;
+  font-weight: 680;
+  line-height: 1.25;
+}
+
+.app-nav-copy small {
+  margin-top: 3px;
+  color: #94969a;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.app-sidebar-foot {
+  border-top-color: #33353a;
+  padding: 10px 9px;
+}
+
+.app-sidebar-foot .app-nav-link {
+  min-height: 58px;
+  border-color: #e05b5e;
+  background: #8f3034;
+  box-shadow: inset 4px 0 #ff7275;
+}
+
+.app-sidebar-foot .app-nav-link:hover {
+  border-color: #ff7a7c;
+  background: #aa393d;
+}
+
+.app-sidebar-foot .app-nav-link .app-nav-icon {
+  background: #b94347;
+  color: #ffffff;
+}
+
+.app-sidebar-foot .app-nav-link .app-nav-copy small {
+  color: #f2c7c5;
+}
+
+.site-nav-collapsed .app-nav-link {
+  grid-template-columns: 36px;
+}
+
+.site-shell-enabled .main-content {
+  padding: 46px 52px 32px;
+}
+
+.site-shell-enabled .intro {
+  max-width: 900px;
+  margin-bottom: 48px;
+}
+
+.site-shell-enabled .intro h1,
+.site-shell-enabled :is(
+  .furnace-intro,
+  .refining-intro,
+  .butchery-intro,
+  .alchemy-intro,
+  .cooking-intro,
+  .reverse-intro,
+  .building-intro,
+  .pets-intro,
+  .crafting-intro,
+  .tool-titlebar
+) h1 {
+  color: #f3eee3;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+.site-shell-enabled .intro-copy {
+  max-width: 780px;
+  color: #c9c6be;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.site-shell-enabled :is(.kicker, .eyebrow, .tool-kicker) {
+  color: #d0a55f;
+  font-size: 12px;
+}
+
+.site-shell-enabled :is(.search-shortcut, .filter-pill) {
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  border-color: #41444a;
+  background: #15171a;
+  color: #c4c2bc;
+  font-size: 14px;
+}
+
+.site-shell-enabled .section-rule {
+  min-height: 52px;
+  border-bottom-color: #45484f;
+}
+
+.site-shell-enabled .section-rule h2 {
+  margin-bottom: 14px;
+  color: #eee9df;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 27px;
+  font-weight: 600;
+}
+
+.site-shell-enabled .section-rule span {
+  color: #9da0a5;
+  font-size: 14px;
+}
+
+.site-shell-enabled .category-directory {
+  column-gap: 54px;
+}
+
+.site-shell-enabled .directory-group {
+  padding: 29px 0 25px;
+  border-bottom-color: #34373c;
+}
+
+.site-shell-enabled .directory-group-head {
+  grid-template-columns: 11px minmax(0, 1fr);
+  gap: 13px;
+  margin-bottom: 17px;
+}
+
+.site-shell-enabled .directory-accent {
+  width: 9px;
+  min-height: 9px;
+  margin-top: 7px;
+  transform: rotate(45deg);
+}
+
+.site-shell-enabled .directory-group h3 {
+  color: #eee9df;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.site-shell-enabled .directory-group-head p {
+  color: #a9a8a3;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.site-shell-enabled .directory-link {
+  min-height: 46px;
+  border-top-color: #32353a;
+  padding: 10px 8px;
+  color: #d0cec8;
+  font-size: 16px;
+}
+
+.site-shell-enabled .directory-link:hover {
+  background: #181a1d;
+  color: #ffffff;
+}
+
+.site-shell-enabled .browse-header {
+  min-height: 98px;
+  padding-bottom: 24px;
+}
+
+.site-shell-enabled .browse-header h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 40px;
+}
+
+.site-shell-enabled :is(.result-count, .record-subtitle, .record-fact span) {
+  font-size: 14px;
+}
+
+.site-shell-enabled .record-row {
+  min-height: 100px;
+}
+
+.site-shell-enabled .record-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.site-shell-enabled .record-type,
+.site-shell-enabled .record-fact b,
+.site-shell-enabled .detail-field dt {
+  font-size: 11px;
+}
+
+.site-shell-enabled .tool-main {
+  padding-top: 30px;
+}
+
+.site-shell-enabled .tool-titlebar {
+  min-height: 86px;
+}
+
+.site-shell-enabled .tool-titlebar p,
+.site-shell-enabled :is(
+  .furnace-intro,
+  .refining-intro,
+  .butchery-intro,
+  .alchemy-intro,
+  .cooking-intro,
+  .reverse-intro,
+  .building-intro,
+  .pets-intro,
+  .crafting-intro
+) p {
+  color: #b8b6b0;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.site-shell-enabled :is(.tool-button, .tool-icon-button) {
+  min-height: 40px;
+  border-color: #44474d;
+  background: #181a1d;
+  color: #e3e0d9;
+}
+
+.site-shell-enabled .tool-button {
+  padding-inline: 15px;
+  font-size: 13px;
+}
+
+.site-shell-enabled .tool-tab {
+  min-height: 52px;
+}
+
+.site-shell-enabled .tool-tab span {
+  font-size: 10px;
+}
+
+.site-shell-enabled .tool-tab strong {
+  font-size: 14px;
+}
+
+.site-shell-enabled .tool-column-title,
+.site-shell-enabled .tool-field > span,
+.site-shell-enabled .tool-label,
+.site-shell-enabled .metric span,
+.site-shell-enabled .data-table th {
+  font-size: 11px;
+}
+
+.site-shell-enabled .tool-section h2,
+.site-shell-enabled .tool-section h3 {
+  font-size: 16px;
+}
+
+.site-shell-enabled .tool-section-copy,
+.site-shell-enabled .status-line,
+.site-shell-enabled .tool-list-button small,
+.site-shell-enabled .data-table {
+  font-size: 13px;
+}
+
+.site-shell-enabled .tool-field :is(select, input[type="number"], input[type="text"], input[type="search"], textarea) {
+  min-height: 42px;
+  font-size: 15px;
+}
+
+.site-shell-enabled .tool-list-button {
+  min-height: 48px;
+}
+
+.site-shell-enabled .tool-list-button strong {
+  font-size: 14px;
+}
+
+.site-shell-enabled .metric {
+  min-height: 76px;
+}
+
+.site-shell-enabled .metric strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+}
+
+.site-shell-enabled .marshal-footer {
+  color: #97999d;
+  font-size: 12px;
+}
+
+.site-shell-enabled.dungeons-page :is(.dungeon-titlebar h1, .dungeon-detail-header h2) {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.site-shell-enabled.dungeons-page .dungeon-titlebar h1 {
+  font-size: 48px;
+}
+
+.site-shell-enabled.dungeons-page .dungeon-titlebar p,
+.site-shell-enabled.dungeons-page .dungeon-summary {
+  font-size: 15px;
+}
+
+.site-shell-enabled.dungeons-page .dungeon-list-name {
+  font-size: 17px;
+}
+
+.site-shell-enabled.dungeons-page :is(.dungeon-list-location, .dungeon-list-meta, .dungeon-detail-header p) {
+  font-size: 12px;
+}
+
+.site-shell-enabled.dungeons-page .dungeon-detail-header h2 {
+  font-size: 36px;
+}
+
+.site-shell-enabled.dungeons-page :is(.floor-tab, .intel-list li, .dungeon-sources li, .dungeon-legend-item) {
+  font-size: 13px;
+}
+
+@media (max-width: 1100px) {
+  .site-shell-enabled .main-content {
+    padding: 38px 34px 28px;
+  }
+
+  .site-shell-enabled .intro h1 {
+    font-size: 42px;
+  }
+
+  .site-shell-enabled.dungeons-page .dungeon-titlebar h1 {
+    font-size: 42px;
+  }
+
+  .site-shell-enabled.dungeons-page .dungeon-detail-header h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 720px) {
+  .site-shell-enabled .main-content {
+    padding: 28px 20px;
+  }
+
+  .site-shell-enabled .intro h1 {
+    font-size: 36px;
+  }
+
+  .site-shell-enabled.dungeons-page .dungeon-titlebar h1 {
+    font-size: 36px;
+  }
+
+  .site-shell-enabled.dungeons-page .dungeon-detail-header h2 {
+    font-size: 28px;
+  }
+
+  .site-shell-enabled .category-directory {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Forged medieval interface */
+.site-shell-enabled {
+  --forge-void: #080909;
+  --forge-iron: #111315;
+  --forge-steel: #20242a;
+  --forge-steel-light: #353b43;
+  --forge-brass: #b59052;
+  --forge-brass-light: #ddc48f;
+  --forge-ember: #c55035;
+  --forge-ember-light: #ee7857;
+  --forge-parchment: #eee5d2;
+  --forge-muted: #aaa596;
+  --page-accent: var(--forge-brass);
+  --page-accent-soft: var(--forge-brass-light);
+  --page-surface: #111315;
+  --page-surface-raised: #181b1f;
+  --page-line: #3a3c3b;
+  color-scheme: dark;
+  font-family: "Segoe UI Variable Text", "Segoe UI", Arial, sans-serif;
+}
+
+.site-second-screen-control {
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  flex: 0 0 auto;
+  border: 1px solid #344157;
+  border-radius: 3px;
+  background: #070b12;
+  box-shadow: inset 0 1px rgb(255 255 255 / 3%);
+}
+.site-window-opacity-control,
+.site-application-scale-control {
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex: 0 0 auto;
+  padding: 0 8px;
+  border: 1px solid #344157;
+  border-radius: 3px;
+  background: #070b12;
+  color: #aebdcb;
+}
+.site-window-opacity-control svg,
+.site-application-scale-control svg { width: 15px; height: 15px; color: #42d5dc; }
+.site-window-opacity-control input[type="range"],
+.site-application-scale-control input[type="range"] { width: 76px; accent-color: #24c9d2; cursor: pointer; }
+.site-window-opacity-control output,
+.site-application-scale-control output { min-width: 34px; color: #dce7f3; font: 700 11px/1 "Segoe UI", sans-serif; text-align: right; }
+.site-second-screen-control[data-enabled="true"] {
+  border-color: #238f9a;
+  box-shadow: inset 0 0 16px rgb(35 204 216 / 7%), 0 0 13px rgb(35 204 216 / 10%);
+}
+.site-second-screen-toggle {
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 9px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.site-second-screen-toggle input {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.site-second-screen-toggle strong { color: #dce7f3; font: 700 12px/1 "Segoe UI", sans-serif; }
+.site-second-screen-switch {
+  position: relative;
+  width: 42px;
+  height: 22px;
+  flex: 0 0 42px;
+  border: 1px solid #4b5a6a;
+  border-radius: 999px;
+  background: #202a35;
+  transition: border-color 140ms ease, background 140ms ease, box-shadow 140ms ease;
+}
+.site-second-screen-switch > span {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #d5dce4;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 55%);
+  transition: transform 150ms ease, background 150ms ease;
+}
+.site-second-screen-toggle input:checked + .site-second-screen-switch {
+  border-color: #27d0da;
+  background: #14aeb9;
+  box-shadow: 0 0 12px rgb(39 208 218 / 34%);
+}
+.site-second-screen-toggle input:checked + .site-second-screen-switch > span {
+  transform: translateX(20px);
+  background: #f3ffff;
+}
+.site-second-screen-toggle input:focus-visible + .site-second-screen-switch {
+  outline: 2px solid #72b8ff;
+  outline-offset: 2px;
+}
+.site-second-screen-control select {
+  width: 108px;
+  height: 100%;
+  border: 0;
+  border-left: 1px solid #283448;
+  padding: 0 22px 0 7px;
+  outline: 0;
+  color: #cbd7e3;
+  background: #070b12;
+  font: 600 11px/1 "Segoe UI", sans-serif;
+}
+
+@media (max-width: 1240px) {
+  .site-second-screen-control select { display: none; }
+  .site-second-screen-toggle strong { display: none; }
+  .site-window-opacity-control input[type="range"], .site-application-scale-control input[type="range"] { width: 58px; }
+  .site-window-opacity-control output, .site-application-scale-control output { display: none; }
+}
+
+@media (max-width: 760px) {
+  .site-global-toolbar { padding-inline: 8px; }
+  .site-global-toolbar-label { display: none; }
+  .site-second-screen-toggle strong { display: none; }
+  .site-window-opacity-control, .site-application-scale-control { padding-inline: 6px; }
+  .site-window-opacity-control svg, .site-application-scale-control svg { display: none; }
+  .site-window-opacity-control input[type="range"], .site-application-scale-control input[type="range"] { width: 46px; }
+  .site-global-tool-links a { padding-inline: 7px; }
+  .site-global-tool-links a span { display: none; }
+}
+
+.site-shell-enabled.furnace-page,
+.site-shell-enabled.crafting-page,
+.site-shell-enabled.dungeons-page {
+  --page-accent: #c55035;
+  --page-accent-soft: #ee8a6d;
+}
+
+.site-shell-enabled.refining-page,
+.site-shell-enabled.builder-page {
+  --page-accent: #9ca8b5;
+  --page-accent-soft: #d3d9df;
+}
+
+.site-shell-enabled.alchemy-page,
+.site-shell-enabled.pets-page,
+.site-shell-enabled.shambles-page {
+  --page-accent: #87966a;
+  --page-accent-soft: #c0cba4;
+}
+
+.site-shell-enabled.cooking-page,
+.site-shell-enabled.building-page,
+.site-shell-enabled.butchery-page {
+  --page-accent: #b59052;
+  --page-accent-soft: #ddc48f;
+}
+
+body.site-shell-enabled {
+  background-color: var(--forge-void);
+  background-image:
+    repeating-linear-gradient(115deg, rgb(255 255 255 / 1.2%) 0, rgb(255 255 255 / 1.2%) 1px, transparent 1px, transparent 7px),
+    linear-gradient(180deg, #0c0e10 0, #080909 420px);
+  color: var(--forge-parchment);
+}
+
+.site-shell-enabled :is(h1, h2, h3, strong, button, a, label, input, select, textarea) {
+  letter-spacing: 0;
+}
+
+.site-shell-enabled :is(
+  .intro h1,
+  .browse-header h1,
+  .tool-titlebar h1,
+  .furnace-intro h1,
+  .refining-intro h1,
+  .butchery-intro h1,
+  .alchemy-intro h1,
+  .cooking-intro h1,
+  .reverse-intro h1,
+  .building-intro h1,
+  .pets-intro h1,
+  .crafting-intro h1,
+  .dungeon-titlebar h1,
+  .dungeon-detail-header h2
+) {
+  color: #f3ead7;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  font-weight: 700;
+  text-shadow: 0 2px 0 #000000, 0 0 18px color-mix(in srgb, var(--page-accent) 15%, transparent);
+}
+
+.site-shell-enabled .masthead {
+  border-bottom: 1px solid #51462f;
+  background:
+    repeating-linear-gradient(90deg, rgb(255 255 255 / 1.5%) 0, rgb(255 255 255 / 1.5%) 1px, transparent 1px, transparent 6px),
+    #0d0f11;
+  box-shadow: 0 8px 28px rgb(0 0 0 / 42%), inset 0 -1px #191a19;
+}
+
+.site-shell-enabled .masthead::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 4%, #6e5732 30%, #c5a366 50%, #6e5732 70%, transparent 96%);
+  pointer-events: none;
+}
+
+.site-shell-enabled .global-search {
+  border-color: #46443d;
+  border-radius: 3px;
+  background: #090a0b;
+  box-shadow: inset 0 1px 4px #000000, inset 0 0 0 1px rgb(255 255 255 / 2%);
+  transition: border-color 150ms ease, box-shadow 150ms ease, background 150ms ease;
+}
+
+.site-shell-enabled .global-search:focus-within {
+  border-color: var(--forge-brass);
+  background: #101113;
+  box-shadow: inset 0 1px 4px #000000, 0 0 0 2px rgb(181 144 82 / 10%), 0 0 18px rgb(181 144 82 / 10%);
+}
+
+.site-shell-enabled .global-search input {
+  color: #eee8dc;
+}
+
+.site-shell-enabled .global-search input::placeholder {
+  color: #827e74;
+}
+
+.site-shell-enabled .category-strip {
+  border-top-color: #272826;
+  background: #0a0b0c;
+  box-shadow: inset 0 1px rgb(255 255 255 / 2%);
+}
+
+.site-shell-enabled .category-tab {
+  position: relative;
+  color: #aaa69c;
+  transition: color 140ms ease, background 140ms ease;
+}
+
+.site-shell-enabled .category-tab:hover,
+.site-shell-enabled .category-tab.active {
+  background: #151617;
+  color: #f3ead7;
+}
+
+.site-shell-enabled .category-tab.active {
+  border-bottom-color: var(--forge-brass);
+  text-shadow: 0 0 10px rgb(181 144 82 / 28%);
+}
+
+.app-sidebar {
+  border-right-color: #4b4434;
+  background:
+    repeating-linear-gradient(100deg, rgb(255 255 255 / 1.2%) 0, rgb(255 255 255 / 1.2%) 1px, transparent 1px, transparent 7px),
+    #0c0e0f;
+  box-shadow: 12px 0 34px rgb(0 0 0 / 36%), inset -1px 0 #161819;
+}
+
+.app-sidebar::before {
+  height: 3px;
+  background: #9b763d;
+  box-shadow: 0 0 13px rgb(155 118 61 / 38%);
+}
+
+.app-sidebar-head {
+  border-bottom-color: #494231;
+  background: #0f1113;
+  box-shadow: inset 0 -1px #171819;
+}
+
+.app-sidebar-brand img {
+  filter: drop-shadow(0 2px 2px #000000) drop-shadow(0 0 6px rgb(181 144 82 / 24%));
+  transition: filter 150ms ease, transform 150ms ease;
+}
+
+.app-sidebar-brand:hover img {
+  filter: drop-shadow(0 2px 2px #000000) drop-shadow(0 0 10px rgb(197 80 53 / 32%));
+  transform: translateY(-1px);
+}
+
+.app-sidebar-brand-copy strong {
+  color: #efe3ca;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  font-weight: 700;
+  text-shadow: 0 1px #000000;
+}
+
+.app-sidebar-brand-copy small,
+.app-nav-copy small,
+.app-nav-section-title {
+  color: #8f8b81;
+}
+
+.app-sidebar-toggle,
+.site-menu-button {
+  border-color: #4a4b48;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #23262a, #131517);
+  color: #c3c1b9;
+  box-shadow: inset 0 1px rgb(255 255 255 / 7%), 0 1px 2px #000000;
+  transition: color 140ms ease, border-color 140ms ease, box-shadow 140ms ease, transform 140ms ease;
+}
+
+.app-sidebar-toggle:hover,
+.site-menu-button:hover {
+  border-color: var(--forge-brass);
+  color: #fff4dc;
+  box-shadow: inset 0 1px rgb(255 255 255 / 8%), 0 0 12px rgb(181 144 82 / 14%);
+  transform: translateY(-1px);
+}
+
+.app-nav-section + .app-nav-section,
+.app-sidebar-foot {
+  border-color: #30312e;
+}
+
+.app-nav-section-title {
+  font-weight: 700;
+}
+
+.app-nav-link {
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: #c7c3b8;
+  transition: color 130ms ease, background 130ms ease, border-color 130ms ease, box-shadow 130ms ease, transform 130ms ease;
+}
+
+.app-nav-link::before {
+  inset-block: 8px;
+  width: 3px;
+  border-radius: 0;
+  background: var(--forge-ember);
+  box-shadow: 0 0 9px rgb(197 80 53 / 32%);
+}
+
+.app-nav-link::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #555650;
+  box-shadow: 0 0 0 1px #090a0a;
+}
+
+.app-nav-link:hover {
+  border-color: #464740;
+  background: linear-gradient(90deg, #1a1c1f, #111315);
+  color: #f0e9da;
+  transform: translateX(2px);
+}
+
+.app-nav-link.active {
+  border-color: #76603a;
+  background: linear-gradient(90deg, #28231b, #151617);
+  color: #fff0cf;
+  box-shadow: inset 0 1px rgb(255 255 255 / 4%), inset 0 0 18px rgb(181 144 82 / 5%), 0 2px 5px rgb(0 0 0 / 28%);
+}
+
+.app-nav-link.active::after {
+  background: var(--forge-brass-light);
+  box-shadow: 0 0 5px rgb(221 196 143 / 42%), 0 0 0 1px #090a0a;
+}
+
+.app-nav-icon {
+  border: 1px solid #454743;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #22262a, #121416);
+  color: #b8a273;
+  box-shadow: inset 0 1px rgb(255 255 255 / 5%), 0 1px 2px #000000;
+}
+
+.app-nav-link:hover .app-nav-icon,
+.app-nav-link.active .app-nav-icon {
+  border-color: #80663a;
+  background: linear-gradient(180deg, #332a1d, #181717);
+  color: #e1c78f;
+  box-shadow: inset 0 1px rgb(255 255 255 / 5%), 0 0 10px rgb(181 144 82 / 10%);
+}
+
+.app-sidebar-foot .app-nav-link {
+  border-color: #a6402d;
+  background: linear-gradient(180deg, #531d17, #2d1110);
+  box-shadow: inset 3px 0 var(--forge-ember), inset 0 1px rgb(255 255 255 / 5%), 0 2px 5px #000000;
+}
+
+.app-sidebar-foot .app-nav-link:hover {
+  border-color: #da684e;
+  background: linear-gradient(180deg, #6b251c, #381411);
+  box-shadow: inset 3px 0 var(--forge-ember-light), 0 0 16px rgb(197 80 53 / 15%);
+}
+
+.app-sidebar-foot .app-nav-link .app-nav-icon {
+  border-color: #b74e37;
+  background: #5b2018;
+  color: #fff0e8;
+}
+
+.site-shell-enabled .intro {
+  position: relative;
+}
+
+.site-shell-enabled .intro::before {
+  content: "";
+  position: absolute;
+  top: -19px;
+  left: 0;
+  width: 92px;
+  height: 3px;
+  border-inline: 12px solid var(--forge-ember);
+  background: var(--forge-brass);
+  box-shadow: 0 1px #000000;
+}
+
+.site-shell-enabled .intro-copy,
+.site-shell-enabled .tool-titlebar p,
+.site-shell-enabled :is(
+  .furnace-intro,
+  .refining-intro,
+  .butchery-intro,
+  .alchemy-intro,
+  .cooking-intro,
+  .reverse-intro,
+  .building-intro,
+  .pets-intro,
+  .crafting-intro
+) p {
+  color: #b5afa2;
+}
+
+.site-shell-enabled :is(.kicker, .eyebrow, .tool-kicker) {
+  color: var(--page-accent-soft);
+  text-shadow: 0 1px #000000;
+}
+
+.site-shell-enabled :is(.search-shortcut, .filter-pill) {
+  border-color: #484843;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #1c1f22, #111315);
+  color: #c7c2b6;
+  box-shadow: inset 0 1px rgb(255 255 255 / 4%), 0 1px 2px #000000;
+  transition: border-color 130ms ease, color 130ms ease, transform 130ms ease;
+}
+
+.site-shell-enabled :is(.search-shortcut, .filter-pill):hover {
+  border-color: var(--forge-brass);
+  color: #f7ead0;
+  transform: translateY(-1px);
+}
+
+.site-shell-enabled .section-rule {
+  border-bottom-color: #4f4736;
+  box-shadow: 0 1px #090909;
+}
+
+.site-shell-enabled .section-rule h2,
+.site-shell-enabled .directory-group h3,
+.site-shell-enabled .record-title {
+  color: #eee4d0;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  font-weight: 700;
+}
+
+.site-shell-enabled .directory-group {
+  border-bottom-color: #353633;
+}
+
+.site-shell-enabled .directory-group-head {
+  grid-template-columns: 5px minmax(0, 1fr);
+  gap: 15px;
+  align-items: start;
+}
+
+.site-shell-enabled .directory-accent {
+  width: 5px;
+  height: 34px;
+  min-height: 34px;
+  margin-top: 1px;
+  border: 1px solid #d0aa68;
+  border-radius: 0;
+  background: linear-gradient(180deg, #e0c38b, #8a652d) !important;
+  box-shadow: 1px 0 #000000, inset 1px 0 rgb(255 255 255 / 20%);
+  transform: none;
+}
+
+.site-shell-enabled .directory-group-head p,
+.site-shell-enabled .section-rule span {
+  color: #9e998e;
+}
+
+.site-shell-enabled .directory-link {
+  position: relative;
+  border-top-color: #333431;
+  color: #c8c3b8;
+  transition: color 130ms ease, background 130ms ease, padding 130ms ease;
+}
+
+.site-shell-enabled .directory-link:hover {
+  background: linear-gradient(90deg, rgb(181 144 82 / 10%), transparent 75%);
+  color: #fff0d2;
+  padding-left: 13px;
+}
+
+.site-shell-enabled .directory-link span:last-child {
+  color: var(--forge-brass-light);
+}
+
+.site-shell-enabled .record-row {
+  border-color: #41433f;
+  border-radius: 3px;
+  background:
+    repeating-linear-gradient(100deg, rgb(255 255 255 / 1%) 0, rgb(255 255 255 / 1%) 1px, transparent 1px, transparent 7px),
+    #121416;
+  box-shadow: inset 0 1px rgb(255 255 255 / 3%), 0 2px 5px rgb(0 0 0 / 22%);
+  transition: border-color 130ms ease, background 130ms ease, box-shadow 130ms ease, transform 130ms ease;
+}
+
+.site-shell-enabled .record-row:hover {
+  border-color: color-mix(in srgb, var(--page-accent) 58%, #55544d);
+  background-color: #191b1e;
+  box-shadow: inset 3px 0 var(--page-accent), inset 0 1px rgb(255 255 255 / 4%), 0 3px 7px rgb(0 0 0 / 30%);
+  transform: translateY(-1px);
+}
+
+.site-shell-enabled main :is(select, input[type="text"], input[type="search"], input[type="number"], textarea) {
+  border-color: #4a4b47;
+  border-radius: 3px;
+  background-color: #0b0d0e;
+  color: #eee8dc;
+  box-shadow: inset 0 1px 4px #000000;
+  transition: border-color 130ms ease, box-shadow 130ms ease, background 130ms ease;
+}
+
+.site-shell-enabled main :is(select, input, textarea):focus {
+  border-color: var(--page-accent);
+  outline: none;
+  background-color: #111315;
+  box-shadow: inset 0 1px 4px #000000, 0 0 0 2px color-mix(in srgb, var(--page-accent) 10%, transparent), 0 0 14px color-mix(in srgb, var(--page-accent) 9%, transparent);
+}
+
+.site-shell-enabled :is(.tool-button, .tool-icon-button),
+.site-shell-enabled main :is(.text-button, .icon-button, .load-more),
+.site-shell-enabled.dungeons-page :is(.map-tools button, .floor-tab) {
+  border-color: #4b4c48;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #24272a, #121416);
+  color: #ddd7ca;
+  box-shadow: inset 0 1px rgb(255 255 255 / 6%), 0 1px 2px #000000;
+  transition: border-color 130ms ease, color 130ms ease, background 130ms ease, box-shadow 130ms ease, transform 130ms ease;
+}
+
+.site-shell-enabled :is(.tool-button, .tool-icon-button):hover,
+.site-shell-enabled main :is(.text-button, .icon-button, .load-more):hover,
+.site-shell-enabled.dungeons-page :is(.map-tools button, .floor-tab):hover {
+  border-color: var(--page-accent);
+  background: linear-gradient(180deg, #303338, #181a1d);
+  color: #fff0d1;
+  box-shadow: inset 0 1px rgb(255 255 255 / 7%), 0 0 12px color-mix(in srgb, var(--page-accent) 10%, transparent);
+  transform: translateY(-1px);
+}
+
+.site-shell-enabled main :is(.primary-command, .forge-command, .tool-button.primary) {
+  border-color: var(--page-accent);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--page-accent) 43%, #27211a), color-mix(in srgb, var(--page-accent) 25%, #111315));
+  color: #fff4df;
+  box-shadow: inset 0 1px rgb(255 255 255 / 10%), 0 2px 4px #000000, 0 0 12px color-mix(in srgb, var(--page-accent) 8%, transparent);
+}
+
+.site-shell-enabled main :is(.primary-command, .forge-command, .tool-button.primary):hover:not(:disabled) {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--page-accent) 58%, #2d251b), color-mix(in srgb, var(--page-accent) 33%, #151617));
+  box-shadow: inset 0 1px rgb(255 255 255 / 12%), 0 2px 4px #000000, 0 0 16px color-mix(in srgb, var(--page-accent) 13%, transparent);
+}
+
+.site-shell-enabled :is(.tool-rail, .tool-grid, .tool-column, .metric-grid, .forge-sidebar, .forge-workspace) {
+  border-color: #444641;
+  background:
+    repeating-linear-gradient(105deg, rgb(255 255 255 / 1%) 0, rgb(255 255 255 / 1%) 1px, transparent 1px, transparent 8px),
+    #111315;
+  box-shadow: inset 0 1px rgb(255 255 255 / 3%);
+}
+
+.site-shell-enabled .tool-tab {
+  border-color: #393a37;
+  background: #0e1011;
+  color: #aaa69c;
+  transition: color 130ms ease, background 130ms ease, box-shadow 130ms ease;
+}
+
+.site-shell-enabled .tool-tab:hover,
+.site-shell-enabled .tool-tab.active {
+  background: #191b1d;
+  color: #f1e7d2;
+}
+
+.site-shell-enabled .tool-tab.active {
+  border-bottom-color: var(--page-accent);
+  box-shadow: inset 0 -2px var(--page-accent), inset 0 -12px 18px color-mix(in srgb, var(--page-accent) 6%, transparent);
+}
+
+.site-shell-enabled .tool-column + .tool-column,
+.site-shell-enabled .tool-section + .tool-section,
+.site-shell-enabled .tool-column-title,
+.site-shell-enabled .metric,
+.site-shell-enabled .data-table :is(th, td) {
+  border-color: #3a3c38;
+}
+
+.site-shell-enabled .tool-column-title,
+.site-shell-enabled .tool-field > span,
+.site-shell-enabled .tool-label,
+.site-shell-enabled .metric span,
+.site-shell-enabled .data-table th {
+  color: var(--page-accent-soft);
+}
+
+.site-shell-enabled .metric strong {
+  color: #f4ead7;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  text-shadow: 0 1px #000000;
+}
+
+.site-shell-enabled .tool-list-button {
+  border-color: #41433f;
+  border-radius: 3px;
+  background: #101214;
+  box-shadow: inset 0 1px rgb(255 255 255 / 3%);
+}
+
+.site-shell-enabled .tool-list-button:hover,
+.site-shell-enabled .tool-list-button.active {
+  border-color: var(--page-accent);
+  background: #1a1c1e;
+  box-shadow: inset 3px 0 var(--page-accent), inset 0 1px rgb(255 255 255 / 4%);
+}
+
+.site-shell-enabled.dungeons-page .dungeon-layout,
+.site-shell-enabled.dungeons-page .dungeon-browser,
+.site-shell-enabled.dungeons-page .dungeon-detail,
+.site-shell-enabled.dungeons-page .dungeon-map-frame,
+.site-shell-enabled.dungeons-page .selected-poi {
+  border-color: #454741;
+  background: #101214;
+  box-shadow: inset 0 1px rgb(255 255 255 / 3%);
+}
+
+.site-shell-enabled.dungeons-page .dungeon-list-item {
+  border-color: #3f413d;
+  background: #111315;
+  transition: border-color 130ms ease, background 130ms ease, box-shadow 130ms ease;
+}
+
+.site-shell-enabled.dungeons-page .dungeon-list-item:hover,
+.site-shell-enabled.dungeons-page .dungeon-list-item.active {
+  border-color: var(--forge-ember);
+  background: #1b1715;
+  box-shadow: inset 3px 0 var(--forge-ember), 0 2px 5px rgb(0 0 0 / 24%);
+}
+
+.site-shell-enabled.dungeons-page .floor-tab.active {
+  border-color: var(--forge-ember);
+  color: #fff0dd;
+  box-shadow: inset 0 -2px var(--forge-ember);
+}
+
+.site-shell-enabled.dungeons-page .dungeon-badge {
+  border-color: #55564f;
+  border-radius: 3px;
+  background: #17191b;
+}
+
+.site-shell-enabled .marshal-footer {
+  border-top-color: #3b3d38;
+  color: #8f8b81;
+}
+
+.site-shell-enabled :focus-visible {
+  outline: 2px solid var(--forge-brass-light);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-shell-enabled *,
+  .site-shell-enabled *::before,
+  .site-shell-enabled *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .site-shell-enabled .intro::before {
+    top: -12px;
+    width: 64px;
+    border-inline-width: 8px;
+  }
+}
+
+/* Mortal Online 2 Nexus identity */
+.site-shell-enabled {
+  --forge-void: #03050a;
+  --forge-iron: #0a0d14;
+  --forge-steel: #151a24;
+  --forge-steel-light: #2c3442;
+  --forge-brass: #5f9dff;
+  --forge-brass-light: #bed9ff;
+  --forge-ember: #7057ff;
+  --forge-ember-light: #a48fff;
+  --forge-parchment: #edf2fb;
+  --forge-muted: #9ca6b8;
+  --page-accent: #5f9dff;
+  --page-accent-soft: #bed9ff;
+  --page-surface: #0a0d14;
+  --page-surface-raised: #101620;
+  --page-line: #2a3344;
+}
+
+.site-shell-enabled.furnace-page,
+.site-shell-enabled.crafting-page,
+.site-shell-enabled.dungeons-page,
+.site-shell-enabled.reverse-page {
+  --page-accent: #4e91ff;
+  --page-accent-soft: #b9d7ff;
+}
+
+.site-shell-enabled.refining-page,
+.site-shell-enabled.builder-page {
+  --page-accent: #aab8cc;
+  --page-accent-soft: #e1e9f4;
+}
+
+.site-shell-enabled.alchemy-page,
+.site-shell-enabled.pets-page,
+.site-shell-enabled.shambles-page {
+  --page-accent: #7768ff;
+  --page-accent-soft: #c4bbff;
+}
+
+.site-shell-enabled.cooking-page,
+.site-shell-enabled.building-page,
+.site-shell-enabled.butchery-page {
+  --page-accent: #72b8ff;
+  --page-accent-soft: #c5e4ff;
+}
+
+body.site-shell-enabled {
+  background-color: #03050a;
+  background-image:
+    repeating-linear-gradient(115deg, rgb(126 167 224 / 1.4%) 0, rgb(126 167 224 / 1.4%) 1px, transparent 1px, transparent 8px),
+    linear-gradient(180deg, #070b13 0, #03050a 460px);
+  color: #edf2fb;
+}
+
+.site-shell-enabled :is(
+  .intro h1,
+  .browse-header h1,
+  .tool-titlebar h1,
+  .furnace-intro h1,
+  .refining-intro h1,
+  .butchery-intro h1,
+  .alchemy-intro h1,
+  .cooking-intro h1,
+  .reverse-intro h1,
+  .building-intro h1,
+  .pets-intro h1,
+  .crafting-intro h1,
+  .dungeon-titlebar h1,
+  .dungeon-detail-header h2
+) {
+  color: #eef4ff;
+  text-shadow: 0 2px 0 #000000, 0 0 18px color-mix(in srgb, var(--page-accent) 22%, transparent);
+}
+
+.site-shell-enabled .masthead {
+  border-bottom-color: #294064;
+  background:
+    repeating-linear-gradient(90deg, rgb(120 166 224 / 1.4%) 0, rgb(120 166 224 / 1.4%) 1px, transparent 1px, transparent 7px),
+    #050810;
+  box-shadow: 0 8px 28px rgb(0 0 0 / 48%), inset 0 -1px #111a29;
+}
+
+.site-shell-enabled .masthead::after {
+  background: linear-gradient(90deg, transparent 4%, #344e7a 25%, #69a6ff 48%, #745eff 68%, transparent 96%);
+  box-shadow: 0 0 10px rgb(78 145 255 / 22%);
+}
+
+.site-shell-enabled .global-search {
+  border-color: #2d3b54;
+  background: #050810;
+}
+
+.site-shell-enabled .global-search:focus-within {
+  border-color: #5f9dff;
+  background: #0a0f1a;
+  box-shadow: inset 0 1px 4px #000000, 0 0 0 2px rgb(95 157 255 / 11%), 0 0 18px rgb(95 157 255 / 12%);
+}
+
+.site-shell-enabled .global-search input {
+  color: #edf4ff;
+}
+
+.site-shell-enabled .global-search input::placeholder {
+  color: #77849a;
+}
+
+.site-shell-enabled .category-strip {
+  border-top-color: #151d2b;
+  background: #04070d;
+}
+
+.site-shell-enabled .category-tab {
+  color: #9aa6ba;
+}
+
+.site-shell-enabled .category-tab:hover,
+.site-shell-enabled .category-tab.active {
+  background: #0c111c;
+  color: #edf4ff;
+}
+
+.site-shell-enabled .category-tab.active {
+  border-bottom-color: #5f9dff;
+  text-shadow: 0 0 10px rgb(95 157 255 / 34%);
+}
+
+.app-sidebar {
+  border-right-color: #2a3c59;
+  background:
+    repeating-linear-gradient(100deg, rgb(118 161 219 / 1.2%) 0, rgb(118 161 219 / 1.2%) 1px, transparent 1px, transparent 8px),
+    #04070c;
+  box-shadow: 12px 0 34px rgb(0 0 0 / 48%), inset -1px 0 #0e1623;
+}
+
+.app-sidebar::before {
+  background: linear-gradient(90deg, #496ea8, #69a6ff, #7259ff);
+  box-shadow: 0 0 14px rgb(78 145 255 / 34%);
+}
+
+.app-sidebar-head {
+  min-height: 88px;
+  border-bottom-color: #263a5a;
+  padding: 8px;
+  background: #03060b;
+  box-shadow: inset 0 -1px #0e1726;
+}
+
+.app-sidebar-brand {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.app-sidebar-brand img.app-sidebar-brand-logo {
+  width: min(190px, 100%);
+  height: 63px;
+  flex: 1 1 auto;
+  object-fit: contain;
+  object-position: center;
+  filter: drop-shadow(0 0 8px rgb(78 145 255 / 22%));
+}
+
+.app-sidebar-brand:hover img.app-sidebar-brand-logo {
+  filter: drop-shadow(0 0 12px rgb(78 145 255 / 34%));
+}
+
+.app-sidebar-toggle,
+.site-menu-button {
+  width: 34px;
+  height: 34px;
+  flex-basis: 34px;
+  border-color: #34445e;
+  background: linear-gradient(180deg, #1c2532, #0a0e15);
+  color: #c7d4e7;
+}
+
+.app-sidebar-toggle:hover,
+.site-menu-button:hover {
+  border-color: #5f9dff;
+  color: #ffffff;
+  box-shadow: inset 0 1px rgb(255 255 255 / 8%), 0 0 13px rgb(95 157 255 / 18%);
+}
+
+.app-nav-section + .app-nav-section,
+.app-sidebar-foot {
+  border-color: #1c2739;
+}
+
+.app-nav-section-title,
+.app-nav-copy small {
+  color: #7f8ba0;
+}
+
+.app-nav-link::before {
+  background: #7057ff;
+  box-shadow: 0 0 10px rgb(112 87 255 / 38%);
+}
+
+.app-nav-link::after {
+  background: #445066;
+}
+
+.app-nav-link:hover {
+  border-color: #34445f;
+  background: linear-gradient(90deg, #111827, #080c13);
+  color: #edf4ff;
+}
+
+.app-nav-link.active {
+  border-color: #466fae;
+  background: linear-gradient(90deg, #111d31, #090d16);
+  color: #ffffff;
+  box-shadow: inset 0 1px rgb(255 255 255 / 4%), inset 0 0 18px rgb(78 145 255 / 7%), 0 2px 5px rgb(0 0 0 / 34%);
+}
+
+.app-nav-link.active::after {
+  background: #8fbcff;
+  box-shadow: 0 0 7px rgb(95 157 255 / 55%), 0 0 0 1px #020409;
+}
+
+.app-nav-icon {
+  border-color: #34445e;
+  background: linear-gradient(180deg, #182231, #080c13);
+  color: #8bbcff;
+}
+
+.app-nav-link:hover .app-nav-icon,
+.app-nav-link.active .app-nav-icon {
+  border-color: #527fc4;
+  background: linear-gradient(180deg, #1a2b47, #0a101b);
+  color: #c2dcff;
+  box-shadow: inset 0 1px rgb(255 255 255 / 5%), 0 0 12px rgb(78 145 255 / 14%);
+}
+
+.app-sidebar-foot .app-nav-link {
+  border-color: #b83d4d;
+  background: linear-gradient(180deg, #4b1520, #250b10);
+  box-shadow: inset 3px 0 #e45567, inset 0 1px rgb(255 255 255 / 5%), 0 2px 5px #000000;
+}
+
+.app-sidebar-foot .app-nav-link:hover {
+  border-color: #ed6577;
+  background: linear-gradient(180deg, #681d2b, #310e16);
+  box-shadow: inset 3px 0 #ff7283, 0 0 16px rgb(228 85 103 / 18%);
+}
+
+.app-sidebar-foot .app-nav-link .app-nav-icon {
+  border-color: #c64d5d;
+  background: #531924;
+}
+
+.site-shell-enabled .intro::before {
+  border-inline-color: #7057ff;
+  background: #5f9dff;
+  box-shadow: 0 0 10px rgb(78 145 255 / 24%);
+}
+
+.site-shell-enabled .intro-copy,
+.site-shell-enabled .tool-titlebar p,
+.site-shell-enabled :is(
+  .furnace-intro,
+  .refining-intro,
+  .butchery-intro,
+  .alchemy-intro,
+  .cooking-intro,
+  .reverse-intro,
+  .building-intro,
+  .pets-intro,
+  .crafting-intro
+) p {
+  color: #a7b1c2;
+}
+
+.site-shell-enabled .section-rule {
+  border-bottom-color: #2c3d58;
+}
+
+.site-shell-enabled .section-rule h2,
+.site-shell-enabled .directory-group h3,
+.site-shell-enabled .record-title {
+  color: #e8f0fc;
+}
+
+.site-shell-enabled .directory-group {
+  border-bottom-color: #242f42;
+}
+
+.site-shell-enabled .directory-accent {
+  border-color: #9bc5ff;
+  background: linear-gradient(180deg, #dcecff, #4f83d2) !important;
+  box-shadow: 1px 0 #000000, 0 0 10px rgb(95 157 255 / 22%), inset 1px 0 rgb(255 255 255 / 22%);
+}
+
+.site-shell-enabled .directory-group-head p,
+.site-shell-enabled .section-rule span {
+  color: #8d99ad;
+}
+
+.site-shell-enabled .directory-link {
+  border-top-color: #252f41;
+  color: #bdc7d7;
+}
+
+.site-shell-enabled .directory-link:hover {
+  background: linear-gradient(90deg, rgb(78 145 255 / 11%), transparent 75%);
+  color: #edf4ff;
+}
+
+.site-shell-enabled .directory-link span:last-child {
+  color: #9bc5ff;
+}
+
+.site-shell-enabled .record-row,
+.site-shell-enabled :is(.tool-rail, .tool-grid, .tool-column, .metric-grid, .forge-sidebar, .forge-workspace),
+.site-shell-enabled.dungeons-page :is(.dungeon-layout, .dungeon-browser, .dungeon-detail, .dungeon-map-frame, .selected-poi) {
+  border-color: #2d394e;
+  background:
+    repeating-linear-gradient(105deg, rgb(118 161 219 / 1%) 0, rgb(118 161 219 / 1%) 1px, transparent 1px, transparent 8px),
+    #090d14;
+}
+
+.site-shell-enabled .record-row:hover {
+  border-color: color-mix(in srgb, var(--page-accent) 62%, #39465b);
+  box-shadow: inset 3px 0 var(--page-accent), inset 0 1px rgb(255 255 255 / 4%), 0 3px 8px rgb(0 0 0 / 36%);
+}
+
+.site-shell-enabled main :is(select, input[type="text"], input[type="search"], input[type="number"], textarea) {
+  border-color: #344157;
+  background-color: #050810;
+  color: #edf4ff;
+}
+
+.site-shell-enabled main :is(select, input, textarea):focus {
+  background-color: #0a0f19;
+}
+
+.site-shell-enabled :is(.tool-button, .tool-icon-button),
+.site-shell-enabled main :is(.text-button, .icon-button, .load-more),
+.site-shell-enabled.dungeons-page :is(.map-tools button, .floor-tab) {
+  border-color: #38465c;
+  background: linear-gradient(180deg, #1c2532, #090d14);
+  color: #d4dfef;
+}
+
+.site-shell-enabled :is(.tool-button, .tool-icon-button):hover,
+.site-shell-enabled main :is(.text-button, .icon-button, .load-more):hover,
+.site-shell-enabled.dungeons-page :is(.map-tools button, .floor-tab):hover {
+  background: linear-gradient(180deg, #26354a, #0d131e);
+  color: #ffffff;
+}
+
+.site-shell-enabled main :is(.primary-command, .forge-command, .tool-button.primary) {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--page-accent) 48%, #182337), color-mix(in srgb, var(--page-accent) 25%, #080d15));
+  color: #ffffff;
+}
+
+.site-shell-enabled main :is(.primary-command, .forge-command, .tool-button.primary):hover:not(:disabled) {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--page-accent) 62%, #1a2840), color-mix(in srgb, var(--page-accent) 34%, #0a101b));
+}
+
+.site-shell-enabled .tool-tab,
+.site-shell-enabled .tool-list-button,
+.site-shell-enabled.dungeons-page .dungeon-list-item {
+  border-color: #2c374a;
+  background: #080c13;
+  color: #9facbf;
+}
+
+.site-shell-enabled .tool-tab:hover,
+.site-shell-enabled .tool-tab.active,
+.site-shell-enabled .tool-list-button:hover,
+.site-shell-enabled .tool-list-button.active {
+  background: #101827;
+  color: #eef4ff;
+}
+
+.site-shell-enabled.dungeons-page .dungeon-list-item:hover,
+.site-shell-enabled.dungeons-page .dungeon-list-item.active {
+  border-color: #4e91ff;
+  background: #0c1626;
+  box-shadow: inset 3px 0 #4e91ff, 0 2px 6px rgb(0 0 0 / 30%);
+}
+
+.site-shell-enabled.dungeons-page .floor-tab.active {
+  border-color: #4e91ff;
+  box-shadow: inset 0 -2px #4e91ff;
+}
+
+.site-shell-enabled .marshal-footer {
+  border-top-color: #29364b;
+  color: #808ca0;
+}
+
+.site-shell-enabled :focus-visible {
+  outline-color: #8fbcff;
+}
+
+@media (max-width: 1100px) {
+  .app-sidebar-head {
+    min-height: 88px;
+  }
+}
+
+/* Nexus control and sidebar color harmonization */
+.site-shell-enabled {
+  --ink: #03050a;
+  --surface: #080c13;
+  --surface-raised: #101620;
+  --surface-hover: #131d2d;
+  --rule: #242f42;
+  --rule-strong: #344157;
+  --paper: #edf4ff;
+  --paper-soft: #c8d4e5;
+  --muted: #91a0b5;
+  --brass: #5f9dff;
+  --moss: #7768ff;
+  --rust: #7057ff;
+  --blue: #72b8ff;
+  --violet: #a48fff;
+  --tool-bg: #03050a;
+  --tool-panel: #090d14;
+  --tool-panel-2: #101620;
+  --tool-line: #2d394e;
+  --tool-line-soft: #202a3a;
+  --tool-text: #edf4ff;
+  --tool-muted: #9facbf;
+  --tool-gold: #5f9dff;
+  --tool-gold-dim: #466fae;
+  --tool-green: #7768ff;
+  --furnace: #4e91ff;
+  --furnace-soft: #b9d7ff;
+  --furnace-dark: #0c1626;
+  --refine: #aab8cc;
+  --refine-soft: #e1e9f4;
+  --refine-dark: #111925;
+  --butcher: #72b8ff;
+  --butcher-soft: #c5e4ff;
+  --butcher-dark: #0d1826;
+  --alchemy: #7768ff;
+  --alchemy-soft: #c4bbff;
+  --alchemy-dark: #151126;
+  --alchemy-gold: #a48fff;
+  --alchemy-blue: #72b8ff;
+  --cook-ember: #5f9dff;
+  --cook-ember-soft: #bed9ff;
+  --cook-herb: #7768ff;
+  --cook-gold: #72b8ff;
+  --cook-blue: #72b8ff;
+  --cook-panel: #090d14;
+  --reverse-green: #5f9dff;
+  --reverse-green-soft: #bed9ff;
+  --reverse-amber: #a48fff;
+  --reverse-blue: #72b8ff;
+  --reverse-panel: #090d14;
+  --reverse-panel-soft: #101620;
+  --building-green: #72b8ff;
+  --building-green-dark: #101a2a;
+  --building-brass: #a48fff;
+  --building-blue: #5f9dff;
+  --building-red: #7768ff;
+  --pet-green: #7768ff;
+  --pet-green-soft: #c4bbff;
+  --pet-amber: #72b8ff;
+  --pet-panel: #090d14;
+  --forge-red: #4e91ff;
+  --forge-red-soft: #b9d7ff;
+  --forge-green: #7768ff;
+  --dungeon-gold: #5f9dff;
+  --dungeon-gold-soft: #bed9ff;
+  --dungeon-red: #7768ff;
+  --dungeon-teal: #72b8ff;
+  --dungeon-violet: #a48fff;
+}
+
+.site-shell-enabled .app-nav-link {
+  color: #b7c5d9;
+}
+
+.site-shell-enabled .app-nav-copy strong {
+  color: inherit;
+}
+
+.site-shell-enabled :is(.section-link, .search-shortcut, .filter-pill) {
+  border-color: #344157;
+  background: linear-gradient(180deg, #171f2b, #080c13);
+  color: #bdc9da;
+}
+
+.site-shell-enabled :is(.section-link, .search-shortcut, .filter-pill):hover,
+.site-shell-enabled .section-link.active {
+  border-color: var(--page-accent);
+  background: linear-gradient(180deg, #1d2b40, #0b111c);
+  color: #ffffff;
+  box-shadow: inset 3px 0 var(--page-accent), 0 0 12px color-mix(in srgb, var(--page-accent) 12%, transparent);
+}
+
+.site-shell-enabled main :is(
+  .use-recipe,
+  .use-alloy,
+  .use-carcass,
+  .alchemy-use-button,
+  .catalog-use-button,
+  .building-icon-button,
+  .quiet-command,
+  .add-ingredient,
+  .ingredient-remove,
+  .ingredient-table button,
+  .material-source button
+) {
+  border-color: #38465c;
+  background: linear-gradient(180deg, #1c2532, #090d14);
+  color: #c9d5e6;
+}
+
+.site-shell-enabled main :is(
+  .use-recipe,
+  .use-alloy,
+  .use-carcass,
+  .alchemy-use-button,
+  .catalog-use-button,
+  .building-icon-button,
+  .quiet-command,
+  .add-ingredient,
+  .ingredient-remove,
+  .ingredient-table button,
+  .material-source button
+):hover:not(:disabled) {
+  border-color: var(--page-accent);
+  background: linear-gradient(180deg, #263a58, #0d1522);
+  color: #ffffff;
+  box-shadow: 0 0 12px color-mix(in srgb, var(--page-accent) 12%, transparent);
+}
+
+.site-shell-enabled main :is(.load-tested-recipe, .building-primary-button) {
+  border-color: color-mix(in srgb, var(--page-accent) 78%, #c8dcff);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--page-accent) 65%, #263b5b), color-mix(in srgb, var(--page-accent) 38%, #0b1220));
+  color: #ffffff;
+  box-shadow: inset 0 1px rgb(255 255 255 / 9%), 0 0 14px color-mix(in srgb, var(--page-accent) 13%, transparent);
+}
+
+.site-shell-enabled main :is(.load-tested-recipe, .building-primary-button):hover:not(:disabled) {
+  border-color: #b9d7ff;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--page-accent) 78%, #34517d), color-mix(in srgb, var(--page-accent) 50%, #0e1829));
+}
+
+.site-shell-enabled main :is(
+  .segmented button,
+  .segmented-control button,
+  .cost-mode-control button,
+  .reverse-mode-tabs button,
+  .alchemy-section-control button,
+  .craft-kind
+) {
+  border-color: #2d394e;
+  background: #080c13;
+  color: #9facbf;
+}
+
+.site-shell-enabled main :is(
+  .segmented button,
+  .segmented-control button,
+  .cost-mode-control button,
+  .reverse-mode-tabs button,
+  .alchemy-section-control button,
+  .craft-kind
+):hover {
+  background: #111b2a;
+  color: #eef4ff;
+}
+
+.site-shell-enabled main :is(
+  .segmented button,
+  .segmented-control button,
+  .cost-mode-control button,
+  .reverse-mode-tabs button,
+  .alchemy-section-control button,
+  .craft-kind
+).active {
+  border-color: var(--page-accent);
+  background: color-mix(in srgb, var(--page-accent) 14%, #0d1420);
+  color: var(--page-accent-soft);
+  box-shadow: inset 0 -2px var(--page-accent), 0 0 12px color-mix(in srgb, var(--page-accent) 10%, transparent);
+}
+
+.site-shell-enabled :is(.builder-panel, .character-sheet, .skill-ledger, .summary-sheet > section, .modifier-values span, .mastery-node, .crafting-kind-tabs, .family-heading) {
+  border-color: #2d394e;
+  background: #090d14;
+}
+
+.site-shell-enabled :is(.mastery-node, .creature-row):hover,
+.site-shell-enabled :is(.mastery-node, .creature-row).active {
+  border-color: var(--page-accent);
+  background: #101827;
+  color: #edf4ff;
+  box-shadow: inset 3px 0 var(--page-accent);
+}
+
+.site-shell-enabled .creature-row {
+  border-color: #273246;
+  color: #dbe5f2;
+}
+
+.site-shell-enabled :is(.browser-count button, .family-heading, .tool-column-title, .builder-panel h2, .skill-ledger h2) {
+  color: var(--page-accent-soft);
+}
+
+.site-shell-enabled.dungeons-page .floor-tab.active {
+  color: #eaf2ff;
+}
+
+.site-shell-enabled main button:disabled {
+  border-color: #293548;
+  color: #647187;
+  box-shadow: none;
+}
+
+/* Reference Library drawers and result surfaces */
+.site-shell-enabled .topic-sidebar {
+  border-right-color: #2a3c59;
+  background:
+    repeating-linear-gradient(100deg, rgb(118 161 219 / 1.2%) 0, rgb(118 161 219 / 1.2%) 1px, transparent 1px, transparent 8px),
+    #050810;
+  box-shadow: inset -1px 0 #101a2a, 12px 0 30px rgb(0 0 0 / 36%);
+}
+
+.site-shell-enabled .sidebar-heading {
+  padding-bottom: 11px;
+  border-bottom: 1px solid #263750;
+  color: #aebdd2;
+}
+
+.site-shell-enabled .section-group-label {
+  color: #9bc5ff;
+}
+
+.site-shell-enabled .browse-toolbar {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border: 1px solid #29384f;
+  background: linear-gradient(180deg, #101722, #080c13);
+  box-shadow: inset 0 1px rgb(255 255 255 / 3%);
+}
+
+.site-shell-enabled .table-shell {
+  border-color: #2d394e;
+  background: #070b12;
+}
+
+.site-shell-enabled .detail-drawer {
+  border-left-color: #344b70;
+  background:
+    repeating-linear-gradient(105deg, rgb(118 161 219 / 1%) 0, rgb(118 161 219 / 1%) 1px, transparent 1px, transparent 8px),
+    #070b12;
+  box-shadow: -24px 0 70px rgb(0 0 0 / 60%);
+}
+
+.site-shell-enabled .drawer-toolbar {
+  border-bottom-color: #293b58;
+  background: rgb(5 8 16 / 97%);
+  color: #9fadc1;
+}
+
+/* Crafting calculator result column */
+.site-shell-enabled .crafting-result {
+  border-color: #2d405f;
+  background:
+    repeating-linear-gradient(105deg, rgb(118 161 219 / 1.2%) 0, rgb(118 161 219 / 1.2%) 1px, transparent 1px, transparent 8px),
+    linear-gradient(180deg, #0d1420, #080c13);
+  box-shadow: inset 0 1px rgb(255 255 255 / 3%), inset 3px 0 #4e91ff;
+}
+
+.site-shell-enabled .result-profile {
+  border-color: #344762;
+  background: #050810;
+  box-shadow: inset 0 0 28px rgb(78 145 255 / 6%);
+}
+
+.site-shell-enabled .result-state {
+  border-color: #3a4b64;
+  background: #090f19;
+  color: #96a5ba;
+}
+
+.site-shell-enabled .result-state.ready {
+  border-color: #4e91ff;
+  background: rgb(78 145 255 / 8%);
+  color: #bed9ff;
+}
+
+.site-shell-enabled :is(.result-stats, .materials-heading, .material-row, .slot-breakdown th, .slot-breakdown td) {
+  border-color: #27344a;
+}
+
+.site-shell-enabled :is(.market-field > div, .market-input > div, .toggle-field) {
+  border-color: #344157;
+  background: #080c13;
+}

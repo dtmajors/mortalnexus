@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#07080b" />
+    <title>Fishing | Mortal Nexus</title>
+    <meta name="description" content="Search recorded Mortal Online 2 fishing setups by fish, bait, hook, line, depth, time, and location." />
+    <link rel="icon" href="/assets/mortal-nexus-app-icon-v2.png" type="image/png" />
+    <link rel="stylesheet" href="/site-shell.css?v=24" />
+    <link rel="stylesheet" href="/fishing.css?v=1" />
+  </head>
+  <body class="fishing-page">
+    <main class="fishing-main">
+      <header class="fishing-titlebar">
+        <div class="fishing-title-copy">
+          <span class="fishing-kicker"><i data-lucide="fish" aria-hidden="true"></i> Angler intelligence</span>
+          <h1>Fishing</h1>
+          <p>Community-recorded catch setups from Myrland waters.</p>
+        </div>
+        <dl class="fishing-stats" aria-label="Fishing data summary">
+          <div><dt>Fish</dt><dd id="fishCount">0</dd></div>
+          <div><dt>Observations</dt><dd id="observationCount">0</dd></div>
+          <div><dt>Baits</dt><dd id="baitCount">0</dd></div>
+          <div><dt>Waters</dt><dd id="locationCount">0</dd></div>
+        </dl>
+      </header>
+
+      <section class="fishing-filters" aria-label="Fishing filters">
+        <label class="fishing-search">
+          <i data-lucide="search" aria-hidden="true"></i>
+          <span>Search</span>
+          <input id="fishingSearch" type="search" autocomplete="off" placeholder="Fish, bait, water, note..." />
+        </label>
+        <label><span>Line</span><select id="lineFilter"><option value="">All lines</option></select></label>
+        <label><span>Hook</span><select id="hookFilter"><option value="">All hooks</option></select></label>
+        <label><span>Bait</span><select id="baitFilter"><option value="">All baits</option></select></label>
+        <label><span>Location</span><select id="locationFilter"><option value="">All waters</option></select></label>
+        <label><span>Order</span><select id="sortOrder"><option value="source">Sheet order</option><option value="size">Largest catch</option><option value="fish">Fish name</option><option value="depth">Deepest cast</option></select></label>
+        <button id="resetFishingFilters" class="fishing-reset" type="button" title="Reset filters" aria-label="Reset fishing filters"><i data-lucide="rotate-ccw" aria-hidden="true"></i></button>
+      </section>
+
+      <section class="fishing-workspace" aria-label="Fishing database">
+        <aside class="fish-directory">
+          <header><div><span>Fish index</span><strong id="visibleFishCount">0 species</strong></div><i data-lucide="list-filter" aria-hidden="true"></i></header>
+          <div id="fishDirectory" class="fish-directory-list" role="listbox" aria-label="Recorded fish"></div>
+        </aside>
+
+        <section id="fishProfile" class="fish-profile" aria-live="polite">
+          <div class="fishing-loading"><i data-lucide="loader-circle" aria-hidden="true"></i><strong>Loading fishing records</strong></div>
+        </section>
+      </section>
+
+      <section class="catch-ledger" aria-labelledby="catchLedgerTitle">
+        <header>
+          <div><span>Evidence ledger</span><h2 id="catchLedgerTitle">Recorded catches</h2></div>
+          <strong id="filteredObservationCount">0 observations</strong>
+        </header>
+        <div class="catch-table-wrap">
+          <table class="catch-table">
+            <thead><tr><th>Fish</th><th>Line</th><th>Hook</th><th>Bait</th><th>Depth</th><th>Time</th><th>Location</th><th>Size</th><th>Notes</th></tr></thead>
+            <tbody id="catchTableBody"></tbody>
+          </table>
+          <p id="catchTableEmpty" class="catch-table-empty" hidden>No recorded catches match these filters.</p>
+        </div>
+      </section>
+
+      <footer class="fishing-footer">
+        <span>Repeated observations are retained. Recorded results can vary by patch, place, time, and technique.</span>
+        <span id="dataCoverage"></span>
+      </footer>
+    </main>
+
+    <script src="/assets/vendor/lucide.min.js"></script>
+    <script src="/fishing.js?v=1"></script>
+    <script src="/site-shell.js?v=24"></script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Player house">
+  <circle cx="32" cy="32" r="25" fill="#2a8cff" fill-opacity=".18" stroke="#4aa1ff" stroke-width="3"/>
+  <circle cx="32" cy="32" r="13" fill="#247fe8" stroke="#a5d6ff" stroke-width="3"/>
+  <circle cx="28" cy="27" r="4" fill="#d8efff" fill-opacity=".8"/>
+</svg>

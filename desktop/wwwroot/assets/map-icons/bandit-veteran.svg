@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Veteran bandit">
+  <path fill="#1a2028" stroke="#080b10" stroke-width="3" d="M32 4 55 13v18c0 14-9 24-23 29C18 55 9 45 9 31V13Z"/>
+  <path fill="#7d222f" d="M13 16 32 8l19 8v15c0 11-7 19-19 24-12-5-19-13-19-24Z"/>
+  <path fill="#9ca8b2" stroke="#222a31" stroke-width="3" d="M19 25c0-11 5-17 13-17s13 6 13 17v17l-13 9-13-9Z"/>
+  <path fill="#343d46" d="M24 27h16v12l-8 7-8-7Z"/>
+  <path fill="none" stroke="#f6d36d" stroke-width="3" stroke-linecap="round" d="M24 30h16"/>
+  <path fill="#bdc6cd" d="m28 7 4-5 4 5-4 17Z"/>
+  <path fill="none" stroke="#dce2e6" stroke-width="3" d="M14 50 49 15"/>
+</svg>

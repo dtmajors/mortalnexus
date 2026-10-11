@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Akrep">
+  <g stroke="#1a100c" stroke-linecap="round" stroke-linejoin="round">
+    <path fill="none" stroke="#4b2b20" stroke-width="7" d="M32 22c0-8 11-8 11-15 0-4-4-6-8-4"/>
+    <path fill="#7b4932" stroke-width="2.5" d="m34 4 8-4-2 9Z"/>
+    <path fill="#4d2d22" stroke-width="2.5" d="M23 24c2-6 16-6 18 0l3 19c1 9-5 16-12 16s-13-7-12-16Z"/>
+    <path fill="#71422e" stroke-width="2.5" d="m23 29-10-8-9 3 6 6-8 4 9 6 11-6Zm18 0 10-8 9 3-6 6 8 4-9 6-11-6Z"/>
+    <path fill="none" stroke="#3d251c" stroke-width="4" d="m22 31-14-8m13 14L5 35m16 9L8 51m34-20 14-8M43 37l16-2M43 44l13 7"/>
+    <path fill="none" stroke="#a06c4c" stroke-width="2" d="M23 30h18M22 37h20m-21 8h22m-20 7h18"/>
+    <circle cx="27" cy="26" r="2" fill="#e7bd55" stroke="none"/>
+    <circle cx="37" cy="26" r="2" fill="#e7bd55" stroke="none"/>
+  </g>
+</svg>

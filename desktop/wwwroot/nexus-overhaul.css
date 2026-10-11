@@ -1,0 +1,2901 @@
+:root {
+  --ui-bg: #050407;
+  --ui-panel: #0c090e;
+  --ui-raised: #151019;
+  --ui-hover: #1d1422;
+  --ui-border: #302334;
+  --ui-border-strong: #4b3151;
+  --ui-text: #f5f5f7;
+  --ui-soft: #bbb9c5;
+  --ui-muted: #787682;
+  --ui-purple: #a05cff;
+  --ui-purple-soft: #c59aff;
+  --ui-green: #35d399;
+  --ui-orange: #ff7b50;
+  --ui-gold: #f5bb42;
+  --ui-red: #ff4968;
+  --ui-blue: #9b72ff;
+  --ui-sidebar: 208px;
+  --ui-toolbar: 64px;
+  --ui-radius: 6px;
+  color-scheme: dark;
+}
+
+.market-nav-item small[data-market-unread],
+.friends-nav-item small[data-friend-requests] {
+  min-width: 18px;
+  margin-left: auto;
+  padding: 2px 5px;
+  border-radius: 9px;
+  color: #fff;
+  background: #ff3d78;
+  font-size: 9px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+/* Red-violet shell derived from the current Mortal Nexus mark. */
+body.nexus-overhaul .topbar-primary {
+  background: rgb(7 5 9 / 97%) !important;
+  box-shadow: 0 8px 26px rgb(0 0 0 / 46%), inset 0 -1px rgb(255 73 104 / 8%) !important;
+}
+
+body.nexus-overhaul .compact-primary-nav {
+  background: #080609 !important;
+  box-shadow: 12px 0 34px rgb(0 0 0 / 34%) !important;
+}
+
+body.nexus-overhaul .compact-sidebar-brand img {
+  border-color: #57324e !important;
+  background: #0b080d !important;
+  box-shadow: 0 0 18px rgb(154 76 255 / 14%) !important;
+}
+
+body.nexus-overhaul .compact-primary-nav .module-tab.is-active {
+  border-color: #4a2c4d !important;
+  background: rgb(127 49 141 / 18%) !important;
+}
+
+body.nexus-overhaul .compact-primary-nav .module-tab.is-active::before {
+  background: linear-gradient(#ff4968, #9d5cff) !important;
+  box-shadow: 0 0 13px rgb(255 73 104 / 56%) !important;
+}
+
+body.nexus-overhaul .global-search:focus-within {
+  border-color: #a05cff !important;
+  box-shadow: 0 0 0 3px rgb(160 92 255 / 13%), 0 0 18px rgb(255 73 104 / 7%) !important;
+}
+
+/* Crafting children read like navigation instead of a stack of input boxes. */
+body.nexus-overhaul .compact-subnav {
+  border-left-color: #4d2949 !important;
+  margin: 0 0 7px 28px !important;
+  padding: 2px 0 2px 13px !important;
+}
+
+body.nexus-overhaul .compact-subnav button {
+  min-height: 27px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 4px !important;
+  color: #9e93a3 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.nexus-overhaul .compact-subnav button:hover,
+body.nexus-overhaul .compact-subnav button.is-active {
+  color: #fff !important;
+  background: transparent !important;
+  transform: translateX(3px);
+}
+
+body.nexus-overhaul .compact-subnav button.is-active::before {
+  background: #ff4968 !important;
+  box-shadow: 0 0 9px rgb(255 73 104 / 70%) !important;
+}
+
+/* Header hotkey master is deliberately conspicuous and always reachable. */
+body.nexus-overhaul .hotkeys-header-switch {
+  min-width: 126px !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 11px !important;
+}
+
+body.nexus-overhaul .hotkeys-switch-track {
+  width: 34px;
+  height: 18px;
+  flex: 0 0 auto;
+  display: block;
+  border: 1px solid #76508a;
+  border-radius: 999px;
+  padding: 2px;
+  background: #2b1632;
+}
+
+body.nexus-overhaul .hotkeys-switch-track > span {
+  width: 12px;
+  height: 12px;
+  display: block;
+  border-radius: 50%;
+  background: #f3e9ff;
+  box-shadow: 0 0 8px rgb(197 154 255 / 72%);
+  transform: translateX(16px);
+  transition: transform 150ms ease, background-color 150ms ease;
+}
+
+body.nexus-overhaul .hotkeys-header-switch[data-enabled="false"] .hotkeys-switch-track {
+  border-color: #4b414d;
+  background: #19151b;
+}
+
+body.nexus-overhaul .hotkeys-header-switch[data-enabled="false"] .hotkeys-switch-track > span {
+  background: #766f79;
+  box-shadow: none;
+  transform: translateX(0);
+}
+
+body.nexus-overhaul .hotkeys-header-switch[data-enabled="false"] .hotkeys-master-label {
+  color: #8b858e;
+}
+
+/* Every embedded tool inherits one dark red-violet palette. */
+body.nexus-embedded {
+  --bg: #050407 !important;
+  --panel: #0c090e !important;
+  --panel-strong: #151019 !important;
+  --panel-soft: #09070b !important;
+  --line: #302334 !important;
+  --line-strong: #4b3151 !important;
+  --text: #f6f1f7 !important;
+  --muted: #a398a7 !important;
+  --faint: #716775 !important;
+  --copper: #e75378 !important;
+  --copper-strong: #ff7892 !important;
+  --gold: #c59aff !important;
+  --green: #b268d0 !important;
+  --blue: #9b72ff !important;
+  --spell-bg: #050407 !important;
+  --spell-panel: #0c090e !important;
+  --spell-panel-2: #151019 !important;
+  --spell-line: #302334 !important;
+  --spell-line-bright: #5b3960 !important;
+  --spell-blue: #b37cff !important;
+  --spell-blue-soft: #2a1535 !important;
+  --spell-gold: #ff667f !important;
+}
+
+body.nexus-embedded,
+body.nexus-embedded :is(.site-frame, .main-content, .tool-main, .crafting-main, .furnace-main, .refining-main, .alchemy-main, .cooking-main, .building-main, .dungeon-main, .workspace, .profile-pane) {
+  background-color: #050407 !important;
+}
+
+body.nexus-embedded :is(button, input, select, textarea) {
+  border-color: #332738 !important;
+  color: #f3edf5 !important;
+  background-color: #120e15 !important;
+}
+
+body.nexus-embedded :is(button, input, select, textarea):focus {
+  border-color: #9e5bea !important;
+  box-shadow: 0 0 0 2px rgb(158 91 234 / 13%) !important;
+}
+
+body.nexus-embedded :is(.tool-card, .recipe-card, .result-card, .calculator-card, .record-panel, .directory-group, .detail-card, .stat-card, .combat-profile-card, .drop-table-shell) {
+  border-color: #302334 !important;
+  background: #0c090e !important;
+}
+
+body.nexus-embedded :is(.primary-button, .primary-command, button[type="submit"], .calculate-button) {
+  border-color: #8e3d69 !important;
+  color: #fff !important;
+  background: #6f294f !important;
+}
+
+body.nexus-embedded :is(.primary-button, .primary-command, button[type="submit"], .calculate-button):hover {
+  border-color: #ff6c89 !important;
+  background: #8c335e !important;
+  box-shadow: 0 0 15px rgb(255 73 104 / 16%) !important;
+}
+
+body.nexus-embedded .topic-sidebar,
+body.nexus-embedded.nexus-page-loot :is(.mode-tabs, .source-pane, .source-controls) {
+  border-color: #302334 !important;
+  background: #09070b !important;
+}
+
+body.nexus-embedded.nexus-page-loot .mode-tab.active,
+body.nexus-embedded.nexus-page-loot .profile-tab.active {
+  border-bottom-color: #ff4968 !important;
+}
+
+body.nexus-embedded.nexus-page-loot .source-row.active {
+  background: #1c101c !important;
+  box-shadow: inset 3px 0 #a05cff !important;
+}
+
+body.nexus-embedded.nexus-page-loot :is(.pane-heading p, .profile-header p, .section-heading p) {
+  color: #d67dff !important;
+}
+
+body.nexus-embedded.nexus-page-loot .chance {
+  border-color: #70406e !important;
+  background: #211324 !important;
+}
+
+/* Compact spell typography keeps the planner readable without dominating the page. */
+body.nexus-embedded.nexus-page-spells .spell-intro h1 { font-size: 29px !important; }
+body.nexus-embedded.nexus-page-spells .spell-entry strong { font-size: 12px !important; }
+body.nexus-embedded.nexus-page-spells .spell-entry small,
+body.nexus-embedded.nexus-page-spells .loadout-meta,
+body.nexus-embedded.nexus-page-spells .loadout-reagents { font-size: 10px !important; }
+body.nexus-embedded.nexus-page-spells .loadout-title strong { font-size: 14px !important; }
+body.nexus-embedded.nexus-page-spells .spell-metrics dd { font-size: 17px !important; }
+
+/* Cooking is split into three focused views instead of one long workbench. */
+.cooking-view-tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-bottom: 1px solid #302334;
+  margin: 2px 0 16px;
+}
+
+.cooking-view-tabs button {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 0 !important;
+  border-bottom: 2px solid transparent !important;
+  border-radius: 0 !important;
+  padding: 0 16px;
+  color: #9c929f;
+  background: transparent !important;
+}
+
+.cooking-view-tabs button svg { width: 16px; height: 16px; }
+.cooking-view-tabs button:hover { color: #fff; }
+.cooking-view-tabs button.is-active {
+  border-bottom-color: #ff4968 !important;
+  color: #fff !important;
+  box-shadow: inset 0 -8px 16px rgb(160 92 255 / 6%) !important;
+}
+
+.cooking-view-panel { display: none !important; }
+.cooking-view-panel.is-active { display: block !important; }
+.cooking-workbench.cooking-view-panel.is-active { display: grid !important; }
+
+@media (max-width: 980px) {
+  .cooking-view-tabs { overflow-x: auto; }
+  .cooking-view-tabs button { flex: 0 0 auto; }
+}
+
+@keyframes nexus-view-enter {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes nexus-progress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes nexus-update-alert {
+  0%, 100% { box-shadow: 0 0 0 1px rgb(251 93 120 / 22%), 0 0 7px rgb(251 93 120 / 12%); }
+  50% { box-shadow: 0 0 0 1px rgb(251 93 120 / 72%), 0 0 20px rgb(251 93 120 / 48%); }
+}
+
+html {
+  background: var(--ui-bg);
+}
+
+body.nexus-overhaul,
+body.site-shell-enabled {
+  color: var(--ui-text) !important;
+  background: var(--ui-bg) !important;
+  font-family: Inter, "Segoe UI", system-ui, sans-serif !important;
+  letter-spacing: 0 !important;
+}
+
+body.nexus-page-leaving :is(main, .tools-workspace, .main-content) {
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 110ms ease, transform 110ms ease;
+}
+
+body.nexus-overhaul .eyebrow,
+body.site-shell-enabled .eyebrow,
+body.site-shell-enabled .kicker,
+body.site-shell-enabled .tool-kicker {
+  display: none !important;
+}
+
+body.nexus-overhaul :is(h1, h2, h3, h4),
+body.site-shell-enabled :is(h1, h2, h3, h4) {
+  color: var(--ui-text) !important;
+  font-family: Inter, "Segoe UI", system-ui, sans-serif !important;
+  letter-spacing: 0 !important;
+  text-shadow: none !important;
+}
+
+body.nexus-overhaul :is(button, input, select, textarea),
+body.site-shell-enabled :is(button, input, select, textarea) {
+  font: inherit;
+  letter-spacing: 0 !important;
+}
+
+body.nexus-overhaul :is(button, a, input, select, textarea),
+body.site-shell-enabled :is(button, a, input, select, textarea) {
+  transition: border-color 140ms ease, background-color 140ms ease, color 140ms ease, opacity 140ms ease, transform 140ms ease, box-shadow 140ms ease;
+}
+
+/* Desktop map shell */
+body.nexus-overhaul {
+  overflow: hidden;
+}
+
+body.nexus-overhaul .app-shell {
+  min-height: 100vh;
+  padding: var(--ui-toolbar) 0 0 var(--ui-sidebar);
+  background: var(--ui-bg);
+}
+
+body.nexus-overhaul .topbar {
+  position: static !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.nexus-overhaul .topbar::before,
+body.nexus-overhaul .topbar::after {
+  display: none !important;
+}
+
+body.nexus-overhaul .topbar-primary {
+  position: fixed;
+  z-index: 1200;
+  inset: 0 0 auto var(--ui-sidebar);
+  height: var(--ui-toolbar);
+  display: grid !important;
+  grid-template-columns: minmax(240px, 620px) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 14px;
+  border-bottom: 1px solid var(--ui-border);
+  padding: 10px 16px;
+  background: rgb(10 10 14 / 96%);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 35%);
+}
+
+body.nexus-overhaul .brand {
+  position: fixed;
+  z-index: 1300;
+  inset: 0 auto auto 0;
+  width: var(--ui-sidebar);
+  height: var(--ui-toolbar);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-right: 1px solid var(--ui-border);
+  border-bottom: 1px solid var(--ui-border);
+  padding: 10px 14px;
+  background: #09090d;
+}
+
+body.nexus-overhaul .brand img {
+  width: 38px !important;
+  height: 38px !important;
+  border: 1px solid #34313f !important;
+  border-radius: var(--ui-radius) !important;
+  padding: 5px;
+  background: #111118 !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+body.nexus-overhaul .brand strong {
+  color: #fff !important;
+  font-size: 15px !important;
+  font-weight: 750;
+  text-shadow: none !important;
+}
+
+body.nexus-overhaul .brand span {
+  color: var(--ui-muted) !important;
+  font-size: 9px !important;
+}
+
+body.nexus-overhaul .global-search {
+  width: min(440px, 42vw) !important;
+  height: 40px !important;
+  margin: 0 !important;
+  border: 1px solid var(--ui-border) !important;
+  border-radius: var(--ui-radius) !important;
+  background: #101016 !important;
+  box-shadow: none !important;
+}
+
+body.nexus-overhaul .search-tools {
+  min-width: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(190px, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+}
+
+body.nexus-overhaul .search-tools .global-search {
+  width: 100% !important;
+  max-width: none;
+}
+
+body.nexus-overhaul .global-search:focus-within {
+  border-color: var(--ui-purple) !important;
+  box-shadow: 0 0 0 3px rgb(155 108 255 / 12%) !important;
+}
+
+body.nexus-overhaul .global-search svg {
+  color: var(--ui-muted) !important;
+  filter: none !important;
+}
+
+body.nexus-overhaul .global-search kbd {
+  border-color: var(--ui-border);
+  background: #17171e;
+}
+
+body.nexus-overhaul .top-actions {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px;
+  margin-left: auto;
+}
+
+body.nexus-overhaul .top-actions > :is(button, .local-badge) {
+  min-height: 38px;
+  border: 1px solid var(--ui-border) !important;
+  border-radius: var(--ui-radius) !important;
+  color: var(--ui-soft) !important;
+  background: #111117 !important;
+  box-shadow: none !important;
+}
+
+body.nexus-overhaul .top-actions > button:hover {
+  border-color: #4a4658 !important;
+  color: #fff !important;
+  background: #181820 !important;
+}
+
+body.nexus-overhaul .retired-map-action { display: none !important; }
+
+body.nexus-overhaul .topbar-donate-button {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid #6b3852;
+  border-radius: var(--ui-radius);
+  padding: 0 12px;
+  color: #ffd3e1;
+  background: #21101a;
+  font-size: 10px;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+body.nexus-overhaul .topbar-donate-button:hover { border-color: #d85d8b; color: #fff; background: #321522; }
+.sidebar-support-note { display: block; color: #adb3bc; font-size: 11px; line-height: 1.4; padding: 4px 6px; }
+.open-source-links { color: #adb3bc; font-size: 13px; line-height: 1.6; }
+.open-source-links a { color: #84dcbf; }
+.nexus-open-source .sidebar-support-link { color: #ffb2cd; border: 1px solid #71364e; background: #29131e; border-radius: 6px; padding: 10px; }
+.nexus-open-source .account-signout-button { text-decoration: none; color: #ffb2cd; }
+body.nexus-overhaul .topbar-donate-button svg { width: 15px; height: 15px; color: #ff789f; }
+
+body.nexus-overhaul .local-badge[data-state="online"] {
+  border-color: rgb(53 211 153 / 35%) !important;
+  color: var(--ui-green) !important;
+}
+
+body.nexus-overhaul .compact-primary-nav {
+  position: fixed !important;
+  z-index: 1250;
+  inset: 0 auto 0 0;
+  width: var(--ui-sidebar) !important;
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column;
+  align-items: stretch !important;
+  gap: 3px;
+  overflow: hidden auto;
+  border: 0 !important;
+  border-right: 1px solid var(--ui-border) !important;
+  padding: 0 10px 12px;
+  background: #09090d !important;
+  box-shadow: 10px 0 30px rgb(0 0 0 / 22%) !important;
+}
+
+body.nexus-overhaul .compact-sidebar-brand {
+  min-height: var(--ui-toolbar);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--ui-border);
+  margin: 0 -10px 11px;
+  padding: 8px 13px;
+  background: #07090d;
+  color: inherit;
+  text-decoration: none;
+}
+
+body.nexus-overhaul .compact-sidebar-brand img {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  border: 1px solid #334151;
+  border-radius: 5px;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgb(77 199 255 / 14%);
+}
+
+body.nexus-overhaul .compact-sidebar-brand span {
+  min-width: 0;
+  display: grid;
+  gap: 2px;
+}
+
+body.nexus-overhaul .compact-sidebar-brand strong {
+  overflow: hidden;
+  color: #f7fbff;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+body.nexus-overhaul .compact-sidebar-brand small {
+  color: #778493;
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+body.nexus-overhaul .compact-sidebar-brand .brand-site-address {
+  color: #8bd5ff;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.15;
+  text-transform: none;
+  text-shadow: 0 0 10px rgb(72 160 255 / 30%);
+}
+
+body.nexus-overhaul .compact-sidebar-brand .brand-description {
+  font-size: 8px;
+  line-height: 1.1;
+}
+
+body.nexus-overhaul .compact-nav-label {
+  padding: 11px 10px 5px;
+  color: #65626f;
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+body.nexus-overhaul .compact-nav-spacer {
+  min-height: 16px;
+  flex: 1;
+}
+
+body.nexus-overhaul .compact-primary-nav .module-tab {
+  position: relative;
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 42px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-start !important;
+  gap: 11px;
+  border: 1px solid transparent !important;
+  border-radius: var(--ui-radius) !important;
+  padding: 0 11px !important;
+  color: #908e98 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  text-decoration: none;
+}
+
+body.nexus-overhaul .compact-primary-nav .module-tab svg {
+  width: 18px;
+  height: 18px;
+}
+
+body.nexus-overhaul .premium-nav-icon {
+  width: 18px;
+  height: 18px;
+  display: grid;
+  place-items: center;
+  flex: none;
+  margin-left: auto;
+  border: 1px solid rgb(77 199 255 / 34%);
+  border-radius: 50%;
+  color: #4dc7ff;
+  background: #0b1820;
+}
+
+body.nexus-overhaul .premium-nav-icon svg {
+  width: 10px !important;
+  height: 10px !important;
+  stroke-width: 2.2;
+}
+
+body.nexus-overhaul .compact-nav-toggle .premium-nav-icon {
+  margin-left: auto;
+  margin-right: 2px;
+}
+
+body.nexus-overhaul .compact-primary-nav .module-tab.is-premium-locked {
+  color: #777680 !important;
+}
+
+body.nexus-overhaul .compact-primary-nav .module-tab.is-premium-locked:hover {
+  color: #d8f4ff !important;
+  border-color: rgb(77 199 255 / 18%) !important;
+  background: rgb(77 199 255 / 5%) !important;
+}
+
+body.nexus-overhaul .compact-primary-nav .module-tab:hover {
+  color: #fff !important;
+  background: #15151c !important;
+}
+
+body.nexus-overhaul .compact-primary-nav .module-tab.is-active {
+  border-color: #36323f !important;
+  color: #fff !important;
+  background: linear-gradient(90deg, rgb(155 108 255 / 20%), rgb(155 108 255 / 4%)) !important;
+}
+
+body.nexus-overhaul .compact-primary-nav .module-tab.is-active::before {
+  content: "";
+  position: absolute;
+  inset: 8px auto 8px -1px;
+  width: 3px;
+  border-radius: 3px;
+  background: var(--ui-purple-soft);
+  box-shadow: 0 0 12px rgb(155 108 255 / 55%);
+}
+
+body.nexus-overhaul .compact-primary-nav .module-tab::after {
+  display: none !important;
+}
+
+/* Map */
+body.nexus-overhaul [data-module-panel] {
+  display: none !important;
+}
+
+body.nexus-overhaul #mapWorkspace.is-active {
+  height: calc(100vh - var(--ui-toolbar));
+  display: grid !important;
+  grid-template-columns: 292px minmax(0, 1fr);
+  animation: nexus-view-enter 180ms ease both;
+}
+
+body.nexus-overhaul .sidebar {
+  width: auto !important;
+  min-width: 0 !important;
+  overflow: hidden auto;
+  border: 0 !important;
+  border-right: 1px solid var(--ui-border) !important;
+  padding: 0 !important;
+  background: #0b0b10 !important;
+  box-shadow: none !important;
+}
+
+body.nexus-overhaul .sidebar-toolbar {
+  min-height: 62px;
+  border-bottom: 1px solid var(--ui-border);
+  padding: 12px 14px;
+  background: #0d0d12;
+}
+
+body.nexus-overhaul .sidebar-toolbar strong {
+  font: 750 18px/1.1 Inter, "Segoe UI", sans-serif !important;
+}
+
+body.nexus-overhaul .quiet-button {
+  color: var(--ui-purple-soft) !important;
+}
+
+body.nexus-overhaul .summary-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  border-bottom: 1px solid var(--ui-border) !important;
+  background: #09090d !important;
+}
+
+body.nexus-overhaul .summary-grid div {
+  min-height: 62px !important;
+  border-color: #202028 !important;
+  padding: 10px 14px !important;
+}
+
+body.nexus-overhaul .summary-grid span {
+  color: var(--ui-muted) !important;
+  font-size: 9px !important;
+}
+
+body.nexus-overhaul .summary-grid strong {
+  color: #fff !important;
+  font-size: 18px !important;
+  text-shadow: none !important;
+}
+
+body.nexus-overhaul :is(.quick-add-section, .route-planner-section) {
+  display: none !important;
+}
+
+body.nexus-overhaul .sidebar-section {
+  border-bottom: 1px solid var(--ui-border) !important;
+  padding: 15px 13px !important;
+  background: transparent !important;
+}
+
+body.nexus-overhaul .section-heading h2 {
+  margin: 0;
+  font-size: 14px !important;
+  font-weight: 750;
+}
+
+body.nexus-overhaul .layer-browser {
+  display: grid;
+  gap: 5px;
+}
+
+body.nexus-overhaul :is(.layer-group, .layer-category, .layer-resource) {
+  border-color: var(--ui-border) !important;
+  border-radius: 5px !important;
+  background: #101016 !important;
+  box-shadow: none !important;
+}
+
+body.nexus-overhaul :is(.layer-group, .layer-category, .layer-resource):hover {
+  border-color: #45414f !important;
+  background: #17171e !important;
+}
+
+body.nexus-overhaul .map-stage {
+  position: relative;
+  min-width: 0;
+  background: #050507 !important;
+}
+
+body.nexus-overhaul .map-toolbar {
+  inset: 12px 12px auto auto !important;
+  min-height: 42px;
+  gap: 5px !important;
+  border: 1px solid rgb(50 49 58 / 90%) !important;
+  border-radius: var(--ui-radius) !important;
+  padding: 5px !important;
+  background: rgb(12 12 17 / 92%) !important;
+  box-shadow: 0 12px 28px rgb(0 0 0 / 38%) !important;
+  backdrop-filter: blur(12px);
+}
+
+body.nexus-overhaul .map-toolbar :is(button, a) {
+  min-height: 32px !important;
+  border: 1px solid transparent !important;
+  border-radius: 4px !important;
+  color: #aaa8b1 !important;
+  background: transparent !important;
+}
+
+body.nexus-overhaul .map-toolbar :is(button, a):hover,
+body.nexus-overhaul .map-toolbar :is(button, a).is-active {
+  border-color: #3a3742 !important;
+  color: #fff !important;
+  background: #1a1920 !important;
+  box-shadow: none !important;
+}
+
+body.nexus-overhaul .continent-switch {
+  border-color: var(--ui-border) !important;
+  border-radius: 4px !important;
+  background: #09090d !important;
+}
+
+body.nexus-overhaul .leaflet-control-zoom a {
+  border-color: var(--ui-border) !important;
+  color: #fff !important;
+  background: #111117 !important;
+}
+
+/* Unified Macros and Settings */
+body.nexus-overhaul .tools-workspace.is-active {
+  height: calc(100vh - var(--ui-toolbar));
+  display: block !important;
+  overflow: hidden auto;
+  background: var(--ui-bg) !important;
+}
+
+body.nexus-overhaul .tools-workspace > .module-panel.is-active {
+  width: min(1180px, calc(100% - 40px));
+  display: block !important;
+  margin: 0 auto;
+  padding: 24px 0 40px !important;
+  animation: nexus-view-enter 180ms ease both;
+}
+
+body.nexus-overhaul .tool-page-heading {
+  min-height: 78px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border: 0 !important;
+  border-bottom: 1px solid var(--ui-border) !important;
+  padding: 0 0 18px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.nexus-overhaul .tool-page-heading h1 {
+  margin: 0 0 5px;
+  font-size: 27px !important;
+  font-weight: 780 !important;
+}
+
+body.nexus-overhaul .tool-page-heading p {
+  margin: 0;
+  color: var(--ui-muted) !important;
+  font-size: 13px !important;
+}
+
+body.nexus-overhaul .emergency-stop-group {
+  align-items: flex-end;
+}
+
+body.nexus-overhaul .emergency-stop-group > span {
+  color: var(--ui-muted) !important;
+  font-size: 10px !important;
+}
+
+body.nexus-overhaul .combat-tabs,
+body.nexus-overhaul .settings-tabs {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  overflow-x: auto;
+  border: 0 !important;
+  border-bottom: 1px solid var(--ui-border) !important;
+  padding: 8px 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.nexus-overhaul :is(.combat-tabs, .settings-tabs) button {
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid transparent !important;
+  border-radius: 5px !important;
+  padding: 0 13px;
+  color: var(--ui-muted) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.nexus-overhaul :is(.combat-tabs, .settings-tabs) button:hover {
+  color: #fff !important;
+  background: #15151c !important;
+}
+
+body.nexus-overhaul :is(.combat-tabs, .settings-tabs) button.is-active {
+  border-color: #3c354f !important;
+  color: #fff !important;
+  background: rgb(155 108 255 / 14%) !important;
+  box-shadow: inset 0 -2px var(--ui-purple) !important;
+}
+
+body.nexus-overhaul .combat-panel,
+body.nexus-overhaul .settings-panel {
+  display: none !important;
+}
+
+body.nexus-overhaul :is(.combat-panel, .settings-panel).is-active {
+  display: block !important;
+  padding-top: 16px;
+  animation: nexus-view-enter 170ms ease both;
+}
+
+body.nexus-overhaul .tool-layout {
+  gap: 14px !important;
+}
+
+body.nexus-overhaul .tool-card,
+body.nexus-overhaul .settings-card {
+  border: 1px solid var(--ui-border) !important;
+  border-radius: var(--ui-radius) !important;
+  padding: 18px !important;
+  background: var(--ui-panel) !important;
+  box-shadow: none !important;
+}
+
+body.nexus-overhaul .tool-card:hover {
+  border-color: #34323d !important;
+  box-shadow: none !important;
+}
+
+body.nexus-overhaul .tool-card-heading {
+  min-height: 42px;
+  border-bottom: 1px solid #202028;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+}
+
+body.nexus-overhaul .tool-card-heading h2,
+body.nexus-overhaul .settings-card-heading h2 {
+  margin: 0;
+  font-size: 16px !important;
+}
+
+body.nexus-overhaul .tool-card-heading > span,
+body.nexus-overhaul .settings-card-heading p {
+  color: var(--ui-muted) !important;
+  font-size: 10px !important;
+}
+
+body.nexus-overhaul :is(input[type="text"], input[type="search"], input[type="number"], input[type="password"], select, textarea) {
+  min-height: 40px !important;
+  border: 1px solid var(--ui-border) !important;
+  border-radius: 5px !important;
+  color: #fff !important;
+  background: #09090d !important;
+  box-shadow: none !important;
+}
+
+body.nexus-overhaul :is(input, select, textarea):focus {
+  border-color: var(--ui-purple) !important;
+  outline: 3px solid rgb(155 108 255 / 10%) !important;
+  box-shadow: none !important;
+}
+
+body.nexus-overhaul button:not(.module-tab):not(.quiet-button) {
+  border: 1px solid var(--ui-border) !important;
+  border-radius: 5px !important;
+  color: #d4d2da !important;
+  background: #15151b !important;
+  box-shadow: none !important;
+}
+
+body.nexus-overhaul button:not(.module-tab):not(.quiet-button):hover:not(:disabled) {
+  border-color: #474351 !important;
+  color: #fff !important;
+  background: #1c1b23 !important;
+}
+
+body.nexus-overhaul :is(.primary-button, .start-button) {
+  border-color: #8059d8 !important;
+  color: #fff !important;
+  background: linear-gradient(135deg, #8053df, #623dc0) !important;
+  box-shadow: 0 8px 20px rgb(94 55 185 / 20%) !important;
+}
+
+body.nexus-overhaul :is(.primary-button, .start-button):hover:not(:disabled) {
+  border-color: var(--ui-purple-soft) !important;
+  background: linear-gradient(135deg, #9768f7, #7546db) !important;
+  transform: translateY(-1px);
+}
+
+body.nexus-overhaul .danger-button {
+  border-color: rgb(251 93 120 / 45%) !important;
+  color: #ff9aaa !important;
+  background: rgb(251 93 120 / 9%) !important;
+}
+
+body.nexus-overhaul .phase-pill {
+  border: 1px solid #36333d !important;
+  border-radius: 999px !important;
+  color: #aaa8b1 !important;
+  background: #111117 !important;
+  box-shadow: none !important;
+}
+
+body.nexus-overhaul .settings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+body.nexus-overhaul .settings-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #202028;
+  margin-bottom: 15px;
+  padding-bottom: 14px;
+}
+
+body.nexus-overhaul .settings-card-heading > svg {
+  width: 20px;
+  color: var(--ui-purple-soft);
+}
+
+body.nexus-overhaul .settings-card-heading p {
+  margin: 4px 0 0;
+}
+
+body.nexus-overhaul .settings-switch-row {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--ui-border);
+  border-radius: 5px;
+  padding: 10px 12px;
+  background: #101016;
+}
+
+body.nexus-overhaul .settings-switch-row span,
+body.nexus-overhaul .settings-switch-row :is(strong, small) {
+  display: block;
+}
+
+body.nexus-overhaul .settings-switch-row small {
+  margin-top: 3px;
+  color: var(--ui-muted);
+}
+
+body.nexus-overhaul .display-control-mount,
+body.nexus-overhaul .application-control-mount {
+  display: grid;
+  gap: 9px;
+  margin-top: 10px;
+}
+
+body.nexus-overhaul .display-control-mount > :is(label, div),
+body.nexus-overhaul .application-control-mount > button {
+  width: 100% !important;
+  min-height: 56px !important;
+  display: grid !important;
+  grid-template-columns: 24px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--ui-border) !important;
+  border-radius: 5px !important;
+  padding: 10px 12px !important;
+  color: var(--ui-soft) !important;
+  background: #101016 !important;
+  box-shadow: none !important;
+}
+
+body.nexus-overhaul .display-control-mount input[type="range"] {
+  width: 100% !important;
+  accent-color: var(--ui-purple);
+}
+
+body.nexus-overhaul .display-control-mount input[type="range"]:disabled {
+  opacity: .38;
+}
+
+body.nexus-overhaul .second-screen-mode {
+  grid-template-columns: minmax(0, 1fr) auto !important;
+}
+
+body.nexus-overhaul .second-screen-toggle {
+  min-width: 0;
+}
+
+body.nexus-overhaul .second-screen-size select {
+  width: 150px;
+}
+
+body.nexus-overhaul .hotkeys-master-button[data-enabled="true"] {
+  border-color: rgb(53 211 153 / 35%) !important;
+  color: var(--ui-green) !important;
+  background: rgb(53 211 153 / 8%) !important;
+}
+
+body.nexus-overhaul .login-card form label {
+  display: grid;
+  gap: 6px;
+}
+
+/* Shared pages use the same compact frame */
+body.site-shell-enabled {
+  min-height: 100vh;
+  display: block !important;
+  padding: var(--ui-toolbar) 0 0 var(--ui-sidebar) !important;
+  background: var(--ui-bg) !important;
+}
+
+body.site-shell-enabled .app-sidebar {
+  position: fixed !important;
+  z-index: 1300;
+  inset: 0 auto 0 0 !important;
+  width: var(--ui-sidebar) !important;
+  border: 0 !important;
+  border-right: 1px solid var(--ui-border) !important;
+  background: #09090d !important;
+  box-shadow: 10px 0 30px rgb(0 0 0 / 22%) !important;
+}
+
+body.site-shell-enabled .app-sidebar::before {
+  display: none !important;
+}
+
+body.site-shell-enabled .app-sidebar-head {
+  min-height: var(--ui-toolbar) !important;
+  border-bottom: 1px solid var(--ui-border) !important;
+  padding: 9px 12px !important;
+  background: #09090d !important;
+}
+
+body.site-shell-enabled .app-sidebar-brand {
+  gap: 9px !important;
+}
+
+body.site-shell-enabled .app-sidebar-brand-mark {
+  width: 38px !important;
+  height: 38px !important;
+  border: 1px solid #34313f !important;
+  border-radius: var(--ui-radius) !important;
+  background: #111118 !important;
+  box-shadow: none !important;
+}
+
+body.site-shell-enabled .app-sidebar-brand-mark img {
+  filter: none !important;
+}
+
+body.site-shell-enabled .app-sidebar-brand-copy strong {
+  font-size: 14px !important;
+}
+
+body.site-shell-enabled .app-sidebar-brand-copy small {
+  color: var(--ui-muted) !important;
+  font-size: 9px !important;
+}
+
+body.site-shell-enabled .app-sidebar-toggle {
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 5px !important;
+}
+
+body.site-shell-enabled .app-sidebar-body {
+  padding: 10px !important;
+}
+
+body.site-shell-enabled .app-nav-section {
+  margin: 0 0 8px !important;
+}
+
+body.site-shell-enabled .app-nav-section-title {
+  padding: 10px 9px 5px !important;
+  color: #65626f !important;
+  font-size: 8px !important;
+  letter-spacing: 0 !important;
+}
+
+body.site-shell-enabled .app-nav-link,
+body.site-shell-enabled .app-update-button {
+  min-height: 38px !important;
+  gap: 9px !important;
+  border: 1px solid transparent !important;
+  border-radius: 5px !important;
+  padding: 5px 9px !important;
+  color: #918f99 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.site-shell-enabled .app-nav-link:hover,
+body.site-shell-enabled .app-update-button:hover {
+  border-color: transparent !important;
+  color: #fff !important;
+  background: #15151c !important;
+  box-shadow: none !important;
+}
+
+body.site-shell-enabled .app-nav-link.active {
+  border-color: #383240 !important;
+  color: #fff !important;
+  background: linear-gradient(90deg, rgb(155 108 255 / 20%), rgb(155 108 255 / 4%)) !important;
+  box-shadow: inset 3px 0 var(--ui-purple) !important;
+}
+
+body.site-shell-enabled .app-nav-icon {
+  width: 28px !important;
+  height: 28px !important;
+  border: 0 !important;
+  color: var(--nav-accent, var(--ui-purple-soft)) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.site-shell-enabled .app-nav-icon svg {
+  width: 17px !important;
+  height: 17px !important;
+}
+
+body.site-shell-enabled .app-nav-copy strong {
+  font-size: 11px !important;
+}
+
+body.site-shell-enabled .app-sidebar-foot {
+  border-top: 1px solid var(--ui-border) !important;
+  padding: 8px 10px 10px !important;
+  background: #09090d !important;
+}
+
+body.site-shell-enabled .site-global-toolbar {
+  position: fixed !important;
+  z-index: 1200;
+  inset: 0 0 auto var(--ui-sidebar) !important;
+  height: var(--ui-toolbar) !important;
+  min-height: var(--ui-toolbar) !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--ui-border) !important;
+  padding: 0 16px !important;
+  background: rgb(10 10 14 / 96%) !important;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 35%) !important;
+  backdrop-filter: blur(14px);
+}
+
+body.site-shell-enabled .site-global-toolbar::before {
+  display: none !important;
+}
+
+body.site-shell-enabled .site-global-toolbar-label {
+  color: #fff !important;
+}
+
+body.site-shell-enabled .site-global-toolbar-label > svg {
+  color: var(--ui-purple-soft) !important;
+  filter: none !important;
+}
+
+body.site-shell-enabled .site-global-toolbar-label strong {
+  font-size: 14px !important;
+}
+
+body.site-shell-enabled .site-global-tool-links {
+  gap: 5px !important;
+}
+
+body.site-shell-enabled .site-global-tool-links a {
+  min-height: 34px !important;
+  border: 1px solid transparent !important;
+  border-radius: 5px !important;
+  color: var(--ui-muted) !important;
+  background: transparent !important;
+}
+
+body.site-shell-enabled .site-global-tool-links a:hover {
+  border-color: var(--ui-border) !important;
+  color: #fff !important;
+  background: #15151c !important;
+}
+
+body.site-shell-enabled main {
+  min-height: calc(100vh - var(--ui-toolbar));
+  overflow: visible;
+  padding: 24px !important;
+  background: var(--ui-bg) !important;
+  animation: nexus-view-enter 180ms ease both;
+}
+
+body.site-shell-enabled .main-content {
+  max-width: 1320px !important;
+  margin: 0 auto !important;
+  padding: 24px !important;
+}
+
+body.site-shell-enabled :is(
+  .crafting-workbench,
+  .calculator-shell,
+  .refining-shell,
+  .butchery-shell,
+  .alchemy-shell,
+  .cooking-workbench,
+  .reverse-tool,
+  .building-planner,
+  .pet-planner,
+  .builder-shell,
+  .shambles-layout,
+  .tool-rail,
+  .tool-grid,
+  .tool-column,
+  .metric-grid,
+  .forge-sidebar,
+  .forge-workspace,
+  .directory-group,
+  .record-row
+) {
+  border: 1px solid var(--ui-border) !important;
+  border-radius: var(--ui-radius) !important;
+  background: var(--ui-panel) !important;
+  box-shadow: none !important;
+}
+
+body.site-shell-enabled :is(
+  .furnace-intro,
+  .refining-intro,
+  .butchery-intro,
+  .alchemy-intro,
+  .cooking-intro,
+  .reverse-intro,
+  .building-intro,
+  .pets-intro,
+  .crafting-intro,
+  .tool-titlebar,
+  .browse-header
+) {
+  min-height: 106px !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--ui-border) !important;
+  padding: 20px 22px !important;
+  background: linear-gradient(100deg, rgb(var(--page-accent-rgb, 155 108 255) / 8%), transparent 50%), #0d0d12 !important;
+  box-shadow: none !important;
+}
+
+body.site-shell-enabled :is(
+  .furnace-intro,
+  .refining-intro,
+  .butchery-intro,
+  .alchemy-intro,
+  .cooking-intro,
+  .reverse-intro,
+  .building-intro,
+  .pets-intro,
+  .crafting-intro,
+  .tool-titlebar,
+  .browse-header
+) h1 {
+  font-size: 28px !important;
+}
+
+/* Reference becomes a compact library instead of a landing page */
+body.nexus-page-reference .intro {
+  min-height: 190px !important;
+  grid-template-columns: minmax(0, 1.1fr) minmax(420px, .9fr) !important;
+  gap: 28px !important;
+  border: 1px solid var(--ui-border) !important;
+  border-radius: var(--ui-radius) !important;
+  padding: 28px 30px !important;
+  background: linear-gradient(110deg, rgb(155 108 255 / 10%), transparent 52%), #0d0d12 !important;
+  box-shadow: none !important;
+}
+
+body.nexus-page-reference .intro::before,
+body.nexus-page-reference .intro::after {
+  display: none !important;
+}
+
+body.nexus-page-reference .intro h1 {
+  max-width: 620px;
+  margin-bottom: 12px !important;
+  font-size: 36px !important;
+  line-height: 1.08 !important;
+}
+
+body.nexus-page-reference .intro h1 span {
+  color: var(--ui-purple-soft) !important;
+  text-shadow: none !important;
+}
+
+body.nexus-page-reference .intro-copy {
+  color: var(--ui-soft) !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+}
+
+body.nexus-page-reference .reference-overview {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  border: 1px solid var(--ui-border) !important;
+  border-radius: var(--ui-radius) !important;
+  background: #09090d !important;
+  box-shadow: none !important;
+}
+
+body.nexus-page-reference .reference-stat {
+  min-height: 76px !important;
+  border-color: #202028 !important;
+  padding: 13px !important;
+  background: transparent !important;
+}
+
+body.nexus-page-reference .reference-stat strong {
+  font-size: 21px !important;
+}
+
+body.nexus-page-reference .category-directory {
+  gap: 12px !important;
+}
+
+body.nexus-page-reference .directory-group {
+  border-top: 2px solid var(--accent, var(--ui-purple)) !important;
+  padding: 18px !important;
+}
+
+body.nexus-page-reference .directory-group:hover {
+  transform: translateY(-1px) !important;
+  border-color: var(--accent, var(--ui-purple)) !important;
+  box-shadow: 0 10px 28px rgb(0 0 0 / 22%) !important;
+}
+
+body.nexus-page-reference .section-link {
+  border-color: transparent !important;
+  border-left-color: #272631 !important;
+  border-radius: 4px !important;
+  background: #101016 !important;
+}
+
+body.nexus-page-reference .section-link.active {
+  border-color: #423954 !important;
+  color: #fff !important;
+  background: rgb(155 108 255 / 12%) !important;
+  box-shadow: inset 3px 0 var(--ui-purple) !important;
+}
+
+body.site-shell-enabled .marshal-footer {
+  color: #65636d !important;
+}
+
+/* Persistent desktop frame */
+body.nexus-overhaul .brand {
+  min-width: 0 !important;
+  max-width: var(--ui-sidebar) !important;
+}
+
+body.nexus-overhaul .brand img {
+  width: 42px !important;
+  height: 42px !important;
+  object-fit: cover;
+  padding: 0 !important;
+}
+
+body.nexus-overhaul .topbar-primary {
+  min-width: 0;
+}
+
+body.nexus-overhaul .global-search {
+  width: auto !important;
+  min-width: 190px;
+  max-width: 620px;
+  flex: 1 1 440px;
+}
+
+body.nexus-overhaul .top-actions {
+  flex: 0 0 auto;
+}
+
+body.nexus-overhaul :is(#mapWorkspace, #toolsWorkspace, #embeddedWorkspace) {
+  position: fixed !important;
+  inset: var(--ui-toolbar) 0 0 var(--ui-sidebar) !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+}
+
+body.nexus-overhaul .embedded-workspace.is-active {
+  display: block !important;
+  overflow: hidden;
+  background: var(--ui-bg);
+  animation: nexus-view-enter 150ms ease both;
+}
+
+body.nexus-overhaul .embedded-frame {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+  background: var(--ui-bg);
+}
+
+body.nexus-overhaul #syncBadge,
+body.nexus-overhaul #routesMapBtn,
+body.nexus-overhaul #syncBadge[hidden],
+body.nexus-overhaul #routesMapBtn[hidden] {
+  display: none !important;
+}
+
+body.nexus-overhaul .compact-nav-group {
+  display: grid;
+  gap: 3px;
+}
+
+body.nexus-overhaul .compact-nav-toggle > svg:last-child {
+  width: 14px !important;
+  height: 14px !important;
+  margin-left: auto;
+  transition: transform 140ms ease;
+}
+
+body.nexus-overhaul .compact-nav-toggle.is-open > svg:last-child {
+  transform: rotate(180deg);
+}
+
+body.nexus-overhaul .compact-subnav {
+  display: grid;
+  gap: 0;
+  border-left: 1px solid #263442;
+  margin: 1px 0 6px 20px;
+  padding: 2px 0 2px 12px;
+}
+
+body.nexus-overhaul .compact-subnav[hidden] {
+  display: none !important;
+}
+
+body.nexus-overhaul .compact-subnav button {
+  position: relative;
+  min-height: 29px !important;
+  border: 0 !important;
+  border-radius: 3px !important;
+  padding: 0 8px !important;
+  color: var(--ui-muted) !important;
+  font-size: 12px;
+  text-align: left;
+  background: transparent !important;
+}
+
+body.nexus-overhaul .compact-subnav button:hover,
+body.nexus-overhaul .compact-subnav button.is-active {
+  color: #dff5ff !important;
+  background: rgb(77 199 255 / 7%) !important;
+}
+
+body.nexus-overhaul .compact-subnav button.is-active::before {
+  content: "";
+  position: absolute;
+  inset: 7px auto 7px -13px;
+  width: 2px;
+  background: #4dc7ff;
+  box-shadow: 0 0 8px rgb(77 199 255 / 70%);
+}
+
+body.nexus-overhaul .compact-sidebar-footer {
+  display: grid;
+  gap: 5px;
+  border-top: 1px solid var(--ui-border);
+  margin-top: 8px;
+  padding-top: 10px;
+}
+
+body.nexus-overhaul .sidebar-update-button,
+body.nexus-overhaul .sidebar-support-link {
+  width: 100% !important;
+  min-height: 38px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  border: 1px solid transparent !important;
+  border-radius: 5px !important;
+  padding: 0 11px !important;
+  color: var(--ui-muted) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  text-decoration: none;
+}
+
+body.nexus-overhaul :is(.sidebar-update-button, .sidebar-support-link):hover {
+  border-color: var(--ui-border) !important;
+  color: #fff !important;
+  background: #15151c !important;
+}
+
+body.nexus-overhaul .sidebar-support-link {
+  color: #ff8e9f !important;
+}
+
+body.nexus-overhaul .sidebar-update-button[data-state="available"],
+body.nexus-overhaul .sidebar-update-button[data-state="required"] {
+  border-color: rgb(251 93 120 / 72%) !important;
+  color: #fff !important;
+  background: linear-gradient(90deg, #8d1830, #571322) !important;
+  animation: nexus-update-alert 1.5s ease-in-out infinite;
+}
+
+body.nexus-overhaul .sidebar-update-button[data-state="available"] svg,
+body.nexus-overhaul .sidebar-update-button[data-state="required"] svg {
+  color: #fff;
+}
+
+body.nexus-overhaul .top-actions > :is(#fitBtn, #exportBtn, #importBtn) {
+  width: 38px !important;
+  min-width: 38px !important;
+  padding: 0 !important;
+}
+
+body.nexus-overhaul .map-only-action[hidden] {
+  display: none !important;
+}
+
+body.nexus-overhaul .top-actions > #editorButton {
+  min-width: 82px;
+  justify-content: center;
+}
+
+body.nexus-overhaul .top-actions > #accountProfileButton {
+  position: relative;
+  width: 40px;
+  min-width: 40px;
+  padding: 0 !important;
+}
+
+body.nexus-overhaul .account-profile-avatar,
+body.nexus-overhaul .account-profile-large-avatar {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid #3f3a49;
+  border-radius: 50%;
+  color: #ba8cff;
+  background: #19151f;
+  font-weight: 800;
+}
+
+body.nexus-overhaul .account-profile-avatar {
+  width: 28px;
+  height: 28px;
+  font-size: 9px;
+}
+
+body.nexus-overhaul :is(.account-profile-avatar, .account-profile-large-avatar) img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+body.nexus-overhaul .account-profile-premium {
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  width: 16px;
+  height: 16px;
+  display: grid;
+  place-items: center;
+  border: 2px solid #111117;
+  border-radius: 50%;
+  color: #4dc7ff;
+  background: #0b2534;
+}
+
+body.nexus-overhaul .account-profile-premium[hidden] { display: none !important; }
+body.nexus-overhaul .account-profile-premium svg { width: 11px; height: 11px; }
+
+body.nexus-overhaul .account-profile-dialog {
+  width: min(650px, calc(100vw - 40px));
+  max-height: calc(100vh - 60px);
+  overflow: auto;
+  padding: 0;
+  border: 1px solid #50445a;
+  border-radius: 6px;
+  color: #f3f1f6;
+  background: #0a0a0f;
+  box-shadow: 0 28px 100px rgb(0 0 0 / 78%);
+}
+
+body.nexus-overhaul .account-profile-dialog::backdrop { background: rgb(0 0 0 / 76%); }
+body.nexus-overhaul .account-profile-dialog * { box-sizing: border-box; }
+body.nexus-overhaul .account-profile-dialog form { margin: 0; }
+
+body.nexus-overhaul .account-profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 20px;
+  border-bottom: 1px solid #2d2734;
+  background: #0e0e15;
+}
+
+body.nexus-overhaul .account-profile-heading { display: flex; align-items: center; gap: 14px; min-width: 0; }
+body.nexus-overhaul .account-profile-large-avatar { width: 54px; height: 54px; flex: none; font-size: 14px; }
+body.nexus-overhaul .profile-eyebrow { color: #4dc7ff; font-size: 9px; font-weight: 800; text-transform: uppercase; }
+body.nexus-overhaul .account-profile-heading h2 { margin: 3px 0 2px; font-size: 21px; }
+body.nexus-overhaul .account-profile-heading p { margin: 0; color: #928d9b; font-size: 10px; }
+
+body.nexus-overhaul .profile-close-button {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  flex: none;
+  border: 1px solid #342e3b;
+  border-radius: 4px;
+  padding: 0;
+  color: #aaa5b1;
+  background: #13131a;
+}
+
+body.nexus-overhaul .account-profile-badges { min-height: 44px; display: flex; align-items: center; gap: 8px; padding: 8px 20px; border-bottom: 1px solid #25212c; }
+body.nexus-overhaul :is(.profile-premium-badge, .profile-editor-badge) { display: inline-flex; align-items: center; gap: 6px; padding: 6px 8px; border: 1px solid #285064; border-radius: 4px; color: #4dc7ff; background: #0b1820; font-size: 9px; font-weight: 800; text-transform: uppercase; }
+body.nexus-overhaul .profile-editor-badge { border-color: #285064; color: #67d8ff; background: #0b1820; }
+body.nexus-overhaul :is(.profile-premium-badge, .profile-editor-badge)[hidden] { display: none !important; }
+body.nexus-overhaul :is(.profile-premium-badge, .profile-editor-badge) svg { width: 14px; height: 14px; }
+
+body.nexus-overhaul .account-profile-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; padding: 20px; }
+body.nexus-overhaul .account-profile-fields label > span { display: block; margin-bottom: 6px; color: #bdb8c5; font-size: 10px; font-weight: 700; }
+body.nexus-overhaul .account-profile-fields :is(input, textarea) { width: 100%; border: 1px solid #302a38; border-radius: 4px; padding: 10px 11px; color: #f4f1f6; background: #09090e; outline: none; resize: vertical; }
+body.nexus-overhaul .account-profile-fields :is(input, textarea):focus { border-color: #9b6cff; box-shadow: 0 0 0 3px rgb(155 108 255 / 10%); }
+body.nexus-overhaul .profile-full-field { grid-column: 1 / -1; }
+body.nexus-overhaul .profile-avatar-upload { position: relative; }
+body.nexus-overhaul .profile-avatar-upload > input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+body.nexus-overhaul .profile-avatar-upload-control { min-height: 58px; display: flex !important; align-items: center; gap: 11px; margin: 0 !important; border: 1px dashed #493a55; border-radius: 4px; padding: 10px 12px; color: #dcd5e3 !important; background: #0c0a10; cursor: pointer; }
+body.nexus-overhaul .profile-avatar-upload-control > svg { width: 24px; height: 24px; color: #bb79ff; }
+body.nexus-overhaul .profile-avatar-upload-control strong, body.nexus-overhaul .profile-avatar-upload-control small { display: block; }
+body.nexus-overhaul .profile-avatar-upload-control small { margin-top: 3px; color: #827989; font-size: 9px; }
+
+body.nexus-overhaul .account-profile-footer { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 14px 20px; border-top: 1px solid #2d2734; color: #77717f; font-size: 9px; }
+body.nexus-overhaul .account-profile-footer > div { display: flex; gap: 8px; }
+body.nexus-overhaul :is(.profile-signout-button, .profile-cancel-button, .profile-save-button) { min-height: 38px; display: inline-flex; align-items: center; justify-content: center; gap: 7px; border: 1px solid #35303d; border-radius: 4px; padding: 0 14px; color: #d7d2dc; background: #121219; }
+body.nexus-overhaul .profile-save-button { border-color: #713f78; color: #fff; background: #59264f; font-weight: 750; }
+body.nexus-overhaul .profile-save-button:hover { background: #713064; }
+body.nexus-overhaul .profile-save-button:disabled { opacity: .55; cursor: wait; }
+
+body.nexus-overhaul .premium-access-dialog {
+  width: min(620px, calc(100vw - 40px));
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #285064;
+  border-radius: 6px;
+  color: #f4f8ff;
+  background: #080b11;
+  box-shadow: 0 30px 110px rgb(0 0 0 / 82%), 0 0 36px rgb(77 199 255 / 10%);
+}
+
+body.nexus-overhaul .premium-access-dialog::backdrop { background: rgb(0 0 0 / 78%); }
+body.nexus-overhaul .premium-access-dialog * { box-sizing: border-box; }
+
+body.nexus-overhaul .premium-access-hero {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr) 38px;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+  border-bottom: 1px solid #203544;
+  background: linear-gradient(110deg, #0e2030, #0b0d15 72%);
+}
+
+body.nexus-overhaul .premium-access-crown {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #326b87;
+  border-radius: 5px;
+  color: #65d5ff;
+  background: #0a1822;
+  box-shadow: inset 0 0 22px rgb(77 199 255 / 8%);
+}
+
+body.nexus-overhaul .premium-access-crown svg { width: 24px; height: 24px; }
+body.nexus-overhaul .premium-access-eyebrow { color: #4dc7ff; font-size: 9px; font-weight: 850; text-transform: uppercase; }
+body.nexus-overhaul .premium-access-hero h2 { margin: 4px 0 0; font-size: 23px; letter-spacing: 0; }
+
+body.nexus-overhaul .premium-access-close {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #30404c;
+  border-radius: 4px;
+  padding: 0;
+  color: #9eaebb;
+  background: #10151d;
+}
+
+body.nexus-overhaul .premium-access-dialog > p { margin: 0; padding: 20px 20px 4px; color: #b3bfcb; font-size: 12px; line-height: 1.6; }
+
+body.nexus-overhaul .premium-benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 14px 20px 22px;
+}
+
+body.nexus-overhaul .premium-benefits span {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-left: 2px solid #2e789b;
+  padding: 8px 10px;
+  color: #d9e4ed;
+  background: #0c1118;
+  font-size: 10px;
+}
+
+body.nexus-overhaul .premium-benefits svg { width: 16px; height: 16px; flex: none; color: #4dc7ff; }
+
+body.nexus-overhaul .premium-access-dialog footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 14px 20px;
+  border-top: 1px solid #202b35;
+  background: #0b0e14;
+}
+
+body.nexus-overhaul .premium-access-dialog footer :is(button, a) {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid #303a44;
+  border-radius: 4px;
+  padding: 0 15px;
+  color: #b9c2cb;
+  background: #11161d;
+  text-decoration: none;
+}
+
+body.nexus-overhaul .premium-access-dialog footer a {
+  border-color: #2d7da4;
+  color: #fff;
+  background: #126f9a;
+  font-weight: 800;
+}
+
+body.nexus-overhaul .premium-access-dialog footer a:hover { background: #1687ba; }
+
+body.nexus-overhaul .account-access-card {
+  margin-bottom: 14px;
+}
+
+body.nexus-overhaul .account-access-row {
+  display: grid;
+  grid-template-columns: minmax(180px, .7fr) minmax(260px, 1fr);
+  gap: 10px;
+  align-items: center;
+  min-height: 58px;
+  border: 1px solid var(--ui-border);
+  border-radius: 5px;
+  padding: 10px 12px;
+  background: #09090d;
+}
+
+body.nexus-overhaul .account-access-row span {
+  display: block;
+  margin-bottom: 4px;
+  color: #77717f;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+body.nexus-overhaul .account-access-row strong { color: #f0c65e; font-size: 13px; }
+body.nexus-overhaul .account-access-row small { color: #96909f; font-size: 10px; line-height: 1.5; }
+
+body.nexus-overhaul .account-signout-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 12px;
+  border: 1px solid #302a38;
+  border-radius: 5px;
+  padding: 12px;
+  background: #0d0c12;
+}
+
+body.nexus-overhaul .account-signout-copy {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+}
+
+body.nexus-overhaul .account-signout-copy > svg { width: 18px; height: 18px; flex: none; color: #ff7590; }
+body.nexus-overhaul .account-signout-copy span,
+body.nexus-overhaul .account-signout-copy :is(strong, small) { display: block; }
+body.nexus-overhaul .account-signout-copy strong { color: #eeeaf1; font-size: 12px; }
+body.nexus-overhaul .account-signout-copy small { margin-top: 3px; color: #8f8997; font-size: 10px; line-height: 1.45; }
+
+body.nexus-overhaul :is(.account-signout-button, .profile-signout-button) {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  flex: none;
+  border-color: rgb(255 91 122 / 42%) !important;
+  padding: 0 14px;
+  color: #ff9aae !important;
+  background: rgb(255 70 105 / 8%) !important;
+  font-weight: 750;
+}
+
+body.nexus-overhaul :is(.account-signout-button, .profile-signout-button):hover:not(:disabled) {
+  border-color: rgb(255 112 139 / 72%) !important;
+  color: #ffd6de !important;
+  background: rgb(255 70 105 / 14%) !important;
+}
+
+body.nexus-overhaul :is(.account-signout-button, .profile-signout-button) svg { width: 15px; height: 15px; }
+body.nexus-overhaul :is(.account-signout-button, .profile-signout-button)[aria-busy="true"] { opacity: .58; cursor: wait; }
+
+@media (max-width: 780px) {
+  body.nexus-overhaul .account-access-row { grid-template-columns: 1fr; }
+  body.nexus-overhaul .account-signout-row { align-items: stretch; flex-direction: column; }
+}
+
+/* Pages shown inside the right-hand workspace use no second shell. */
+body.nexus-embedded {
+  --bg: #070a0e;
+  --panel: #0b1016;
+  --panel-strong: #101720;
+  --panel-soft: #080d12;
+  --line: #192633;
+  --line-strong: #283b4c;
+  --text: #eff7fc;
+  --muted: #93a6b5;
+  --faint: #637684;
+  --copper: #42bde9;
+  --copper-strong: #6bd5fa;
+  --gold: #71d6f8;
+  --green: #45d5a1;
+  --blue: #52aef5;
+  min-width: 0 !important;
+  min-height: 100vh !important;
+  overflow: auto !important;
+  color: var(--ui-text) !important;
+  background: var(--ui-bg) !important;
+  font-family: Inter, "Segoe UI", system-ui, sans-serif !important;
+}
+
+body.nexus-embedded > :is(header, .masthead, .app-header) {
+  display: none !important;
+}
+
+body.nexus-embedded :is(.site-frame, .tool-main, .crafting-main, .furnace-main, .refining-main, .alchemy-main, .cooking-main, .building-main, .dungeon-main, .workspace) {
+  min-width: 0 !important;
+  max-width: none !important;
+  min-height: 100vh !important;
+  margin: 0 !important;
+  background: var(--ui-bg) !important;
+}
+
+body.nexus-embedded :is(.tool-main, .crafting-main, .furnace-main, .refining-main, .alchemy-main, .cooking-main, .building-main, .dungeon-main) {
+  padding: 18px 20px 32px !important;
+}
+
+body.nexus-embedded .site-frame {
+  padding: 0 !important;
+}
+
+body.nexus-embedded .main-content {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 18px 20px 32px !important;
+  background: var(--ui-bg) !important;
+}
+
+body.nexus-embedded .topic-sidebar {
+  top: 0 !important;
+  height: 100vh !important;
+  border-color: var(--ui-border) !important;
+  background: #0b0b10 !important;
+}
+
+body.nexus-embedded :is(.mode-tabs, .evidence-strip) {
+  border-color: var(--ui-border) !important;
+  color: var(--ui-soft) !important;
+  background: #0b0b10 !important;
+}
+
+body.nexus-embedded .workspace {
+  height: auto !important;
+  min-height: calc(100vh - 104px) !important;
+  border-color: var(--ui-border) !important;
+}
+
+body.nexus-embedded :is(.source-pane, .profile-pane, .source-controls, .record-panel, .empty-state) {
+  border-color: var(--ui-border) !important;
+  color: var(--ui-text) !important;
+  background: var(--ui-panel) !important;
+}
+
+body.nexus-embedded :is(h1, h2, h3, h4) {
+  color: var(--ui-text) !important;
+  font-family: Inter, "Segoe UI", system-ui, sans-serif !important;
+  letter-spacing: 0 !important;
+  text-shadow: none !important;
+}
+
+body.nexus-embedded :is(button, input, select, textarea) {
+  border-color: var(--ui-border) !important;
+  color: var(--ui-text) !important;
+  background-color: #111117 !important;
+  font-family: inherit !important;
+}
+
+body.nexus-embedded .marshal-footer {
+  color: #65636d !important;
+}
+
+body.nexus-embedded :is(.tool-card, .recipe-card, .result-card, .calculator-card, .record-panel, .directory-group, .detail-card, .stat-card) {
+  border-color: #1b2a37 !important;
+  color: var(--ui-text) !important;
+  background: #0b1016 !important;
+  box-shadow: none !important;
+}
+
+body.nexus-embedded :is(.primary-button, button[type="submit"], .calculate-button) {
+  border-color: #26799a !important;
+  color: #f4fbff !important;
+  background: #145978 !important;
+}
+
+body.nexus-embedded :is(.primary-button, button[type="submit"], .calculate-button):hover {
+  border-color: #58d0fa !important;
+  background: #18779d !important;
+  box-shadow: 0 0 14px rgb(77 199 255 / 15%) !important;
+}
+
+body.nexus-embedded.nexus-page-reference .reference-stats {
+  display: none !important;
+}
+
+body.nexus-embedded.nexus-page-loot {
+  border-top: 0 !important;
+}
+
+body.nexus-embedded.nexus-page-loot .mode-tabs {
+  min-height: 54px;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  border-bottom: 1px solid #1c2a36 !important;
+  padding: 10px 18px 0;
+  background: #070a0e !important;
+}
+
+body.nexus-embedded.nexus-page-loot .mode-tab {
+  min-height: 36px;
+  border: 0 !important;
+  border-bottom: 2px solid transparent !important;
+  border-radius: 0 !important;
+  padding: 0 14px !important;
+  color: #8498a8 !important;
+  background: transparent !important;
+}
+
+body.nexus-embedded.nexus-page-loot .mode-tab.active {
+  border-bottom-color: #4dc7ff !important;
+  color: #f4fbff !important;
+}
+
+body.nexus-embedded.nexus-page-loot .workspace {
+  height: calc(100vh - 54px) !important;
+  min-height: 520px !important;
+  display: grid !important;
+  grid-template-columns: 320px minmax(0, 1fr) !important;
+  background: #070a0e !important;
+}
+
+body.nexus-embedded.nexus-page-loot .source-pane {
+  position: static !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  border-right: 1px solid #1d2a36 !important;
+  background: #080d12 !important;
+}
+
+body.nexus-embedded.nexus-page-loot .source-controls {
+  border-bottom: 1px solid #1c2a36 !important;
+  padding: 16px !important;
+  background: #0a1016 !important;
+}
+
+body.nexus-embedded.nexus-page-loot .pane-heading {
+  margin-bottom: 11px;
+}
+
+body.nexus-embedded.nexus-page-loot :is(.pane-heading p, .profile-header p, .section-heading p) {
+  color: #4dc7ff !important;
+  font-size: 10px !important;
+}
+
+body.nexus-embedded.nexus-page-loot :is(.pane-heading h1, .profile-header h2, .section-heading h3, .empty-state strong) {
+  color: #f4f8fb !important;
+  font-family: Inter, "Segoe UI", system-ui, sans-serif !important;
+}
+
+body.nexus-embedded.nexus-page-loot .source-row {
+  min-height: 58px;
+  border-bottom: 1px solid #15212b !important;
+  padding: 10px 15px !important;
+  color: #e9f1f7 !important;
+  background: transparent !important;
+}
+
+body.nexus-embedded.nexus-page-loot .source-row:hover {
+  background: #0e1821 !important;
+}
+
+body.nexus-embedded.nexus-page-loot .source-row.active {
+  background: #10202b !important;
+  box-shadow: inset 3px 0 #4dc7ff !important;
+}
+
+body.nexus-embedded.nexus-page-loot .source-row > span:last-child {
+  margin-top: 4px;
+  color: #708697 !important;
+}
+
+body.nexus-embedded.nexus-page-loot .profile-pane {
+  min-width: 0;
+  overflow: auto;
+  background: #070a0e !important;
+}
+
+body.nexus-embedded.nexus-page-loot #profileContent {
+  max-width: 1120px;
+  padding: 24px 28px 48px;
+}
+
+body.nexus-embedded.nexus-page-loot .profile-header {
+  border-bottom-color: #223241 !important;
+}
+
+body.nexus-embedded.nexus-page-loot .profile-header h2 {
+  font-size: 27px !important;
+}
+
+body.nexus-embedded.nexus-page-loot .profile-tabs {
+  margin: 18px 0;
+  border-bottom: 1px solid #1d2b37;
+}
+
+body.nexus-embedded.nexus-page-loot .profile-tab {
+  border: 0 !important;
+  border-bottom: 2px solid transparent !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+body.nexus-embedded.nexus-page-loot .profile-tab.active {
+  border-bottom-color: #4dc7ff !important;
+  color: #fff !important;
+}
+
+body.nexus-embedded.nexus-page-loot :is(.combat-profile-card, .drop-table-shell) {
+  border-color: #213140 !important;
+  border-radius: 5px;
+  background: #0a1016 !important;
+  overflow: hidden;
+}
+
+body.nexus-embedded.nexus-page-loot .drop-table th {
+  background: #0d151d !important;
+  color: #7890a1 !important;
+}
+
+body.nexus-embedded.nexus-page-loot .drop-table th:first-child { width: 58%; }
+body.nexus-embedded.nexus-page-loot .drop-table th:nth-child(2) { width: 21%; }
+body.nexus-embedded.nexus-page-loot .drop-table th:nth-child(3) { width: 21%; }
+
+body.nexus-embedded.nexus-page-loot .drop-table td {
+  min-height: 58px;
+  border-top-color: #182630 !important;
+}
+
+body.nexus-embedded.nexus-page-loot .drop-table tbody tr:hover {
+  background: #0e1921 !important;
+}
+
+body.nexus-embedded.nexus-page-loot .chance {
+  border-color: #2b6c54 !important;
+  border-radius: 3px;
+  background: #10241d !important;
+}
+
+body.nexus-embedded.nexus-page-loot .app-footer {
+  display: none !important;
+}
+
+/* Focused live-map pop-out. */
+body.nexus-popout {
+  overflow: hidden !important;
+  padding: 0 !important;
+}
+
+body.nexus-popout .app-shell {
+  min-height: 100vh;
+  padding: 0 !important;
+}
+
+body.nexus-popout :is(.topbar, .module-tabs, #toolsWorkspace, #embeddedWorkspace, .quick-add-section, .route-planner-section) {
+  display: none !important;
+}
+
+body.nexus-popout #popoutMapBtn {
+  display: none !important;
+}
+
+body.nexus-popout #mapWorkspace,
+body.nexus-popout #mapWorkspace.is-active {
+  position: fixed !important;
+  inset: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  display: grid !important;
+  grid-template-columns: 286px minmax(0, 1fr) !important;
+  margin: 0 !important;
+}
+
+body.nexus-popout .map-toolbar {
+  top: 70px !important;
+}
+
+body.nexus-popout .map-popout-controls {
+  position: fixed;
+  z-index: 5000;
+  inset: 10px 12px auto auto;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #2d4052;
+  border-radius: 6px;
+  padding: 7px 8px 7px 12px;
+  color: #d8e8f5;
+  background: rgb(6 10 15 / 94%);
+  box-shadow: 0 12px 35px rgb(0 0 0 / 55%), 0 0 18px rgb(77 199 255 / 8%);
+  backdrop-filter: blur(12px);
+}
+
+body.nexus-popout .map-popout-title,
+body.nexus-popout .map-popout-toggle,
+body.nexus-popout .map-popout-range {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+}
+
+body.nexus-popout .map-popout-title {
+  border-right: 1px solid #263747;
+  padding-right: 12px;
+  color: #f4fbff;
+}
+
+body.nexus-popout .map-popout-title svg {
+  width: 17px;
+  color: #4dc7ff;
+}
+
+body.nexus-popout .map-popout-toggle,
+body.nexus-popout .map-popout-range {
+  color: #8fa2b3;
+  font-size: 11px;
+}
+
+body.nexus-popout .map-popout-range input {
+  width: 88px;
+  accent-color: #4dc7ff;
+}
+
+body.nexus-popout .map-popout-range output {
+  width: 38px;
+  color: #dceeff;
+  text-align: right;
+}
+
+body.nexus-popout #closeMapPopout {
+  width: 32px;
+  height: 32px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid #3a2830 !important;
+  border-radius: 4px !important;
+  padding: 0 !important;
+  color: #ff9bac !important;
+  background: #1b0e13 !important;
+}
+
+body.nexus-popout #closeMapPopout:hover {
+  border-color: #fb5d78 !important;
+  color: #fff !important;
+  background: #7a1729 !important;
+}
+
+@media (max-width: 1180px) {
+  :root { --ui-sidebar: 184px; }
+  body.nexus-overhaul #mapWorkspace.is-active { grid-template-columns: 260px minmax(0, 1fr); }
+  body.nexus-overhaul .compact-primary-nav .module-tab { min-height: 38px !important; }
+  body.nexus-overhaul .top-actions > :is(#exportBtn, #importBtn) span { display: none; }
+  body.nexus-page-reference .intro { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 1400px) {
+  body.nexus-overhaul .topbar-primary {
+    grid-template-columns: minmax(270px, 1fr) auto auto;
+  }
+
+  body.nexus-overhaul .search-isolate-toggle {
+    width: 42px;
+    min-width: 42px;
+    justify-content: center;
+    padding-inline: 0;
+  }
+
+  body.nexus-overhaul .search-isolate-toggle strong,
+  body.nexus-overhaul .second-screen-toggle strong,
+  body.nexus-overhaul .hotkeys-master-label {
+    display: none;
+  }
+
+  body.nexus-overhaul .second-screen-size select {
+    width: 118px;
+  }
+}
+
+@media (max-width: 1120px) {
+  body.nexus-overhaul .topbar-donate-button span { display: none; }
+  body.nexus-overhaul .topbar-donate-button { width: 40px; padding: 0; }
+}
+
+@media (max-width: 1180px) {
+  :root {
+    --ui-sidebar: 208px;
+    --ui-toolbar: 108px;
+  }
+
+  body.nexus-overhaul .topbar-primary {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: 40px 40px;
+    grid-template-areas:
+      "search donate"
+      "actions actions";
+    align-content: center;
+    gap: 8px 10px;
+    height: var(--ui-toolbar) !important;
+    padding: 8px 12px;
+  }
+
+  body.nexus-overhaul .search-tools { grid-area: search; }
+  body.nexus-overhaul .topbar-donate-button { grid-area: donate; }
+
+  body.nexus-overhaul .search-isolate-toggle {
+    width: auto;
+    min-width: 108px;
+    padding-inline: 10px;
+  }
+
+  body.nexus-overhaul .search-isolate-toggle strong,
+  body.nexus-overhaul .second-screen-toggle strong,
+  body.nexus-overhaul .hotkeys-master-label {
+    display: inline;
+  }
+
+  body.nexus-overhaul .top-actions {
+    grid-area: actions;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    overflow: hidden;
+  }
+
+  body.nexus-overhaul .second-screen-size { display: inline-flex; }
+
+  body.nexus-overhaul .second-screen-size select { width: 108px; }
+
+  body.nexus-overhaul .top-actions > :is(#hotkeysMasterButton, #editorButton) {
+    width: auto !important;
+    padding-inline: 11px !important;
+    font-size: 11px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  :root { --ui-sidebar: 68px; }
+  body.nexus-overhaul .brand { justify-content: center; padding: 9px; }
+  body.nexus-overhaul .brand > div,
+  body.nexus-overhaul .compact-nav-label,
+  body.nexus-overhaul .compact-primary-nav .module-tab span,
+  body.site-shell-enabled .app-sidebar-brand-copy,
+  body.site-shell-enabled .app-nav-copy,
+  body.site-shell-enabled .app-nav-section-title { display: none !important; }
+  body.nexus-overhaul .compact-primary-nav .module-tab { justify-content: center !important; padding: 0 !important; }
+  body.site-shell-enabled .app-sidebar-body { padding-inline: 8px !important; }
+  body.site-shell-enabled .app-nav-link { justify-content: center !important; padding: 4px !important; }
+  body.nexus-overhaul #mapWorkspace.is-active { grid-template-columns: 240px minmax(0, 1fr); }
+  body.nexus-overhaul .settings-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 1050px) {
+  body.nexus-popout #mapWorkspace,
+  body.nexus-popout #mapWorkspace.is-active {
+    grid-template-columns: 240px minmax(0, 1fr) !important;
+  }
+
+  body.nexus-popout .map-popout-controls {
+    gap: 8px;
+    padding-left: 9px;
+  }
+
+  body.nexus-popout .map-popout-toggle span,
+  body.nexus-popout .map-popout-range > span {
+    display: none;
+  }
+
+  body.nexus-popout .map-popout-range input {
+    width: 70px;
+  }
+}
+
+@media (max-width: 850px) {
+  body.nexus-popout #mapWorkspace,
+  body.nexus-popout #mapWorkspace.is-active {
+    grid-template-columns: 218px minmax(0, 1fr) !important;
+  }
+
+  body.nexus-popout .map-popout-title strong,
+  body.nexus-popout .map-popout-range output {
+    display: none;
+  }
+
+  body.nexus-popout .map-popout-title {
+    padding-right: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.nexus-overhaul *,
+  body.site-shell-enabled * {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+/* Final palette pass: these sit last so legacy page themes cannot leak through. */
+body.nexus-overhaul .compact-primary-nav { background: #080609 !important; }
+body.nexus-overhaul .compact-primary-nav .module-tab.is-active {
+  border-color: #4a2c4d !important;
+  background: rgb(127 49 141 / 18%) !important;
+}
+body.nexus-overhaul .compact-primary-nav .module-tab.is-active::before {
+  background: linear-gradient(#ff4968, #9d5cff) !important;
+  box-shadow: 0 0 13px rgb(255 73 104 / 56%) !important;
+}
+body.nexus-overhaul .compact-subnav button,
+body.nexus-overhaul .compact-subnav button:hover,
+body.nexus-overhaul .compact-subnav button.is-active {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+body.nexus-overhaul .compact-subnav button.is-active::before {
+  background: #ff4968 !important;
+  box-shadow: 0 0 9px rgb(255 73 104 / 70%) !important;
+}
+
+body.nexus-embedded :is(button, input, select, textarea) {
+  border-color: #332738 !important;
+  color: #f3edf5 !important;
+  background-color: #120e15 !important;
+}
+body.nexus-embedded :is(.tool-card, .recipe-card, .result-card, .calculator-card, .record-panel, .directory-group, .detail-card, .stat-card, .combat-profile-card, .drop-table-shell) {
+  border-color: #302334 !important;
+  background: #0c090e !important;
+}
+body.nexus-embedded :is(.primary-button, .primary-command, button[type="submit"], .calculate-button) {
+  border-color: #8e3d69 !important;
+  color: #fff !important;
+  background: #6f294f !important;
+}
+body.nexus-embedded :is(.primary-button, .primary-command, button[type="submit"], .calculate-button):hover {
+  border-color: #ff6c89 !important;
+  background: #8c335e !important;
+  box-shadow: 0 0 15px rgb(255 73 104 / 16%) !important;
+}
+body.nexus-embedded .topic-sidebar,
+body.nexus-embedded.nexus-page-loot :is(.mode-tabs, .source-pane, .source-controls) {
+  border-color: #302334 !important;
+  background: #09070b !important;
+}
+body.nexus-embedded.nexus-page-loot .mode-tab.active,
+body.nexus-embedded.nexus-page-loot .profile-tab.active { border-bottom-color: #ff4968 !important; }
+body.nexus-embedded.nexus-page-loot .source-row.active {
+  background: #1c101c !important;
+  box-shadow: inset 3px 0 #a05cff !important;
+}
+body.nexus-embedded.nexus-page-loot :is(.pane-heading p, .profile-header p, .section-heading p) { color: #d67dff !important; }
+body.nexus-embedded.nexus-page-loot .chance { border-color: #70406e !important; background: #211324 !important; }
+
+/* v5: one shared palette for every tool loaded in the workspace. */
+body.nexus-embedded {
+  --ui-bg: #050407 !important;
+  --ui-panel: #0c090e !important;
+  --ui-raised: #151019 !important;
+  --ui-hover: #1d1422 !important;
+  --ui-border: #302334 !important;
+  --ui-border-strong: #4b3151 !important;
+  --ui-text: #f5f2f6 !important;
+  --ui-soft: #c8bdca !important;
+  --ui-muted: #968b9a !important;
+  --ink: #050407 !important;
+  --surface: #0c090e !important;
+  --surface-raised: #151019 !important;
+  --surface-hover: #1d1422 !important;
+  --rule: #302334 !important;
+  --rule-strong: #4b3151 !important;
+  --paper: #f5f2f6 !important;
+  --paper-soft: #c8bdca !important;
+  --brass: #c59aff !important;
+  --moss: #a05cff !important;
+  --rust: #ff5d78 !important;
+  --tool-bg: #050407 !important;
+  --tool-panel: #0c090e !important;
+  --tool-panel-2: #151019 !important;
+  --tool-line: #302334 !important;
+  --tool-line-soft: #211824 !important;
+  --tool-text: #f5f2f6 !important;
+  --tool-muted: #968b9a !important;
+  --tool-gold: #c59aff !important;
+  --tool-gold-dim: #725581 !important;
+  --tool-red: #ff5d78 !important;
+  --tool-green: #a05cff !important;
+  --alchemy: #b266e5 !important;
+  --alchemy-soft: #dda6ff !important;
+  --alchemy-dark: #1b1020 !important;
+  --alchemy-gold: #ff6e8b !important;
+  --alchemy-blue: #9b72ff !important;
+  --building-green: #a05cff !important;
+  --building-green-dark: #1b1020 !important;
+  --building-brass: #c59aff !important;
+  --building-blue: #9b72ff !important;
+  --building-red: #ff5d78 !important;
+  --butcher: #d15d91 !important;
+  --butcher-soft: #ff9cbd !important;
+  --butcher-dark: #21101a !important;
+  --cook-ember: #ff5d78 !important;
+  --cook-ember-soft: #ff9ab0 !important;
+  --cook-herb: #a05cff !important;
+  --cook-gold: #c59aff !important;
+  --cook-blue: #9b72ff !important;
+  --cook-panel: #0c090e !important;
+  --forge-red: #ff5d78 !important;
+  --forge-red-soft: #ff9ab0 !important;
+  --forge-steel: #a69cac !important;
+  --forge-green: #a05cff !important;
+  --dungeon-gold: #c59aff !important;
+  --dungeon-gold-soft: #dfc4ff !important;
+  --dungeon-red: #ff5d78 !important;
+  --dungeon-teal: #9b72ff !important;
+  --dungeon-violet: #b266e5 !important;
+  --furnace: #ff5d78 !important;
+  --furnace-soft: #ff9ab0 !important;
+  --furnace-dark: #211018 !important;
+  --refine: #a05cff !important;
+  --refine-soft: #d0a1ff !important;
+  --refine-dark: #181020 !important;
+  --reverse-green: #a05cff !important;
+  --reverse-green-soft: #d0a1ff !important;
+  --reverse-amber: #c59aff !important;
+  --reverse-blue: #9b72ff !important;
+  --reverse-red: #ff5d78 !important;
+  --reverse-panel: #0c090e !important;
+  --reverse-panel-soft: #151019 !important;
+  --spell-bg: #050407 !important;
+  --spell-panel: #0c090e !important;
+  --spell-panel-2: #151019 !important;
+  --spell-line: #302334 !important;
+  --spell-line-bright: #5a3961 !important;
+  --spell-text: #f5f2f6 !important;
+  --spell-muted: #968b9a !important;
+  --spell-blue: #b266e5 !important;
+  --spell-blue-soft: #24132d !important;
+  --spell-gold: #ff6e8b !important;
+}
+
+body.nexus-embedded:is(
+  .alchemy-page,
+  .building-page,
+  .butchery-page,
+  .cooking-page,
+  .crafting-page,
+  .dungeons-page,
+  .furnace-page,
+  .refining-page,
+  .reverse-page,
+  .spells-page,
+  .tool-page
+) {
+  color: #f5f2f6 !important;
+  background: #050407 !important;
+}
+
+body.nexus-embedded :is(
+  .character-sheet,
+  .builder-panel,
+  .creature-browser,
+  .family-heading,
+  .material-controls,
+  .result-panel,
+  .results-panel,
+  .recipe-panel,
+  .calculator-panel,
+  .catalog-panel,
+  .summary-panel,
+  .spell-catalog-panel,
+  .spell-totals-panel,
+  .loadout-panel,
+  .updates-panel
+) {
+  border-color: #302334 !important;
+  background: #0c090e !important;
+}
+
+body.nexus-embedded :is(.creature-row:hover, .creature-row.active, .spell-entry:hover, .spell-entry.is-added) {
+  background: #1d1422 !important;
+}
+
+/* Crafting children use a navigation rail, not a stack of boxed buttons. */
+body.nexus-overhaul .compact-subnav {
+  gap: 0 !important;
+  margin: 2px 0 7px 29px !important;
+  border: 0 !important;
+  border-left: 1px solid rgba(156, 102, 179, 0.34) !important;
+  padding: 2px 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.nexus-overhaul .compact-subnav > .crafting-subitem,
+body.nexus-overhaul .compact-subnav > .crafting-subitem:hover,
+body.nexus-overhaul .compact-subnav > .crafting-subitem:focus,
+body.nexus-overhaul .compact-subnav > .crafting-subitem.is-active {
+  appearance: none !important;
+  position: relative;
+  display: grid !important;
+  grid-template-columns: 16px minmax(0, 1fr) 18px;
+  align-items: center;
+  gap: 8px;
+  width: 100% !important;
+  min-height: 31px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  padding: 0 9px 0 13px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #9f97a8 !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+  letter-spacing: 0 !important;
+  text-align: left !important;
+  transform: none !important;
+}
+
+body.nexus-overhaul .compact-subnav > .crafting-subitem > span:not(.premium-nav-icon) {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+body.nexus-overhaul .compact-subnav > .crafting-subitem > .premium-nav-icon {
+  grid-column: 3;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  justify-self: end;
+}
+
+body.nexus-overhaul .compact-subnav > .crafting-subitem:not(:has(.premium-nav-icon)) {
+  grid-template-columns: 16px minmax(0, 1fr);
+}
+
+body.nexus-overhaul .compact-subnav > .crafting-subitem::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border: 1px solid #795f85;
+  border-radius: 50%;
+  background: #100c13;
+  transform: translateY(-50%);
+  transition: border-color 140ms ease, background-color 140ms ease, box-shadow 140ms ease;
+}
+
+body.nexus-overhaul .compact-subnav > .crafting-subitem::after {
+  content: "";
+  position: absolute;
+  right: 9px;
+  bottom: 0;
+  left: 13px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(142, 106, 158, 0.22), transparent 85%);
+}
+
+body.nexus-overhaul .compact-subnav > .crafting-subitem:last-child::after {
+  display: none;
+}
+
+body.nexus-overhaul .compact-subnav > .crafting-subitem svg {
+  width: 14px;
+  height: 14px;
+  color: #796f82;
+  stroke-width: 1.8;
+  transition: color 140ms ease, filter 140ms ease;
+}
+
+body.nexus-overhaul .compact-subnav > .crafting-subitem:hover,
+body.nexus-overhaul .compact-subnav > .crafting-subitem.is-active {
+  background: linear-gradient(90deg, rgba(122, 55, 145, 0.18), transparent 82%) !important;
+  color: #fff !important;
+}
+
+body.nexus-overhaul .compact-subnav > .crafting-subitem:hover::before,
+body.nexus-overhaul .compact-subnav > .crafting-subitem.is-active::before {
+  border-color: #d48ef0;
+  background: #bd5be2;
+  box-shadow: 0 0 9px rgba(189, 91, 226, 0.75);
+}
+
+body.nexus-overhaul .compact-subnav > .crafting-subitem:hover svg,
+body.nexus-overhaul .compact-subnav > .crafting-subitem.is-active svg {
+  color: #e7a8ff;
+  filter: drop-shadow(0 0 4px rgba(205, 118, 239, 0.5));
+}
+
+body.nexus-overhaul .house-hunter-nav-item {
+  grid-template-columns: 16px minmax(0, 1fr) auto !important;
+}
+
+body.nexus-overhaul .house-hunter-nav-item small[data-house-hunter-count] {
+  grid-column: 3;
+}
+
+body.nexus-overhaul .house-hunter-nav-item small[data-house-hunter-count] {
+  display: grid;
+  place-items: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
+  background: #ff4968;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  box-shadow: 0 0 9px rgba(255, 73, 104, .46);
+}
+
+body.nexus-overhaul .house-hunter-nav-item small[data-house-hunter-count][hidden] {
+  display: none !important;
+}
+
+body.nexus-embedded :is(
+  [class$="-panel"],
+  [class*="-panel "],
+  [class$="-shell"],
+  [class*="-shell "],
+  [class$="-card"],
+  [class*="-card "],
+  [class$="-ledger"],
+  [class*="-ledger "],
+  [class$="-summary"],
+  [class*="-summary "]
+) {
+  border-color: #302334 !important;
+  background-color: #0c090e !important;
+}
+
+body.nexus-embedded :is(
+  [class$="-panel"]:nth-child(even),
+  [class*="-panel "]:nth-child(even),
+  [class$="-card"]:nth-child(even),
+  [class*="-card "]:nth-child(even)
+) {
+  background-color: #110d14 !important;
+}
+
+/* Macro workspace: keep every training mode in the same red-violet shell. */
+body.nexus-overhaul .tool-page[data-module-panel="training"] :is(.tool-card, .magic-live-card, .click-macro-live-card) {
+  border-color: #302334 !important;
+  background: #0c090e !important;
+}
+
+body.nexus-overhaul .tool-page[data-module-panel="training"] :is(.hotkey-row, .macro-timeline span, .magic-cycle-preview > span, .sequence-key-row) {
+  border-color: #302334 !important;
+  color: #c8bdca !important;
+  background: #100c13 !important;
+}
+
+body.nexus-overhaul .tool-page[data-module-panel="training"] :is(.hotkey-row.is-capturing, .sequence-key-row.is-capturing) {
+  border-color: #a05cff !important;
+  box-shadow: 0 0 0 3px rgb(160 92 255 / 12%) !important;
+}
+
+body.nexus-overhaul .tool-page[data-module-panel="training"] .macro-timeline span.is-active {
+  border-color: #a05cff !important;
+  color: #fff !important;
+  background: #211324 !important;
+  box-shadow: 0 0 18px rgb(160 92 255 / 16%) !important;
+}
+
+body.nexus-overhaul .tool-page[data-module-panel="training"] .magic-cycle-preview > span svg {
+  color: #c59aff !important;
+}
+
+body.nexus-overhaul .tool-page[data-module-panel="training"] .phase-pill[data-phase="GATHERING"],
+body.nexus-overhaul .tool-page[data-module-panel="training"] .phase-pill[data-phase="RUNNING"],
+body.nexus-overhaul .tool-page[data-module-panel="training"] .phase-pill[data-phase="CRAFTING"],
+body.nexus-overhaul .tool-page[data-module-panel="training"] .phase-pill[data-phase="SHOOTING"],
+body.nexus-overhaul .tool-page[data-module-panel="training"] .phase-pill[data-phase="ATTACKING"] {
+  border-color: #70488a !important;
+  color: #e7c7ff !important;
+  background: #211324 !important;
+}
+
+body.nexus-overhaul .tool-page[data-module-panel="training"] .phase-pill[data-phase="ACTION"],
+body.nexus-overhaul .tool-page[data-module-panel="training"] .phase-pill[data-phase="RESTKEY"],
+body.nexus-overhaul .tool-page[data-module-panel="training"] .phase-pill[data-phase="RESTING"],
+body.nexus-overhaul .tool-page[data-module-panel="training"] .phase-pill[data-phase="CASTING"],
+body.nexus-overhaul .tool-page[data-module-panel="training"] .phase-pill[data-phase="RECOVERY"],
+body.nexus-overhaul .tool-page[data-module-panel="training"] .phase-pill[data-phase="WAITING"] {
+  border-color: #8e3d69 !important;
+  color: #ffbdca !important;
+  background: #26101a !important;
+}
+/* House Hunter private feature gate */
+.house-hunter-lock-dialog {
+  width: min(440px, calc(100vw - 32px));
+  padding: 0;
+  border: 1px solid #3a3145;
+  border-radius: 7px;
+  background: #09090e;
+  color: #f7f3fa;
+  box-shadow: 0 30px 100px rgba(0, 0, 0, .72), 0 0 36px rgba(199, 73, 167, .1);
+}
+.house-hunter-lock-dialog::backdrop { background: rgba(1, 2, 5, .8); backdrop-filter: blur(5px); }
+.house-hunter-lock-card { padding: 26px; }
+.house-hunter-lock-card header { display: flex; align-items: center; justify-content: space-between; }
+.house-hunter-lock-icon { width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid #824c78; background: #1b111c; color: #ff76cf; }
+.house-hunter-lock-icon svg { width: 22px; height: 22px; }
+.house-hunter-lock-close { width: 36px; height: 36px; padding: 0; display: grid; place-items: center; border: 1px solid #302a35; border-radius: 4px; background: #121118; color: #aaa1af; cursor: pointer; }
+.house-hunter-lock-status { margin-top: 24px; display: inline-block; color: #ff6dc8; font-size: 10px; font-weight: 850; text-transform: uppercase; }
+.house-hunter-lock-card h2 { margin: 6px 0 7px; font-size: 28px; }
+.house-hunter-lock-card > p { margin: 0 0 22px; color: #a9a1ae; font-size: 14px; line-height: 1.55; }
+.house-hunter-lock-card label { display: grid; gap: 7px; color: #d7cedb; font-size: 12px; font-weight: 750; }
+.house-hunter-lock-card input { width: 100%; height: 46px; border: 1px solid #49364b; border-radius: 4px; padding: 0 13px; background: #111017; color: white; }
+.house-hunter-lock-card input:focus { outline: 2px solid #c94da7; outline-offset: 1px; }
+.house-hunter-lock-error { margin-top: 12px; padding: 10px 12px; border-left: 2px solid #ff5c70; background: rgba(255, 64, 92, .08); color: #ffb2bd; font-size: 12px; }
+.house-hunter-lock-card footer { margin-top: 22px; display: flex; justify-content: flex-end; gap: 9px; }
+.house-hunter-lock-card footer button { min-height: 40px; border-radius: 4px; padding: 0 15px; cursor: pointer; }
+.house-hunter-lock-cancel { border: 1px solid #332d38; background: #121117; color: #c5bdc9; }
+.house-hunter-lock-submit { display: inline-flex; align-items: center; gap: 7px; border: 1px solid #d568ba; background: #9c397f; color: white; font-weight: 800; }
+.house-hunter-lock-submit:disabled { opacity: .55; cursor: wait; }
+
+.nexus-social-alert { position:fixed;z-index:20000;right:22px;bottom:22px;width:min(390px,calc(100vw - 44px));min-height:82px;display:grid;grid-template-columns:48px minmax(0,1fr) 20px;align-items:center;gap:13px;padding:13px 15px;border:1px solid #4cb8ff;border-radius:5px;color:#f8fbff;background:#071827;box-shadow:0 22px 80px rgba(0,0,0,.82),0 0 0 2px rgba(76,184,255,.13),0 0 42px rgba(76,184,255,.28);cursor:pointer;opacity:0;transform:translateY(24px);transition:opacity .18s ease,transform .18s ease}
+.nexus-social-alert[hidden]{display:none}.nexus-social-alert.is-visible{opacity:1;transform:translateY(0)}
+.nexus-social-alert[data-kind="friend"],.nexus-social-alert[data-kind="guild"]{border-color:#59daa0;background:#081c15;box-shadow:0 22px 80px rgba(0,0,0,.82),0 0 0 2px rgba(89,218,160,.13),0 0 42px rgba(89,218,160,.25)}
+.nexus-social-alert[data-kind="market"]{border-color:#b880ff;background:#180d22;box-shadow:0 22px 80px rgba(0,0,0,.82),0 0 0 2px rgba(184,128,255,.14),0 0 42px rgba(184,128,255,.27)}
+.nexus-social-alert-icon{width:46px;height:46px;display:grid;place-items:center;border:1px solid #4cb8ff;background:#0d263b;color:#74cbff}.nexus-social-alert[data-kind="friend"] .nexus-social-alert-icon,.nexus-social-alert[data-kind="guild"] .nexus-social-alert-icon{border-color:#59daa0;background:#102c20;color:#75e6ae}.nexus-social-alert-icon svg{width:25px;height:25px}.nexus-social-alert strong,.nexus-social-alert small{display:block;text-align:left}.nexus-social-alert strong{margin-bottom:5px;color:#fff;font-size:13px}.nexus-social-alert small{overflow:hidden;color:#bac7d2;font-size:11px;line-height:1.4;text-overflow:ellipsis;white-space:nowrap}.nexus-social-alert>svg{color:#79cfff}
+.nexus-social-alert[data-kind="market"] .nexus-social-alert-icon{border-color:#b880ff;background:#28133a;color:#d4adff}

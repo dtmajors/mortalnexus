@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Jungle bandit camp">
+  <g stroke="#122015" stroke-width="3" stroke-linejoin="round">
+    <path fill="#3f7649" d="M5 55 32 9l27 46Z"/>
+    <path fill="#182b1d" d="m32 16 7 39H25Z"/>
+    <path fill="#8cc56d" d="m20 29 12-10 12 10-4 8H24Z"/>
+    <path fill="#111b14" d="m23 36 9 7 9-7-4 10H27Z"/>
+    <path fill="none" stroke="#cce8ad" stroke-linecap="round" d="m13 52 38-26M13 26l38 26"/>
+  </g>
+</svg>

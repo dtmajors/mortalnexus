@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Saburra">
+  <path fill="#9b5c2d" stroke="#332116" stroke-width="4" stroke-linejoin="round" d="m5 51 9-18 9 5 8-25 11 22 8-6 9 22Z"/>
+  <path fill="#d7893d" stroke="#332116" stroke-width="3" stroke-linejoin="round" d="m14 49 9-11 8 9 11-12 9 14Z"/>
+  <g fill="#ffd077">
+    <circle cx="18" cy="47" r="2.5"/>
+    <circle cx="28" cy="39" r="2"/>
+    <circle cx="36" cy="48" r="2.5"/>
+    <circle cx="45" cy="42" r="2"/>
+    <circle cx="32" cy="27" r="2"/>
+  </g>
+</svg>

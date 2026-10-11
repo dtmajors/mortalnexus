@@ -1,0 +1,519 @@
+{
+  "format": "mortal-nexus-sarducaa-container-scout-catalog",
+  "version": 1,
+  "generatedAt": "2026-07-30T17:12:33.150Z",
+  "sources": [
+    "C:\\Users\\bleh\\Documents\\Nem Test\\MO2_Sarducca_Coordinate_Research\\coordinates\\sarducaa_static_chest_candidates.json",
+    "C:\\Users\\bleh\\Documents\\Nem Test\\MO2_Sarducca_Coordinate_Research\\coordinates\\sarducaa_gameplay_container_mesh_matches.json"
+  ],
+  "method": "Surface city visual candidates plus dungeon-level summaries pinned to known entrances. No candidate is asserted to be interactive.",
+  "defaultVisibility": "hidden",
+  "markerCount": 17,
+  "verified": false,
+  "markers": [
+    {
+      "id": "archive-scout-container-2e3c9e4961ee94",
+      "label": "Chest Blueprint Visual - Aur",
+      "category": "container-scout",
+      "icon": "container-scout",
+      "manualIcon": true,
+      "notes": "UNVERIFIED SCOUTING LEAD. Client-baked visual placement only; this does not prove the object can be opened or lockpicked. Visit and validate it in the field before promoting it.",
+      "x": 1945.79,
+      "y": 3119.82,
+      "archived": true,
+      "sourceType": "Chest Blueprint Visual",
+      "source": "Mortal Online 2 Sarducaa PAK visual-container census",
+      "sourcePackages": [
+        "Cities\\Aur\\City_Aur_Buildings.umap"
+      ],
+      "sourceAssets": [
+        "/Game/World/Myrland/Cities/Miscellaneous/OldTavern/Meshes/BP_Chest_001"
+      ],
+      "gameplayVisualMatches": [],
+      "worldX": 963.6890595513687,
+      "worldY": -6415.902482836267,
+      "worldZ": -328.9306284958064,
+      "nodeCount": 1,
+      "confidence": "visual-candidate-unverified",
+      "evidenceKind": "unverified-visual",
+      "verified": false,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-scout-container-5d89bda7ff506c",
+      "label": "Chest Blueprint Visual - Aur",
+      "category": "container-scout",
+      "icon": "container-scout",
+      "manualIcon": true,
+      "notes": "UNVERIFIED SCOUTING LEAD. Client-baked visual placement only; this does not prove the object can be opened or lockpicked. Visit and validate it in the field before promoting it.",
+      "x": 1970.98,
+      "y": 3135.73,
+      "archived": true,
+      "sourceType": "Chest Blueprint Visual",
+      "source": "Mortal Online 2 Sarducaa PAK visual-container census",
+      "sourcePackages": [
+        "Cities\\Aur\\City_Aur_Buildings.umap"
+      ],
+      "sourceAssets": [
+        "/Game/World/Myrland/Cities/Miscellaneous/OldTavern/Meshes/BP_Chest_001"
+      ],
+      "gameplayVisualMatches": [],
+      "worldX": 1080.0301888976207,
+      "worldY": -6487.15406990267,
+      "worldZ": -328.40239045922243,
+      "nodeCount": 1,
+      "confidence": "visual-candidate-unverified",
+      "evidenceKind": "unverified-visual",
+      "verified": false,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-scout-container-95c92a7f9555a3",
+      "label": "Chest Blueprint Visual - Aur",
+      "category": "container-scout",
+      "icon": "container-scout",
+      "manualIcon": true,
+      "notes": "UNVERIFIED SCOUTING LEAD. Client-baked visual placement only; this does not prove the object can be opened or lockpicked. Visit and validate it in the field before promoting it.",
+      "x": 1971.04,
+      "y": 3137.39,
+      "archived": true,
+      "sourceType": "Chest Blueprint Visual",
+      "source": "Mortal Online 2 Sarducaa PAK visual-container census",
+      "sourcePackages": [
+        "Cities\\Aur\\City_Aur_Buildings.umap"
+      ],
+      "sourceAssets": [
+        "/Game/World/Myrland/Cities/Miscellaneous/OldTavern/Meshes/BP_Chest_001"
+      ],
+      "gameplayVisualMatches": [],
+      "worldX": 1080.4274784939762,
+      "worldY": -6494.757154760512,
+      "worldZ": -328.40239045922243,
+      "nodeCount": 1,
+      "confidence": "visual-candidate-unverified",
+      "evidenceKind": "unverified-visual",
+      "verified": false,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-scout-container-a07764e2e77d07",
+      "label": "Chest Blueprint Visual - Aur",
+      "category": "container-scout",
+      "icon": "container-scout",
+      "manualIcon": true,
+      "notes": "UNVERIFIED SCOUTING LEAD. Client-baked visual placement only; this does not prove the object can be opened or lockpicked. Visit and validate it in the field before promoting it.",
+      "x": 1968.85,
+      "y": 3137.55,
+      "archived": true,
+      "sourceType": "Chest Blueprint Visual",
+      "source": "Mortal Online 2 Sarducaa PAK visual-container census",
+      "sourcePackages": [
+        "Cities\\Aur\\City_Aur_Buildings.umap"
+      ],
+      "sourceAssets": [
+        "/Game/World/Myrland/Cities/Miscellaneous/OldTavern/Meshes/BP_Chest_001"
+      ],
+      "gameplayVisualMatches": [],
+      "worldX": 1070.4562133397665,
+      "worldY": -6495.631082582317,
+      "worldZ": -328.3079373292224,
+      "nodeCount": 1,
+      "confidence": "visual-candidate-unverified",
+      "evidenceKind": "unverified-visual",
+      "verified": false,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-scout-container-45e9c4990b8057",
+      "label": "Chest Visual - Aur",
+      "category": "container-scout",
+      "icon": "container-scout",
+      "manualIcon": true,
+      "notes": "UNVERIFIED SCOUTING LEAD. Client-baked visual placement only; this does not prove the object can be opened or lockpicked. Visit and validate it in the field before promoting it.",
+      "x": 1951.99,
+      "y": 3129.97,
+      "archived": true,
+      "sourceType": "Chest Visual",
+      "source": "Mortal Online 2 Sarducaa PAK visual-container census",
+      "sourcePackages": [
+        "Cities\\Aur\\City_Aur_Buildings.umap"
+      ],
+      "sourceAssets": [
+        "/Game/World/Myrland/Cities/Viking_Village/Meshes/SM_Chest_01",
+        "/Game/World/Myrland/Cities/Viking_Village/Meshes/SM_Chest_02"
+      ],
+      "gameplayVisualMatches": [],
+      "worldX": 992.7635584552996,
+      "worldY": -6462.111097872557,
+      "worldZ": -333.447857319715,
+      "nodeCount": 2,
+      "confidence": "visual-candidate-unverified",
+      "evidenceKind": "unverified-visual",
+      "verified": false,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-scout-container-61dda40e47cdaf",
+      "label": "Chest Visual - Aur",
+      "category": "container-scout",
+      "icon": "container-scout",
+      "manualIcon": true,
+      "notes": "UNVERIFIED SCOUTING LEAD. Client-baked visual placement only; this does not prove the object can be opened or lockpicked. Visit and validate it in the field before promoting it.",
+      "x": 1951.94,
+      "y": 3127.06,
+      "archived": true,
+      "sourceType": "Chest Visual",
+      "source": "Mortal Online 2 Sarducaa PAK visual-container census",
+      "sourcePackages": [
+        "Cities\\Aur\\City_Aur_Buildings.umap"
+      ],
+      "sourceAssets": [
+        "/Game/World/Myrland/Cities/Viking_Village/Meshes/SM_Chest_01",
+        "/Game/World/Myrland/Cities/Viking_Village/Meshes/SM_Chest_02"
+      ],
+      "gameplayVisualMatches": [],
+      "worldX": 992.3422785852263,
+      "worldY": -6448.706877020574,
+      "worldZ": -333.5378573247151,
+      "nodeCount": 2,
+      "confidence": "visual-candidate-unverified",
+      "evidenceKind": "unverified-visual",
+      "verified": false,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-scout-container-99dd3ac7ae3d68",
+      "label": "Chest Visual - Aur",
+      "category": "container-scout",
+      "icon": "container-scout",
+      "manualIcon": true,
+      "notes": "UNVERIFIED SCOUTING LEAD. Client-baked visual placement only; this does not prove the object can be opened or lockpicked. Visit and validate it in the field before promoting it.",
+      "x": 1953.47,
+      "y": 3130.32,
+      "archived": true,
+      "sourceType": "Chest Visual",
+      "source": "Mortal Online 2 Sarducaa PAK visual-container census",
+      "sourcePackages": [
+        "Cities\\Aur\\City_Aur_Buildings.umap"
+      ],
+      "sourceAssets": [
+        "/Game/World/Myrland/Cities/Viking_Village/Meshes/SM_Chest_02"
+      ],
+      "gameplayVisualMatches": [],
+      "worldX": 999.5804334413101,
+      "worldY": -6463.565785387687,
+      "worldZ": -333.47468119125455,
+      "nodeCount": 1,
+      "confidence": "visual-candidate-unverified",
+      "evidenceKind": "unverified-visual",
+      "verified": false,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-scout-container-dd13b232115ad1",
+      "label": "Chest Visual - Aur",
+      "category": "container-scout",
+      "icon": "container-scout",
+      "manualIcon": true,
+      "notes": "UNVERIFIED SCOUTING LEAD. Client-baked visual placement only; this does not prove the object can be opened or lockpicked. Visit and validate it in the field before promoting it.",
+      "x": 1947.33,
+      "y": 3152.82,
+      "archived": true,
+      "sourceType": "Chest Visual",
+      "source": "Mortal Online 2 Sarducaa PAK visual-container census",
+      "sourcePackages": [
+        "Cities\\Aur\\City_Aur_Buildings.umap"
+      ],
+      "sourceAssets": [
+        "/Game/World/Myrland/Cities/Viking_Village/Meshes/SM_Chest_01"
+      ],
+      "gameplayVisualMatches": [],
+      "worldX": 973.157747821934,
+      "worldY": -6567.390627286656,
+      "worldZ": -332.1377648358081,
+      "nodeCount": 1,
+      "confidence": "visual-candidate-unverified",
+      "evidenceKind": "unverified-visual",
+      "verified": false,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-scout-container-dungeon-8737f80d4f655c",
+      "label": "Container Scouting - Arg Kepher",
+      "category": "container-scout",
+      "icon": "container-scout-dungeon",
+      "manualIcon": true,
+      "notes": "UNVERIFIED DUNGEON SUMMARY. The client contains 4 chest-like visual sites and 34 gameplay-container mesh placements inside this dungeon. The marker is pinned to Entrance 1 because interior-local coordinates are not surface-map coordinates.",
+      "x": 1935.67,
+      "y": 1810.65,
+      "archived": true,
+      "sourceType": "Dungeon container scouting summary",
+      "source": "Mortal Online 2 Sarducaa PAK interior visual census",
+      "sourcePackages": [
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Level_01_Section_02.umap",
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Level_01_Section_05.umap",
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Level_01_Section_01.umap",
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Level_01_Section_03.umap",
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Level_01_Section_04.umap",
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Level_01_Section_07.umap",
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Level_01_Section_08.umap",
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Level_02_Section_01.umap",
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Level_02_Section_02.umap",
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Level_02_Section_03.umap",
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Level_02_Section_04.umap",
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Level_02_Section_05.umap",
+        "Dungeons\\ArgKepher\\ArgKepher_Dungeon_Level_02_Section_06.umap"
+      ],
+      "sourceAssets": [],
+      "nodeCount": 38,
+      "confidence": "interior-visual-summary-unverified",
+      "evidenceKind": "unverified-visual",
+      "verified": false,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-scout-container-dungeon-028a98af22cbea",
+      "label": "Container Scouting - Tuz Salt Mines",
+      "category": "container-scout",
+      "icon": "container-scout-dungeon",
+      "manualIcon": true,
+      "notes": "UNVERIFIED DUNGEON SUMMARY. The client contains 51 chest-like visual sites and 36 gameplay-container mesh placements inside this dungeon. The marker is pinned to Entrance 1 because interior-local coordinates are not surface-map coordinates.",
+      "x": 1070.21,
+      "y": 1307.14,
+      "archived": true,
+      "sourceType": "Dungeon container scouting summary",
+      "source": "Mortal Online 2 Sarducaa PAK interior visual census",
+      "sourcePackages": [
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_01_Entrance_02.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_01_Entrance_03.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_01_Section01.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_01_Section02.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_01_Section04.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_01_Section07.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_01_Section12.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_01_Entrance_01.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_01_Section05.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_01_Section08.umap",
+        "Dungeons\\TuzSaltMines\\TuzSaltMines_Dungeon_Level_01_Section09.umap"
+      ],
+      "sourceAssets": [],
+      "nodeCount": 87,
+      "confidence": "interior-visual-summary-unverified",
+      "evidenceKind": "unverified-visual",
+      "verified": false,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-scout-container-dungeon-5bdb20a3cc9ff3",
+      "label": "Container Scouting - Yel Keskar Hideout",
+      "category": "container-scout",
+      "icon": "container-scout-dungeon",
+      "manualIcon": true,
+      "notes": "UNVERIFIED DUNGEON SUMMARY. The client contains 7 chest-like visual sites and 45 gameplay-container mesh placements inside this dungeon. The marker is pinned to Entrance 1 because interior-local coordinates are not surface-map coordinates.",
+      "x": 2444.19,
+      "y": 3373.68,
+      "archived": true,
+      "sourceType": "Dungeon container scouting summary",
+      "source": "Mortal Online 2 Sarducaa PAK interior visual census",
+      "sourcePackages": [
+        "Dungeons\\YelKeskarHideout\\YelKeskarHideout_Dungeon_Level_01_Section_02.umap",
+        "Dungeons\\YelKeskarHideout\\YelKeskarHideout_Dungeon_Level_02_Section_07.umap",
+        "Dungeons\\YelKeskarHideout\\YelKeskarHideout_Dungeon_Level_02_Section_08.umap",
+        "Dungeons\\YelKeskarHideout\\YelKeskarHideout_Dungeon_Level_01_Section_01.umap",
+        "Dungeons\\YelKeskarHideout\\YelKeskarHideout_Dungeon_Level_01_Section_05.umap",
+        "Dungeons\\YelKeskarHideout\\YelKeskarHideout_Dungeon_Level_01_Section_06.umap",
+        "Dungeons\\YelKeskarHideout\\YelKeskarHideout_Dungeon_Level_01_Section_07.umap",
+        "Dungeons\\YelKeskarHideout\\YelKeskarHideout_Dungeon_Level_01_Section_08.umap",
+        "Dungeons\\YelKeskarHideout\\YelKeskarHideout_Dungeon_Level_01_Section_09.umap",
+        "Dungeons\\YelKeskarHideout\\YelKeskarHideout_Dungeon_Level_02_Section_03.umap",
+        "Dungeons\\YelKeskarHideout\\YelKeskarHideout_Dungeon_Level_02_Section_06.umap"
+      ],
+      "sourceAssets": [],
+      "nodeCount": 52,
+      "confidence": "interior-visual-summary-unverified",
+      "evidenceKind": "unverified-visual",
+      "verified": false,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-scout-container-09bab05a0f145e",
+      "label": "Container Visual Cluster - Kwar Migdal",
+      "category": "container-scout",
+      "icon": "container-scout-crate",
+      "manualIcon": true,
+      "notes": "UNVERIFIED SCOUTING LEAD. Client-baked visual placement only; this does not prove the object can be opened or lockpicked. Visit and validate it in the field before promoting it.",
+      "x": 3425.29,
+      "y": 2736.41,
+      "archived": true,
+      "sourceType": "Crate Visual",
+      "source": "Mortal Online 2 Sarducaa PAK visual-container census",
+      "sourcePackages": [
+        "Cities\\Kwar_Migdal\\City_Kwar_Migdal.umap"
+      ],
+      "sourceAssets": [
+        "/Game/World/Myrland/Cities/Miscellaneous/MedievalMarket/Materials/Meshspecific/MI_Chest_001",
+        "/game/world/myrland/cities/miscellaneous/basement_tavern/meshes/barrel_4"
+      ],
+      "gameplayVisualMatches": [
+        "gameplay barrel B"
+      ],
+      "worldX": 7700.882969700392,
+      "worldY": -4544.0309885145725,
+      "worldZ": -326.10567750853545,
+      "nodeCount": 3,
+      "confidence": "visual-candidate-unverified",
+      "evidenceKind": "unverified-visual",
+      "verified": false,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-scout-container-56e0597977b163",
+      "label": "Crate Visual - Kam",
+      "category": "container-scout",
+      "icon": "container-scout-crate",
+      "manualIcon": true,
+      "notes": "UNVERIFIED SCOUTING LEAD. Client-baked visual placement only; this does not prove the object can be opened or lockpicked. Visit and validate it in the field before promoting it.",
+      "x": 3110.69,
+      "y": 552.05,
+      "archived": true,
+      "sourceType": "Crate Visual",
+      "source": "Mortal Online 2 Sarducaa PAK visual-container census",
+      "sourcePackages": [
+        "Cities\\Kam\\City_Kam.umap"
+      ],
+      "sourceAssets": [
+        "/Game/World/Myrland/Cities/Miscellaneous/MedievalMarket/Materials/Meshspecific/MI_Chest_001"
+      ],
+      "gameplayVisualMatches": [],
+      "worldX": 6101.0160701280765,
+      "worldY": 5467.298862618853,
+      "worldZ": -327.7105465902797,
+      "nodeCount": 1,
+      "confidence": "visual-candidate-unverified",
+      "evidenceKind": "unverified-visual",
+      "verified": false,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-scout-container-ec15dc1fbe1e99",
+      "label": "Crate Visual - Kwar Migdal",
+      "category": "container-scout",
+      "icon": "container-scout-crate",
+      "manualIcon": true,
+      "notes": "UNVERIFIED SCOUTING LEAD. Client-baked visual placement only; this does not prove the object can be opened or lockpicked. Visit and validate it in the field before promoting it.",
+      "x": 3425.08,
+      "y": 2737.4,
+      "archived": true,
+      "sourceType": "Crate Visual",
+      "source": "Mortal Online 2 Sarducaa PAK visual-container census",
+      "sourcePackages": [
+        "Cities\\Kwar_Migdal\\City_Kwar_Migdal.umap"
+      ],
+      "sourceAssets": [
+        "/Game/World/Myrland/Cities/Miscellaneous/MedievalMarket/Materials/Meshspecific/MI_Chest_001"
+      ],
+      "gameplayVisualMatches": [],
+      "worldX": 7700.03030366339,
+      "worldY": -4548.596853132734,
+      "worldZ": -328.4152087585354,
+      "nodeCount": 2,
+      "confidence": "visual-candidate-unverified",
+      "evidenceKind": "unverified-visual",
+      "verified": false,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-scout-container-246577fae6d032",
+      "label": "Loot-prop Visual - Kwar Migdal",
+      "category": "container-scout",
+      "icon": "container-scout",
+      "manualIcon": true,
+      "notes": "UNVERIFIED SCOUTING LEAD. Client-baked visual placement only; this does not prove the object can be opened or lockpicked. Visit and validate it in the field before promoting it.",
+      "x": 3425.05,
+      "y": 2734.69,
+      "archived": true,
+      "sourceType": "Loot-prop Visual",
+      "source": "Mortal Online 2 Sarducaa PAK visual-container census",
+      "sourcePackages": [
+        "Cities\\Kwar_Migdal\\City_Kwar_Migdal.umap"
+      ],
+      "sourceAssets": [
+        "/Game/World/Myrland/Cities/Miscellaneous/PrivateersPillage/Assets/Materials/M_Chest01"
+      ],
+      "gameplayVisualMatches": [],
+      "worldX": 7699.67057831835,
+      "worldY": -4536.121681476328,
+      "worldZ": -329.76333375853545,
+      "nodeCount": 1,
+      "confidence": "visual-candidate-unverified",
+      "evidenceKind": "unverified-visual",
+      "verified": false,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-scout-container-f21fafbafa9596",
+      "label": "Treasure-box Visual - Aur",
+      "category": "container-scout",
+      "icon": "container-scout",
+      "manualIcon": true,
+      "notes": "UNVERIFIED SCOUTING LEAD. Client-baked visual placement only; this does not prove the object can be opened or lockpicked. Visit and validate it in the field before promoting it.",
+      "x": 1948.79,
+      "y": 3141.09,
+      "archived": true,
+      "sourceType": "Treasure-box Visual",
+      "source": "Mortal Online 2 Sarducaa PAK visual-container census",
+      "sourcePackages": [
+        "Cities\\Aur\\City_Aur_Buildings.umap"
+      ],
+      "sourceAssets": [
+        "/Game/World/Myrland/Cities/Miscellaneous/MedievalInteriorSet/Meshes/Treasure_Box"
+      ],
+      "gameplayVisualMatches": [],
+      "worldX": 978.9814847206327,
+      "worldY": -6513.414545005575,
+      "worldZ": -333.30650122831867,
+      "nodeCount": 1,
+      "confidence": "visual-candidate-unverified",
+      "evidenceKind": "unverified-visual",
+      "verified": false,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-scout-container-1afc0bf82fb2ae",
+      "label": "Underwater Chest Visual - Kwar Migdal",
+      "category": "container-scout",
+      "icon": "container-scout",
+      "manualIcon": true,
+      "notes": "UNVERIFIED SCOUTING LEAD. Client-baked visual placement only; this does not prove the object can be opened or lockpicked. Visit and validate it in the field before promoting it.",
+      "x": 3428.76,
+      "y": 2742.32,
+      "archived": true,
+      "sourceType": "Underwater Chest Visual",
+      "source": "Mortal Online 2 Sarducaa PAK visual-container census",
+      "sourcePackages": [
+        "Cities\\Kwar_Migdal\\City_Kwar_Migdal.umap"
+      ],
+      "sourceAssets": [
+        "/Game/World/Myrland/Cities/Miscellaneous/MedievalInteriorSet/Materials/M_TreasureBox",
+        "/Game/World/Myrland/Cities/Miscellaneous/PiratesGold/Meshes/SM_Chest_02",
+        "/Game/World/Myrland/Cities/Miscellaneous/PiratesGold/Meshes/SM_Chest_02_Cap",
+        "/Game/World/Myrland/Cities/Miscellaneous/PrivateersPillage/Assets/Meshes/SM_ChestClosed",
+        "/Game/World/Myrland/Cities/Miscellaneous/PrivateersPillage/Assets/Materials/M_Chest01",
+        "/Game/World/Myrland/Cities/Miscellaneous/PrivateersPillage/Assets/Meshes/SM_ChestOpen",
+        "/Game/World/Myrland/Cities/Miscellaneous/PiratesGold/Materials/MI_Chest_A1",
+        "/Game/World/Myrland/Cities/Miscellaneous/PiratesGold/Materials/Master/M_Coins_Inst"
+      ],
+      "gameplayVisualMatches": [
+        "underwater lockpick chest"
+      ],
+      "worldX": 7717.221011988829,
+      "worldY": -4570.904991182656,
+      "worldZ": -330.58831422728554,
+      "nodeCount": 21,
+      "confidence": "visual-candidate-unverified",
+      "evidenceKind": "unverified-visual",
+      "verified": false,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Salvia">
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 57V13M21 55l9-24M43 55 34 28" stroke="#397249" stroke-width="3"/>
+    <g fill="#4f8e55" stroke="#1f4b31" stroke-width="1.8">
+      <path d="M30 43C19 36 11 38 8 44c7 7 15 8 23 3Z"/>
+      <path d="M34 45c10-8 18-7 22-1-6 8-14 10-22 5Z"/>
+      <path d="M29 34c-9-7-15-5-18 0 5 7 11 8 19 4Z"/>
+    </g>
+    <g fill="#8b57d9" stroke="#472378" stroke-width="1.5">
+      <path d="m32 8-6 7 6 5 6-5Z"/><path d="m32 17-7 7 7 5 7-5Z"/><path d="m32 27-7 7 7 5 7-5Z"/>
+      <path d="m20 25-5 6 5 4 5-5Z"/><path d="m44 24-5 6 5 5 5-6Z"/>
+    </g>
+  </g>
+</svg>

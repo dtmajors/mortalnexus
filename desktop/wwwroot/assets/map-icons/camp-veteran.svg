@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Veteran bandit camp">
+  <path fill="#180d0f" stroke="#080507" stroke-width="3" stroke-linejoin="round" d="M4 57 28 9l25 48Z"/>
+  <path fill="#7f1725" d="m10 53 18-36 18 36Z"/>
+  <path fill="#2a0e13" d="m28 18 9 35H20Z"/>
+  <path fill="#d7b95d" d="M24 21h8l-2 8h-4Z"/>
+  <circle cx="49" cy="44" r="12" fill="#5f111d" stroke="#080507" stroke-width="3"/>
+  <path fill="none" stroke="#ffd66b" stroke-width="3" stroke-linecap="round" d="M43 49 54 38M43 38l11 11"/>
+  <path fill="#ffd66b" d="m49 32 2.2 4.4 4.8.7-3.5 3.4.8 4.8-4.3-2.3-4.3 2.3.8-4.8-3.5-3.4 4.8-.7Z"/>
+</svg>

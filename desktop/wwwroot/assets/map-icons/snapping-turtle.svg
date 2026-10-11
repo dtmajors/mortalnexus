@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Snapping turtle">
+  <path fill="#566b3c" stroke="#20291c" stroke-width="3" stroke-linejoin="round" d="M11 28c3-12 13-19 26-16 10 2 17 10 17 21 0 12-10 21-24 20-13-1-22-11-19-25Z"/>
+  <path fill="#73854b" stroke="#27321f" stroke-width="2.5" stroke-linejoin="round" d="m15 31 8-13 14-4 12 9 3 13-10 12-15 2-13-9Z"/>
+  <path fill="none" stroke="#a5ae68" stroke-width="2.5" stroke-linejoin="round" d="m23 18 5 10-13 3m22-17-3 14 15-5M14 41l14-5-1 14m25-14-18 0 8 12"/>
+  <path fill="#6f814e" stroke="#20291c" stroke-width="3" stroke-linejoin="round" d="m50 27 8-2 5 5-4 5 5 4-8 5-8-4Z"/>
+  <path fill="#6f814e" stroke="#20291c" stroke-width="3" stroke-linejoin="round" d="m16 24-11-5 5 10Zm-1 22L5 53l3-11Zm27 0 7 9-11-4Z"/>
+  <path fill="#4d6037" stroke="#20291c" stroke-width="2.5" stroke-linejoin="round" d="M11 34 1 38l10 4Z"/>
+  <circle cx="57" cy="29" r="2" fill="#f3df83"/>
+  <circle cx="57" cy="29" r="0.8" fill="#11170f"/>
+</svg>

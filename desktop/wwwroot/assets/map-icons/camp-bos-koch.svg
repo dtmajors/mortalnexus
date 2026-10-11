@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Bos Koch camp">
+  <path fill="#111a15" stroke="#060a08" stroke-width="3" stroke-linejoin="round" d="M4 57 28 9l25 48Z"/>
+  <path fill="#306a45" d="m10 53 18-36 18 36Z"/>
+  <path fill="#173523" d="m28 18 9 35H20Z"/>
+  <circle cx="49" cy="44" r="12" fill="#214c32" stroke="#060a08" stroke-width="3"/>
+  <path fill="#d7c05e" d="m49 33 5 8-5 10-5-10Z"/>
+  <path fill="none" stroke="#d9ee87" stroke-width="2.5" d="m42 42 7-4 7 4"/>
+</svg>

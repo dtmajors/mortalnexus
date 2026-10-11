@@ -1,0 +1,944 @@
+:root {
+  --reverse-green: #79a58b;
+  --reverse-green-soft: #b5d0bf;
+  --reverse-amber: #c79b62;
+  --reverse-blue: #83a9bf;
+  --reverse-red: #d0806d;
+  --reverse-panel: #0e110f;
+  --reverse-panel-soft: #111512;
+}
+
+.reverse-page {
+  background: #0b0d0c;
+}
+
+.reverse-masthead {
+  --header-height: 68px;
+}
+
+.reverse-masthead-main {
+  grid-template-columns: minmax(230px, 1fr) auto;
+}
+
+.reverse-site-nav {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  overflow-x: auto;
+}
+
+.reverse-site-nav a {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.reverse-site-nav .active {
+  border-color: var(--reverse-green);
+  color: var(--paper);
+}
+
+.reverse-main {
+  width: min(1320px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 42px 0 30px;
+}
+
+.reverse-intro {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 28px;
+}
+
+.reverse-intro h1 {
+  margin-bottom: 10px;
+  font-size: 43px;
+}
+
+.reverse-intro p:last-child {
+  max-width: 760px;
+  margin: 0;
+  color: var(--paper-soft);
+  font-size: 16px;
+}
+
+.reverse-data-badge {
+  min-width: 190px;
+  padding: 13px 15px;
+  border-left: 3px solid var(--reverse-green);
+  background: var(--surface);
+}
+
+.reverse-data-badge span,
+.reverse-data-badge small {
+  display: block;
+}
+
+.reverse-data-badge span {
+  color: var(--paper);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+}
+
+.reverse-data-badge small {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.reverse-mode-tabs {
+  display: inline-grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 4px;
+  margin-bottom: 10px;
+  padding: 4px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 5px;
+  background: #0d100e;
+}
+
+.reverse-mode-tabs button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 39px;
+  border: 0;
+  border-radius: 3px;
+  padding: 0 15px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.reverse-mode-tabs button:hover {
+  color: var(--paper);
+}
+
+.reverse-mode-tabs button.active {
+  background: #1b241e;
+  color: var(--reverse-green-soft);
+  box-shadow: inset 0 0 0 1px rgba(121, 165, 139, 0.45);
+}
+
+.reverse-mode-tabs svg {
+  width: 15px;
+  height: 15px;
+}
+
+.reverse-tool {
+  display: grid;
+  grid-template-columns: minmax(0, 1.38fr) minmax(330px, 0.62fr);
+  border: 1px solid var(--rule-strong);
+  background: var(--reverse-panel);
+}
+
+.reverse-controls,
+.reverse-summary {
+  min-width: 0;
+  padding: 28px;
+}
+
+.reverse-controls {
+  border-right: 1px solid var(--rule-strong);
+}
+
+.reverse-summary {
+  background: #0f1411;
+}
+
+.reverse-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.reverse-heading h2,
+.reverse-summary h2,
+.reverse-results-heading h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.reverse-page .eyebrow {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--reverse-green-soft);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.quiet-command,
+.primary-command,
+.quick-materials button,
+.reverse-quick-amounts button {
+  min-height: 34px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--paper-soft);
+}
+
+.quiet-command {
+  padding: 0 11px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.quiet-command:hover,
+.quick-materials button:hover,
+.reverse-quick-amounts button:hover {
+  border-color: var(--reverse-green);
+  color: var(--paper);
+}
+
+.primary-command {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  height: 44px;
+  padding: 0 17px;
+  border-color: rgba(121, 165, 139, 0.65);
+  background: #1b2a20;
+  color: var(--reverse-green-soft);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.primary-command:hover {
+  border-color: var(--reverse-green-soft);
+  background: #203225;
+}
+
+.primary-command svg {
+  width: 15px;
+  height: 15px;
+}
+
+.inventory-add-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 9px;
+  margin-top: 22px;
+}
+
+.reverse-field > span,
+.reverse-quick-amounts > span,
+.inventory-list-heading > span {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.reverse-field select,
+.reverse-field input,
+.route-search input {
+  width: 100%;
+  height: 44px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 4px;
+  padding: 0 12px;
+  background: var(--surface);
+  color: var(--paper);
+}
+
+.reverse-field input[type="number"] {
+  font-size: 18px;
+  font-variant-numeric: tabular-nums;
+}
+
+.reverse-field select:focus,
+.reverse-field input:focus,
+.route-search:focus-within {
+  border-color: var(--reverse-green);
+  outline: 0;
+}
+
+.quick-materials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.quick-materials button {
+  min-height: 29px;
+  padding: 0 9px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.quick-materials button.selected {
+  border-color: rgba(121, 165, 139, 0.6);
+  color: var(--reverse-green-soft);
+}
+
+.inventory-list-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 22px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.inventory-list-heading > span {
+  margin: 0;
+}
+
+.inventory-list-heading small {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.selected-inventory {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px;
+  margin-top: 9px;
+}
+
+.inventory-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 108px 30px;
+  align-items: center;
+  gap: 7px;
+  min-height: 54px;
+  border: 1px solid var(--rule);
+  padding: 7px 8px 7px 11px;
+  background: var(--reverse-panel-soft);
+}
+
+.inventory-row strong,
+.inventory-row small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.inventory-row strong {
+  color: var(--paper-soft);
+  font-size: 11px;
+}
+
+.inventory-row small {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.inventory-row input {
+  width: 100%;
+  height: 34px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 3px;
+  padding: 0 7px;
+  background: #0c0f0d;
+  color: var(--paper);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.inventory-row button {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background: transparent;
+  color: var(--muted);
+}
+
+.inventory-row button:hover {
+  border-color: rgba(208, 128, 109, 0.5);
+  color: var(--reverse-red);
+}
+
+.inventory-row svg {
+  width: 14px;
+  height: 14px;
+}
+
+.inventory-empty {
+  grid-column: 1 / -1;
+  min-height: 74px;
+  border: 1px dashed var(--rule-strong);
+  padding: 22px;
+  color: var(--muted);
+  font-size: 11px;
+  text-align: center;
+}
+
+.reverse-field-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(180px, 0.55fr);
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.reverse-quick-amounts {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 12px;
+}
+
+.reverse-quick-amounts > span {
+  margin: 0 5px 0 0;
+}
+
+.reverse-quick-amounts button {
+  min-height: 31px;
+  padding: 0 11px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.reverse-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+}
+
+.reverse-toggle {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  min-height: 54px;
+  cursor: pointer;
+}
+
+.reverse-toggle input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.reverse-toggle .toggle-track {
+  position: relative;
+  width: 38px;
+  height: 22px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.reverse-toggle .toggle-track::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--muted);
+  transition: transform 140ms ease, background 140ms ease;
+}
+
+.reverse-toggle input:checked + .toggle-track {
+  border-color: var(--reverse-green);
+  background: rgba(121, 165, 139, 0.13);
+}
+
+.reverse-toggle input:checked + .toggle-track::after {
+  background: var(--reverse-green-soft);
+  transform: translateX(16px);
+}
+
+.reverse-toggle strong,
+.reverse-toggle small {
+  display: block;
+}
+
+.reverse-toggle strong {
+  color: var(--paper-soft);
+  font-size: 12px;
+}
+
+.reverse-toggle small {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.group-filter {
+  margin-top: 18px;
+  border-top: 1px solid var(--rule);
+  padding-top: 16px;
+}
+
+.group-filter summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--paper-soft);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.group-filter summary small {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.group-filter-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 13px;
+}
+
+.group-chip {
+  position: relative;
+}
+
+.group-chip input {
+  position: absolute;
+  opacity: 0;
+}
+
+.group-chip span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 4px;
+  padding: 0 10px;
+  background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.group-chip input:checked + span {
+  border-color: rgba(121, 165, 139, 0.7);
+  background: rgba(121, 165, 139, 0.1);
+  color: var(--reverse-green-soft);
+}
+
+.reverse-summary > p {
+  min-height: 44px;
+  margin: 10px 0 22px;
+  color: var(--paper-soft);
+}
+
+.summary-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.summary-metrics > div {
+  padding: 15px 0;
+}
+
+.summary-metrics > div + div {
+  border-left: 1px solid var(--rule);
+  padding-left: 18px;
+}
+
+.summary-metrics dt {
+  color: var(--muted);
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.summary-metrics dd {
+  margin: 3px 0 0;
+  color: var(--paper);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+}
+
+.best-route {
+  min-height: 106px;
+  margin-top: 20px;
+}
+
+.best-route-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--reverse-amber);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.best-route strong,
+.best-route span {
+  display: block;
+}
+
+.best-route strong {
+  color: var(--paper);
+  font-size: 15px;
+}
+
+.best-route span {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.reverse-results-section {
+  margin-top: 44px;
+}
+
+.reverse-results-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+.route-search {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  align-items: center;
+  width: min(390px, 100%);
+  height: 44px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 4px;
+  padding: 0 12px;
+  background: var(--surface);
+}
+
+.route-search svg {
+  width: 15px;
+  height: 15px;
+  color: var(--muted);
+}
+
+.route-search input {
+  height: 40px;
+  border: 0;
+  padding-left: 8px;
+}
+
+.route-results {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.route-card {
+  min-width: 0;
+  border: 1px solid var(--rule-strong);
+  border-radius: 6px;
+  background: var(--reverse-panel);
+  overflow: hidden;
+}
+
+.route-card.ready {
+  border-color: rgba(121, 165, 139, 0.52);
+}
+
+.route-card.near {
+  border-color: rgba(199, 155, 98, 0.42);
+}
+
+.route-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 19px 15px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.route-card-header h3 {
+  margin: 3px 0 0;
+  color: var(--paper);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.route-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.route-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 25px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 3px;
+  padding: 0 8px;
+  color: var(--muted);
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.route-badge.group {
+  border-color: rgba(131, 169, 191, 0.55);
+  color: #aec5d2;
+}
+
+.route-badge.ready {
+  border-color: rgba(121, 165, 139, 0.6);
+  color: var(--reverse-green-soft);
+}
+
+.route-badge.near {
+  border-color: rgba(199, 155, 98, 0.55);
+  color: #d8b785;
+}
+
+.route-flow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 22px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  padding: 17px 19px;
+  background: rgba(255, 255, 255, 0.012);
+}
+
+.route-flow svg {
+  width: 17px;
+  height: 17px;
+  color: var(--reverse-green);
+}
+
+.route-flow span,
+.route-flow strong {
+  display: block;
+}
+
+.route-flow span {
+  color: var(--muted);
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.route-flow strong {
+  margin-top: 3px;
+  color: var(--paper-soft);
+  font-size: 14px;
+}
+
+.route-flow-output {
+  text-align: right;
+}
+
+.route-flow-output strong {
+  color: var(--reverse-green-soft);
+}
+
+.route-card-body {
+  padding: 0 19px 17px;
+}
+
+.ingredient-list,
+.output-list {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding: 14px 0;
+  list-style: none;
+}
+
+.ingredient-list li,
+.output-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--paper-soft);
+  font-size: 11px;
+}
+
+.ingredient-list li span:last-child,
+.output-list li span:last-child {
+  color: var(--paper);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.ingredient-list li.missing span:last-child {
+  color: var(--reverse-amber);
+}
+
+.card-note {
+  min-height: 31px;
+  border-top: 1px solid var(--rule);
+  padding-top: 11px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.card-note strong {
+  color: var(--paper-soft);
+  font-weight: 600;
+}
+
+.empty-routes {
+  display: grid;
+  justify-items: center;
+  gap: 5px;
+  min-height: 210px;
+  place-content: center;
+  border: 1px solid var(--rule-strong);
+  color: var(--muted);
+  text-align: center;
+}
+
+.empty-routes[hidden] {
+  display: none;
+}
+
+.empty-routes svg {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 5px;
+  color: var(--reverse-green);
+}
+
+.empty-routes strong {
+  color: var(--paper-soft);
+}
+
+.reverse-footer {
+  margin-top: 34px;
+}
+
+@media (max-width: 1050px) {
+  .reverse-tool {
+    grid-template-columns: 1fr;
+  }
+
+  .reverse-controls {
+    border-right: 0;
+    border-bottom: 1px solid var(--rule-strong);
+  }
+}
+
+@media (max-width: 820px) {
+  .reverse-masthead-main {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .reverse-site-nav {
+    padding-bottom: 2px;
+  }
+
+  .reverse-main {
+    width: min(100% - 28px, 1320px);
+    padding-top: 30px;
+  }
+
+  .reverse-intro {
+    align-items: flex-start;
+  }
+
+  .reverse-intro h1 {
+    font-size: 36px;
+  }
+
+  .reverse-data-badge {
+    display: none;
+  }
+
+  .selected-inventory {
+    grid-template-columns: 1fr;
+  }
+
+  .route-results {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .reverse-main {
+    width: min(100% - 20px, 1320px);
+  }
+
+  .reverse-mode-tabs {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .reverse-mode-tabs button {
+    min-width: 0;
+    padding: 0 8px;
+  }
+
+  .reverse-controls,
+  .reverse-summary {
+    padding: 21px 16px;
+  }
+
+  .inventory-add-row,
+  .reverse-field-grid,
+  .reverse-options {
+    grid-template-columns: 1fr;
+  }
+
+  .primary-command {
+    width: 100%;
+  }
+
+  .reverse-quick-amounts {
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+  .reverse-results-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .route-search {
+    width: 100%;
+  }
+
+  .route-card-header {
+    flex-direction: column;
+  }
+
+  .route-badges {
+    justify-content: flex-start;
+  }
+
+  .route-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .route-flow svg {
+    transform: rotate(90deg);
+  }
+
+  .route-flow-output {
+    text-align: left;
+  }
+}

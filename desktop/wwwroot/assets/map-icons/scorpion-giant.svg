@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Giant black Akrep scorpion">
+  <g fill="#050608" stroke="#ef5b4f" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 27c3-9 17-9 20 0l4 20c1 9-6 14-14 14s-15-5-14-14Z"/>
+    <path d="m22 30-12-10-8 3 7 8-8 7 11 8 9-9Zm20 0 12-10 8 3-7 8 8 7-11 8-9-9Z"/>
+    <path fill="none" stroke="#050608" stroke-width="7" d="m20 36-17-9m17 17L2 42m42-6 17-9M44 44l18-2M36 23c5-8 15-8 17-15 1-4-2-7-6-7"/>
+    <path d="m43 4 9-3-2 9Z"/>
+    <path fill="none" stroke="#f58d77" d="M22 35h20M21 43h22m-21 9h20"/>
+    <circle cx="27" cy="27" r="2.2" fill="#ffd05c" stroke="none"/>
+    <circle cx="37" cy="27" r="2.2" fill="#ffd05c" stroke="none"/>
+  </g>
+</svg>

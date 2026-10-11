@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Brownwood tree">
+  <g stroke="#24150d" stroke-width="3" stroke-linejoin="round">
+    <path fill="#87502a" d="M27 47h10l3 12H24Z"/>
+    <path fill="#5a301a" d="M32 4 13 31h10L10 45h44L41 31h10Z"/>
+    <path fill="#99592b" stroke="none" d="m32 10-11 17h8L19 40h26L35 27h8Z"/>
+  </g>
+</svg>

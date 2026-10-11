@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Unclassified humanoid camp">
+  <path fill="#17212a" stroke="#090d11" stroke-width="3" stroke-linejoin="round" d="M4 57 28 9l25 48Z"/>
+  <path fill="#687887" d="m10 53 18-36 18 36Z"/>
+  <path fill="#202b34" d="m28 18 9 35H20Z"/>
+  <circle cx="49" cy="44" r="12" fill="#202b34" stroke="#090d11" stroke-width="3"/>
+  <path fill="none" stroke="#cbd5dd" stroke-width="3" stroke-linecap="round" d="M44 41h10M49 36v16"/>
+</svg>

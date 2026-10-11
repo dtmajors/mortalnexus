@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Palm fruit">
+  <g stroke="#173a25" stroke-width="2.5" stroke-linejoin="round">
+    <path d="M32 58V22" stroke="#76512b" stroke-width="6"/>
+    <path fill="#4c9651" d="M31 22C18 8 8 8 4 13c8 9 18 13 28 12C18 22 10 27 9 34c10 4 19 0 25-8 5-10 14-17 24-14-2 9-11 14-24 14 11 0 20 5 22 12-10 5-19 0-24-10Z"/>
+    <g fill="#b37536" stroke="#4c2d17"><circle cx="27" cy="30" r="5"/><circle cx="36" cy="31" r="5"/><circle cx="31" cy="39" r="5"/><circle cx="40" cy="40" r="5"/></g>
+  </g>
+</svg>

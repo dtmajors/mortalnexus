@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080b10" />
+    <title>Spell Planner | Mortal Nexus</title>
+    <meta name="description" content="Build a Mortal Online II spell loadout and total every reagent, mana cost, and base cast time." />
+    <link rel="icon" href="/assets/mortal-nexus-app-icon-v2.png" type="image/png" />
+    <link rel="stylesheet" href="/site-shell.css?v=24" />
+    <link rel="stylesheet" href="/spells.css?v=3" />
+  </head>
+  <body class="spells-page">
+    <main class="spell-main">
+      <section class="spell-intro">
+        <div>
+          <span class="spell-kicker">Magic preparation</span>
+          <h1>Spell Planner</h1>
+          <p>Select spells, set how many times you plan to cast each one, and Mortal Nexus will combine the full reagent load automatically.</p>
+        </div>
+        <div class="spell-intro-aside">
+          <div class="spell-source">
+            <i data-lucide="database" aria-hidden="true"></i>
+            <span><small id="catalogStatus">Loading catalog</small><strong id="catalogCount">0 spells</strong></span>
+          </div>
+          <div class="school-legend" aria-label="Spell schools">
+            <span data-school="Ecumenical">Ecumenical</span>
+            <span data-school="Spiritism">Spiritism</span>
+            <span data-school="Necromancy">Necromancy</span>
+            <span data-school="Elementalism">Elementalism</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="spell-workspace" aria-label="Spell loadout calculator">
+        <aside class="spell-catalog-panel">
+          <div class="panel-heading">
+            <div><span>Catalog</span><h2>Choose spells</h2></div>
+            <span id="filteredCount" class="panel-count">0</span>
+          </div>
+          <label class="spell-search">
+            <i data-lucide="search" aria-hidden="true"></i>
+            <input id="spellSearch" type="search" autocomplete="off" placeholder="Search spell or reagent..." />
+          </label>
+          <div id="schoolFilters" class="school-filters" role="group" aria-label="Filter by school"></div>
+          <div id="spellCatalog" class="spell-catalog" aria-live="polite"></div>
+        </aside>
+
+        <section class="spell-loadout-panel">
+          <div class="panel-heading loadout-heading">
+            <div><span>Cast plan</span><h2>Your loadout</h2></div>
+            <button id="clearLoadout" class="quiet-command" type="button">Clear all</button>
+          </div>
+
+          <div id="loadoutEmpty" class="loadout-empty">
+            <span class="empty-sigil" aria-hidden="true"><i data-lucide="wand-sparkles"></i></span>
+            <h3>No spells selected</h3>
+            <p>Add spells from the catalog. Quantities and totals are saved automatically on this device.</p>
+          </div>
+          <div id="loadoutList" class="loadout-list"></div>
+        </section>
+
+        <aside class="spell-totals-panel" aria-live="polite">
+          <div class="panel-heading">
+            <div><span>Combined load</span><h2>Total tally</h2></div>
+          </div>
+
+          <dl class="spell-metrics">
+            <div><dt>Total casts</dt><dd id="totalCasts">0</dd></div>
+            <div><dt>Total mana</dt><dd id="totalMana">0</dd></div>
+            <div><dt>Base cast time</dt><dd id="totalCastTime">0s</dd></div>
+            <div><dt>Inventory weight</dt><dd id="totalWeight">0.00 kg</dd></div>
+          </dl>
+
+          <div class="reagent-heading">
+            <span>Reagents to carry</span>
+            <small id="reagentKinds">0 types</small>
+          </div>
+          <div id="reagentTotals" class="reagent-totals"></div>
+          <p id="reagentEmpty" class="reagent-empty">Your combined reagent list will appear here.</p>
+
+          <button id="copyLoadout" class="primary-command" type="button" disabled>
+            <i data-lucide="copy" aria-hidden="true"></i> Copy tally
+          </button>
+          <p id="copyStatus" class="copy-status" role="status"></p>
+        </aside>
+      </section>
+
+      <footer class="spell-footer">
+        <span>Spell values are decoded from the current client catalog. Private-server balance changes may differ.</span>
+      </footer>
+    </main>
+
+    <script src="/assets/vendor/lucide.min.js"></script>
+    <script src="/spells.js?v=3"></script>
+    <script src="/site-shell.js?v=24"></script>
+  </body>
+</html>

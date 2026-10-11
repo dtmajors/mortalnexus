@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Karuva">
+  <g stroke="#173b2a" stroke-width="2.5" stroke-linejoin="round">
+    <path d="M32 57V20m0 20L18 30m14 5 14-14" fill="none" stroke="#3e7b48" stroke-width="4"/>
+    <path fill="#5c9b54" d="M8 25c9-7 18-3 22 6-7 6-15 5-22-6Zm27-7c7-8 16-7 21 0-5 8-13 10-21 0ZM21 43c8-7 17-4 21 4-7 7-15 6-21-4Z"/>
+    <g fill="#ec9b3a" stroke="#6b3a15"><circle cx="18" cy="24" r="4"/><circle cx="43" cy="18" r="4"/><circle cx="34" cy="44" r="4"/></g>
+  </g>
+</svg>

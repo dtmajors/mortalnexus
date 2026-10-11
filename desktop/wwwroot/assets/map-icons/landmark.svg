@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Point of interest">
+  <g stroke="#2a210e" stroke-width="3.2" stroke-linejoin="round">
+    <path fill="#d4a942" d="M32 3c-14 0-24 10-24 23 0 17 24 35 24 35s24-18 24-35C56 13 46 3 32 3Z"/>
+    <circle cx="32" cy="26" r="12" fill="#1d2830"/>
+    <path fill="#f4d77f" d="m32 13 4 9 9 4-9 4-4 9-4-9-9-4 9-4Z"/>
+    <circle cx="32" cy="26" r="3" fill="#1d2830" stroke="none"/>
+  </g>
+</svg>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#090c0a" />
+    <title>Dungeon Atlas | Mortal Nexus</title>
+    <meta name="description" content="Interactive Mortal Online II dungeon maps, notable mobs, drops, caveats, and floor-by-floor points of interest." />
+    <link rel="icon" href="/assets/mortal-nexus-app-icon-v2.png" type="image/png" />
+    <link rel="stylesheet" href="/styles.css?v=4" />
+    <link rel="stylesheet" href="/tool-suite.css?v=2" />
+    <link rel="stylesheet" href="/dungeons.css?v=4" />
+    <link rel="stylesheet" href="/site-shell.css?v=24" />
+  </head>
+  <body class="tool-page dungeons-page">
+    <header class="masthead tool-masthead">
+      <div class="masthead-main">
+        <a class="brand" href="/" aria-label="Mortal Nexus home">
+          <img src="/assets/mortal-nexus-app-icon-v2.png" alt="" width="40" height="40" />
+          <span class="brand-copy"><strong>Mortal Nexus</strong><small>Mortal Online II Reference</small></span>
+        </a>
+        <nav class="tool-nav" aria-label="Tool navigation">
+          <a class="text-button" href="/">Reference</a>
+          <a class="text-button active" href="/dungeons" aria-current="page">Dungeons</a>
+          <a class="text-button" href="/creatures">Creature Codex</a>
+          <a class="text-button" href="/crafting">Crafting</a>
+          <a class="text-button" href="/map">Live map</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="tool-main dungeon-main">
+      <header class="tool-titlebar dungeon-titlebar">
+        <div>
+          <span class="tool-kicker">Mapped expeditions</span>
+          <h1>Dungeon Atlas</h1>
+          <p>Floor-by-floor schematics, notable enemies, loot, warnings, and source notes for major Mortal Online II sites.</p>
+        </div>
+        <div id="dungeonStatus" class="status-line ready">
+          <span class="status-dot"></span>
+          <strong>Loading atlas...</strong>
+        </div>
+      </header>
+
+      <section class="dungeon-layout">
+        <aside class="dungeon-browser" aria-label="Dungeon browser">
+          <div class="dungeon-filters">
+            <label class="tool-field">
+              <span>Search</span>
+              <input id="dungeonSearch" type="search" autocomplete="off" placeholder="Dungeon, mob, drop..." />
+            </label>
+            <div class="tool-fields">
+              <label class="tool-field">
+                <span>Continent</span>
+                <select id="dungeonRegion">
+                  <option value="all">All continents</option>
+                  <option value="myrland">Myrland</option>
+                  <option value="sarducaa">Sarducaa</option>
+                </select>
+              </label>
+              <label class="tool-field">
+                <span>Difficulty</span>
+                <select id="dungeonDifficulty">
+                  <option value="all">All difficulties</option>
+                  <option value="easy">Easy</option>
+                  <option value="medium">Medium</option>
+                  <option value="medium-hard">Medium-Hard</option>
+                  <option value="hard">Hard</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <div class="browser-count">
+            <span id="dungeonCount">Loading...</span>
+            <button id="clearDungeonFilters" type="button">Clear</button>
+          </div>
+          <div id="dungeonList" class="dungeon-list"></div>
+        </aside>
+
+        <section id="dungeonDetail" class="dungeon-detail" aria-live="polite">
+          <header class="dungeon-detail-header">
+            <div>
+              <span id="dungeonRegionLabel" class="tool-kicker">Myrland</span>
+              <h2 id="dungeonName">Select a dungeon</h2>
+              <p id="dungeonLocation"></p>
+            </div>
+            <div id="dungeonBadges" class="dungeon-badges"></div>
+          </header>
+
+          <p id="dungeonSummary" class="dungeon-summary"></p>
+
+          <div class="floor-bar">
+            <span>Floor</span>
+            <div id="floorTabs" class="floor-tabs" role="tablist" aria-label="Dungeon floors"></div>
+          </div>
+
+          <div class="dungeon-workspace">
+            <section class="map-column">
+              <div class="map-toolbar">
+                <div>
+                  <strong id="floorName">Floor</strong>
+                  <span id="floorMeta">North up</span>
+                </div>
+                <div class="map-tools" aria-label="Map controls">
+                  <button id="zoomOutDungeon" type="button" title="Zoom out" aria-label="Zoom out">−</button>
+                  <button id="resetDungeonView" type="button" title="Reset map view">1:1</button>
+                  <button id="zoomInDungeon" type="button" title="Zoom in" aria-label="Zoom in">+</button>
+                </div>
+              </div>
+              <div id="dungeonMapFrame" class="dungeon-map-frame">
+                <svg id="dungeonMap" viewBox="0 0 100 100" role="img" aria-labelledby="floorName floorMeta"></svg>
+                <canvas id="dungeonMap3d" class="dungeon-map-3d" role="img" aria-labelledby="floorName floorMeta" hidden></canvas>
+                <div id="dungeonMap3dStatus" class="dungeon-map-3d-status" hidden>Building 3D map...</div>
+                <div class="compass" aria-hidden="true">
+                  <span class="compass-direction compass-n"><b>N</b><i>↑</i></span>
+                  <span class="compass-direction compass-e"><i>→</i><b>E</b></span>
+                  <span class="compass-direction compass-s"><i>↓</i><b>S</b></span>
+                  <span class="compass-direction compass-w"><b>W</b><i>←</i></span>
+                  <span class="compass-center"></span>
+                </div>
+              </div>
+              <div class="map-caption">
+                <span id="mapScale">Approximate schematic</span>
+                <span id="mapControlsHint">Scroll to zoom · drag to pan · select a POI for details</span>
+              </div>
+              <div id="selectedPoi" class="selected-poi" hidden></div>
+            </section>
+
+            <aside class="dungeon-intel">
+              <section class="intel-section legend-section">
+                <h3>Legend</h3>
+                <div id="dungeonLegend" class="dungeon-legend"></div>
+              </section>
+              <section class="intel-section">
+                <h3>Notable mobs</h3>
+                <ul id="dungeonMobs" class="intel-list"></ul>
+              </section>
+              <section class="intel-section">
+                <h3>Drops</h3>
+                <ul id="dungeonDrops" class="intel-list"></ul>
+              </section>
+              <section class="intel-section caveat-section">
+                <h3>Caveats</h3>
+                <ul id="dungeonCaveats" class="intel-list"></ul>
+              </section>
+            </aside>
+          </div>
+
+          <details class="dungeon-sources">
+            <summary>Cartography notes and sources</summary>
+            <ul id="dungeonSources"></ul>
+          </details>
+        </section>
+      </section>
+
+      <footer class="tool-footer dungeon-footer">
+        <span>Mortal Nexus player-recorded dungeon cartography.</span>
+        <span>Schematics are not to scale and may shift between game patches.</span>
+      </footer>
+    </main>
+
+    <script src="/assets/vendor/three.min.js"></script>
+    <script type="module" src="/dungeons.js?v=7"></script>
+    <script src="/site-shell.js?v=22"></script>
+  </body>
+</html>

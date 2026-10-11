@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ibex">
+  <path fill="#9b7047" stroke="#2e241c" stroke-width="4" stroke-linejoin="round" d="M17 29c0-10 6-16 15-16s15 6 15 16v11c0 10-6 18-15 18S17 50 17 40V29Z"/>
+  <path fill="none" stroke="#d8bb81" stroke-width="5" stroke-linecap="round" d="M24 16C12 13 11 4 18 3m22 13C52 13 53 4 46 3"/>
+  <path fill="#c99b63" stroke="#2e241c" stroke-width="3" d="m19 26-10-7 3 12Zm26 0 10-7-3 12Z"/>
+  <path fill="#4a3527" d="m28 38 4 15 4-15-4 3Z"/>
+  <circle cx="25" cy="31" r="2" fill="#fff0c8"/>
+  <circle cx="39" cy="31" r="2" fill="#fff0c8"/>
+</svg>

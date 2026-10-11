@@ -1,0 +1,4624 @@
+{
+  "format": "mortal-nexus-creature-butchery-v1",
+  "generatedFrom": "Nave Index / Butchery",
+  "profileCount": 197,
+  "profiles": {
+    "akrep": {
+      "creature": "Akrep",
+      "carcassBasis": 10000,
+      "carcassLabel": "Akrep",
+      "loreRoot": "Arthropoda",
+      "lore": "Scorpiones",
+      "yields": [],
+      "trophies": [
+        {
+          "name": "Akrep Stinger",
+          "value": "3g"
+        }
+      ],
+      "searchText": "akrep scorpiones • akrep stinger butchery butchery animal butchery butchery arthropoda scorpiones carcass (10k) akrep zoology root arthropoda zoology scorpiones butchery table yields (10% clade bonus not included) values needed trophy akrep stinger trophy value 3g",
+      "sourceRecordId": "butchery-akrep-scorpiones-akrep-stinger-6"
+    },
+    "alvarin": {
+      "creature": "Alvarin",
+      "carcassBasis": 10000,
+      "carcassLabel": "Alvarin",
+      "loreRoot": "Mammalia",
+      "lore": "Irminae",
+      "yields": [
+        {
+          "material": "Alvarin Meat",
+          "qty": 1000
+        },
+        {
+          "material": "Alvarin Skin",
+          "qty": 500
+        },
+        {
+          "material": "Bone Tissue",
+          "qty": 400
+        },
+        {
+          "material": "Emalj",
+          "qty": 100
+        }
+      ],
+      "trophies": [],
+      "searchText": "alvarin irminae • n/a butchery butchery animal butchery butchery mammalia irminae carcass (10k) alvarin zoology root mammalia zoology irminae butchery table yields (10% clade bonus not included) alvarin meat (1000) yield 2 alvarin skin (500) yield 3 bone tissue (400) yield 4 emalj (100) trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-alvarin-irminae-n-a-9"
+    },
+    "arctic molva": {
+      "creature": "Arctic Molva",
+      "carcassBasis": 10000,
+      "carcassLabel": "Arctic Molva",
+      "loreRoot": "Mammalia",
+      "lore": "Ceratomorpha",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 600
+        },
+        {
+          "material": "Fullgrain Leather",
+          "qty": 620
+        },
+        {
+          "material": "Incisium",
+          "qty": 200
+        },
+        {
+          "material": "Ironbone",
+          "qty": 200
+        },
+        {
+          "material": "Molarium",
+          "qty": 200
+        },
+        {
+          "material": "Molva Meat",
+          "qty": 500
+        },
+        {
+          "material": "Tallow",
+          "qty": 75
+        }
+      ],
+      "trophies": [],
+      "searchText": "arctic molva ceratomorpha • n/a butchery butchery animal butchery butchery mammalia ceratomorpha carcass (10k) arctic molva zoology root mammalia zoology ceratomorpha butchery table yields (10% clade bonus not included) bone tissue (600) yield 2 fullgrain leather (620) yield 3 incisium (200) yield 4 ironbone (200) yield 5 molarium (200) yield 6 molva meat (500) yield 7 tallow (75) trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-arctic-molva-ceratomorpha-n-a-12"
+    },
+    "belbus": {
+      "creature": "Belbus",
+      "carcassBasis": 10000,
+      "carcassLabel": "Belbus",
+      "loreRoot": "Mammalia",
+      "lore": "Viverroidea",
+      "yields": [
+        {
+          "material": "Belbus Meat",
+          "qty": 3000
+        },
+        {
+          "material": "Bone Tissue",
+          "qty": 2400
+        },
+        {
+          "material": "Fullgrain Leather",
+          "qty": 1200
+        },
+        {
+          "material": "Ground Fur",
+          "qty": 600
+        },
+        {
+          "material": "Guard Fur",
+          "qty": 500
+        },
+        {
+          "material": "Molarium",
+          "qty": 500
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Belbus Paws",
+          "value": "15s"
+        }
+      ],
+      "searchText": "belbus viverroidea • belbus paws butchery butchery animal butchery butchery mammalia viverroidea carcass (10k) belbus zoology root mammalia zoology viverroidea butchery table yields (10% clade bonus not included) belbus meat (3000) yield 2 bone tissue (2400) yield 3 fullgrain leather (1200) yield 4 ground fur (600) yield 5 guard fur (500) yield 6 molarium (500) trophy belbus paws trophy value 15s",
+      "sourceRecordId": "butchery-belbus-viverroidea-belbus-paws-11",
+      "petPoints": {
+        "subSpecies": "Viverroidea",
+        "trackedLevels": "125",
+        "firstKnownCost": "Level 1: 23",
+        "lastKnownCost": "Level 125: 79"
+      }
+    },
+    "black bear": {
+      "creature": "Black Bear",
+      "carcassBasis": 10000,
+      "carcassLabel": "Black Bear",
+      "loreRoot": "Mammalia",
+      "lore": "Ursidae",
+      "yields": [
+        {
+          "material": "Black Bear Meat",
+          "qty": 1500
+        },
+        {
+          "material": "Bone Tissue",
+          "qty": 920
+        },
+        {
+          "material": "Ground Fur",
+          "qty": 320
+        },
+        {
+          "material": "Guard Fur",
+          "qty": 120
+        },
+        {
+          "material": "Molarium",
+          "qty": 140
+        },
+        {
+          "material": "Quality Leather",
+          "qty": 400
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Black Bear Paws",
+          "value": "30s"
+        }
+      ],
+      "searchText": "black bear ursidae • black bear paws butchery butchery animal butchery butchery mammalia ursidae carcass (10k) black bear zoology root mammalia zoology ursidae butchery table yields (10% clade bonus not included) black bear meat (1500) yield 2 bone tissue (920) yield 3 ground fur (320) yield 4 guard fur (120) yield 5 molarium (140) yield 6 quality leather (400) trophy black bear paws trophy value 30s",
+      "sourceRecordId": "butchery-black-bear-ursidae-black-bear-paws-11",
+      "combatProfiles": [
+        {
+          "profileType": "Max Pet Stats",
+          "label": "Elder Black Bear",
+          "family": "Mammalia",
+          "level": "",
+          "hp": "621",
+          "ppCost": "92",
+          "attackRange": "62-71",
+          "averageAttack": "67",
+          "attacksPerMinute": "19",
+          "damagePerMinute": "1273"
+        },
+        {
+          "profileType": "Dual Wield Pet",
+          "label": "Black Bear",
+          "family": "Mammalia",
+          "level": "37",
+          "hp": "309",
+          "ppCost": "45",
+          "attackRange": "31-35",
+          "averageAttack": "32",
+          "attacksPerMinute": "21",
+          "damagePerMinute": ""
+        }
+      ]
+    },
+    "brown bear": {
+      "creature": "Brown Bear",
+      "carcassBasis": 10000,
+      "carcassLabel": "Brown Bear",
+      "loreRoot": "Mammalia",
+      "lore": "Ursidae",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 880
+        },
+        {
+          "material": "Brown Bear Meat",
+          "qty": 1500
+        },
+        {
+          "material": "Ground Fur",
+          "qty": 300
+        },
+        {
+          "material": "Guard Fur",
+          "qty": 100
+        },
+        {
+          "material": "Molarium",
+          "qty": 120
+        },
+        {
+          "material": "Quality Leather",
+          "qty": 360
+        },
+        {
+          "material": "Tallow",
+          "qty": 50
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Brown Bear Paws",
+          "value": "40s"
+        }
+      ],
+      "searchText": "brown bear ursidae • brown bear paws butchery butchery animal butchery butchery mammalia ursidae carcass (10k) brown bear zoology root mammalia zoology ursidae butchery table yields (10% clade bonus not included) bone tissue (880) yield 2 brown bear meat (1500) yield 3 ground fur (300) yield 4 guard fur (100) yield 5 molarium (120) yield 6 quality leather (360) yield 7 tallow (50) trophy brown bear paws trophy value 40s",
+      "sourceRecordId": "butchery-brown-bear-ursidae-brown-bear-paws-12",
+      "combatProfiles": [
+        {
+          "profileType": "Max Pet Stats",
+          "label": "Elder Brown Bear",
+          "family": "Mammalia",
+          "level": "",
+          "hp": "743",
+          "ppCost": "95",
+          "attackRange": "70 - 79",
+          "averageAttack": "75",
+          "attacksPerMinute": "21",
+          "damagePerMinute": "1575"
+        },
+        {
+          "profileType": "Dual Wield Pet",
+          "label": "Brown Bear",
+          "family": "Mammalia",
+          "level": "34",
+          "hp": "357",
+          "ppCost": "45",
+          "attackRange": "33-37",
+          "averageAttack": "35",
+          "attacksPerMinute": "21",
+          "damagePerMinute": ""
+        }
+      ]
+    },
+    "bush pig": {
+      "creature": "Bush Pig",
+      "carcassBasis": 10000,
+      "carcassLabel": "Bush Pig",
+      "loreRoot": "Mammalia",
+      "lore": "Suina",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 1000
+        },
+        {
+          "material": "Bush Pig Meat",
+          "qty": 4000
+        },
+        {
+          "material": "Emalj",
+          "qty": 200
+        },
+        {
+          "material": "Fullgrain Leather",
+          "qty": 700
+        },
+        {
+          "material": "Tallow",
+          "qty": 100
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Bush Pig Hooves",
+          "value": "8s"
+        }
+      ],
+      "searchText": "bush pig suina • bush pig hooves butchery butchery animal butchery butchery mammalia suina carcass (10k) bush pig zoology root mammalia zoology suina butchery table yields (10% clade bonus not included) bone tissue (1000) yield 2 bush pig meat (4000) yield 3 emalj (200) yield 4 fullgrain leather (700) yield 5 tallow (100) trophy bush pig hooves trophy value 8s",
+      "sourceRecordId": "butchery-bush-pig-suina-bush-pig-hooves-10",
+      "petPoints": {
+        "subSpecies": "",
+        "trackedLevels": "7",
+        "firstKnownCost": "Level 1: 9",
+        "lastKnownCost": "Level 125: 33"
+      }
+    },
+    "campodon": {
+      "creature": "Campodon",
+      "carcassBasis": 10000,
+      "carcassLabel": "Campodon",
+      "loreRoot": "Mammalia",
+      "lore": "Paenungulata",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 500
+        },
+        {
+          "material": "Campodon Meat",
+          "qty": 600
+        },
+        {
+          "material": "Fullgrain Leather",
+          "qty": 720
+        },
+        {
+          "material": "Incisium",
+          "qty": 240
+        },
+        {
+          "material": "Ironbone",
+          "qty": 200
+        },
+        {
+          "material": "Molarium",
+          "qty": 200
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Campadon Tusks",
+          "value": "65s"
+        }
+      ],
+      "searchText": "campodon paenungulata • campadon tusks butchery butchery animal butchery butchery mammalia paenungulata carcass (10k) campodon zoology root mammalia zoology paenungulata butchery table yields (10% clade bonus not included) bone tissue (500) yield 2 campodon meat (600) yield 3 fullgrain leather (720) yield 4 incisium (240) yield 5 ironbone (200) yield 6 molarium (200) trophy campadon tusks trophy value 65s",
+      "sourceRecordId": "butchery-campodon-paenungulata-campadon-tusks-11",
+      "petPoints": {
+        "subSpecies": "",
+        "trackedLevels": "125",
+        "firstKnownCost": "Level 1: 29",
+        "lastKnownCost": "Level 125: 99"
+      },
+      "combatProfiles": [
+        {
+          "profileType": "Max Pet Stats",
+          "label": "Elder Campodon",
+          "family": "Mammalia",
+          "level": "",
+          "hp": "1225",
+          "ppCost": "99",
+          "attackRange": "100-127",
+          "averageAttack": "108",
+          "attacksPerMinute": "18",
+          "damagePerMinute": "1944"
+        },
+        {
+          "profileType": "Dual Wield Pet",
+          "label": "Campodon",
+          "family": "Mammalia",
+          "level": "31",
+          "hp": "567",
+          "ppCost": "45",
+          "attackRange": "52-57",
+          "averageAttack": "55",
+          "attacksPerMinute": "17",
+          "damagePerMinute": ""
+        }
+      ]
+    },
+    "celaeno": {
+      "creature": "Celaeno",
+      "carcassBasis": 10000,
+      "carcassLabel": "Celaeno",
+      "loreRoot": "Mammalia",
+      "lore": "Chiroptera",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 600
+        },
+        {
+          "material": "Celaeno Meat",
+          "qty": 1100
+        },
+        {
+          "material": "Compact Horn",
+          "qty": 400
+        },
+        {
+          "material": "Incisium",
+          "qty": 300
+        },
+        {
+          "material": "Rawhide",
+          "qty": 400
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Celaeno Horns",
+          "value": "1g"
+        }
+      ],
+      "searchText": "celaeno chiroptera • celaeno horns butchery butchery animal butchery butchery mammalia chiroptera carcass (10k) celaeno zoology root mammalia zoology chiroptera butchery table yields (10% clade bonus not included) bone tissue (600) yield 2 celaeno meat (1100) yield 3 compact horn (400) yield 4 incisium (300) yield 5 rawhide (400) trophy celaeno horns trophy value 1g",
+      "sourceRecordId": "butchery-celaeno-chiroptera-celaeno-horns-10"
+    },
+    "chicken": {
+      "creature": "Chicken",
+      "carcassBasis": 10000,
+      "carcassLabel": "Chicken",
+      "loreRoot": "Aves",
+      "lore": "Neognathe",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 3200
+        },
+        {
+          "material": "Chicken Meat",
+          "qty": 4200
+        }
+      ],
+      "trophies": [],
+      "searchText": "chicken neognathe • n/a butchery butchery animal butchery butchery aves neognathe carcass (10k) chicken zoology root aves zoology neognathe butchery table yields (10% clade bonus not included) bone tissue (3200) yield 2 chicken meat (4200) trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-chicken-neognathe-n-a-7",
+      "petPoints": {
+        "subSpecies": "",
+        "trackedLevels": "7",
+        "firstKnownCost": "Level 1: 9",
+        "lastKnownCost": "Level 125: 33"
+      }
+    },
+    "clothos flinger": {
+      "creature": "Clothos Flinger",
+      "carcassBasis": 10000,
+      "carcassLabel": "Clothos Flinger",
+      "loreRoot": "Arthropoda",
+      "lore": "Araneae",
+      "yields": [
+        {
+          "material": "Arthropod Carapace",
+          "qty": 1200
+        },
+        {
+          "material": "Clothos Flinger Meat",
+          "qty": 3500
+        },
+        {
+          "material": "Crepite",
+          "qty": 1600
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Clothos Flinger Leg",
+          "value": "30s"
+        }
+      ],
+      "searchText": "clothos flinger araneae • clothos flinger leg butchery butchery animal butchery butchery arthropoda araneae carcass (10k) clothos flinger zoology root arthropoda zoology araneae butchery table yields (10% clade bonus not included) arthropod carapace (1200) yield 2 clothos flinger meat (3500) yield 3 crepite (1600) yield 4 fuming salt (?) trophy clothos flinger leg trophy value 30s",
+      "sourceRecordId": "butchery-clothos-flinger-araneae-clothos-flinger-leg-9"
+    },
+    "clothos maiden": {
+      "creature": "Clothos Maiden",
+      "carcassBasis": 10000,
+      "carcassLabel": "Clothos Maiden",
+      "loreRoot": "Arthropoda",
+      "lore": "Araneae",
+      "yields": [
+        {
+          "material": "Arthropod Carapace",
+          "qty": 840
+        },
+        {
+          "material": "Clothos Maiden Meat",
+          "qty": 3000
+        },
+        {
+          "material": "Crepite",
+          "qty": 660
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Clothos Maiden Palps",
+          "value": "55s"
+        }
+      ],
+      "searchText": "clothos maiden araneae • clothos maiden palps butchery butchery animal butchery butchery arthropoda araneae carcass (10k) clothos maiden zoology root arthropoda zoology araneae butchery table yields (10% clade bonus not included) arthropod carapace (840) yield 2 clothos maiden meat (3000) yield 3 crepite (660) yield 4 fuming salt (?) trophy clothos maiden palps trophy value 55s",
+      "sourceRecordId": "butchery-clothos-maiden-araneae-clothos-maiden-palps-9"
+    },
+    "clothos maiden queen": {
+      "creature": "Clothos Maiden Queen",
+      "carcassBasis": 10000,
+      "carcassLabel": "Clothos Maiden Queen",
+      "loreRoot": "Arthropoda",
+      "lore": "Araneae",
+      "yields": [
+        {
+          "material": "Arthropod Carapace",
+          "qty": 840
+        },
+        {
+          "material": "Bloodsilk",
+          "qty": 550
+        },
+        {
+          "material": "Clothos Maiden Queen Meat",
+          "qty": 3000
+        },
+        {
+          "material": "Dense Crepite",
+          "qty": 920
+        },
+        {
+          "material": "Silk",
+          "qty": 500
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Clothos Queen Egg",
+          "value": "11g"
+        }
+      ],
+      "searchText": "clothos maiden queen araneae • clothos queen egg butchery butchery animal butchery butchery arthropoda araneae carcass (10k) clothos maiden queen zoology root arthropoda zoology araneae butchery table yields (10% clade bonus not included) arthropod carapace (840) yield 2 bloodsilk (550) yield 3 clothos maiden queen meat (3000) yield 4 dense crepite (920) yield 5 fuming salt (?) yield 6 silk (500) trophy clothos queen egg trophy value 11g",
+      "sourceRecordId": "butchery-clothos-maiden-queen-araneae-clothos-queen-egg-11"
+    },
+    "clothos worker": {
+      "creature": "Clothos Worker",
+      "carcassBasis": 10000,
+      "carcassLabel": "Clothos Worker",
+      "loreRoot": "Arthropoda",
+      "lore": "Araneae",
+      "yields": [
+        {
+          "material": "Arthropod Carapace",
+          "qty": 1100
+        },
+        {
+          "material": "Clothos Worker Meat",
+          "qty": 3600
+        },
+        {
+          "material": "Crepite",
+          "qty": 1500
+        }
+      ],
+      "trophies": [],
+      "searchText": "clothos worker araneae • n/a butchery butchery animal butchery butchery arthropoda araneae carcass (10k) clothos worker zoology root arthropoda zoology araneae butchery table yields (10% clade bonus not included) arthropod carapace (1100) yield 2 clothos worker meat (3600) yield 3 crepite (1500) trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-clothos-worker-araneae-n-a-8"
+    },
+    "coralis crab": {
+      "creature": "Coralis Crab",
+      "carcassBasis": 10000,
+      "carcassLabel": "Coralis Crab",
+      "loreRoot": "Arthropoda",
+      "lore": "Crustacea",
+      "yields": [
+        {
+          "material": "Coralis Crab Meat",
+          "qty": 3500
+        },
+        {
+          "material": "Crustacean Carapace",
+          "qty": 2500
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Coralis Crab Claw",
+          "value": "50s"
+        }
+      ],
+      "searchText": "coralis crab crustacea • coralis crab claw butchery butchery animal butchery butchery arthropoda crustacea carcass (10k) coralis crab zoology root arthropoda zoology crustacea butchery table yields (10% clade bonus not included) coralis crab meat (3500) yield 2 crustacean carapace (2500) trophy coralis crab claw trophy value 50s",
+      "sourceRecordId": "butchery-coralis-crab-crustacea-coralis-crab-claw-7"
+    },
+    "cougar": {
+      "creature": "Cougar",
+      "carcassBasis": 10000,
+      "carcassLabel": "Cougar",
+      "loreRoot": "Mammalia",
+      "lore": "Pantherinae",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 2000
+        },
+        {
+          "material": "Cougar Meat",
+          "qty": 3000
+        },
+        {
+          "material": "Ground Fur",
+          "qty": 400
+        },
+        {
+          "material": "Molarium",
+          "qty": 400
+        },
+        {
+          "material": "Quality Leather",
+          "qty": 2000
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Cougar Fangs",
+          "value": "20s"
+        }
+      ],
+      "searchText": "cougar pantherinae • cougar fangs butchery butchery animal butchery butchery mammalia pantherinae carcass (10k) cougar zoology root mammalia zoology pantherinae butchery table yields (10% clade bonus not included) bone tissue (2000) yield 2 cougar meat (3000) yield 3 ground fur (400) yield 4 molarium (400) yield 5 quality leather (2000) trophy cougar fangs trophy value 20s",
+      "sourceRecordId": "butchery-cougar-pantherinae-cougar-fangs-10",
+      "petPoints": {
+        "subSpecies": "",
+        "trackedLevels": "118",
+        "firstKnownCost": "Level 1: 24",
+        "lastKnownCost": "Level 125: 81"
+      },
+      "combatProfiles": [
+        {
+          "profileType": "Max Pet Stats",
+          "label": "Alpha Cougar",
+          "family": "Mammalia",
+          "level": "",
+          "hp": "350",
+          "ppCost": "84",
+          "attackRange": "24-53",
+          "averageAttack": "41",
+          "attacksPerMinute": "30",
+          "damagePerMinute": "1230"
+        },
+        {
+          "profileType": "Dual Wield Pet",
+          "label": "Cougar",
+          "family": "Mammalia",
+          "level": "45",
+          "hp": "190",
+          "ppCost": "45",
+          "attackRange": "12 - 28",
+          "averageAttack": "22",
+          "attacksPerMinute": "32",
+          "damagePerMinute": ""
+        }
+      ]
+    },
+    "crocodile": {
+      "creature": "Crocodile",
+      "carcassBasis": 10000,
+      "carcassLabel": "Crocodile",
+      "loreRoot": "Reptilia",
+      "lore": "Lacertilia",
+      "yields": [],
+      "trophies": [
+        {
+          "name": "Crocodile Eye",
+          "value": "1g 50s"
+        }
+      ],
+      "searchText": "crocodile lacertilia • crocodile eye butchery butchery animal butchery butchery reptilia lacertilia carcass (10k) crocodile zoology root reptilia zoology lacertilia butchery table yields (10% clade bonus not included) values needed trophy crocodile eye trophy value 1g 50s",
+      "sourceRecordId": "butchery-crocodile-lacertilia-crocodile-eye-6"
+    },
+    "danaburnu": {
+      "creature": "Danaburnu",
+      "carcassBasis": 10000,
+      "carcassLabel": "Danaburnu",
+      "loreRoot": "Arthropoda",
+      "lore": "Insecta",
+      "yields": [],
+      "trophies": [
+        {
+          "name": "Danaburnu Palps",
+          "value": "9g"
+        }
+      ],
+      "searchText": "danaburnu insecta • danaburnu palps butchery butchery animal butchery butchery arthropoda insecta carcass (10k) danaburnu zoology root arthropoda zoology insecta butchery table yields (10% clade bonus not included) values needed trophy danaburnu palps trophy value 9g",
+      "sourceRecordId": "butchery-danaburnu-insecta-danaburnu-palps-6"
+    },
+    "desert horse": {
+      "creature": "Desert Horse",
+      "carcassBasis": 10000,
+      "carcassLabel": "Desert Horse",
+      "loreRoot": "Mammalia",
+      "lore": "Equidae",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 600
+        },
+        {
+          "material": "Emalj",
+          "qty": 160
+        },
+        {
+          "material": "Fullgrain Leather",
+          "qty": 1000
+        },
+        {
+          "material": "Horse Meat",
+          "qty": 1200
+        }
+      ],
+      "trophies": [],
+      "searchText": "desert horse equidae • n/a butchery butchery animal butchery butchery mammalia equidae carcass (10k) desert horse zoology root mammalia zoology equidae butchery table yields (10% clade bonus not included) bone tissue (600) yield 2 emalj (160) yield 3 fullgrain leather (1000) yield 4 horse meat (1200) trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-desert-horse-equidae-n-a-9"
+    },
+    "dire wolf": {
+      "creature": "Dire Wolf",
+      "carcassBasis": 10000,
+      "carcassLabel": "Dire Wolf",
+      "loreRoot": "Mammalia",
+      "lore": "Canidae",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 2000
+        },
+        {
+          "material": "Dire Wolf Meat",
+          "qty": 3500
+        },
+        {
+          "material": "Fullgrain Leather",
+          "qty": 1200
+        },
+        {
+          "material": "Guard Fur",
+          "qty": 800
+        },
+        {
+          "material": "Ironwool",
+          "qty": 600
+        },
+        {
+          "material": "Molarium",
+          "qty": 500
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Dire Wolf Paws",
+          "value": "30s"
+        }
+      ],
+      "searchText": "dire wolf canidae • dire wolf paws butchery butchery animal butchery butchery mammalia canidae carcass (10k) dire wolf zoology root mammalia zoology canidae butchery table yields (10% clade bonus not included) bone tissue (2000) yield 2 dire wolf meat (3500) yield 3 fullgrain leather (1200) yield 4 guard fur (800) yield 5 ironwool (600) yield 6 molarium (500) trophy dire wolf paws trophy value 30s",
+      "sourceRecordId": "butchery-dire-wolf-canidae-dire-wolf-paws-11",
+      "petPoints": {
+        "subSpecies": "Canidae (Wolves)",
+        "trackedLevels": "118",
+        "firstKnownCost": "Level 1: 9",
+        "lastKnownCost": "Level 125: 34"
+      },
+      "combatProfiles": [
+        {
+          "profileType": "Max Pet Stats",
+          "label": "Alpha Dire Wolf",
+          "family": "Mammalia",
+          "level": "",
+          "hp": "350",
+          "ppCost": "84",
+          "attackRange": "26-60",
+          "averageAttack": "44",
+          "attacksPerMinute": "26",
+          "damagePerMinute": "1144"
+        },
+        {
+          "profileType": "Dual Wield Pet",
+          "label": "Dire Wolf",
+          "family": "Mammalia",
+          "level": "45",
+          "hp": "190",
+          "ppCost": "45",
+          "attackRange": "14-32",
+          "averageAttack": "22",
+          "attacksPerMinute": "25-27",
+          "damagePerMinute": ""
+        }
+      ]
+    },
+    "erets gamal (?)": {
+      "creature": "Erets Gamal (?)",
+      "carcassBasis": 10000,
+      "carcassLabel": "Erets Gamal (?)",
+      "loreRoot": "Mammalia",
+      "lore": "Tylopoda",
+      "yields": [],
+      "trophies": [],
+      "searchText": "erets gamal (?) tylopoda • n/a butchery butchery animal butchery butchery mammalia tylopoda carcass (10k) erets gamal (?) zoology root mammalia zoology tylopoda butchery table yields (10% clade bonus not included) values needed trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-erets-gamal-tylopoda-n-a-6"
+    },
+    "forest troll": {
+      "creature": "Forest Troll",
+      "carcassBasis": 10000,
+      "carcassLabel": "Forest Troll",
+      "loreRoot": "Mammalia",
+      "lore": "Styganthropa",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 780
+        },
+        {
+          "material": "Emalj",
+          "qty": 350
+        },
+        {
+          "material": "Fullgrain Leather",
+          "qty": 350
+        },
+        {
+          "material": "Ironfur",
+          "qty": 50
+        },
+        {
+          "material": "Molarium",
+          "qty": 400
+        },
+        {
+          "material": "Tallow",
+          "qty": 125
+        },
+        {
+          "material": "Troll Meat",
+          "qty": 1000
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Forest Troll Head",
+          "value": "10g"
+        }
+      ],
+      "searchText": "forest troll styganthropa • forest troll head butchery butchery animal butchery butchery mammalia styganthropa carcass (10k) forest troll zoology root mammalia zoology styganthropa butchery table yields (10% clade bonus not included) bone tissue (780) yield 2 emalj (350) yield 3 fullgrain leather (350) yield 4 ironfur (50) yield 5 molarium (400) yield 6 tallow (125) yield 7 troll meat (1000) trophy forest troll head trophy value 10g",
+      "sourceRecordId": "butchery-forest-troll-styganthropa-forest-troll-head-12"
+    },
+    "gaur": {
+      "creature": "Gaur",
+      "carcassBasis": 10000,
+      "carcassLabel": "Gaur",
+      "loreRoot": "Mammalia",
+      "lore": "Bovinae",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 720
+        },
+        {
+          "material": "Compact Horn",
+          "qty": 160
+        },
+        {
+          "material": "Emalj",
+          "qty": 200
+        },
+        {
+          "material": "Fullgrain Leather",
+          "qty": 720
+        },
+        {
+          "material": "Guar Meat",
+          "qty": 1000
+        },
+        {
+          "material": "Horn",
+          "qty": 400
+        },
+        {
+          "material": "Tallow",
+          "qty": 25
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Gaur Horns",
+          "value": "20s"
+        }
+      ],
+      "searchText": "gaur bovinae • gaur horns butchery butchery animal butchery butchery mammalia bovinae carcass (10k) gaur zoology root mammalia zoology bovinae butchery table yields (10% clade bonus not included) bone tissue (720) yield 2 compact horn (160) yield 3 emalj (200) yield 4 fullgrain leather (720) yield 5 guar meat (1000) yield 6 horn (400) yield 7 tallow (25) trophy gaur horns trophy value 20s",
+      "sourceRecordId": "butchery-gaur-bovinae-gaur-horns-12",
+      "petPoints": {
+        "subSpecies": "",
+        "trackedLevels": "125",
+        "firstKnownCost": "Level 1: 19",
+        "lastKnownCost": "Level 125: 66"
+      }
+    },
+    "gemsbok": {
+      "creature": "Gemsbok",
+      "carcassBasis": 10000,
+      "carcassLabel": "Gemsbok",
+      "loreRoot": "Mammalia",
+      "lore": "Caprinomorpha",
+      "yields": [],
+      "trophies": [
+        {
+          "name": "Gemsbok Hooves",
+          "value": "12s"
+        }
+      ],
+      "searchText": "gemsbok caprinomorpha • gemsbok hooves butchery butchery animal butchery butchery mammalia caprinomorpha carcass (10k) gemsbok zoology root mammalia zoology caprinomorpha butchery table yields (10% clade bonus not included) values needed trophy gemsbok hooves trophy value 12s",
+      "sourceRecordId": "butchery-gemsbok-caprinomorpha-gemsbok-hooves-6"
+    },
+    "giant akrep": {
+      "creature": "Giant Akrep",
+      "carcassBasis": 10000,
+      "carcassLabel": "Giant Akrep",
+      "loreRoot": "Arthropoda",
+      "lore": "Scorpiones",
+      "yields": [],
+      "trophies": [
+        {
+          "name": "Giant Akrep Stinger",
+          "value": "12g"
+        }
+      ],
+      "searchText": "giant akrep scorpiones • giant akrep stinger butchery butchery animal butchery butchery arthropoda scorpiones carcass (10k) giant akrep zoology root arthropoda zoology scorpiones butchery table yields (10% clade bonus not included) values needed trophy giant akrep stinger trophy value 12g",
+      "sourceRecordId": "butchery-giant-akrep-scorpiones-giant-akrep-stinger-6"
+    },
+    "giant kurnas": {
+      "creature": "Giant Kurnas",
+      "carcassBasis": 10000,
+      "carcassLabel": "Giant Kurnas",
+      "loreRoot": "Arthropoda",
+      "lore": "Insecta",
+      "yields": [],
+      "trophies": [
+        {
+          "name": "Giant Kurnas Elytra",
+          "value": "10g"
+        }
+      ],
+      "searchText": "giant kurnas insecta • giant kurnas elytra butchery butchery animal butchery butchery arthropoda insecta carcass (10k) giant kurnas zoology root arthropoda zoology insecta butchery table yields (10% clade bonus not included) values needed trophy giant kurnas elytra trophy value 10g",
+      "sourceRecordId": "butchery-giant-kurnas-insecta-giant-kurnas-elytra-6"
+    },
+    "golden danaburnu": {
+      "creature": "Golden Danaburnu",
+      "carcassBasis": 10000,
+      "carcassLabel": "Golden Danaburnu",
+      "loreRoot": "Arthropoda",
+      "lore": "Insecta",
+      "yields": [],
+      "trophies": [
+        {
+          "name": "Golden Danaburnu Tarsal Claws",
+          "value": "15g"
+        }
+      ],
+      "searchText": "golden danaburnu insecta • golden danaburnu tarsal claws butchery butchery animal butchery butchery arthropoda insecta carcass (10k) golden danaburnu zoology root arthropoda zoology insecta butchery table yields (10% clade bonus not included) values needed trophy golden danaburnu tarsal claws trophy value 15g",
+      "sourceRecordId": "butchery-golden-danaburnu-insecta-golden-danaburnu-tarsal-claws-6"
+    },
+    "horba gamal": {
+      "creature": "Horba Gamal",
+      "carcassBasis": 10000,
+      "carcassLabel": "Horba Gamal",
+      "loreRoot": "Mammalia",
+      "lore": "Tylopoda",
+      "yields": [],
+      "trophies": [],
+      "searchText": "horba gamal tylopoda • n/a butchery butchery animal butchery butchery mammalia tylopoda carcass (10k) horba gamal zoology root mammalia zoology tylopoda butchery table yields (10% clade bonus not included) values needed trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-horba-gamal-tylopoda-n-a-6"
+    },
+    "human": {
+      "creature": "Human",
+      "carcassBasis": 10000,
+      "carcassLabel": "Human",
+      "loreRoot": "Mammalia",
+      "lore": "Shinaria",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 400
+        },
+        {
+          "material": "Emalj",
+          "qty": 100
+        },
+        {
+          "material": "Human Meat",
+          "qty": 1100
+        },
+        {
+          "material": "Human Skin",
+          "qty": 500
+        }
+      ],
+      "trophies": [],
+      "searchText": "human shinaria • n/a butchery butchery animal butchery butchery mammalia shinaria carcass (10k) human zoology root mammalia zoology shinaria butchery table yields (10% clade bonus not included) bone tissue (400) yield 2 emalj (100) yield 3 human meat (1100) yield 4 human skin (500) trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-human-shinaria-n-a-9"
+    },
+    "hunter lizard": {
+      "creature": "Hunter Lizard",
+      "carcassBasis": 10000,
+      "carcassLabel": "Hunter Lizard",
+      "loreRoot": "Reptilia",
+      "lore": "Lacertilia",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 2000
+        },
+        {
+          "material": "Horned Scales",
+          "qty": 300
+        },
+        {
+          "material": "Hunter Lizard Meat",
+          "qty": 3000
+        },
+        {
+          "material": "Incisium",
+          "qty": 400
+        },
+        {
+          "material": "Keeled Scales",
+          "qty": 2200
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Hunter Lizard Feet",
+          "value": "15s"
+        }
+      ],
+      "searchText": "hunter lizard lacertilia • hunter lizard feet butchery butchery animal butchery butchery reptilia lacertilia carcass (10k) hunter lizard zoology root reptilia zoology lacertilia butchery table yields (10% clade bonus not included) bone tissue (2000) yield 2 horned scales (300) yield 3 hunter lizard meat (3000) yield 4 incisium (400) yield 5 keeled scales (2200) trophy hunter lizard feet trophy value 15s",
+      "sourceRecordId": "butchery-hunter-lizard-lacertilia-hunter-lizard-feet-10",
+      "petPoints": {
+        "subSpecies": "",
+        "trackedLevels": "46",
+        "firstKnownCost": "Level 1: 15",
+        "lastKnownCost": "Level 125: 50"
+      },
+      "combatProfiles": [
+        {
+          "profileType": "Max Pet Stats",
+          "label": "Alpha Hunter Lizard",
+          "family": "Cant keep up with horse on 2 speed",
+          "level": "",
+          "hp": "350",
+          "ppCost": "50",
+          "attackRange": "39-53",
+          "averageAttack": "46",
+          "attacksPerMinute": "26",
+          "damagePerMinute": "1196"
+        },
+        {
+          "profileType": "Dual Wield Pet",
+          "label": "Alpha Hunter Lizard",
+          "family": "Reptillia",
+          "level": "110",
+          "hp": "319",
+          "ppCost": "45",
+          "attackRange": "36-49",
+          "averageAttack": "43",
+          "attacksPerMinute": "24",
+          "damagePerMinute": ""
+        }
+      ]
+    },
+    "ibex": {
+      "creature": "Ibex",
+      "carcassBasis": 10000,
+      "carcassLabel": "Ibex",
+      "loreRoot": "Mammalia",
+      "lore": "Caprinomorpha",
+      "yields": [],
+      "trophies": [
+        {
+          "name": "Ibex Skull",
+          "value": "10s"
+        }
+      ],
+      "searchText": "ibex caprinomorpha • ibex skull butchery butchery animal butchery butchery mammalia caprinomorpha carcass (10k) ibex zoology root mammalia zoology caprinomorpha butchery table yields (10% clade bonus not included) values needed trophy ibex skull trophy value 10s",
+      "sourceRecordId": "butchery-ibex-caprinomorpha-ibex-skull-6"
+    },
+    "jotun horse": {
+      "creature": "Jotun Horse",
+      "carcassBasis": 10000,
+      "carcassLabel": "Jotun Horse",
+      "loreRoot": "Mammalia",
+      "lore": "Equidae",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 600
+        },
+        {
+          "material": "Emalj",
+          "qty": 160
+        },
+        {
+          "material": "Fullgrain Leather",
+          "qty": 1000
+        },
+        {
+          "material": "Horse Meat",
+          "qty": 1200
+        }
+      ],
+      "trophies": [],
+      "searchText": "jotun horse equidae • n/a butchery butchery animal butchery butchery mammalia equidae carcass (10k) jotun horse zoology root mammalia zoology equidae butchery table yields (10% clade bonus not included) bone tissue (600) yield 2 emalj (160) yield 3 fullgrain leather (1000) yield 4 horse meat (1200) trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-jotun-horse-equidae-n-a-9"
+    },
+    "jungle horse": {
+      "creature": "Jungle Horse",
+      "carcassBasis": 10000,
+      "carcassLabel": "Jungle Horse",
+      "loreRoot": "Mammalia",
+      "lore": "Equidae",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 600
+        },
+        {
+          "material": "Emalj",
+          "qty": 160
+        },
+        {
+          "material": "Fullgrain Leather",
+          "qty": 1000
+        },
+        {
+          "material": "Horse Meat",
+          "qty": 1200
+        }
+      ],
+      "trophies": [],
+      "searchText": "jungle horse equidae • n/a butchery butchery animal butchery butchery mammalia equidae carcass (10k) jungle horse zoology root mammalia zoology equidae butchery table yields (10% clade bonus not included) bone tissue (600) yield 2 emalj (160) yield 3 fullgrain leather (1000) yield 4 horse meat (1200) trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-jungle-horse-equidae-n-a-9"
+    },
+    "jungle troll": {
+      "creature": "Jungle Troll",
+      "carcassBasis": 10000,
+      "carcassLabel": "Jungle Troll",
+      "loreRoot": "Mammalia",
+      "lore": "Styganthropa",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 780
+        },
+        {
+          "material": "Emalj",
+          "qty": 300
+        },
+        {
+          "material": "Fullgrain Leather",
+          "qty": 710
+        },
+        {
+          "material": "Ironfur",
+          "qty": 200
+        },
+        {
+          "material": "Molarium",
+          "qty": 450
+        },
+        {
+          "material": "Tallow",
+          "qty": 75
+        },
+        {
+          "material": "Troll Meat",
+          "qty": 1000
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Jungle Troll Head",
+          "value": "10g"
+        }
+      ],
+      "searchText": "jungle troll styganthropa • jungle troll head butchery butchery animal butchery butchery mammalia styganthropa carcass (10k) jungle troll zoology root mammalia zoology styganthropa butchery table yields (10% clade bonus not included) bone tissue (780) yield 2 emalj (300) yield 3 fullgrain leather (710) yield 4 ironfur (200) yield 5 molarium (450) yield 6 tallow (75) yield 7 troll meat (1000) trophy jungle troll head trophy value 10g",
+      "sourceRecordId": "butchery-jungle-troll-styganthropa-jungle-troll-head-12"
+    },
+    "koch gamal": {
+      "creature": "Koch Gamal",
+      "carcassBasis": 10000,
+      "carcassLabel": "Koch Gamal",
+      "loreRoot": "Mammalia",
+      "lore": "Tylopoda",
+      "yields": [],
+      "trophies": [],
+      "searchText": "koch gamal tylopoda • n/a butchery butchery animal butchery butchery mammalia tylopoda carcass (10k) koch gamal zoology root mammalia zoology tylopoda butchery table yields (10% clade bonus not included) values needed trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-koch-gamal-tylopoda-n-a-6"
+    },
+    "lowland molva": {
+      "creature": "Lowland Molva",
+      "carcassBasis": 10000,
+      "carcassLabel": "Lowland Molva",
+      "loreRoot": "Mammalia",
+      "lore": "Ceratomorpha",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 600
+        },
+        {
+          "material": "Fullgrain Leather",
+          "qty": 620
+        },
+        {
+          "material": "Incisium",
+          "qty": 200
+        },
+        {
+          "material": "Ironbone",
+          "qty": 200
+        },
+        {
+          "material": "Molarium",
+          "qty": 200
+        },
+        {
+          "material": "Molva Meat",
+          "qty": 1200
+        },
+        {
+          "material": "Tallow",
+          "qty": 50
+        }
+      ],
+      "trophies": [],
+      "searchText": "lowland molva ceratomorpha • n/a butchery butchery animal butchery butchery mammalia ceratomorpha carcass (10k) lowland molva zoology root mammalia zoology ceratomorpha butchery table yields (10% clade bonus not included) bone tissue (600) yield 2 fullgrain leather (620) yield 3 incisium (200) yield 4 ironbone (200) yield 5 molarium (200) yield 6 molva meat (1200) yield 7 tallow (50) trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-lowland-molva-ceratomorpha-n-a-12"
+    },
+    "lynx": {
+      "creature": "Lynx",
+      "carcassBasis": 10000,
+      "carcassLabel": "Lynx",
+      "loreRoot": "Mammalia",
+      "lore": "Felinae",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 2000
+        },
+        {
+          "material": "Ground Fur",
+          "qty": 1000
+        },
+        {
+          "material": "Lynx Meat",
+          "qty": 2500
+        },
+        {
+          "material": "Molarium",
+          "qty": 320
+        },
+        {
+          "material": "Quality Leather",
+          "qty": 1600
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Lynx Tail",
+          "value": "20s"
+        }
+      ],
+      "searchText": "lynx felinae • lynx tail butchery butchery animal butchery butchery mammalia felinae carcass (10k) lynx zoology root mammalia zoology felinae butchery table yields (10% clade bonus not included) bone tissue (2000) yield 2 ground fur (1000) yield 3 lynx meat (2500) yield 4 molarium (320) yield 5 quality leather (1600) trophy lynx tail trophy value 20s",
+      "sourceRecordId": "butchery-lynx-felinae-lynx-tail-10",
+      "petPoints": {
+        "subSpecies": "Felinae",
+        "trackedLevels": "125",
+        "firstKnownCost": "Level 1: 23",
+        "lastKnownCost": "Level 125: 79"
+      }
+    },
+    "marshland lykiator": {
+      "creature": "Marshland Lykiator",
+      "carcassBasis": 10000,
+      "carcassLabel": "Marshland Lykiator",
+      "loreRoot": "Reptilia",
+      "lore": "Ornitichia",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 1800
+        },
+        {
+          "material": "Horned Scales",
+          "qty": 700
+        },
+        {
+          "material": "Incisium",
+          "qty": 800
+        },
+        {
+          "material": "Keeled Scales",
+          "qty": 2000
+        },
+        {
+          "material": "Lykiator Meat",
+          "qty": 600
+        }
+      ],
+      "trophies": [],
+      "searchText": "marshland lykiator ornitichia • n/a butchery butchery animal butchery butchery reptilia ornitichia carcass (10k) marshland lykiator zoology root reptilia zoology ornitichia butchery table yields (10% clade bonus not included) bone tissue (1800) yield 2 horned scales (700) yield 3 incisium (800) yield 4 keeled scales (2000) yield 5 lykiator meat (600) trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-marshland-lykiator-ornitichia-n-a-10"
+    },
+    "minotaur": {
+      "creature": "Minotaur",
+      "carcassBasis": 10000,
+      "carcassLabel": "Minotaur",
+      "loreRoot": "Mammalia",
+      "lore": "Jotuni",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 500
+        },
+        {
+          "material": "Emalj",
+          "qty": 200
+        },
+        {
+          "material": "Fullgrain Leather",
+          "qty": 1400
+        },
+        {
+          "material": "Great Horn",
+          "qty": 400
+        },
+        {
+          "material": "Minotaur Meat",
+          "qty": 1000
+        },
+        {
+          "material": "Tallow",
+          "qty": 25
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Mintoaur Hooves",
+          "value": "1g"
+        }
+      ],
+      "searchText": "minotaur jotuni • mintoaur hooves butchery butchery animal butchery butchery mammalia jotuni carcass (10k) minotaur zoology root mammalia zoology jotuni butchery table yields (10% clade bonus not included) bone tissue (500) yield 2 emalj (200) yield 3 fullgrain leather (1400) yield 4 great horn (400) yield 5 minotaur meat (1000) yield 6 tallow (25) trophy mintoaur hooves trophy value 1g",
+      "sourceRecordId": "butchery-minotaur-jotuni-mintoaur-hooves-11"
+    },
+    "mongrel horse": {
+      "creature": "Mongrel Horse",
+      "carcassBasis": 10000,
+      "carcassLabel": "Mongrel Horse",
+      "loreRoot": "Mammalia",
+      "lore": "Equidae",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 600
+        },
+        {
+          "material": "Emalj",
+          "qty": 160
+        },
+        {
+          "material": "Fullgrain Leather",
+          "qty": 1000
+        },
+        {
+          "material": "Horse Meat",
+          "qty": 1200
+        }
+      ],
+      "trophies": [],
+      "searchText": "mongrel horse equidae • n/a butchery butchery animal butchery butchery mammalia equidae carcass (10k) mongrel horse zoology root mammalia zoology equidae butchery table yields (10% clade bonus not included) bone tissue (600) yield 2 emalj (160) yield 3 fullgrain leather (1000) yield 4 horse meat (1200) trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-mongrel-horse-equidae-n-a-9"
+    },
+    "mountain spider": {
+      "creature": "Mountain Spider",
+      "carcassBasis": 10000,
+      "carcassLabel": "Mountain Spider",
+      "loreRoot": "Arthropoda",
+      "lore": "Araneae",
+      "yields": [
+        {
+          "material": "Arthropod Carapace",
+          "qty": 840
+        },
+        {
+          "material": "Crepite",
+          "qty": 1000
+        },
+        {
+          "material": "Dense Crepite",
+          "qty": 140
+        },
+        {
+          "material": "Mountain Spider Meat",
+          "qty": 3500
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Mountain Spider Leg",
+          "value": "20s"
+        }
+      ],
+      "searchText": "mountain spider araneae • mountain spider leg butchery butchery animal butchery butchery arthropoda araneae carcass (10k) mountain spider zoology root arthropoda zoology araneae butchery table yields (10% clade bonus not included) arthropod carapace (840) yield 2 crepite (1000) yield 3 dense crepite (140) yield 4 mountain spider meat (3500) trophy mountain spider leg trophy value 20s",
+      "sourceRecordId": "butchery-mountain-spider-araneae-mountain-spider-leg-9"
+    },
+    "night snatcher": {
+      "creature": "Night Snatcher",
+      "carcassBasis": 10000,
+      "carcassLabel": "Night Snatcher",
+      "loreRoot": "Mammalia",
+      "lore": "Hystricomorpha",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 2000
+        },
+        {
+          "material": "Emalj",
+          "qty": 300
+        },
+        {
+          "material": "Fullgrain Leather",
+          "qty": 1000
+        },
+        {
+          "material": "Ground Fur",
+          "qty": 1000
+        },
+        {
+          "material": "Night Snatcher Meat",
+          "qty": 2500
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Nightsnatcher Tail",
+          "value": "15s"
+        }
+      ],
+      "searchText": "night snatcher hystricomorpha • nightsnatcher tail butchery butchery animal butchery butchery mammalia hystricomorpha carcass (10k) night snatcher zoology root mammalia zoology hystricomorpha butchery table yields (10% clade bonus not included) bone tissue (2000) yield 2 emalj (300) yield 3 fullgrain leather (1000) yield 4 ground fur (1000) yield 5 night snatcher meat (2500) trophy nightsnatcher tail trophy value 15s",
+      "sourceRecordId": "butchery-night-snatcher-hystricomorpha-nightsnatcher-tail-10",
+      "petPoints": {
+        "subSpecies": "",
+        "trackedLevels": "125",
+        "firstKnownCost": "Level 1: 15",
+        "lastKnownCost": "Level 125: 53"
+      }
+    },
+    "nightsnatcher": {
+      "creature": "Night Snatcher",
+      "carcassBasis": 10000,
+      "carcassLabel": "Night Snatcher",
+      "loreRoot": "Mammalia",
+      "lore": "Hystricomorpha",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 2000
+        },
+        {
+          "material": "Emalj",
+          "qty": 300
+        },
+        {
+          "material": "Fullgrain Leather",
+          "qty": 1000
+        },
+        {
+          "material": "Ground Fur",
+          "qty": 1000
+        },
+        {
+          "material": "Night Snatcher Meat",
+          "qty": 2500
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Nightsnatcher Tail",
+          "value": "15s"
+        }
+      ],
+      "searchText": "night snatcher hystricomorpha • nightsnatcher tail butchery butchery animal butchery butchery mammalia hystricomorpha carcass (10k) night snatcher zoology root mammalia zoology hystricomorpha butchery table yields (10% clade bonus not included) bone tissue (2000) yield 2 emalj (300) yield 3 fullgrain leather (1000) yield 4 ground fur (1000) yield 5 night snatcher meat (2500) trophy nightsnatcher tail trophy value 15s",
+      "sourceRecordId": "butchery-night-snatcher-hystricomorpha-nightsnatcher-tail-10",
+      "petPoints": {
+        "subSpecies": "",
+        "trackedLevels": "125",
+        "firstKnownCost": "Level 1: 15",
+        "lastKnownCost": "Level 125: 53"
+      }
+    },
+    "nitre flinger": {
+      "creature": "Nitre Flinger",
+      "carcassBasis": 10000,
+      "carcassLabel": "Nitre Flinger",
+      "loreRoot": "Arthropoda",
+      "lore": "Araneae",
+      "yields": [
+        {
+          "material": "Arthropod Carapace",
+          "qty": 1200
+        },
+        {
+          "material": "Crepite",
+          "qty": 1600
+        },
+        {
+          "material": "Nitre Flinger Meat",
+          "qty": 3500
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Nitre Flinger Leg",
+          "value": "20s"
+        }
+      ],
+      "searchText": "nitre flinger araneae • nitre flinger leg butchery butchery animal butchery butchery arthropoda araneae carcass (10k) nitre flinger zoology root arthropoda zoology araneae butchery table yields (10% clade bonus not included) arthropod carapace (1200) yield 2 crepite (1600) yield 3 nitre flinger meat (3500) trophy nitre flinger leg trophy value 20s",
+      "sourceRecordId": "butchery-nitre-flinger-araneae-nitre-flinger-leg-8"
+    },
+    "nitre guardian": {
+      "creature": "Nitre Guardian",
+      "carcassBasis": 10000,
+      "carcassLabel": "Nitre Guardian",
+      "loreRoot": "Arthropoda",
+      "lore": "Araneae",
+      "yields": [
+        {
+          "material": "Arthropod Carapace",
+          "qty": 620
+        },
+        {
+          "material": "Crepite",
+          "qty": 880
+        },
+        {
+          "material": "Dense Crepite",
+          "qty": 80
+        },
+        {
+          "material": "Heavy Carapace",
+          "qty": 200
+        },
+        {
+          "material": "Nitre Guardian Meat",
+          "qty": 2600
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Nitre Guardian Leg",
+          "value": "35s"
+        }
+      ],
+      "searchText": "nitre guardian araneae • nitre guardian leg butchery butchery animal butchery butchery arthropoda araneae carcass (10k) nitre guardian zoology root arthropoda zoology araneae butchery table yields (10% clade bonus not included) arthropod carapace (620) yield 2 crepite (880) yield 3 dense crepite (80) yield 4 heavy carapace (200) yield 5 nitre guardian meat (2600) trophy nitre guardian leg trophy value 35s",
+      "sourceRecordId": "butchery-nitre-guardian-araneae-nitre-guardian-leg-10"
+    },
+    "nitre queen": {
+      "creature": "Nitre Queen",
+      "carcassBasis": 10000,
+      "carcassLabel": "Nitre Queen",
+      "loreRoot": "Arthropoda",
+      "lore": "Araneae",
+      "yields": [
+        {
+          "material": "Dense Crepite",
+          "qty": 660
+        },
+        {
+          "material": "Heavy Carapace",
+          "qty": 420
+        },
+        {
+          "material": "Ironsilk",
+          "qty": 240
+        },
+        {
+          "material": "Nitre Queen Meat",
+          "qty": 1000
+        },
+        {
+          "material": "Silk",
+          "qty": 240
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Nitre Queen Egg",
+          "value": "6g"
+        }
+      ],
+      "searchText": "nitre queen araneae • nitre queen egg butchery butchery animal butchery butchery arthropoda araneae carcass (10k) nitre queen zoology root arthropoda zoology araneae butchery table yields (10% clade bonus not included) dense crepite (660) yield 2 heavy carapace (420) yield 3 ironsilk (240) yield 4 nitre queen meat (1000) yield 5 silk (240) trophy nitre queen egg trophy value 6g",
+      "sourceRecordId": "butchery-nitre-queen-araneae-nitre-queen-egg-10"
+    },
+    "nitre worker": {
+      "creature": "Nitre Worker",
+      "carcassBasis": 10000,
+      "carcassLabel": "Nitre Worker",
+      "loreRoot": "Arthropoda",
+      "lore": "Araneae",
+      "yields": [
+        {
+          "material": "Arthropod Carapace",
+          "qty": 1200
+        },
+        {
+          "material": "Crepite",
+          "qty": 1600
+        },
+        {
+          "material": "Nitre Worker Meat",
+          "qty": 3500
+        },
+        {
+          "material": "Silk",
+          "qty": 400
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Nitre Worker Leg",
+          "value": "10s"
+        }
+      ],
+      "searchText": "nitre worker araneae • nitre worker leg butchery butchery animal butchery butchery arthropoda araneae carcass (10k) nitre worker zoology root arthropoda zoology araneae butchery table yields (10% clade bonus not included) arthropod carapace (1200) yield 2 crepite (1600) yield 3 nitre worker meat (3500) yield 4 silk (400) trophy nitre worker leg trophy value 10s",
+      "sourceRecordId": "butchery-nitre-worker-araneae-nitre-worker-leg-9"
+    },
+    "oghmir": {
+      "creature": "Oghmir",
+      "carcassBasis": 10000,
+      "carcassLabel": "Oghmir",
+      "loreRoot": "Mammalia",
+      "lore": "Jotuni",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 500
+        },
+        {
+          "material": "Emalj",
+          "qty": 100
+        },
+        {
+          "material": "Oghmir Meat",
+          "qty": 1200
+        },
+        {
+          "material": "Oghmir Skin",
+          "qty": 500
+        }
+      ],
+      "trophies": [],
+      "searchText": "oghmir jotuni • n/a butchery butchery animal butchery butchery mammalia jotuni carcass (10k) oghmir zoology root mammalia zoology jotuni butchery table yields (10% clade bonus not included) bone tissue (500) yield 2 emalj (100) yield 3 oghmir meat (1200) yield 4 oghmir skin (500) trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-oghmir-jotuni-n-a-9"
+    },
+    "ormek flinger": {
+      "creature": "Ormek Flinger",
+      "carcassBasis": 10000,
+      "carcassLabel": "Ormek Flinger",
+      "loreRoot": "Arthropoda",
+      "lore": "Araneae",
+      "yields": [],
+      "trophies": [
+        {
+          "name": "Ormek Flinger Leg",
+          "value": "30s"
+        }
+      ],
+      "searchText": "ormek flinger araneae • ormek flinger leg butchery butchery animal butchery butchery arthropoda araneae carcass (10k) ormek flinger zoology root arthropoda zoology araneae butchery table yields (10% clade bonus not included) values needed trophy ormek flinger leg trophy value 30s",
+      "sourceRecordId": "butchery-ormek-flinger-araneae-ormek-flinger-leg-6"
+    },
+    "ormek maiden": {
+      "creature": "Ormek Maiden",
+      "carcassBasis": 10000,
+      "carcassLabel": "Ormek Maiden",
+      "loreRoot": "Arthropoda",
+      "lore": "Araneae",
+      "yields": [],
+      "trophies": [
+        {
+          "name": "Ormek Maiden Palps",
+          "value": "55s"
+        }
+      ],
+      "searchText": "ormek maiden araneae • ormek maiden palps butchery butchery animal butchery butchery arthropoda araneae carcass (10k) ormek maiden zoology root arthropoda zoology araneae butchery table yields (10% clade bonus not included) values needed trophy ormek maiden palps trophy value 55s",
+      "sourceRecordId": "butchery-ormek-maiden-araneae-ormek-maiden-palps-6"
+    },
+    "ormek maiden queen": {
+      "creature": "Ormek Maiden Queen",
+      "carcassBasis": 10000,
+      "carcassLabel": "Ormek Maiden Queen",
+      "loreRoot": "Arthropoda",
+      "lore": "Araneae",
+      "yields": [],
+      "trophies": [
+        {
+          "name": "?",
+          "value": ""
+        }
+      ],
+      "searchText": "ormek maiden queen araneae • ? butchery butchery animal butchery butchery arthropoda araneae carcass (10k) ormek maiden queen zoology root arthropoda zoology araneae butchery table yields (10% clade bonus not included) values needed trophy ?",
+      "sourceRecordId": "butchery-ormek-maiden-queen-araneae-5"
+    },
+    "ormek worker": {
+      "creature": "Ormek Worker",
+      "carcassBasis": 10000,
+      "carcassLabel": "Ormek Worker",
+      "loreRoot": "Arthropoda",
+      "lore": "Araneae",
+      "yields": [],
+      "trophies": [
+        {
+          "name": "Ormek Worker Palps",
+          "value": "20s"
+        }
+      ],
+      "searchText": "ormek worker araneae • ormek worker palps butchery butchery animal butchery butchery arthropoda araneae carcass (10k) ormek worker zoology root arthropoda zoology araneae butchery table yields (10% clade bonus not included) values needed trophy ormek worker palps trophy value 20s",
+      "sourceRecordId": "butchery-ormek-worker-araneae-ormek-worker-palps-6"
+    },
+    "panther": {
+      "creature": "Panther",
+      "carcassBasis": 10000,
+      "carcassLabel": "Panther",
+      "loreRoot": "Mammalia",
+      "lore": "Pantherinae",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 2000
+        },
+        {
+          "material": "Ground Fur",
+          "qty": 400
+        },
+        {
+          "material": "Molarium",
+          "qty": 400
+        },
+        {
+          "material": "Panther Meat",
+          "qty": 3000
+        },
+        {
+          "material": "Quality Leather",
+          "qty": 2000
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Panther Paw",
+          "value": "25s"
+        }
+      ],
+      "searchText": "panther pantherinae • panther paw butchery butchery animal butchery butchery mammalia pantherinae carcass (10k) panther zoology root mammalia zoology pantherinae butchery table yields (10% clade bonus not included) bone tissue (2000) yield 2 ground fur (400) yield 3 molarium (400) yield 4 panther meat (3000) yield 5 quality leather (2000) trophy panther paw trophy value 25s",
+      "sourceRecordId": "butchery-panther-pantherinae-panther-paw-10",
+      "petPoints": {
+        "subSpecies": "Patherinae",
+        "trackedLevels": "125",
+        "firstKnownCost": "Level 1: 23",
+        "lastKnownCost": "Level 125: 79"
+      }
+    },
+    "pig": {
+      "creature": "Pig",
+      "carcassBasis": 10000,
+      "carcassLabel": "Pig",
+      "loreRoot": "Mammalia",
+      "lore": "Suina",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 800
+        },
+        {
+          "material": "Emalj",
+          "qty": 100
+        },
+        {
+          "material": "Fullgrain Leather",
+          "qty": 800
+        },
+        {
+          "material": "Pig Meat",
+          "qty": 4000
+        },
+        {
+          "material": "Tallow",
+          "qty": 250
+        }
+      ],
+      "trophies": [],
+      "searchText": "pig suina • n/a butchery butchery animal butchery butchery mammalia suina carcass (10k) pig zoology root mammalia zoology suina butchery table yields (10% clade bonus not included) bone tissue (800) yield 2 emalj (100) yield 3 fullgrain leather (800) yield 4 pig meat (4000) yield 5 tallow (250) trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-pig-suina-n-a-10",
+      "petPoints": {
+        "subSpecies": "",
+        "trackedLevels": "11",
+        "firstKnownCost": "Level 1: 9",
+        "lastKnownCost": "Level 125: 33"
+      }
+    },
+    "platybelodon": {
+      "creature": "Platybelodon",
+      "carcassBasis": 10000,
+      "carcassLabel": "Platybelodon",
+      "loreRoot": "Mammalia",
+      "lore": "Paenungulata",
+      "yields": [],
+      "trophies": [
+        {
+          "name": "Platybelodon Tusks",
+          "value": "75s"
+        }
+      ],
+      "searchText": "platybelodon paenungulata • platybelodon tusks butchery butchery animal butchery butchery mammalia paenungulata carcass (10k) platybelodon zoology root mammalia zoology paenungulata butchery table yields (10% clade bonus not included) values needed trophy platybelodon tusks trophy value 75s",
+      "sourceRecordId": "butchery-platybelodon-paenungulata-platybelodon-tusks-6"
+    },
+    "rabbit": {
+      "creature": "Rabbit",
+      "carcassBasis": 10000,
+      "carcassLabel": "Rabbit",
+      "loreRoot": "Mammalia",
+      "lore": "Lagomorpha",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 1200
+        },
+        {
+          "material": "Ground Fur",
+          "qty": 3000
+        },
+        {
+          "material": "Rabbit Meat",
+          "qty": 4000
+        }
+      ],
+      "trophies": [],
+      "searchText": "rabbit lagomorpha • n/a butchery butchery animal butchery butchery mammalia lagomorpha carcass (10k) rabbit zoology root mammalia zoology lagomorpha butchery table yields (10% clade bonus not included) bone tissue (1200) yield 2 ground fur (3000) yield 3 rabbit meat (4000) trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-rabbit-lagomorpha-n-a-8",
+      "petPoints": {
+        "subSpecies": "",
+        "trackedLevels": "7",
+        "firstKnownCost": "Level 1: 9",
+        "lastKnownCost": "Level 125: 33"
+      }
+    },
+    "ratzar alate": {
+      "creature": "Ratzar Alate",
+      "carcassBasis": 10000,
+      "carcassLabel": "Ratzar Alate",
+      "loreRoot": "Arthropoda",
+      "lore": "Insecta",
+      "yields": [],
+      "trophies": [
+        {
+          "name": "Ratzar Wings",
+          "value": "2g 80s"
+        }
+      ],
+      "searchText": "ratzar alate insecta • ratzar wings butchery butchery animal butchery butchery arthropoda insecta carcass (10k) ratzar alate zoology root arthropoda zoology insecta butchery table yields (10% clade bonus not included) values needed trophy ratzar wings trophy value 2g 80s",
+      "sourceRecordId": "butchery-ratzar-alate-insecta-ratzar-wings-6"
+    },
+    "ratzar feeder": {
+      "creature": "Ratzar Feeder",
+      "carcassBasis": 10000,
+      "carcassLabel": "Ratzar Feeder",
+      "loreRoot": "Arthropoda",
+      "lore": "Insecta",
+      "yields": [],
+      "trophies": [
+        {
+          "name": "Ratzar Antennae?",
+          "value": "1g"
+        }
+      ],
+      "searchText": "ratzar feeder insecta • ratzar antennae? butchery butchery animal butchery butchery arthropoda insecta carcass (10k) ratzar feeder zoology root arthropoda zoology insecta butchery table yields (10% clade bonus not included) values needed trophy ratzar antennae? trophy value 1g",
+      "sourceRecordId": "butchery-ratzar-feeder-insecta-ratzar-antennae-6"
+    },
+    "ratzar hatcher": {
+      "creature": "Ratzar Hatcher",
+      "carcassBasis": 10000,
+      "carcassLabel": "Ratzar Hatcher",
+      "loreRoot": "Arthropoda",
+      "lore": "Insecta",
+      "yields": [],
+      "trophies": [
+        {
+          "name": "Ratzar Egg",
+          "value": "1g 80s"
+        }
+      ],
+      "searchText": "ratzar hatcher insecta • ratzar egg butchery butchery animal butchery butchery arthropoda insecta carcass (10k) ratzar hatcher zoology root arthropoda zoology insecta butchery table yields (10% clade bonus not included) values needed trophy ratzar egg trophy value 1g 80s",
+      "sourceRecordId": "butchery-ratzar-hatcher-insecta-ratzar-egg-6"
+    },
+    "ratzar hunter": {
+      "creature": "Ratzar Hunter",
+      "carcassBasis": 10000,
+      "carcassLabel": "Ratzar Hunter",
+      "loreRoot": "Arthropoda",
+      "lore": "Insecta",
+      "yields": [],
+      "trophies": [
+        {
+          "name": "Ratzar Palps",
+          "value": "2g"
+        }
+      ],
+      "searchText": "ratzar hunter insecta • ratzar palps butchery butchery animal butchery butchery arthropoda insecta carcass (10k) ratzar hunter zoology root arthropoda zoology insecta butchery table yields (10% clade bonus not included) values needed trophy ratzar palps trophy value 2g",
+      "sourceRecordId": "butchery-ratzar-hunter-insecta-ratzar-palps-6"
+    },
+    "ratzar queen": {
+      "creature": "Ratzar Queen",
+      "carcassBasis": 10000,
+      "carcassLabel": "Ratzar Queen",
+      "loreRoot": "Arthropoda",
+      "lore": "Insecta",
+      "yields": [],
+      "trophies": [
+        {
+          "name": "Ratzar Queen Acid Gland",
+          "value": "33g"
+        }
+      ],
+      "searchText": "ratzar queen insecta • ratzar queen acid gland butchery butchery animal butchery butchery arthropoda insecta carcass (10k) ratzar queen zoology root arthropoda zoology insecta butchery table yields (10% clade bonus not included) values needed trophy ratzar queen acid gland trophy value 33g",
+      "sourceRecordId": "butchery-ratzar-queen-insecta-ratzar-queen-acid-gland-6"
+    },
+    "ratzar worker": {
+      "creature": "Ratzar Worker",
+      "carcassBasis": 10000,
+      "carcassLabel": "Ratzar Worker",
+      "loreRoot": "Arthropoda",
+      "lore": "Insecta",
+      "yields": [],
+      "trophies": [
+        {
+          "name": "Ratzar Antennae",
+          "value": "1g"
+        }
+      ],
+      "searchText": "ratzar worker insecta • ratzar antennae butchery butchery animal butchery butchery arthropoda insecta carcass (10k) ratzar worker zoology root arthropoda zoology insecta butchery table yields (10% clade bonus not included) values needed trophy ratzar antennae trophy value 1g",
+      "sourceRecordId": "butchery-ratzar-worker-insecta-ratzar-antennae-6"
+    },
+    "razorback": {
+      "creature": "Razorback",
+      "carcassBasis": 10000,
+      "carcassLabel": "Razorback",
+      "loreRoot": "Mammalia",
+      "lore": "Suina",
+      "yields": [
+        {
+          "material": "Compact Horn",
+          "qty": 300
+        },
+        {
+          "material": "Fullgrain Leather",
+          "qty": 600
+        },
+        {
+          "material": "Ironbone",
+          "qty": 700
+        },
+        {
+          "material": "Molarium",
+          "qty": 150
+        },
+        {
+          "material": "Razorback Meat",
+          "qty": 1400
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Razorback Tusks",
+          "value": "15s"
+        }
+      ],
+      "searchText": "razorback suina • razorback tusks butchery butchery animal butchery butchery mammalia suina carcass (10k) razorback zoology root mammalia zoology suina butchery table yields (10% clade bonus not included) compact horn (300) yield 2 fullgrain leather (600) yield 3 ironbone (700) yield 4 molarium (150) yield 5 razorback meat (1400) trophy razorback tusks trophy value 15s",
+      "sourceRecordId": "butchery-razorback-suina-razorback-tusks-10",
+      "petPoints": {
+        "subSpecies": "",
+        "trackedLevels": "125",
+        "firstKnownCost": "Level 1: 19",
+        "lastKnownCost": "Level 125: 66"
+      },
+      "combatProfiles": [
+        {
+          "profileType": "Max Pet Stats",
+          "label": "Elder Razorback",
+          "family": "Mammalia",
+          "level": "",
+          "hp": "350",
+          "ppCost": "66",
+          "attackRange": "17-53",
+          "averageAttack": "27.5",
+          "attacksPerMinute": "28-30",
+          "damagePerMinute": "800.6"
+        },
+        {
+          "profileType": "Dual Wield Pet",
+          "label": "Razorback",
+          "family": "Mammalia",
+          "level": "71",
+          "hp": "241",
+          "ppCost": "45",
+          "attackRange": "12-36",
+          "averageAttack": "20",
+          "attacksPerMinute": "28-29",
+          "damagePerMinute": ""
+        }
+      ]
+    },
+    "risen sacrifice": {
+      "creature": "Risen Sacrifice",
+      "carcassBasis": 10000,
+      "carcassLabel": "Risen Sacrifice",
+      "loreRoot": "Mammalia",
+      "lore": "Shinaria",
+      "yields": [
+        {
+          "material": "Ritual Blood",
+          "qty": 150
+        }
+      ],
+      "trophies": [],
+      "searchText": "risen sacrifice shinaria • n/a butchery butchery animal butchery butchery mammalia shinaria carcass (10k) risen sacrifice zoology root mammalia zoology shinaria butchery table yields (10% clade bonus not included) ritual blood (150) trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-risen-sacrifice-shinaria-n-a-6"
+    },
+    "ruah gamal": {
+      "creature": "Ruah Gamal",
+      "carcassBasis": 10000,
+      "carcassLabel": "Ruah Gamal",
+      "loreRoot": "Mammalia",
+      "lore": "Tylopoda",
+      "yields": [],
+      "trophies": [],
+      "searchText": "ruah gamal tylopoda • n/a butchery butchery animal butchery butchery mammalia tylopoda carcass (10k) ruah gamal zoology root mammalia zoology tylopoda butchery table yields (10% clade bonus not included) values needed trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-ruah-gamal-tylopoda-n-a-6"
+    },
+    "sator": {
+      "creature": "Sator",
+      "carcassBasis": 10000,
+      "carcassLabel": "Sator",
+      "loreRoot": "Reptilia",
+      "lore": "Lacertilia",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 1840
+        },
+        {
+          "material": "Horned Scales",
+          "qty": 600
+        },
+        {
+          "material": "Incisium",
+          "qty": 520
+        },
+        {
+          "material": "Keeled Scales",
+          "qty": 1100
+        },
+        {
+          "material": "Sator Meat",
+          "qty": 2600
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Sator Head",
+          "value": "70s"
+        }
+      ],
+      "searchText": "sator lacertilia • sator head butchery butchery animal butchery butchery reptilia lacertilia carcass (10k) sator zoology root reptilia zoology lacertilia butchery table yields (10% clade bonus not included) bone tissue (1840) yield 2 horned scales (600) yield 3 incisium (520) yield 4 keeled scales (1100) yield 5 sator meat (2600) trophy sator head trophy value 70s",
+      "sourceRecordId": "butchery-sator-lacertilia-sator-head-10"
+    },
+    "sator vessel": {
+      "creature": "Sator Vessel",
+      "carcassBasis": 10000,
+      "carcassLabel": "Sator Vessel",
+      "loreRoot": "Reptilia",
+      "lore": "Lacertilia",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 1840
+        },
+        {
+          "material": "Horned Scales",
+          "qty": 600
+        },
+        {
+          "material": "Incisium",
+          "qty": 520
+        },
+        {
+          "material": "Keeled Scales",
+          "qty": 1100
+        },
+        {
+          "material": "Sator Meat",
+          "qty": 2600
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Sator Vessel Head",
+          "value": "10g"
+        }
+      ],
+      "searchText": "sator vessel lacertilia • sator vessel head butchery butchery animal butchery butchery reptilia lacertilia carcass (10k) sator vessel zoology root reptilia zoology lacertilia butchery table yields (10% clade bonus not included) bone tissue (1840) yield 2 horned scales (600) yield 3 incisium (520) yield 4 keeled scales (1100) yield 5 sator meat (2600) trophy sator vessel head trophy value 10g",
+      "sourceRecordId": "butchery-sator-vessel-lacertilia-sator-vessel-head-10"
+    },
+    "shore prower": {
+      "creature": "Shore Prower",
+      "carcassBasis": 10000,
+      "carcassLabel": "Shore Prower",
+      "loreRoot": "Reptilia",
+      "lore": "Synapsida",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 1200
+        },
+        {
+          "material": "Compact Horn",
+          "qty": 350
+        },
+        {
+          "material": "Horned Scales",
+          "qty": 200
+        },
+        {
+          "material": "Plate Scales",
+          "qty": 100
+        },
+        {
+          "material": "Shore Prower Meat",
+          "qty": 550
+        },
+        {
+          "material": "Tallow",
+          "qty": 50
+        }
+      ],
+      "trophies": [],
+      "searchText": "shore prower synapsida • n/a butchery butchery animal butchery butchery reptilia synapsida carcass (10k) shore prower zoology root reptilia zoology synapsida butchery table yields (10% clade bonus not included) bone tissue (1200) yield 2 compact horn (350) yield 3 horned scales (200) yield 4 plate scales (100) yield 5 shore prower meat (550) yield 6 tallow (50) trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-shore-prower-synapsida-n-a-11"
+    },
+    "snapping turtle": {
+      "creature": "Snapping Turtle",
+      "carcassBasis": 10000,
+      "carcassLabel": "Snapping Turtle",
+      "loreRoot": "Reptilia",
+      "lore": "Anapsida",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 850
+        },
+        {
+          "material": "Compact Horn",
+          "qty": 240
+        },
+        {
+          "material": "Keeled Scales",
+          "qty": 480
+        },
+        {
+          "material": "Heavy Carapace",
+          "qty": 120
+        },
+        {
+          "material": "Reptile Carapace",
+          "qty": 645
+        },
+        {
+          "material": "Snapping Turtle Meat",
+          "qty": 600
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Snapping Turtle Foot",
+          "value": "40s"
+        }
+      ],
+      "searchText": "snapping turtle anapsida • snapping turtle foot butchery butchery animal butchery butchery reptilia anapsida carcass (10k) snapping turtle zoology root reptilia zoology anapsida butchery table yields (10% clade bonus not included) bone tissue (850) yield 2 compact horn (240) yield 3 keeled scales (480) yield 4 heavy carapace (120) yield 5 reptile carapace (645) yield 6 snapping turtle meat (600) trophy snapping turtle foot trophy value 40s",
+      "sourceRecordId": "butchery-snapping-turtle-anapsida-snapping-turtle-foot-11",
+      "petPoints": {
+        "subSpecies": "",
+        "trackedLevels": "125",
+        "firstKnownCost": "Level 1: 19",
+        "lastKnownCost": "Level 125: 66"
+      },
+      "combatProfiles": [
+        {
+          "profileType": "Max Pet Stats",
+          "label": "Snapping Turtle",
+          "family": "Reptillia",
+          "level": "",
+          "hp": "420",
+          "ppCost": "66",
+          "attackRange": "65-89",
+          "averageAttack": "78",
+          "attacksPerMinute": "24",
+          "damagePerMinute": "1872"
+        },
+        {
+          "profileType": "Dual Wield Pet",
+          "label": "Snapping Turtle",
+          "family": "Reptillia",
+          "level": "71",
+          "hp": "290",
+          "ppCost": "45",
+          "attackRange": "52-70",
+          "averageAttack": "60",
+          "attacksPerMinute": "24-27",
+          "damagePerMinute": ""
+        }
+      ]
+    },
+    "snow troll": {
+      "creature": "Snow Troll",
+      "carcassBasis": 10000,
+      "carcassLabel": "Snow Troll",
+      "loreRoot": "Mammalia",
+      "lore": "Styganthropa",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 780
+        },
+        {
+          "material": "Emalj",
+          "qty": 250
+        },
+        {
+          "material": "Fullgrain Leather",
+          "qty": 700
+        },
+        {
+          "material": "Ironfur",
+          "qty": 400
+        },
+        {
+          "material": "Molarium",
+          "qty": 500
+        },
+        {
+          "material": "Tallow",
+          "qty": 75
+        },
+        {
+          "material": "Troll Meat",
+          "qty": 1000
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Snow Troll Head",
+          "value": "10g"
+        }
+      ],
+      "searchText": "snow troll styganthropa • snow troll head butchery butchery animal butchery butchery mammalia styganthropa carcass (10k) snow troll zoology root mammalia zoology styganthropa butchery table yields (10% clade bonus not included) bone tissue (780) yield 2 emalj (250) yield 3 fullgrain leather (700) yield 4 ironfur (400) yield 5 molarium (500) yield 6 tallow (75) yield 7 troll meat (1000) trophy snow troll head trophy value 10g",
+      "sourceRecordId": "butchery-snow-troll-styganthropa-snow-troll-head-12"
+    },
+    "spiderling": {
+      "creature": "Spiderling",
+      "carcassBasis": 10000,
+      "carcassLabel": "Spiderling",
+      "loreRoot": "Arthropoda",
+      "lore": "Arthropoda",
+      "yields": [
+        {
+          "material": "Crepite",
+          "qty": 1000
+        },
+        {
+          "material": "Silk",
+          "qty": 520
+        },
+        {
+          "material": "Spiderling Meat",
+          "qty": 5000
+        }
+      ],
+      "trophies": [],
+      "searchText": "spiderling arthropoda • n/a butchery butchery animal butchery butchery arthropoda arthropoda carcass (10k) spiderling zoology root arthropoda zoology arthropoda butchery table yields (10% clade bonus not included) crepite (1000) yield 2 silk (520) yield 3 spiderling meat (5000) trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-spiderling-arthropoda-n-a-8"
+    },
+    "springbok": {
+      "creature": "Springbok",
+      "carcassBasis": 10000,
+      "carcassLabel": "Springbok",
+      "loreRoot": "Mammalia",
+      "lore": "Caprinomorpha",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 600
+        },
+        {
+          "material": "Emalj",
+          "qty": 160
+        },
+        {
+          "material": "Horn",
+          "qty": 700
+        },
+        {
+          "material": "Quality Leather",
+          "qty": 1200
+        },
+        {
+          "material": "Springbok Meat",
+          "qty": 4000
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Springbok Hooves",
+          "value": "12s"
+        }
+      ],
+      "searchText": "springbok caprinomorpha • springbok hooves butchery butchery animal butchery butchery mammalia caprinomorpha carcass (10k) springbok zoology root mammalia zoology caprinomorpha butchery table yields (10% clade bonus not included) bone tissue (600) yield 2 emalj (160) yield 3 horn (700) yield 4 quality leather (1200) yield 5 springbok meat (4000) trophy springbok hooves trophy value 12s",
+      "sourceRecordId": "butchery-springbok-caprinomorpha-springbok-hooves-10"
+    },
+    "stalker lykiator": {
+      "creature": "Stalker Lykiator",
+      "carcassBasis": 10000,
+      "carcassLabel": "Stalker Lykiator",
+      "loreRoot": "Reptilia",
+      "lore": "Ornitichia",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 1800
+        },
+        {
+          "material": "Horned Scales",
+          "qty": 700
+        },
+        {
+          "material": "Incisium",
+          "qty": 800
+        },
+        {
+          "material": "Keeled Scales",
+          "qty": 2000
+        },
+        {
+          "material": "Lykiator Meat",
+          "qty": 600
+        }
+      ],
+      "trophies": [],
+      "searchText": "stalker lykiator ornitichia • n/a butchery butchery animal butchery butchery reptilia ornitichia carcass (10k) stalker lykiator zoology root reptilia zoology ornitichia butchery table yields (10% clade bonus not included) bone tissue (1800) yield 2 horned scales (700) yield 3 incisium (800) yield 4 keeled scales (2000) yield 5 lykiator meat (600) trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-stalker-lykiator-ornitichia-n-a-10"
+    },
+    "steintroll": {
+      "creature": "Steintroll",
+      "carcassBasis": 10000,
+      "carcassLabel": "Steintroll",
+      "loreRoot": "Mammalia",
+      "lore": "Styganthropa",
+      "yields": [],
+      "trophies": [],
+      "searchText": "steintroll styganthropa • n/a butchery butchery animal butchery butchery mammalia styganthropa carcass (10k) steintroll zoology root mammalia zoology styganthropa butchery table yields (10% clade bonus not included) values needed trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-steintroll-styganthropa-n-a-6"
+    },
+    "steppe horse": {
+      "creature": "Steppe Horse",
+      "carcassBasis": 10000,
+      "carcassLabel": "Steppe Horse",
+      "loreRoot": "Mammalia",
+      "lore": "Equidae",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 600
+        },
+        {
+          "material": "Emalj",
+          "qty": 160
+        },
+        {
+          "material": "Fullgrain Leather",
+          "qty": 1000
+        },
+        {
+          "material": "Horse Meat",
+          "qty": 1200
+        }
+      ],
+      "trophies": [],
+      "searchText": "steppe horse equidae • n/a butchery butchery animal butchery butchery mammalia equidae carcass (10k) steppe horse zoology root mammalia zoology equidae butchery table yields (10% clade bonus not included) bone tissue (600) yield 2 emalj (160) yield 3 fullgrain leather (1000) yield 4 horse meat (1200) trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-steppe-horse-equidae-n-a-9"
+    },
+    "stone lizard": {
+      "creature": "Stone Lizard",
+      "carcassBasis": 10000,
+      "carcassLabel": "Stone Lizard",
+      "loreRoot": "Reptilia",
+      "lore": "Theropoda",
+      "yields": [],
+      "trophies": [
+        {
+          "name": "Stone Lizard Tail Club",
+          "value": "4g"
+        }
+      ],
+      "searchText": "stone lizard theropoda • stone lizard tail club butchery butchery animal butchery butchery reptilia theropoda carcass (10k) stone lizard zoology root reptilia zoology theropoda butchery table yields (10% clade bonus not included) values needed trophy stone lizard tail club trophy value 4g",
+      "sourceRecordId": "butchery-stone-lizard-theropoda-stone-lizard-tail-club-6"
+    },
+    "tagmaton borer": {
+      "creature": "Tagmaton Borer",
+      "carcassBasis": 10000,
+      "carcassLabel": "Tagmaton Borer",
+      "loreRoot": "Arthropoda",
+      "lore": "Insecta",
+      "yields": [
+        {
+          "material": "Crepite",
+          "qty": 840
+        },
+        {
+          "material": "Huskweave",
+          "qty": 250
+        },
+        {
+          "material": "Tagmaton Meat",
+          "qty": 2700
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Tagmaton Brain",
+          "value": "5c"
+        }
+      ],
+      "searchText": "tagmaton borer insecta • tagmaton brain butchery butchery animal butchery butchery arthropoda insecta carcass (10k) tagmaton borer zoology root arthropoda zoology insecta butchery table yields (10% clade bonus not included) crepite (840) yield 2 huskweave (250) yield 3 pansar carapace (?) yield 4 tagmaton meat (2700) trophy tagmaton brain trophy value 5c",
+      "sourceRecordId": "butchery-tagmaton-borer-insecta-tagmaton-brain-9"
+    },
+    "tagmaton broodmother": {
+      "creature": "Tagmaton Broodmother",
+      "carcassBasis": 10000,
+      "carcassLabel": "Tagmaton Broodmother",
+      "loreRoot": "Arthropoda",
+      "lore": "Insecta",
+      "yields": [
+        {
+          "material": "Crepite",
+          "qty": 1560
+        },
+        {
+          "material": "Dense Crepite",
+          "qty": 170
+        },
+        {
+          "material": "Huskweave",
+          "qty": 480
+        },
+        {
+          "material": "Tagmaton Meat",
+          "qty": 3200
+        }
+      ],
+      "trophies": [],
+      "searchText": "tagmaton broodmother insecta butchery butchery animal butchery butchery arthropoda insecta carcass (10k) tagmaton broodmother zoology root arthropoda zoology insecta butchery table yields (10% clade bonus not included) crepite (1560) yield 2 dense crepite (170) yield 3 huskweave (480) yield 4 pansar carapace (?) yield 5 tagmaton meat (3200)",
+      "sourceRecordId": "butchery-tagmaton-broodmother-insecta-8"
+    },
+    "tagmaton bulwark": {
+      "creature": "Tagmaton Bulwark",
+      "carcassBasis": 10000,
+      "carcassLabel": "Tagmaton Bulwark",
+      "loreRoot": "Arthropoda",
+      "lore": "Insecta",
+      "yields": [
+        {
+          "material": "Crepite",
+          "qty": 1070
+        },
+        {
+          "material": "Dense Crepite",
+          "qty": 130
+        },
+        {
+          "material": "Huskweave",
+          "qty": 800
+        },
+        {
+          "material": "Tagmaton Meat",
+          "qty": 3100
+        }
+      ],
+      "trophies": [],
+      "searchText": "tagmaton bulwark insecta butchery butchery animal butchery butchery arthropoda insecta carcass (10k) tagmaton bulwark zoology root arthropoda zoology insecta butchery table yields (10% clade bonus not included) crepite (1070) yield 2 dense crepite (130) yield 3 huskweave (800) yield 4 pansar carapace (?) yield 5 tagmaton meat (3100)",
+      "sourceRecordId": "butchery-tagmaton-bulwark-insecta-8"
+    },
+    "tagmaton drone": {
+      "creature": "Tagmaton Drone",
+      "carcassBasis": 10000,
+      "carcassLabel": "Tagmaton Drone",
+      "loreRoot": "Arthropoda",
+      "lore": "Insecta",
+      "yields": [
+        {
+          "material": "Crepite",
+          "qty": 430
+        },
+        {
+          "material": "Huskweave",
+          "qty": 100
+        },
+        {
+          "material": "Tagmaton Meat",
+          "qty": 800
+        }
+      ],
+      "trophies": [],
+      "searchText": "tagmaton drone insecta butchery butchery animal butchery butchery arthropoda insecta carcass (10k) tagmaton drone zoology root arthropoda zoology insecta butchery table yields (10% clade bonus not included) crepite (430) yield 2 huskweave (100) yield 3 pansar carapace (?) yield 4 tagmaton meat (800)",
+      "sourceRecordId": "butchery-tagmaton-drone-insecta-7"
+    },
+    "tagmaton harbinger": {
+      "creature": "Tagmaton Harbinger",
+      "carcassBasis": 10000,
+      "carcassLabel": "Tagmaton Harbinger",
+      "loreRoot": "Arthropoda",
+      "lore": "Insecta",
+      "yields": [
+        {
+          "material": "Crepite",
+          "qty": 930
+        },
+        {
+          "material": "Dense Crepite",
+          "qty": 95
+        },
+        {
+          "material": "Huskweave",
+          "qty": 390
+        },
+        {
+          "material": "Tagmaton Meat",
+          "qty": 2900
+        }
+      ],
+      "trophies": [],
+      "searchText": "tagmaton harbinger insecta butchery butchery animal butchery butchery arthropoda insecta carcass (10k) tagmaton harbinger zoology root arthropoda zoology insecta butchery table yields (10% clade bonus not included) crepite (930) yield 2 dense crepite (95) yield 3 huskweave (390) yield 4 pansar carapace (?) yield 5 tagmaton meat (2900)",
+      "sourceRecordId": "butchery-tagmaton-harbinger-insecta-8"
+    },
+    "tagmaton lancer": {
+      "creature": "Tagmaton Lancer",
+      "carcassBasis": 10000,
+      "carcassLabel": "Tagmaton Lancer",
+      "loreRoot": "Arthropoda",
+      "lore": "Insecta",
+      "yields": [
+        {
+          "material": "Crepite",
+          "qty": 720
+        },
+        {
+          "material": "Huskweave",
+          "qty": 230
+        },
+        {
+          "material": "Tagmaton Meat",
+          "qty": 2100
+        }
+      ],
+      "trophies": [],
+      "searchText": "tagmaton lancer insecta butchery butchery animal butchery butchery arthropoda insecta carcass (10k) tagmaton lancer zoology root arthropoda zoology insecta butchery table yields (10% clade bonus not included) crepite (720) yield 2 huskweave (230) yield 3 pansar carapace (?) yield 4 tagmaton meat (2100)",
+      "sourceRecordId": "butchery-tagmaton-lancer-insecta-7"
+    },
+    "tagmaton slayer": {
+      "creature": "Tagmaton Slayer",
+      "carcassBasis": 10000,
+      "carcassLabel": "Tagmaton Slayer",
+      "loreRoot": "Arthropoda",
+      "lore": "Insecta",
+      "yields": [
+        {
+          "material": "Crepite",
+          "qty": 880
+        },
+        {
+          "material": "Dense Crepite",
+          "qty": 80
+        },
+        {
+          "material": "Huskweave",
+          "qty": 80
+        },
+        {
+          "material": "Tagmaton Meat",
+          "qty": 2600
+        }
+      ],
+      "trophies": [],
+      "searchText": "tagmaton slayer insecta butchery butchery animal butchery butchery arthropoda insecta carcass (10k) tagmaton slayer zoology root arthropoda zoology insecta butchery table yields (10% clade bonus not included) crepite (880) yield 2 dense crepite (80) yield 3 huskweave (80) yield 4 pansar carpace (?) yield 5 tagmaton meat (2600)",
+      "sourceRecordId": "butchery-tagmaton-slayer-insecta-8"
+    },
+    "tagmaton soldier (legacy)": {
+      "creature": "Tagmaton Soldier (Legacy)",
+      "carcassBasis": 10000,
+      "carcassLabel": "Tagmaton Soldier (Legacy)",
+      "loreRoot": "Arthropoda",
+      "lore": "Insecta",
+      "yields": [
+        {
+          "material": "Crepite",
+          "qty": 880
+        },
+        {
+          "material": "Dense Crepite",
+          "qty": 80
+        },
+        {
+          "material": "Pansar Carpace",
+          "qty": 420
+        },
+        {
+          "material": "Tagmaton Meat",
+          "qty": 2600
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Tagmaton Brain",
+          "value": "5c"
+        }
+      ],
+      "searchText": "tagmaton soldier (legacy) insecta • tagmaton brain butchery butchery animal butchery butchery arthropoda insecta carcass (10k) tagmaton soldier (legacy) zoology root arthropoda zoology insecta butchery table yields (10% clade bonus not included) crepite (880) yield 2 dense crepite (80) yield 3 pansar carpace (420) yield 4 tagmaton meat (2600) trophy tagmaton brain trophy value 5c",
+      "sourceRecordId": "butchery-tagmaton-soldier-legacy-insecta-tagmaton-brain-9"
+    },
+    "taur dog": {
+      "creature": "Taur Dog",
+      "carcassBasis": 10000,
+      "carcassLabel": "Taur Dog",
+      "loreRoot": "Mammalia",
+      "lore": "Amphicyonidae",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 920
+        },
+        {
+          "material": "Fullgrain Leather",
+          "qty": 400
+        },
+        {
+          "material": "Molarium",
+          "qty": 200
+        },
+        {
+          "material": "Ground Fur",
+          "qty": 320
+        },
+        {
+          "material": "Guard Fur",
+          "qty": 200
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Taur Dog Paws",
+          "value": "25s"
+        }
+      ],
+      "searchText": "taur dog amphicyonidae • taur dog paws butchery butchery animal butchery butchery mammalia amphicyonidae carcass (10k) taur dog zoology root mammalia zoology amphicyonidae butchery table yields (10% clade bonus not included) bone tissue (920) yield 2 fullgrain leather (400) yield 3 molarium (200) yield 4 ground fur (320) yield 5 guard fur (200) trophy taur dog paws trophy value 25s",
+      "sourceRecordId": "butchery-taur-dog-amphicyonidae-taur-dog-paws-10",
+      "combatProfiles": [
+        {
+          "profileType": "Max Pet Stats",
+          "label": "Elder Taur Dog",
+          "family": "Mammalia",
+          "level": "",
+          "hp": "455",
+          "ppCost": "84",
+          "attackRange": "65-90",
+          "averageAttack": "75",
+          "attacksPerMinute": "24",
+          "damagePerMinute": "1800"
+        },
+        {
+          "profileType": "Dual Wield Pet",
+          "label": "Taur Dog",
+          "family": "Mammalia",
+          "level": "45",
+          "hp": "247",
+          "ppCost": "45",
+          "attackRange": "34-50",
+          "averageAttack": "40",
+          "attacksPerMinute": "24",
+          "damagePerMinute": ""
+        }
+      ]
+    },
+    "terror bird": {
+      "creature": "Terror Bird",
+      "carcassBasis": 10000,
+      "carcassLabel": "Terror Bird",
+      "loreRoot": "Aves",
+      "lore": "Neognathe",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 500
+        },
+        {
+          "material": "Incisium",
+          "qty": 600
+        },
+        {
+          "material": "Keeled Scales",
+          "qty": 600
+        },
+        {
+          "material": "Terror Bird Meat",
+          "qty": 2500
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Terror Bird Beak",
+          "value": "35s"
+        }
+      ],
+      "searchText": "terror bird neognathe • terror bird beak butchery butchery animal butchery butchery aves neognathe carcass (10k) terror bird zoology root aves zoology neognathe butchery table yields (10% clade bonus not included) bone tissue (500) yield 2 incisium (600) yield 3 keeled scales (600) yield 4 terror bird meat (2500) trophy terror bird beak trophy value 35s",
+      "sourceRecordId": "butchery-terror-bird-neognathe-terror-bird-beak-9",
+      "petPoints": {
+        "subSpecies": "",
+        "trackedLevels": "125",
+        "firstKnownCost": "Level 1: 27",
+        "lastKnownCost": "Level 125: 92"
+      },
+      "combatProfiles": [
+        {
+          "profileType": "Max Pet Stats",
+          "label": "Elder Terror Bird",
+          "family": "Aves",
+          "level": "",
+          "hp": "612",
+          "ppCost": "92",
+          "attackRange": "62-105",
+          "averageAttack": "82",
+          "attacksPerMinute": "28",
+          "damagePerMinute": "2296"
+        },
+        {
+          "profileType": "Dual Wield Pet",
+          "label": "Terror Bird",
+          "family": "Aves",
+          "level": "37",
+          "hp": "304",
+          "ppCost": "45",
+          "attackRange": "29-44",
+          "averageAttack": "41",
+          "attacksPerMinute": "26-27",
+          "damagePerMinute": ""
+        }
+      ]
+    },
+    "thursar": {
+      "creature": "Thursar",
+      "carcassBasis": 10000,
+      "carcassLabel": "Thursar",
+      "loreRoot": "Mammalia",
+      "lore": "Shinaria",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 500
+        },
+        {
+          "material": "Emalj",
+          "qty": 100
+        },
+        {
+          "material": "Thursar Meat",
+          "qty": 1300
+        },
+        {
+          "material": "Thursar Skin",
+          "qty": 500
+        }
+      ],
+      "trophies": [],
+      "searchText": "thursar shinaria • n/a butchery butchery animal butchery butchery mammalia shinaria carcass (10k) thursar zoology root mammalia zoology shinaria butchery table yields (10% clade bonus not included) bone tissue (500) yield 2 emalj (100) yield 3 thursar meat (1300) yield 4 thursar skin (500) trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-thursar-shinaria-n-a-9"
+    },
+    "tribe rat": {
+      "creature": "Tribe Rat",
+      "carcassBasis": 10000,
+      "carcassLabel": "Tribe Rat",
+      "loreRoot": "Mammalia",
+      "lore": "Myomorpha",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 2800
+        },
+        {
+          "material": "Emalj",
+          "qty": 100
+        },
+        {
+          "material": "Ground Fur",
+          "qty": 880
+        },
+        {
+          "material": "Quality Leather",
+          "qty": 2000
+        },
+        {
+          "material": "Tribe Rat Meat",
+          "qty": 3000
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Tribe Rat Head",
+          "value": "20s"
+        }
+      ],
+      "searchText": "tribe rat myomorpha • tribe rat head butchery butchery animal butchery butchery mammalia myomorpha carcass (10k) tribe rat zoology root mammalia zoology myomorpha butchery table yields (10% clade bonus not included) bone tissue (2800) yield 2 emalj (100) yield 3 ground fur (880) yield 4 quality leather (2000) yield 5 tribe rat meat (3000) trophy tribe rat head trophy value 20s",
+      "sourceRecordId": "butchery-tribe-rat-myomorpha-tribe-rat-head-10"
+    },
+    "tribe rat berserker": {
+      "creature": "Tribe Rat Berserker",
+      "carcassBasis": 10000,
+      "carcassLabel": "Tribe Rat Berserker",
+      "loreRoot": "Mammalia",
+      "lore": "Myomorpha",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 2800
+        },
+        {
+          "material": "Emalj",
+          "qty": 100
+        },
+        {
+          "material": "Ground Fur",
+          "qty": 880
+        },
+        {
+          "material": "Quality Leather",
+          "qty": 2000
+        },
+        {
+          "material": "Tribe Rat Meat",
+          "qty": 3000
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Tribe Rat Berserker Head",
+          "value": "40s"
+        }
+      ],
+      "searchText": "tribe rat berserker myomorpha • tribe rat berserker head butchery butchery animal butchery butchery mammalia myomorpha carcass (10k) tribe rat berserker zoology root mammalia zoology myomorpha butchery table yields (10% clade bonus not included) bone tissue (2800) yield 2 emalj (100) yield 3 ground fur (880) yield 4 quality leather (2000) yield 5 tribe rat meat (3000) trophy tribe rat berserker head trophy value 40s",
+      "sourceRecordId": "butchery-tribe-rat-berserker-myomorpha-tribe-rat-berserker-head-10"
+    },
+    "urial": {
+      "creature": "Urial",
+      "carcassBasis": 10000,
+      "carcassLabel": "Urial",
+      "loreRoot": "Mammalia",
+      "lore": "Caprinomorpha",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 1200
+        },
+        {
+          "material": "Emalj",
+          "qty": 200
+        },
+        {
+          "material": "Fullgrain Leather",
+          "qty": 880
+        },
+        {
+          "material": "Horn",
+          "qty": 1600
+        },
+        {
+          "material": "Tallow",
+          "qty": 150
+        },
+        {
+          "material": "Urial Meat",
+          "qty": 3500
+        },
+        {
+          "material": "Wool",
+          "qty": 1000
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Urial Hooves",
+          "value": "10s"
+        }
+      ],
+      "searchText": "urial caprinomorpha • urial hooves butchery butchery animal butchery butchery mammalia caprinomorpha carcass (10k) urial zoology root mammalia zoology caprinomorpha butchery table yields (10% clade bonus not included) bone tissue (1200) yield 2 emalj (200) yield 3 fullgrain leather (880) yield 4 horn (1600) yield 5 tallow (150) yield 6 urial meat (3500) yield 7 wool (1000) trophy urial hooves trophy value 10s",
+      "sourceRecordId": "butchery-urial-caprinomorpha-urial-hooves-12"
+    },
+    "walking dead": {
+      "creature": "Walking Dead",
+      "carcassBasis": 10000,
+      "carcassLabel": "Walking Dead",
+      "loreRoot": "Mammalia",
+      "lore": "Shinaria",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 2700
+        },
+        {
+          "material": "Emalj",
+          "qty": 400
+        },
+        {
+          "material": "Walking Dead Meat",
+          "qty": 1500
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Walking Dead Head",
+          "value": "8s"
+        }
+      ],
+      "searchText": "walking dead shinaria • walking dead head butchery butchery animal butchery butchery mammalia shinaria carcass (10k) walking dead zoology root mammalia zoology shinaria butchery table yields (10% clade bonus not included) bone tissue (2700) yield 2 emalj (400) yield 3 walking dead meat (1500) trophy walking dead head trophy value 8s",
+      "sourceRecordId": "butchery-walking-dead-shinaria-walking-dead-head-8"
+    },
+    "water lizard": {
+      "creature": "Water Lizard",
+      "carcassBasis": 10000,
+      "carcassLabel": "Water Lizard",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "water lizard nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) water lizard zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-water-lizard-nyi-4",
+      "petPoints": {
+        "subSpecies": "",
+        "trackedLevels": "125",
+        "firstKnownCost": "Level 1: 12",
+        "lastKnownCost": "Level 125: 42"
+      }
+    },
+    "white bear": {
+      "creature": "White Bear",
+      "carcassBasis": 10000,
+      "carcassLabel": "White Bear",
+      "loreRoot": "Mammalia",
+      "lore": "Ursidae",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 1000
+        },
+        {
+          "material": "Ground Fur",
+          "qty": 320
+        },
+        {
+          "material": "Guard Fur",
+          "qty": 120
+        },
+        {
+          "material": "Molarium",
+          "qty": 140
+        },
+        {
+          "material": "Quality Leather",
+          "qty": 400
+        },
+        {
+          "material": "Tallow",
+          "qty": 75
+        },
+        {
+          "material": "White Bear Meat",
+          "qty": 1500
+        }
+      ],
+      "trophies": [
+        {
+          "name": "White Bear Paws",
+          "value": "50s"
+        }
+      ],
+      "searchText": "white bear ursidae • white bear paws butchery butchery animal butchery butchery mammalia ursidae carcass (10k) white bear zoology root mammalia zoology ursidae butchery table yields (10% clade bonus not included) bone tissue (1000) yield 2 ground fur (320) yield 3 guard fur (120) yield 4 molarium (140) yield 5 quality leather (400) yield 6 tallow (75) yield 7 white bear meat (1500) trophy white bear paws trophy value 50s",
+      "sourceRecordId": "butchery-white-bear-ursidae-white-bear-paws-12",
+      "combatProfiles": [
+        {
+          "profileType": "Max Pet Stats",
+          "label": "Elder White Bear",
+          "family": "Mammalia",
+          "level": "",
+          "hp": "910",
+          "ppCost": "100",
+          "attackRange": "85 - 99",
+          "averageAttack": "97",
+          "attacksPerMinute": "21",
+          "damagePerMinute": "2037"
+        },
+        {
+          "profileType": "Dual Wield Pet",
+          "label": "White Bear",
+          "family": "Mammalia",
+          "level": "45",
+          "hp": "415",
+          "ppCost": "45",
+          "attackRange": "39-44",
+          "averageAttack": "42",
+          "attacksPerMinute": "19-21",
+          "damagePerMinute": ""
+        }
+      ]
+    },
+    "wisent": {
+      "creature": "Wisent",
+      "carcassBasis": 10000,
+      "carcassLabel": "Wisent",
+      "loreRoot": "Mammalia",
+      "lore": "Bovinae",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 1200
+        },
+        {
+          "material": "Emalj",
+          "qty": 200
+        },
+        {
+          "material": "Fullgrain Leather",
+          "qty": 880
+        },
+        {
+          "material": "Horn",
+          "qty": 440
+        },
+        {
+          "material": "Tallow",
+          "qty": 50
+        },
+        {
+          "material": "Wisent Meat",
+          "qty": 1600
+        },
+        {
+          "material": "Wool",
+          "qty": 440
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Wisent Hooves",
+          "value": "20s"
+        }
+      ],
+      "searchText": "wisent bovinae • wisent hooves butchery butchery animal butchery butchery mammalia bovinae carcass (10k) wisent zoology root mammalia zoology bovinae butchery table yields (10% clade bonus not included) bone tissue (1200) yield 2 emalj (200) yield 3 fullgrain leather (880) yield 4 horn (440) yield 5 tallow (50) yield 6 wisent meat (1600) yield 7 wool (440) trophy wisent hooves trophy value 20s",
+      "sourceRecordId": "butchery-wisent-bovinae-wisent-hooves-12"
+    },
+    "wolf": {
+      "creature": "Wolf",
+      "carcassBasis": 10000,
+      "carcassLabel": "Wolf",
+      "loreRoot": "Mammalia",
+      "lore": "Canidae",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 2500
+        },
+        {
+          "material": "Fullgrain Leather",
+          "qty": 1200
+        },
+        {
+          "material": "Ground Fur",
+          "qty": 1000
+        },
+        {
+          "material": "Molarium",
+          "qty": 400
+        },
+        {
+          "material": "Wolf Meat",
+          "qty": 4000
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Wolf Paws",
+          "value": "15s"
+        }
+      ],
+      "searchText": "wolf canidae • wolf paws butchery butchery animal butchery butchery mammalia canidae carcass (10k) wolf zoology root mammalia zoology canidae butchery table yields (10% clade bonus not included) bone tissue (2500) yield 2 fullgrain leather (1200) yield 3 ground fur (1000) yield 4 molarium (400) yield 5 wolf meat (4000) trophy wolf paws trophy value 15s",
+      "sourceRecordId": "butchery-wolf-canidae-wolf-paws-10",
+      "petPoints": {
+        "subSpecies": "",
+        "trackedLevels": "6",
+        "firstKnownCost": "Level 1: 6",
+        "lastKnownCost": "Level 125: 20"
+      },
+      "combatProfiles": [
+        {
+          "profileType": "Max Pet Stats",
+          "label": "Alpha Wolf",
+          "family": "Mammalia",
+          "level": "",
+          "hp": "210",
+          "ppCost": "79",
+          "attackRange": "17-42",
+          "averageAttack": "32.682",
+          "attacksPerMinute": "22",
+          "damagePerMinute": "719"
+        },
+        {
+          "profileType": "Dual Wield Pet",
+          "label": "Wolf",
+          "family": "Mammalia",
+          "level": "",
+          "hp": "",
+          "ppCost": "",
+          "attackRange": "",
+          "averageAttack": "",
+          "attacksPerMinute": "",
+          "damagePerMinute": ""
+        }
+      ]
+    },
+    "young forest troll": {
+      "creature": "Young Forest Troll",
+      "carcassBasis": 10000,
+      "carcassLabel": "Young Forest Troll",
+      "loreRoot": "Mammalia",
+      "lore": "Styganthropa",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 780
+        },
+        {
+          "material": "Emalj",
+          "qty": 350
+        },
+        {
+          "material": "Fullgrain Leather",
+          "qty": 750
+        },
+        {
+          "material": "Molarium",
+          "qty": 400
+        },
+        {
+          "material": "Tallow",
+          "qty": 125
+        },
+        {
+          "material": "Troll Meat",
+          "qty": 1000
+        }
+      ],
+      "trophies": [],
+      "searchText": "young forest troll styganthropa • n/a butchery butchery animal butchery butchery mammalia styganthropa carcass (10k) young forest troll zoology root mammalia zoology styganthropa butchery table yields (10% clade bonus not included) bone tissue (780) yield 2 emalj (350) yield 3 fullgrain leather (750) yield 4 molarium (400) yield 5 tallow (125) yield 6 troll meat (1000) trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-young-forest-troll-styganthropa-n-a-11"
+    },
+    "arrowfish": {
+      "creature": "Arrowfish",
+      "carcassBasis": 10000,
+      "carcassLabel": "Arrowfish",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "arrowfish nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) arrowfish zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-arrowfish-nyi-4"
+    },
+    "baboonfish": {
+      "creature": "Baboonfish",
+      "carcassBasis": 10000,
+      "carcassLabel": "Baboonfish",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "baboonfish nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) baboonfish zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-baboonfish-nyi-4"
+    },
+    "bass": {
+      "creature": "Bass",
+      "carcassBasis": 10000,
+      "carcassLabel": "Bass",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "bass nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) bass zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-bass-nyi-4"
+    },
+    "bassle": {
+      "creature": "Bassle",
+      "carcassBasis": 10000,
+      "carcassLabel": "Bassle",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "bassle nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) bassle zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-bassle-nyi-4"
+    },
+    "bebble parasite": {
+      "creature": "Bebble Parasite",
+      "carcassBasis": 10000,
+      "carcassLabel": "Bebble Parasite",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "bebble parasite nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) bebble parasite zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-bebble-parasite-nyi-4"
+    },
+    "beekfish": {
+      "creature": "Beekfish",
+      "carcassBasis": 10000,
+      "carcassLabel": "Beekfish",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "beekfish nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) beekfish zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-beekfish-nyi-4"
+    },
+    "bihmon": {
+      "creature": "Bihmon",
+      "carcassBasis": 10000,
+      "carcassLabel": "Bihmon",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "bihmon nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) bihmon zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-bihmon-nyi-4"
+    },
+    "black creft": {
+      "creature": "Black Creft",
+      "carcassBasis": 10000,
+      "carcassLabel": "Black Creft",
+      "loreRoot": "Arthropoda",
+      "lore": "Crustacea",
+      "yields": [
+        {
+          "material": "Black Creft Meat",
+          "qty": 7000
+        },
+        {
+          "material": "Crustacean Carapace",
+          "qty": 2000
+        }
+      ],
+      "trophies": [],
+      "searchText": "black creft crustacea butchery butchery fish butchery butchery arthropoda crustacea carcass (10k) black creft zoology root arthropoda zoology crustacea butchery table yields (10% clade bonus not included) black creft meat (7000) yield 2 crustacean carapace (2000)",
+      "sourceRecordId": "butchery-black-creft-crustacea-5"
+    },
+    "black whiskerfish": {
+      "creature": "Black Whiskerfish",
+      "carcassBasis": 10000,
+      "carcassLabel": "Black Whiskerfish",
+      "loreRoot": "Pisces",
+      "lore": "Teleostei",
+      "yields": [
+        {
+          "material": "Black Whiskerfish Meat",
+          "qty": 5000
+        }
+      ],
+      "trophies": [],
+      "searchText": "black whiskerfish teleostei butchery butchery fish butchery butchery pisces teleostei carcass (10k) black whiskerfish zoology root pisces zoology teleostei butchery table yields (10% clade bonus not included) black whiskerfish meat (5000)",
+      "sourceRecordId": "butchery-black-whiskerfish-teleostei-4"
+    },
+    "blood kua": {
+      "creature": "Blood Kua",
+      "carcassBasis": 10000,
+      "carcassLabel": "Blood Kua",
+      "loreRoot": "Pisces",
+      "lore": "Teleostei",
+      "yields": [
+        {
+          "material": "Blood Kua Meat",
+          "qty": 6400
+        }
+      ],
+      "trophies": [],
+      "searchText": "blood kua teleostei butchery butchery fish butchery butchery pisces teleostei carcass (10k) blood kua zoology root pisces zoology teleostei butchery table yields (10% clade bonus not included) blood kua meat (6400)",
+      "sourceRecordId": "butchery-blood-kua-teleostei-4"
+    },
+    "blue sorex": {
+      "creature": "Blue Sorex",
+      "carcassBasis": 10000,
+      "carcassLabel": "Blue Sorex",
+      "loreRoot": "Pisces",
+      "lore": "Perciformes",
+      "yields": [
+        {
+          "material": "Blue Sorex Meat",
+          "qty": 6500
+        }
+      ],
+      "trophies": [],
+      "searchText": "blue sorex perciformes butchery butchery fish butchery butchery pisces perciformes carcass (10k) blue sorex zoology root pisces zoology perciformes butchery table yields (10% clade bonus not included) blue sorex meat (6500)",
+      "sourceRecordId": "butchery-blue-sorex-perciformes-4"
+    },
+    "blue squirt": {
+      "creature": "Blue Squirt",
+      "carcassBasis": 10000,
+      "carcassLabel": "Blue Squirt",
+      "loreRoot": "Pisces",
+      "lore": "Teleostei",
+      "yields": [
+        {
+          "material": "Blue Squirt Meat",
+          "qty": 7000
+        }
+      ],
+      "trophies": [],
+      "searchText": "blue squirt teleostei butchery butchery fish butchery butchery pisces teleostei carcass (10k) blue squirt zoology root pisces zoology teleostei butchery table yields (10% clade bonus not included) blue squirt meat (7000)",
+      "sourceRecordId": "butchery-blue-squirt-teleostei-4"
+    },
+    "bluefish": {
+      "creature": "Bluefish",
+      "carcassBasis": 10000,
+      "carcassLabel": "Bluefish",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "bluefish nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) bluefish zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-bluefish-nyi-4"
+    },
+    "boarfish": {
+      "creature": "Boarfish",
+      "carcassBasis": 10000,
+      "carcassLabel": "Boarfish",
+      "loreRoot": "Pisces",
+      "lore": "Acanthopterygii",
+      "yields": [
+        {
+          "material": "Boarfish Meat",
+          "qty": 7000
+        }
+      ],
+      "trophies": [],
+      "searchText": "boarfish acanthopterygii butchery butchery fish butchery butchery pisces acanthopterygii carcass (10k) boarfish zoology root pisces zoology acanthopterygii butchery table yields (10% clade bonus not included) boarfish meat (7000)",
+      "sourceRecordId": "butchery-boarfish-acanthopterygii-4"
+    },
+    "brickerfish": {
+      "creature": "Brickerfish",
+      "carcassBasis": 10000,
+      "carcassLabel": "Brickerfish",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "brickerfish nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) brickerfish zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-brickerfish-nyi-4"
+    },
+    "browfish": {
+      "creature": "Browfish",
+      "carcassBasis": 10000,
+      "carcassLabel": "Browfish",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "browfish nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) browfish zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-browfish-nyi-4"
+    },
+    "brown clam": {
+      "creature": "Brown Clam",
+      "carcassBasis": 10000,
+      "carcassLabel": "Brown Clam",
+      "loreRoot": "Holozoa",
+      "lore": "Mollusca",
+      "yields": [
+        {
+          "material": "Brown Clam Meat",
+          "qty": 7000
+        }
+      ],
+      "trophies": [],
+      "searchText": "brown clam mollusca butchery butchery fish butchery butchery holozoa mollusca carcass (10k) brown clam zoology root holozoa zoology mollusca butchery table yields (10% clade bonus not included) brown clam meat (7000)",
+      "sourceRecordId": "butchery-brown-clam-mollusca-4"
+    },
+    "brown nuurok": {
+      "creature": "Brown Nuurok",
+      "carcassBasis": 10000,
+      "carcassLabel": "Brown Nuurok",
+      "loreRoot": "Pisces",
+      "lore": "Perciformes",
+      "yields": [
+        {
+          "material": "Brown Nuurok Meat",
+          "qty": 7000
+        }
+      ],
+      "trophies": [],
+      "searchText": "brown nuurok perciformes butchery butchery fish butchery butchery pisces perciformes carcass (10k) brown nuurok zoology root pisces zoology perciformes butchery table yields (10% clade bonus not included) brown nuurok meat (7000)",
+      "sourceRecordId": "butchery-brown-nuurok-perciformes-4"
+    },
+    "bucklefish": {
+      "creature": "Bucklefish",
+      "carcassBasis": 10000,
+      "carcassLabel": "Bucklefish",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "bucklefish nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) bucklefish zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-bucklefish-nyi-4"
+    },
+    "cagefish": {
+      "creature": "Cagefish",
+      "carcassBasis": 10000,
+      "carcassLabel": "Cagefish",
+      "loreRoot": "Values Needed",
+      "lore": "Values Needed",
+      "yields": [],
+      "trophies": [],
+      "searchText": "cagefish values needed butchery butchery fish butchery butchery values needed values needed carcass (10k) cagefish zoology root values needed zoology values needed butchery table yields (10% clade bonus not included) values needed",
+      "sourceRecordId": "butchery-cagefish-values-needed-4"
+    },
+    "calxfish": {
+      "creature": "Calxfish",
+      "carcassBasis": 10000,
+      "carcassLabel": "Calxfish",
+      "loreRoot": "Pisces",
+      "lore": "Teleostei",
+      "yields": [
+        {
+          "material": "Calxfish Meat",
+          "qty": 6000
+        }
+      ],
+      "trophies": [],
+      "searchText": "calxfish teleostei butchery butchery fish butchery butchery pisces teleostei carcass (10k) calxfish zoology root pisces zoology teleostei butchery table yields (10% clade bonus not included) calxfish meat (6000)",
+      "sourceRecordId": "butchery-calxfish-teleostei-4"
+    },
+    "canna": {
+      "creature": "Canna",
+      "carcassBasis": 10000,
+      "carcassLabel": "Canna",
+      "loreRoot": "Pisces",
+      "lore": "Perciformes",
+      "yields": [
+        {
+          "material": "Canna Meat",
+          "qty": 6500
+        }
+      ],
+      "trophies": [],
+      "searchText": "canna perciformes butchery butchery fish butchery butchery pisces perciformes carcass (10k) canna zoology root pisces zoology perciformes butchery table yields (10% clade bonus not included) canna meat (6500)",
+      "sourceRecordId": "butchery-canna-perciformes-4"
+    },
+    "carb": {
+      "creature": "Carb",
+      "carcassBasis": 10000,
+      "carcassLabel": "Carb",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "carb nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) carb zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-carb-nyi-4"
+    },
+    "catfish": {
+      "creature": "Catfish",
+      "carcassBasis": 10000,
+      "carcassLabel": "Catfish",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "catfish nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) catfish zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-catfish-nyi-4"
+    },
+    "cavefish": {
+      "creature": "Cavefish",
+      "carcassBasis": 10000,
+      "carcassLabel": "Cavefish",
+      "loreRoot": "Pisces",
+      "lore": "Acanthopterygii",
+      "yields": [],
+      "trophies": [],
+      "searchText": "cavefish acanthopterygii butchery butchery fish butchery butchery pisces acanthopterygii carcass (10k) cavefish zoology root pisces zoology acanthopterygii butchery table yields (10% clade bonus not included) values needed",
+      "sourceRecordId": "butchery-cavefish-acanthopterygii-4"
+    },
+    "clam": {
+      "creature": "Clam",
+      "carcassBasis": 10000,
+      "carcassLabel": "Clam",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "clam nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) clam zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-clam-nyi-4"
+    },
+    "conger eel": {
+      "creature": "Conger Eel",
+      "carcassBasis": 10000,
+      "carcassLabel": "Conger Eel",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "conger eel nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) conger eel zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-conger-eel-nyi-4"
+    },
+    "copperfish": {
+      "creature": "Copperfish",
+      "carcassBasis": 10000,
+      "carcassLabel": "Copperfish",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "copperfish nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) copperfish zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-copperfish-nyi-4"
+    },
+    "coral snail": {
+      "creature": "Coral Snail",
+      "carcassBasis": 10000,
+      "carcassLabel": "Coral Snail",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "coral snail nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) coral snail zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-coral-snail-nyi-4"
+    },
+    "crimson waveskipper": {
+      "creature": "Crimson Waveskipper",
+      "carcassBasis": 10000,
+      "carcassLabel": "Crimson Waveskipper",
+      "loreRoot": "Values Needed",
+      "lore": "Values Needed",
+      "yields": [],
+      "trophies": [],
+      "searchText": "crimson waveskipper values needed butchery butchery fish butchery butchery values needed values needed carcass (10k) crimson waveskipper zoology root values needed zoology values needed butchery table yields (10% clade bonus not included) values needed",
+      "sourceRecordId": "butchery-crimson-waveskipper-values-needed-4"
+    },
+    "cristula": {
+      "creature": "Cristula",
+      "carcassBasis": 10000,
+      "carcassLabel": "Cristula",
+      "loreRoot": "Pisces",
+      "lore": "Acanthopterygii",
+      "yields": [
+        {
+          "material": "Cristula Meat",
+          "qty": 6000
+        }
+      ],
+      "trophies": [],
+      "searchText": "cristula acanthopterygii butchery butchery fish butchery butchery pisces acanthopterygii carcass (10k) cristula zoology root pisces zoology acanthopterygii butchery table yields (10% clade bonus not included) cristula meat (6000)",
+      "sourceRecordId": "butchery-cristula-acanthopterygii-4"
+    },
+    "crystal snail": {
+      "creature": "Crystal Snail",
+      "carcassBasis": 10000,
+      "carcassLabel": "Crystal Snail",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "crystal snail nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) crystal snail zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-crystal-snail-nyi-4"
+    },
+    "cuprum creft": {
+      "creature": "Cuprum Creft",
+      "carcassBasis": 10000,
+      "carcassLabel": "Cuprum Creft",
+      "loreRoot": "Arthropoda",
+      "lore": "Crustacea",
+      "yields": [
+        {
+          "material": "Crustacean Carapace",
+          "qty": 2000
+        },
+        {
+          "material": "Cuprum Creft Meat",
+          "qty": 6000
+        }
+      ],
+      "trophies": [],
+      "searchText": "cuprum creft crustacea butchery butchery fish butchery butchery arthropoda crustacea carcass (10k) cuprum creft zoology root arthropoda zoology crustacea butchery table yields (10% clade bonus not included) crustacean carapace (2000) yield 2 cuprum creft meat (6000)",
+      "sourceRecordId": "butchery-cuprum-creft-crustacea-5"
+    },
+    "dark catfish": {
+      "creature": "Dark Catfish",
+      "carcassBasis": 10000,
+      "carcassLabel": "Dark Catfish",
+      "loreRoot": "Pisces",
+      "lore": "Perciformes",
+      "yields": [],
+      "trophies": [],
+      "searchText": "dark catfish perciformes butchery butchery fish butchery butchery pisces perciformes carcass (10k) dark catfish zoology root pisces zoology perciformes butchery table yields (10% clade bonus not included) values needed",
+      "sourceRecordId": "butchery-dark-catfish-perciformes-4"
+    },
+    "derke": {
+      "creature": "Derke",
+      "carcassBasis": 10000,
+      "carcassLabel": "Derke",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "derke nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) derke zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-derke-nyi-4"
+    },
+    "durp": {
+      "creature": "Durp",
+      "carcassBasis": 10000,
+      "carcassLabel": "Durp",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "durp nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) durp zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-durp-nyi-4"
+    },
+    "fast stinger": {
+      "creature": "Fast Stinger",
+      "carcassBasis": 10000,
+      "carcassLabel": "Fast Stinger",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "fast stinger nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) fast stinger zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-fast-stinger-nyi-4"
+    },
+    "flatfish": {
+      "creature": "Flatfish",
+      "carcassBasis": 10000,
+      "carcassLabel": "Flatfish",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "flatfish nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) flatfish zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-flatfish-nyi-4"
+    },
+    "fleshfish": {
+      "creature": "Fleshfish",
+      "carcassBasis": 10000,
+      "carcassLabel": "Fleshfish",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "fleshfish nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) fleshfish zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-fleshfish-nyi-4"
+    },
+    "giant crab": {
+      "creature": "Giant Crab",
+      "carcassBasis": 10000,
+      "carcassLabel": "Giant Crab",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "giant crab nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) giant crab zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-giant-crab-nyi-4"
+    },
+    "giant gutta": {
+      "creature": "Giant Gutta",
+      "carcassBasis": 10000,
+      "carcassLabel": "Giant Gutta",
+      "loreRoot": "Arthropoda",
+      "lore": "Crustacea",
+      "yields": [
+        {
+          "material": "Crustacean Carapace",
+          "qty": 2000
+        },
+        {
+          "material": "Giant Gutta Meat",
+          "qty": 6500
+        }
+      ],
+      "trophies": [],
+      "searchText": "giant gutta crustacea butchery butchery fish butchery butchery arthropoda crustacea carcass (10k) giant gutta zoology root arthropoda zoology crustacea butchery table yields (10% clade bonus not included) crustacean carapace (2000) yield 2 giant gutta meat (6500)",
+      "sourceRecordId": "butchery-giant-gutta-crustacea-5"
+    },
+    "gippu": {
+      "creature": "Gippu",
+      "carcassBasis": 10000,
+      "carcassLabel": "Gippu",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "gippu nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) gippu zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-gippu-nyi-4"
+    },
+    "green frog": {
+      "creature": "Green Frog",
+      "carcassBasis": 10000,
+      "carcassLabel": "Green Frog",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "green frog nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) green frog zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-green-frog-nyi-4"
+    },
+    "gutta": {
+      "creature": "Gutta",
+      "carcassBasis": 10000,
+      "carcassLabel": "Gutta",
+      "loreRoot": "Pisces",
+      "lore": "Crustacea",
+      "yields": [
+        {
+          "material": "Crustacean Carapace",
+          "qty": 2000
+        },
+        {
+          "material": "Gutta Meat",
+          "qty": 6500
+        }
+      ],
+      "trophies": [],
+      "searchText": "gutta crustacea butchery butchery fish butchery butchery pisces crustacea carcass (10k) gutta zoology root pisces zoology crustacea butchery table yields (10% clade bonus not included) crustacean carapace (2000) yield 2 gutta meat (6500)",
+      "sourceRecordId": "butchery-gutta-crustacea-5"
+    },
+    "hammer creft": {
+      "creature": "Hammer Creft",
+      "carcassBasis": 10000,
+      "carcassLabel": "Hammer Creft",
+      "loreRoot": "Arthropoda",
+      "lore": "Crustacea",
+      "yields": [
+        {
+          "material": "Crustacean Carapace",
+          "qty": 2000
+        },
+        {
+          "material": "Hammer Creft Meat",
+          "qty": 6000
+        }
+      ],
+      "trophies": [],
+      "searchText": "hammer creft crustacea butchery butchery fish butchery butchery arthropoda crustacea carcass (10k) hammer creft zoology root arthropoda zoology crustacea butchery table yields (10% clade bonus not included) crustacean carapace (2000) yield 2 hammer creft meat (6000)",
+      "sourceRecordId": "butchery-hammer-creft-crustacea-5"
+    },
+    "herbeus": {
+      "creature": "Herbeus",
+      "carcassBasis": 10000,
+      "carcassLabel": "Herbeus",
+      "loreRoot": "Pisces",
+      "lore": "Perciformes",
+      "yields": [
+        {
+          "material": "Herbeus Meat",
+          "qty": 7000
+        }
+      ],
+      "trophies": [],
+      "searchText": "herbeus perciformes butchery butchery fish butchery butchery pisces perciformes carcass (10k) herbeus zoology root pisces zoology perciformes butchery table yields (10% clade bonus not included) herbeus meat (7000)",
+      "sourceRecordId": "butchery-herbeus-perciformes-4"
+    },
+    "kelp dragon": {
+      "creature": "Kelp Dragon",
+      "carcassBasis": 10000,
+      "carcassLabel": "Kelp Dragon",
+      "loreRoot": "Pisces",
+      "lore": "Perciformes",
+      "yields": [
+        {
+          "material": "Kelp Dragon Meat",
+          "qty": 6000
+        },
+        {
+          "material": "Pansar Scales",
+          "qty": 1000
+        }
+      ],
+      "trophies": [],
+      "searchText": "kelp dragon perciformes butchery butchery fish butchery butchery pisces perciformes carcass (10k) kelp dragon zoology root pisces zoology perciformes butchery table yields (10% clade bonus not included) kelp dragon meat (6000) yield 2 pansar scales (1000)",
+      "sourceRecordId": "butchery-kelp-dragon-perciformes-5"
+    },
+    "knot": {
+      "creature": "Knot",
+      "carcassBasis": 10000,
+      "carcassLabel": "Knot",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "knot nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) knot zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-knot-nyi-4"
+    },
+    "korrote": {
+      "creature": "Korrote",
+      "carcassBasis": 10000,
+      "carcassLabel": "Korrote",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "korrote nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) korrote zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-korrote-nyi-4"
+    },
+    "laake": {
+      "creature": "Laake",
+      "carcassBasis": 10000,
+      "carcassLabel": "Laake",
+      "loreRoot": "Pisces",
+      "lore": "Teleostei",
+      "yields": [
+        {
+          "material": "Laake Meat",
+          "qty": 6000
+        },
+        {
+          "material": "Leptoid Scales",
+          "qty": 2000
+        }
+      ],
+      "trophies": [],
+      "searchText": "laake teleostei butchery butchery fish butchery butchery pisces teleostei carcass (10k) laake zoology root pisces zoology teleostei butchery table yields (10% clade bonus not included) laake meat (6000) yield 2 leptoid scales (2000)",
+      "sourceRecordId": "butchery-laake-teleostei-5"
+    },
+    "labrum": {
+      "creature": "Labrum",
+      "carcassBasis": 10000,
+      "carcassLabel": "Labrum",
+      "loreRoot": "Pisces",
+      "lore": "Perciformes",
+      "yields": [
+        {
+          "material": "Labrum Meat",
+          "qty": 7000
+        }
+      ],
+      "trophies": [],
+      "searchText": "labrum perciformes butchery butchery fish butchery butchery pisces perciformes carcass (10k) labrum zoology root pisces zoology perciformes butchery table yields (10% clade bonus not included) labrum meat (7000)",
+      "sourceRecordId": "butchery-labrum-perciformes-4"
+    },
+    "lesser thalassa snake": {
+      "creature": "Lesser Thalassa Snake",
+      "carcassBasis": 10000,
+      "carcassLabel": "Lesser Thalassa Snake",
+      "loreRoot": "Pisces",
+      "lore": "Perciformes",
+      "yields": [
+        {
+          "material": "Lesser Thalassa Snake Meat",
+          "qty": 4500
+        }
+      ],
+      "trophies": [],
+      "searchText": "lesser thalassa snake perciformes butchery butchery fish butchery butchery pisces perciformes carcass (10k) lesser thalassa snake zoology root pisces zoology perciformes butchery table yields (10% clade bonus not included) lesser thalassa snake meat (4500)",
+      "sourceRecordId": "butchery-lesser-thalassa-snake-perciformes-4"
+    },
+    "malshark": {
+      "creature": "Malshark",
+      "carcassBasis": 10000,
+      "carcassLabel": "Malshark",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "malshark nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) malshark zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-malshark-nyi-4"
+    },
+    "meck eel": {
+      "creature": "Meck Eel",
+      "carcassBasis": 10000,
+      "carcassLabel": "Meck Eel",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "meck eel nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) meck eel zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-meck-eel-nyi-4"
+    },
+    "mitten crab": {
+      "creature": "Mitten Crab",
+      "carcassBasis": 10000,
+      "carcassLabel": "Mitten Crab",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "mitten crab nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) mitten crab zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-mitten-crab-nyi-4"
+    },
+    "mongle crab": {
+      "creature": "Mongle Crab",
+      "carcassBasis": 10000,
+      "carcassLabel": "Mongle Crab",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "mongle crab nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) mongle crab zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-mongle-crab-nyi-4"
+    },
+    "moon cup": {
+      "creature": "Moon Cup",
+      "carcassBasis": 10000,
+      "carcassLabel": "Moon Cup",
+      "loreRoot": "Pisces",
+      "lore": "Teleostei",
+      "yields": [
+        {
+          "material": "Moon Cup Meat",
+          "qty": 6500
+        }
+      ],
+      "trophies": [],
+      "searchText": "moon cup teleostei butchery butchery fish butchery butchery pisces teleostei carcass (10k) moon cup zoology root pisces zoology teleostei butchery table yields (10% clade bonus not included) moon cup meat (6500)",
+      "sourceRecordId": "butchery-moon-cup-teleostei-4"
+    },
+    "panser lobster": {
+      "creature": "Panser Lobster",
+      "carcassBasis": 10000,
+      "carcassLabel": "Panser Lobster",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "panser lobster nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) panser lobster zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-panser-lobster-nyi-4"
+    },
+    "pigg": {
+      "creature": "Pigg",
+      "carcassBasis": 10000,
+      "carcassLabel": "Pigg",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "pigg nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) pigg zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-pigg-nyi-4"
+    },
+    "pike": {
+      "creature": "Pike",
+      "carcassBasis": 10000,
+      "carcassLabel": "Pike",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "pike nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) pike zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-pike-nyi-4"
+    },
+    "pond viper": {
+      "creature": "Pond Viper",
+      "carcassBasis": 10000,
+      "carcassLabel": "Pond Viper",
+      "loreRoot": "Pisces",
+      "lore": "Perciformes",
+      "yields": [
+        {
+          "material": "Pond Viper Meat",
+          "qty": 5500
+        }
+      ],
+      "trophies": [],
+      "searchText": "pond viper perciformes butchery butchery fish butchery butchery pisces perciformes carcass (10k) pond viper zoology root pisces zoology perciformes butchery table yields (10% clade bonus not included) pond viper meat (5500)",
+      "sourceRecordId": "butchery-pond-viper-perciformes-4"
+    },
+    "porsk": {
+      "creature": "Porsk",
+      "carcassBasis": 10000,
+      "carcassLabel": "Porsk",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "porsk nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) porsk zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-porsk-nyi-4"
+    },
+    "quegg": {
+      "creature": "Quegg",
+      "carcassBasis": 10000,
+      "carcassLabel": "Quegg",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "quegg nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) quegg zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-quegg-nyi-4"
+    },
+    "quett": {
+      "creature": "Quett",
+      "carcassBasis": 10000,
+      "carcassLabel": "Quett",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "quett nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) quett zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-quett-nyi-4"
+    },
+    "red squilla": {
+      "creature": "Red Squilla",
+      "carcassBasis": 10000,
+      "carcassLabel": "Red Squilla",
+      "loreRoot": "Arthropoda",
+      "lore": "Crustacea",
+      "yields": [
+        {
+          "material": "Red Squilla Meat",
+          "qty": 8000
+        }
+      ],
+      "trophies": [],
+      "searchText": "red squilla crustacea butchery butchery fish butchery butchery arthropoda crustacea carcass (10k) red squilla zoology root arthropoda zoology crustacea butchery table yields (10% clade bonus not included) red squilla meat (8000)",
+      "sourceRecordId": "butchery-red-squilla-crustacea-4"
+    },
+    "redline torp": {
+      "creature": "Redline Torp",
+      "carcassBasis": 10000,
+      "carcassLabel": "Redline Torp",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "redline torp nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) redline torp zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-redline-torp-nyi-4"
+    },
+    "ribb": {
+      "creature": "Ribb",
+      "carcassBasis": 10000,
+      "carcassLabel": "Ribb",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "ribb nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) ribb zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-ribb-nyi-4"
+    },
+    "rodspine": {
+      "creature": "Rodspine",
+      "carcassBasis": 10000,
+      "carcassLabel": "Rodspine",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "rodspine nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) rodspine zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-rodspine-nyi-4"
+    },
+    "rytu": {
+      "creature": "Rytu",
+      "carcassBasis": 10000,
+      "carcassLabel": "Rytu",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "rytu nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) rytu zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-rytu-nyi-4"
+    },
+    "sand ray": {
+      "creature": "Sand Ray",
+      "carcassBasis": 10000,
+      "carcassLabel": "Sand Ray",
+      "loreRoot": "Pisces",
+      "lore": "Perciformes",
+      "yields": [
+        {
+          "material": "Placoid Scales",
+          "qty": 4000
+        },
+        {
+          "material": "Sand Ray Meat",
+          "qty": 7000
+        }
+      ],
+      "trophies": [],
+      "searchText": "sand ray perciformes butchery butchery fish butchery butchery pisces perciformes carcass (10k) sand ray zoology root pisces zoology perciformes butchery table yields (10% clade bonus not included) placoid scales (4000) yield 2 sand ray meat (7000)",
+      "sourceRecordId": "butchery-sand-ray-perciformes-5"
+    },
+    "scarlett wormstar": {
+      "creature": "Scarlett Wormstar",
+      "carcassBasis": 10000,
+      "carcassLabel": "Scarlett Wormstar",
+      "loreRoot": "Pisces",
+      "lore": "Perciformes",
+      "yields": [],
+      "trophies": [],
+      "searchText": "scarlett wormstar perciformes butchery butchery fish butchery butchery pisces perciformes carcass (10k) scarlett wormstar zoology root pisces zoology perciformes butchery table yields (10% clade bonus not included) values needed",
+      "sourceRecordId": "butchery-scarlett-wormstar-perciformes-4"
+    },
+    "sea slug": {
+      "creature": "Sea Slug",
+      "carcassBasis": 10000,
+      "carcassLabel": "Sea Slug",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "sea slug nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) sea slug zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-sea-slug-nyi-4"
+    },
+    "sea star": {
+      "creature": "Sea Star",
+      "carcassBasis": 10000,
+      "carcassLabel": "Sea Star",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "sea star nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) sea star zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-sea-star-nyi-4"
+    },
+    "shell": {
+      "creature": "Shell",
+      "carcassBasis": 10000,
+      "carcassLabel": "Shell",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "shell nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) shell zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-shell-nyi-4"
+    },
+    "silk ray": {
+      "creature": "Silk Ray",
+      "carcassBasis": 10000,
+      "carcassLabel": "Silk Ray",
+      "loreRoot": "Pisces",
+      "lore": "Perciformes",
+      "yields": [
+        {
+          "material": "Placoid Scales",
+          "qty": 4000
+        },
+        {
+          "material": "Silk Ray Meat",
+          "qty": 6000
+        }
+      ],
+      "trophies": [],
+      "searchText": "silk ray perciformes butchery butchery fish butchery butchery pisces perciformes carcass (10k) silk ray zoology root pisces zoology perciformes butchery table yields (10% clade bonus not included) placoid scales (4000) yield 2 silk ray meat (6000)",
+      "sourceRecordId": "butchery-silk-ray-perciformes-5"
+    },
+    "skull kua": {
+      "creature": "Skull Kua",
+      "carcassBasis": 10000,
+      "carcassLabel": "Skull Kua",
+      "loreRoot": "Pisces",
+      "lore": "Perciformes",
+      "yields": [
+        {
+          "material": "Leptoid Scales",
+          "qty": 4000
+        },
+        {
+          "material": "Skull Kua Meat",
+          "qty": 6000
+        }
+      ],
+      "trophies": [],
+      "searchText": "skull kua perciformes butchery butchery fish butchery butchery pisces perciformes carcass (10k) skull kua zoology root pisces zoology perciformes butchery table yields (10% clade bonus not included) leptoid scales (4000) yield 2 skull kua meat (6000)",
+      "sourceRecordId": "butchery-skull-kua-perciformes-5"
+    },
+    "skullhead": {
+      "creature": "Skullhead",
+      "carcassBasis": 10000,
+      "carcassLabel": "Skullhead",
+      "loreRoot": "Pisces",
+      "lore": "Perciformes",
+      "yields": [
+        {
+          "material": "Skullhead Meat",
+          "qty": 7000
+        }
+      ],
+      "trophies": [],
+      "searchText": "skullhead perciformes butchery butchery fish butchery butchery pisces perciformes carcass (10k) skullhead zoology root pisces zoology perciformes butchery table yields (10% clade bonus not included) skullhead meat (7000)",
+      "sourceRecordId": "butchery-skullhead-perciformes-4"
+    },
+    "spearfish": {
+      "creature": "Spearfish",
+      "carcassBasis": 10000,
+      "carcassLabel": "Spearfish",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "spearfish nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) spearfish zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-spearfish-nyi-4"
+    },
+    "spikey venom": {
+      "creature": "Spikey Venom",
+      "carcassBasis": 10000,
+      "carcassLabel": "Spikey Venom",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "spikey venom nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) spikey venom zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-spikey-venom-nyi-4"
+    },
+    "spotted salamander": {
+      "creature": "Spotted Salamander",
+      "carcassBasis": 10000,
+      "carcassLabel": "Spotted Salamander",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "spotted salamander nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) spotted salamander zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-spotted-salamander-nyi-4"
+    },
+    "stoney coral": {
+      "creature": "Stoney Coral",
+      "carcassBasis": 10000,
+      "carcassLabel": "Stoney Coral",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "stoney coral nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) stoney coral zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-stoney-coral-nyi-4"
+    },
+    "stray": {
+      "creature": "Stray",
+      "carcassBasis": 10000,
+      "carcassLabel": "Stray",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "stray nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) stray zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-stray-nyi-4"
+    },
+    "strayfish": {
+      "creature": "Strayfish",
+      "carcassBasis": 10000,
+      "carcassLabel": "Strayfish",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "strayfish nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) strayfish zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-strayfish-nyi-4"
+    },
+    "stream mauler": {
+      "creature": "Stream Mauler",
+      "carcassBasis": 10000,
+      "carcassLabel": "Stream Mauler",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "stream mauler nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) stream mauler zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-stream-mauler-nyi-4"
+    },
+    "super lobster": {
+      "creature": "Super Lobster",
+      "carcassBasis": 10000,
+      "carcassLabel": "Super Lobster",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "super lobster nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) super lobster zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-super-lobster-nyi-4"
+    },
+    "tailfish": {
+      "creature": "Tailfish",
+      "carcassBasis": 10000,
+      "carcassLabel": "Tailfish",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "tailfish nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) tailfish zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-tailfish-nyi-4"
+    },
+    "tararira": {
+      "creature": "Tararira",
+      "carcassBasis": 10000,
+      "carcassLabel": "Tararira",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "tararira nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) tararira zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-tararira-nyi-4"
+    },
+    "thubby": {
+      "creature": "Thubby",
+      "carcassBasis": 10000,
+      "carcassLabel": "Thubby",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "thubby nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) thubby zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-thubby-nyi-4"
+    },
+    "thutu": {
+      "creature": "Thutu",
+      "carcassBasis": 10000,
+      "carcassLabel": "Thutu",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "thutu nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) thutu zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-thutu-nyi-4"
+    },
+    "tiger salamander": {
+      "creature": "Tiger Salamander",
+      "carcassBasis": 10000,
+      "carcassLabel": "Tiger Salamander",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "tiger salamander nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) tiger salamander zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-tiger-salamander-nyi-4"
+    },
+    "tigerfish": {
+      "creature": "Tigerfish",
+      "carcassBasis": 10000,
+      "carcassLabel": "Tigerfish",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "tigerfish nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) tigerfish zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-tigerfish-nyi-4"
+    },
+    "tonghefish": {
+      "creature": "Tonghefish",
+      "carcassBasis": 10000,
+      "carcassLabel": "Tonghefish",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "tonghefish nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) tonghefish zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-tonghefish-nyi-4"
+    },
+    "torp": {
+      "creature": "Torp",
+      "carcassBasis": 10000,
+      "carcassLabel": "Torp",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "torp nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) torp zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-torp-nyi-4"
+    },
+    "trudis": {
+      "creature": "Trudis",
+      "carcassBasis": 10000,
+      "carcassLabel": "Trudis",
+      "loreRoot": "Pisces",
+      "lore": "Teleostei",
+      "yields": [
+        {
+          "material": "Trudis Meat",
+          "qty": 6500
+        }
+      ],
+      "trophies": [],
+      "searchText": "trudis teleostei butchery butchery fish butchery butchery pisces teleostei carcass (10k) trudis zoology root pisces zoology teleostei butchery table yields (10% clade bonus not included) trudis meat (6500)",
+      "sourceRecordId": "butchery-trudis-teleostei-4"
+    },
+    "tyred": {
+      "creature": "Tyred",
+      "carcassBasis": 10000,
+      "carcassLabel": "Tyred",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "tyred nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) tyred zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-tyred-nyi-4"
+    },
+    "venom cup": {
+      "creature": "Venom Cup",
+      "carcassBasis": 10000,
+      "carcassLabel": "Venom Cup",
+      "loreRoot": "Pisces",
+      "lore": "Perciformes",
+      "yields": [
+        {
+          "material": "Venom Cup Meat",
+          "qty": 6000
+        }
+      ],
+      "trophies": [],
+      "searchText": "venom cup perciformes butchery butchery fish butchery butchery pisces perciformes carcass (10k) venom cup zoology root pisces zoology perciformes butchery table yields (10% clade bonus not included) venom cup meat (6000)",
+      "sourceRecordId": "butchery-venom-cup-perciformes-4"
+    },
+    "ventriosus": {
+      "creature": "Ventriosus",
+      "carcassBasis": 10000,
+      "carcassLabel": "Ventriosus",
+      "loreRoot": "Pisces",
+      "lore": "Perciformes",
+      "yields": [
+        {
+          "material": "Ganoid Scales",
+          "qty": 3000
+        },
+        {
+          "material": "Ventriosus Meat",
+          "qty": 7000
+        }
+      ],
+      "trophies": [],
+      "searchText": "ventriosus perciformes butchery butchery fish butchery butchery pisces perciformes carcass (10k) ventriosus zoology root pisces zoology perciformes butchery table yields (10% clade bonus not included) ganoid scales (3000) yield 2 ventriosus meat (7000)",
+      "sourceRecordId": "butchery-ventriosus-perciformes-5"
+    },
+    "water running lizard": {
+      "creature": "Water Running Lizard",
+      "carcassBasis": 10000,
+      "carcassLabel": "Water Running Lizard",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "water running lizard nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) water running lizard zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-water-running-lizard-nyi-4"
+    },
+    "water scorpion": {
+      "creature": "Water Scorpion",
+      "carcassBasis": 10000,
+      "carcassLabel": "Water Scorpion",
+      "loreRoot": "Arthropoda",
+      "lore": "Eurypterida",
+      "yields": [
+        {
+          "material": "Water Scorpion Meat",
+          "qty": 5000
+        }
+      ],
+      "trophies": [],
+      "searchText": "water scorpion eurypterida butchery butchery fish butchery butchery arthropoda eurypterida carcass (10k) water scorpion zoology root arthropoda zoology eurypterida butchery table yields (10% clade bonus not included) water scorpion meat (5000)",
+      "sourceRecordId": "butchery-water-scorpion-eurypterida-4"
+    },
+    "wekto": {
+      "creature": "Wekto",
+      "carcassBasis": 10000,
+      "carcassLabel": "Wekto",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "wekto nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) wekto zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-wekto-nyi-4"
+    },
+    "windfish": {
+      "creature": "Windfish",
+      "carcassBasis": 10000,
+      "carcassLabel": "Windfish",
+      "loreRoot": "NYI",
+      "lore": "NYI",
+      "yields": [],
+      "trophies": [],
+      "searchText": "windfish nyi butchery butchery fish butchery butchery nyi nyi carcass (10k) windfish zoology root nyi zoology nyi butchery table yields (10% clade bonus not included) nyi",
+      "sourceRecordId": "butchery-windfish-nyi-4"
+    },
+    "zebra lizard": {
+      "creature": "Zebra Lizard",
+      "carcassBasis": 0,
+      "carcassLabel": "Zebra Lizard",
+      "loreRoot": "Note: Corrections can be sent to MortalitasImmortalis on the MO 2 Forums or Marot on Discord.",
+      "lore": "",
+      "yields": [],
+      "trophies": [],
+      "searchText": "zebra lizard  butchery butchery fish butchery butchery note: corrections can be sent to mortalitasimmortalis on the mo 2 forums or marot on discord. zoology root note: corrections can be sent to mortalitasimmortalis on the mo 2 forums or marot on discord.",
+      "sourceRecordId": "butchery-zebra-lizard-1-3"
+    },
+    "shore prowler": {
+      "creature": "Shore Prower",
+      "carcassBasis": 10000,
+      "carcassLabel": "Shore Prower",
+      "loreRoot": "Reptilia",
+      "lore": "Synapsida",
+      "yields": [
+        {
+          "material": "Bone Tissue",
+          "qty": 1200
+        },
+        {
+          "material": "Compact Horn",
+          "qty": 350
+        },
+        {
+          "material": "Horned Scales",
+          "qty": 200
+        },
+        {
+          "material": "Plate Scales",
+          "qty": 100
+        },
+        {
+          "material": "Shore Prower Meat",
+          "qty": 550
+        },
+        {
+          "material": "Tallow",
+          "qty": 50
+        }
+      ],
+      "trophies": [],
+      "searchText": "shore prower synapsida • n/a butchery butchery animal butchery butchery reptilia synapsida carcass (10k) shore prower zoology root reptilia zoology synapsida butchery table yields (10% clade bonus not included) bone tissue (1200) yield 2 compact horn (350) yield 3 horned scales (200) yield 4 plate scales (100) yield 5 shore prower meat (550) yield 6 tallow (50) trophy n/a trophy value n/a",
+      "sourceRecordId": "butchery-shore-prower-synapsida-n-a-11"
+    },
+    "razorback boar": {
+      "creature": "Razorback",
+      "carcassBasis": 10000,
+      "carcassLabel": "Razorback",
+      "loreRoot": "Mammalia",
+      "lore": "Suina",
+      "yields": [
+        {
+          "material": "Compact Horn",
+          "qty": 300
+        },
+        {
+          "material": "Fullgrain Leather",
+          "qty": 600
+        },
+        {
+          "material": "Ironbone",
+          "qty": 700
+        },
+        {
+          "material": "Molarium",
+          "qty": 150
+        },
+        {
+          "material": "Razorback Meat",
+          "qty": 1400
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Razorback Tusks",
+          "value": "15s"
+        }
+      ],
+      "searchText": "razorback suina • razorback tusks butchery butchery animal butchery butchery mammalia suina carcass (10k) razorback zoology root mammalia zoology suina butchery table yields (10% clade bonus not included) compact horn (300) yield 2 fullgrain leather (600) yield 3 ironbone (700) yield 4 molarium (150) yield 5 razorback meat (1400) trophy razorback tusks trophy value 15s",
+      "sourceRecordId": "butchery-razorback-suina-razorback-tusks-10",
+      "petPoints": {
+        "subSpecies": "",
+        "trackedLevels": "125",
+        "firstKnownCost": "Level 1: 19",
+        "lastKnownCost": "Level 125: 66"
+      },
+      "combatProfiles": [
+        {
+          "profileType": "Max Pet Stats",
+          "label": "Elder Razorback",
+          "family": "Mammalia",
+          "level": "",
+          "hp": "350",
+          "ppCost": "66",
+          "attackRange": "17-53",
+          "averageAttack": "27.5",
+          "attacksPerMinute": "28-30",
+          "damagePerMinute": "800.6"
+        },
+        {
+          "profileType": "Dual Wield Pet",
+          "label": "Razorback",
+          "family": "Mammalia",
+          "level": "71",
+          "hp": "241",
+          "ppCost": "45",
+          "attackRange": "12-36",
+          "averageAttack": "20",
+          "attacksPerMinute": "28-29",
+          "damagePerMinute": ""
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ormek">
+  <g fill="none" stroke="#321b12" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m23 25-12-9-7 3M21 34 7 31M23 42 10 52"/>
+    <path d="m41 25 12-9 7 3M43 34l14-3M41 42l13 10"/>
+  </g>
+  <ellipse cx="32" cy="43" rx="13" ry="16" fill="#c8562a" stroke="#321b12" stroke-width="4"/>
+  <path fill="#ed8a35" stroke="#321b12" stroke-width="4" d="M23 25c0-7 4-12 9-12s9 5 9 12c-5 5-13 5-18 0Z"/>
+  <path fill="none" stroke="#ffd17a" stroke-width="3" d="M21 39h22M23 47h18"/>
+  <path fill="none" stroke="#ffd17a" stroke-width="3" stroke-linecap="round" d="m27 15-7-9m17 9 7-9"/>
+</svg>

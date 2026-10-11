@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ratzar camp">
+  <g stroke="#10160e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path fill="#596c39" d="M5 56 32 11l27 45Z"/>
+    <path fill="#172014" d="m32 18 7 38H25Z"/>
+    <path fill="#879d4c" d="M21 34 14 23l12 5 6-8 6 8 12-5-7 11-3 12H24Z"/>
+    <path fill="none" stroke="#d4e89a" d="m24 35-8 9m24-9 8 9M28 44l-4 10m12-10 4 10"/>
+    <circle cx="27" cy="34" r="2" fill="#ffd95e" stroke="none"/>
+    <circle cx="37" cy="34" r="2" fill="#ffd95e" stroke="none"/>
+  </g>
+</svg>

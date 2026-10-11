@@ -1,0 +1,3287 @@
+{
+  "generatedFrom": "Content.live-20260815.rows.decoded.sqlite",
+  "spellCount": 106,
+  "schools": [
+    {
+      "name": "Ecumenical",
+      "count": 13
+    },
+    {
+      "name": "Spiritism",
+      "count": 11
+    },
+    {
+      "name": "Necromancy",
+      "count": 22
+    },
+    {
+      "name": "Elementalism",
+      "count": 60
+    }
+  ],
+  "spells": [
+    {
+      "id": "fbd47e0e-b491-4bfe-9439-4adb0c8afb29",
+      "internalName": "MagicSpell_Ecumenical_Corrupt",
+      "name": "Corrupt",
+      "school": "Ecumenical",
+      "skill": "Now Skill Ecumenical Spells",
+      "skillRequired": 17,
+      "skillFull": 30,
+      "mana": 9,
+      "castSeconds": 2,
+      "rangeMeters": 20.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 2,
+        "max": 2
+      },
+      "description": "Corrupt the organic internals of your target, causing intense pain over time.",
+      "reagents": [
+        {
+          "name": "Ichor",
+          "quantity": 1,
+          "guid": "c6f95907-1f3c-4a98-8ef4-ba2081dc86c8",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "d5454bf1-8385-4665-98b4-123c8daa9072",
+      "internalName": "MagicSpell_Ecumenical_Earthquake",
+      "name": "Earthquake",
+      "school": "Ecumenical",
+      "skill": "Now Skill Ecumenical Spells",
+      "skillRequired": 67,
+      "skillFull": 100,
+      "mana": 60,
+      "castSeconds": 4,
+      "rangeMeters": 5.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 34,
+        "max": 36
+      },
+      "description": "Disrupts the earth surrounding the caster, injuring all those caught within range.",
+      "reagents": [
+        {
+          "name": "Pyrite",
+          "quantity": 1,
+          "guid": "f40f57b1-0c2c-4dd6-ab1e-dd36a25d39d0",
+          "referenceType": 52
+        },
+        {
+          "name": "Rock Oil",
+          "quantity": 1,
+          "guid": "c08792d2-35ef-45c1-a75c-26bff530481b",
+          "referenceType": 52
+        },
+        {
+          "name": "Small Rough Black Opal",
+          "quantity": 1,
+          "guid": "acfe59b4-13fc-436b-993d-d48062de59ad",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "d0b329cd-7f6a-433b-b034-a1d71f7ae10b",
+      "internalName": "MagicSpell_Ecumenical_Outburst",
+      "name": "Outburst",
+      "school": "Ecumenical",
+      "skill": "Now Skill Ecumenical Spells",
+      "skillRequired": 10,
+      "skillFull": 25,
+      "mana": 12,
+      "castSeconds": 1.9,
+      "rangeMeters": 40.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 15,
+        "max": 16
+      },
+      "description": "Release a concentrated burst of fire at your target.",
+      "reagents": [
+        {
+          "name": "Sulfur",
+          "quantity": 1,
+          "guid": "7dcdc064-0399-4d27-8752-95a9697b3c70",
+          "referenceType": 52
+        },
+        {
+          "name": "Nitre",
+          "quantity": 1,
+          "guid": "2e367a6d-a3db-4148-bd8a-f606b84242d5",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "d8ad13b3-d1d2-4f5c-a65b-63b686e15e36",
+      "internalName": "MagicSpell_Ecumenical_FlameStrike",
+      "name": "Flame Strike",
+      "school": "Ecumenical",
+      "skill": "Now Skill Ecumenical Spells",
+      "skillRequired": 57,
+      "skillFull": 79,
+      "mana": 50,
+      "castSeconds": 3.3,
+      "rangeMeters": 13.1,
+      "effect": {
+        "kind": "Damage",
+        "min": 36,
+        "max": 38
+      },
+      "description": "Ignite your target with a burst of exceedingly hot flame.",
+      "reagents": [
+        {
+          "name": "Coal",
+          "quantity": 1,
+          "guid": "5edf0b36-e232-4446-bfdb-0193a179d0df",
+          "referenceType": 52
+        },
+        {
+          "name": "Nitre",
+          "quantity": 1,
+          "guid": "2e367a6d-a3db-4148-bd8a-f606b84242d5",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "497db686-da52-4f2f-b355-26abefc25cdd",
+      "internalName": "MagicSpell_Ecumenical_Fulmination",
+      "name": "Fulmination",
+      "school": "Ecumenical",
+      "skill": "Now Skill Ecumenical Spells",
+      "skillRequired": 37,
+      "skillFull": 62,
+      "mana": 30,
+      "castSeconds": 2.6,
+      "rangeMeters": 22.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 34,
+        "max": 36
+      },
+      "description": "Release an extremely painful explosion of energy.  This spell takes a moment to manifest.",
+      "reagents": [
+        {
+          "name": "Ichor",
+          "quantity": 1,
+          "guid": "c6f95907-1f3c-4a98-8ef4-ba2081dc86c8",
+          "referenceType": 52
+        },
+        {
+          "name": "Nitre",
+          "quantity": 1,
+          "guid": "2e367a6d-a3db-4148-bd8a-f606b84242d5",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "b69a16a7-06c5-499f-bc9c-4ad0ef2693bd",
+      "internalName": "MagicSpell_Ecumenical_GreaterHealing",
+      "name": "Greater Healing",
+      "school": "Ecumenical",
+      "skill": "Now Skill Ecumenical Spells",
+      "skillRequired": 27,
+      "skillFull": 40,
+      "mana": 15,
+      "castSeconds": 2.1,
+      "rangeMeters": 20.0,
+      "effect": {
+        "kind": "Healing",
+        "min": 30,
+        "max": 32
+      },
+      "description": "Heals a large amount of physical damage afflicted upon yourself or an ally.",
+      "reagents": [
+        {
+          "name": "Water",
+          "quantity": 1,
+          "guid": "772a0475-6a52-48f9-bb7f-0a2b8ebfd280",
+          "referenceType": 52
+        },
+        {
+          "name": "Calamine",
+          "quantity": 1,
+          "guid": "5c35e645-14c3-4ebb-91c8-e91a71515c95",
+          "referenceType": 52
+        },
+        {
+          "name": "Cuprum",
+          "quantity": 1,
+          "guid": "e0bb0ee0-b71a-4c4a-a771-d8bec020ee1e",
+          "referenceType": 53
+        }
+      ]
+    },
+    {
+      "id": "cf9299ce-334f-45b4-be4c-c0cf74a6146d",
+      "internalName": "MagicSpell_Ecumenical_LesserHealing",
+      "name": "Lesser Healing",
+      "school": "Ecumenical",
+      "skill": "Now Skill Ecumenical Spells",
+      "skillRequired": 0,
+      "skillFull": 10,
+      "mana": 5,
+      "castSeconds": 1.12,
+      "rangeMeters": 20.0,
+      "effect": {
+        "kind": "Healing",
+        "min": 14,
+        "max": 16
+      },
+      "description": "Heals minor wounds which have been inflicted upon yourself or an ally.",
+      "reagents": [
+        {
+          "name": "Water",
+          "quantity": 1,
+          "guid": "772a0475-6a52-48f9-bb7f-0a2b8ebfd280",
+          "referenceType": 52
+        },
+        {
+          "name": "Calamine",
+          "quantity": 1,
+          "guid": "5c35e645-14c3-4ebb-91c8-e91a71515c95",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "625117d5-ea01-47c3-8a9e-aa153dfecafb",
+      "internalName": "MagicSpell_Ecumenical_Lightning",
+      "name": "Lightning",
+      "school": "Ecumenical",
+      "skill": "Now Skill Ecumenical Spells",
+      "skillRequired": 27,
+      "skillFull": 40,
+      "mana": 18,
+      "castSeconds": 1.7,
+      "rangeMeters": 24.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 21,
+        "max": 22
+      },
+      "description": "Calls forth a bolt of lightning upon your target, dealing a moderate amount of electrical damage.",
+      "reagents": [
+        {
+          "name": "Cuprum",
+          "quantity": 1,
+          "guid": "e0bb0ee0-b71a-4c4a-a771-d8bec020ee1e",
+          "referenceType": 53
+        }
+      ]
+    },
+    {
+      "id": "e2551fef-a408-4044-b1b3-da39496bef91",
+      "internalName": "MagicSpell_Ecumenical_MagicReflection",
+      "name": "Magic Reflection",
+      "school": "Ecumenical",
+      "skill": "Now Skill Ecumenical Spells",
+      "skillRequired": 37,
+      "skillFull": 50,
+      "mana": 25,
+      "castSeconds": 2,
+      "rangeMeters": 20.0,
+      "effect": null,
+      "description": "Reflect the next spell cast on you back upon the caster.",
+      "reagents": [
+        {
+          "name": "Water",
+          "quantity": 1,
+          "guid": "772a0475-6a52-48f9-bb7f-0a2b8ebfd280",
+          "referenceType": 52
+        },
+        {
+          "name": "Calamine",
+          "quantity": 1,
+          "guid": "5c35e645-14c3-4ebb-91c8-e91a71515c95",
+          "referenceType": 52
+        },
+        {
+          "name": "Rock Oil",
+          "quantity": 1,
+          "guid": "c08792d2-35ef-45c1-a75c-26bff530481b",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "e7836fc3-9336-490d-83c8-c70030bce0e3",
+      "internalName": "MagicSpell_Ecumenical_MindBlast",
+      "name": "Mind Blast",
+      "school": "Ecumenical",
+      "skill": "Now Skill Ecumenical Spells",
+      "skillRequired": 1,
+      "skillFull": 10,
+      "mana": 30,
+      "castSeconds": 2.7,
+      "rangeMeters": 20.0,
+      "effect": null,
+      "description": "Injure your target",
+      "reagents": [
+        {
+          "name": "Sulfur",
+          "quantity": 1,
+          "guid": "7dcdc064-0399-4d27-8752-95a9697b3c70",
+          "referenceType": 52
+        },
+        {
+          "name": "Ichor",
+          "quantity": 1,
+          "guid": "c6f95907-1f3c-4a98-8ef4-ba2081dc86c8",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "679a03ff-690b-4c46-ab25-5893d220792e",
+      "internalName": "MagicSpell_Ecumenical_Purify",
+      "name": "Purify",
+      "school": "Ecumenical",
+      "skill": "Now Skill Ecumenical Spells",
+      "skillRequired": 8,
+      "skillFull": 20,
+      "mana": 6,
+      "castSeconds": 1.1,
+      "rangeMeters": 20.0,
+      "effect": null,
+      "description": "Cleanses a person or creature of persisting ailments.",
+      "reagents": [
+        {
+          "name": "Calamine",
+          "quantity": 1,
+          "guid": "5c35e645-14c3-4ebb-91c8-e91a71515c95",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "72eca72b-a217-48f0-aa24-8ecdec835590",
+      "internalName": "MagicSpell_Ecumenical_Spurt",
+      "name": "Spurt",
+      "school": "Ecumenical",
+      "skill": "Now Skill Ecumenical Spells",
+      "skillRequired": 0,
+      "skillFull": 10,
+      "mana": 4,
+      "castSeconds": 1,
+      "rangeMeters": 30.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 4,
+        "max": 6
+      },
+      "description": "Launch a projectile of concentrated water.",
+      "reagents": [
+        {
+          "name": "Water",
+          "quantity": 1,
+          "guid": "772a0475-6a52-48f9-bb7f-0a2b8ebfd280",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "5a703b4b-247b-4363-b729-2d0d6595ed9e",
+      "internalName": "MagicSpell_Ecumenical_Thunderlash",
+      "name": "Thunderlash",
+      "school": "Ecumenical",
+      "skill": "Now Skill Ecumenical Spells",
+      "skillRequired": 47,
+      "skillFull": 62,
+      "mana": 30,
+      "castSeconds": 2.4,
+      "rangeMeters": 23.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 28,
+        "max": 29
+      },
+      "description": "Unleash a large amount of electrical energy upon your target.",
+      "reagents": [
+        {
+          "name": "Cuprum",
+          "quantity": 1,
+          "guid": "e0bb0ee0-b71a-4c4a-a771-d8bec020ee1e",
+          "referenceType": 53
+        },
+        {
+          "name": "Rock Oil",
+          "quantity": 1,
+          "guid": "c08792d2-35ef-45c1-a75c-26bff530481b",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "30799bdc-50bb-4354-8b68-aa16464da5b9",
+      "internalName": "MagicSpell_Spiritism_DispelPortal",
+      "name": "Dispel Portal",
+      "school": "Spiritism",
+      "skill": "Now Skill Spiritism",
+      "skillRequired": 65,
+      "skillFull": 85,
+      "mana": 16,
+      "castSeconds": 4,
+      "rangeMeters": 10.0,
+      "effect": null,
+      "description": "Dispel all portals in an area around the target.",
+      "reagents": [
+        {
+          "name": "Spirits",
+          "quantity": 2,
+          "guid": "5ae9f208-92c4-475f-854c-9e58f8684195",
+          "referenceType": 268
+        }
+      ]
+    },
+    {
+      "id": "2bfc3115-feb9-4a24-bcef-ad91de0c6e02",
+      "internalName": "MagicSpell_Spiritism_EtherBarrier",
+      "name": "Ether Barrier",
+      "school": "Spiritism",
+      "skill": "Now Skill Spiritism",
+      "skillRequired": 35,
+      "skillFull": 65,
+      "mana": 10,
+      "castSeconds": 2.8,
+      "rangeMeters": 10.0,
+      "effect": null,
+      "description": "Make target",
+      "reagents": [
+        {
+          "name": "Spirits",
+          "quantity": 2,
+          "guid": "5ae9f208-92c4-475f-854c-9e58f8684195",
+          "referenceType": 268
+        }
+      ]
+    },
+    {
+      "id": "9244fbf4-e3d3-46cf-9982-01944580a44d",
+      "internalName": "MagicSpell_Spiritism_EtherMomentum",
+      "name": "Ether Momentum",
+      "school": "Spiritism",
+      "skill": "Now Skill Spiritism",
+      "skillRequired": 25,
+      "skillFull": 45,
+      "mana": 18,
+      "castSeconds": 2.5,
+      "rangeMeters": 20.0,
+      "effect": null,
+      "description": "Increase target!$s movement speed in the ether",
+      "reagents": [
+        {
+          "name": "Spirits",
+          "quantity": 3,
+          "guid": "5ae9f208-92c4-475f-854c-9e58f8684195",
+          "referenceType": 268
+        }
+      ]
+    },
+    {
+      "id": "b3baeb22-2994-40ce-8756-b1c5338eb18e",
+      "internalName": "MagicSpell_Spiritism_EtherworldPortal",
+      "name": "Etherworld Portal",
+      "school": "Spiritism",
+      "skill": "Now Skill Spiritism",
+      "skillRequired": 75,
+      "skillFull": 100,
+      "mana": 40,
+      "castSeconds": 10,
+      "rangeMeters": 10.0,
+      "effect": null,
+      "description": "Open a portal from the etherworld to the world of the living, or from the world of the living to the etherworld.",
+      "reagents": [
+        {
+          "name": "Spirits",
+          "quantity": 3,
+          "guid": "5ae9f208-92c4-475f-854c-9e58f8684195",
+          "referenceType": 268
+        }
+      ]
+    },
+    {
+      "id": "7bbfd4d9-17a3-48b9-8512-a7e92c09f16a",
+      "internalName": "MagicSpell_Spiritism_ExpelSpirit",
+      "name": "Expel Spirit",
+      "school": "Spiritism",
+      "skill": "Now Skill Spiritism",
+      "skillRequired": 1,
+      "skillFull": 15,
+      "mana": 15,
+      "castSeconds": 3,
+      "rangeMeters": 10.0,
+      "effect": null,
+      "description": "Modify the Kau attack of your target so that it can be used to banish spirits",
+      "reagents": [
+        {
+          "name": "Spirits",
+          "quantity": 1,
+          "guid": "5ae9f208-92c4-475f-854c-9e58f8684195",
+          "referenceType": 268
+        }
+      ]
+    },
+    {
+      "id": "050063cb-7633-4de2-9252-f87359af1489",
+      "internalName": "MagicSpell_Spiritism_KauRegeneration",
+      "name": "Kau Regeneration",
+      "school": "Spiritism",
+      "skill": "Now Skill Spiritism",
+      "skillRequired": 25,
+      "skillFull": 42,
+      "mana": 10,
+      "castSeconds": 2.5,
+      "rangeMeters": 10.0,
+      "effect": null,
+      "description": "Increase Kau regeneration rate of your target.",
+      "reagents": [
+        {
+          "name": "Spirits",
+          "quantity": 2,
+          "guid": "5ae9f208-92c4-475f-854c-9e58f8684195",
+          "referenceType": 268
+        }
+      ]
+    },
+    {
+      "id": "101b6955-7312-4ee5-8e4f-2eac0753d71b",
+      "internalName": "MagicSpell_Spiritism_MentalHealing",
+      "name": "Mental Healing",
+      "school": "Spiritism",
+      "skill": "Now Skill Spiritism",
+      "skillRequired": 62,
+      "skillFull": 90,
+      "mana": 34,
+      "castSeconds": 4,
+      "rangeMeters": 36.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 35,
+        "max": 42
+      },
+      "description": "Use the spirits to generate mana for anyone close to the target this can also be done from the ether.",
+      "reagents": [
+        {
+          "name": "Spirits",
+          "quantity": 3,
+          "guid": "5ae9f208-92c4-475f-854c-9e58f8684195",
+          "referenceType": 268
+        }
+      ]
+    },
+    {
+      "id": "56ec7a06-661c-4c64-8542-973acbf1b6d1",
+      "internalName": "MagicSpell_Spiritism_MentalProjectile",
+      "name": "Mental Projectile",
+      "school": "Spiritism",
+      "skill": "Now Skill Spiritism",
+      "skillRequired": 62,
+      "skillFull": 90,
+      "mana": 35,
+      "castSeconds": 3,
+      "rangeMeters": 45.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 32,
+        "max": 34
+      },
+      "description": "Releases a concentrated beam of spirits that instantly drain Kau from your target",
+      "reagents": [
+        {
+          "name": "Spirits",
+          "quantity": 3,
+          "guid": "5ae9f208-92c4-475f-854c-9e58f8684195",
+          "referenceType": 268
+        }
+      ]
+    },
+    {
+      "id": "a3bacaa6-9bae-4091-81e5-ae7645bbaeb6",
+      "internalName": "MagicSpell_Spiritism_Resurrect",
+      "name": "Resurrect",
+      "school": "Spiritism",
+      "skill": "Now Skill Spiritism",
+      "skillRequired": 80,
+      "skillFull": 100,
+      "mana": 110,
+      "castSeconds": 10,
+      "rangeMeters": 2.0,
+      "effect": null,
+      "description": "Return a spirit from the etherworld.",
+      "reagents": [
+        {
+          "name": "Calamine",
+          "quantity": 1,
+          "guid": "5c35e645-14c3-4ebb-91c8-e91a71515c95",
+          "referenceType": 52
+        },
+        {
+          "name": "Cuprum",
+          "quantity": 1,
+          "guid": "e0bb0ee0-b71a-4c4a-a771-d8bec020ee1e",
+          "referenceType": 53
+        },
+        {
+          "name": "Jadeite",
+          "quantity": 1,
+          "guid": "387376d4-a628-4392-8e46-3ac2ac7f9abb",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "4fb34352-08d2-49cc-8e14-5ba6c1e22110",
+      "internalName": "MagicSpell_Spiritism_TranscendentalAwareness",
+      "name": "Transcendental Awareness",
+      "school": "Spiritism",
+      "skill": "Now Skill Spiritism",
+      "skillRequired": 65,
+      "skillFull": 85,
+      "mana": 35,
+      "castSeconds": 4,
+      "rangeMeters": 20.0,
+      "effect": null,
+      "description": "Target will be able to communicate with the dead beyond the ether and sense the living while in the ether.",
+      "reagents": [
+        {
+          "name": "Spirits",
+          "quantity": 1,
+          "guid": "5ae9f208-92c4-475f-854c-9e58f8684195",
+          "referenceType": 268
+        }
+      ]
+    },
+    {
+      "id": "01d718e1-275d-451d-b514-b7f3d9bed7bd",
+      "internalName": "MagicSpell_Spiritism_TranscendentalSeance",
+      "name": "Transcendental Seance",
+      "school": "Spiritism",
+      "skill": "Now Skill Spiritism",
+      "skillRequired": 1,
+      "skillFull": 10,
+      "mana": 12,
+      "castSeconds": 5,
+      "rangeMeters": 10.0,
+      "effect": null,
+      "description": "Summon restless spirits from the target in the etherworld",
+      "reagents": []
+    },
+    {
+      "id": "14f2f1c6-c953-4b2c-a106-88642cfee5a5",
+      "internalName": "MagicSpell_Necromancy_AkhBond",
+      "name": "Akh Bond",
+      "school": "Necromancy",
+      "skill": "Now Skill Necromancy Spells",
+      "skillRequired": 76,
+      "skillFull": 87,
+      "mana": 50,
+      "castSeconds": 3.8,
+      "rangeMeters": 10.0,
+      "effect": null,
+      "description": "Connect your akh with the akh of a pet. Part of the damage dealt to you will be dealt to the pet instead.",
+      "reagents": [
+        {
+          "name": "Ritual Blood",
+          "quantity": 1,
+          "guid": "1c69856c-de2b-42b1-b6e9-9bf205ed6307",
+          "referenceType": 52
+        },
+        {
+          "name": "Spirits",
+          "quantity": 3,
+          "guid": "5ae9f208-92c4-475f-854c-9e58f8684195",
+          "referenceType": 268
+        }
+      ]
+    },
+    {
+      "id": "2364bdf8-973c-4a05-9aba-8988bfdb6308",
+      "internalName": "MagicSpell_Necromancy_Atrophy",
+      "name": "Atrophy",
+      "school": "Necromancy",
+      "skill": "Now Skill Necromancy Spells",
+      "skillRequired": 66,
+      "skillFull": 77,
+      "mana": 22,
+      "castSeconds": 2,
+      "rangeMeters": 16.0,
+      "effect": null,
+      "description": "Fill the targets lungs with black smoke reducing its stamina regeneration and decreases creatures movement speed.",
+      "reagents": [
+        {
+          "name": "Ritual Ashes",
+          "quantity": 1,
+          "guid": "6833ed40-a9ec-498c-9490-838914f63f74",
+          "referenceType": 52
+        },
+        {
+          "name": "Ritual Blood",
+          "quantity": 1,
+          "guid": "1c69856c-de2b-42b1-b6e9-9bf205ed6307",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "13bf41bf-60f8-4531-8464-1f479a398e10",
+      "internalName": "MagicSpell_Necromancy_AuwSurge",
+      "name": "Auw Surge",
+      "school": "Necromancy",
+      "skill": "Now Skill Necromancy Spells",
+      "skillRequired": 87,
+      "skillFull": 92,
+      "mana": 38,
+      "castSeconds": 2.8,
+      "rangeMeters": 20.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 18,
+        "max": 22
+      },
+      "description": "Send out a wave of spirits that will hit anything between you and your target.",
+      "reagents": [
+        {
+          "name": "Spirits",
+          "quantity": 2,
+          "guid": "5ae9f208-92c4-475f-854c-9e58f8684195",
+          "referenceType": 268
+        },
+        {
+          "name": "Ritual Ashes",
+          "quantity": 2,
+          "guid": "6833ed40-a9ec-498c-9490-838914f63f74",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "9ac5af59-bc26-47de-8d90-0352d3e10b3c",
+      "internalName": "MagicSpell_Necromancy_BenumbMind",
+      "name": "Benumb Mind",
+      "school": "Necromancy",
+      "skill": "Now Skill Necromancy Spells",
+      "skillRequired": 62,
+      "skillFull": 70,
+      "mana": 22,
+      "castSeconds": 2.3,
+      "rangeMeters": 15.0,
+      "effect": null,
+      "description": "Break the targets concentration reducing mana regeneration and blocks creatures from using magic.",
+      "reagents": [
+        {
+          "name": "Aabam",
+          "quantity": 1,
+          "guid": "0b64c581-701b-497e-810a-d937f7c7dc3c",
+          "referenceType": 52
+        },
+        {
+          "name": "Ritual Blood",
+          "quantity": 1,
+          "guid": "1c69856c-de2b-42b1-b6e9-9bf205ed6307",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "357880de-c545-46c7-9449-4133ecaeb264",
+      "internalName": "MagicSpell_Necromancy_Blind",
+      "name": "Blind",
+      "school": "Necromancy",
+      "skill": "Now Skill Necromancy Spells",
+      "skillRequired": 40,
+      "skillFull": 55,
+      "mana": 20,
+      "castSeconds": 1.4,
+      "rangeMeters": 12.0,
+      "effect": null,
+      "description": "Blind your target.",
+      "reagents": [
+        {
+          "name": "Ritual Ashes",
+          "quantity": 1,
+          "guid": "6833ed40-a9ec-498c-9490-838914f63f74",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "d1edc750-d655-4db4-a6f2-e885a69ac427",
+      "internalName": "MagicSpell_Necromancy_CloudOfAshes",
+      "name": "Cloud Of Ashes",
+      "school": "Necromancy",
+      "skill": "Now Skill Necromancy Spells",
+      "skillRequired": 1,
+      "skillFull": 25,
+      "mana": 20,
+      "castSeconds": 2.4,
+      "rangeMeters": 20.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 1,
+        "max": 1
+      },
+      "description": "Summon a black sphere that blinds and slightly damages whoever is in it.",
+      "reagents": [
+        {
+          "name": "Ritual Ashes",
+          "quantity": 3,
+          "guid": "6833ed40-a9ec-498c-9490-838914f63f74",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "8331a82e-abd3-4703-9998-26baf653d069",
+      "internalName": "MagicSpell_Necromancy_CommandUndead",
+      "name": "Command Undead",
+      "school": "Necromancy",
+      "skill": "Now Skill Necromancy Spells",
+      "skillRequired": 5,
+      "skillFull": 16,
+      "mana": 3,
+      "castSeconds": 1,
+      "rangeMeters": 15.0,
+      "effect": null,
+      "description": "When cast on a target all undead you control will attack that target",
+      "reagents": [
+        {
+          "name": "Ritual Blood",
+          "quantity": 1,
+          "guid": "1c69856c-de2b-42b1-b6e9-9bf205ed6307",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "82aa3417-292b-4940-a617-f7d2f90f9fc7",
+      "internalName": "MagicSpell_Necromancy_ControlUndead",
+      "name": "Control Undead",
+      "school": "Necromancy",
+      "skill": "Now Skill Necromancy Spells",
+      "skillRequired": 6,
+      "skillFull": 19,
+      "mana": 14,
+      "castSeconds": 1.2,
+      "rangeMeters": 11.0,
+      "effect": null,
+      "description": "Take control of an undead",
+      "reagents": [
+        {
+          "name": "Ritual Blood",
+          "quantity": 1,
+          "guid": "1c69856c-de2b-42b1-b6e9-9bf205ed6307",
+          "referenceType": 52
+        },
+        {
+          "name": "Spirits",
+          "quantity": 1,
+          "guid": "5ae9f208-92c4-475f-854c-9e58f8684195",
+          "referenceType": 268
+        }
+      ]
+    },
+    {
+      "id": "0b2fa5c5-38a0-47db-a64b-1f296767958f",
+      "internalName": "MagicSpell_Necromancy_CrawlingHand",
+      "name": "Crawling Hand",
+      "school": "Necromancy",
+      "skill": "Now Skill Necromancy Spells",
+      "skillRequired": 58,
+      "skillFull": 69,
+      "mana": 28,
+      "castSeconds": 1,
+      "rangeMeters": 12.0,
+      "effect": null,
+      "description": "Move all loot in an area around you closer to the target.",
+      "reagents": [
+        {
+          "name": "Bone Tissue",
+          "quantity": 1,
+          "guid": "a72002e2-0c53-4afd-9c9c-0de250837a68",
+          "referenceType": 52
+        },
+        {
+          "name": "Ritual Blood",
+          "quantity": 1,
+          "guid": "1c69856c-de2b-42b1-b6e9-9bf205ed6307",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "79568f5b-03f7-4bdc-b9e8-4b646770db5b",
+      "internalName": "MagicSpell_Necromancy_DeathHand",
+      "name": "Death Hand",
+      "school": "Necromancy",
+      "skill": "Now Skill Necromancy Spells",
+      "skillRequired": 47,
+      "skillFull": 59,
+      "mana": 26,
+      "castSeconds": 1.7,
+      "rangeMeters": 3.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 28,
+        "max": 29
+      },
+      "description": "Drains health from your target and heals yourself.",
+      "reagents": [
+        {
+          "name": "Spirits",
+          "quantity": 3,
+          "guid": "5ae9f208-92c4-475f-854c-9e58f8684195",
+          "referenceType": 268
+        }
+      ]
+    },
+    {
+      "id": "3a060ffd-cada-4c15-af2b-07c92342e5ea",
+      "internalName": "MagicSpell_Necromancy_MentalLeech",
+      "name": "Mental Leech",
+      "school": "Necromancy",
+      "skill": "Now Skill Necromancy Spells",
+      "skillRequired": 85,
+      "skillFull": 100,
+      "mana": 5,
+      "castSeconds": 1.6,
+      "rangeMeters": 15.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 1,
+        "max": 2
+      },
+      "description": "Drains mana from your target and replenishes your own",
+      "reagents": [
+        {
+          "name": "Aabam",
+          "quantity": 1,
+          "guid": "0b64c581-701b-497e-810a-d937f7c7dc3c",
+          "referenceType": 52
+        },
+        {
+          "name": "Spirits",
+          "quantity": 2,
+          "guid": "5ae9f208-92c4-475f-854c-9e58f8684195",
+          "referenceType": 268
+        }
+      ]
+    },
+    {
+      "id": "d54daf3b-620a-466c-80ef-95efbbc1a3a1",
+      "internalName": "MagicSpell_Necromancy_Miasma",
+      "name": "Miasma",
+      "school": "Necromancy",
+      "skill": "Now Skill Necromancy Spells",
+      "skillRequired": 57,
+      "skillFull": 67,
+      "mana": 28,
+      "castSeconds": 2.6,
+      "rangeMeters": 20.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 5,
+        "max": 10
+      },
+      "description": "Summon a thick poisonous smoke that damages any target within its area",
+      "reagents": [
+        {
+          "name": "Aabam",
+          "quantity": 1,
+          "guid": "0b64c581-701b-497e-810a-d937f7c7dc3c",
+          "referenceType": 52
+        },
+        {
+          "name": "Ritual Ashes",
+          "quantity": 2,
+          "guid": "6833ed40-a9ec-498c-9490-838914f63f74",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "b9b02091-01ac-469d-8e14-a11545af1b4c",
+      "internalName": "MagicSpell_Necromancy_Mute",
+      "name": "Mute",
+      "school": "Necromancy",
+      "skill": "Now Skill Necromancy Spells",
+      "skillRequired": 69,
+      "skillFull": 89,
+      "mana": 28,
+      "castSeconds": 3,
+      "rangeMeters": 15.0,
+      "effect": null,
+      "description": "Mutes your target.",
+      "reagents": [
+        {
+          "name": "Ritual Ashes",
+          "quantity": 1,
+          "guid": "6833ed40-a9ec-498c-9490-838914f63f74",
+          "referenceType": 52
+        },
+        {
+          "name": "Ritual Blood",
+          "quantity": 1,
+          "guid": "1c69856c-de2b-42b1-b6e9-9bf205ed6307",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "35c14cd4-fed7-4d63-b3b2-cfdf6daa6659",
+      "internalName": "MagicSpell_Necromancy_RaiseGreaterWalker",
+      "name": "Raise Greater Walker",
+      "school": "Necromancy",
+      "skill": "Now Skill Necromancy Spells",
+      "skillRequired": 36,
+      "skillFull": 48,
+      "mana": 40,
+      "castSeconds": 2.4,
+      "rangeMeters": 10.0,
+      "effect": null,
+      "description": "Raise a mummy under your control",
+      "reagents": [
+        {
+          "name": "Bone Tissue",
+          "quantity": 1,
+          "guid": "a72002e2-0c53-4afd-9c9c-0de250837a68",
+          "referenceType": 52
+        },
+        {
+          "name": "Incisium",
+          "quantity": 1,
+          "guid": "607e473c-a77f-4d17-8c15-4186e832f767",
+          "referenceType": 52
+        },
+        {
+          "name": "Spirits",
+          "quantity": 3,
+          "guid": "5ae9f208-92c4-475f-854c-9e58f8684195",
+          "referenceType": 268
+        }
+      ]
+    },
+    {
+      "id": "fd3253e5-426f-4a17-aa0e-7b91b10c0f6b",
+      "internalName": "MagicSpell_Necromancy_RaiseStrongWalker",
+      "name": "Raise Strong Walker",
+      "school": "Necromancy",
+      "skill": "Now Skill Necromancy Spells",
+      "skillRequired": 21,
+      "skillFull": 37,
+      "mana": 30,
+      "castSeconds": 2.2,
+      "rangeMeters": 10.0,
+      "effect": null,
+      "description": "Raise a zombie under your control",
+      "reagents": [
+        {
+          "name": "Bone Tissue",
+          "quantity": 1,
+          "guid": "a72002e2-0c53-4afd-9c9c-0de250837a68",
+          "referenceType": 52
+        },
+        {
+          "name": "Molarium",
+          "quantity": 1,
+          "guid": "4bee72cd-4b75-47ea-b59b-acb94e7274b4",
+          "referenceType": 52
+        },
+        {
+          "name": "Spirits",
+          "quantity": 2,
+          "guid": "5ae9f208-92c4-475f-854c-9e58f8684195",
+          "referenceType": 268
+        }
+      ]
+    },
+    {
+      "id": "1047de36-0828-4d7d-aea2-bd21cd4a41d2",
+      "internalName": "MagicSpell_Necromancy_RaiseWalker",
+      "name": "Raise Walker",
+      "school": "Necromancy",
+      "skill": "Now Skill Necromancy Spells",
+      "skillRequired": 1,
+      "skillFull": 22,
+      "mana": 20,
+      "castSeconds": 2,
+      "rangeMeters": 10.0,
+      "effect": null,
+      "description": "Raise a skeleton under your control",
+      "reagents": [
+        {
+          "name": "Bone Tissue",
+          "quantity": 1,
+          "guid": "a72002e2-0c53-4afd-9c9c-0de250837a68",
+          "referenceType": 52
+        },
+        {
+          "name": "Emalj",
+          "quantity": 1,
+          "guid": "0d722e59-d8e4-42d6-979b-4351a354a0ac",
+          "referenceType": 52
+        },
+        {
+          "name": "Spirits",
+          "quantity": 1,
+          "guid": "5ae9f208-92c4-475f-854c-9e58f8684195",
+          "referenceType": 268
+        }
+      ]
+    },
+    {
+      "id": "3f3bb31f-73f5-429e-84fc-da102f2be089",
+      "internalName": "MagicSpell_Necromancy_SacrificialEruption",
+      "name": "Sacrificial Eruption",
+      "school": "Necromancy",
+      "skill": "Now Skill Necromancy Spells",
+      "skillRequired": 5,
+      "skillFull": 16,
+      "mana": 30,
+      "castSeconds": 1.3,
+      "rangeMeters": 10.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 15,
+        "max": 25
+      },
+      "description": "All undead you control around the target will explode and deal damage.",
+      "reagents": [
+        {
+          "name": "Ritual Ashes",
+          "quantity": 1,
+          "guid": "6833ed40-a9ec-498c-9490-838914f63f74",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "1d7c90b1-a179-4eb5-97f9-6392549d2600",
+      "internalName": "MagicSpell_Necromancy_SacrificialHeal",
+      "name": "Sacrificial Heal",
+      "school": "Necromancy",
+      "skill": "Now Skill Necromancy Spells",
+      "skillRequired": 5,
+      "skillFull": 16,
+      "mana": 8,
+      "castSeconds": 1.3,
+      "rangeMeters": 14.0,
+      "effect": {
+        "kind": "Healing",
+        "min": 20,
+        "max": 26
+      },
+      "description": "Sacrifice all undead under your control to heal the target.",
+      "reagents": [
+        {
+          "name": "Ritual Ashes",
+          "quantity": 1,
+          "guid": "6833ed40-a9ec-498c-9490-838914f63f74",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "2dfc2e19-a252-47c6-aad5-489fb5b49bc8",
+      "internalName": "MagicSpell_Necromancy_SpiderBoil",
+      "name": "Spider Boil",
+      "school": "Necromancy",
+      "skill": "Now Skill Necromancy Spells",
+      "skillRequired": 5,
+      "skillFull": 16,
+      "mana": 12,
+      "castSeconds": 3,
+      "rangeMeters": 10.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 2,
+        "max": 4
+      },
+      "description": "Cover your target with small spiders that does damage over time.",
+      "reagents": [
+        {
+          "name": "Ritual Blood",
+          "quantity": 2,
+          "guid": "1c69856c-de2b-42b1-b6e9-9bf205ed6307",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "234c1bcc-47f8-49d4-b7aa-ada0ada4cd2c",
+      "internalName": "MagicSpell_Necromancy_SummonDeathKnight",
+      "name": "Summon Death Knight",
+      "school": "Necromancy",
+      "skill": "Now Skill Necromancy Spells",
+      "skillRequired": 36,
+      "skillFull": 48,
+      "mana": 27,
+      "castSeconds": 5,
+      "rangeMeters": 10.0,
+      "effect": null,
+      "description": "The next ritual stone used by the target will call forth a Death Knight.",
+      "reagents": [
+        {
+          "name": "Spirits",
+          "quantity": 1,
+          "guid": "5ae9f208-92c4-475f-854c-9e58f8684195",
+          "referenceType": 268
+        },
+        {
+          "name": "Ritual Blood",
+          "quantity": 1,
+          "guid": "1c69856c-de2b-42b1-b6e9-9bf205ed6307",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "9facfaba-ab84-4ec2-a8ca-367ebe9ae079",
+      "internalName": "MagicSpell_Necromancy_SummonDeathSteed",
+      "name": "Summon Death Steed",
+      "school": "Necromancy",
+      "skill": "Now Skill Necromancy Spells",
+      "skillRequired": 36,
+      "skillFull": 48,
+      "mana": 27,
+      "castSeconds": 5,
+      "rangeMeters": 10.0,
+      "effect": null,
+      "description": "The next ritual stone used by the target will call forth a Death Steed.",
+      "reagents": [
+        {
+          "name": "Spirits",
+          "quantity": 1,
+          "guid": "5ae9f208-92c4-475f-854c-9e58f8684195",
+          "referenceType": 268
+        },
+        {
+          "name": "Ritual Blood",
+          "quantity": 1,
+          "guid": "1c69856c-de2b-42b1-b6e9-9bf205ed6307",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "8fc16005-6cc9-477d-a88f-3ff74cba7e8c",
+      "internalName": "MagicSpell_Necromancy_SummonGhost",
+      "name": "Summon Shade",
+      "school": "Necromancy",
+      "skill": "Now Skill Necromancy Spells",
+      "skillRequired": 36,
+      "skillFull": 48,
+      "mana": 27,
+      "castSeconds": 5,
+      "rangeMeters": 10.0,
+      "effect": null,
+      "description": "The next ritual stone used by the target will call forth a Shade.",
+      "reagents": [
+        {
+          "name": "Spirits",
+          "quantity": 1,
+          "guid": "5ae9f208-92c4-475f-854c-9e58f8684195",
+          "referenceType": 268
+        },
+        {
+          "name": "Ritual Blood",
+          "quantity": 1,
+          "guid": "1c69856c-de2b-42b1-b6e9-9bf205ed6307",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "835f7ec3-f64f-4953-af29-13fede5f418c",
+      "internalName": "MagicSpell_Elementalism_AirPocket",
+      "name": "Air Pocket",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Emanation",
+      "skillRequired": 60,
+      "skillFull": 80,
+      "mana": 25,
+      "castSeconds": 5,
+      "rangeMeters": 6.0,
+      "effect": null,
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fulminate Pouch",
+          "quantity": 1,
+          "guid": "d1451d2c-595d-425a-aa9c-40fbd4750094",
+          "referenceType": 52
+        },
+        {
+          "name": "Nimbic Spirits",
+          "quantity": 1,
+          "guid": "87487011-590a-4fcd-a498-123b3719ab6c",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "9a23ab97-5ece-4ab7-a0aa-3b99cd8c4147",
+      "internalName": "MagicSpell_Elementalism_Aridity",
+      "name": "Aridity",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Polarization",
+      "skillRequired": 20,
+      "skillFull": 60,
+      "mana": 100,
+      "castSeconds": 10,
+      "rangeMeters": 10.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 1,
+        "max": 2
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Flowing Nimbic Spirits",
+          "quantity": 1,
+          "guid": "3b51af12-147e-4d3d-83c9-712c348ac35a",
+          "referenceType": 52
+        },
+        {
+          "name": "Granum Powder",
+          "quantity": 10,
+          "guid": "cc6d23d2-16f6-404a-baa7-3274c2bde026",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "4d131fe3-348b-4f2f-a2fe-df5d43f77a76",
+      "internalName": "MagicSpell_Elementalism_Boulder",
+      "name": "Boulder",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Aggregation",
+      "skillRequired": 20,
+      "skillFull": 45,
+      "mana": 35,
+      "castSeconds": 3.5,
+      "rangeMeters": null,
+      "effect": {
+        "kind": "Damage",
+        "min": 38,
+        "max": 40
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Burning Salts Pouch",
+          "quantity": 1,
+          "guid": "01673ce7-4b59-4e3d-a176-7015940b8bed",
+          "referenceType": 52
+        },
+        {
+          "name": "Granum Pile",
+          "quantity": 10,
+          "guid": "d274659a-8ef4-467a-bb4d-b2b95f279ae1",
+          "referenceType": 53
+        }
+      ]
+    },
+    {
+      "id": "b1686156-22d9-4819-bac9-27c0f4c4cd3a",
+      "internalName": "MagicSpell_Elementalism_Comet",
+      "name": "Comet",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Aggregation",
+      "skillRequired": 60,
+      "skillFull": 80,
+      "mana": 38,
+      "castSeconds": 3,
+      "rangeMeters": null,
+      "effect": {
+        "kind": "Damage",
+        "min": 27,
+        "max": 29
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Burning Salts Pouch",
+          "quantity": 1,
+          "guid": "01673ce7-4b59-4e3d-a176-7015940b8bed",
+          "referenceType": 52
+        },
+        {
+          "name": "Salt",
+          "quantity": 2,
+          "guid": "6310bc40-8fd5-4161-95f9-9ac14d2cfd3c",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "f8674f8a-a662-4d02-878f-391b7c9d1107",
+      "internalName": "MagicSpell_Elementalism_Condensation",
+      "name": "Condensation",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Polarization",
+      "skillRequired": 20,
+      "skillFull": 60,
+      "mana": 100,
+      "castSeconds": 10,
+      "rangeMeters": 10.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 1,
+        "max": 2
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Flowing Nimbic Spirits",
+          "quantity": 1,
+          "guid": "3b51af12-147e-4d3d-83c9-712c348ac35a",
+          "referenceType": 52
+        },
+        {
+          "name": "Purified Water",
+          "quantity": 10,
+          "guid": "813ba639-cd23-4321-9f92-f3e0c1763630",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "33e5f7f5-e6ba-44b9-997a-c0c9ab33eaf6",
+      "internalName": "MagicSpell_Elementalism_Conflagration",
+      "name": "Conflagration",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Emanation",
+      "skillRequired": 45,
+      "skillFull": 75,
+      "mana": 40,
+      "castSeconds": 6,
+      "rangeMeters": 5.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 10,
+        "max": 15
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fulminate Pouch",
+          "quantity": 1,
+          "guid": "d1451d2c-595d-425a-aa9c-40fbd4750094",
+          "referenceType": 52
+        },
+        {
+          "name": "Nitre",
+          "quantity": 1,
+          "guid": "2e367a6d-a3db-4148-bd8a-f606b84242d5",
+          "referenceType": 52
+        },
+        {
+          "name": "Tar",
+          "quantity": 1,
+          "guid": "2f29e287-936f-41c9-b9f5-91bb5906c449",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "4eceba7b-3361-48a6-a309-bcd7a9e89e25",
+      "internalName": "MagicSpell_Elementalism_ConsumingVoid",
+      "name": "Consuming Void",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Arrangement",
+      "skillRequired": 70,
+      "skillFull": 80,
+      "mana": 30,
+      "castSeconds": 5,
+      "rangeMeters": 3.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 10,
+        "max": 12
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Burning Salts Pouch",
+          "quantity": 1,
+          "guid": "01673ce7-4b59-4e3d-a176-7015940b8bed",
+          "referenceType": 52
+        },
+        {
+          "name": "Tar",
+          "quantity": 2,
+          "guid": "2f29e287-936f-41c9-b9f5-91bb5906c449",
+          "referenceType": 52
+        },
+        {
+          "name": "Nyx",
+          "quantity": 1,
+          "guid": "70d5dd2d-6985-4092-aa60-b5929e5710eb",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "5268be37-ea72-41ab-8505-f669bacac861",
+      "internalName": "MagicSpell_Elementalism_CrystalFormation",
+      "name": "Crystal Formation",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Emanation",
+      "skillRequired": 45,
+      "skillFull": 75,
+      "mana": 20,
+      "castSeconds": 6,
+      "rangeMeters": 4.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 3,
+        "max": 6
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fulminate Pouch",
+          "quantity": 1,
+          "guid": "d1451d2c-595d-425a-aa9c-40fbd4750094",
+          "referenceType": 52
+        },
+        {
+          "name": "Rock Crystal",
+          "quantity": 1,
+          "guid": "caab3111-9d7d-45b6-a95e-229fcc6f7df8",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "109a4a56-04d8-46fc-a9fd-9f779991f101",
+      "internalName": "MagicSpell_Elementalism_Dismality",
+      "name": "Dismality",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Polarization",
+      "skillRequired": 50,
+      "skillFull": 70,
+      "mana": 100,
+      "castSeconds": 10,
+      "rangeMeters": 10.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 1,
+        "max": 2
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Flowing Nimbic Spirits",
+          "quantity": 1,
+          "guid": "3b51af12-147e-4d3d-83c9-712c348ac35a",
+          "referenceType": 52
+        },
+        {
+          "name": "Nyx",
+          "quantity": 1,
+          "guid": "70d5dd2d-6985-4092-aa60-b5929e5710eb",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "4f7f340f-60db-4f05-9c30-6ac0ab1f93e3",
+      "internalName": "MagicSpell_Elementalism_DustBurst",
+      "name": "Dust Burst",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Propulsion",
+      "skillRequired": 70,
+      "skillFull": 100,
+      "mana": 15,
+      "castSeconds": 0.75,
+      "rangeMeters": null,
+      "effect": {
+        "kind": "Damage",
+        "min": 10,
+        "max": 15
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fulminate Pouch",
+          "quantity": 1,
+          "guid": "d1451d2c-595d-425a-aa9c-40fbd4750094",
+          "referenceType": 52
+        },
+        {
+          "name": "Granum Powder",
+          "quantity": 1,
+          "guid": "cc6d23d2-16f6-404a-baa7-3274c2bde026",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "78489dc0-5c09-4c17-9b2f-c2948f4e3a8a",
+      "internalName": "MagicSpell_Elementalism_Fireball",
+      "name": "Elementalism Fireball",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Aggregation",
+      "skillRequired": 40,
+      "skillFull": 65,
+      "mana": 35,
+      "castSeconds": 3,
+      "rangeMeters": null,
+      "effect": {
+        "kind": "Damage",
+        "min": 26,
+        "max": 28
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Burning Salts Pouch",
+          "quantity": 1,
+          "guid": "01673ce7-4b59-4e3d-a176-7015940b8bed",
+          "referenceType": 52
+        },
+        {
+          "name": "Nitre",
+          "quantity": 1,
+          "guid": "2e367a6d-a3db-4148-bd8a-f606b84242d5",
+          "referenceType": 52
+        },
+        {
+          "name": "Coal",
+          "quantity": 1,
+          "guid": "5edf0b36-e232-4446-bfdb-0193a179d0df",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "8c173956-05f4-4338-8ce1-4f8d3db6e576",
+      "internalName": "MagicSpell_Elementalism_Ember",
+      "name": "Ember",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Propulsion",
+      "skillRequired": 20,
+      "skillFull": 60,
+      "mana": 10,
+      "castSeconds": 0.5,
+      "rangeMeters": null,
+      "effect": {
+        "kind": "Damage",
+        "min": 25,
+        "max": 28
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fulminate Pouch",
+          "quantity": 1,
+          "guid": "d1451d2c-595d-425a-aa9c-40fbd4750094",
+          "referenceType": 52
+        },
+        {
+          "name": "Coal",
+          "quantity": 1,
+          "guid": "5edf0b36-e232-4446-bfdb-0193a179d0df",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "94d84fad-5057-47e5-881e-b6264ed66e12",
+      "internalName": "MagicSpell_Elementalism_FireWall",
+      "name": "Fire Wall",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Arrangement",
+      "skillRequired": 70,
+      "skillFull": 90,
+      "mana": 25,
+      "castSeconds": 3.5,
+      "rangeMeters": 4.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 12,
+        "max": 13
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Burning Salts Pouch",
+          "quantity": 1,
+          "guid": "01673ce7-4b59-4e3d-a176-7015940b8bed",
+          "referenceType": 52
+        },
+        {
+          "name": "Nitre",
+          "quantity": 1,
+          "guid": "2e367a6d-a3db-4148-bd8a-f606b84242d5",
+          "referenceType": 52
+        },
+        {
+          "name": "Pitch",
+          "quantity": 4,
+          "guid": "e0bb562c-1752-4003-8d6c-7007ad14fd5f",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "4dfc62f1-e3c2-4ee4-be71-b1969385cd9f",
+      "internalName": "MagicSpell_Elementalism_Firestorm",
+      "name": "Firestorm",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Direction",
+      "skillRequired": 70,
+      "skillFull": 95,
+      "mana": 80,
+      "castSeconds": 12,
+      "rangeMeters": 5.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 16,
+        "max": 30
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fuming Ophite Pouch",
+          "quantity": 1,
+          "guid": "d2ccfc22-e152-48fc-898f-3f7939db9f69",
+          "referenceType": 52
+        },
+        {
+          "name": "Pyropite",
+          "quantity": 5,
+          "guid": "e43c8e1a-5fd0-4315-9a36-b9cb08e484a3",
+          "referenceType": 52
+        },
+        {
+          "name": "Tar",
+          "quantity": 1,
+          "guid": "2f29e287-936f-41c9-b9f5-91bb5906c449",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "84887c63-43d9-4f69-8aa0-645eefb4a5e3",
+      "internalName": "MagicSpell_Elementalism_Frigidity",
+      "name": "Frigidity",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Polarization",
+      "skillRequired": 70,
+      "skillFull": 100,
+      "mana": 100,
+      "castSeconds": 10,
+      "rangeMeters": 10.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 1,
+        "max": 2
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Flowing Nimbic Spirits",
+          "quantity": 1,
+          "guid": "3b51af12-147e-4d3d-83c9-712c348ac35a",
+          "referenceType": 52
+        },
+        {
+          "name": "Salt Crystal",
+          "quantity": 1,
+          "guid": "72a34e34-cbf6-4cd3-9b8b-fee5dfa5b20c",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "ffed4f72-c3a3-48f1-946a-93b12ed4e1ba",
+      "internalName": "MagicSpell_Elementalism_Fumingbubble",
+      "name": "Fumingbubble",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Aggregation",
+      "skillRequired": 60,
+      "skillFull": 80,
+      "mana": 45,
+      "castSeconds": 4,
+      "rangeMeters": null,
+      "effect": {
+        "kind": "Damage",
+        "min": 23,
+        "max": 28
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Burning Salts Pouch",
+          "quantity": 1,
+          "guid": "01673ce7-4b59-4e3d-a176-7015940b8bed",
+          "referenceType": 52
+        },
+        {
+          "name": "White Fuming Essence",
+          "quantity": 1,
+          "guid": "fa185adb-5569-467f-bfcf-edd70db938bf",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "5bbdfaeb-525b-4185-a86a-c1c88d9cf675",
+      "internalName": "MagicSpell_Elementalism_Gale",
+      "name": "Gale",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Propulsion",
+      "skillRequired": 0,
+      "skillFull": 30,
+      "mana": 16,
+      "castSeconds": 1.2,
+      "rangeMeters": null,
+      "effect": {
+        "kind": "Damage",
+        "min": 1,
+        "max": 2
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fulminate Pouch",
+          "quantity": 1,
+          "guid": "d1451d2c-595d-425a-aa9c-40fbd4750094",
+          "referenceType": 52
+        },
+        {
+          "name": "Noisome Essence",
+          "quantity": 1,
+          "guid": "a695e8a8-28a3-4f9f-b01f-5ad7b8e7091b",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "efb85634-8ca4-4369-b152-5aef921c0a8b",
+      "internalName": "MagicSpell_Elementalism_GeyserWall",
+      "name": "Geyser Wall",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Arrangement",
+      "skillRequired": 50,
+      "skillFull": 65,
+      "mana": 20,
+      "castSeconds": 3,
+      "rangeMeters": 4.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 11,
+        "max": 15
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Burning Salts Pouch",
+          "quantity": 1,
+          "guid": "01673ce7-4b59-4e3d-a176-7015940b8bed",
+          "referenceType": 52
+        },
+        {
+          "name": "Nimbic Spirits",
+          "quantity": 1,
+          "guid": "87487011-590a-4fcd-a498-123b3719ab6c",
+          "referenceType": 52
+        },
+        {
+          "name": "Purified Water",
+          "quantity": 1,
+          "guid": "813ba639-cd23-4321-9f92-f3e0c1763630",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "36ac5095-9ddf-4a3f-94f1-8f49925c4700",
+      "internalName": "MagicSpell_Elementalism_GravitySnare",
+      "name": "Gravity Snare",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Direction",
+      "skillRequired": 85,
+      "skillFull": 100,
+      "mana": 125,
+      "castSeconds": 4,
+      "rangeMeters": null,
+      "effect": {
+        "kind": "Damage",
+        "min": 10,
+        "max": 14
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fuming Ophite Pouch",
+          "quantity": 1,
+          "guid": "d2ccfc22-e152-48fc-898f-3f7939db9f69",
+          "referenceType": 52
+        },
+        {
+          "name": "Lodestone Powder",
+          "quantity": 5,
+          "guid": "20211c69-a268-4788-8ab6-1f1b79de85a4",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "2441c56e-8912-4ef8-98c5-c46402609a7f",
+      "internalName": "MagicSpell_Elementalism_HailStorm",
+      "name": "Hail Storm",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Direction",
+      "skillRequired": 45,
+      "skillFull": 70,
+      "mana": 70,
+      "castSeconds": 10,
+      "rangeMeters": 40.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 20,
+        "max": 30
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fuming Ophite Pouch",
+          "quantity": 1,
+          "guid": "d2ccfc22-e152-48fc-898f-3f7939db9f69",
+          "referenceType": 52
+        },
+        {
+          "name": "Salt Crystal",
+          "quantity": 10,
+          "guid": "72a34e34-cbf6-4cd3-9b8b-fee5dfa5b20c",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "774a1a78-cf9d-4327-9a6b-8e6fd8de75c4",
+      "internalName": "MagicSpell_Elementalism_Hailstone",
+      "name": "Hailstone",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Propulsion",
+      "skillRequired": 20,
+      "skillFull": 60,
+      "mana": 10,
+      "castSeconds": 0.5,
+      "rangeMeters": null,
+      "effect": {
+        "kind": "Damage",
+        "min": 25,
+        "max": 28
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fulminate Pouch",
+          "quantity": 1,
+          "guid": "d1451d2c-595d-425a-aa9c-40fbd4750094",
+          "referenceType": 52
+        },
+        {
+          "name": "Salt",
+          "quantity": 1,
+          "guid": "6310bc40-8fd5-4161-95f9-9ac14d2cfd3c",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "c53e662a-8159-43e3-8233-4ad83240fac6",
+      "internalName": "MagicSpell_Elementalism_Humidity",
+      "name": "Humidity",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Polarization",
+      "skillRequired": 50,
+      "skillFull": 70,
+      "mana": 100,
+      "castSeconds": 10,
+      "rangeMeters": 10.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 1,
+        "max": 2
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Flowing Nimbic Spirits",
+          "quantity": 1,
+          "guid": "3b51af12-147e-4d3d-83c9-712c348ac35a",
+          "referenceType": 52
+        },
+        {
+          "name": "Maalite",
+          "quantity": 1,
+          "guid": "070ee1c5-126a-4d44-9162-d609269997f5",
+          "referenceType": 52
+        },
+        {
+          "name": "Purified Water",
+          "quantity": 5,
+          "guid": "813ba639-cd23-4321-9f92-f3e0c1763630",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "abbcd3e2-e026-4b48-aafd-fcee99009c59",
+      "internalName": "MagicSpell_Elementalism_IceBarrier",
+      "name": "Ice Barrier",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Arrangement",
+      "skillRequired": 80,
+      "skillFull": 100,
+      "mana": 30,
+      "castSeconds": 5.5,
+      "rangeMeters": 0.0,
+      "effect": null,
+      "description": "",
+      "reagents": [
+        {
+          "name": "Burning Salts Pouch",
+          "quantity": 1,
+          "guid": "01673ce7-4b59-4e3d-a176-7015940b8bed",
+          "referenceType": 52
+        },
+        {
+          "name": "Salt",
+          "quantity": 10,
+          "guid": "6310bc40-8fd5-4161-95f9-9ac14d2cfd3c",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "503d8dcb-296f-407f-9eb9-2a9df2ac4d2f",
+      "internalName": "MagicSpell_Elementalism_Ignition",
+      "name": "Ignition",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Propulsion",
+      "skillRequired": 0,
+      "skillFull": 30,
+      "mana": 16,
+      "castSeconds": 1.5,
+      "rangeMeters": 5.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 20,
+        "max": 25
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fulminate Pouch",
+          "quantity": 1,
+          "guid": "d1451d2c-595d-425a-aa9c-40fbd4750094",
+          "referenceType": 52
+        },
+        {
+          "name": "Nitre",
+          "quantity": 1,
+          "guid": "2e367a6d-a3db-4148-bd8a-f606b84242d5",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "a76e465c-97da-457a-9154-ee5e11b796f0",
+      "internalName": "MagicSpell_Elementalism_Illumination",
+      "name": "Illumination",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Emanation",
+      "skillRequired": 0,
+      "skillFull": 20,
+      "mana": 20,
+      "castSeconds": 3,
+      "rangeMeters": 3.0,
+      "effect": null,
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fulminate Pouch",
+          "quantity": 1,
+          "guid": "d1451d2c-595d-425a-aa9c-40fbd4750094",
+          "referenceType": 52
+        },
+        {
+          "name": "Luminescent Extract",
+          "quantity": 1,
+          "guid": "9a1afa4b-8a50-49e2-a411-d1dba3baf6fa",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "6a6e7ce0-e54e-40d4-9268-f5795518abb1",
+      "internalName": "MagicSpell_Elementalism_Incalescence",
+      "name": "Incalescence",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Polarization",
+      "skillRequired": 70,
+      "skillFull": 100,
+      "mana": 100,
+      "castSeconds": 10,
+      "rangeMeters": 10.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 1,
+        "max": 2
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Flowing Nimbic Spirits",
+          "quantity": 1,
+          "guid": "3b51af12-147e-4d3d-83c9-712c348ac35a",
+          "referenceType": 52
+        },
+        {
+          "name": "Maalite",
+          "quantity": 2,
+          "guid": "070ee1c5-126a-4d44-9162-d609269997f5",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "33e2a6f1-f9d1-4015-b024-d44086469c70",
+      "internalName": "MagicSpell_Elementalism_LavaBall",
+      "name": "Lava Ball",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Aggregation",
+      "skillRequired": 75,
+      "skillFull": 90,
+      "mana": 45,
+      "castSeconds": 4,
+      "rangeMeters": null,
+      "effect": {
+        "kind": "Damage",
+        "min": 28,
+        "max": 32
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Burning Salts Pouch",
+          "quantity": 1,
+          "guid": "01673ce7-4b59-4e3d-a176-7015940b8bed",
+          "referenceType": 52
+        },
+        {
+          "name": "Volcanic Ash",
+          "quantity": 1,
+          "guid": "e9df3a11-05cc-4cbd-bf40-67941ffbb348",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "51efe5d5-bc7a-48fc-864c-5e60c547d4e7",
+      "internalName": "MagicSpell_Elementalism_LavaFlow",
+      "name": "Lava Flow",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Direction",
+      "skillRequired": 50,
+      "skillFull": 75,
+      "mana": 80,
+      "castSeconds": 5,
+      "rangeMeters": 30.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 22,
+        "max": 24
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fuming Ophite Pouch",
+          "quantity": 1,
+          "guid": "d2ccfc22-e152-48fc-898f-3f7939db9f69",
+          "referenceType": 52
+        },
+        {
+          "name": "Pyropite",
+          "quantity": 5,
+          "guid": "e43c8e1a-5fd0-4315-9a36-b9cb08e484a3",
+          "referenceType": 52
+        },
+        {
+          "name": "Volcanic Ash",
+          "quantity": 10,
+          "guid": "e9df3a11-05cc-4cbd-bf40-67941ffbb348",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "e20c276f-6197-4cf8-8f53-060f10d45e98",
+      "internalName": "MagicSpell_Elementalism_LightningBall",
+      "name": "Lightning Ball",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Direction",
+      "skillRequired": 30,
+      "skillFull": 55,
+      "mana": 40,
+      "castSeconds": 5,
+      "rangeMeters": null,
+      "effect": {
+        "kind": "Damage",
+        "min": 19,
+        "max": 25
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fuming Ophite Pouch",
+          "quantity": 1,
+          "guid": "d2ccfc22-e152-48fc-898f-3f7939db9f69",
+          "referenceType": 52
+        },
+        {
+          "name": "Cuprum",
+          "quantity": 1,
+          "guid": "e0bb0ee0-b71a-4c4a-a771-d8bec020ee1e",
+          "referenceType": 53
+        }
+      ]
+    },
+    {
+      "id": "d61bc398-08f4-492d-8a0a-b01cb2c279cf",
+      "internalName": "MagicSpell_Elementalism_LightningBolt",
+      "name": "Lightning Bolt",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Aggregation",
+      "skillRequired": 80,
+      "skillFull": 95,
+      "mana": 38,
+      "castSeconds": 3,
+      "rangeMeters": null,
+      "effect": {
+        "kind": "Damage",
+        "min": 10,
+        "max": 11
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Burning Salts Pouch",
+          "quantity": 1,
+          "guid": "01673ce7-4b59-4e3d-a176-7015940b8bed",
+          "referenceType": 52
+        },
+        {
+          "name": "Cuprum",
+          "quantity": 1,
+          "guid": "e0bb0ee0-b71a-4c4a-a771-d8bec020ee1e",
+          "referenceType": 53
+        }
+      ]
+    },
+    {
+      "id": "9031e2fa-2055-4575-a705-6e6c101f61e8",
+      "internalName": "MagicSpell_Elementalism_Limpidity",
+      "name": "Limpidity",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Polarization",
+      "skillRequired": 20,
+      "skillFull": 40,
+      "mana": 100,
+      "castSeconds": 10,
+      "rangeMeters": 10.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 1,
+        "max": 2
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Flowing Nimbic Spirits",
+          "quantity": 1,
+          "guid": "3b51af12-147e-4d3d-83c9-712c348ac35a",
+          "referenceType": 52
+        },
+        {
+          "name": "Nimbic Spirits",
+          "quantity": 1,
+          "guid": "87487011-590a-4fcd-a498-123b3719ab6c",
+          "referenceType": 52
+        },
+        {
+          "name": "Granum Powder",
+          "quantity": 5,
+          "guid": "cc6d23d2-16f6-404a-baa7-3274c2bde026",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "d0de1169-0b33-439b-8e3f-e9591e20e84e",
+      "internalName": "MagicSpell_Elementalism_MendingVapors",
+      "name": "Mending Vapors",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Propulsion",
+      "skillRequired": 70,
+      "skillFull": 100,
+      "mana": 15,
+      "castSeconds": 1.1,
+      "rangeMeters": 5.0,
+      "effect": null,
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fulminate Pouch",
+          "quantity": 1,
+          "guid": "d1451d2c-595d-425a-aa9c-40fbd4750094",
+          "referenceType": 52
+        },
+        {
+          "name": "Calamine",
+          "quantity": 1,
+          "guid": "5c35e645-14c3-4ebb-91c8-e91a71515c95",
+          "referenceType": 52
+        },
+        {
+          "name": "Water",
+          "quantity": 1,
+          "guid": "772a0475-6a52-48f9-bb7f-0a2b8ebfd280",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "719e8ebe-848f-497f-b734-d64cd0ddd4ad",
+      "internalName": "MagicSpell_Elementalism_Mirage",
+      "name": "Mirage",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Arrangement",
+      "skillRequired": 5,
+      "skillFull": 25,
+      "mana": 12,
+      "castSeconds": 2,
+      "rangeMeters": 4.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 1,
+        "max": 2
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Burning Salts Pouch",
+          "quantity": 1,
+          "guid": "01673ce7-4b59-4e3d-a176-7015940b8bed",
+          "referenceType": 52
+        },
+        {
+          "name": "Sweat Salt",
+          "quantity": 1,
+          "guid": "7b981e5c-a15a-41af-a0ad-d03e63314871",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "c9137b5e-bb05-46d9-b928-4ec4c08aecba",
+      "internalName": "MagicSpell_Elementalism_Placidity",
+      "name": "Placidity",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Polarization",
+      "skillRequired": 0,
+      "skillFull": 30,
+      "mana": 100,
+      "castSeconds": 10,
+      "rangeMeters": 10.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 1,
+        "max": 2
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Flowing Nimbic Spirits",
+          "quantity": 1,
+          "guid": "3b51af12-147e-4d3d-83c9-712c348ac35a",
+          "referenceType": 52
+        },
+        {
+          "name": "Flakestone",
+          "quantity": 1,
+          "guid": "aa6f3a88-da29-4197-97c1-ba27702d7128",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "b68abf7b-9963-402a-b0c5-e4d0b9385f38",
+      "internalName": "MagicSpell_Elementalism_RoaringWind",
+      "name": "Roaring Wind",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Direction",
+      "skillRequired": 60,
+      "skillFull": 80,
+      "mana": 100,
+      "castSeconds": 10,
+      "rangeMeters": 40.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 8,
+        "max": 17
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fuming Ophite Pouch",
+          "quantity": 1,
+          "guid": "d2ccfc22-e152-48fc-898f-3f7939db9f69",
+          "referenceType": 52
+        },
+        {
+          "name": "Nimbic Spirits",
+          "quantity": 2,
+          "guid": "87487011-590a-4fcd-a498-123b3719ab6c",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "4a50a06e-ed05-4334-8933-92a8df000b20",
+      "internalName": "MagicSpell_Elementalism_SandBarrier",
+      "name": "Sand Barrier",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Arrangement",
+      "skillRequired": 40,
+      "skillFull": 60,
+      "mana": 20,
+      "castSeconds": 4,
+      "rangeMeters": 7.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 5,
+        "max": 9
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Burning Salts Pouch",
+          "quantity": 1,
+          "guid": "01673ce7-4b59-4e3d-a176-7015940b8bed",
+          "referenceType": 52
+        },
+        {
+          "name": "Lodestone Powder",
+          "quantity": 1,
+          "guid": "20211c69-a268-4788-8ab6-1f1b79de85a4",
+          "referenceType": 52
+        },
+        {
+          "name": "Granum Powder",
+          "quantity": 1,
+          "guid": "cc6d23d2-16f6-404a-baa7-3274c2bde026",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "9385e7c0-4ade-4c7f-bbab-6be5a7daeaa5",
+      "internalName": "MagicSpell_Elementalism_Sandspout",
+      "name": "Sandspout",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Aggregation",
+      "skillRequired": 20,
+      "skillFull": 35,
+      "mana": 32,
+      "castSeconds": 3,
+      "rangeMeters": null,
+      "effect": {
+        "kind": "Damage",
+        "min": 12,
+        "max": 18
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Burning Salts Pouch",
+          "quantity": 1,
+          "guid": "01673ce7-4b59-4e3d-a176-7015940b8bed",
+          "referenceType": 52
+        },
+        {
+          "name": "Granum Powder",
+          "quantity": 10,
+          "guid": "cc6d23d2-16f6-404a-baa7-3274c2bde026",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "90774e57-6e4d-49af-824e-43524fe2a4bc",
+      "internalName": "MagicSpell_Elementalism_ScaldingFumes",
+      "name": "Scalding Fumes",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Direction",
+      "skillRequired": 5,
+      "skillFull": 35,
+      "mana": 65,
+      "castSeconds": 5,
+      "rangeMeters": 30.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 8,
+        "max": 10
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fuming Ophite Pouch",
+          "quantity": 1,
+          "guid": "d2ccfc22-e152-48fc-898f-3f7939db9f69",
+          "referenceType": 52
+        },
+        {
+          "name": "White Fuming Essence",
+          "quantity": 1,
+          "guid": "fa185adb-5569-467f-bfcf-edd70db938bf",
+          "referenceType": 52
+        },
+        {
+          "name": "Sweat Salt",
+          "quantity": 5,
+          "guid": "7b981e5c-a15a-41af-a0ad-d03e63314871",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "d0d68432-b94b-4861-bac1-49b8e63a1a75",
+      "internalName": "MagicSpell_Elementalism_ScouringStream",
+      "name": "Scouring Stream",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Aggregation",
+      "skillRequired": 0,
+      "skillFull": 25,
+      "mana": 30,
+      "castSeconds": 3,
+      "rangeMeters": null,
+      "effect": {
+        "kind": "Damage",
+        "min": 17,
+        "max": 23
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Burning Salts Pouch",
+          "quantity": 1,
+          "guid": "01673ce7-4b59-4e3d-a176-7015940b8bed",
+          "referenceType": 52
+        },
+        {
+          "name": "Water",
+          "quantity": 5,
+          "guid": "772a0475-6a52-48f9-bb7f-0a2b8ebfd280",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "d6b91b52-8eb5-432b-b552-27fc77c2d81a",
+      "internalName": "MagicSpell_Elementalism_Shadow",
+      "name": "Shadow",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Emanation",
+      "skillRequired": 0,
+      "skillFull": 30,
+      "mana": 60,
+      "castSeconds": 5,
+      "rangeMeters": 6.0,
+      "effect": null,
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fulminate Pouch",
+          "quantity": 1,
+          "guid": "d1451d2c-595d-425a-aa9c-40fbd4750094",
+          "referenceType": 52
+        },
+        {
+          "name": "Pitch",
+          "quantity": 1,
+          "guid": "e0bb562c-1752-4003-8d6c-7007ad14fd5f",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "291da602-5968-4333-a681-e4e31cb84a63",
+      "internalName": "MagicSpell_Elementalism_ShiveringCold",
+      "name": "Shivering Cold",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Emanation",
+      "skillRequired": 20,
+      "skillFull": 50,
+      "mana": 20,
+      "castSeconds": 6,
+      "rangeMeters": 6.0,
+      "effect": null,
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fulminate Pouch",
+          "quantity": 1,
+          "guid": "d1451d2c-595d-425a-aa9c-40fbd4750094",
+          "referenceType": 52
+        },
+        {
+          "name": "Purified Water",
+          "quantity": 1,
+          "guid": "813ba639-cd23-4321-9f92-f3e0c1763630",
+          "referenceType": 52
+        },
+        {
+          "name": "Salt",
+          "quantity": 1,
+          "guid": "6310bc40-8fd5-4161-95f9-9ac14d2cfd3c",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "ea297a7f-fd13-4cbd-aa5f-762e7f5d48e7",
+      "internalName": "MagicSpell_Elementalism_Shock",
+      "name": "Shock",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Propulsion",
+      "skillRequired": 40,
+      "skillFull": 80,
+      "mana": 15,
+      "castSeconds": 1.5,
+      "rangeMeters": 15.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 20,
+        "max": 21
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fulminate Pouch",
+          "quantity": 1,
+          "guid": "d1451d2c-595d-425a-aa9c-40fbd4750094",
+          "referenceType": 52
+        },
+        {
+          "name": "Cuprum",
+          "quantity": 1,
+          "guid": "e0bb0ee0-b71a-4c4a-a771-d8bec020ee1e",
+          "referenceType": 53
+        }
+      ]
+    },
+    {
+      "id": "af224249-e19d-49ef-898d-bb90d7bbe5d4",
+      "internalName": "MagicSpell_Elementalism_Sludge",
+      "name": "Sludge",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Propulsion",
+      "skillRequired": 40,
+      "skillFull": 80,
+      "mana": 18,
+      "castSeconds": 2.5,
+      "rangeMeters": 5.0,
+      "effect": null,
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fulminate Pouch",
+          "quantity": 1,
+          "guid": "d1451d2c-595d-425a-aa9c-40fbd4750094",
+          "referenceType": 52
+        },
+        {
+          "name": "Pitch",
+          "quantity": 1,
+          "guid": "e0bb562c-1752-4003-8d6c-7007ad14fd5f",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "db8d0532-c88a-41e6-a807-ca81a8aaadb5",
+      "internalName": "MagicSpell_Elementalism_Starfall",
+      "name": "Starfall",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Direction",
+      "skillRequired": 90,
+      "skillFull": 100,
+      "mana": 90,
+      "castSeconds": 10,
+      "rangeMeters": 30.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 22,
+        "max": 31
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fuming Ophite Pouch",
+          "quantity": 1,
+          "guid": "d2ccfc22-e152-48fc-898f-3f7939db9f69",
+          "referenceType": 52
+        },
+        {
+          "name": "Lodestone Powder",
+          "quantity": 10,
+          "guid": "20211c69-a268-4788-8ab6-1f1b79de85a4",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "885536f7-862b-45e2-bba7-d4c6568a662f",
+      "internalName": "MagicSpell_Elementalism_Starshower",
+      "name": "Starshower",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Emanation",
+      "skillRequired": 70,
+      "skillFull": 100,
+      "mana": 35,
+      "castSeconds": 8,
+      "rangeMeters": 15.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 10,
+        "max": 15
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Burning Salts Pouch",
+          "quantity": 1,
+          "guid": "01673ce7-4b59-4e3d-a176-7015940b8bed",
+          "referenceType": 52
+        },
+        {
+          "name": "Lodestone Powder",
+          "quantity": 5,
+          "guid": "20211c69-a268-4788-8ab6-1f1b79de85a4",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "e188d2a6-dc10-4fda-9579-127e42416da1",
+      "internalName": "MagicSpell_Elementalism_StaticCharge",
+      "name": "Static Charge",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Arrangement",
+      "skillRequired": 55,
+      "skillFull": 80,
+      "mana": 25,
+      "castSeconds": 3.5,
+      "rangeMeters": 3.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 13,
+        "max": 14
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Burning Salts Pouch",
+          "quantity": 1,
+          "guid": "01673ce7-4b59-4e3d-a176-7015940b8bed",
+          "referenceType": 52
+        },
+        {
+          "name": "Cuprum",
+          "quantity": 1,
+          "guid": "e0bb0ee0-b71a-4c4a-a771-d8bec020ee1e",
+          "referenceType": 53
+        }
+      ]
+    },
+    {
+      "id": "22a1ccaa-0e5e-485b-b0e6-348edbeba7aa",
+      "internalName": "MagicSpell_Elementalism_StillingMist",
+      "name": "Stilling Mist",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Emanation",
+      "skillRequired": 70,
+      "skillFull": 100,
+      "mana": 35,
+      "castSeconds": 4,
+      "rangeMeters": 10.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 3,
+        "max": 4
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fulminate Pouch",
+          "quantity": 1,
+          "guid": "d1451d2c-595d-425a-aa9c-40fbd4750094",
+          "referenceType": 52
+        },
+        {
+          "name": "Purified Water",
+          "quantity": 5,
+          "guid": "813ba639-cd23-4321-9f92-f3e0c1763630",
+          "referenceType": 52
+        },
+        {
+          "name": "Calamine",
+          "quantity": 1,
+          "guid": "5c35e645-14c3-4ebb-91c8-e91a71515c95",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "c8897fa7-8842-4cfc-86ff-ca05929917ae",
+      "internalName": "MagicSpell_Elementalism_Stone",
+      "name": "Stone",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Propulsion",
+      "skillRequired": 0,
+      "skillFull": 30,
+      "mana": 9,
+      "castSeconds": 0.5,
+      "rangeMeters": null,
+      "effect": {
+        "kind": "Damage",
+        "min": 23,
+        "max": 25
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fulminate Pouch",
+          "quantity": 1,
+          "guid": "d1451d2c-595d-425a-aa9c-40fbd4750094",
+          "referenceType": 52
+        },
+        {
+          "name": "Granum Pile",
+          "quantity": 1,
+          "guid": "d274659a-8ef4-467a-bb4d-b2b95f279ae1",
+          "referenceType": 53
+        }
+      ]
+    },
+    {
+      "id": "63a927eb-2e68-46e9-a0ef-0d2b4c9dc009",
+      "internalName": "MagicSpell_Elementalism_StoneWall",
+      "name": "Stone Wall",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Arrangement",
+      "skillRequired": 70,
+      "skillFull": 90,
+      "mana": 50,
+      "castSeconds": 3.5,
+      "rangeMeters": 4.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 12,
+        "max": 14
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Burning Salts Pouch",
+          "quantity": 1,
+          "guid": "01673ce7-4b59-4e3d-a176-7015940b8bed",
+          "referenceType": 52
+        },
+        {
+          "name": "Granum Pile",
+          "quantity": 20,
+          "guid": "d274659a-8ef4-467a-bb4d-b2b95f279ae1",
+          "referenceType": 53
+        },
+        {
+          "name": "Lodestone Powder",
+          "quantity": 5,
+          "guid": "20211c69-a268-4788-8ab6-1f1b79de85a4",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "57562b9c-f944-485c-8510-2c542a13b67a",
+      "internalName": "MagicSpell_Elementalism_SwelteringHeat",
+      "name": "Sweltering Heat",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Emanation",
+      "skillRequired": 20,
+      "skillFull": 50,
+      "mana": 30,
+      "castSeconds": 6,
+      "rangeMeters": 4.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 1,
+        "max": 2
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fulminate Pouch",
+          "quantity": 1,
+          "guid": "d1451d2c-595d-425a-aa9c-40fbd4750094",
+          "referenceType": 52
+        },
+        {
+          "name": "Coal",
+          "quantity": 1,
+          "guid": "5edf0b36-e232-4446-bfdb-0193a179d0df",
+          "referenceType": 52
+        },
+        {
+          "name": "Purified Water",
+          "quantity": 1,
+          "guid": "813ba639-cd23-4321-9f92-f3e0c1763630",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "df6abdf6-4140-49ac-9e42-5780ebedb173",
+      "internalName": "MagicSpell_Elementalism_TarPit",
+      "name": "Tar Pit",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Direction",
+      "skillRequired": 75,
+      "skillFull": 90,
+      "mana": 80,
+      "castSeconds": 8,
+      "rangeMeters": 30.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 16,
+        "max": 20
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fuming Ophite Pouch",
+          "quantity": 1,
+          "guid": "d2ccfc22-e152-48fc-898f-3f7939db9f69",
+          "referenceType": 52
+        },
+        {
+          "name": "Tar",
+          "quantity": 1,
+          "guid": "2f29e287-936f-41c9-b9f5-91bb5906c449",
+          "referenceType": 52
+        },
+        {
+          "name": "Nyx",
+          "quantity": 1,
+          "guid": "70d5dd2d-6985-4092-aa60-b5929e5710eb",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "751c79d6-e0a6-4005-92ca-fed4195a5838",
+      "internalName": "MagicSpell_Elementalism_Tarball",
+      "name": "Tarball",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Aggregation",
+      "skillRequired": 60,
+      "skillFull": 80,
+      "mana": 35,
+      "castSeconds": 4,
+      "rangeMeters": null,
+      "effect": {
+        "kind": "Damage",
+        "min": 9,
+        "max": 12
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Burning Salts Pouch",
+          "quantity": 1,
+          "guid": "01673ce7-4b59-4e3d-a176-7015940b8bed",
+          "referenceType": 52
+        },
+        {
+          "name": "Tar",
+          "quantity": 1,
+          "guid": "2f29e287-936f-41c9-b9f5-91bb5906c449",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "e8ed6044-6a5f-490f-b43d-ee5138f7f0ed",
+      "internalName": "MagicSpell_Elementalism_Torrent",
+      "name": "Torrent",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Propulsion",
+      "skillRequired": 0,
+      "skillFull": 30,
+      "mana": 10,
+      "castSeconds": 1,
+      "rangeMeters": 5.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 9,
+        "max": 12
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fulminate Pouch",
+          "quantity": 1,
+          "guid": "d1451d2c-595d-425a-aa9c-40fbd4750094",
+          "referenceType": 52
+        },
+        {
+          "name": "Water",
+          "quantity": 1,
+          "guid": "772a0475-6a52-48f9-bb7f-0a2b8ebfd280",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "fef06ec8-abcd-4ba2-98a9-3364568f8264",
+      "internalName": "MagicSpell_Elementalism_Torridity",
+      "name": "Torridity",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Polarization",
+      "skillRequired": 50,
+      "skillFull": 70,
+      "mana": 100,
+      "castSeconds": 10,
+      "rangeMeters": 10.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 1,
+        "max": 2
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Flowing Nimbic Spirits",
+          "quantity": 1,
+          "guid": "3b51af12-147e-4d3d-83c9-712c348ac35a",
+          "referenceType": 52
+        },
+        {
+          "name": "Pyropite",
+          "quantity": 2,
+          "guid": "e43c8e1a-5fd0-4315-9a36-b9cb08e484a3",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "0f92d46a-ce38-4190-adc7-bdfab9073311",
+      "internalName": "MagicSpell_Elementalism_Turbulence",
+      "name": "Turbulence",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Polarization",
+      "skillRequired": 0,
+      "skillFull": 30,
+      "mana": 100,
+      "castSeconds": 10,
+      "rangeMeters": 10.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 1,
+        "max": 2
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Flowing Nimbic Spirits",
+          "quantity": 1,
+          "guid": "3b51af12-147e-4d3d-83c9-712c348ac35a",
+          "referenceType": 52
+        },
+        {
+          "name": "Nimbic Spirits",
+          "quantity": 1,
+          "guid": "87487011-590a-4fcd-a498-123b3719ab6c",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "23d36289-c2b5-4655-bc97-fc45603cd7e3",
+      "internalName": "MagicSpell_Elementalism_WaterSpiral",
+      "name": "Water Spiral",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Direction",
+      "skillRequired": 0,
+      "skillFull": 30,
+      "mana": 50,
+      "castSeconds": 5,
+      "rangeMeters": 30.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 23,
+        "max": 28
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fuming Ophite Pouch",
+          "quantity": 1,
+          "guid": "d2ccfc22-e152-48fc-898f-3f7939db9f69",
+          "referenceType": 52
+        },
+        {
+          "name": "Purified Water",
+          "quantity": 10,
+          "guid": "813ba639-cd23-4321-9f92-f3e0c1763630",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "2b3f3042-61f1-4827-9118-3b94288f09c7",
+      "internalName": "MagicSpell_Elementalism_WaterWard",
+      "name": "Water Ward",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Arrangement",
+      "skillRequired": 0,
+      "skillFull": 20,
+      "mana": 10,
+      "castSeconds": 1,
+      "rangeMeters": 1.0,
+      "effect": null,
+      "description": "",
+      "reagents": [
+        {
+          "name": "Burning Salts Pouch",
+          "quantity": 1,
+          "guid": "01673ce7-4b59-4e3d-a176-7015940b8bed",
+          "referenceType": 52
+        },
+        {
+          "name": "Purified Water",
+          "quantity": 1,
+          "guid": "813ba639-cd23-4321-9f92-f3e0c1763630",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "f1b2d599-3448-4281-b1fe-6ccee72f8d35",
+      "internalName": "MagicSpell_Elementalism_Wellspring",
+      "name": "Wellspring",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Emanation",
+      "skillRequired": 0,
+      "skillFull": 30,
+      "mana": 30,
+      "castSeconds": 3,
+      "rangeMeters": 6.0,
+      "effect": null,
+      "description": "",
+      "reagents": [
+        {
+          "name": "Fulminate Pouch",
+          "quantity": 1,
+          "guid": "d1451d2c-595d-425a-aa9c-40fbd4750094",
+          "referenceType": 52
+        },
+        {
+          "name": "Purified Water",
+          "quantity": 1,
+          "guid": "813ba639-cd23-4321-9f92-f3e0c1763630",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "fca04f7e-d318-498e-8c66-355585d54908",
+      "internalName": "MagicSpell_Elementalism_Whirlwind",
+      "name": "Whirlwind",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Aggregation",
+      "skillRequired": 85,
+      "skillFull": 100,
+      "mana": 30,
+      "castSeconds": 3,
+      "rangeMeters": null,
+      "effect": {
+        "kind": "Damage",
+        "min": 1,
+        "max": 2
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Burning Salts Pouch",
+          "quantity": 1,
+          "guid": "01673ce7-4b59-4e3d-a176-7015940b8bed",
+          "referenceType": 52
+        },
+        {
+          "name": "Nimbic Spirits",
+          "quantity": 1,
+          "guid": "87487011-590a-4fcd-a498-123b3719ab6c",
+          "referenceType": 52
+        }
+      ]
+    },
+    {
+      "id": "c19f8849-ab6a-4e49-aa20-3d5237b03c08",
+      "internalName": "MagicSpell_Elementalism_WindBarrier",
+      "name": "Wind Barrier",
+      "school": "Elementalism",
+      "skill": "Now Skill Elemental Arrangement",
+      "skillRequired": 20,
+      "skillFull": 45,
+      "mana": 20,
+      "castSeconds": 4,
+      "rangeMeters": 5.0,
+      "effect": {
+        "kind": "Damage",
+        "min": 2,
+        "max": 5
+      },
+      "description": "",
+      "reagents": [
+        {
+          "name": "Burning Salts Pouch",
+          "quantity": 1,
+          "guid": "01673ce7-4b59-4e3d-a176-7015940b8bed",
+          "referenceType": 52
+        },
+        {
+          "name": "Nimbic Spirits",
+          "quantity": 1,
+          "guid": "87487011-590a-4fcd-a498-123b3719ab6c",
+          "referenceType": 52
+        }
+      ]
+    }
+  ]
+}

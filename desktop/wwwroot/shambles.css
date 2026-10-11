@@ -1,0 +1,64 @@
+.shambles-mode-rail { width: 100%; }
+.shambles-layout { display: grid; grid-template-columns: 300px minmax(420px, 1fr) 290px; border: 1px solid var(--tool-line); border-top: 0; background: var(--tool-panel); }
+.creature-browser, .specimen-panel, .pet-scaler { min-width: 0; padding: 16px; }
+.specimen-panel, .pet-scaler { border-left: 1px solid var(--tool-line); }
+.creature-browser { background: #09070b; }
+.check-field { min-height: 36px; display: flex; align-items: center; gap: 8px; border: 1px solid var(--tool-line); padding: 0 9px; color: var(--tool-muted); font-size: 11px; }
+.check-field input { accent-color: var(--tool-gold); }
+.browser-count { display: flex; justify-content: space-between; padding: 12px 0 7px; color: var(--tool-muted); font-size: 10px; }
+.browser-count button { border: 0; background: transparent; color: var(--tool-gold); font-size: 10px; }
+.creature-list { max-height: min(720px, calc(100vh - 330px)); overflow: auto; }
+.family-heading { position: sticky; top: 0; z-index: 1; display: flex; justify-content: space-between; padding: 8px 6px; border-bottom: 1px solid var(--tool-line); background: #151019; color: var(--tool-gold); font-size: 9px; font-weight: 800; text-transform: uppercase; }
+.creature-row { width: 100%; min-height: 48px; display: grid; grid-template-columns: 38px minmax(0, 1fr) auto; align-items: center; gap: 8px; border: 0; border-bottom: 1px solid var(--tool-line-soft); padding: 5px; background: transparent; color: var(--tool-text); text-align: left; }
+.creature-row:hover, .creature-row.active { background: #1d1422; }
+.creature-row.active { box-shadow: inset 2px 0 var(--tool-gold); }
+.creature-thumb { width: 36px; height: 36px; border: 1px solid var(--tool-line); object-fit: cover; background: #151019; }
+.creature-placeholder { display: grid; place-items: center; color: var(--tool-gold-dim); font-family: Georgia, serif; font-size: 17px; }
+.creature-row strong, .creature-row small { display: block; }
+.creature-row strong { font-size: 11px; }
+.creature-row small { margin-top: 2px; color: var(--tool-muted); font-size: 9px; }
+.creature-row em { color: var(--tool-muted); font-size: 9px; font-style: normal; text-align: right; }
+.specimen-header { min-height: 118px; display: grid; grid-template-columns: 112px 1fr; align-items: center; gap: 16px; border-bottom: 1px solid var(--tool-line); padding-bottom: 14px; }
+.specimen-portrait { width: 112px; height: 112px; display: grid; place-items: center; border: 1px solid var(--tool-line); background: #08060a; overflow: hidden; }
+.specimen-portrait img { width: 100%; height: 100%; object-fit: cover; }
+.specimen-portrait span { color: var(--tool-gold-dim); font: 36px Georgia, serif; }
+.specimen-header h2 { margin: 4px 0 8px; font: 500 28px Georgia, serif; }
+.specimen-badges { display: flex; flex-wrap: wrap; gap: 5px; }
+.specimen-badges span { border: 1px solid var(--tool-line); padding: 3px 6px; color: var(--tool-muted); font-size: 9px; }
+.specimen-badges .good { border-color: #52624c; color: #a7bd9d; }
+.specimen-badges .warn { border-color: #765840; color: #d6aa78; }
+.specimen-metrics { margin-top: 14px; }
+.yield-material { color: var(--tool-gold); border: 0; background: transparent; padding: 0; text-align: left; }
+.yield-material:hover { text-decoration: underline; }
+.shambles-page .summary-lines > div { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 8px 0; border-bottom: 1px solid var(--tool-line-soft); font-size: 11px; }
+.shambles-page .summary-lines > div:last-child { border-bottom: 0; }
+.shambles-page .summary-lines span { color: var(--tool-muted); }
+.shambles-page .summary-lines strong { max-width: 65%; text-align: right; overflow-wrap: anywhere; }
+.pet-scaler { overflow: hidden; }
+.shambles-page .data-table { width: 100%; min-width: 0; table-layout: fixed; }
+.shambles-page .pet-scaler .data-table th,
+.shambles-page .pet-scaler .data-table td { width: 33.333%; padding-right: 5px; padding-left: 5px; }
+.pet-readout { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 15px; border: 1px solid var(--tool-line); }
+.pet-readout div { min-width: 0; padding: 9px 5px; border-right: 1px solid var(--tool-line-soft); text-align: center; }
+.pet-readout div:last-child { border-right: 0; }
+.pet-readout span, .pet-readout strong { display: block; }
+.pet-readout span { color: var(--tool-muted); font-size: 8px; text-transform: uppercase; }
+.pet-readout strong { margin-top: 4px; font: 500 17px Georgia, serif; }
+.pet-meter { height: 4px; margin: 7px 0 15px; background: #241a28; }
+.pet-meter span { display: block; width: 0; height: 100%; background: var(--tool-green); }
+.pet-meter span.over { background: var(--tool-red); }
+.material-workspace { grid-column: 1 / -1; display: grid; grid-template-columns: 320px minmax(0, 1fr); min-height: 670px; }
+.material-controls { padding: 18px; border-right: 1px solid var(--tool-line); background: #09070b; }
+.material-controls h2, .material-rankings h2 { margin: 0 0 14px; font: 500 22px Georgia, serif; }
+.material-bonus { display: flex; justify-content: space-between; margin-top: 15px; padding: 10px 0; border-top: 1px solid var(--tool-line); color: var(--tool-muted); font-size: 11px; }
+.material-bonus strong { color: var(--tool-gold); }
+.material-rankings { padding: 18px; }
+.ranking-heading { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 1px solid var(--tool-line); }
+.ranking-heading span:last-child { padding-bottom: 14px; color: var(--tool-muted); font-size: 10px; }
+.material-source { display: grid; grid-template-columns: minmax(140px, 1fr) repeat(4, minmax(60px, .5fr)) 70px; align-items: center; gap: 7px; min-height: 58px; border-bottom: 1px solid var(--tool-line-soft); }
+.material-source > div span, .material-source > div strong { display: block; }
+.material-source > div span { color: var(--tool-muted); font-size: 8px; text-transform: uppercase; }
+.material-source > div strong { margin-top: 3px; font-size: 12px; }
+.material-source button { min-height: 31px; border: 1px solid var(--tool-line); background: #151019; color: var(--tool-text); font-size: 10px; }
+@media (max-width: 1100px) { .shambles-layout { grid-template-columns: 280px minmax(0, 1fr); } .pet-scaler { grid-column: 1 / -1; border-left: 0; border-top: 1px solid var(--tool-line); } }
+@media (max-width: 760px) { .shambles-layout, .material-workspace { grid-template-columns: 1fr; } .specimen-panel, .pet-scaler, .material-controls { border-left: 0; border-right: 0; border-top: 1px solid var(--tool-line); } .creature-list { max-height: 420px; } .material-source { grid-template-columns: 1fr 1fr; padding: 10px 0; } .material-source > div:first-child { grid-column: 1 / -1; } }

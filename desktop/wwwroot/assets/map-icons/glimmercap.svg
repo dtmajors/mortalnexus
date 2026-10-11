@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Glimmercap">
+  <defs>
+    <radialGradient id="cap" cx=".5" cy=".25" r=".75">
+      <stop stop-color="#fffbd1"/><stop offset=".35" stop-color="#fff52f"/><stop offset="1" stop-color="#d2a500"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <ellipse cx="32" cy="55" rx="18" ry="4" fill="#151d19"/>
+  <path d="M25 54c3-9 4-15 3-23h9c-1 8 0 14 3 23Z" fill="#e9dfb7" stroke="#5b5948" stroke-width="2"/>
+  <path d="M9 33C12 16 22 8 33 8s22 9 24 25c-13 5-34 5-48 0Z" fill="url(#cap)" stroke="#806e00" stroke-width="2.5" filter="url(#glow)"/>
+  <g fill="#fffbd2"><circle cx="24" cy="21" r="2.5"/><circle cx="36" cy="15" r="2"/><circle cx="45" cy="25" r="3"/></g>
+</svg>

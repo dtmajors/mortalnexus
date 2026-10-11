@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#090c0a" />
+    <title>Creature Codex | Mortal Nexus</title>
+    <meta name="description" content="Mortal Online II creature, taming, pet-point, health, and butchery-yield planner." />
+    <link rel="icon" href="/assets/mortal-nexus-app-icon-v2.png" type="image/png" />
+    <link rel="stylesheet" href="/styles.css?v=4" />
+    <link rel="stylesheet" href="/tool-suite.css?v=2" />
+    <link rel="stylesheet" href="/shambles.css?v=5" />
+    <link rel="stylesheet" href="/site-shell.css?v=24" />
+  </head>
+  <body class="tool-page shambles-page">
+    <header class="masthead tool-masthead">
+      <div class="masthead-main">
+        <a class="brand" href="/" aria-label="Mortal Nexus home">
+          <img src="/assets/mortal-nexus-app-icon-v2.png" alt="" width="40" height="40" />
+          <span class="brand-copy"><strong>Mortal Nexus</strong><small>Mortal Online II Reference</small></span>
+        </a>
+        <nav class="tool-nav" aria-label="Tool navigation">
+          <a class="text-button" href="/">Reference</a>
+          <a class="text-button" href="/builder">Builder</a>
+          <a class="text-button" href="/crafting">Crafting</a>
+          <a class="text-button active" href="/creatures" aria-current="page">Creature Codex</a>
+          <a class="text-button" href="/butchery">Butchery</a>
+          <a class="text-button" href="/map">Live map</a>
+          <a class="text-button donate-button" href="https://www.paypal.com/donate/?hosted_button_id=677CRL426BE9Q" target="_blank" rel="noreferrer">Donate</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="tool-main">
+      <header class="tool-titlebar">
+        <div><span class="tool-kicker">Butchery and taming</span><h1>Creature Codex</h1><p>Browse every creature, inspect pet scaling, or plan a material farming run.</p></div>
+        <div id="shamblesStatus" class="status-line"><span class="status-dot"></span><strong>Loading the codex…</strong></div>
+      </header>
+      <div class="tool-rail shambles-mode-rail" role="tablist" aria-label="Creature Codex mode">
+        <button class="tool-tab active" data-mode="creature" type="button"><span>Browse</span><strong>By creature</strong></button>
+        <button class="tool-tab" data-mode="material" type="button"><span>Plan</span><strong>By material</strong></button>
+      </div>
+
+      <section class="shambles-layout">
+        <aside class="creature-browser">
+          <div class="tool-fields one">
+            <label class="tool-field"><span>Search</span><input id="creatureSearch" type="search" placeholder="Creature, family, or drop…" /></label>
+            <label class="tool-field"><span>Class</span><select id="classFilter"><option value="">All classes</option></select></label>
+            <label class="check-field"><input id="tameableOnly" type="checkbox" /><span>Tameable only</span></label>
+            <label class="tool-field"><span>Sort</span><select id="sortCreatures"><option value="family">Group by family</option><option value="name">Name A–Z</option><option value="pp">Pet points</option><option value="hp">Health</option></select></label>
+          </div>
+          <div class="browser-count"><span id="visibleCreatureCount">0 creatures</span><button id="clearCreatureFilters" type="button">Clear</button></div>
+          <div id="creatureList" class="creature-list"></div>
+        </aside>
+
+        <section class="specimen-panel" data-mode-panel="creature">
+          <div id="specimenEmpty" class="empty-panel">Select a creature to inspect its pet profile and butchery table.</div>
+          <div id="specimenContent" hidden>
+            <header class="specimen-header">
+              <div class="specimen-portrait" id="specimenPortrait"></div>
+              <div><span class="tool-kicker" id="specimenTaxon">Creature</span><h2 id="specimenName">—</h2><div id="specimenBadges" class="specimen-badges"></div></div>
+            </header>
+            <div id="specimenMetrics" class="metric-grid specimen-metrics"></div>
+            <section class="tool-section"><h3>Butchery table · 10,000 carcass</h3><div id="yieldTable"></div></section>
+            <section class="tool-section"><h3>Taming profile</h3><div id="tamingDetails" class="summary-lines"></div></section>
+          </div>
+        </section>
+
+        <aside class="pet-scaler" data-mode-panel="creature">
+          <h2 class="tool-column-title">Pet scaling</h2>
+          <div class="tool-fields one">
+            <label class="tool-field"><span>Pet level <output id="petLevelValue">100</output></span><input id="petLevel" type="range" min="1" max="125" value="100" /></label>
+            <label class="tool-field"><span>Relevant lore</span><select id="petLore"><option>0</option><option>25</option><option>50</option><option>75</option><option selected>100</option></select></label>
+            <label class="tool-field"><span>Your PP budget</span><input id="petBudget" type="number" min="0" max="300" placeholder="Optional" /></label>
+          </div>
+          <div class="pet-readout">
+            <div><span>Health</span><strong id="scaledHealth">—</strong></div>
+            <div><span>Pet points</span><strong id="scaledPoints">—</strong></div>
+            <div><span>Budget</span><strong id="budgetStatus">Not set</strong></div>
+          </div>
+          <div class="pet-meter"><span id="petMeterFill"></span></div>
+          <section class="tool-section"><h3>Level marks</h3><table class="data-table"><thead><tr><th>Level</th><th>HP</th><th>PP</th></tr></thead><tbody id="levelMarks"></tbody></table></section>
+          <p class="tool-section-copy">Pet points use the selected creature's base cost and apply the selected relevant-lore discount.</p>
+        </aside>
+
+        <section class="material-workspace" data-mode-panel="material" hidden>
+          <div class="material-controls">
+            <h2>Farming target</h2>
+            <div class="tool-fields">
+              <label class="tool-field wide"><span>Material</span><select id="materialSelect"></select></label>
+              <label class="tool-field"><span>Target amount</span><input id="targetAmount" type="number" min="1" value="10000" /></label>
+              <label class="tool-field"><span>Butchery mastery</span><select id="yieldMastery"><option value="0">0 nodes</option><option value="1">1 node · +2%</option><option value="2">2 nodes · +4%</option><option value="3">3 nodes · +6%</option></select></label>
+              <label class="check-field wide"><input id="faunistBonus" type="checkbox" /><span>Alvarin Faunist · +10%</span></label>
+            </div>
+            <div class="material-bonus"><span>Total yield bonus</span><strong id="yieldBonus">+0%</strong></div>
+          </div>
+          <div class="material-rankings">
+            <div class="ranking-heading"><div><span class="tool-kicker">Best sources</span><h2 id="materialHeading">Select a material</h2></div><span id="sourceCount">0 sources</span></div>
+            <div id="materialResults" class="material-results"></div>
+          </div>
+        </section>
+      </section>
+      <footer class="tool-footer"><span></span><span id="dataCount">—</span></footer>
+    </main>
+    <script src="/shambles.js?v=2"></script>
+    <script src="/site-shell.js?v=22"></script>
+  </body>
+</html>

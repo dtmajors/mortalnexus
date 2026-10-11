@@ -1,0 +1,789 @@
+{
+  "Akrep": {
+    "creature": "Akrep",
+    "loreRoot": "Arthropoda",
+    "lore": "Scorpiones",
+    "yields": [
+      {
+        "material": "Akrep Meat",
+        "qty": 3000
+      },
+      {
+        "material": "Arthropod Carapace",
+        "qty": 1500
+      },
+      {
+        "material": "Crepite",
+        "qty": 1100
+      },
+      {
+        "material": "Dense Crepite",
+        "qty": 100
+      },
+      {
+        "material": "Heavy Carapace",
+        "qty": 500
+      }
+    ],
+    "trophy": [
+      {
+        "name": "Akrep Stinger",
+        "value": "3g"
+      },
+      {
+        "name": "Giant Akrep Stinger",
+        "value": "12g"
+      }
+    ]
+  },
+  "Bush Pig": {
+    "creature": "Bush Pig",
+    "loreRoot": "Mammalia",
+    "lore": "Suina",
+    "yields": [
+      {
+        "material": "Bone Tissue",
+        "qty": 1000
+      },
+      {
+        "material": "Bush Pig Meat",
+        "qty": 4000
+      },
+      {
+        "material": "Emalj",
+        "qty": 200
+      },
+      {
+        "material": "Fullgrain Leather",
+        "qty": 700
+      },
+      {
+        "material": "Tallow",
+        "qty": 100
+      }
+    ],
+    "trophy": [
+      {
+        "name": "Bush Pig Hooves",
+        "value": "8s"
+      }
+    ]
+  },
+  "Campodon / Platybelodon": {
+    "creature": "Campodon",
+    "loreRoot": "Mammalia",
+    "lore": "Paenungulata",
+    "yields": [
+      {
+        "material": "Bone Tissue",
+        "qty": 500
+      },
+      {
+        "material": "Campodon Meat",
+        "qty": 600
+      },
+      {
+        "material": "Fullgrain Leather",
+        "qty": 720
+      },
+      {
+        "material": "Incisium",
+        "qty": 240
+      },
+      {
+        "material": "Ironbone",
+        "qty": 200
+      },
+      {
+        "material": "Molarium",
+        "qty": 200
+      }
+    ],
+    "trophy": [
+      {
+        "name": "Campadon Tusks",
+        "value": "65s"
+      }
+    ]
+  },
+  "Celaeno": {
+    "creature": "Celaeno",
+    "loreRoot": "Mammalia",
+    "lore": "Chiroptera",
+    "yields": [
+      {
+        "material": "Bone Tissue",
+        "qty": 600
+      },
+      {
+        "material": "Celaeno Meat",
+        "qty": 1100
+      },
+      {
+        "material": "Compact Horn",
+        "qty": 400
+      },
+      {
+        "material": "Incisium",
+        "qty": 300
+      },
+      {
+        "material": "Rawhide",
+        "qty": 400
+      }
+    ],
+    "trophy": [
+      {
+        "name": "Celaeno Horns",
+        "value": "1g"
+      }
+    ]
+  },
+  "Crocodile": {
+    "creature": "Crocodile",
+    "loreRoot": "Reptilia",
+    "lore": "Lacertilia",
+    "yields": [
+      {
+        "material": "Bone Tissue",
+        "qty": 2200
+      },
+      {
+        "material": "Crocodile Meat",
+        "qty": 4000
+      },
+      {
+        "material": "Horned Scales",
+        "qty": 600
+      },
+      {
+        "material": "Incisium",
+        "qty": 600
+      },
+      {
+        "material": "Pansar Scales",
+        "qty": 100
+      }
+    ],
+    "trophy": [
+      {
+        "name": "Crocodile Eye",
+        "value": "1g 50s"
+      }
+    ]
+  },
+  "Danaburnu": {
+    "creature": "Danaburnu",
+    "loreRoot": "Arthropoda",
+    "lore": "Insecta",
+    "yields": [
+      {
+        "material": "Crepite",
+        "qty": 900
+      },
+      {
+        "material": "Danaburnu Meat",
+        "qty": 2800
+      },
+      {
+        "material": "Heavy Carapace",
+        "qty": 600
+      }
+    ],
+    "trophy": [
+      {
+        "name": "Danaburnu Palps",
+        "value": "9g"
+      }
+    ]
+  },
+  "Desert Horse": {
+    "creature": "Desert Horse",
+    "loreRoot": "Mammalia",
+    "lore": "Equidae",
+    "yields": [
+      {
+        "material": "Bone Tissue",
+        "qty": 600
+      },
+      {
+        "material": "Emalj",
+        "qty": 160
+      },
+      {
+        "material": "Fullgrain Leather",
+        "qty": 1000
+      },
+      {
+        "material": "Horse Meat",
+        "qty": 1200
+      }
+    ],
+    "trophy": []
+  },
+  "Gemsbok": {
+    "creature": "Gemsbok",
+    "loreRoot": "Mammalia",
+    "lore": "Caprinomorpha",
+    "yields": [],
+    "trophy": [
+      {
+        "name": "Gemsbok Hooves",
+        "value": "12s"
+      }
+    ]
+  },
+  "Giant Kurnas": {
+    "creature": "Giant Kurnas",
+    "loreRoot": "Arthropoda",
+    "lore": "Insecta",
+    "yields": [
+      {
+        "material": "Crepite",
+        "qty": 1000
+      },
+      {
+        "material": "Giant Kurnas Meat",
+        "qty": 3000
+      },
+      {
+        "material": "Heavy Carapace",
+        "qty": 700
+      }
+    ],
+    "trophy": [
+      {
+        "name": "Giant Kurnas Elytra",
+        "value": "10g"
+      }
+    ]
+  },
+  "Golden Danaburnu": {
+    "creature": "Danaburnu",
+    "loreRoot": "Arthropoda",
+    "lore": "Insecta",
+    "yields": [
+      {
+        "material": "Crepite",
+        "qty": 900
+      },
+      {
+        "material": "Danaburnu Meat",
+        "qty": 2800
+      },
+      {
+        "material": "Heavy Carapace",
+        "qty": 600
+      }
+    ],
+    "trophy": [
+      {
+        "name": "Danaburnu Palps",
+        "value": "9g"
+      }
+    ]
+  },
+  "Hunter Lizard": {
+    "creature": "Hunter Lizard",
+    "loreRoot": "Reptilia",
+    "lore": "Lacertilia",
+    "yields": [
+      {
+        "material": "Bone Tissue",
+        "qty": 2000
+      },
+      {
+        "material": "Horned Scales",
+        "qty": 300
+      },
+      {
+        "material": "Hunter Lizard Meat",
+        "qty": 3000
+      },
+      {
+        "material": "Incisium",
+        "qty": 400
+      },
+      {
+        "material": "Keeled Scales",
+        "qty": 2200
+      }
+    ],
+    "trophy": [
+      {
+        "name": "Hunter Lizard Feet",
+        "value": "15s"
+      }
+    ]
+  },
+  "Ibex": {
+    "creature": "Ibex",
+    "loreRoot": "Mammalia",
+    "lore": "Caprinomorpha",
+    "yields": [],
+    "trophy": [
+      {
+        "name": "Ibex Skull",
+        "value": "10s"
+      }
+    ]
+  },
+  "Jungle Horse": {
+    "creature": "Jungle Horse",
+    "loreRoot": "Mammalia",
+    "lore": "Equidae",
+    "yields": [
+      {
+        "material": "Bone Tissue",
+        "qty": 600
+      },
+      {
+        "material": "Emalj",
+        "qty": 160
+      },
+      {
+        "material": "Fullgrain Leather",
+        "qty": 1000
+      },
+      {
+        "material": "Horse Meat",
+        "qty": 1200
+      }
+    ],
+    "trophy": []
+  },
+  "Koch Gamal": {
+    "creature": "Koch Gamal",
+    "loreRoot": "Mammalia",
+    "lore": "Tylopoda",
+    "yields": [],
+    "trophy": []
+  },
+  "Mountain Spider": {
+    "creature": "Mountain Spider",
+    "loreRoot": "Arthropoda",
+    "lore": "Araneae",
+    "yields": [
+      {
+        "material": "Arthropod Carapace",
+        "qty": 840
+      },
+      {
+        "material": "Crepite",
+        "qty": 1000
+      },
+      {
+        "material": "Dense Crepite",
+        "qty": 140
+      },
+      {
+        "material": "Mountain Spider Meat",
+        "qty": 3500
+      }
+    ],
+    "trophy": [
+      {
+        "name": "Mountain Spider Leg",
+        "value": "20s"
+      }
+    ]
+  },
+  "Nightsnatcher": {
+    "creature": "Night Snatcher",
+    "loreRoot": "Mammalia",
+    "lore": "Hystricomorpha",
+    "yields": [
+      {
+        "material": "Bone Tissue",
+        "qty": 2000
+      },
+      {
+        "material": "Emalj",
+        "qty": 300
+      },
+      {
+        "material": "Fullgrain Leather",
+        "qty": 1000
+      },
+      {
+        "material": "Ground Fur",
+        "qty": 1000
+      },
+      {
+        "material": "Night Snatcher Meat",
+        "qty": 2500
+      }
+    ],
+    "trophy": [
+      {
+        "name": "Nightsnatcher Tail",
+        "value": "15s"
+      }
+    ]
+  },
+  "Ormek Flinger": {
+    "creature": "Ormek Flinger",
+    "loreRoot": "Arthropoda",
+    "lore": "Araneae",
+    "yields": [],
+    "trophy": [
+      {
+        "name": "Ormek Flinger Leg",
+        "value": "30s"
+      }
+    ]
+  },
+  "Ormek Maiden": {
+    "creature": "Ormek Maiden",
+    "loreRoot": "Arthropoda",
+    "lore": "Araneae",
+    "yields": [],
+    "trophy": [
+      {
+        "name": "Ormek Maiden Palps",
+        "value": "55s"
+      }
+    ]
+  },
+  "Ormek Worker": {
+    "creature": "Ormek Worker",
+    "loreRoot": "Arthropoda",
+    "lore": "Araneae",
+    "yields": [],
+    "trophy": [
+      {
+        "name": "Ormek Worker Palps",
+        "value": "20s"
+      }
+    ]
+  },
+  "Panther": {
+    "creature": "Panther",
+    "loreRoot": "Mammalia",
+    "lore": "Pantherinae",
+    "yields": [
+      {
+        "material": "Bone Tissue",
+        "qty": 2000
+      },
+      {
+        "material": "Ground Fur",
+        "qty": 400
+      },
+      {
+        "material": "Molarium",
+        "qty": 400
+      },
+      {
+        "material": "Panther Meat",
+        "qty": 3000
+      },
+      {
+        "material": "Quality Leather",
+        "qty": 2000
+      }
+    ],
+    "trophy": [
+      {
+        "name": "Panther Paw",
+        "value": "25s"
+      }
+    ]
+  },
+  "Ratzar Feeder": {
+    "creature": "Ratzar Feeder",
+    "loreRoot": "Arthropoda",
+    "lore": "Insecta",
+    "yields": [
+      {
+        "material": "Arthropod Carapace",
+        "qty": 1100
+      },
+      {
+        "material": "Crepite",
+        "qty": 1100
+      },
+      {
+        "material": "Ratzar Feeder Meat",
+        "qty": 2900
+      }
+    ],
+    "trophy": [
+      {
+        "name": "Ratzar Antennae?",
+        "value": "1g"
+      }
+    ]
+  },
+  "Ratzar Hunter": {
+    "creature": "Ratzar Hunter",
+    "loreRoot": "Arthropoda",
+    "lore": "Insecta",
+    "yields": [
+      {
+        "material": "Arthropod Carapace",
+        "qty": 1300
+      },
+      {
+        "material": "Crepite",
+        "qty": 1200
+      },
+      {
+        "material": "Ratzar Hunter Meat",
+        "qty": 3100
+      }
+    ],
+    "trophy": [
+      {
+        "name": "Ratzar Palps",
+        "value": "2g"
+      }
+    ]
+  },
+  "Ratzar Worker": {
+    "creature": "Ratzar Worker",
+    "loreRoot": "Arthropoda",
+    "lore": "Insecta",
+    "yields": [
+      {
+        "material": "Arthropod Carapace",
+        "qty": 800
+      },
+      {
+        "material": "Crepite",
+        "qty": 1000
+      },
+      {
+        "material": "Ratzar Worker Meat",
+        "qty": 2600
+      }
+    ],
+    "trophy": [
+      {
+        "name": "Ratzar Antennae",
+        "value": "1g"
+      }
+    ]
+  },
+  "Ruah Gamal": {
+    "creature": "Ruah Gamal",
+    "loreRoot": "Mammalia",
+    "lore": "Tylopoda",
+    "yields": [],
+    "trophy": []
+  },
+  "Snapping Turtle": {
+    "creature": "Snapping Turtle",
+    "loreRoot": "Reptilia",
+    "lore": "Anapsida",
+    "yields": [
+      {
+        "material": "Bone Tissue",
+        "qty": 850
+      },
+      {
+        "material": "Compact Horn",
+        "qty": 240
+      },
+      {
+        "material": "Keeled Scales",
+        "qty": 480
+      },
+      {
+        "material": "Heavy Carapace",
+        "qty": 120
+      },
+      {
+        "material": "Reptile Carapace",
+        "qty": 645
+      },
+      {
+        "material": "Snapping Turtle Meat",
+        "qty": 600
+      }
+    ],
+    "trophy": [
+      {
+        "name": "Snapping Turtle Foot",
+        "value": "40s"
+      }
+    ]
+  },
+  "Stone Lizard": {
+    "creature": "Stone Lizard",
+    "loreRoot": "Reptilia",
+    "lore": "Theropoda",
+    "yields": [],
+    "trophy": [
+      {
+        "name": "Stone Lizard Tail Club",
+        "value": "4g"
+      }
+    ]
+  },
+  "Terror Bird": {
+    "creature": "Terror Bird",
+    "loreRoot": "Aves",
+    "lore": "Neognathe",
+    "yields": [
+      {
+        "material": "Bone Tissue",
+        "qty": 500
+      },
+      {
+        "material": "Incisium",
+        "qty": 600
+      },
+      {
+        "material": "Keeled Scales",
+        "qty": 600
+      },
+      {
+        "material": "Terror Bird Meat",
+        "qty": 2500
+      }
+    ],
+    "trophy": [
+      {
+        "name": "Terror Bird Beak",
+        "value": "35s"
+      }
+    ]
+  },
+  "Water Lizard": {
+    "creature": "Water Lizard",
+    "loreRoot": "Reptilia",
+    "lore": "Lacertilia",
+    "yields": [
+      {
+        "material": "Bone Tissue",
+        "qty": 2200
+      },
+      {
+        "material": "Horned Scales",
+        "qty": 600
+      },
+      {
+        "material": "Incisium",
+        "qty": 600
+      },
+      {
+        "material": "Keeled Scales",
+        "qty": 1100
+      },
+      {
+        "material": "Water Lizard Meat",
+        "qty": 4000
+      }
+    ],
+    "trophy": [
+      {
+        "name": "Water Lizard Fin",
+        "value": "20s"
+      }
+    ]
+  },
+  "Ratzar Alate": {
+    "creature": "Ratzar Alate",
+    "loreRoot": "Arthropoda",
+    "lore": "Insecta",
+    "yields": [
+      {
+        "material": "Arthropod Carapace",
+        "qty": 1200
+      },
+      {
+        "material": "Crepite",
+        "qty": 880
+      },
+      {
+        "material": "Heavy Carapace",
+        "qty": 400
+      },
+      {
+        "material": "Ratzar Alate Meat",
+        "qty": 2600
+      }
+    ],
+    "trophy": [
+      {
+        "name": "Ratzar Wings",
+        "value": "2g 80s"
+      }
+    ]
+  },
+  "Ratzar Alete": {
+    "creature": "Ratzar Alete",
+    "loreRoot": "Arthropoda",
+    "lore": "Insecta",
+    "yields": [
+      {
+        "material": "Arthropod Carapace",
+        "qty": 1200
+      },
+      {
+        "material": "Crepite",
+        "qty": 880
+      },
+      {
+        "material": "Heavy Carapace",
+        "qty": 400
+      },
+      {
+        "material": "Ratzar Alate Meat",
+        "qty": 2600
+      }
+    ],
+    "trophy": [
+      {
+        "name": "Ratzar Wings",
+        "value": "2g 80s"
+      }
+    ]
+  },
+  "Ratzar Queen": {
+    "creature": "Ratzar Queen",
+    "loreRoot": "Arthropoda",
+    "lore": "Insecta",
+    "yields": [],
+    "trophy": [
+      {
+        "name": "Ratzar Queen Acid Gland",
+        "value": "33g"
+      }
+    ]
+  },
+  "Springbok": {
+    "creature": "Springbok",
+    "loreRoot": "Mammalia",
+    "lore": "Caprinomorpha",
+    "yields": [
+      {
+        "material": "Bone Tissue",
+        "qty": 600
+      },
+      {
+        "material": "Emalj",
+        "qty": 160
+      },
+      {
+        "material": "Horn",
+        "qty": 700
+      },
+      {
+        "material": "Quality Leather",
+        "qty": 1200
+      },
+      {
+        "material": "Springbok Meat",
+        "qty": 4000
+      }
+    ],
+    "trophy": [
+      {
+        "name": "Springbok Hooves",
+        "value": "12s"
+      }
+    ]
+  }
+}

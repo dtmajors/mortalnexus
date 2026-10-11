@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Wastrel camp">
+  <path fill="#151c20" stroke="#080c0e" stroke-width="3" stroke-linejoin="round" d="M4 57 28 9l25 48Z"/>
+  <path fill="#6f7a80" d="m10 53 18-36 18 36Z"/>
+  <path fill="#2c353a" d="m28 18 9 35H20Z"/>
+  <path fill="none" stroke="#bfc8cc" stroke-width="3" d="m11 44 8-3-3 8 8-2"/>
+  <circle cx="49" cy="44" r="12" fill="#343e43" stroke="#080c0e" stroke-width="3"/>
+  <path fill="none" stroke="#e1e7ea" stroke-width="3" stroke-linecap="round" d="m44 49 10-10"/>
+</svg>

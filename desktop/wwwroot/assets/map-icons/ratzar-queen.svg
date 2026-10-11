@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ratzar queen">
+  <g stroke="#170e21" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path fill="#74509b" d="m32 5 5 9 10-6-2 13 11 7-12 5 4 22H16l4-22-12-5 11-7-2-13 10 6Z"/>
+    <path fill="#35223f" d="M22 28h20l5 13-9 15H26l-9-15Z"/>
+    <path fill="#ab79cf" d="m20 36-13-3 10 9-8 10 15-7m20-9 13-3-10 9 8 10-15-7"/>
+    <path fill="#efc75c" d="m22 16 4-12 6 8 6-8 4 12-5 8H27Z"/>
+    <circle cx="27" cy="32" r="2.2" fill="#fff075" stroke="none"/>
+    <circle cx="37" cy="32" r="2.2" fill="#fff075" stroke="none"/>
+  </g>
+</svg>

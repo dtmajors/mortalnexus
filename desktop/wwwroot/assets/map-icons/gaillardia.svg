@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Gaillardia">
+  <path d="M32 58V32" stroke="#448247" stroke-width="5" stroke-linecap="round"/>
+  <g fill="#d94a2e" stroke="#5b1e18" stroke-width="2" stroke-linejoin="round">
+    <path d="M32 28C17 28 9 20 11 12c8-3 16 1 21 10 5-9 13-13 21-10 2 8-6 16-21 16Z"/>
+    <path d="M32 29C21 20 20 9 27 5c7 2 9 9 5 18 4-9 10-16 17-14 5 6 0 16-11 21Z"/>
+  </g>
+  <circle cx="32" cy="25" r="8" fill="#f0bd35" stroke="#694b0d" stroke-width="2.5"/>
+  <path fill="#4f9853" stroke="#173d25" stroke-width="2.5" d="M29 48c-10 2-17-2-19-9 8-3 16 0 21 7Zm5 0c9-5 16-4 20 2-6 7-14 7-21 2Z"/>
+</svg>

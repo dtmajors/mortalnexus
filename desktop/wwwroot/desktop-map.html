@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#060a12" />
+    <title>Sarducaa Intel | Mortal Nexus</title>
+    <link rel="icon" href="/assets/mortal-nexus-app-icon-v2.png" type="image/png" />
+    <link rel="stylesheet" href="/assets/vendor/leaflet.css" />
+    <link rel="stylesheet" href="/desktop-map.css?v=42" />
+    <link rel="stylesheet" href="/iron-codex.css?v=5" />
+    <link rel="stylesheet" href="/nexus-overhaul.css?v=21" />
+  </head>
+  <body class="nexus-reforged nexus-page-map">
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="topbar-primary">
+          <div class="brand">
+            <img src="/assets/mortal-nexus-app-icon-v2.png" alt="" />
+            <div>
+              <strong>Mortal Nexus</strong>
+              <span id="brandSubline">Maps, tools, and reference</span>
+              <small class="local-preview-stamp">Iron Codex local preview</small>
+            </div>
+          </div>
+
+          <div class="search-tools">
+            <label class="global-search" for="searchInput">
+              <i data-lucide="search"></i>
+              <input id="searchInput" type="search" placeholder="Search and pulse places, creatures, drops, lore, resources..." />
+              <kbd>/</kbd>
+            </label>
+            <label class="search-isolate-toggle" title="Hide markers that do not match your search">
+              <input id="searchIsolateToggle" type="checkbox" />
+              <span><i data-lucide="check"></i></span>
+              <strong>Hide others</strong>
+            </label>
+          </div>
+
+          <div class="top-actions">
+            <label id="windowOpacityControl" class="window-opacity-control" title="Adjust transparency for the entire Mortal Nexus window">
+              <i data-lucide="blend"></i>
+              <input id="windowOpacitySlider" type="range" min="20" max="100" step="1" value="100" aria-label="Application transparency" />
+              <output id="windowOpacityValue" for="windowOpacitySlider">100%</output>
+            </label>
+            <label id="applicationScaleControl" class="application-scale-control" title="Shrink or enlarge the entire Mortal Nexus interface">
+              <i data-lucide="scan-line"></i>
+              <input id="applicationScaleSlider" type="range" min="60" max="150" step="5" value="100" aria-label="Application scale" />
+              <output id="applicationScaleValue" for="applicationScaleSlider">100%</output>
+            </label>
+            <div id="secondScreenControl" class="second-screen-mode" data-enabled="false">
+              <label class="second-screen-toggle" title="Show Mortal Nexus as a borderless always-on-top overlay">
+                <input id="secondScreenToggle" type="checkbox" role="switch" aria-label="2nd Screen Mode" />
+                <span class="second-screen-switch" aria-hidden="true"><span></span></span>
+                <strong>2nd Screen Mode</strong>
+              </label>
+              <label class="second-screen-size" title="Overlay size">
+                <i data-lucide="monitor-up"></i>
+                <select id="secondScreenResolution" aria-label="2nd Screen Mode resolution">
+                  <option value="fill">Fit display</option>
+                  <option value="2560x1440">2560 x 1440</option>
+                  <option value="1920x1080">1920 x 1080</option>
+                  <option value="1600x900">1600 x 900</option>
+                  <option value="1366x768">1366 x 768</option>
+                  <option value="1280x720">1280 x 720</option>
+                </select>
+              </label>
+            </div>
+            <button id="hotkeysMasterButton" class="hotkeys-master-button" type="button" data-enabled="true" title="Disable every global hotkey">
+              <i data-lucide="keyboard"></i><span>Hotkeys on</span>
+            </button>
+            <button id="updateButton" class="update-button" type="button" data-state="idle" title="Check for Mortal Nexus updates">
+              <i data-lucide="refresh-cw"></i><span>Updates</span>
+            </button>
+            <span id="syncBadge" class="local-badge" data-state="connecting" title="Connecting to Firebase" hidden>
+              <i data-lucide="cloud"></i> Connecting...
+            </span>
+            <button id="editorButton" class="account-button" type="button" data-module-target="history">
+              <i data-lucide="lock-keyhole"></i><span>Viewer</span>
+            </button>
+            <button id="fitBtn" class="icon-button map-only-action" type="button" title="Fit full map" hidden><i data-lucide="maximize"></i></button>
+            <button id="exportBtn" class="map-only-action" type="button" hidden><i data-lucide="download"></i> Backup</button>
+            <button id="importBtn" class="map-only-action editor-only" type="button" hidden><i data-lucide="upload"></i> Restore</button>
+            <input id="importInput" type="file" accept=".json,application/json" hidden />
+          </div>
+        </div>
+
+        <nav class="module-tabs" aria-label="Application sections">
+          <button class="module-tab is-active" type="button" data-module-target="map"><i data-lucide="map"></i> Live map</button>
+          <a class="module-tab nave-index-tab" href="/reference"><i data-lucide="library-big"></i> Nave Index</a>
+          <a class="module-tab" href="/loot"><i data-lucide="package-search"></i> Loot Database</a>
+          <a class="module-tab" href="/spells"><i data-lucide="sparkles"></i> Spells</a>
+          <button class="module-tab" type="button" data-module-target="craft"><i data-lucide="hammer"></i> Craft N Click</button>
+          <button class="module-tab" type="button" data-module-target="training"><i data-lucide="swords"></i> Training Macros</button>
+          <button class="module-tab" type="button" data-module-target="commands"><i data-lucide="square-terminal"></i> Commands</button>
+          <button class="module-tab" type="button" data-module-target="history"><i data-lucide="history"></i> Edit history</button>
+        </nav>
+      </header>
+
+      <main id="mapWorkspace" class="module-panel is-active" data-module-panel="map">
+        <aside class="sidebar">
+          <div class="sidebar-toolbar">
+            <div>
+              <span class="eyebrow">Offline map</span>
+              <strong id="mapIntelTitle">Sarducaa intelligence</strong>
+            </div>
+            <button id="clearFiltersBtn" class="quiet-button" type="button" title="Show every layer and clear search">Show all</button>
+          </div>
+
+          <section class="summary-grid" aria-label="Catalog summary">
+            <div><span>Total intel</span><strong id="totalCount">0</strong></div>
+            <div><span>Visible</span><strong id="visibleCount">0</strong></div>
+            <div><span>Nexus</span><strong id="clientCount">0</strong></div>
+            <div><span>Community</span><strong id="communityCount">0</strong></div>
+          </section>
+
+          <section class="sidebar-section quick-add-section">
+            <div class="section-heading compact">
+              <div>
+                <span class="eyebrow">Click an icon, then the map</span>
+                <h2>Quick add marker</h2>
+              </div>
+              <button id="cancelPlacementBtn" class="quiet-button" type="button" hidden>Cancel</button>
+            </div>
+            <div id="quickAddGrid" class="quick-add-grid"></div>
+            <button id="positionBtn" class="position-button" type="button">
+              <i data-lucide="locate-fixed"></i>
+              <span><strong>Show my position</strong><small>Share a bright red location for 10 minutes</small></span>
+            </button>
+          </section>
+
+          <section class="sidebar-section route-planner-section">
+            <div class="section-heading compact">
+              <div>
+                <span class="eyebrow">Private on this computer</span>
+                <h2>Route planner</h2>
+              </div>
+              <button id="newRouteBtn" class="route-new-button" type="button"><i data-lucide="plus"></i> New</button>
+            </div>
+            <div class="route-privacy-note">
+              <i data-lucide="shield-check"></i>
+              <span>Routes stay local unless you explicitly copy a route code.</span>
+            </div>
+            <div id="routeList" class="route-list"></div>
+            <div id="routeEmptyState" class="route-empty-state">
+              <i data-lucide="route"></i>
+              <span>Create a route, then click the map to place its stops.</span>
+            </div>
+            <div id="routeActiveControls" class="route-active-controls" hidden>
+              <div class="route-active-summary">
+                <span>Selected route</span>
+                <strong id="routeActiveName">No route selected</strong>
+                <small id="routeActiveStats">0 stops</small>
+              </div>
+              <div class="route-control-grid">
+                <button id="routeDrawBtn" class="primary-button" type="button"><i data-lucide="mouse-pointer-click"></i> Add stops</button>
+                <button id="routeUndoBtn" type="button" title="Remove the last stop"><i data-lucide="undo-2"></i> Undo</button>
+                <button id="routeReverseBtn" type="button" title="Reverse route direction"><i data-lucide="arrow-left-right"></i> Reverse</button>
+                <button id="routeShareBtn" type="button"><i data-lucide="share-2"></i> Share</button>
+              </div>
+            </div>
+            <button id="routeImportBtn" class="route-import-button" type="button"><i data-lucide="clipboard-paste"></i> Import route code</button>
+          </section>
+
+          <section class="sidebar-section layer-section">
+            <div class="section-heading compact">
+              <div>
+                <span class="eyebrow">Nested map layers</span>
+                <h2>Browse map</h2>
+              </div>
+              <button id="toggleAllLayersBtn" class="quiet-button" type="button">Hide all</button>
+            </div>
+            <div id="layerBrowser" class="layer-browser"></div>
+          </section>
+
+          <section class="sidebar-section display-section">
+            <label class="name-switch">
+              <input id="labelsToggle" type="checkbox" />
+              <span><strong>Always show names</strong><small>Names still appear when hovering</small></span>
+            </label>
+          </section>
+        </aside>
+
+        <section class="map-stage">
+          <div id="map"></div>
+          <div class="map-toolbar">
+            <nav class="continent-switch" aria-label="Choose continent">
+              <a href="/map" data-map-variant="sarducaa"><i data-lucide="sun"></i> Sarducaa</a>
+              <a href="/myrland-map" data-map-variant="myrland"><i data-lucide="mountain-snow"></i> Myrland</a>
+              <a href="/myrland-alt-map" data-map-variant="myrland-alt"><i data-lucide="map"></i> Myrland Alt Map</a>
+            </nav>
+            <button id="addMarkerBtn" type="button"><i data-lucide="map-pin-plus"></i> Custom marker</button>
+            <button id="editNodesBtn" type="button"><i data-lucide="mouse-pointer-2"></i> Edit nodes</button>
+            <button id="contributionsBtn" type="button"><i data-lucide="git-pull-request-arrow"></i> Contributions <span id="contributionsBadge" class="contributions-badge" hidden>0</span></button>
+            <button id="popoutMapBtn" type="button"><i data-lucide="picture-in-picture-2"></i> Pop out</button>
+            <button id="routesMapBtn" type="button" hidden><i data-lucide="route"></i> Routes on</button>
+            <button id="labelsMapBtn" type="button"><i data-lucide="tags"></i> Show names</button>
+            <span id="viewReadout">Sarducaa</span>
+          </div>
+          <div id="loadingState" class="loading-state">
+            <span class="spinner"></span>
+            <strong id="loadingTitle">Loading Sarducaa intelligence</strong>
+            <small>Community reports, Nexus locations, and creature drops</small>
+          </div>
+        </section>
+      </main>
+
+      <section id="toolsWorkspace" class="tools-workspace">
+        <article class="tool-page module-panel" data-module-panel="craft">
+          <header class="tool-page-heading">
+            <div>
+              <span class="eyebrow">Integrated inventory workflow</span>
+              <h1>Marshal Craft N Click</h1>
+              <p>Calibrate the active inventory once, protect your material slots, then craft and break in controlled cycles.</p>
+            </div>
+            <label id="macrosMasterControl" class="macros-master-control" data-enabled="false">
+              <input id="macrosMasterToggle" type="checkbox" role="switch" aria-checked="false" />
+              <span class="macros-master-track" aria-hidden="true"><span></span></span>
+              <span class="macros-master-copy">
+                <strong id="macrosMasterTitle">Macros disabled</strong>
+                <small id="macrosMasterDescription">No routine or macro command can run.</small>
+              </span>
+            </label>
+            <span id="craftPhase" class="phase-pill">READY</span>
+          </header>
+          <div class="tool-layout craft-layout">
+            <section class="tool-card calibration-card">
+              <div class="tool-card-heading"><div><span class="eyebrow">Screen calibration</span><h2>Inventory layout</h2></div><span id="craftTargetCount">35 targets</span></div>
+              <div class="calibration-list">
+                <div><span>6 x 6 inventory grid</span><strong id="craftGridValue">Not positioned</strong><button id="captureGridBtn" type="button">Position</button></div>
+                <div><span>Craft button</span><strong id="craftButtonValue">Not set</strong><button type="button" data-capture-point="craftButton">Select</button></div>
+                <div><span>Delete position</span><strong id="deletePositionValue">Not set</strong><button type="button" data-capture-point="deletePosition">Select</button></div>
+                <div><span>Yes button</span><strong id="yesButtonValue">Not set</strong><button type="button" data-capture-point="yesButton">Select</button></div>
+              </div>
+              <div class="grid-protection">
+                <div><strong>Protected cells</strong><span>Click every material or tool slot that must never be deleted.</span></div>
+                <div id="safeCellGrid" class="safe-cell-grid" aria-label="Protected inventory cells"></div>
+              </div>
+            </section>
+
+            <section class="tool-card craft-controls-card">
+              <label id="craftSafetyControl" class="craft-safety-arm" data-armed="false">
+                <input id="craftSafetyArm" type="checkbox" role="switch" aria-checked="false" />
+                <span class="craft-safety-track" aria-hidden="true"><span></span></span>
+                <span class="craft-safety-copy">
+                  <strong id="craftSafetyTitle">SAFE - CRAFT &amp; CLICK OFF</strong>
+                  <small id="craftSafetyDescription">Start controls and inventory hotkeys are disabled.</small>
+                </span>
+              </label>
+              <div class="tool-card-heading"><div><span class="eyebrow">Cycle controls</span><h2>Craft and break</h2></div></div>
+              <div class="button-row">
+                <button id="craftStartBtn" class="primary-button" type="button" disabled><i data-lucide="play"></i> Start / pause</button>
+                <button id="craftStopBtn" type="button"><i data-lucide="square"></i> Stop</button>
+              </div>
+              <p id="craftStatus" class="tool-status">Position the inventory grid and required buttons to begin.</p>
+              <div class="compact-settings">
+                <label><span>Craft hold seconds</span><input id="craftHoldSeconds" type="number" min="1" max="3600" value="63" /></label>
+              </div>
+              <label class="tool-toggle">
+                <input id="craftSafeMode" type="checkbox" checked />
+                <span><strong>Safe Mode</strong><small>Stops when the calibrated client PID is no longer active.</small></span>
+              </label>
+              <div class="hotkey-stack">
+                <div id="craftStartHotkeyRow" class="hotkey-row is-safety-disabled">
+                  <div><span>Start / pause</span><strong id="hotkeyCraftToggle">Not set</strong></div>
+                  <button type="button" data-record-hotkey="craftToggle">Record</button>
+                </div>
+                <div class="hotkey-row">
+                  <div><span>Stop</span><strong id="hotkeyCraftStop">Not set</strong></div>
+                  <button type="button" data-record-hotkey="craftStop">Record</button>
+                </div>
+              </div>
+            </section>
+          </div>
+        </article>
+
+        <article class="tool-page module-panel" data-module-panel="training">
+          <header class="tool-page-heading training-heading">
+            <div>
+              <span class="eyebrow">Independent combat and activity loops</span>
+              <h1>Training Macros</h1>
+              <p>Configure each routine separately. Recorded action keys, recovery keys, and start hotkeys stay isolated per mode.</p>
+            </div>
+            <div class="emergency-stop-group">
+              <span>Status: ready · <strong id="hotkeyEmergencyStop">Not set</strong> emergency stop</span>
+              <button id="stopAllAutomationBtn" class="danger-button" type="button"><i data-lucide="octagon-x"></i> Stop all</button>
+            </div>
+          </header>
+
+          <nav class="combat-tabs" aria-label="Training macro mode">
+            <button class="is-active" type="button" data-combat-target="magic"><i data-lucide="wand-sparkles"></i> Magic</button>
+            <button type="button" data-combat-target="melee"><i data-lucide="swords"></i> Melee</button>
+            <button type="button" data-combat-target="archery"><i data-lucide="crosshair"></i> Archery</button>
+            <button type="button" data-combat-target="afk"><i data-lucide="repeat-2"></i> AFK</button>
+          </nav>
+
+          <section class="combat-panel is-active" data-combat-panel="magic">
+            <div class="tool-layout magic-layout">
+              <section class="tool-card magic-live-card">
+                <div class="tool-card-heading"><div><span class="eyebrow">Current batch</span><h2>Magic rotation</h2></div><span id="magicPhase" class="phase-pill">READY</span></div>
+                <div class="macro-live-summary"><strong id="magicCountdown" class="timer-readout compact">--</strong><span id="magicProgress">0 / 10 casts</span></div>
+                <div class="button-row">
+                  <button id="magicStartBtn" class="primary-button" type="button"><i data-lucide="play"></i> Start magic</button>
+                  <button id="magicStopBtn" type="button"><i data-lucide="square"></i> Stop</button>
+                </div>
+                <p id="magicStatus" class="tool-status">Ready. Select an action key and focus the game before starting.</p>
+              </section>
+              <section class="tool-card magic-settings-card">
+                <div class="tool-card-heading"><div><span class="eyebrow">Keys and timing</span><h2>Magic setup</h2></div><span>Repeats until stopped</span></div>
+                <div class="hotkey-stack">
+                  <div class="hotkey-row"><div><span>Start / stop hotkey</span><strong id="hotkeyMagicToggle">Not set</strong></div><button type="button" data-record-hotkey="magicToggle"><i data-lucide="keyboard"></i> Record</button><button class="icon-button" type="button" data-clear-hotkey="magicToggle" title="Clear start hotkey"><i data-lucide="x"></i></button></div>
+                  <div class="hotkey-row"><div><span>Magic action key</span><strong id="hotkeyMagicAction">Not set</strong></div><button type="button" data-record-hotkey="magicAction"><i data-lucide="keyboard"></i> Record</button><button class="icon-button" type="button" data-clear-hotkey="magicAction" title="Clear magic action key"><i data-lucide="x"></i></button></div>
+                  <label class="tool-toggle compact-tool-toggle"><input id="magicUseRecoveryKey" type="checkbox" /><span><strong>Use recovery key</strong><small>Sent once, two seconds after the final cast.</small></span></label>
+                  <div id="magicRecoveryKeyRow" class="hotkey-row is-disabled"><div><span>Recovery key</span><strong id="hotkeyMagicRecovery">Not set</strong></div><button type="button" data-record-hotkey="magicRecovery"><i data-lucide="keyboard"></i> Record</button><button class="icon-button" type="button" data-clear-hotkey="magicRecovery" title="Clear recovery key"><i data-lucide="x"></i></button></div>
+                </div>
+                <div class="compact-settings magic-timing">
+                  <label><span>Press / hold ms</span><input id="magicPressHoldMs" type="number" min="5" max="10000" value="30" /></label>
+                  <label><span>Delay between presses ms</span><input id="magicPressIntervalMs" type="number" min="20" max="600000" value="1000" /></label>
+                  <label><span>Presses per batch</span><input id="magicPressesPerBatch" type="number" min="1" max="10000" value="10" /></label>
+                  <label><span>Wait after batch ms</span><input id="magicBatchRestMs" type="number" min="0" max="3600000" value="5000" /></label>
+                </div>
+              </section>
+            </div>
+          </section>
+
+          <section class="combat-panel" data-combat-panel="melee">
+            <div class="tool-layout magic-layout">
+              <section class="tool-card magic-live-card">
+                <div class="tool-card-heading"><div><span class="eyebrow">Attack cycle</span><h2>Melee training</h2></div><span id="meleePhase" class="phase-pill">READY</span></div>
+                <strong id="meleeCountdown" class="timer-readout compact">--</strong>
+                <div class="button-row"><button id="meleeStartBtn" class="primary-button" type="button"><i data-lucide="play"></i> Start melee</button><button id="meleeStopBtn" type="button"><i data-lucide="square"></i> Stop</button></div>
+                <p id="meleeStatus" class="tool-status">Ready. Focus the game before starting.</p>
+              </section>
+              <section class="tool-card">
+                <div class="tool-card-heading"><div><span class="eyebrow">Keys and timing</span><h2>Melee setup</h2></div><span>Left-click cycle</span></div>
+                <div class="hotkey-stack">
+                  <div class="hotkey-row"><div><span>Start / stop hotkey</span><strong id="hotkeyMeleeToggle">Not set</strong></div><button type="button" data-record-hotkey="meleeToggle"><i data-lucide="keyboard"></i> Record</button><button class="icon-button" type="button" data-clear-hotkey="meleeToggle" title="Clear melee hotkey"><i data-lucide="x"></i></button></div>
+                  <label class="tool-toggle compact-tool-toggle"><input id="meleeUseRestCycle" type="checkbox" /><span><strong>Use rest cycle</strong><small>Optionally send one key between attack phases.</small></span></label>
+                  <div id="meleeRestKeyRow" class="hotkey-row is-disabled"><div><span>Rest key</span><strong id="hotkeyMeleeRest">Not set</strong></div><button type="button" data-record-hotkey="meleeRest"><i data-lucide="keyboard"></i> Record</button><button class="icon-button" type="button" data-clear-hotkey="meleeRest" title="Clear rest key"><i data-lucide="x"></i></button></div>
+                </div>
+                <div class="compact-settings magic-timing">
+                  <label><span>LMB hold ms</span><input id="meleeClickHoldMs" type="number" min="0" max="10000" value="30" /></label>
+                  <label><span>Delay between clicks ms</span><input id="meleeClickIntervalMs" type="number" min="20" max="600000" value="250" /></label>
+                  <label><span>Attack phase seconds</span><input id="meleeAttackSeconds" type="number" min="1" max="3600" value="30" /></label>
+                  <label><span>Rest phase seconds</span><input id="meleeRestSeconds" type="number" min="0" max="3600" value="10" /></label>
+                </div>
+              </section>
+            </div>
+          </section>
+
+          <section class="combat-panel" data-combat-panel="archery">
+            <div class="tool-layout click-macro-layout">
+              <section class="tool-card click-macro-live-card">
+                <div class="tool-card-heading"><div><span class="eyebrow">Current rotation</span><h2>Archery training</h2></div><span id="clickMacroPhase" class="phase-pill">READY</span></div>
+                <div class="macro-live-summary"><strong id="clickMacroCountdown" class="timer-readout compact">--:--</strong><span id="clickMacroStepLabel">Next: 1</span></div>
+                <div class="macro-timeline" aria-label="Archery cycle"><span data-click-phase="SHOOTING"><i data-lucide="mouse-pointer-click"></i> Shots</span><span data-click-phase="ACTION"><i data-lucide="keyboard"></i> Hotbar key</span><span data-click-phase="RESTKEY"><i data-lucide="battery-charging"></i> Rest key</span><span data-click-phase="RESTING"><i data-lucide="clock-3"></i> Rest</span></div>
+                <div class="button-row"><button id="clickMacroStartBtn" class="primary-button" type="button"><i data-lucide="play"></i> Start archery</button><button id="clickMacroStopBtn" type="button"><i data-lucide="square"></i> Stop</button></div>
+                <p id="clickMacroStatus" class="tool-status">Ready. Focus the game before starting.</p>
+                <div class="hotkey-stack">
+                  <div class="hotkey-row"><div><span>Start / stop hotkey</span><strong id="hotkeyClickMacroToggle">Not set</strong></div><button type="button" data-record-hotkey="clickMacroToggle"><i data-lucide="keyboard"></i> Record</button><button class="icon-button" type="button" data-clear-hotkey="clickMacroToggle" title="Clear hotkey"><i data-lucide="x"></i></button></div>
+                  <label class="tool-toggle compact-tool-toggle"><input id="clickMacroUseRestKey" type="checkbox" /><span><strong>Rest after each slot</strong><small>Send an optional rest key before continuing.</small></span></label>
+                  <div id="clickMacroRestKeyRow" class="hotkey-row is-disabled"><div><span>Optional rest key</span><strong id="hotkeyClickMacroRegen">Not set</strong></div><button type="button" data-record-hotkey="clickMacroRegen"><i data-lucide="keyboard"></i> Record</button><button class="icon-button" type="button" data-clear-hotkey="clickMacroRegen" title="Clear rest key"><i data-lucide="x"></i></button></div>
+                </div>
+              </section>
+              <section class="tool-card click-macro-settings-card">
+                <div class="tool-card-heading"><div><span class="eyebrow">Fully customizable</span><h2>Timing and hotbar sequence</h2></div><span>Up to 10 keys</span></div>
+                <div class="compact-settings click-macro-timing">
+                  <label><span>Time on each slot seconds</span><input id="clickMacroShootSeconds" type="number" min="1" max="3600" value="45" /></label>
+                  <label><span>Delay before next shot ms</span><input id="clickMacroShootIntervalMs" type="number" min="20" max="10000" value="200" /></label>
+                  <label><span>LMB hold ms</span><input id="clickMacroClickHoldMs" type="number" min="5" max="10000" value="30" /></label>
+                  <label><span>After slot delay ms</span><input id="clickMacroPostShootMs" type="number" min="0" max="60000" value="0" /></label>
+                  <label><span>Rest phase seconds</span><input id="clickMacroRestSeconds" type="number" min="0" max="3600" value="27" /></label>
+                </div>
+                <div class="sequence-heading"><strong>Hotbar sequence</strong><span>Enabled keys run top to bottom, then loop.</span></div>
+                <div id="clickMacroSequence" class="click-macro-sequence" aria-label="Archery hotbar sequence"></div>
+              </section>
+            </div>
+          </section>
+
+          <section class="combat-panel" data-combat-panel="afk">
+            <div class="tool-layout magic-layout">
+              <section class="tool-card magic-live-card">
+                <div class="tool-card-heading"><div><span class="eyebrow">Two-key sequence</span><h2>AFK routine</h2></div><span id="afkPhase" class="phase-pill">READY</span></div>
+                <strong id="afkCountdown" class="timer-readout compact">--</strong>
+                <div class="button-row"><button id="afkStartBtn" class="primary-button" type="button"><i data-lucide="play"></i> Start AFK</button><button id="afkStopBtn" type="button"><i data-lucide="square"></i> Stop</button></div>
+                <p id="afkStatus" class="tool-status">Ready. The two keys run in order at the selected interval.</p>
+              </section>
+              <section class="tool-card">
+                <div class="tool-card-heading"><div><span class="eyebrow">Keys and timing</span><h2>AFK setup</h2></div><span>Repeats until stopped</span></div>
+                <div class="hotkey-stack">
+                  <div class="hotkey-row"><div><span>Start / stop hotkey</span><strong id="hotkeyAfkToggle">Not set</strong></div><button type="button" data-record-hotkey="afkToggle"><i data-lucide="keyboard"></i> Record</button><button class="icon-button" type="button" data-clear-hotkey="afkToggle" title="Clear AFK hotkey"><i data-lucide="x"></i></button></div>
+                  <div class="hotkey-row"><div><span>Key 1 · pressed first</span><strong id="hotkeyAfkFirst">Not set</strong></div><button type="button" data-record-hotkey="afkFirst"><i data-lucide="keyboard"></i> Record</button><button class="icon-button" type="button" data-clear-hotkey="afkFirst" title="Clear first key"><i data-lucide="x"></i></button></div>
+                  <div class="hotkey-row"><div><span>Key 2 · pressed second</span><strong id="hotkeyAfkSecond">Not set</strong></div><button type="button" data-record-hotkey="afkSecond"><i data-lucide="keyboard"></i> Record</button><button class="icon-button" type="button" data-clear-hotkey="afkSecond" title="Clear second key"><i data-lucide="x"></i></button></div>
+                </div>
+                <div class="compact-settings magic-timing">
+                  <label><span>Delay between keys ms</span><input id="afkDelayMs" type="number" min="0" max="600000" value="50" /></label>
+                  <label><span>Repeat every seconds</span><input id="afkRepeatSeconds" type="number" min="1" max="86400" value="60" /></label>
+                </div>
+              </section>
+            </div>
+          </section>
+        </article>
+
+        <article class="tool-page module-panel" data-module-panel="commands">
+          <header class="tool-page-heading">
+            <div>
+              <span class="eyebrow">One-press chat commands</span>
+              <h1>Command hotkeys</h1>
+              <p>Each press opens chat, types the command, and submits it exactly once.</p>
+            </div>
+          </header>
+          <div class="tool-layout command-layout">
+            <section class="tool-card command-card">
+              <span class="command-slash">/loot</span>
+              <h2>Loot command</h2>
+              <p>Useful for fast interaction without reaching for chat.</p>
+              <div class="hotkey-row">
+                <div><span>Assigned hotkey</span><strong id="hotkeyLoot">Not set</strong></div>
+                <button type="button" data-record-hotkey="loot"><i data-lucide="keyboard"></i> Record</button>
+                <button class="icon-button" type="button" data-clear-hotkey="loot" title="Clear hotkey"><i data-lucide="x"></i></button>
+              </div>
+              <button type="button" data-send-command="/loot"><i data-lucide="send"></i> Send /loot now</button>
+            </section>
+            <section class="tool-card command-card">
+              <span class="command-slash">/bank</span>
+              <h2>Bank command</h2>
+              <p>Opens chat, sends the bank command, and returns immediately.</p>
+              <div class="hotkey-row">
+                <div><span>Assigned hotkey</span><strong id="hotkeyBank">Not set</strong></div>
+                <button type="button" data-record-hotkey="bank"><i data-lucide="keyboard"></i> Record</button>
+                <button class="icon-button" type="button" data-clear-hotkey="bank" title="Clear hotkey"><i data-lucide="x"></i></button>
+              </div>
+              <button type="button" data-send-command="/bank"><i data-lucide="send"></i> Send /bank now</button>
+            </section>
+            <section class="tool-card command-card">
+              <span class="command-slash"><i data-lucide="monitor-off"></i></span>
+              <h2>Overlay visibility</h2>
+              <p>Hide 2nd Screen Mode instantly, then press the same global hotkey to bring it back.</p>
+              <div class="hotkey-row">
+                <div><span>Show / hide overlay</span><strong id="hotkeyOverlayToggle">Not set</strong></div>
+                <button type="button" data-record-hotkey="overlayToggle"><i data-lucide="keyboard"></i> Record</button>
+                <button class="icon-button" type="button" data-clear-hotkey="overlayToggle" title="Clear hotkey"><i data-lucide="x"></i></button>
+              </div>
+            </section>
+          </div>
+          <p id="macroStatus" class="tool-status standalone-status">Commands are ready. Hotkeys work while Mortal Nexus is minimized.</p>
+        </article>
+
+        <article class="tool-page module-panel" data-module-panel="history">
+          <header class="tool-page-heading">
+            <div>
+              <span class="eyebrow">Protected shared edits</span>
+              <h1>Editor access and history</h1>
+              <p>Everyone can browse the map. Only a signed-in editor account can add, move, restore, or delete shared markers.</p>
+            </div>
+            <span id="editorPhase" class="phase-pill">VIEWER</span>
+          </header>
+          <div class="tool-layout history-layout">
+            <section class="tool-card login-card">
+              <div class="tool-card-heading"><div><span class="eyebrow">App account</span><h2 id="accountHeading">Viewer access</h2></div></div>
+              <div id="editorLoginForm" class="editor-session">
+                <span>Permissions are managed by the administrator at mortalnexus.com.</span>
+              </div>
+              <div id="editorSession" class="editor-session" hidden>
+                <span>Signed in as</span>
+                <strong id="editorSessionName"></strong>
+              </div>
+              <p id="loginStatus" class="tool-status">Viewer mode is read-only.</p>
+            </section>
+            <section class="tool-card history-card">
+              <div class="tool-card-heading">
+                <div><span class="eyebrow">Shared map audit</span><h2>Recent edits</h2></div>
+                <span id="historyCount">0 records</span>
+              </div>
+              <div id="historyList" class="history-list">
+                <div class="history-empty">No edit history loaded yet.</div>
+              </div>
+            </section>
+          </div>
+        </article>
+      </section>
+    </div>
+
+    <dialog id="markerDialog">
+      <form id="markerForm" method="dialog">
+        <header>
+          <div><span id="markerDialogEyebrow" class="eyebrow">Map marker</span><h2 id="dialogTitle">Add marker</h2></div>
+          <button id="closeDialogBtn" class="icon-button" type="button" title="Close"><i data-lucide="x"></i></button>
+        </header>
+        <div class="dialog-body">
+          <label><span>Name</span><input id="markerLabel" maxlength="80" required /></label>
+          <label class="marker-visibility-field"><span>Saved to</span><select id="markerVisibility"><option value="private">This PC only</option><option value="friends" hidden>Friends</option><option value="guild" hidden>Guild</option><option value="public" hidden>Public</option></select></label>
+          <div class="marker-customization">
+            <section class="marker-icon-panel marker-kind-panel" aria-labelledby="markerIconPickerLabel">
+              <div class="marker-field-heading">
+                <span id="markerIconPickerLabel">What is here?</span>
+                <small>One choice sets its category, type, and icon</small>
+              </div>
+              <label class="marker-kind-search">
+                <i data-lucide="search"></i>
+                <input id="markerKindSearch" type="search" placeholder="Search ore, camp, creature, chest..." />
+              </label>
+              <div id="markerIconPicker" class="marker-icon-picker" role="radiogroup" aria-label="Marker type"></div>
+            </section>
+            <section class="marker-image-field" aria-labelledby="markerImageLabel">
+              <div class="marker-field-heading">
+                <span id="markerImageLabel">POI picture <small>optional</small></span>
+                <small id="markerImageStatus">Paste or upload</small>
+              </div>
+              <button id="markerImageDropzone" class="marker-image-dropzone" type="button">
+                <span id="markerImageEmpty" class="marker-image-empty">
+                  <i data-lucide="image-plus"></i>
+                  <strong>Paste with Ctrl+V or upload</strong>
+                  <small>PNG, JPEG, or WebP - automatically compressed</small>
+                </span>
+                <img id="markerImagePreview" alt="POI picture preview" hidden />
+              </button>
+              <div class="marker-image-actions">
+                <button id="uploadMarkerImageBtn" type="button"><i data-lucide="upload"></i> Upload picture</button>
+                <button id="removeMarkerImageBtn" class="danger-button" type="button" hidden><i data-lucide="trash-2"></i> Remove</button>
+              </div>
+              <input id="markerImageInput" type="file" accept="image/png,image/jpeg,image/webp" hidden />
+            </section>
+          </div>
+          <details class="marker-details">
+            <summary><i data-lucide="sliders-horizontal"></i> Details and corrections</summary>
+            <div class="marker-details-body">
+              <div class="dialog-grid">
+                <label><span>Category</span><select id="markerCategory"></select></label>
+                <label><span>Type</span><input id="markerType" maxlength="50" placeholder="Optional subtype" /></label>
+                <label><span>Chest pins</span><input id="markerPinCount" type="number" min="0" max="100" step="1" placeholder="Optional" /></label>
+                <label><span>X</span><input id="markerX" type="number" min="0" step="0.1" required /></label>
+                <label><span>Y</span><input id="markerY" type="number" min="0" step="0.1" required /></label>
+              </div>
+              <div class="marker-appearance-grid">
+                <label class="marker-range-field">
+                  <span>Marker size <output id="markerScaleValue">1.00x</output></span>
+                  <input id="markerScale" type="range" min="0.6" max="3" step="0.05" value="1" />
+                </label>
+                <label class="marker-range-field">
+                  <span>Marker opacity <output id="markerOpacityValue">100%</output></span>
+                  <input id="markerOpacity" type="range" min="0.15" max="1" step="0.05" value="1" />
+                </label>
+              </div>
+              <label><span>Drops / items</span><textarea id="markerDrops" rows="3" maxlength="800" placeholder="One item per line or comma-separated"></textarea></label>
+              <label><span>Notes</span><textarea id="markerNotes" rows="4" maxlength="800"></textarea></label>
+            </div>
+          </details>
+          <select id="markerIcon" hidden aria-hidden="true"></select>
+          <p id="positionExpiryNote" class="position-expiry-note" hidden>
+            This red position marker expires automatically after 10 minutes.
+          </p>
+          <section id="markerContributionReason" class="marker-contribution-reason" hidden>
+            <div><i data-lucide="message-square-text"></i><span><strong>Help the map editors verify this</strong><small>Your change stays pending until an editor reviews it.</small></span></div>
+            <label><span>What is wrong or what did you find?</span><textarea id="markerProposalReason" rows="3" maxlength="800" placeholder="For example: The vendor moved east of this pin, verified in game today."></textarea></label>
+          </section>
+        </div>
+        <footer>
+          <button id="deleteLocalBtn" class="danger-button" type="button" hidden>Delete</button>
+          <span></span>
+          <button id="cancelDialogBtn" type="button">Cancel</button>
+          <button id="saveMarkerBtn" class="primary-button" type="submit">Save marker</button>
+        </footer>
+      </form>
+    </dialog>
+
+    <dialog id="contributionsDialog" class="contributions-dialog">
+      <form method="dialog">
+        <header>
+          <div><span id="contributionsEyebrow" class="eyebrow">Community map</span><h2 id="contributionsTitle">My contributions</h2></div>
+          <button id="closeContributionsBtn" class="icon-button" type="button" title="Close"><i data-lucide="x"></i></button>
+        </header>
+        <div class="dialog-body contributions-body">
+          <div class="contributions-intro">
+            <span class="contributions-intro-icon"><i data-lucide="map-pinned"></i></span>
+            <div><strong id="contributionsSummary">Loading contributions...</strong><p id="contributionsHelp">Submit discoveries and corrections without changing the live map directly.</p></div>
+          </div>
+          <div id="contributionsList" class="contributions-list"><div class="contributions-empty">Loading...</div></div>
+        </div>
+        <footer>
+          <span></span>
+          <button id="refreshContributionsBtn" type="button"><i data-lucide="refresh-cw"></i> Refresh</button>
+          <button id="doneContributionsBtn" class="primary-button" type="button">Done</button>
+        </footer>
+      </form>
+    </dialog>
+
+    <dialog id="routeDialog" class="route-dialog">
+      <form id="routeForm" method="dialog">
+        <header>
+          <div><span class="eyebrow">Private route</span><h2 id="routeDialogTitle">Create route</h2></div>
+          <button id="closeRouteDialogBtn" class="icon-button" type="button" title="Close"><i data-lucide="x"></i></button>
+        </header>
+        <div class="dialog-body">
+          <label><span>Route name</span><input id="routeName" maxlength="60" placeholder="Whitewood run" required /></label>
+          <div class="route-dialog-grid">
+            <label class="route-color-field"><span>Line color</span><input id="routeColor" type="color" value="#58b7ff" /></label>
+            <label><span>Line width</span><select id="routeWidth"><option value="3">Thin</option><option value="5" selected>Normal</option><option value="7">Bold</option></select></label>
+          </div>
+          <label class="name-switch route-loop-switch">
+            <input id="routeLoop" type="checkbox" />
+            <span><strong>Loop back to the start</strong><small>Connect the final stop to stop one.</small></span>
+          </label>
+          <p class="route-dialog-note"><i data-lucide="lock"></i> This route is stored only on this computer. It is never added to the shared marker map.</p>
+        </div>
+        <footer>
+          <button id="deleteRouteBtn" class="danger-button" type="button" hidden><i data-lucide="trash-2"></i> Delete</button>
+          <span></span>
+          <button id="cancelRouteDialogBtn" type="button">Cancel</button>
+          <button class="primary-button" type="submit">Save route</button>
+        </footer>
+      </form>
+    </dialog>
+
+    <dialog id="routeCodeDialog" class="route-code-dialog">
+      <form method="dialog">
+        <header>
+          <div><span class="eyebrow">Private route exchange</span><h2 id="routeCodeDialogTitle">Share route</h2></div>
+          <button id="closeRouteCodeDialogBtn" class="icon-button" type="button" title="Close"><i data-lucide="x"></i></button>
+        </header>
+        <div class="dialog-body">
+          <p id="routeCodeHelp" class="route-code-help">Copy this code to share only the selected route. It does not expose your other routes.</p>
+          <textarea id="routeCodeText" class="route-code-text" rows="8" spellcheck="false" placeholder="Paste an MNR1 route code here..."></textarea>
+          <p id="routeCodeStatus" class="route-code-status">Route codes work without Firebase or an editor account.</p>
+        </div>
+        <footer>
+          <span></span>
+          <button id="importRouteCodeBtn" type="button"><i data-lucide="download"></i> Import</button>
+          <button id="copyRouteCodeBtn" class="primary-button" type="button"><i data-lucide="copy"></i> Copy code</button>
+        </footer>
+      </form>
+    </dialog>
+
+    <dialog id="markerImageViewer" class="marker-image-viewer" aria-labelledby="markerImageViewerCaption">
+      <button id="closeMarkerImageViewerBtn" class="marker-image-viewer-close" type="button" aria-label="Close picture">
+        <i data-lucide="x"></i>
+      </button>
+      <figure>
+        <img id="markerImageViewerImage" alt="" />
+        <figcaption id="markerImageViewerCaption"></figcaption>
+      </figure>
+    </dialog>
+
+    <div id="toast" class="toast" hidden></div>
+    <script src="/assets/vendor/leaflet.js"></script>
+    <script src="/assets/vendor/lucide.min.js"></script>
+    <script type="module" src="/desktop-map.js?v=53"></script>
+    <script src="/nexus-overhaul.js?v=24"></script>
+    <script type="module" src="/desktop-tools.js?v=28"></script>
+  </body>
+</html>

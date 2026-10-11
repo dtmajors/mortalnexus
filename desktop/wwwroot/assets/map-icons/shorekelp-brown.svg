@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Brown shorekelp">
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M31 58C20 45 25 32 17 18M34 57c9-14 3-25 12-41M29 56c-13-10-15-20-20-27M36 56c13-10 14-20 20-28" stroke="#4c2e18" stroke-width="8"/>
+    <path d="M31 58C20 45 25 32 17 18M34 57c9-14 3-25 12-41M29 56c-13-10-15-20-20-27M36 56c13-10 14-20 20-28" stroke="#9b6532" stroke-width="4"/>
+  </g>
+  <g fill="#c28a45" stroke="#4c2e18" stroke-width="2"><ellipse cx="16" cy="16" rx="5" ry="8"/><ellipse cx="47" cy="14" rx="5" ry="8"/><ellipse cx="8" cy="27" rx="5" ry="8"/><ellipse cx="56" cy="26" rx="5" ry="8"/></g>
+</svg>

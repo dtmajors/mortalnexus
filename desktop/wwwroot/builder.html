@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#07060a" />
+    <title>Character Builder | Mortal Nexus</title>
+    <meta name="description" content="Build a complete Mortal Online II character with clades, gifts, skills, mastery, pets, equipment, and magic planning." />
+    <link rel="icon" href="/assets/mortal-nexus-app-icon-v2.png" type="image/png" />
+    <link rel="stylesheet" href="/styles.css?v=4" />
+    <link rel="stylesheet" href="/tool-suite.css?v=2" />
+    <link rel="stylesheet" href="/builder.css?v=3" />
+    <link rel="stylesheet" href="/site-shell.css?v=24" />
+  </head>
+  <body class="tool-page builder-page">
+    <main class="tool-main builder-main">
+      <header class="tool-titlebar builder-titlebar">
+        <div>
+          <span class="tool-kicker"><i data-lucide="user-round-cog"></i> Character planning</span>
+          <h1>Character Builder</h1>
+          <p>Plan the complete character, from bloodline and clade gifts to equipment, pets, and spell materials.</p>
+        </div>
+        <div class="tool-actions">
+          <button class="tool-button builds-action" data-view="builds" type="button" hidden><i data-lucide="users-round"></i> Browse Builds</button>
+          <button class="tool-button" id="importBuild" type="button"><i data-lucide="upload"></i> Import</button>
+          <button class="tool-button" id="exportBuild" type="button"><i data-lucide="download"></i> Export</button>
+          <button class="tool-button danger" id="resetBuild" type="button"><i data-lucide="rotate-ccw"></i> Reset</button>
+          <button class="tool-button primary" id="saveBuild" type="button"><i data-lucide="save"></i> Save</button>
+          <input id="importFile" type="file" accept="application/json,.json" hidden />
+        </div>
+      </header>
+
+      <div class="builder-status" id="builderStatus" role="status"><span class="status-dot"></span><span>Loading the character catalog...</span></div>
+
+      <div class="tool-rail builder-rail" role="tablist" aria-label="Character builder sections">
+        <button class="tool-tab active" data-view="stats" type="button"><i data-lucide="user-round"></i><strong>Stats</strong></button>
+        <button class="tool-tab builds-tab" data-view="builds" type="button" hidden><i data-lucide="users-round"></i><strong>Builds</strong></button>
+        <button class="tool-tab" data-view="skills" type="button"><i data-lucide="list-tree"></i><strong>Skills</strong></button>
+        <button class="tool-tab" data-view="gifts" type="button"><i data-lucide="sparkles"></i><strong>Gifts</strong></button>
+        <button class="tool-tab" data-view="mastery" type="button"><i data-lucide="orbit"></i><strong>Mastery</strong></button>
+        <button class="tool-tab" data-view="pets" type="button"><i data-lucide="paw-print"></i><strong>Pets</strong></button>
+        <button class="tool-tab" data-view="gear" type="button"><i data-lucide="shield"></i><strong>Gear</strong></button>
+        <button class="tool-tab" data-view="workbench" type="button"><i data-lucide="hammer"></i><strong>Workbench</strong></button>
+        <button class="tool-tab" data-view="magic" type="button"><i data-lucide="wand-sparkles"></i><strong>Magic</strong></button>
+        <button class="tool-tab" data-view="summary" type="button"><i data-lucide="clipboard-list"></i><strong>Summary</strong></button>
+      </div>
+
+      <section class="builder-shell">
+        <div class="builder-content">
+          <section class="builder-view active" data-view-panel="stats"><div id="statsPanel"></div></section>
+          <section class="builder-view" data-view-panel="skills" hidden><div id="skillsPanel"></div></section>
+          <section class="builder-view" data-view-panel="gifts" hidden><div id="giftsPanel"></div></section>
+          <section class="builder-view" data-view-panel="mastery" hidden><div id="masteryPanel"></div></section>
+          <section class="builder-view" data-view-panel="pets" hidden><div id="petsPanel"></div></section>
+          <section class="builder-view" data-view-panel="gear" hidden><div id="gearPanel"></div></section>
+          <section class="builder-view" data-view-panel="workbench" hidden><div id="workbenchPanel"></div></section>
+          <section class="builder-view" data-view-panel="magic" hidden><div id="magicPanel"></div></section>
+          <section class="builder-view" data-view-panel="builds" hidden><div id="buildsPanel"></div></section>
+          <section class="builder-view" data-view-panel="summary" hidden><div id="summaryPanel"></div></section>
+        </div>
+
+        <aside class="character-sheet" aria-label="Calculated character sheet">
+          <div class="sheet-heading"><div><span>Live character sheet</span><strong id="sheetHeritage">Loading...</strong></div><span class="sheet-sync" id="sheetSync"><i data-lucide="refresh-cw"></i></span></div>
+          <div class="sheet-attributes" id="sheetAttributes"></div>
+          <div class="sheet-metrics" id="sheetMetrics"></div>
+          <div class="sheet-section"><h2>Point pools</h2><div id="sheetPools"></div></div>
+          <div class="sheet-section"><h2>Equipment</h2><div id="sheetGear"></div></div>
+          <div class="sheet-section warning-section" id="sheetWarnings" hidden><h2>Build notes</h2><div id="warningList"></div></div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="tool-footer builder-footer"><span></span><span id="catalogCount"></span></footer>
+    <script src="/assets/vendor/lucide.min.js"></script>
+    <script src="/builder.js?v=5"></script>
+  </body>
+</html>

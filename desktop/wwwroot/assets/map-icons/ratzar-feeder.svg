@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ratzar feeder">
+  <g stroke="#15160d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path fill="#8b8e4e" d="M22 20 12 8l4 18-9 9 13 3 3 15h18l3-15 13-3-9-9 4-18-10 12-10-8Z"/>
+    <path fill="#5a4e27" d="M23 28h18l5 13-8 15H26l-8-15Z"/>
+    <path fill="#d8b85d" d="M24 40c3-7 13-7 16 0l-3 12H27Z"/>
+    <path fill="#aaa85d" d="m20 37-13-2 10 7-7 9 14-6m20-8 13-2-10 7 7 9-14-6"/>
+    <circle cx="27" cy="31" r="2" fill="#fff174" stroke="none"/>
+    <circle cx="37" cy="31" r="2" fill="#fff174" stroke="none"/>
+  </g>
+</svg>

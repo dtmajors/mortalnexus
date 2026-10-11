@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0d0c" />
+    <title>Crafting | Mortal Nexus</title>
+    <meta name="description" content="Calculate Mortal Online II weapons, armor, bows, shields, pet armor, and pet bags." />
+    <link rel="icon" href="/assets/mortal-nexus-app-icon-v2.png" type="image/png" />
+    <link rel="stylesheet" href="/styles.css?v=4" />
+    <link rel="stylesheet" href="/tool-suite.css?v=2" />
+    <link rel="stylesheet" href="/crafting.css?v=4" />
+    <link rel="stylesheet" href="/site-shell.css?v=24" />
+  </head>
+  <body class="crafting-page">
+    <header class="masthead crafting-masthead">
+      <div class="masthead-main crafting-masthead-main">
+        <a class="brand" href="/" aria-label="Mortal Nexus home">
+          <img src="/assets/mortal-nexus-app-icon-v2.png" alt="" width="40" height="40" />
+          <span class="brand-copy">
+            <strong>Mortal Nexus</strong>
+            <small>Mortal Online II Reference</small>
+          </span>
+        </a>
+        <nav class="crafting-site-nav" aria-label="Site navigation">
+          <a class="text-button" href="/">Reference</a>
+          <a class="text-button" href="/builder">Builder</a>
+          <a class="text-button active" href="/crafting" aria-current="page">Crafting</a>
+          <a class="text-button" href="/extraction">Extraction</a>
+          <a class="text-button" href="/refining">Refining</a>
+          <a class="text-button" href="/creatures">Creature Codex</a>
+          <a class="text-button" href="/alchemy">Alchemy</a>
+          <a class="text-button" href="/cooking">Cooking</a>
+          <a class="text-button" href="/reverse">Reverse</a>
+          <a class="text-button" href="/building">Building</a>
+          <a class="text-button" href="/map">Live map</a>
+          <a class="text-button donate-button" href="https://www.paypal.com/donate/?hosted_button_id=677CRL426BE9Q" target="_blank" rel="noreferrer">Donate</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="crafting-main">
+      <header class="crafting-intro">
+        <div>
+          <p class="kicker">Equipment workbench</p>
+          <h1>Crafting</h1>
+          <p>Choose a pattern and materials to calculate exact crafted stats and material requirements.</p>
+        </div>
+        <div class="catalog-status" id="catalogStatus" aria-live="polite">
+          <span class="status-dot"></span>
+          <strong>Loading catalog</strong>
+          <small>Connecting to the crafting service</small>
+        </div>
+      </header>
+
+      <section class="crafting-workbench" aria-labelledby="workbenchHeading">
+        <div class="crafting-kind-tabs" role="tablist" aria-label="Craft type">
+          <button class="craft-kind active" type="button" role="tab" aria-selected="true" data-mode="weapon">
+            <i data-lucide="swords" aria-hidden="true"></i><span>Weapons</span>
+          </button>
+          <button class="craft-kind" type="button" role="tab" aria-selected="false" data-mode="armor">
+            <i data-lucide="shield" aria-hidden="true"></i><span>Armor</span>
+          </button>
+          <button class="craft-kind" type="button" role="tab" aria-selected="false" data-mode="bow">
+            <i data-lucide="target" aria-hidden="true"></i><span>Bows</span>
+          </button>
+          <button class="craft-kind" type="button" role="tab" aria-selected="false" data-mode="shield">
+            <i data-lucide="shield-check" aria-hidden="true"></i><span>Shields</span>
+          </button>
+          <button class="craft-kind" type="button" role="tab" aria-selected="false" data-mode="pet">
+            <i data-lucide="briefcase" aria-hidden="true"></i><span>Pet Gear &amp; Bags</span>
+          </button>
+        </div>
+
+        <div class="crafting-config">
+          <div class="config-heading">
+            <div>
+              <span class="eyebrow">Pattern and materials</span>
+              <h2 id="workbenchHeading">Craft item</h2>
+            </div>
+            <label class="quantity-field">
+              <span>Quantity</span>
+              <input id="craftQuantity" type="number" min="1" max="1000" step="1" value="1" inputmode="numeric" />
+            </label>
+          </div>
+
+          <div class="craft-panel" data-panel="weapon">
+            <div class="field-grid three-up">
+              <label class="full-span"><span>Weapon family</span><select id="weaponFamily"></select></label>
+              <label><span>Handle / hilt</span><select id="weaponHandle"></select></label>
+              <label><span>Head / blade</span><select id="weaponHead"></select></label>
+              <label><span>Core material</span><select id="weaponCore"></select></label>
+              <label><span>Grip material</span><select id="weaponGrip"></select></label>
+              <label><span>Head material</span><select id="weaponHeadMaterial"></select></label>
+            </div>
+          </div>
+
+          <div class="craft-panel" data-panel="armor" hidden>
+            <div class="field-grid">
+              <label class="full-span"><span>Armor style</span><select id="armorStyle"></select></label>
+              <label><span>Base material</span><select id="armorBase"></select></label>
+              <label><span>Support material</span><select id="armorSupport"></select></label>
+              <label class="range-field"><span>Base density <output id="armorBaseDensityValue">100%</output></span><input id="armorBaseDensity" type="range" min="1" max="100" value="100" /></label>
+              <label class="range-field"><span>Support density <output id="armorSupportDensityValue">100%</output></span><input id="armorSupportDensity" type="range" min="1" max="100" value="100" /></label>
+            </div>
+          </div>
+
+          <div class="craft-panel" data-panel="bow" hidden>
+            <div class="field-grid">
+              <label><span>Bow size</span><select id="bowSize"></select></label>
+              <label><span>Curve</span><select id="bowCurve"></select></label>
+              <label class="toggle-field full-span"><input id="selfBow" type="checkbox" /><span><strong>Self bow</strong><small>Use one material instead of a composite belly and back.</small></span></label>
+              <label id="bowBellyField"><span>Belly material</span><select id="bowBelly"></select></label>
+              <label><span id="bowBackLabel">Back material</span><select id="bowBack"></select></label>
+              <label class="range-field full-span" id="compositeField"><span>Composite balance <output id="compositeValue">50%</output></span><input id="compositePercent" type="range" min="1" max="99" value="50" /></label>
+            </div>
+          </div>
+
+          <div class="craft-panel" data-panel="shield" hidden>
+            <div class="field-grid">
+              <label><span>Shield size</span><select id="shieldStyle"></select></label>
+              <label><span>Frame</span><select id="shieldFrame"></select></label>
+              <label><span>Core material</span><select id="shieldCore"></select></label>
+              <label><span>Coat material</span><select id="shieldCoat"></select></label>
+              <label class="full-span"><span>Frame material</span><select id="shieldFrameMaterial"></select></label>
+            </div>
+          </div>
+
+          <div class="craft-panel" data-panel="pet" hidden>
+            <div class="field-grid">
+              <label class="full-span"><span>Pet equipment</span><select id="petStyle"></select></label>
+              <label><span>Base material</span><select id="petBase"></select></label>
+              <label><span>Support material</span><select id="petSupport"></select></label>
+              <label class="range-field"><span>Base density <output id="petBaseDensityValue">100%</output></span><input id="petBaseDensity" type="range" min="1" max="100" value="100" /></label>
+              <label class="range-field"><span>Support density <output id="petSupportDensityValue">100%</output></span><input id="petSupportDensity" type="range" min="1" max="100" value="100" /></label>
+            </div>
+            <p class="bag-note">Small, large, and bear bags are included in this equipment list. Personal player bags are vendor items, not player-crafted gear.</p>
+          </div>
+
+          <button id="calculateCraft" class="forge-command" type="button" disabled>
+            <i data-lucide="hammer" aria-hidden="true"></i>
+            Calculate craft
+          </button>
+        </div>
+
+        <aside class="crafting-result" aria-live="polite">
+          <div class="result-heading">
+            <div>
+              <span class="eyebrow" id="resultKind">Weapon result</span>
+              <h2 id="resultName">Select a craft</h2>
+            </div>
+            <span class="result-state" id="resultState">Waiting</span>
+          </div>
+          <p id="resultSummary" class="result-summary">The calculated stat block and required materials will appear here.</p>
+          <div class="result-profile">
+            <canvas id="resultChart" width="540" height="210" aria-label="Crafted stat profile"></canvas>
+          </div>
+          <dl id="resultStats" class="result-stats"></dl>
+          <div id="slotBreakdown" class="slot-breakdown" hidden></div>
+          <div class="materials-heading">
+            <span>Materials required</span>
+            <small id="materialQuantityLabel">For 1 item</small>
+          </div>
+          <div id="materialResults" class="material-results">
+            <p class="empty-result">No calculation yet.</p>
+          </div>
+          <div class="result-commands">
+            <button id="compareCraft" class="tool-button" type="button" disabled>Add to comparison</button>
+            <button id="clearComparison" class="tool-button danger" type="button">Clear comparison</button>
+          </div>
+        </aside>
+
+        <aside class="forge-sidebar">
+          <section>
+            <span class="eyebrow">Workbench ledger</span>
+            <h2>Cost &amp; comparison</h2>
+            <label class="market-field"><span>Broker margin</span><div><input id="brokerMargin" type="number" min="0" max="200" value="20" /><small>%</small></div></label>
+            <div id="marketInputs" class="market-inputs"><p class="empty-result">Calculate an item to price its materials.</p></div>
+            <dl class="market-summary">
+              <div><dt>Raw cost</dt><dd id="rawCost">0.00 g</dd></div>
+              <div><dt>Suggested price</dt><dd id="salePrice">0.00 g</dd></div>
+            </dl>
+          </section>
+          <section>
+            <div class="sidebar-heading-row"><h3>Compared crafts</h3><span id="comparisonCount">0 / 10</span></div>
+            <div id="comparisonList" class="comparison-list"><p class="empty-result">No saved variants.</p></div>
+          </section>
+          <section>
+            <div class="sidebar-heading-row"><h3>Recent crafts</h3><button id="clearRecent" type="button">Clear</button></div>
+            <div id="recentCrafts" class="recent-crafts"><p class="empty-result">Nothing forged this session.</p></div>
+          </section>
+        </aside>
+      </section>
+
+      <section class="crafting-notes" aria-label="Calculation notes">
+        <strong>Calculation basis</strong>
+        <p>Results assume maximum relevant crafting skill and material lore. In-game mastery, patches, and incomplete lore can change the final item.</p>
+      </section>
+    </main>
+
+    <script src="/assets/vendor/lucide.min.js"></script>
+    <script src="/crafting.js?v=3"></script>
+    <script src="/site-shell.js?v=22"></script>
+  </body>
+</html>

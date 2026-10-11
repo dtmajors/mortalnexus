@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Springbok">
+  <path fill="#c48b52" stroke="#32241b" stroke-width="4" stroke-linejoin="round" d="M17 29c0-10 6-16 15-16s15 6 15 16v11c0 10-6 18-15 18S17 50 17 40V29Z"/>
+  <path fill="none" stroke="#32241b" stroke-width="4" stroke-linecap="round" d="M25 15C19 8 21 3 26 3m13 12c6-7 4-12-1-12"/>
+  <path fill="#e2bd82" stroke="#32241b" stroke-width="3" d="m19 26-10-7 3 12Zm26 0 10-7-3 12Z"/>
+  <path fill="none" stroke="#f0dfbd" stroke-width="4" stroke-linecap="round" d="M32 25v24"/>
+  <path fill="none" stroke="#5c3b27" stroke-width="4" stroke-linecap="round" d="M22 38h20"/>
+  <circle cx="25" cy="31" r="2" fill="#fff1c7"/>
+  <circle cx="39" cy="31" r="2" fill="#fff1c7"/>
+</svg>

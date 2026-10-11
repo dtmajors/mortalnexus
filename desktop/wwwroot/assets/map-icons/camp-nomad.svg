@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Nomad camp">
+  <g stroke="#1c150d" stroke-width="3.5" stroke-linejoin="round">
+    <path fill="#ae7938" d="M4 57 29 10l25 47Z"/>
+    <path fill="#3d2a18" d="m29 18 8 39H21Z"/>
+    <path fill="none" stroke="#62d4ca" stroke-linecap="round" d="M9 56 29 15l21 41"/>
+    <circle cx="48" cy="44" r="13" fill="#352617"/>
+    <path fill="#c48d45" d="M40 44c0-8 3-12 8-12s8 4 8 12l-3 8H43Z"/>
+    <path fill="#d9b98d" d="M44 40h8v7l-4 3-4-3Z"/>
+    <path fill="#4d351d" d="m43 45 5 3 5-3-2 7h-6Z"/>
+    <path fill="#62d4ca" d="M42 37h12l-2 4h-8Z"/>
+  </g>
+</svg>

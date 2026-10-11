@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Bos Koch">
+  <path fill="#121b18" stroke="#070b09" stroke-width="3" d="M32 4 55 13v18c0 14-9 24-23 29C18 55 9 45 9 31V13Z"/>
+  <path fill="#2f6a45" d="M13 16 32 8l19 8v15c0 11-7 19-19 24-12-5-19-13-19-24Z"/>
+  <path fill="#192c20" d="m17 24 8-14 7 7 7-7 8 14-7 7H24Z"/>
+  <path fill="#b88960" d="M22 27h20v13l-10 7-10-7Z"/>
+  <path fill="#214c32" d="M17 36h30l-6 13-9 6-9-6Z"/>
+  <path fill="none" stroke="#d8f078" stroke-width="3" stroke-linecap="round" d="m24 32 5 1m11-1-5 1"/>
+  <path fill="#e1c461" d="m32 12 4 7-4 6-4-6Z"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Golden Danaburnu">
+  <g fill="none" stroke="#4d2c0d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M24 26 12 18 5 22l5 7 10 1M40 26l12-8 7 4-5 7-10 1"/>
+    <path d="m22 34-13 3m15 5-11 8m29-16 13 3m-15 5 11 8"/>
+  </g>
+  <path fill="#e0a927" stroke="#4d2c0d" stroke-width="4" d="M22 26c0-7 4-12 10-12s10 5 10 12v18c0 8-4 14-10 14S22 52 22 44V26Z"/>
+  <path fill="none" stroke="#fff0a6" stroke-width="3" d="M23 31h18M23 39h18M25 47h14"/>
+  <path fill="#fff0a6" stroke="#4d2c0d" stroke-width="3" d="m25 17-7-9 10 5Zm14 0 7-9-10 5Z"/>
+  <circle cx="28" cy="23" r="2" fill="#fff8d8"/>
+  <circle cx="36" cy="23" r="2" fill="#fff8d8"/>
+</svg>

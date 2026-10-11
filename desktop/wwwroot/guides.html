@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#06070b" />
+    <title>Guides | Mortal Nexus</title>
+    <meta name="description" content="Search the Mortal Nexus field guide library for practical Mortal Online 2 knowledge." />
+    <link rel="icon" href="/assets/mortal-nexus-app-icon-v2.png" type="image/png" />
+    <link rel="stylesheet" href="/site-shell.css?v=24" />
+    <link rel="stylesheet" href="/guides.css?v=3" />
+  </head>
+  <body class="guides-page">
+    <main class="guides-shell">
+      <header class="guides-header">
+        <div class="guides-title-block">
+          <span class="guides-kicker">Mortal Nexus intelligence</span>
+          <h1>Field Guides</h1>
+          <p>Deep game knowledge, organized into a focused premium reference library.</p>
+        </div>
+        <div class="guide-library-badge">
+          <i data-lucide="book-marked" aria-hidden="true"></i>
+          <span><small>Premium field archive</small><strong>57 indexed guides</strong></span>
+        </div>
+      </header>
+
+      <section class="guide-browser-toolbar" aria-label="Guide topics">
+          <label class="guide-search">
+            <i data-lucide="search" aria-hidden="true"></i>
+            <input id="guideSearch" type="search" autocomplete="off" placeholder="Search guides, skills, or systems..." />
+          </label>
+          <nav id="guideCategories" class="guide-categories" aria-label="Guide categories"></nav>
+      </section>
+
+      <section class="guides-workspace" aria-label="Guide library">
+        <aside class="guides-index">
+          <div class="guide-index-heading"><span>Field archive</span><strong id="guideResultCount">Loading guides...</strong></div>
+          <nav id="guideList" class="guide-list" aria-label="Available guides"></nav>
+        </aside>
+
+        <article id="guideReader" class="guide-reader" aria-live="polite">
+          <div class="guide-loading">
+            <span class="guide-loading-mark"><i data-lucide="book-open" aria-hidden="true"></i></span>
+            <strong>Preparing the guide library</strong>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <dialog id="guideLightbox" class="guide-lightbox" aria-label="Guide image preview">
+      <button id="closeGuideLightbox" type="button" aria-label="Close image preview"><i data-lucide="x" aria-hidden="true"></i></button>
+      <img id="guideLightboxImage" alt="" />
+      <p id="guideLightboxCaption"></p>
+    </dialog>
+
+    <script src="/assets/vendor/lucide.min.js"></script>
+    <script src="/guides.js?v=2"></script>
+    <script src="/site-shell.js?v=23"></script>
+  </body>
+</html>

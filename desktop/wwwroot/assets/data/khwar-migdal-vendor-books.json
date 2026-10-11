@@ -1,0 +1,23 @@
+{
+  "verifiedAt": "2026-07-21",
+  "location": "Khwar Migdal",
+  "source": "In-game Khwar Migdal vendor screenshots and owner verification",
+  "vendors": {
+    "Ordo Rutorum Librarian": [
+      ["Almine Lore", "2g 50s"],
+      ["Lupium Lore", "10g"],
+      ["Gem Metal Lore", "10g"],
+      ["Arcronite Lore", "50g"],
+      ["Skadite Lore", "10g"],
+      ["Steel Lore", "2g 50s"],
+      ["Tungsteel Lore", "10g"],
+      ["Tindremic Messing Lore", "10g"],
+      ["Chalk Glance Lore", "5g"],
+      ["Waterstone Lore", "10g"],
+      ["Sanguinite Lore", "10g"]
+    ],
+    "Myrland Trader": [
+      ["Risar Berserker", "10g"]
+    ]
+  }
+}

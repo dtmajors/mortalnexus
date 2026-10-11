@@ -1,0 +1,22 @@
+{
+  "verifiedAt": "2026-07-21",
+  "location": "Kam",
+  "vendor": "Petrologist Librarian",
+  "source": "In-game Kam Petrologist vendor screenshot supplied by the site owner",
+  "books": [
+    ["Petrology", "10s"],
+    ["Sedimentary Rock", "10s"],
+    ["Alchemical Mineralogy", "50s"],
+    ["Minerology", "10s"],
+    ["Jadeite Lore", "50s"],
+    ["Maalite Lore", "2g 50s"],
+    ["Flakestone Lore", "50s"],
+    ["Waterstone Lore", "10g"],
+    ["Chalk Glance Lore", "5g"],
+    ["Kyanite Lore", "10g"],
+    ["Magmum Lore", "2g 50s"],
+    ["Pyropite Lore", "10g"],
+    ["Pyroxene Lore", "2g 50s"],
+    ["Sanguinite Lore", "10g"]
+  ]
+}

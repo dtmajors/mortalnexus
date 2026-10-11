@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Grey ore">
+  <path fill="#777f86" stroke="#252a2d" stroke-width="3" stroke-linejoin="round" d="M7 47 13 29l12-8 12 5 8-1 12 22-8 9H16Z"/>
+  <path fill="#aeb5ba" d="m16 31 10-6 7 3-7 4-5 10H11Z"/>
+  <path fill="#596168" d="m26 32 10-3 7 1 9 17-7 5H22Z"/>
+  <path fill="#d9dde0" d="m35 31 7 1 4 7-8-2Z"/>
+  <path fill="none" stroke="#3f464b" stroke-width="2" stroke-linecap="round" d="m21 45 10-5 9 4"/>
+</svg>

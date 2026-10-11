@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>Mortal Nexus</AssemblyName>
+    <RootNamespace>MortalNexusDesktop</RootNamespace>
+    <Product>Mortal Nexus</Product>
+    <Company>Marshal Law</Company>
+    <Authors>Marshal Law</Authors>
+    <Description>Free, open-source Mortal Online 2 maps, tools, calculators, and reference companion.</Description>
+    <Version>1.18.0</Version>
+    <FileVersion>1.18.0.0</FileVersion>
+    <AssemblyVersion>1.18.0.0</AssemblyVersion>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>MortalNexus-v2.ico</ApplicationIcon>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <PublishTrimmed>false</PublishTrimmed>
+    <DebugType Condition="'$(Configuration)' == 'Release'">none</DebugType>
+    <DebugSymbols Condition="'$(Configuration)' == 'Release'">false</DebugSymbols>
+    <WebView2UseWinForms>true</WebView2UseWinForms>
+    <WebView2UseWPF>false</WebView2UseWPF>
+    <LocalUiPreview Condition="'$(LocalUiPreview)' == ''">false</LocalUiPreview>
+    <DefineConstants Condition="'$(LocalUiPreview)' == 'true'">$(DefineConstants);LOCAL_UI_PREVIEW</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="backups\**\*.cs" />
+    <Compile Remove="publish\**\*.cs" />
+    <Compile Remove="tools\**\*.cs" />
+    <Compile Remove="LicenseGateForm.cs;LicenseKeyStore.cs;OfflineLicenseService.cs;OfflineLicenseCatalog.g.cs" />
+    <Content Include="wwwroot\**\*" Exclude="wwwroot\map.html;wwwroot\map.js;wwwroot\market.html;wwwroot\market.js;wwwroot\market.css;wwwroot\firebase-sync.js;wwwroot\house-hunter.html;wwwroot\house-hunter.js;wwwroot\house-hunter.css;wwwroot\house-hunter-service.js;wwwroot\house-hunter-data.js;wwwroot\reference-editor.js;wwwroot\reference-editor.css">
+      <Link>wwwroot\%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.4078.44" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="$(NuGetPackageRoot)microsoft.web.webview2\1.0.4078.44\runtimes\win-x64\native\WebView2Loader.dll">
+      <Link>runtimes\win-x64\native\WebView2Loader.dll</Link>
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+  </ItemGroup>
+
+  <Target Name="CopyWebView2LoaderToPublishRoot" AfterTargets="Publish">
+    <Copy
+      SourceFiles="$(NuGetPackageRoot)microsoft.web.webview2\1.0.4078.44\runtimes\win-x64\native\WebView2Loader.dll"
+      DestinationFiles="$(PublishDir)WebView2Loader.dll" />
+  </Target>
+</Project>

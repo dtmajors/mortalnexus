@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Granum">
+  <path fill="#616a70" stroke="#252b2f" stroke-width="4" stroke-linejoin="round" d="m5 52 10-23 10 7 8-25 10 24 8-6 8 23Z"/>
+  <path fill="#879197" stroke="#252b2f" stroke-width="3" stroke-linejoin="round" d="m13 49 12-13 8 11 10-12 9 14Z"/>
+  <path fill="none" stroke="#d6dadd" stroke-width="3" stroke-linecap="round" d="m31 17-5 15m17 6-7 8m-20-9 7 2"/>
+  <circle cx="49" cy="45" r="2" fill="#e6bd5f"/>
+</svg>

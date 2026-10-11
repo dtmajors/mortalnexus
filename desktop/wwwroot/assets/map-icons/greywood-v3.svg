@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Greywood tree">
+  <g stroke="#20282d" stroke-width="3" stroke-linejoin="round">
+    <path fill="#849197" d="M27 47h10l3 12H24Z"/>
+    <path fill="#56646b" d="M32 4 13 31h10L10 45h44L41 31h10Z"/>
+    <path fill="#bac4c7" stroke="none" d="m32 10-11 17h8L19 40h26L35 27h8Z"/>
+  </g>
+</svg>

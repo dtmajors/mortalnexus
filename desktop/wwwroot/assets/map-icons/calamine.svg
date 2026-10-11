@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Calamine">
+  <path fill="#e7ebee" stroke="#252b31" stroke-width="3" stroke-linejoin="round" d="M5 49 13 42l5-11 9-3 6-9 8 10 8 4 10 16-8 7H13Z"/>
+  <path fill="#f9fbfc" d="m13 43 7-9 8-2 5-8 4 8-8 4-5 10Z"/>
+  <path fill="#b8c0c7" d="m28 36 9-5 10 5 7 12-8 4-13-3Z"/>
+  <path fill="#d4dae0" d="m17 48 8-8 8 9-5 4Z"/>
+  <g fill="#ffffff">
+    <circle cx="24" cy="35" r="2"/>
+    <circle cx="38" cy="37" r="2.2"/>
+    <circle cx="45" cy="43" r="1.8"/>
+    <circle cx="31" cy="45" r="1.6"/>
+  </g>
+  <path fill="none" stroke="#8c969f" stroke-width="2" stroke-linecap="round" d="m11 49 13-3 10 4 12-3 9 3"/>
+</svg>

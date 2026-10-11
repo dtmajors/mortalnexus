@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Lysimachia Arvensis">
+  <g stroke="#4b2115" stroke-width="2" stroke-linejoin="round">
+    <path d="M32 57V18m0 22L18 31m14 3 14-12" fill="none" stroke="#3d7842" stroke-width="4"/>
+    <g fill="#df5636"><path d="m19 13 5 8 9-3-3 9 7 6-10 1-4 9-4-9-10-1 7-6-3-9 9 3Z"/><path d="m44 8 4 7 8-2-3 8 6 5-8 1-4 8-4-8-9-1 7-5-3-8 8 2Z"/></g>
+    <circle cx="23" cy="27" r="4" fill="#f4c542"/><circle cx="47" cy="21" r="4" fill="#f4c542"/>
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Capsicum">
+  <g stroke="#2b1712" stroke-width="2.5" stroke-linejoin="round">
+    <path d="M25 18c1-7 5-10 11-12m5 14c5-5 10-6 15-3" fill="none" stroke="#39723b" stroke-width="4"/>
+    <path fill="#d63c2f" d="M25 17c11 4 13 13 8 23-4 8-11 13-19 16 5-6 7-12 5-18-3-10-2-17 6-21Z"/>
+    <path fill="#ef6b35" d="M42 19c10 2 14 10 10 19-3 8-9 13-17 17 5-6 6-12 4-17-3-8-3-15 3-19Z"/>
+    <path fill="#4e953d" d="m18 19 7-6 7 6-7 4Zm18 2 7-6 7 5-7 5Z"/>
+  </g>
+</svg>

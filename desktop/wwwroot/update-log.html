@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0f0c" />
+    <title>Update Log | Mortal Nexus</title>
+    <meta name="description" content="Mortal Nexus desktop release history and update notes." />
+    <link rel="icon" href="/assets/mortal-nexus-app-icon-v2.png" type="image/png" />
+    <link rel="stylesheet" href="/site-shell.css?v=24" />
+    <link rel="stylesheet" href="/update-log.css?v=1" />
+  </head>
+  <body class="updates-page">
+    <header class="masthead updates-masthead">
+      <div class="masthead-main">
+        <a class="updates-brand" href="/" aria-label="Return to Mortal Nexus">
+          <img src="/assets/mortal-nexus-app-icon-v2.png" alt="" width="42" height="42" />
+          <span><strong>Mortal Nexus</strong><small>Desktop release history</small></span>
+        </a>
+        <div class="masthead-actions"></div>
+      </div>
+    </header>
+
+    <main class="updates-main">
+      <section class="updates-intro">
+        <div>
+          <span class="updates-kicker">What's new</span>
+          <h1>Update Log</h1>
+          <p>Mortal Nexus release history. Now free, open source, and supported by players.</p>
+        </div>
+        <div class="current-release">
+          <span>Current release</span>
+          <strong>1.18.0</strong>
+          <small>October 11, 2026</small>
+        </div>
+      </section>
+
+      <section class="release-list" aria-label="Mortal Nexus releases">
+        <article class="release-card is-latest">
+          <header><div><span class="release-tag">Free &amp; open source</span><h2>Version 1.18.0</h2></div><time datetime="2026-10-11">October 11, 2026</time></header>
+          <ul>
+            <li>Mortal Nexus is now free for everyone. No license keys, website account, or paid activation service is required.</li>
+            <li>All former Premium tools are unlocked, including crafting, loot, character planning, guides, spells, and macros.</li>
+            <li>Source code and Windows downloads are available on GitHub. The Updates button opens the latest release.</li>
+            <li>Added prominent optional donation links. Donations support development, not access to features.</li>
+            <li>Maps and reference assets are bundled locally. Third-party live calculation services still require internet access.</li>
+            <li>Hosted market, messages, online accounts, submissions, and shared builds are retired.</li>
+          </ul>
+        </article>
+        <article class="release-card">
+          <header><div><span class="release-tag">Expanded map contributions</span><h2>Version 1.17.5</h2></div><time datetime="2026-09-18">September 18, 2026</time></header>
+          <ul>
+            <li>Raised the contribution queue limit so every player can keep up to 50 map submissions pending at once.</li>
+            <li>Fixed new public markers being mistaken for duplicate submissions when another new marker was already waiting for review.</li>
+            <li>Kept duplicate protection for repeated corrections to the same existing marker.</li>
+            <li>Added the pending-submission allowance directly to the Contributions panel.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Clearer map filters and mount cleanup</span><h2>Version 1.17.4</h2></div><time datetime="2026-09-15">September 15, 2026</time></header>
+          <ul>
+            <li>Made every individual map layer clearly clickable with visible on/off checkboxes and stronger expand controls.</li>
+            <li>Set busy map layers such as keeps, landmarks, houses, vendors, gathering resources, fishing spots, and chests to start hidden once after updating.</li>
+            <li>Kept each player's filter changes saved after the new defaults are applied.</li>
+            <li>Moved rideable creature markers into Mounts consistently across Myrland and Sarducaa.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Map filters and Myrland crops</span><h2>Version 1.17.1</h2></div><time datetime="2026-09-12">September 12, 2026</time></header>
+          <ul>
+            <li>Fixed Sarducaa map categories collapsing by themselves when live map data refreshes.</li>
+            <li>Added clustered Myrland fields for Corn, Rice, Spelt, Rye, and Barley with dedicated grain markers.</li>
+            <li>Replaced scattered legacy crop pins with consolidated field markers while preserving the underlying source totals.</li>
+            <li>Corrected crop classification and search behavior so nearby camps and landmarks cannot move grain fields into the wrong category.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Fishing intelligence and interface polish</span><h2>Version 1.17.0</h2></div><time datetime="2026-09-11">September 11, 2026</time></header>
+          <ul>
+            <li>Added a complete Fishing workspace with 245 recorded observations covering 24 fish, 48 baits, and 18 named waters.</li>
+            <li>Added searchable fish profiles, setup summaries, filters, and a full catch evidence ledger while preserving repeated field observations.</li>
+            <li>Upgraded the Spell Planner with the original in-game spell artwork, clearer spell cards, improved controls, and a cleaner loadout view.</li>
+            <li>Removed the old standalone header and background bleed from Character Builder so it now sits cleanly inside Mortal Nexus.</li>
+            <li>Disabled casual right-click, View Source, and developer-tool shortcuts in the desktop application.</li>
+            <li>Established this release as the update baseline. Newer releases detected by version 1.17.0 and later must be installed to continue.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Sarducaa map restoration</span><h2>Version 1.16.9</h2></div><time datetime="2026-09-11">September 11, 2026</time></header>
+          <ul>
+            <li>Restored 99 condensed Sarducaa Granum locations from 169 verified source summaries covering 26,656 mapped rock surfaces.</li>
+            <li>Combined Granum inside Halls of Kepher, Bone Pit, Tuz Salt Mines, and Yel Keskar Hideout into clean multi-node dungeon markers.</li>
+            <li>Map searches now surface matching locations even when their normal category or resource layer is hidden.</li>
+            <li>Made Mortal Nexus and MortalNexus.com bold and clearly visible in the top-left app branding for screenshots and recordings.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Original character builder restored</span><h2>Version 1.16.8</h2></div><time datetime="2026-09-10">September 10, 2026</time></header>
+          <ul>
+            <li>Restored the circular in-game clade Gift Wheel with the original gift artwork, clickable pins, prerequisite paths, and learned-gift tracking.</li>
+            <li>Restored the tiled in-game Mastery map with clickable progression nodes, active paths, tree filters, search, and a 110-point limit.</li>
+            <li>Added a proper Character section in the app sidebar with separate Builder and Builds subsections.</li>
+            <li>Builds now opens directly to the shared gallery for publishing, browsing, loading, and copying build codes.</li>
+            <li>Replaced the reconstructed dungeon artwork with the five original uploaded player maps and removed Sator Dungeon from the set.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Character build sharing</span><h2>Version 1.16.7</h2></div><time datetime="2026-09-10">September 10, 2026</time></header>
+          <ul>
+            <li>Added public character builds with eight-character sharing codes and account attribution.</li>
+            <li>Added publishing, browsing, loading, and code-copy controls to the Character Builder.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Dungeon atlas blueprints</span><h2>Version 1.16.6</h2></div><time datetime="2026-09-09">September 9, 2026</time></header>
+          <ul>
+            <li>Rebuilt the six supplied dungeon maps as crisp, source-faithful blueprints with clear walls, rooms, routes, and recorded markers.</li>
+            <li>Removed source credits, joke text, screenshots, handwritten compass marks, and unrelated notes without trimming dungeon corridors.</li>
+            <li>Added a complete north, south, east, and west compass rose that remains readable while zooming and panning.</li>
+            <li>Added wider safety margins around every floor plan so route edges and map glow are never clipped.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Corrected dungeon plans</span><h2>Version 1.16.5</h2></div><time datetime="2026-09-09">September 9, 2026</time></header>
+          <ul>
+            <li>Replaced the generated 3D dungeon models with sharp, flat floor plans traced directly from the supplied drawings.</li>
+            <li>Compass marks and written annotations are displayed only as source-map details and are no longer interpreted as dungeon geometry.</li>
+            <li>Restored clear independent floor tabs for Sator Dungeon while retaining map zoom and pan controls.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Sharper dungeon maps</span><h2>Version 1.16.4</h2></div><time datetime="2026-09-09">September 9, 2026</time></header>
+          <ul>
+            <li>Removed the low-resolution texture conversion that blurred the supplied dungeon linework.</li>
+            <li>Dungeon models now render from their full-resolution source textures with clearer selected floors and no distance haze.</li>
+            <li>Adjusted the default camera for a cleaner overhead view while keeping orbit, pan, and zoom controls.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Interactive dungeon models</span><h2>Version 1.16.3</h2></div><time datetime="2026-09-09">September 9, 2026</time></header>
+          <ul>
+            <li>Converted the six supplied dungeon drawings into interactive 3D floor models with orbit, pan, and zoom controls.</li>
+            <li>Built raised rooms, corridors, walls, exits, and recorded symbols directly from the supplied linework without inventing new routes.</li>
+            <li>Rebuilt Sator as a stacked multi-floor model with the selected floor highlighted and neighboring levels visible for context.</li>
+            <li>Removed unsupported scale claims while preserving the recorded north orientation and relative layout.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Dungeon cartography</span><h2>Version 1.16.2</h2></div><time datetime="2026-09-09">September 9, 2026</time></header>
+          <ul>
+            <li>Added source-faithful maps for the Beth Jedda Ratzar Hatcher Tunnels, Bone Pit, Tuz Salt Mine, Yel Keskar Hideout, and Halls of Kepher.</li>
+            <li>Rebuilt Sator Dungeon from the recorded eight-layer floor schematic, with separate tabs for every entrance, floor, pit route, and Vessel section.</li>
+            <li>Added high-resolution route-map rendering to the Dungeon Atlas with full zoom and pan support.</li>
+            <li>Removed legacy map credits, joke text, screenshots, and unverified placeholder points from the new schematics.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Community map network</span><h2>Version 1.16.1</h2></div><time datetime="2026-09-06">September 6, 2026</time></header>
+          <ul>
+            <li>Every signed-in player can submit new public markers, corrected details, corrected locations, and incorrect-marker reports for editor review.</li>
+            <li>Added a polished Contributions desk where every approved editor can approve or reject submissions with review notes.</li>
+            <li>Every player can confirm or dispute a POI, with community confidence totals shown in its details and while hovering.</li>
+            <li>Added earned Scout, Cartographer, Trader, and veteran profile badges based on approved map work and rated trades.</li>
+            <li>Added optional delivery fees to item and service listings across the shared Mortal Nexus and BRAVE marketplace.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Guilds and map controls</span><h2>Version 1.16.0</h2></div><time datetime="2026-09-05">September 5, 2026</time></header>
+          <ul>
+            <li>Added app guilds with invitations, member management, guild emblems, and blue or allied-green identity colors.</li>
+            <li>Added Guild-only sharing for custom map markers and House Hunter entries alongside Only me, Friends, and Public.</li>
+            <li>Approved editors can now correct or remove community markers and houses created by other users, including their visibility.</li>
+            <li>Added a Hide others search option and dedicated map categories and icons for bandits, vendors, books, and satchels.</li>
+            <li>Fixed direct messages opened from the Friends page and added strong app-wide sound and bottom-right alerts for messages, friend requests, and guild invitations.</li>
+            <li>Verified extraction batches and yields and removed one incomplete all-unknown route from the displayed catalog.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Spell catalog hotfix</span><h2>Version 1.15.7</h2></div><time datetime="2026-09-05">September 5, 2026</time></header>
+          <ul>
+            <li>Restored Outburst to the Ecumenical spell catalog under its correct name while retaining Elementalism Fireball as its own separate spell.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Macro safety and spell load</span><h2>Version 1.15.6</h2></div><time datetime="2026-09-05">September 5, 2026</time></header>
+          <ul>
+            <li>Added a master switch to the Macros page. Turning it off immediately stops every routine and blocks all macro buttons and hotkeys.</li>
+            <li>Removed every bundled macro key assignment and clears existing macro bindings once after updating, leaving all actions unbound until you assign them.</li>
+            <li>Added a live inventory-weight total to the Spell Planner's combined reagent tally and copied loadout summary.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Field guide rewrite</span><h2>Version 1.15.5</h2></div><time datetime="2026-09-05">September 5, 2026</time></header>
+          <ul>
+            <li>Reworked the full guide archive into a consistent Mortal Nexus field-guide voice and removed legacy bylines, contributor callouts, and community-specific directions.</li>
+            <li>Reformatted long pages into clear sections, paragraphs, lists, and reference records while preserving exact game values, commands, links, and all 837 screenshots.</li>
+            <li>Fixed the Game Reference, Guide Library, and House Hunter navigation rows so icons, labels, Premium crowns, and counts remain aligned.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Premium guide overhaul</span><h2>Version 1.15.4</h2></div><time datetime="2026-09-05">September 5, 2026</time></header>
+          <ul>
+            <li>Rebuilt the Premium Guide Library as a first-party Mortal Nexus field archive with 57 rewritten, searchable guides.</li>
+            <li>Improved topic navigation, guide discovery, reading hierarchy, image viewing, and mobile behavior throughout the library.</li>
+            <li>Moved Game Reference into the Premium Guides group for a single, organized knowledge hub.</li>
+            <li>Preserved exact names, game values, recipes, requirements, links, and reference images while cleaning up the editorial language.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Account switching</span><h2>Version 1.15.3</h2></div><time datetime="2026-09-04">September 4, 2026</time></header>
+          <ul>
+            <li>Added Sign out controls to the player profile menu and Settings account page.</li>
+            <li>Signing out now removes the remembered Windows account session, revokes the active server session when available, and returns to account selection on the next launch.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Premium entitlement fix</span><h2>Version 1.15.2</h2></div><time datetime="2026-09-04">September 4, 2026</time></header>
+          <ul>
+            <li>Fixed the new sidebar incorrectly showing the purchase prompt to signed-in lifetime Premium accounts.</li>
+            <li>Normalized account and entitlement data returned to the desktop interface and added compatibility handling for both property-name formats.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Free and Premium</span><h2>Version 1.15.1</h2></div><time datetime="2026-09-04">September 4, 2026</time></header>
+          <ul>
+            <li>Added the Mortal Nexus Free account tier while keeping loot, dungeons, spells, crafting, creatures, macros, and guides exclusive to Premium accounts.</li>
+            <li>Premium tools now carry a blue crown in the navigation and open a clear feature summary with a purchase link for Free players.</li>
+            <li>Player Directory profiles now identify Free, Premium, and editor accounts, and every player can be messaged directly without sending a friend request first.</li>
+            <li>Crafting and Guides start expanded, and Premium restrictions are enforced across page routes, calculations, native controls, and background hotkeys.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Account access</span><h2>Version 1.15.0</h2></div><time datetime="2026-09-04">September 4, 2026</time></header>
+          <ul>
+            <li>Removed the Mortal Nexus Key field from the launcher. Sign in with your website account or Discord and the app finds the license already linked to that account.</li>
+            <li>Licensed accounts open with Premium access automatically. The same account entitlement system is ready for the upcoming restricted Free version without exposing paid features early.</li>
+            <li>Redesigned sign-in with the Mortal Nexus artwork, styled account fields, clearer hierarchy, and an official Discord sign-in treatment.</li>
+            <li>Existing remembered account sessions continue to work, and a successfully signed-in account removes the old locally saved key.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Messaging polish</span><h2>Version 1.14.6</h2></div><time datetime="2026-09-04">September 4, 2026</time></header>
+          <ul>
+            <li>Added Discord profile avatars to conversation rows, active message headers, and the online-player list with reliable initials fallbacks.</li>
+            <li>Fixed the empty image-attachment strip appearing before an image was selected and improved attached-image previews and viewing.</li>
+            <li>Timezone fields now provide searchable suggestions while accepting custom timezone text.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Player profiles</span><h2>Version 1.14.5</h2></div><time datetime="2026-09-04">September 4, 2026</time></header>
+          <ul>
+            <li>Rebuilt Friends as a compact Discord-style player directory with correctly sized Discord avatars, presence indicators, and reliable icon actions.</li>
+            <li>Added a signed-in profile avatar to the top toolbar with editable in-game name, guild, timezone, message status, and bio.</li>
+            <li>Licensed accounts now display a verified Mortal Nexus Premium badge across profiles, Friends, and online-player lists.</li>
+            <li>Updated this release log so the in-app Updates section reflects the builds currently available from mortalnexus.com.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Friends navigation</span><h2>Version 1.14.4</h2></div><time datetime="2026-09-04">September 4, 2026</time></header>
+          <ul>
+            <li>Added Friends directly above Settings in the main navigation for immediate access to requests and the player directory.</li>
+            <li>Connected friend-request counts to the navigation badge and added direct messaging from player profiles.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Permissions and stability</span><h2>Version 1.14.3</h2></div><time datetime="2026-09-04">September 4, 2026</time></header>
+          <ul>
+            <li>Fixed the market listing form crash that could occur after publishing a new order.</li>
+            <li>Removed the House Hunter construction password and opened personal and Friends-only entries to signed-in users.</li>
+            <li>Kept public map marker creation and movement restricted to approved editors while allowing every player to create private and Friends-only markers.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Shared community</span><h2>Version 1.14.2</h2></div><time datetime="2026-09-04">September 4, 2026</time></header>
+          <ul>
+            <li>Added the shared Mortal Nexus Market, direct messages, image attachments, conversation archiving, and trade ratings.</li>
+            <li>Added friend groups used by private map markers and House Hunter visibility.</li>
+            <li>Connected the desktop community tools to the same accounts, listings, and messages used by brave.mortalnexus.com.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Myrland field archive</span><h2>Version 1.12.27</h2></div><time datetime="2026-08-24">August 24, 2026</time></header>
+          <ul>
+            <li>Added Myrland Alt Map beside the primary Myrland map, with both views sharing the exact same markers, filters, edits, and coordinates.</li>
+            <li>Bundled 268 archived field images and attached them to 1,071 exact legacy Myrland POIs for fast hover previews and full marker details.</li>
+            <li>Limited Creature Codex map artwork to the five horse variants and preserved the established icon set for every other marker.</li>
+            <li>Unified the remaining Crafting, Cooking, Building, Creature Codex, and Macros surfaces with the darker Mortal Nexus palette.</li>
+            <li>Hardened background hotkey registration and made the map popout preserve the currently selected continent and map variant.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Interface polish</span><h2>Version 1.12.26</h2></div><time datetime="2026-08-24">August 24, 2026</time></header>
+          <ul>
+            <li>Replaced the boxed Crafting submenu with a compact icon navigation rail and clear active-state glow.</li>
+            <li>Applied the new Mortal Nexus application icon throughout the desktop shell, embedded pages, executable, installer, and shortcuts.</li>
+            <li>Unified embedded page colors and now defaults Keeps, Landmarks, Gathering, and Loot map filters to off on both continents.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Spell planning</span><h2>Version 1.12.25</h2></div><time datetime="2026-08-22">August 22, 2026</time></header>
+          <ul>
+            <li>Added a searchable catalog of 106 decoded Ecumenical, Spiritism, Necromancy, and Elementalism spells.</li>
+            <li>Build multi-spell cast plans with independent quantities and automatic combined reagent, mana, and base cast-time totals.</li>
+            <li>Spell plans persist locally and can be copied as a clean preparation list.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Search locator</span><h2>Version 1.12.24</h2></div><time datetime="2026-08-22">August 22, 2026</time></header>
+          <ul>
+            <li>Map searches now keep every enabled marker visible instead of hiding non-matches.</li>
+            <li>Matching markers receive two bright, continuously breathing red locator rings so results remain easy to spot while navigating.</li>
+            <li>Replaced the undersized wayshrine symbol with a large segmented gray-stone horseshoe based on its recognizable in-game appearance.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Icon completion</span><h2>Version 1.12.23</h2></div><time datetime="2026-08-22">August 22, 2026</time></header>
+          <ul>
+            <li>Added distinct 2D emblems for Urial, Molva Beast, Tribe Rat, White Bear, Risar, veteran and normal bandits, Shore Prowler, Risar camps, and bandit camps.</li>
+            <li>Fixed automatic icon assignment for the remaining named creatures and camps, including the misspelled Shore Prower records in the imported map data.</li>
+            <li>Replaced log-shaped Brownwood and Greywood art with unmistakable tree silhouettes and separated high-frequency flora by flower, fruit, and leaf shape.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">2D creature icons</span><h2>Version 1.12.22</h2></div><time datetime="2026-08-22">August 22, 2026</time></header>
+          <ul>
+            <li>Replaced textured creature portraits with flat 2D emblems designed specifically for recognition at 36-pixel map size.</li>
+            <li>Creature shapes now use broad solid colors, thick contours, pale subject outlines, and exaggerated horns, tusks, ears, jaws, claws, and insect forms.</li>
+            <li>Removed fur strands, scenery, painterly lighting, and sharpening artifacts that previously collapsed into visual noise over the map.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Map readability</span><h2>Version 1.12.21</h2></div><time datetime="2026-08-22">August 22, 2026</time></header>
+          <ul>
+            <li>Rebuilt the creature portrait set around actual 36-pixel map readability with matte black backgrounds, closer subjects, and stronger silhouette lighting.</li>
+            <li>Added a high-contrast double marker ring so creature pins remain distinct over forest, snow, mountains, and parchment.</li>
+            <li>Removed scenic detail from creature medallions while preserving the recognizable creature artwork across pins, selectors, and POI cards.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Creature icons</span><h2>Version 1.12.20</h2></div><time datetime="2026-08-22">August 22, 2026</time></header>
+          <ul>
+            <li>Replaced flat and generic animal symbols with detailed, high-contrast creature portraits designed to remain recognizable at map-marker size.</li>
+            <li>Added dedicated artwork for Wisent, Razorback, Belbus, Brown Bear, Cougar, Taur Dog, Dire Wolf, Troll, Wolf, Guar, Black Bear, Panther, Sator, Coralis Crab, Tagmaton, Night Snatcher, Campodon, Platybelodon, Giant Kurnas, and Giant Akrep.</li>
+            <li>Applied the same portrait artwork to map pins, marker selection, and POI detail cards without changing coordinates, filters, or marker records.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Latest</span><h2>Version 1.12.19</h2></div><time datetime="2026-08-22">August 22, 2026</time></header>
+          <ul>
+            <li>Added exact Myrland wayshrines and persistent town names for faster continent navigation.</li>
+            <li>Reconciled official and community locations so exact Nexus coordinates keep the most useful community names and notes without duplicate pins.</li>
+            <li>Added 197 creature intelligence profiles with searchable butchery yields, carcass quantities, lore, trophies, pet progression, and available combat statistics.</li>
+            <li>Replaced generic creature and resource symbols with distinct icons for bears, razorbacks, sators, panthers, cougars, crabs, Taur Dogs, Night Snatchers, Belbus, woods, Bor, Saburra, and Nitre Crystal.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Routes</span><h2>Version 1.12.18</h2></div><time datetime="2026-08-21">August 21, 2026</time></header>
+          <ul>
+            <li>Added private route planning to both Sarduccaa and Myrland with numbered, draggable waypoints and clear start and finish markers.</li>
+            <li>Routes can be shown or hidden, renamed, recolored, reversed, looped, and edited without publishing your path to other users.</li>
+            <li>Added compact MNR1 route codes for deliberately sharing and importing routes between Mortal Nexus users.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Myrland</span><h2>Version 1.12.17</h2></div><time datetime="2026-08-21">August 21, 2026</time></header>
+          <ul>
+            <li>Corrected the World Anvil Myrland projection that placed POIs over ocean and parchment.</li>
+            <li>Registered the artwork to the established 8,192-unit coordinate plane using eleven continent-wide town anchors.</li>
+            <li>Validated all 1,721 bundled Myrland markers without rewriting editable marker or Firebase data.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Myrland</span><h2>Version 1.12.16</h2></div><time datetime="2026-08-21">August 21, 2026</time></header>
+          <ul>
+            <li>Replaced the Myrland background with the higher-detail World Anvil cartography.</li>
+            <li>Registered the new artwork to Mortal Nexus's existing 8,192-unit map plane so official, community, and shared markers retain their coordinates.</li>
+            <li>Validated the alignment against major town anchors across the continent without rewriting marker or Firebase data.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Myrland</span><h2>Version 1.12.15</h2></div><time datetime="2026-08-21">August 21, 2026</time></header>
+          <ul>
+            <li>Added 311 useful Myrland locations derived from 354 official world markers, including camps, caves, dungeon entrances, graveyards, towns, ruins, and landmarks.</li>
+            <li>Official Myrland locations now replace matching nearby community pins instead of displaying duplicate entrances or camps.</li>
+            <li>All new Myrland locations remain movable, editable, hideable, and restorable through Edit Mode.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Navigation</span><h2>Version 1.12.14</h2></div><time datetime="2026-08-21">August 21, 2026</time></header>
+          <ul>
+            <li>Added persistent Map, Craft, Macros, and Commands launchers to the global toolbar on every non-map page.</li>
+            <li>Tool launchers now open the existing desktop modules directly instead of requiring a trip through the Live Map first.</li>
+            <li>Selected desktop modules now remain addressable through the URL and survive a page refresh.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Navigation</span><h2>Version 1.12.13</h2></div><time datetime="2026-08-21">August 21, 2026</time></header>
+          <ul>
+            <li>Added a persistent display toolbar to every non-map page with application opacity, interface scale, and 2nd Screen Mode controls.</li>
+            <li>Consolidated update access into the single Updates button above Support, which now checks for updates and opens this log.</li>
+            <li>Removed duplicate Update Log buttons from the sidebar, Live Map module tabs, and Loot Database.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Extraction</span><h2>Version 1.12.12</h2></div><time datetime="2026-08-21">August 21, 2026</time></header>
+          <ul>
+            <li>Corrected Lodestone extraction to use its real 10-unit source batch instead of the generic 10,000-unit ore batch.</li>
+            <li>The Extraction and Reverse calculators now derive special source batch sizes directly from recipe data.</li>
+            <li>Lodestone now calculates as 10 Lodestones plus 1 Tallow for 950 Lodestone Powder before the clade bonus.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Updater</span><h2>Version 1.12.11</h2></div><time datetime="2026-08-21">August 21, 2026</time></header>
+          <ul>
+            <li>The Updates control now pulses bright red every few seconds when a newer release is available.</li>
+            <li>Update status is visible from the Live Map and the shared sidebar across reference and calculator pages.</li>
+            <li>Added this in-app Update Log with the complete public updater history.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Map controls</span><h2>Version 1.12.10</h2></div><time datetime="2026-08-21">August 21, 2026</time></header>
+          <ul><li>Added tri-state category controls so entire groups such as herbs, creatures, and resources can be shown or hidden with one click.</li></ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">2nd Screen Mode</span><h2>Version 1.12.9</h2></div><time datetime="2026-08-21">August 21, 2026</time></header>
+          <ul><li>Stopped clicks and dragging inside the Nexus overlay from passing through and moving controls in the game behind it.</li></ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Persistence</span><h2>Version 1.12.8</h2></div><time datetime="2026-08-21">August 21, 2026</time></header>
+          <ul>
+            <li>Live Map search, visible categories, individual marker types, and Show Names preference now survive closing and reopening Nexus.</li>
+            <li>Sarducaa and Myrland keep independent filter settings.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Accessibility</span><h2>Version 1.12.7</h2></div><time datetime="2026-08-21">August 21, 2026</time></header>
+          <ul><li>Added a 60% to 150% application scale control across the Live Map, Nave Index, and calculator pages.</li></ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Polish</span><h2>Version 1.12.6</h2></div><time datetime="2026-08-21">August 21, 2026</time></header>
+          <ul><li>Refreshed Craft N Click controls and styling so the new safety state displays consistently after updating.</li></ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Safety</span><h2>Version 1.12.5</h2></div><time datetime="2026-08-21">August 21, 2026</time></header>
+          <ul>
+            <li>Added a large, visible Craft N Click safety switch.</li>
+            <li>Inventory automation and its start hotkey are disabled by default until the user deliberately arms them.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Hotkeys</span><h2>Version 1.12.4</h2></div><time datetime="2026-08-21">August 21, 2026</time></header>
+          <ul><li>Improved global hotkey delivery for Mortal Online 2, including elevated game sessions where the controls previously required manual clicks.</li></ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Myrland</span><h2>Version 1.12.3</h2></div><time datetime="2026-08-21">August 21, 2026</time></header>
+          <ul>
+            <li>Corrected marker coordinate validation to use the active continent's real map dimensions.</li>
+            <li>Added clear save validation messages instead of silently rejecting a Myrland marker.</li>
+          </ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Updater</span><h2>Version 1.12.2</h2></div><time datetime="2026-08-21">August 21, 2026</time></header>
+          <ul><li>Repaired update installation when an earlier download left a locked or stale <code>.partial</code> installer file behind.</li></ul>
+        </article>
+
+        <article class="release-card">
+          <header><div><span class="release-tag">Shared editing</span><h2>Version 1.12.1</h2></div><time datetime="2026-08-21">August 21, 2026</time></header>
+          <ul>
+            <li>Added automatic Firebase reconnect attempts instead of leaving the map offline after a temporary interruption.</li>
+            <li>Kept editor authentication active while reconnecting and prevented duplicate real-time listeners.</li>
+          </ul>
+        </article>
+
+        <article class="release-card baseline-release">
+          <header><div><span class="release-tag">Video baseline</span><h2>Version 1.12.0</h2></div><time datetime="2026-08-20">August 20, 2026</time></header>
+          <ul><li>Established the public GitHub update channel and the original beta installer shown in the Mortal Nexus video.</li></ul>
+        </article>
+      </section>
+    </main>
+
+    <script src="/site-shell.js?v=22"></script>
+  </body>
+</html>

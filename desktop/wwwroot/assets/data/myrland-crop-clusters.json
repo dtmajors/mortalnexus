@@ -1,0 +1,87 @@
+{
+  "format": "mortal-nexus-myrland-crop-cluster-catalog",
+  "version": 1,
+  "generatedAt": "2026-09-12T00:00:00Z",
+  "source": "Consolidated Mortal Online Map community locations",
+  "counts": {
+    "clusters": 5,
+    "sourcePins": 13
+  },
+  "markers": [
+    {
+      "id": "myrland-community-crop-barley-bogs",
+      "label": "Barley Field",
+      "category": "flora",
+      "icon": "grain-herb",
+      "sourceType": "Barley",
+      "aliases": ["Barley", "Barley plants"],
+      "notes": "Condensed from five nearby Barley locations in the bogs.",
+      "x": 5227.598,
+      "y": 5008.277,
+      "nodeCount": 5,
+      "sourceMarkerIds": ["myrland-momap-473", "myrland-momap-539", "myrland-momap-701", "myrland-momap-702", "myrland-momap-1193"],
+      "evidenceKind": "reported",
+      "confidence": "community-reported-cluster"
+    },
+    {
+      "id": "myrland-community-crop-rye-west",
+      "label": "Rye Field",
+      "category": "flora",
+      "icon": "grain-herb",
+      "sourceType": "Rye",
+      "aliases": ["Rye", "Rye plants"],
+      "notes": "Community-reported Rye field.",
+      "x": 503.46,
+      "y": 4982.564,
+      "nodeCount": 1,
+      "sourceMarkerIds": ["myrland-momap-1283"],
+      "evidenceKind": "reported",
+      "confidence": "community-reported"
+    },
+    {
+      "id": "myrland-community-crop-rye-tindrem",
+      "label": "Rye Field",
+      "category": "flora",
+      "icon": "grain-herb",
+      "sourceType": "Rye",
+      "aliases": ["Rye", "Rye plants", "Tindrem Rye"],
+      "notes": "Condensed from three nearby Rye locations in the Tindrem farming area.",
+      "x": 1451.583,
+      "y": 6160.833,
+      "nodeCount": 3,
+      "sourceMarkerIds": ["myrland-momap-109", "myrland-momap-390", "myrland-momap-1205"],
+      "evidenceKind": "reported",
+      "confidence": "community-reported-cluster"
+    },
+    {
+      "id": "myrland-community-crop-spelt-orchard",
+      "label": "Spelt Field",
+      "category": "flora",
+      "icon": "grain-herb",
+      "sourceType": "Spelt",
+      "aliases": ["Spelt", "Spelt wheat", "Tindrem Orchard Spelt"],
+      "notes": "Community-reported Spelt at the eastern edge of the Tindrem orchard and farm.",
+      "x": 1187.939,
+      "y": 5790.08,
+      "nodeCount": 1,
+      "sourceMarkerIds": ["myrland-momap-1642"],
+      "evidenceKind": "reported",
+      "confidence": "community-reported"
+    },
+    {
+      "id": "myrland-community-crop-spelt-tindrem-road",
+      "label": "Spelt Field",
+      "category": "flora",
+      "icon": "grain-herb",
+      "sourceType": "Spelt",
+      "aliases": ["Spelt", "Spelt wheat", "Tindrem Spelt"],
+      "notes": "Condensed from three nearby Spelt patches around the Tindrem farming road.",
+      "x": 1361.141,
+      "y": 6271.234,
+      "nodeCount": 3,
+      "sourceMarkerIds": ["myrland-momap-1636", "myrland-momap-1806", "myrland-momap-1807"],
+      "evidenceKind": "reported",
+      "confidence": "community-reported-cluster"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Karoton">
+  <g stroke="#3b2415" stroke-width="2.5" stroke-linejoin="round">
+    <path fill="#e8792f" d="M24 23h20c-2 15-7 27-13 35-5-10-7-22-7-35Z"/>
+    <path fill="#ff9c3f" stroke="none" d="M29 27h6c0 10-2 19-4 25-2-8-3-17-2-25Z"/>
+    <g fill="#4f964b" stroke="#173b24"><path d="M31 24C18 20 14 12 18 6c9 0 15 6 15 16Z"/><path d="M32 24C31 11 37 5 44 6c4 8-1 15-11 18Z"/><path d="M32 23C23 12 25 5 31 2c7 5 7 13 1 21Z"/></g>
+  </g>
+</svg>

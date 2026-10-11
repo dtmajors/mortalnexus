@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Orange spider">
+  <g fill="none" stroke="#3a2112" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m23 25-11-8-7 1M22 31 9 28l-6 5M23 38 10 43l-4 8M26 43l-8 11"/>
+    <path d="m41 25 11-8 7 1M42 31l13-3 6 5M41 38l13 5 4 8M38 43l8 11"/>
+  </g>
+  <g fill="none" stroke="#f58a2d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m23 25-11-8-7 1M22 31 9 28l-6 5M23 38 10 43l-4 8M26 43l-8 11"/>
+    <path d="m41 25 11-8 7 1M42 31l13-3 6 5M41 38l13 5 4 8M38 43l8 11"/>
+  </g>
+  <ellipse cx="32" cy="39" rx="13" ry="17" fill="#ef7e24" stroke="#3a2112" stroke-width="3"/>
+  <circle cx="32" cy="21" r="10" fill="#ff9a32" stroke="#3a2112" stroke-width="3"/>
+  <path fill="none" stroke="#ffd07a" stroke-width="3" stroke-linecap="round" d="M27 34c3-3 7-3 10 0M29 42h6"/>
+  <circle cx="28.5" cy="19.5" r="1.8" fill="#17120f"/>
+  <circle cx="35.5" cy="19.5" r="1.8" fill="#17120f"/>
+</svg>

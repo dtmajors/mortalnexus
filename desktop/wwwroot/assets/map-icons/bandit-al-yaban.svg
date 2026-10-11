@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Al-Yaban bandit">
+  <path fill="#162027" stroke="#080c0f" stroke-width="3" d="M32 4 55 13v18c0 14-9 24-23 29C18 55 9 45 9 31V13Z"/>
+  <path fill="#b88a2f" d="M13 16 32 8l19 8v15c0 11-7 19-19 24-12-5-19-13-19-24Z"/>
+  <path fill="#17636d" d="M17 23c4-10 9-15 15-15s11 5 15 15l-7 8H24Z"/>
+  <path fill="#d7ad7d" d="M23 26h18v13l-9 7-9-7Z"/>
+  <path fill="#0e4c56" d="M18 34h28l-4 14-10 7-10-7Z"/>
+  <path fill="none" stroke="#fff0a6" stroke-width="3" stroke-linecap="round" d="m24 31 5 1m11-1-5 1"/>
+  <path fill="none" stroke="#f4d067" stroke-width="2.5" d="M17 23h30M23 47l9 8 10-8"/>
+</svg>

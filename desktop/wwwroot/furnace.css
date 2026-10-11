@@ -1,0 +1,654 @@
+:root {
+  --furnace: #c87947;
+  --furnace-soft: #e1a06f;
+  --furnace-dark: #24160f;
+}
+
+.furnace-page {
+  background:
+    linear-gradient(rgba(11, 13, 12, 0.92), rgba(11, 13, 12, 0.98)),
+    radial-gradient(circle at 65% 0%, rgba(200, 121, 71, 0.16), transparent 34%);
+}
+
+.furnace-masthead {
+  --header-height: 68px;
+}
+
+.furnace-masthead-main {
+  grid-template-columns: minmax(230px, 1fr) auto;
+}
+
+.furnace-site-nav {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  overflow-x: auto;
+}
+
+.furnace-site-nav a {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.furnace-site-nav .active {
+  border-color: var(--furnace);
+  color: var(--paper);
+}
+
+.furnace-main {
+  width: min(1240px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 42px 0 30px;
+}
+
+.furnace-intro {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.furnace-intro h1 {
+  margin-bottom: 10px;
+  font-size: 43px;
+}
+
+.furnace-intro p:last-child {
+  max-width: 720px;
+  margin: 0;
+  color: var(--paper-soft);
+  font-size: 16px;
+}
+
+.data-badge {
+  min-width: 150px;
+  padding: 13px 15px;
+  border-left: 3px solid var(--furnace);
+  background: var(--surface);
+}
+
+.data-badge span,
+.data-badge small {
+  display: block;
+}
+
+.data-badge span {
+  color: var(--paper);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-variant-numeric: tabular-nums;
+}
+
+.data-badge small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.calculator-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(390px, 0.92fr);
+  border: 1px solid var(--rule-strong);
+  background: #0e110f;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.22);
+}
+
+.calculator-controls,
+.calculator-results {
+  min-width: 0;
+  padding: 28px;
+}
+
+.calculator-controls {
+  border-right: 1px solid var(--rule-strong);
+}
+
+.calculator-results {
+  background: linear-gradient(150deg, rgba(200, 121, 71, 0.08), transparent 48%);
+}
+
+.control-heading,
+.result-heading,
+.library-heading,
+.output-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--furnace-soft);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.control-heading h2,
+.result-heading h2,
+.library-heading h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+  margin-top: 28px;
+}
+
+.field {
+  min-width: 0;
+}
+
+.field > span,
+.amount-actions > span {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.field select,
+.field input {
+  width: 100%;
+  height: 44px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 4px;
+  padding: 0 12px;
+  background: var(--surface);
+  color: var(--paper);
+}
+
+.field select:focus,
+.field input:focus {
+  border-color: var(--furnace);
+  outline: 0;
+}
+
+.amount-field {
+  grid-column: 1 / -1;
+}
+
+.amount-field input {
+  font-size: 18px;
+  font-variant-numeric: tabular-nums;
+}
+
+.amount-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 12px;
+}
+
+.amount-actions > span {
+  margin: 0 5px 0 0;
+}
+
+.amount-actions button {
+  min-height: 31px;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 0 9px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.amount-actions button:hover {
+  border-color: var(--furnace);
+  color: var(--paper);
+}
+
+.bonus-toggle {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  align-items: center;
+  gap: 11px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  cursor: pointer;
+}
+
+.bonus-toggle input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.toggle-track {
+  position: relative;
+  width: 38px;
+  height: 20px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  background: var(--surface);
+}
+
+.toggle-track::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--muted);
+  transition: transform 140ms ease, background 140ms ease;
+}
+
+.bonus-toggle input:checked + .toggle-track {
+  border-color: var(--furnace);
+  background: var(--furnace-dark);
+}
+
+.bonus-toggle input:checked + .toggle-track::after {
+  background: var(--furnace-soft);
+  transform: translateX(18px);
+}
+
+.bonus-toggle input:focus-visible + .toggle-track {
+  outline: 2px solid var(--furnace);
+  outline-offset: 2px;
+}
+
+.bonus-toggle strong,
+.bonus-toggle small {
+  display: block;
+}
+
+.bonus-toggle strong {
+  color: var(--paper-soft);
+  font-size: 13px;
+}
+
+.bonus-toggle small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.batch-scale {
+  flex: 0 0 auto;
+  border: 1px solid rgba(200, 121, 71, 0.35);
+  border-radius: 3px;
+  padding: 6px 8px;
+  color: var(--furnace-soft);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.load-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 26px 0 0;
+  border-top: 1px solid var(--rule-strong);
+  border-bottom: 1px solid var(--rule-strong);
+}
+
+.load-summary > div {
+  min-width: 0;
+  padding: 17px 10px;
+  border-right: 1px solid var(--rule);
+}
+
+.load-summary > div:first-child {
+  padding-left: 0;
+}
+
+.load-summary > div:last-child {
+  border-right: 0;
+  padding-right: 0;
+}
+
+.load-summary dt {
+  margin-bottom: 5px;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.load-summary dd {
+  margin: 0;
+}
+
+.load-summary strong,
+.load-summary span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.load-summary strong {
+  color: var(--paper);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  font-variant-numeric: tabular-nums;
+}
+
+.load-summary span {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.output-heading {
+  margin-top: 24px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.output-heading span {
+  color: var(--paper-soft);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.output-heading small {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.output-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.output-item {
+  min-width: 0;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.output-item:nth-child(odd) {
+  padding-right: 14px;
+}
+
+.output-item:nth-child(even) {
+  padding-left: 14px;
+  border-left: 1px solid var(--rule);
+}
+
+.output-item strong,
+.output-item span {
+  display: block;
+}
+
+.output-item strong {
+  color: var(--furnace-soft);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-variant-numeric: tabular-nums;
+}
+
+.output-item span {
+  overflow: hidden;
+  color: var(--paper-soft);
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.output-item.unknown strong {
+  color: var(--muted);
+}
+
+.recipe-note {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.recipe-library {
+  margin-top: 54px;
+}
+
+.library-heading {
+  align-items: flex-end;
+  margin-bottom: 16px;
+}
+
+.library-heading .kicker {
+  margin-bottom: 5px;
+}
+
+.library-heading h2 {
+  font-size: 27px;
+}
+
+.recipe-search {
+  width: min(370px, 100%);
+  height: 40px;
+  display: grid;
+  grid-template-columns: 17px minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 4px;
+  background: var(--surface);
+}
+
+.recipe-search:focus-within {
+  border-color: var(--furnace);
+}
+
+.recipe-search input {
+  width: 100%;
+  height: 36px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--paper);
+}
+
+.recipe-table-shell {
+  overflow-x: auto;
+  border-top: 1px solid var(--rule-strong);
+  border-bottom: 1px solid var(--rule-strong);
+}
+
+.recipe-table {
+  width: 100%;
+  min-width: 840px;
+  border-collapse: collapse;
+}
+
+.recipe-table th {
+  height: 42px;
+  padding: 0 12px;
+  border-bottom: 1px solid var(--rule-strong);
+  color: var(--muted);
+  font-size: 9px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.recipe-table td {
+  padding: 13px 12px;
+  border-bottom: 1px solid var(--rule);
+  color: var(--paper-soft);
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.recipe-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.recipe-table tr:hover td {
+  background: var(--surface);
+}
+
+.recipe-table td:nth-child(2) {
+  color: var(--paper);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+}
+
+.recipe-base {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.recipe-machine {
+  color: var(--furnace-soft);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.recipe-output-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 12px;
+}
+
+.recipe-output-list span {
+  white-space: nowrap;
+}
+
+.use-recipe {
+  min-height: 31px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 3px;
+  padding: 0 10px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.use-recipe:hover {
+  border-color: var(--furnace);
+  color: var(--paper);
+}
+
+.recipe-table-empty {
+  padding: 38px 18px;
+  border-bottom: 1px solid var(--rule);
+  color: var(--muted);
+  text-align: center;
+}
+
+.furnace-footer {
+  max-width: none;
+}
+
+@media (max-width: 940px) {
+  .calculator-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .calculator-controls {
+    border-right: 0;
+    border-bottom: 1px solid var(--rule-strong);
+  }
+}
+
+@media (max-width: 720px) {
+  .furnace-masthead-main {
+    grid-template-columns: 1fr;
+    grid-template-areas: none;
+  }
+
+  .furnace-masthead-main .brand {
+    grid-area: auto;
+  }
+
+  .furnace-site-nav {
+    grid-area: auto;
+    overflow-x: auto;
+  }
+
+  .furnace-main {
+    width: min(100% - 28px, 1240px);
+    padding-top: 28px;
+  }
+
+  .furnace-intro {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .furnace-intro h1 {
+    font-size: 35px;
+  }
+
+  .data-badge {
+    width: 100%;
+  }
+
+  .calculator-controls,
+  .calculator-results {
+    padding: 21px 18px;
+  }
+
+  .control-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .field-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .amount-field {
+    grid-column: auto;
+  }
+
+  .amount-actions {
+    flex-wrap: wrap;
+  }
+
+  .amount-actions > span {
+    flex: 1 0 100%;
+  }
+
+  .load-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .load-summary > div,
+  .load-summary > div:first-child,
+  .load-summary > div:last-child {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    padding: 12px 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .load-summary > div:last-child {
+    border-bottom: 0;
+  }
+
+  .load-summary dt {
+    margin: 0;
+  }
+
+  .load-summary dd {
+    text-align: right;
+  }
+
+  .library-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .recipe-search {
+    width: 100%;
+  }
+}

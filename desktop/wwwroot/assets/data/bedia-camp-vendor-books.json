@@ -1,0 +1,32 @@
+{
+  "verifiedAt": "2026-07-21",
+  "location": "Hermit Camp\n(East of Bedia)",
+  "source": "In-game camp vendor screenshots supplied by the site owner",
+  "vendors": {
+    "Hermit Librarian": [
+      ["Passive Regeneration", "10g"],
+      ["Subsisting", "10g"],
+      ["Potion Utilization", "50s"],
+      ["Herbalism", "50s"],
+      ["Pet Equipment Crafting", "50s"],
+      ["Pet Bag Crafting", "5g"],
+      ["Tagmaton Bag Crafting", "1g"],
+      ["Campodon Bag Crafting", "1g"],
+      ["Turtle Bag Crafting", "1g"],
+      ["Celaeno Bag Crafting", "1g"],
+      ["Pet Light Armor Crafting", "5g"],
+      ["Pet Medium Armor Crafting", "5g"],
+      ["Pet Heavy Armor Crafting", "5g"],
+      ["Campodon Heavy Armor Crafting", "10g"],
+      ["Terrorbird Heavy Armor Crafting", "10g"],
+      ["Terrorbird Bag Crafting", "1g"],
+      ["Ganal Bag Crafting", "1g"],
+      ["Spider Bag Crafting", "1g"],
+      ["Heavy Armor Training", "10g"]
+    ],
+    "Ratzar Researcher": [
+      ["Ivory Hide Lore", "33g"],
+      ["Ivory Carapace Lore", "33g"]
+    ]
+  }
+}

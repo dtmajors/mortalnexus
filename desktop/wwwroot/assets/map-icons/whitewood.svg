@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Whitewood tree">
+  <g stroke="#30383b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path fill="#f4f1e8" d="M27 34h10l3 26H23Z"/>
+    <path fill="none" stroke="#90999d" stroke-width="2" d="m29 39-3 8m9-5 4 7m-8 1-1 8"/>
+    <path fill="#e9eef0" d="M31 3c8 0 13 6 13 13 7 0 12 5 12 12 0 8-7 13-15 12-3 5-8 8-14 6-4-1-7-4-8-8-8 1-13-4-13-11 0-6 5-11 11-11C18 8 23 3 31 3Z"/>
+    <path fill="#cfd8dc" d="M16 23c7-5 13-4 18 1 5-5 12-5 18 0-1 8-8 12-16 10-5 6-14 5-18-1-5 0-8-4-8-8Z"/>
+    <path fill="none" stroke="#ffffff" stroke-width="2.5" d="M20 16c5-6 13-8 20-4m-25 15c5-4 10-5 15-3"/>
+  </g>
+</svg>

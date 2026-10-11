@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Flying Ratzar alate">
+  <g stroke="#102224" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path fill="#4e8a82" d="M23 21 13 8l3 19-9 9 13 3 4 18h16l4-18 13-3-9-9 3-19-10 13-9-9Z"/>
+    <path fill="#234847" d="M23 29h18l4 12-8 14H27l-8-14Z"/>
+    <path fill="#9adbd2" fill-opacity=".8" d="M21 33C8 22 3 13 7 8c11 1 18 9 20 22Zm22 0C56 22 61 13 57 8 46 9 38 17 36 30Z"/>
+    <path fill="#70b9b1" d="m20 40-13-3 11 8-8 9 15-6m19-8 13-3-11 8 8 9-15-6"/>
+    <circle cx="27" cy="33" r="2" fill="#ffec70" stroke="none"/>
+    <circle cx="37" cy="33" r="2" fill="#ffec70" stroke="none"/>
+  </g>
+</svg>

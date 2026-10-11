@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0d0c" />
+    <title>Butchery Calculator | Mortal Nexus</title>
+    <meta
+      name="description"
+      content="Scale Mortal Online II Butchery Table yields for carcasses, creatures, and fish."
+    />
+    <link rel="icon" href="/assets/mortal-nexus-app-icon-v2.png" type="image/png" />
+    <link rel="stylesheet" href="/styles.css?v=4" />
+    <link rel="stylesheet" href="/butchery.css" />
+    <link rel="stylesheet" href="/site-shell.css?v=24" />
+  </head>
+  <body class="butchery-page">
+    <header class="masthead butchery-masthead">
+      <div class="masthead-main butchery-masthead-main">
+        <a class="brand" href="/" aria-label="Mortal Nexus home">
+          <img src="/assets/mortal-nexus-app-icon-v2.png" alt="" width="40" height="40" />
+          <span class="brand-copy">
+            <strong>Mortal Nexus</strong>
+            <small>Mortal Online II Reference</small>
+          </span>
+        </a>
+
+        <nav class="butchery-site-nav" aria-label="Site navigation">
+          <a class="text-button" href="/">Reference</a>
+          <a class="text-button" href="/crafting">Crafting</a>
+          <a class="text-button" href="/extraction">Extraction</a>
+          <a class="text-button" href="/refining">Refining</a>
+          <a class="text-button active" href="/butchery" aria-current="page">Butchery</a>
+          <a class="text-button" href="/alchemy">Alchemy</a>
+          <a class="text-button" href="/cooking">Cooking</a>
+          <a class="text-button" href="/reverse">Reverse</a>
+          <a class="text-button" href="/building">Building</a>
+          <a class="text-button" href="/creatures">Creature Codex</a>
+          <a class="text-button" href="/map">Live map</a>
+          <a class="text-button donate-button" href="https://www.paypal.com/donate/?hosted_button_id=677CRL426BE9Q" target="_blank" rel="noreferrer">Donate</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="butchery-main">
+      <header class="butchery-intro">
+        <div>
+          <p class="kicker">Butchery Table calculator</p>
+          <h1>Butchery Calculator</h1>
+          <p>Choose a carcass and enter its amount to scale every known material yield.</p>
+        </div>
+        <div class="catalog-badge">
+          <span><strong id="knownCount">0</strong> / <strong id="catalogCount">0</strong></span>
+          <small>yield sets documented</small>
+        </div>
+      </header>
+
+      <section class="butchery-shell" aria-labelledby="butcheryHeading">
+        <div class="butchery-controls">
+          <div class="control-heading">
+            <div>
+              <span class="eyebrow">Carcass setup</span>
+              <h2 id="butcheryHeading">What are you butchering?</h2>
+            </div>
+          </div>
+
+          <label class="field carcass-filter-field">
+            <span>Find a carcass</span>
+            <input id="carcassFilter" type="search" placeholder="Type a creature or fish name..." />
+          </label>
+
+          <label class="field">
+            <span>Carcass</span>
+            <select id="carcassSelect"></select>
+          </label>
+
+          <label class="field amount-field">
+            <span>Carcass amount</span>
+            <input id="amountInput" type="number" min="1" step="1" inputmode="numeric" value="10000" />
+          </label>
+
+          <div class="amount-actions" aria-label="Quick amounts">
+            <span>Quick amount</span>
+            <button type="button" data-amount="1000">1,000</button>
+            <button type="button" data-amount="5000">5,000</button>
+            <button type="button" data-amount="10000">10,000</button>
+            <button type="button" data-amount="20000">20,000</button>
+          </div>
+
+          <label class="bonus-toggle">
+            <input id="cladeBonus" type="checkbox" />
+            <span class="toggle-track" aria-hidden="true"></span>
+            <span>
+              <strong>Butcher clade bonus</strong>
+              <small>Add 10% to calculated material yields</small>
+            </span>
+          </label>
+        </div>
+
+        <div class="butchery-results" aria-live="polite">
+          <div class="result-heading">
+            <div>
+              <span class="eyebrow">Butchery Table yield</span>
+              <h2 id="resultCarcass">Black Bear</h2>
+            </div>
+            <span id="dataStatus" class="data-status">Yield data available</span>
+          </div>
+
+          <dl class="creature-summary">
+            <div>
+              <dt>Zoology root</dt>
+              <dd id="zoologyRoot">Mammalia</dd>
+            </div>
+            <div>
+              <dt>Zoology</dt>
+              <dd id="zoology">Ursidae</dd>
+            </div>
+            <div>
+              <dt>Total known yield</dt>
+              <dd id="totalYield">3,400</dd>
+            </div>
+          </dl>
+
+          <div class="output-heading">
+            <span>Materials</span>
+            <small>Maximum relevant skills and lores</small>
+          </div>
+          <div id="outputGrid" class="output-grid"></div>
+          <div id="unavailableState" class="unavailable-state" hidden>
+            Numeric yields are not documented for this entry yet.
+          </div>
+
+          <div class="trophy-row">
+            <span>Trophy</span>
+            <strong id="trophyName">Black Bear Paws</strong>
+            <small id="trophyValue">30s</small>
+          </div>
+          <p id="recipeNote" class="recipe-note"></p>
+        </div>
+      </section>
+
+      <section class="butchery-library" aria-labelledby="libraryHeading">
+        <div class="library-heading">
+          <div>
+            <p class="kicker">Butchery reference</p>
+            <h2 id="libraryHeading">Carcass yield library</h2>
+          </div>
+          <div class="library-filters">
+            <select id="rootFilter" aria-label="Filter by zoology root">
+              <option value="all">All zoology roots</option>
+            </select>
+            <label class="recipe-search">
+              <span class="search-glyph" aria-hidden="true"></span>
+              <input id="recipeSearch" type="search" placeholder="Search carcass or material..." />
+            </label>
+          </div>
+        </div>
+
+        <div class="butchery-table-shell">
+          <table class="butchery-table">
+            <thead>
+              <tr>
+                <th>Carcass</th>
+                <th>Zoology</th>
+                <th>Known yields per 10,000</th>
+                <th>Trophy</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="butcheryTableBody"></tbody>
+          </table>
+        </div>
+        <p id="tableEmpty" class="table-empty" hidden>No butchery entries match those filters.</p>
+      </section>
+
+      <footer class="site-footer butchery-footer">
+        <span>Known yields come from the MO2 INFO workbook and exclude the 10% clade bonus by default.</span>
+        <span id="dataStamp"></span>
+      </footer>
+    </main>
+
+    <script src="/data.js"></script>
+    <script src="/butchery.js"></script>
+    <script src="/site-shell.js?v=22"></script>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0d0c" />
+    <title>Refining Calculator | Mortal Nexus</title>
+    <meta
+      name="description"
+      content="Calculate Mortal Online II refining inputs or work backward from a target alloy amount."
+    />
+    <link rel="icon" href="/assets/mortal-nexus-app-icon-v2.png" type="image/png" />
+    <link rel="stylesheet" href="/styles.css?v=4" />
+    <link rel="stylesheet" href="/refining.css" />
+    <link rel="stylesheet" href="/site-shell.css?v=24" />
+  </head>
+  <body class="refining-page">
+    <header class="masthead refining-masthead">
+      <div class="masthead-main refining-masthead-main">
+        <a class="brand" href="/" aria-label="Mortal Nexus home">
+          <img src="/assets/mortal-nexus-app-icon-v2.png" alt="" width="40" height="40" />
+          <span class="brand-copy">
+            <strong>Mortal Nexus</strong>
+            <small>Mortal Online II Reference</small>
+          </span>
+        </a>
+
+        <nav class="refining-site-nav" aria-label="Site navigation">
+          <a class="text-button" href="/">Reference</a>
+          <a class="text-button" href="/crafting">Crafting</a>
+          <a class="text-button" href="/extraction">Extraction</a>
+          <a class="text-button active" href="/refining" aria-current="page">Refining</a>
+          <a class="text-button" href="/butchery">Butchery</a>
+          <a class="text-button" href="/alchemy">Alchemy</a>
+          <a class="text-button" href="/cooking">Cooking</a>
+          <a class="text-button" href="/reverse">Reverse</a>
+          <a class="text-button" href="/building">Building</a>
+          <a class="text-button" href="/creatures">Creature Codex</a>
+          <a class="text-button" href="/map">Live map</a>
+          <a class="text-button donate-button" href="https://www.paypal.com/donate/?hosted_button_id=677CRL426BE9Q" target="_blank" rel="noreferrer">Donate</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="refining-main">
+      <header class="refining-intro">
+        <div>
+          <p class="kicker">Metallurgy calculator</p>
+          <h1>Refining Calculator</h1>
+          <p>Calculate from materials you own, or work backward from the exact alloy amount you want to make.</p>
+        </div>
+        <div class="ratio-badge">
+          <span>2 : 1 : 1</span>
+          <small>every refining recipe</small>
+        </div>
+      </header>
+
+      <section class="refining-shell" aria-labelledby="refiningHeading">
+        <div class="refining-controls">
+          <div class="control-heading">
+            <div>
+              <span class="eyebrow">Recipe setup</span>
+              <h2 id="refiningHeading">Choose the finished alloy</h2>
+            </div>
+          </div>
+
+          <label class="field alloy-field">
+            <span>Finished alloy</span>
+            <select id="alloySelect"></select>
+          </label>
+
+          <div class="calculation-mode">
+            <span>Calculate from</span>
+            <div id="modeControl" class="segmented-control" aria-label="Calculation direction">
+              <button class="active" type="button" data-mode="input">Materials on hand</button>
+              <button type="button" data-mode="target">Target output</button>
+            </div>
+          </div>
+
+          <label class="field amount-field">
+            <span id="amountLabel">Primary material amount</span>
+            <input id="amountInput" type="number" min="1" step="1" inputmode="numeric" value="10000" />
+          </label>
+
+          <div class="amount-actions" aria-label="Quick amounts">
+            <span>Quick amount</span>
+            <button type="button" data-amount="1000">1,000</button>
+            <button type="button" data-amount="5000">5,000</button>
+            <button type="button" data-amount="10000">10,000</button>
+            <button type="button" data-amount="20000">20,000</button>
+          </div>
+
+          <label class="bonus-toggle">
+            <input id="cladeBonus" type="checkbox" />
+            <span class="toggle-track" aria-hidden="true"></span>
+            <span>
+              <strong>Metallurgist clade bonus</strong>
+              <small>Add 3% to the calculated alloy yield</small>
+            </span>
+          </label>
+        </div>
+
+        <div class="refining-results" aria-live="polite">
+          <div class="result-heading">
+            <div>
+              <span class="eyebrow">Refining Oven load</span>
+              <h2 id="resultAlloy">Grain Steel</h2>
+            </div>
+            <span class="yield-rate">70% base return</span>
+          </div>
+
+          <div id="materialLoad" class="material-load"></div>
+
+          <div class="alloy-output">
+            <div>
+              <span id="outputLabel">Expected alloy</span>
+              <strong id="outputAmount">7,000</strong>
+              <small id="outputName">Grain Steel</small>
+            </div>
+            <dl>
+              <div>
+                <dt>Total material load</dt>
+                <dd id="totalLoad">20,000</dd>
+              </div>
+              <div>
+                <dt>Primary retained</dt>
+                <dd id="retainedRate">70%</dd>
+              </div>
+            </dl>
+          </div>
+
+          <p id="recipeNote" class="recipe-note"></p>
+        </div>
+      </section>
+
+      <section class="alloy-library" aria-labelledby="libraryHeading">
+        <div class="library-heading">
+          <div>
+            <p class="kicker">Alloy reference</p>
+            <h2 id="libraryHeading">Every refining combination</h2>
+          </div>
+          <label class="recipe-search">
+            <span class="search-glyph" aria-hidden="true"></span>
+            <input id="recipeSearch" type="search" placeholder="Search alloy or ingredient..." />
+          </label>
+        </div>
+
+        <div class="alloy-table-shell">
+          <table class="alloy-table">
+            <thead>
+              <tr>
+                <th>Finished alloy</th>
+                <th>2 parts</th>
+                <th>1 part</th>
+                <th>1 part</th>
+                <th>Return</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="alloyTableBody"></tbody>
+          </table>
+        </div>
+        <p id="alloyTableEmpty" class="alloy-table-empty" hidden>No refining recipes match that search.</p>
+      </section>
+
+      <footer class="site-footer refining-footer">
+        <span>Recipes come from the MO2 INFO workbook. Base calculations assume maximum relevant skills and lores.</span>
+        <span id="dataStamp"></span>
+      </footer>
+    </main>
+
+    <script src="/data.js"></script>
+    <script src="/refining.js"></script>
+    <script src="/site-shell.js?v=22"></script>
+  </body>
+</html>

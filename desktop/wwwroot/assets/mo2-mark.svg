@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Mortal Nexus forged compass crest">
+  <defs>
+    <linearGradient id="iron" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#353a3f"/>
+      <stop offset="0.45" stop-color="#111315"/>
+      <stop offset="1" stop-color="#282c30"/>
+    </linearGradient>
+    <linearGradient id="brass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#edf4ff"/>
+      <stop offset="0.5" stop-color="#62728b"/>
+      <stop offset="1" stop-color="#b9ccdf"/>
+    </linearGradient>
+  </defs>
+  <rect x="3" y="3" width="58" height="58" rx="4" fill="url(#iron)" stroke="#506a99" stroke-width="2"/>
+  <path d="M32 8 55 32 32 56 9 32Z" fill="#111315" stroke="url(#brass)" stroke-width="2"/>
+  <path d="M32 9 36 25 32 22 28 25Z" fill="#7db1ff"/>
+  <path d="M32 55 28 39 32 42 36 39Z" fill="#7157ff"/>
+  <path d="M17 44V21l15 15 15-15v23" fill="none" stroke="#edf4ff" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/>
+  <circle cx="32" cy="32" r="4" fill="#4e91ff" stroke="#b9d7ff" stroke-width="1.5"/>
+  <circle cx="9" cy="9" r="1.4" fill="#8c8e89"/>
+  <circle cx="55" cy="9" r="1.4" fill="#8c8e89"/>
+  <circle cx="9" cy="55" r="1.4" fill="#8c8e89"/>
+  <circle cx="55" cy="55" r="1.4" fill="#8c8e89"/>
+</svg>

@@ -1,0 +1,5284 @@
+{
+  "format": "mortal-nexus-sarducaa-decoded-loot-index",
+  "version": 1,
+  "generatedAt": "2026-08-16T01:55:00.850Z",
+  "sourceExportedAt": "2026-08-15T20:36:42.248255+00:00",
+  "sourceDatabase": "Content.live-20260815.rows.decoded.sqlite",
+  "entryCount": 68,
+  "markerMatchCount": 702,
+  "entries": {
+    "mob|ratzar alate": {
+      "key": "mob|ratzar alate",
+      "scope": "mob",
+      "label": "Ratzar Alate",
+      "profileCount": 1,
+      "definitionCount": 5,
+      "profiles": [
+        {
+          "label": "Ratzar Alate",
+          "internalNames": [
+            "AI_Insect_RatzarAlate",
+            "AI_Insect_RatzarAlateB",
+            "AI_Insect_RatzarAlateDominatable",
+            "MO2_AI_Insect_RatzarAlate",
+            "MO2_AI_Insect_RatzarAlate_Pet"
+          ],
+          "items": [
+            {
+              "name": "Ratzar Wings",
+              "internalName": "re_Bugsitems_RatzarWings",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Ratzar Alate Carcass",
+              "internalName": "carcass_Insect_RatzarAlate",
+              "chance": 1,
+              "min": 4000,
+              "max": 8000,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|ratzar feeder": {
+      "key": "mob|ratzar feeder",
+      "scope": "mob",
+      "label": "Ratzar Feeder",
+      "profileCount": 1,
+      "definitionCount": 4,
+      "profiles": [
+        {
+          "label": "Ratzar Feeder",
+          "internalNames": [
+            "AI_Insect_RatzarFeeder",
+            "AI_Insect_RatzarFeederDominatable",
+            "MO2_AI_Insect_RatzarFeeder",
+            "MO2_AI_Insect_RatzarFeeder_Pet"
+          ],
+          "items": [
+            {
+              "name": "Ratzar Eggs",
+              "internalName": "re_Bugsitems_RatzarEggs",
+              "chance": 1,
+              "min": 1,
+              "max": 2,
+              "field": 10354
+            },
+            {
+              "name": "Ratzar Feeder Carcass",
+              "internalName": "carcass_Insect_RatzarFeeder",
+              "chance": 1,
+              "min": 4000,
+              "max": 8000,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|ratzar worker": {
+      "key": "mob|ratzar worker",
+      "scope": "mob",
+      "label": "Ratzar Worker",
+      "profileCount": 1,
+      "definitionCount": 3,
+      "profiles": [
+        {
+          "label": "Ratzar Worker",
+          "internalNames": [
+            "AI_Insect_RatzarWorker",
+            "MO2_AI_Insect_RatzarWorker",
+            "MO2_AI_Insect_RatzarWorker_Pet"
+          ],
+          "items": [
+            {
+              "name": "Ratzar Antennae",
+              "internalName": "re_Bugsitems_RatzarAntennae",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Ratzar Worker Carcass",
+              "internalName": "carcass_Insect_RatzarWorker",
+              "chance": 1,
+              "min": 4000,
+              "max": 8000,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|danaburnu": {
+      "key": "mob|danaburnu",
+      "scope": "mob",
+      "label": "Danaburnu",
+      "profileCount": 3,
+      "definitionCount": 5,
+      "profiles": [
+        {
+          "label": "Danaburnu",
+          "internalNames": [
+            "AI_Insect_Danaburnu",
+            "AI_Insect_DanaburnuDominatable"
+          ],
+          "items": [
+            {
+              "name": "Danaburnu Palps",
+              "internalName": "re_Bugsitems_DanaburnuPalps",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Danaburnu Carcass",
+              "internalName": "carcass_Insect_Danaburnu",
+              "chance": 1,
+              "min": 20000,
+              "max": 40000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Danaburnu",
+          "internalNames": [
+            "MO2_AI_Insect_Danaburnu",
+            "MO2_AI_Insect_Danaburnu_Pet"
+          ],
+          "items": [
+            {
+              "name": "Danaburnu Palps",
+              "internalName": "re_Bugsitems_DanaburnuPalps",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Danaburnu Carcass",
+              "internalName": "carcass_Insect_Danaburnu",
+              "chance": 1,
+              "min": 30000,
+              "max": 40000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Danaburnu",
+          "internalNames": [
+            "MO2_AI_Insect_Danaburnu_BosKam"
+          ],
+          "items": [
+            {
+              "name": "Danaburnu Palps",
+              "internalName": "re_Bugsitems_DanaburnuPalps",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Danaburnu Carcass",
+              "internalName": "carcass_Insect_Danaburnu",
+              "chance": 1,
+              "min": 35000,
+              "max": 45000,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|giant akrep": {
+      "key": "mob|giant akrep",
+      "scope": "mob",
+      "label": "Giant Akrep",
+      "profileCount": 3,
+      "definitionCount": 3,
+      "profiles": [
+        {
+          "label": "Giant Akrep",
+          "internalNames": [
+            "AI_Insect_AkrepsGiant"
+          ],
+          "items": [
+            {
+              "name": "Giant Akrep Stinger",
+              "internalName": "re_Bugsitems_GiantAkrepStinger",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Akrep Carcass",
+              "internalName": "carcass_Insect_Akrep",
+              "chance": 1,
+              "min": 7000,
+              "max": 15000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Giant Akrep",
+          "internalNames": [
+            "MO2_AI_Insect_AkrepGiant"
+          ],
+          "items": [
+            {
+              "name": "Giant Akrep Stinger",
+              "internalName": "re_Bugsitems_GiantAkrepStinger",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Akrep Carcass",
+              "internalName": "carcass_Insect_Akrep",
+              "chance": 1,
+              "min": 22000,
+              "max": 32000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Giant Akrep",
+          "internalNames": [
+            "MO2_AI_Insect_AkrepGiant_BosKam"
+          ],
+          "items": [
+            {
+              "name": "Giant Akrep Stinger",
+              "internalName": "re_Bugsitems_GiantAkrepStinger",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Akrep Carcass",
+              "internalName": "carcass_Insect_Akrep",
+              "chance": 1,
+              "min": 24000,
+              "max": 34000,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|akrep": {
+      "key": "mob|akrep",
+      "scope": "mob",
+      "label": "Akrep",
+      "profileCount": 5,
+      "definitionCount": 8,
+      "profiles": [
+        {
+          "label": "Akrep",
+          "internalNames": [
+            "AI_Insect_Akreps",
+            "AI_Insect_AkrepsB",
+            "AI_Insect_AkrepsC"
+          ],
+          "items": [
+            {
+              "name": "Akrep Stinger",
+              "internalName": "re_Bugsitems_AkrepStinger",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Akrep Carcass",
+              "internalName": "carcass_Insect_Akrep",
+              "chance": 1,
+              "min": 5000,
+              "max": 10000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Akrep",
+          "internalNames": [
+            "AI_Insect_AkrepsD"
+          ],
+          "items": [
+            {
+              "name": "Akrep Stinger",
+              "internalName": "re_Bugsitems_AkrepStinger",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Akrep Carcass",
+              "internalName": "carcass_Insect_Akrep",
+              "chance": 1,
+              "min": 4000,
+              "max": 8000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Akrep",
+          "internalNames": [
+            "AI_Insect_AkrepsE",
+            "AI_Insect_AkrepsF"
+          ],
+          "items": [
+            {
+              "name": "Akrep Stinger",
+              "internalName": "re_Bugsitems_AkrepStinger",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Akrep Carcass",
+              "internalName": "carcass_Insect_Akrep",
+              "chance": 1,
+              "min": 3000,
+              "max": 7000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Akrep",
+          "internalNames": [
+            "MO2_AI_Insect_Akrep"
+          ],
+          "items": [
+            {
+              "name": "Akrep Stinger",
+              "internalName": "re_Bugsitems_AkrepStinger",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Akrep Carcass",
+              "internalName": "carcass_Insect_Akrep",
+              "chance": 1,
+              "min": 9000,
+              "max": 10000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Akrep",
+          "internalNames": [
+            "MO2_AI_Insect_Akrep_BosKam"
+          ],
+          "items": [
+            {
+              "name": "Akrep Stinger",
+              "internalName": "re_Bugsitems_AkrepStinger",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Akrep Carcass",
+              "internalName": "carcass_Insect_Akrep",
+              "chance": 1,
+              "min": 10000,
+              "max": 13000,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|ratzar hunter": {
+      "key": "mob|ratzar hunter",
+      "scope": "mob",
+      "label": "Ratzar Hunter",
+      "profileCount": 2,
+      "definitionCount": 6,
+      "profiles": [
+        {
+          "label": "Ratzar Hunter",
+          "internalNames": [
+            "AI_Insect_RatzarHunter",
+            "AI_Insect_RatzarHunterDominatable",
+            "MO2_AI_Insect_RatzarHunter",
+            "MO2_AI_Insect_RatzarHunter_Pet"
+          ],
+          "items": [
+            {
+              "name": "Ratzar Palps",
+              "internalName": "re_Bugsitems_RatzarPalps",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Ratzar Hunter Carcass",
+              "internalName": "carcass_Insect_RatzarHunter",
+              "chance": 1,
+              "min": 5000,
+              "max": 10000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Ratzar Hunter",
+          "internalNames": [
+            "AI_Insect_RatzarHunterB",
+            "AI_Insect_RatzarHunterC"
+          ],
+          "items": [
+            {
+              "name": "Ratzar Palps",
+              "internalName": "re_Bugsitems_RatzarPalps",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Ratzar Hunter Carcass",
+              "internalName": "carcass_Insect_RatzarHunter",
+              "chance": 1,
+              "min": 5200,
+              "max": 14000,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|ormek worker": {
+      "key": "mob|ormek worker",
+      "scope": "mob",
+      "label": "Ormek Worker",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Ormek Worker",
+          "internalNames": [
+            "MO2_AI_Spider_OrmekWorker"
+          ],
+          "items": [
+            {
+              "name": "Ormek Worker Palps",
+              "internalName": "re_Animalitems_OrmekWorkerPalps",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Fuming Salt",
+              "internalName": "re_FumingSalt",
+              "chance": 1,
+              "min": 50,
+              "max": 100,
+              "field": 10373
+            },
+            {
+              "name": "Ormek Worker Carcass",
+              "internalName": "carcass_Spider_OrmekWorker",
+              "chance": 1,
+              "min": 5000,
+              "max": 5500,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|ormek maiden": {
+      "key": "mob|ormek maiden",
+      "scope": "mob",
+      "label": "Ormek Maiden",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Ormek Maiden",
+          "internalNames": [
+            "MO2_AI_Spider_OrmekMaiden"
+          ],
+          "items": [
+            {
+              "name": "Ormek Maiden Palps",
+              "internalName": "re_Animalitems_OrmekMaiden",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Fuming Salt",
+              "internalName": "re_FumingSalt",
+              "chance": 1,
+              "min": 50,
+              "max": 100,
+              "field": 10373
+            },
+            {
+              "name": "Ormek Maiden Carcass",
+              "internalName": "carcass_Spider_OrmekMaiden",
+              "chance": 1,
+              "min": 9000,
+              "max": 10000,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|jungle horse": {
+      "key": "mob|jungle horse",
+      "scope": "mob",
+      "label": "Jungle Horse",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Jungle Horse",
+          "internalNames": [
+            "MO2_AI_Horses_Jungle"
+          ],
+          "items": [
+            {
+              "name": "Jungle Horse Carcass",
+              "internalName": "carcass_Horse_Jungle",
+              "chance": 1,
+              "min": 40000,
+              "max": 45000,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|hunter lizard": {
+      "key": "mob|hunter lizard",
+      "scope": "mob",
+      "label": "Hunter Lizard",
+      "profileCount": 2,
+      "definitionCount": 3,
+      "profiles": [
+        {
+          "label": "Hunter Lizard",
+          "internalNames": [
+            "MO2_AI_Lizard_HunterLizard",
+            "MO2_TriggerSpawn_AI_Lizard_HunterLizard"
+          ],
+          "items": [
+            {
+              "name": "Hunter Lizard Feet",
+              "internalName": "re_Animalitems_HunterLizard",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Hunter Lizard Carcass",
+              "internalName": "carcass_Lizard_HunterLizard",
+              "chance": 1,
+              "min": 7250,
+              "max": 7750,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Hunter Lizard",
+          "internalNames": [
+            "MO2_TriggerSpawn_AI_Risen_HunterLizard"
+          ],
+          "items": [
+            {
+              "name": "Hunter Lizard Feet",
+              "internalName": "re_Animalitems_HunterLizard",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|water lizard": {
+      "key": "mob|water lizard",
+      "scope": "mob",
+      "label": "Water Lizard",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Water Lizard",
+          "internalNames": [
+            "MO2_AI_Lizard_WaterLizard"
+          ],
+          "items": [
+            {
+              "name": "Water Lizard Fin",
+              "internalName": "re_Animalitems_WaterLizard",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Water Lizard Carcass",
+              "internalName": "carcass_Lizard_WaterLizard",
+              "chance": 1,
+              "min": 5500,
+              "max": 6000,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|crocodile": {
+      "key": "mob|crocodile",
+      "scope": "mob",
+      "label": "Crocodile",
+      "profileCount": 2,
+      "definitionCount": 2,
+      "profiles": [
+        {
+          "label": "Crocodile",
+          "internalNames": [
+            "AI_Lizard_Crocodile"
+          ],
+          "items": [
+            {
+              "name": "Crocodile Carcass",
+              "internalName": "carcass_Lizard_Crocodile",
+              "chance": 1,
+              "min": 6500,
+              "max": 14500,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Crocodile",
+          "internalNames": [
+            "MO2_AI_Lizard_Crocodile"
+          ],
+          "items": [
+            {
+              "name": "Crocodile Eye",
+              "internalName": "re_Animalitems_CrocodileEye",
+              "chance": 1,
+              "min": 2,
+              "max": 2,
+              "field": 10354
+            },
+            {
+              "name": "Crocodile Carcass",
+              "internalName": "carcass_Lizard_Crocodile",
+              "chance": 1,
+              "min": 10000,
+              "max": 14500,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|ormek flinger": {
+      "key": "mob|ormek flinger",
+      "scope": "mob",
+      "label": "Ormek Flinger",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Ormek Flinger",
+          "internalNames": [
+            "MO2_AI_Spider_OrmekFlinger"
+          ],
+          "items": [
+            {
+              "name": "Ormek Flinger Leg",
+              "internalName": "re_Animalitems_OrmekFlingerLeg",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Fuming Salt",
+              "internalName": "re_FumingSalt",
+              "chance": 1,
+              "min": 50,
+              "max": 100,
+              "field": 10373
+            },
+            {
+              "name": "Ormek Flinger Carcass",
+              "internalName": "carcass_Spider_OrmekFlinger",
+              "chance": 1,
+              "min": 6000,
+              "max": 8000,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|snapping turtle": {
+      "key": "mob|snapping turtle",
+      "scope": "mob",
+      "label": "Snapping Turtle",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Snapping Turtle",
+          "internalNames": [
+            "MO2_AI_Turtle_SnappingTurtle"
+          ],
+          "items": [
+            {
+              "name": "Snapping Turtle Foot",
+              "internalName": "re_Animalitems_SnappingTurtle",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Snapping Turtle Carcass",
+              "internalName": "carcass_Turtle_SnappingTurtle",
+              "chance": 1,
+              "min": 11500,
+              "max": 22500,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|campodon platybelodon": {
+      "key": "mob|campodon platybelodon",
+      "scope": "mob",
+      "label": "Campodon Platybelodon",
+      "profileCount": 2,
+      "definitionCount": 2,
+      "profiles": [
+        {
+          "label": "Campodon",
+          "internalNames": [
+            "MO2_AI_Proboscids_Campodon"
+          ],
+          "items": [
+            {
+              "name": "Campadon Tusks",
+              "internalName": "re_Animalitems_Campadon",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Campodon Carcass",
+              "internalName": "carcass_Proboscids_Campodon",
+              "chance": 1,
+              "min": 120000,
+              "max": 130000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Platybelodon",
+          "internalNames": [
+            "MO2_AI_Proboscids_Platybelodon"
+          ],
+          "items": [
+            {
+              "name": "Platybelodon Tusks",
+              "internalName": "re_Animalitems_PlatybelodonTusks",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Platybelodon Carcass",
+              "internalName": "carcass_Proboscids_Platybelodon",
+              "chance": 1,
+              "min": 120000,
+              "max": 130000,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|mountain spider": {
+      "key": "mob|mountain spider",
+      "scope": "mob",
+      "label": "Mountain Spider",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Mountain Spider",
+          "internalNames": [
+            "MO2_AI_Spider_MountainSpider"
+          ],
+          "items": [
+            {
+              "name": "Mountain Spider Leg",
+              "internalName": "re_Animalitems_MountainSpider",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Mountain Spider Carcass",
+              "internalName": "carcass_Spider_MountainSpider",
+              "chance": 1,
+              "min": 5000,
+              "max": 5500,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|koch gamal": {
+      "key": "mob|koch gamal",
+      "scope": "mob",
+      "label": "Koch Gamal",
+      "profileCount": 2,
+      "definitionCount": 2,
+      "profiles": [
+        {
+          "label": "Koch Gamal",
+          "internalNames": [
+            "AI_Gamal_Koch"
+          ],
+          "items": [
+            {
+              "name": "Gamal Carcass",
+              "internalName": "carcass_Gamal",
+              "chance": 1,
+              "min": 1500,
+              "max": 2500,
+              "field": 11981
+            }
+          ]
+        },
+        {
+          "label": "Koch Gamal",
+          "internalNames": [
+            "MO2_AI_Gamals_Koch"
+          ],
+          "items": [
+            {
+              "name": "Gamal Carcass",
+              "internalName": "carcass_Gamal",
+              "chance": 1,
+              "min": 40000,
+              "max": 45000,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|stone lizard": {
+      "key": "mob|stone lizard",
+      "scope": "mob",
+      "label": "Stone Lizard",
+      "profileCount": 3,
+      "definitionCount": 6,
+      "profiles": [
+        {
+          "label": "Stone Lizard",
+          "internalNames": [
+            "AI_Lizard_Stone",
+            "AI_Lizard_StoneB",
+            "AI_Lizard_StoneC",
+            "AI_Lizard_StoneD"
+          ],
+          "items": [
+            {
+              "name": "Stone Lizard Carcass",
+              "internalName": "carcass_Lizard_Stone",
+              "chance": 1,
+              "min": 2000,
+              "max": 3000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Stone Lizard",
+          "internalNames": [
+            "MO2_AI_Lizard_Stone"
+          ],
+          "items": [
+            {
+              "name": "Stone Lizard Tail Club",
+              "internalName": "re_Animalitems_StoneLizardTailClub",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Stone Lizard Carcass",
+              "internalName": "carcass_Lizard_Stone",
+              "chance": 1,
+              "min": 12000,
+              "max": 20000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Stone Lizard",
+          "internalNames": [
+            "MO2_AI_Lizard_Stone_BosKam"
+          ],
+          "items": [
+            {
+              "name": "Stone Lizard Tail Club",
+              "internalName": "re_Animalitems_StoneLizardTailClub",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Stone Lizard Carcass",
+              "internalName": "carcass_Lizard_Stone",
+              "chance": 1,
+              "min": 15000,
+              "max": 24000,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|ibex": {
+      "key": "mob|ibex",
+      "scope": "mob",
+      "label": "Ibex",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Ibex",
+          "internalNames": [
+            "MO2_AI_Bovids_Ibex"
+          ],
+          "items": [
+            {
+              "name": "Ibex Skull",
+              "internalName": "re_Animalitems_IbexSkull",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Ibex Carcass",
+              "internalName": "carcass_Ibex",
+              "chance": 1,
+              "min": 5500,
+              "max": 6000,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|golden danaburnu": {
+      "key": "mob|golden danaburnu",
+      "scope": "mob",
+      "label": "Golden Danaburnu",
+      "profileCount": 2,
+      "definitionCount": 4,
+      "profiles": [
+        {
+          "label": "Golden Danaburnu",
+          "internalNames": [
+            "AI_Insect_GoldenDanaburnu",
+            "MO2_AI_Insect_GoldenDanaburnu",
+            "MO2_AI_Insect_GoldenDanaburnu_Pet"
+          ],
+          "items": [
+            {
+              "name": "Golden Danaburnu Tarsal Claws",
+              "internalName": "re_Bugsitems_GoldenDanaburnuTarsalClaws",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Golden Danaburnu Carcass",
+              "internalName": "carcass_Insect_GoldenDanaburnu",
+              "chance": 1,
+              "min": 30000,
+              "max": 60000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Golden Danaburnu",
+          "internalNames": [
+            "MO2_AI_Insect_GoldenDanaburnu_BosKam"
+          ],
+          "items": [
+            {
+              "name": "Golden Danaburnu Tarsal Claws",
+              "internalName": "re_Bugsitems_GoldenDanaburnuTarsalClaws",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Golden Danaburnu Carcass",
+              "internalName": "carcass_Insect_GoldenDanaburnu",
+              "chance": 1,
+              "min": 36000,
+              "max": 66000,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "resource|coal chunk": {
+      "key": "resource|coal chunk",
+      "scope": "resource",
+      "label": "Coal Chunk",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Coal Chunk",
+          "internalNames": [
+            "pickableCoalChunk"
+          ],
+          "items": [
+            {
+              "name": "Coal",
+              "internalName": "re_Coal",
+              "chance": 1,
+              "min": 32,
+              "max": 112,
+              "field": 10540
+            }
+          ]
+        }
+      ]
+    },
+    "resource|sea dew": {
+      "key": "resource|sea dew",
+      "scope": "resource",
+      "label": "Sea Dew",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Sea Dew",
+          "internalNames": [
+            "pickableSeaDewA"
+          ],
+          "items": [
+            {
+              "name": "Sea Dew",
+              "internalName": "re_SeaDew",
+              "chance": 1,
+              "min": 15,
+              "max": 30,
+              "field": 10540
+            },
+            {
+              "name": "Sea Dew Leaves",
+              "internalName": "re_SeaDewLeaves",
+              "chance": 0.05,
+              "min": 1,
+              "max": 4,
+              "field": 10546
+            },
+            {
+              "name": "Rare Sea Dew Plant Seed",
+              "internalName": "seed_SeaDew_Plant",
+              "chance": 0.0005,
+              "min": 1,
+              "max": 1,
+              "field": 10547
+            }
+          ]
+        }
+      ]
+    },
+    "npc|vendor": {
+      "key": "npc|vendor",
+      "scope": "npc",
+      "label": "Vendor",
+      "profileCount": 3,
+      "definitionCount": 6,
+      "profiles": [
+        {
+          "label": "Vendor",
+          "internalNames": [
+            "AI_NPC_Vendor_Bone"
+          ],
+          "items": [
+            {
+              "name": "Bone Tissue",
+              "internalName": "re_BoneTissue",
+              "chance": 1,
+              "min": 50,
+              "max": 250,
+              "field": 12235
+            },
+            {
+              "name": "Human Carcass",
+              "internalName": "carcass_Human",
+              "chance": 1,
+              "min": 1500,
+              "max": 2000,
+              "field": 12244
+            }
+          ]
+        },
+        {
+          "label": "Vendor",
+          "internalNames": [
+            "AI_NPC_Vendor_Leather"
+          ],
+          "items": [
+            {
+              "name": "Wool",
+              "internalName": "re_Wool",
+              "chance": 1,
+              "min": 5,
+              "max": 15,
+              "field": 12235
+            },
+            {
+              "name": "Human Carcass",
+              "internalName": "carcass_Human",
+              "chance": 1,
+              "min": 1500,
+              "max": 2000,
+              "field": 12244
+            }
+          ]
+        },
+        {
+          "label": "Vendor",
+          "internalNames": [
+            "AI_NPC_Vendor_Wood",
+            "MO2_AI_NPC_Vendor_AlphaMaterials",
+            "MO2_AI_NPC_Vendor_BeatBoy",
+            "MO2_AI_NPC_Vendor_MagicMaterialsDeluxe"
+          ],
+          "items": [
+            {
+              "name": "Greywood",
+              "internalName": "re_Greywood",
+              "chance": 1,
+              "min": 1,
+              "max": 5,
+              "field": 12235
+            },
+            {
+              "name": "Spongewood",
+              "internalName": "re_Spongewood",
+              "chance": 1,
+              "min": 50,
+              "max": 150,
+              "field": 12236
+            },
+            {
+              "name": "Human Carcass",
+              "internalName": "carcass_Human",
+              "chance": 1,
+              "min": 1500,
+              "max": 2000,
+              "field": 12244
+            }
+          ]
+        }
+      ]
+    },
+    "mob|bandit": {
+      "key": "mob|bandit",
+      "scope": "mob",
+      "label": "Bandit",
+      "profileCount": 2,
+      "definitionCount": 2,
+      "profiles": [
+        {
+          "label": "Bandit",
+          "internalNames": [
+            "MO2_AI_Humanoid_BanditA_Sarducaan"
+          ],
+          "items": [
+            {
+              "name": "Small Rough Titanit",
+              "internalName": "currency_GemTitanitB",
+              "chance": 0.1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Bandit Head",
+              "internalName": "re_HeadBanditA",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10373
+            },
+            {
+              "name": "Minor Bandage",
+              "internalName": "consumable_MinorBandage",
+              "chance": 0.25,
+              "min": 5,
+              "max": 10,
+              "field": 10392
+            },
+            {
+              "name": "Barrel Table",
+              "internalName": "PlaceDecoration_Prop_Barreltable",
+              "chance": 0.01,
+              "min": 1,
+              "max": 1,
+              "field": 10411
+            },
+            {
+              "name": "Tier 1 Ring not charged",
+              "internalName": "trinket_RingTier1",
+              "chance": 0.02,
+              "min": 1,
+              "max": 1,
+              "field": 10430
+            },
+            {
+              "name": "Tier 1 Amulet not charged",
+              "internalName": "trinket_AmuletTier1",
+              "chance": 0.02,
+              "min": 1,
+              "max": 1,
+              "field": 10449
+            },
+            {
+              "name": "Silver Coin",
+              "internalName": "currency_CoinSilver",
+              "chance": 1,
+              "min": 1,
+              "max": 5,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Bandit",
+          "internalNames": [
+            "MO2_AI_Sarducaa_BanditA"
+          ],
+          "items": [
+            {
+              "name": "Small Rough Titanit",
+              "internalName": "currency_GemTitanitB",
+              "chance": 0.1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Bandit Head",
+              "internalName": "re_HeadBanditA",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10373
+            },
+            {
+              "name": "Minor Bandage",
+              "internalName": "consumable_MinorBandage",
+              "chance": 0.25,
+              "min": 5,
+              "max": 10,
+              "field": 10392
+            },
+            {
+              "name": "Barrel Table",
+              "internalName": "PlaceDecoration_Prop_Barreltable",
+              "chance": 0.01,
+              "min": 1,
+              "max": 1,
+              "field": 10411
+            },
+            {
+              "name": "Tier 1 Ring not charged",
+              "internalName": "trinket_RingTier1",
+              "chance": 0.05,
+              "min": 1,
+              "max": 1,
+              "field": 10430
+            },
+            {
+              "name": "Tier 1 Amulet not charged",
+              "internalName": "trinket_AmuletTier1",
+              "chance": 0.05,
+              "min": 1,
+              "max": 1,
+              "field": 10449
+            },
+            {
+              "name": "Silver Coin",
+              "internalName": "currency_CoinSilver",
+              "chance": 1,
+              "min": 1,
+              "max": 5,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "resource|whitewood": {
+      "key": "resource|whitewood",
+      "scope": "resource",
+      "label": "Whitewood",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Whitewood",
+          "internalNames": [
+            "RF_aWhitewood"
+          ],
+          "items": [
+            {
+              "name": "Small Rough Amber",
+              "internalName": "currency_AmberC",
+              "chance": 0.0016,
+              "min": 1,
+              "max": 1,
+              "field": 10535
+            }
+          ]
+        }
+      ]
+    },
+    "container|chest": {
+      "key": "container|chest",
+      "scope": "container",
+      "label": "Chest",
+      "profileCount": 4,
+      "definitionCount": 4,
+      "profiles": [
+        {
+          "label": "Chest",
+          "internalNames": [
+            "worldLootSarducaaChestA"
+          ],
+          "items": [
+            {
+              "name": "Silver Coin",
+              "internalName": "currency_CoinSilver",
+              "chance": 0.5,
+              "min": 1,
+              "max": 22,
+              "field": 14182
+            },
+            {
+              "name": "Cuprum Coin",
+              "internalName": "currency_CoinCuprum",
+              "chance": 1,
+              "min": 6,
+              "max": 34,
+              "field": 14183
+            },
+            {
+              "name": "Tailfish Meat",
+              "internalName": "re_TailfishMeat",
+              "chance": 0.1,
+              "min": 2,
+              "max": 14,
+              "field": 14184
+            },
+            {
+              "name": "Cuprum",
+              "internalName": "re_Cuprum",
+              "chance": 0.01,
+              "min": 10,
+              "max": 25,
+              "field": 14185
+            },
+            {
+              "name": "Small Rough White Opal",
+              "internalName": "currency_GemWhiteOpalB",
+              "chance": 0.05,
+              "min": 1,
+              "max": 2,
+              "field": 14186
+            },
+            {
+              "name": "Lesser Healing Potion",
+              "internalName": "re_Vial_Potion_Minor_Healing",
+              "chance": 0.03,
+              "min": 1,
+              "max": 1,
+              "field": 14187
+            },
+            {
+              "name": "Water",
+              "internalName": "re_Water",
+              "chance": 0.03,
+              "min": 6,
+              "max": 11,
+              "field": 14188
+            },
+            {
+              "name": "Allium Crop Seed",
+              "internalName": "re_AlliumSeed",
+              "chance": 0.02,
+              "min": 1,
+              "max": 3,
+              "field": 14189
+            },
+            {
+              "name": "Salvia Crop Seed",
+              "internalName": "re_SalviaSeed",
+              "chance": 0.01,
+              "min": 1,
+              "max": 2,
+              "field": 14190
+            },
+            {
+              "name": "Barley Crop Seed",
+              "internalName": "re_BarleyCropSeed",
+              "chance": 0.005,
+              "min": 1,
+              "max": 5,
+              "field": 14191
+            },
+            {
+              "name": "Baking Pot",
+              "internalName": "weapon_Tool_BakingPot",
+              "chance": 0.001,
+              "min": 1,
+              "max": 1,
+              "field": 14192
+            },
+            {
+              "name": "Artifact Great Abacus Bead Piece",
+              "internalName": "re_Artifact_CylinderOfXiB",
+              "chance": 0.0001,
+              "min": 1,
+              "max": 1,
+              "field": 14193
+            },
+            {
+              "name": "Artifact Occult Incensed Papyrus Piece",
+              "internalName": "re_Artifact_MolthasInscriptionE",
+              "chance": 0.0001,
+              "min": 1,
+              "max": 1,
+              "field": 14194
+            }
+          ]
+        },
+        {
+          "label": "Chest",
+          "internalNames": [
+            "worldLootSarducaaChestB"
+          ],
+          "items": [
+            {
+              "name": "Silver Coin",
+              "internalName": "currency_CoinSilver",
+              "chance": 0.5,
+              "min": 2,
+              "max": 24,
+              "field": 14182
+            },
+            {
+              "name": "Cuprum Coin",
+              "internalName": "currency_CoinCuprum",
+              "chance": 1,
+              "min": 60,
+              "max": 225,
+              "field": 14183
+            },
+            {
+              "name": "Silver Coin",
+              "internalName": "currency_CoinSilver",
+              "chance": 0.1,
+              "min": 2,
+              "max": 16,
+              "field": 14184
+            },
+            {
+              "name": "Gold Coin",
+              "internalName": "currency_CoinGold",
+              "chance": 0.02,
+              "min": 1,
+              "max": 2,
+              "field": 14185
+            },
+            {
+              "name": "Gold Coin",
+              "internalName": "currency_CoinGold",
+              "chance": 0.05,
+              "min": 1,
+              "max": 2,
+              "field": 14186
+            },
+            {
+              "name": "Lysimachia Arvensis",
+              "internalName": "re_BlueFlowerA",
+              "chance": 0.03,
+              "min": 1,
+              "max": 3,
+              "field": 14187
+            },
+            {
+              "name": "Pig Iron",
+              "internalName": "re_PigIron",
+              "chance": 0.03,
+              "min": 40,
+              "max": 105,
+              "field": 14188
+            },
+            {
+              "name": "Artifact Urmath Tablet Piece",
+              "internalName": "re_Artifact_UrmathTabletA",
+              "chance": 0.001,
+              "min": 1,
+              "max": 1,
+              "field": 14189
+            },
+            {
+              "name": "Small Rough Black Opal",
+              "internalName": "currency_GemBlackOpalB",
+              "chance": 0.01,
+              "min": 1,
+              "max": 1,
+              "field": 14190
+            },
+            {
+              "name": "Small Rough Grossular",
+              "internalName": "currency_GemGrossularB",
+              "chance": 0.005,
+              "min": 1,
+              "max": 1,
+              "field": 14191
+            },
+            {
+              "name": "Artifact Urmath Tablet Piece",
+              "internalName": "re_Artifact_UrmathTabletF",
+              "chance": 0.0001,
+              "min": 1,
+              "max": 1,
+              "field": 14194
+            }
+          ]
+        },
+        {
+          "label": "Chest",
+          "internalNames": [
+            "worldLootSarducaaChestC"
+          ],
+          "items": [
+            {
+              "name": "Silver Coin",
+              "internalName": "currency_CoinSilver",
+              "chance": 0.5,
+              "min": 3,
+              "max": 26,
+              "field": 14182
+            },
+            {
+              "name": "Cuprum Coin",
+              "internalName": "currency_CoinCuprum",
+              "chance": 1,
+              "min": 167,
+              "max": 430,
+              "field": 14183
+            },
+            {
+              "name": "Gold Coin",
+              "internalName": "currency_CoinGold",
+              "chance": 0.1,
+              "min": 1,
+              "max": 1,
+              "field": 14184
+            },
+            {
+              "name": "Gold Coin",
+              "internalName": "currency_CoinGold",
+              "chance": 0.03,
+              "min": 1,
+              "max": 2,
+              "field": 14185
+            },
+            {
+              "name": "Spear Exceptional",
+              "internalName": "MO2_Haven_BasicSpearC",
+              "chance": 0.05,
+              "min": 1,
+              "max": 1,
+              "field": 14186
+            },
+            {
+              "name": "Mace Exceptional",
+              "internalName": "MO2_Haven_BasicMaceC",
+              "chance": 0.03,
+              "min": 1,
+              "max": 1,
+              "field": 14187
+            },
+            {
+              "name": "Small Rough Almandin",
+              "internalName": "currency_GemAlmandinB",
+              "chance": 0.03,
+              "min": 1,
+              "max": 2,
+              "field": 14188
+            },
+            {
+              "name": "Artifact Great Abacus Bead Piece",
+              "internalName": "re_Artifact_CylinderOfXiA",
+              "chance": 0.001,
+              "min": 1,
+              "max": 1,
+              "field": 14189
+            },
+            {
+              "name": "Small Rough Andradit",
+              "internalName": "currency_GemAndraditB",
+              "chance": 0.01,
+              "min": 1,
+              "max": 2,
+              "field": 14190
+            },
+            {
+              "name": "Artifact Sargon Prism Piece",
+              "internalName": "re_Artifact_SargonPrismG",
+              "chance": 0.0001,
+              "min": 1,
+              "max": 1,
+              "field": 14194
+            }
+          ]
+        },
+        {
+          "label": "Chest",
+          "internalNames": [
+            "worldLootSarducaaChestD"
+          ],
+          "items": [
+            {
+              "name": "Gold Coin",
+              "internalName": "currency_CoinGold",
+              "chance": 0.1,
+              "min": 1,
+              "max": 2,
+              "field": 14182
+            },
+            {
+              "name": "Silver Coin",
+              "internalName": "currency_CoinSilver",
+              "chance": 1,
+              "min": 16,
+              "max": 112,
+              "field": 14183
+            },
+            {
+              "name": "Small Rough Pyrop",
+              "internalName": "currency_GemPyropB",
+              "chance": 0.1,
+              "min": 1,
+              "max": 3,
+              "field": 14184
+            },
+            {
+              "name": "Tea of Growth",
+              "internalName": "re_Food_Growth",
+              "chance": 0.0001,
+              "min": 1,
+              "max": 30,
+              "field": 14185
+            },
+            {
+              "name": "Artifact Ornate Obelisk Capstone Piece",
+              "internalName": "re_Artifact_ObeliskOfLuB",
+              "chance": 0.001,
+              "min": 1,
+              "max": 1,
+              "field": 14189
+            },
+            {
+              "name": "Artifact Occult Incensed Papyrus Piece",
+              "internalName": "re_Artifact_MolthasInscriptionA",
+              "chance": 0.001,
+              "min": 1,
+              "max": 1,
+              "field": 14190
+            },
+            {
+              "name": "Artifact Teuin Stele Piece",
+              "internalName": "re_Artifact_TeuinSteleH",
+              "chance": 0.0001,
+              "min": 1,
+              "max": 1,
+              "field": 14194
+            }
+          ]
+        }
+      ]
+    },
+    "container|chest|pin:8": {
+      "key": "container|chest|pin:8",
+      "scope": "container",
+      "label": "Chest",
+      "profileCount": 4,
+      "definitionCount": 4,
+      "profiles": [
+        {
+          "label": "Chest",
+          "internalNames": [
+            "MO2_worldLoot_Sarducaa_City_Chest_Master_8Pin_A"
+          ],
+          "items": [
+            {
+              "name": "Silver Coin",
+              "internalName": "currency_CoinSilver",
+              "chance": 1,
+              "min": 10,
+              "max": 15,
+              "field": 14182
+            },
+            {
+              "name": "Gold Coin",
+              "internalName": "currency_CoinGold",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 14183
+            },
+            {
+              "name": "Adamant",
+              "internalName": "currency_GemDiamondA",
+              "chance": 0.001,
+              "min": 1,
+              "max": 1,
+              "field": 14184
+            },
+            {
+              "name": "Topaz",
+              "internalName": "currency_GemTopaz",
+              "chance": 0.003,
+              "min": 1,
+              "max": 1,
+              "field": 14185
+            },
+            {
+              "name": "Ruber",
+              "internalName": "currency_GemRuber",
+              "chance": 0.005,
+              "min": 1,
+              "max": 1,
+              "field": 14186
+            },
+            {
+              "name": "Amethyst",
+              "internalName": "currency_GemAmethyst",
+              "chance": 0.01,
+              "min": 1,
+              "max": 1,
+              "field": 14187
+            },
+            {
+              "name": "Jadeite",
+              "internalName": "re_Jadeite",
+              "chance": 0.06,
+              "min": 6,
+              "max": 10,
+              "field": 14188
+            },
+            {
+              "name": "Bleck",
+              "internalName": "re_Bleck",
+              "chance": 0.03,
+              "min": 5,
+              "max": 20,
+              "field": 14189
+            },
+            {
+              "name": "Incisium",
+              "internalName": "re_Incisium",
+              "chance": 0.03,
+              "min": 5,
+              "max": 20,
+              "field": 14190
+            },
+            {
+              "name": "Pearl",
+              "internalName": "currency_GemPearlB",
+              "chance": 0.05,
+              "min": 1,
+              "max": 1,
+              "field": 14191
+            },
+            {
+              "name": "Small Rough Black Opal",
+              "internalName": "currency_GemBlackOpalB",
+              "chance": 0.02,
+              "min": 1,
+              "max": 1,
+              "field": 14192
+            },
+            {
+              "name": "Molarium",
+              "internalName": "re_Molarium",
+              "chance": 0.05,
+              "min": 9,
+              "max": 16,
+              "field": 14193
+            },
+            {
+              "name": "Malachite",
+              "internalName": "re_Malachite",
+              "chance": 0.05,
+              "min": 10,
+              "max": 50,
+              "field": 14194
+            }
+          ]
+        },
+        {
+          "label": "Chest",
+          "internalNames": [
+            "MO2_worldLoot_Sarducaa_Kamin_Chest_Master_8Pin_A"
+          ],
+          "items": [
+            {
+              "name": "Silver Coin",
+              "internalName": "currency_CoinSilver",
+              "chance": 1,
+              "min": 10,
+              "max": 15,
+              "field": 14182
+            },
+            {
+              "name": "Gold Coin",
+              "internalName": "currency_CoinGold",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 14183
+            },
+            {
+              "name": "Adamant",
+              "internalName": "currency_GemDiamondA",
+              "chance": 0.05,
+              "min": 1,
+              "max": 1,
+              "field": 14184
+            },
+            {
+              "name": "Topaz",
+              "internalName": "currency_GemTopaz",
+              "chance": 0.1,
+              "min": 1,
+              "max": 1,
+              "field": 14185
+            },
+            {
+              "name": "Ruber",
+              "internalName": "currency_GemRuber",
+              "chance": 0.12,
+              "min": 1,
+              "max": 1,
+              "field": 14186
+            },
+            {
+              "name": "Amethyst",
+              "internalName": "currency_GemAmethyst",
+              "chance": 0.14,
+              "min": 1,
+              "max": 1,
+              "field": 14187
+            },
+            {
+              "name": "Essence of Flame",
+              "internalName": "loot_EssenceOfFlame",
+              "chance": 0.02,
+              "min": 1,
+              "max": 1,
+              "field": 14194
+            }
+          ]
+        },
+        {
+          "label": "Chest",
+          "internalNames": [
+            "MO2_worldLoot_Sarducaa_POI_Chest_Master_8Pin_A"
+          ],
+          "items": [
+            {
+              "name": "Silver Coin",
+              "internalName": "currency_CoinSilver",
+              "chance": 1,
+              "min": 10,
+              "max": 15,
+              "field": 14182
+            },
+            {
+              "name": "Gold Coin",
+              "internalName": "currency_CoinGold",
+              "chance": 1,
+              "min": 1,
+              "max": 2,
+              "field": 14183
+            },
+            {
+              "name": "Adamant",
+              "internalName": "currency_GemDiamondA",
+              "chance": 0.02,
+              "min": 1,
+              "max": 1,
+              "field": 14184
+            },
+            {
+              "name": "Topaz",
+              "internalName": "currency_GemTopaz",
+              "chance": 0.06,
+              "min": 1,
+              "max": 1,
+              "field": 14185
+            },
+            {
+              "name": "Ruber",
+              "internalName": "currency_GemRuber",
+              "chance": 0.08,
+              "min": 1,
+              "max": 1,
+              "field": 14186
+            },
+            {
+              "name": "Amethyst",
+              "internalName": "currency_GemAmethyst",
+              "chance": 0.1,
+              "min": 1,
+              "max": 1,
+              "field": 14187
+            },
+            {
+              "name": "Silver Mortar",
+              "internalName": "loot_MortarSilver",
+              "chance": 0.06,
+              "min": 1,
+              "max": 1,
+              "field": 14188
+            },
+            {
+              "name": "Tier 2 Amulet not charged",
+              "internalName": "trinket_AmuletTier2",
+              "chance": 0.05,
+              "min": 1,
+              "max": 1,
+              "field": 14189
+            },
+            {
+              "name": "Tier 2 Ring not charged",
+              "internalName": "trinket_RingTier2",
+              "chance": 0.05,
+              "min": 1,
+              "max": 1,
+              "field": 14190
+            },
+            {
+              "name": "Artifact Sargon Prism Piece",
+              "internalName": "re_Artifact_SargonPrismE",
+              "chance": 0.01,
+              "min": 1,
+              "max": 1,
+              "field": 14191
+            },
+            {
+              "name": "Artifact Ornate Obelisk Capstone Piece",
+              "internalName": "re_Artifact_ObeliskOfLuC",
+              "chance": 0.02,
+              "min": 1,
+              "max": 1,
+              "field": 14192
+            },
+            {
+              "name": "Artifact Occult Incensed Papyrus Piece",
+              "internalName": "re_Artifact_MolthasInscriptionC",
+              "chance": 0.02,
+              "min": 1,
+              "max": 1,
+              "field": 14193
+            },
+            {
+              "name": "Golden Hammer",
+              "internalName": "loot_HammerGolden",
+              "chance": 0.05,
+              "min": 1,
+              "max": 1,
+              "field": 14194
+            }
+          ]
+        },
+        {
+          "label": "Chest",
+          "internalNames": [
+            "MO2_worldLoot_Sarducaa_Radius_Chest_Master_8Pin"
+          ],
+          "items": [
+            {
+              "name": "Silver Coin",
+              "internalName": "currency_CoinSilver",
+              "chance": 1,
+              "min": 10,
+              "max": 15,
+              "field": 14182
+            },
+            {
+              "name": "Gold Coin",
+              "internalName": "currency_CoinGold",
+              "chance": 1,
+              "min": 1,
+              "max": 2,
+              "field": 14183
+            },
+            {
+              "name": "Tier 2 Amulet not charged",
+              "internalName": "trinket_AmuletTier2",
+              "chance": 0.06,
+              "min": 1,
+              "max": 1,
+              "field": 14184
+            },
+            {
+              "name": "Tier 2 Ring not charged",
+              "internalName": "trinket_RingTier2",
+              "chance": 0.06,
+              "min": 1,
+              "max": 1,
+              "field": 14185
+            },
+            {
+              "name": "Small Rough Safir",
+              "internalName": "currency_GemSafirC",
+              "chance": 0.05,
+              "min": 1,
+              "max": 1,
+              "field": 14186
+            },
+            {
+              "name": "Small Rough Smaragdus",
+              "internalName": "currency_GemSmaragdusB",
+              "chance": 0.04,
+              "min": 1,
+              "max": 1,
+              "field": 14187
+            },
+            {
+              "name": "Small Rough Adamant",
+              "internalName": "currency_GemDiamondC",
+              "chance": 0.03,
+              "min": 1,
+              "max": 1,
+              "field": 14188
+            },
+            {
+              "name": "Dazzling Scarab Elytra",
+              "internalName": "Loot_DazzlingScarabElytra",
+              "chance": 0.01,
+              "min": 1,
+              "max": 1,
+              "field": 14189
+            },
+            {
+              "name": "Clip Beetle",
+              "internalName": "Loot_Critter_ClipBeetle",
+              "chance": 0.03,
+              "min": 1,
+              "max": 1,
+              "field": 14190
+            },
+            {
+              "name": "Artifact Sargon Prism Piece",
+              "internalName": "re_Artifact_SargonPrismG",
+              "chance": 0.01,
+              "min": 1,
+              "max": 1,
+              "field": 14191
+            },
+            {
+              "name": "Artifact Ornate Obelisk Capstone Piece",
+              "internalName": "re_Artifact_ObeliskOfLuD",
+              "chance": 0.01,
+              "min": 1,
+              "max": 1,
+              "field": 14192
+            },
+            {
+              "name": "Artifact Occult Incensed Papyrus Piece",
+              "internalName": "re_Artifact_MolthasInscriptionD",
+              "chance": 0.01,
+              "min": 1,
+              "max": 1,
+              "field": 14193
+            },
+            {
+              "name": "Golden Hammer",
+              "internalName": "loot_HammerGolden",
+              "chance": 0.05,
+              "min": 1,
+              "max": 1,
+              "field": 14194
+            }
+          ]
+        }
+      ]
+    },
+    "resource|brownwood": {
+      "key": "resource|brownwood",
+      "scope": "resource",
+      "label": "Brownwood",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Brownwood",
+          "internalNames": [
+            "RF_aBrownwood"
+          ],
+          "items": [
+            {
+              "name": "Rough Amber",
+              "internalName": "currency_AmberB",
+              "chance": 0.001,
+              "min": 1,
+              "max": 1,
+              "field": 10535
+            },
+            {
+              "name": "Small Rough Amber",
+              "internalName": "currency_AmberC",
+              "chance": 0.002,
+              "min": 1,
+              "max": 1,
+              "field": 10536
+            }
+          ]
+        }
+      ]
+    },
+    "mob|veteran bandit": {
+      "key": "mob|veteran bandit",
+      "scope": "mob",
+      "label": "Veteran Bandit",
+      "profileCount": 2,
+      "definitionCount": 2,
+      "profiles": [
+        {
+          "label": "Veteran Bandit",
+          "internalNames": [
+            "MO2_AI_Humanoid_BanditVeteranA_Sarducaan"
+          ],
+          "items": [
+            {
+              "name": "Rough Dravit",
+              "internalName": "currency_GemDravitB",
+              "chance": 0.2,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Veteran Bandit Head",
+              "internalName": "re_HeadBanditVeteran",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10373
+            },
+            {
+              "name": "Minor Bandage",
+              "internalName": "consumable_MinorBandage",
+              "chance": 0.5,
+              "min": 10,
+              "max": 20,
+              "field": 10392
+            },
+            {
+              "name": "Camp Chest Key",
+              "internalName": "MO2_key_CampChests",
+              "chance": 0.05,
+              "min": 1,
+              "max": 1,
+              "field": 10411
+            },
+            {
+              "name": "Fancy Bed Beige",
+              "internalName": "PlaceDecoration_BedD_1",
+              "chance": 0.1,
+              "min": 1,
+              "max": 1,
+              "field": 10430
+            },
+            {
+              "name": "Tier 2 Ring not charged",
+              "internalName": "trinket_RingTier2",
+              "chance": 0.01,
+              "min": 1,
+              "max": 1,
+              "field": 10449
+            },
+            {
+              "name": "Tier 2 Amulet not charged",
+              "internalName": "trinket_AmuletTier2",
+              "chance": 0.01,
+              "min": 1,
+              "max": 1,
+              "field": 10468
+            },
+            {
+              "name": "Silver Coin",
+              "internalName": "currency_CoinSilver",
+              "chance": 1,
+              "min": 25,
+              "max": 100,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Veteran Bandit",
+          "internalNames": [
+            "MO2_AI_Sarducaa_BanditVeteranA"
+          ],
+          "items": [
+            {
+              "name": "Rough Dravit",
+              "internalName": "currency_GemDravitB",
+              "chance": 0.2,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Veteran Bandit Head",
+              "internalName": "re_HeadBanditVeteran",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10373
+            },
+            {
+              "name": "Minor Bandage",
+              "internalName": "consumable_MinorBandage",
+              "chance": 0.5,
+              "min": 10,
+              "max": 20,
+              "field": 10392
+            },
+            {
+              "name": "Medium Table",
+              "internalName": "PlaceDecoration_TableC",
+              "chance": 0.02,
+              "min": 1,
+              "max": 1,
+              "field": 10411
+            },
+            {
+              "name": "Fancy Bed Beige",
+              "internalName": "PlaceDecoration_BedD_1",
+              "chance": 0.02,
+              "min": 1,
+              "max": 1,
+              "field": 10430
+            },
+            {
+              "name": "Tier 2 Ring not charged",
+              "internalName": "trinket_RingTier2",
+              "chance": 0.1,
+              "min": 1,
+              "max": 1,
+              "field": 10449
+            },
+            {
+              "name": "Tier 2 Amulet not charged",
+              "internalName": "trinket_AmuletTier2",
+              "chance": 0.1,
+              "min": 1,
+              "max": 1,
+              "field": 10468
+            },
+            {
+              "name": "Dazzling Scarab Elytra",
+              "internalName": "Loot_DazzlingScarabElytra",
+              "chance": 0.001,
+              "min": 1,
+              "max": 1,
+              "field": 10487
+            },
+            {
+              "name": "Silver Coin",
+              "internalName": "currency_CoinSilver",
+              "chance": 1,
+              "min": 25,
+              "max": 100,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "resource|drakon": {
+      "key": "resource|drakon",
+      "scope": "resource",
+      "label": "Drakon",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Drakon",
+          "internalNames": [
+            "pickableDrakonA"
+          ],
+          "items": [
+            {
+              "name": "Drakon",
+              "internalName": "re_Drakon",
+              "chance": 1,
+              "min": 1,
+              "max": 3,
+              "field": 10540
+            },
+            {
+              "name": "Rare Drakon Plant Seed",
+              "internalName": "seed_Drakon_Plant",
+              "chance": 0.0005,
+              "min": 1,
+              "max": 1,
+              "field": 10546
+            }
+          ]
+        }
+      ]
+    },
+    "mob|gemsbok": {
+      "key": "mob|gemsbok",
+      "scope": "mob",
+      "label": "Gemsbok",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Gemsbok",
+          "internalNames": [
+            "MO2_AI_Bovids_Gemsbok"
+          ],
+          "items": [
+            {
+              "name": "Ring Worm",
+              "internalName": "re_Ringworm",
+              "chance": 0.1,
+              "min": 1,
+              "max": 8,
+              "field": 10354
+            },
+            {
+              "name": "Gemsbok Hooves",
+              "internalName": "re_Animalitems_GemsbokHooves",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10373
+            },
+            {
+              "name": "Gemsbok Carcass",
+              "internalName": "carcass_Bovid_Gemsbok",
+              "chance": 1,
+              "min": 5000,
+              "max": 5625,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|ruah gamal": {
+      "key": "mob|ruah gamal",
+      "scope": "mob",
+      "label": "Ruah Gamal",
+      "profileCount": 2,
+      "definitionCount": 2,
+      "profiles": [
+        {
+          "label": "Ruah Gamal",
+          "internalNames": [
+            "AI_Gamal_Ruah"
+          ],
+          "items": [
+            {
+              "name": "Gamal Carcass",
+              "internalName": "carcass_Gamal",
+              "chance": 1,
+              "min": 2000,
+              "max": 4000,
+              "field": 11981
+            }
+          ]
+        },
+        {
+          "label": "Ruah Gamal",
+          "internalNames": [
+            "MO2_AI_Gamals_Ruah"
+          ],
+          "items": [
+            {
+              "name": "Gamal Carcass",
+              "internalName": "carcass_Gamal",
+              "chance": 1,
+              "min": 40000,
+              "max": 45000,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "resource|granum": {
+      "key": "resource|granum",
+      "scope": "resource",
+      "label": "Granum",
+      "profileCount": 2,
+      "definitionCount": 2,
+      "profiles": [
+        {
+          "label": "Granum10",
+          "internalNames": [
+            "RF_aGranum10"
+          ],
+          "items": [
+            {
+              "name": "Adamant",
+              "internalName": "currency_GemDiamondA",
+              "chance": 0.0001,
+              "min": 1,
+              "max": 1,
+              "field": 10535
+            },
+            {
+              "name": "Large Rough Adamant",
+              "internalName": "currency_GemDiamondB",
+              "chance": 0.0002,
+              "min": 1,
+              "max": 1,
+              "field": 10536
+            },
+            {
+              "name": "Topaz",
+              "internalName": "currency_GemTopaz",
+              "chance": 0.0002,
+              "min": 1,
+              "max": 1,
+              "field": 10537
+            },
+            {
+              "name": "Small Rough Titanit",
+              "internalName": "currency_GemTitanitB",
+              "chance": 0.0012,
+              "min": 1,
+              "max": 1,
+              "field": 10538
+            },
+            {
+              "name": "Lodestone",
+              "internalName": "re_Lodestone",
+              "chance": 0.002,
+              "min": 1,
+              "max": 3,
+              "field": 10539
+            }
+          ]
+        },
+        {
+          "label": "Granum5",
+          "internalNames": [
+            "RF_aGranum5"
+          ],
+          "items": [
+            {
+              "name": "Small Rough Adamant",
+              "internalName": "currency_GemDiamondC",
+              "chance": 0.0003,
+              "min": 1,
+              "max": 1,
+              "field": 10535
+            },
+            {
+              "name": "Small Rough Titanit",
+              "internalName": "currency_GemTitanitB",
+              "chance": 0.0007000000000000001,
+              "min": 1,
+              "max": 1,
+              "field": 10536
+            },
+            {
+              "name": "Rock Crystal Geode",
+              "internalName": "currency_GemRockCrystalA",
+              "chance": 0.0006,
+              "min": 1,
+              "max": 1,
+              "field": 10537
+            },
+            {
+              "name": "Lodestone",
+              "internalName": "re_Lodestone",
+              "chance": 0.0011,
+              "min": 1,
+              "max": 2,
+              "field": 10538
+            },
+            {
+              "name": "Rock Crystal",
+              "internalName": "currency_GemRockCrystalB",
+              "chance": 0.0012,
+              "min": 1,
+              "max": 2,
+              "field": 10539
+            }
+          ]
+        }
+      ]
+    },
+    "container|chest|pin:4": {
+      "key": "container|chest|pin:4",
+      "scope": "container",
+      "label": "Chest",
+      "profileCount": 2,
+      "definitionCount": 2,
+      "profiles": [
+        {
+          "label": "Chest",
+          "internalNames": [
+            "MO2_worldLoot_Sarducaa_POI_Chest_Novice_4Pin_A"
+          ],
+          "items": [
+            {
+              "name": "Silver Coin",
+              "internalName": "currency_CoinSilver",
+              "chance": 1,
+              "min": 5,
+              "max": 10,
+              "field": 14182
+            },
+            {
+              "name": "Gold Coin",
+              "internalName": "currency_CoinGold",
+              "chance": 0.5,
+              "min": 1,
+              "max": 1,
+              "field": 14183
+            },
+            {
+              "name": "Tier 1 Amulet not charged",
+              "internalName": "trinket_AmuletTier1",
+              "chance": 0.01,
+              "min": 1,
+              "max": 1,
+              "field": 14184
+            },
+            {
+              "name": "Tier 1 Ring not charged",
+              "internalName": "trinket_RingTier1",
+              "chance": 0.01,
+              "min": 1,
+              "max": 1,
+              "field": 14185
+            },
+            {
+              "name": "Rough Amber",
+              "internalName": "currency_AmberB",
+              "chance": 0.04,
+              "min": 1,
+              "max": 1,
+              "field": 14186
+            },
+            {
+              "name": "Small Rough Amber",
+              "internalName": "currency_AmberC",
+              "chance": 0.06,
+              "min": 1,
+              "max": 1,
+              "field": 14187
+            },
+            {
+              "name": "Small Rough White Opal",
+              "internalName": "currency_GemWhiteOpalB",
+              "chance": 0.06,
+              "min": 1,
+              "max": 1,
+              "field": 14188
+            },
+            {
+              "name": "Small Rough Grossular",
+              "internalName": "currency_GemGrossularB",
+              "chance": 0.03,
+              "min": 1,
+              "max": 1,
+              "field": 14189
+            },
+            {
+              "name": "Artifact Sargon Prism Piece",
+              "internalName": "re_Artifact_SargonPrismA",
+              "chance": 0.01,
+              "min": 1,
+              "max": 1,
+              "field": 14190
+            },
+            {
+              "name": "Artifact Ornate Obelisk Capstone Piece",
+              "internalName": "re_Artifact_ObeliskOfLuA",
+              "chance": 0.01,
+              "min": 1,
+              "max": 1,
+              "field": 14191
+            },
+            {
+              "name": "Artifact Occult Incensed Papyrus Piece",
+              "internalName": "re_Artifact_MolthasInscriptionA",
+              "chance": 0.01,
+              "min": 1,
+              "max": 1,
+              "field": 14192
+            },
+            {
+              "name": "Cuprum Hammer",
+              "internalName": "loot_HammerCuprum",
+              "chance": 0.02,
+              "min": 1,
+              "max": 1,
+              "field": 14193
+            },
+            {
+              "name": "Adept Lockpick",
+              "internalName": "tool_Lockpick_Adept",
+              "chance": 0.05,
+              "min": 1,
+              "max": 1,
+              "field": 14194
+            }
+          ]
+        },
+        {
+          "label": "Chest",
+          "internalNames": [
+            "MO2_worldLoot_Sarducaa_Radius_Chest_Novice_4Pin"
+          ],
+          "items": [
+            {
+              "name": "Silver Coin",
+              "internalName": "currency_CoinSilver",
+              "chance": 1,
+              "min": 5,
+              "max": 10,
+              "field": 14182
+            },
+            {
+              "name": "Gold Coin",
+              "internalName": "currency_CoinGold",
+              "chance": 0.5,
+              "min": 1,
+              "max": 1,
+              "field": 14183
+            },
+            {
+              "name": "Tier 1 Amulet not charged",
+              "internalName": "trinket_AmuletTier1",
+              "chance": 0.03,
+              "min": 1,
+              "max": 1,
+              "field": 14184
+            },
+            {
+              "name": "Tier 1 Ring not charged",
+              "internalName": "trinket_RingTier1",
+              "chance": 0.03,
+              "min": 1,
+              "max": 1,
+              "field": 14185
+            },
+            {
+              "name": "Rough Amber",
+              "internalName": "currency_AmberB",
+              "chance": 0.04,
+              "min": 1,
+              "max": 1,
+              "field": 14186
+            },
+            {
+              "name": "Small Rough Amber",
+              "internalName": "currency_AmberC",
+              "chance": 0.06,
+              "min": 1,
+              "max": 1,
+              "field": 14187
+            },
+            {
+              "name": "Small Rough White Opal",
+              "internalName": "currency_GemWhiteOpalB",
+              "chance": 0.06,
+              "min": 1,
+              "max": 1,
+              "field": 14188
+            },
+            {
+              "name": "Small Rough Titanit",
+              "internalName": "currency_GemTitanitB",
+              "chance": 0.03,
+              "min": 1,
+              "max": 1,
+              "field": 14189
+            },
+            {
+              "name": "Dune Swimmer",
+              "internalName": "Loot_Critter_DuneSwimmer",
+              "chance": 0.02,
+              "min": 1,
+              "max": 1,
+              "field": 14190
+            },
+            {
+              "name": "Artifact Ornate Obelisk Capstone Piece",
+              "internalName": "re_Artifact_ObeliskOfLuA",
+              "chance": 0.01,
+              "min": 1,
+              "max": 1,
+              "field": 14191
+            },
+            {
+              "name": "Artifact Occult Incensed Papyrus Piece",
+              "internalName": "re_Artifact_MolthasInscriptionA",
+              "chance": 0.01,
+              "min": 1,
+              "max": 1,
+              "field": 14192
+            },
+            {
+              "name": "Cuprum Hammer",
+              "internalName": "loot_HammerCuprum",
+              "chance": 0.02,
+              "min": 1,
+              "max": 1,
+              "field": 14193
+            },
+            {
+              "name": "Adept Lockpick",
+              "internalName": "tool_Lockpick_Adept",
+              "chance": 0.05,
+              "min": 1,
+              "max": 1,
+              "field": 14194
+            }
+          ]
+        }
+      ]
+    },
+    "mob|panther": {
+      "key": "mob|panther",
+      "scope": "mob",
+      "label": "Panther",
+      "profileCount": 2,
+      "definitionCount": 2,
+      "profiles": [
+        {
+          "label": "Panther",
+          "internalNames": [
+            "MO2_AI_Cat_Panther"
+          ],
+          "items": [
+            {
+              "name": "Panther Paw",
+              "internalName": "re_Animalitems_Panther",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Panther Carcass",
+              "internalName": "carcass_Cat_Panther",
+              "chance": 1,
+              "min": 5000,
+              "max": 6000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Panther",
+          "internalNames": [
+            "MO2_TriggerSpawn_AI_Cat_Panther"
+          ],
+          "items": [
+            {
+              "name": "Panther Carcass",
+              "internalName": "carcass_Cat_Panther",
+              "chance": 1,
+              "min": 5000,
+              "max": 6000,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|scorpion": {
+      "key": "mob|scorpion",
+      "scope": "mob",
+      "label": "Scorpion",
+      "profileCount": 5,
+      "definitionCount": 8,
+      "profiles": [
+        {
+          "label": "Akrep",
+          "internalNames": [
+            "AI_Insect_Akreps",
+            "AI_Insect_AkrepsB",
+            "AI_Insect_AkrepsC"
+          ],
+          "items": [
+            {
+              "name": "Akrep Stinger",
+              "internalName": "re_Bugsitems_AkrepStinger",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Akrep Carcass",
+              "internalName": "carcass_Insect_Akrep",
+              "chance": 1,
+              "min": 5000,
+              "max": 10000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Akrep",
+          "internalNames": [
+            "AI_Insect_AkrepsD"
+          ],
+          "items": [
+            {
+              "name": "Akrep Stinger",
+              "internalName": "re_Bugsitems_AkrepStinger",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Akrep Carcass",
+              "internalName": "carcass_Insect_Akrep",
+              "chance": 1,
+              "min": 4000,
+              "max": 8000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Akrep",
+          "internalNames": [
+            "AI_Insect_AkrepsE",
+            "AI_Insect_AkrepsF"
+          ],
+          "items": [
+            {
+              "name": "Akrep Stinger",
+              "internalName": "re_Bugsitems_AkrepStinger",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Akrep Carcass",
+              "internalName": "carcass_Insect_Akrep",
+              "chance": 1,
+              "min": 3000,
+              "max": 7000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Akrep",
+          "internalNames": [
+            "MO2_AI_Insect_Akrep"
+          ],
+          "items": [
+            {
+              "name": "Akrep Stinger",
+              "internalName": "re_Bugsitems_AkrepStinger",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Akrep Carcass",
+              "internalName": "carcass_Insect_Akrep",
+              "chance": 1,
+              "min": 9000,
+              "max": 10000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Akrep",
+          "internalNames": [
+            "MO2_AI_Insect_Akrep_BosKam"
+          ],
+          "items": [
+            {
+              "name": "Akrep Stinger",
+              "internalName": "re_Bugsitems_AkrepStinger",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Akrep Carcass",
+              "internalName": "carcass_Insect_Akrep",
+              "chance": 1,
+              "min": 10000,
+              "max": 13000,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|wastrel": {
+      "key": "mob|wastrel",
+      "scope": "mob",
+      "label": "Wastrel",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Wastrel",
+          "internalNames": [
+            "MO2_AI_Humanoid_Bandit_Wastrel"
+          ],
+          "items": [
+            {
+              "name": "Small Rough Amber",
+              "internalName": "currency_AmberC",
+              "chance": 0.05,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Minor Bandage",
+              "internalName": "consumable_MinorBandage",
+              "chance": 0.25,
+              "min": 1,
+              "max": 3,
+              "field": 10373
+            },
+            {
+              "name": "Silver Coin",
+              "internalName": "currency_CoinSilver",
+              "chance": 0.25,
+              "min": 1,
+              "max": 2,
+              "field": 10392
+            },
+            {
+              "name": "Bodkin Arrow",
+              "internalName": "ammo_Arrows",
+              "chance": 0.1,
+              "min": 2,
+              "max": 5,
+              "field": 10411
+            },
+            {
+              "name": "Maggot",
+              "internalName": "re_Maggot",
+              "chance": 0.3,
+              "min": 5,
+              "max": 25,
+              "field": 10430
+            },
+            {
+              "name": "Tier 1 Ring not charged",
+              "internalName": "trinket_RingTier1",
+              "chance": 0.01,
+              "min": 1,
+              "max": 1,
+              "field": 10449
+            },
+            {
+              "name": "Tier 1 Amulet not charged",
+              "internalName": "trinket_AmuletTier1",
+              "chance": 0.01,
+              "min": 1,
+              "max": 1,
+              "field": 10468
+            },
+            {
+              "name": "Wastrel Head",
+              "internalName": "re_HeadWastrel",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "resource|sweat salt": {
+      "key": "resource|sweat salt",
+      "scope": "resource",
+      "label": "Sweat Salt",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Sweat Salt",
+          "internalNames": [
+            "pickableSaltCrystalSweatA"
+          ],
+          "items": [
+            {
+              "name": "Sweat Salt",
+              "internalName": "re_SweatSalt",
+              "chance": 1,
+              "min": 15,
+              "max": 40,
+              "field": 10540
+            }
+          ]
+        }
+      ]
+    },
+    "resource|yellow cepa": {
+      "key": "resource|yellow cepa",
+      "scope": "resource",
+      "label": "Yellow Cepa",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Yellow Cepa",
+          "internalNames": [
+            "pickableYellowCepaA"
+          ],
+          "items": [
+            {
+              "name": "Yellow Cepa",
+              "internalName": "re_YellowCepa",
+              "chance": 1,
+              "min": 5,
+              "max": 30,
+              "field": 10540
+            },
+            {
+              "name": "Rare Yellow Cepa Plant Seed",
+              "internalName": "seed_YellowCepa_Plant",
+              "chance": 0.0005,
+              "min": 1,
+              "max": 1,
+              "field": 10546
+            }
+          ]
+        }
+      ]
+    },
+    "mob|bush pig": {
+      "key": "mob|bush pig",
+      "scope": "mob",
+      "label": "Bush Pig",
+      "profileCount": 1,
+      "definitionCount": 4,
+      "profiles": [
+        {
+          "label": "Bush Pig",
+          "internalNames": [
+            "MO2_AI_Swine_BushPig",
+            "MO2_AI_Swine_BushPig_Haven",
+            "MO2_AI_Swine_BushPig_HavenTask",
+            "MO2_TriggerSpawn_AI_Swine_BushPig"
+          ],
+          "items": [
+            {
+              "name": "Bush Pig Hooves",
+              "internalName": "re_Animalitems_Bushpig",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Bush Pig Carcass",
+              "internalName": "carcass_Swine_BushPigA",
+              "chance": 1,
+              "min": 8000,
+              "max": 9000,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|terror bird": {
+      "key": "mob|terror bird",
+      "scope": "mob",
+      "label": "Terror Bird",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Terror Bird",
+          "internalNames": [
+            "MO2_AI_Bird_TerrorBird"
+          ],
+          "items": [
+            {
+              "name": "Terror Bird Beak",
+              "internalName": "re_Animalitems_TerrorBird",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Terror Bird Carcass",
+              "internalName": "carcass_Bird_TerrorBird",
+              "chance": 1,
+              "min": 8000,
+              "max": 9000,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|platybelodon": {
+      "key": "mob|platybelodon",
+      "scope": "mob",
+      "label": "Platybelodon",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Platybelodon",
+          "internalNames": [
+            "MO2_AI_Proboscids_Platybelodon"
+          ],
+          "items": [
+            {
+              "name": "Platybelodon Tusks",
+              "internalName": "re_Animalitems_PlatybelodonTusks",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Platybelodon Carcass",
+              "internalName": "carcass_Proboscids_Platybelodon",
+              "chance": 1,
+              "min": 120000,
+              "max": 130000,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|desert horse": {
+      "key": "mob|desert horse",
+      "scope": "mob",
+      "label": "Desert Horse",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Desert Horse",
+          "internalNames": [
+            "MO2_AI_Horses_Desert"
+          ],
+          "items": [
+            {
+              "name": "Desert Horse Carcass",
+              "internalName": "carcass_Horse_Desert",
+              "chance": 1,
+              "min": 40000,
+              "max": 45000,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "resource|palm fruit": {
+      "key": "resource|palm fruit",
+      "scope": "resource",
+      "label": "Palm Fruit",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Palm Fruit",
+          "internalNames": [
+            "pickablePalmFruit"
+          ],
+          "items": [
+            {
+              "name": "Palm Fruit",
+              "internalName": "re_PalmFruit",
+              "chance": 1,
+              "min": 150,
+              "max": 460,
+              "field": 10540
+            }
+          ]
+        }
+      ]
+    },
+    "container|barrel": {
+      "key": "container|barrel",
+      "scope": "container",
+      "label": "Barrel",
+      "profileCount": 4,
+      "definitionCount": 4,
+      "profiles": [
+        {
+          "label": "Barrel",
+          "internalNames": [
+            "MO2_worldLoot_Sarducaa_POI_Barrel_A"
+          ],
+          "items": [
+            {
+              "name": "Tier 1 Ring not charged",
+              "internalName": "trinket_RingTier1",
+              "chance": 0.005,
+              "min": 1,
+              "max": 1,
+              "field": 14182
+            },
+            {
+              "name": "Tier 1 Amulet not charged",
+              "internalName": "trinket_AmuletTier1",
+              "chance": 0.005,
+              "min": 1,
+              "max": 1,
+              "field": 14183
+            },
+            {
+              "name": "Minor Bandage",
+              "internalName": "consumable_MinorBandage",
+              "chance": 0.1,
+              "min": 3,
+              "max": 7,
+              "field": 14184
+            },
+            {
+              "name": "Water",
+              "internalName": "re_Water",
+              "chance": 0.08,
+              "min": 10,
+              "max": 50,
+              "field": 14185
+            },
+            {
+              "name": "Broadhead Arrow",
+              "internalName": "ammo_ArrowsB",
+              "chance": 0.03,
+              "min": 5,
+              "max": 15,
+              "field": 14187
+            },
+            {
+              "name": "Maggot",
+              "internalName": "re_Maggot",
+              "chance": 0.2,
+              "min": 6,
+              "max": 30,
+              "field": 14188
+            },
+            {
+              "name": "Gamal Carcass",
+              "internalName": "carcass_Gamal",
+              "chance": 0.15,
+              "min": 10,
+              "max": 50,
+              "field": 14189
+            },
+            {
+              "name": "Ibex Carcass",
+              "internalName": "carcass_Ibex",
+              "chance": 0.15,
+              "min": 10,
+              "max": 50,
+              "field": 14190
+            },
+            {
+              "name": "Dune Swimmer",
+              "internalName": "Loot_Critter_DuneSwimmer",
+              "chance": 0.02,
+              "min": 1,
+              "max": 1,
+              "field": 14191
+            },
+            {
+              "name": "Ear Scarab",
+              "internalName": "Loot_Critter_EarScarab",
+              "chance": 0.02,
+              "min": 1,
+              "max": 1,
+              "field": 14192
+            },
+            {
+              "name": "Crude Bed",
+              "internalName": "PlaceDecoration_BedA",
+              "chance": 0.01,
+              "min": 1,
+              "max": 1,
+              "field": 14193
+            },
+            {
+              "name": "Novice Lockpick",
+              "internalName": "tool_Lockpick_Novice",
+              "chance": 0.02,
+              "min": 1,
+              "max": 1,
+              "field": 14194
+            }
+          ]
+        },
+        {
+          "label": "Barrel",
+          "internalNames": [
+            "MO2_worldLoot_Sarducaa_POI_Barrel_B"
+          ],
+          "items": [
+            {
+              "name": "Tier 1 Ring not charged",
+              "internalName": "trinket_RingTier1",
+              "chance": 0.005,
+              "min": 1,
+              "max": 1,
+              "field": 14182
+            },
+            {
+              "name": "Tier 1 Amulet not charged",
+              "internalName": "trinket_AmuletTier1",
+              "chance": 0.005,
+              "min": 1,
+              "max": 1,
+              "field": 14183
+            },
+            {
+              "name": "Minor Bandage",
+              "internalName": "consumable_MinorBandage",
+              "chance": 0.1,
+              "min": 3,
+              "max": 7,
+              "field": 14184
+            },
+            {
+              "name": "Water",
+              "internalName": "re_Water",
+              "chance": 0.08,
+              "min": 10,
+              "max": 50,
+              "field": 14185
+            },
+            {
+              "name": "Broadhead Arrow",
+              "internalName": "ammo_ArrowsB",
+              "chance": 0.03,
+              "min": 5,
+              "max": 15,
+              "field": 14186
+            },
+            {
+              "name": "Longbow Arrow",
+              "internalName": "ammo_ArrowsArmorPierceD",
+              "chance": 0.02,
+              "min": 5,
+              "max": 15,
+              "field": 14187
+            },
+            {
+              "name": "Maggot",
+              "internalName": "re_Maggot",
+              "chance": 0.2,
+              "min": 6,
+              "max": 30,
+              "field": 14188
+            },
+            {
+              "name": "Rabbit Carcass",
+              "internalName": "carcass_Rodent_RabbitA",
+              "chance": 0.15,
+              "min": 10,
+              "max": 50,
+              "field": 14189
+            },
+            {
+              "name": "Bush Pig Carcass",
+              "internalName": "carcass_Swine_BushPigA",
+              "chance": 0.15,
+              "min": 10,
+              "max": 50,
+              "field": 14190
+            },
+            {
+              "name": "Raspy Cricket",
+              "internalName": "Loot_Critter_RaspyCricket",
+              "chance": 0.02,
+              "min": 1,
+              "max": 1,
+              "field": 14191
+            },
+            {
+              "name": "Bristle Spider",
+              "internalName": "Loot_Critter_BristleSpider",
+              "chance": 0.02,
+              "min": 1,
+              "max": 1,
+              "field": 14192
+            },
+            {
+              "name": "Simple Bench",
+              "internalName": "PlaceDecoration_BenchA",
+              "chance": 0.01,
+              "min": 1,
+              "max": 1,
+              "field": 14193
+            },
+            {
+              "name": "Novice Lockpick",
+              "internalName": "tool_Lockpick_Novice",
+              "chance": 0.02,
+              "min": 1,
+              "max": 1,
+              "field": 14194
+            }
+          ]
+        },
+        {
+          "label": "Barrel",
+          "internalNames": [
+            "MO2_worldLoot_Sarducaa_POI_Barrel_C"
+          ],
+          "items": [
+            {
+              "name": "Tier 1 Ring not charged",
+              "internalName": "trinket_RingTier1",
+              "chance": 0.005,
+              "min": 1,
+              "max": 1,
+              "field": 14182
+            },
+            {
+              "name": "Tier 1 Amulet not charged",
+              "internalName": "trinket_AmuletTier1",
+              "chance": 0.005,
+              "min": 1,
+              "max": 1,
+              "field": 14183
+            },
+            {
+              "name": "Minor Bandage",
+              "internalName": "consumable_MinorBandage",
+              "chance": 0.1,
+              "min": 3,
+              "max": 7,
+              "field": 14184
+            },
+            {
+              "name": "Water",
+              "internalName": "re_Water",
+              "chance": 0.08,
+              "min": 10,
+              "max": 50,
+              "field": 14185
+            },
+            {
+              "name": "Beginners Pickaxe",
+              "internalName": "MO2_weapon_PickAxe",
+              "chance": 0.05,
+              "min": 1,
+              "max": 1,
+              "field": 14186
+            },
+            {
+              "name": "Broadhead Arrow",
+              "internalName": "ammo_ArrowsB",
+              "chance": 0.03,
+              "min": 5,
+              "max": 15,
+              "field": 14187
+            },
+            {
+              "name": "Maggot",
+              "internalName": "re_Maggot",
+              "chance": 0.2,
+              "min": 6,
+              "max": 30,
+              "field": 14188
+            },
+            {
+              "name": "Gamal Carcass",
+              "internalName": "carcass_Gamal",
+              "chance": 0.15,
+              "min": 10,
+              "max": 50,
+              "field": 14189
+            },
+            {
+              "name": "Rabbit Carcass",
+              "internalName": "carcass_Rodent_RabbitA",
+              "chance": 0.15,
+              "min": 10,
+              "max": 50,
+              "field": 14190
+            },
+            {
+              "name": "Dartleg",
+              "internalName": "Loot_Critter_Dartleg",
+              "chance": 0.02,
+              "min": 1,
+              "max": 1,
+              "field": 14191
+            },
+            {
+              "name": "Clip Beetle",
+              "internalName": "Loot_Critter_ClipBeetle",
+              "chance": 0.02,
+              "min": 1,
+              "max": 1,
+              "field": 14192
+            },
+            {
+              "name": "Crude Bookshelf",
+              "internalName": "PlaceDecoration_BookcaseA",
+              "chance": 0.01,
+              "min": 1,
+              "max": 1,
+              "field": 14193
+            },
+            {
+              "name": "Novice Lockpick",
+              "internalName": "tool_Lockpick_Novice",
+              "chance": 0.02,
+              "min": 1,
+              "max": 1,
+              "field": 14194
+            }
+          ]
+        },
+        {
+          "label": "Barrel",
+          "internalNames": [
+            "worldLootSarducaaBarrelA"
+          ],
+          "items": [
+            {
+              "name": "Silver Coin",
+              "internalName": "currency_CoinSilver",
+              "chance": 0.5,
+              "min": 1,
+              "max": 3,
+              "field": 14182
+            },
+            {
+              "name": "Cuprum Coin",
+              "internalName": "currency_CoinCuprum",
+              "chance": 1,
+              "min": 2,
+              "max": 11,
+              "field": 14183
+            },
+            {
+              "name": "Skimming: Efficient Reading",
+              "internalName": "book_ReadingSkimmingA",
+              "chance": 0.0001,
+              "min": 1,
+              "max": 1,
+              "field": 14184
+            },
+            {
+              "name": "Tindremic Long Sword",
+              "internalName": "MO2_Haven_TindremicLongSwordB",
+              "chance": 0.005,
+              "min": 1,
+              "max": 1,
+              "field": 14185
+            },
+            {
+              "name": "Pig Iron",
+              "internalName": "re_PigIron",
+              "chance": 0.02,
+              "min": 3,
+              "max": 14,
+              "field": 14186
+            },
+            {
+              "name": "Novice Lockpick",
+              "internalName": "tool_Lockpick_Novice",
+              "chance": 0.02,
+              "min": 1,
+              "max": 1,
+              "field": 14187
+            },
+            {
+              "name": "Rags Torso",
+              "internalName": "armor_RagsTorsoBuy",
+              "chance": 0.01,
+              "min": 1,
+              "max": 1,
+              "field": 14188
+            },
+            {
+              "name": "Dye Tub",
+              "internalName": "tool_DyeTub",
+              "chance": 0.005,
+              "min": 1,
+              "max": 1,
+              "field": 14189
+            },
+            {
+              "name": "Topaz",
+              "internalName": "currency_GemTopaz",
+              "chance": 0.0001,
+              "min": 1,
+              "max": 1,
+              "field": 14190
+            },
+            {
+              "name": "Oat",
+              "internalName": "re_Oat",
+              "chance": 0.01,
+              "min": 100,
+              "max": 200,
+              "field": 14192
+            }
+          ]
+        }
+      ]
+    },
+    "mob|ratzar queen": {
+      "key": "mob|ratzar queen",
+      "scope": "mob",
+      "label": "Ratzar Queen",
+      "profileCount": 3,
+      "definitionCount": 3,
+      "profiles": [
+        {
+          "label": "Ratzar Queen",
+          "internalNames": [
+            "AI_Insect_RatzarQueen"
+          ],
+          "items": [
+            {
+              "name": "Queen Pheromone Gland",
+              "internalName": "weapon_RatzarQueenDominationA",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Ratzar Queen Acid Gland",
+              "internalName": "re_Bugsitems_QueenAcidGland",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10373
+            },
+            {
+              "name": "Ratzar Queen Carcass",
+              "internalName": "carcass_Insect_RatzarQueen",
+              "chance": 1,
+              "min": 60000,
+              "max": 80000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Ratzar Queen",
+          "internalNames": [
+            "AI_Insect_RatzarQueenB"
+          ],
+          "items": [
+            {
+              "name": "Queen Pheromone Gland",
+              "internalName": "weapon_RatzarQueenDominationA",
+              "chance": 1,
+              "min": 1,
+              "max": 2,
+              "field": 10354
+            },
+            {
+              "name": "Ratzar Queen Acid Gland",
+              "internalName": "re_Bugsitems_QueenAcidGland",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10373
+            },
+            {
+              "name": "Ratzar Queen Carcass",
+              "internalName": "carcass_Insect_RatzarQueen",
+              "chance": 1,
+              "min": 46000,
+              "max": 90000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Ratzar Queen",
+          "internalNames": [
+            "MO2_AI_Boss_RatzarQueen"
+          ],
+          "items": [
+            {
+              "name": "Ratzar Queen Acid Gland",
+              "internalName": "re_Bugsitems_QueenAcidGland",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Ratzar Queen Carcass",
+              "internalName": "carcass_Insect_RatzarQueen",
+              "chance": 1,
+              "min": 60000,
+              "max": 80000,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|springbok": {
+      "key": "mob|springbok",
+      "scope": "mob",
+      "label": "Springbok",
+      "profileCount": 2,
+      "definitionCount": 5,
+      "profiles": [
+        {
+          "label": "Springbok",
+          "internalNames": [
+            "MO2_AI_Bovids_Springbok_Haven",
+            "MO2_AI_Bovids_Springbok_HavenTask",
+            "MO2_AI_Bovids_Springbok_Tutorial"
+          ],
+          "items": [
+            {
+              "name": "Ring Worm",
+              "internalName": "re_Ringworm",
+              "chance": 0.1,
+              "min": 1,
+              "max": 8,
+              "field": 10354
+            },
+            {
+              "name": "Springbok Carcass",
+              "internalName": "carcass_Bovid_SpringbokA",
+              "chance": 1,
+              "min": 2500,
+              "max": 2500,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Springbok",
+          "internalNames": [
+            "MO2_AI_Bovids_SpringbokA",
+            "MO2_TriggerSpawn_AI_Bovids_SpringbokA"
+          ],
+          "items": [
+            {
+              "name": "Ring Worm",
+              "internalName": "re_Ringworm",
+              "chance": 0.1,
+              "min": 1,
+              "max": 8,
+              "field": 10354
+            },
+            {
+              "name": "Springbok Carcass",
+              "internalName": "carcass_Bovid_SpringbokA",
+              "chance": 1,
+              "min": 5000,
+              "max": 5625,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|ak yaban": {
+      "key": "mob|ak yaban",
+      "scope": "mob",
+      "label": "Ak Yaban",
+      "profileCount": 3,
+      "definitionCount": 3,
+      "profiles": [
+        {
+          "label": "Ak Yaban Flayer",
+          "internalNames": [
+            "MO2_AI_Sarducaa_AkYabanFlayer_A"
+          ],
+          "items": [
+            {
+              "name": "Molarium",
+              "internalName": "re_Molarium",
+              "chance": 0.25,
+              "min": 30,
+              "max": 300,
+              "field": 10354
+            },
+            {
+              "name": "Silver Coin",
+              "internalName": "currency_CoinSilver",
+              "chance": 0.4,
+              "min": 40,
+              "max": 80,
+              "field": 10373
+            },
+            {
+              "name": "Small Rough Almandin",
+              "internalName": "currency_GemAlmandinB",
+              "chance": 0.3,
+              "min": 1,
+              "max": 1,
+              "field": 10392
+            },
+            {
+              "name": "Tier 2 Ring not charged",
+              "internalName": "trinket_RingTier2",
+              "chance": 0.05,
+              "min": 1,
+              "max": 1,
+              "field": 10411
+            },
+            {
+              "name": "Tier 2 Amulet not charged",
+              "internalName": "trinket_AmuletTier2",
+              "chance": 0.05,
+              "min": 1,
+              "max": 1,
+              "field": 10430
+            },
+            {
+              "name": "Ak Yaban Heart",
+              "internalName": "re_AkYabanHeart",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10449
+            },
+            {
+              "name": "Quality Leather",
+              "internalName": "re_QualityLeather",
+              "chance": 0.4,
+              "min": 20,
+              "max": 80,
+              "field": 10468
+            },
+            {
+              "name": "Minor Bandage",
+              "internalName": "consumable_MinorBandage",
+              "chance": 1,
+              "min": 1,
+              "max": 5,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Ak Yaban Ripper",
+          "internalNames": [
+            "MO2_AI_Sarducaa_AkYabanRipper_A"
+          ],
+          "items": [
+            {
+              "name": "Incisium",
+              "internalName": "re_Incisium",
+              "chance": 0.25,
+              "min": 30,
+              "max": 300,
+              "field": 10354
+            },
+            {
+              "name": "Silver Coin",
+              "internalName": "currency_CoinSilver",
+              "chance": 1,
+              "min": 80,
+              "max": 100,
+              "field": 10373
+            },
+            {
+              "name": "Small Rough Grossular",
+              "internalName": "currency_GemGrossularB",
+              "chance": 0.12,
+              "min": 1,
+              "max": 1,
+              "field": 10392
+            },
+            {
+              "name": "Tier 2 Ring not charged",
+              "internalName": "trinket_RingTier2",
+              "chance": 0.08,
+              "min": 1,
+              "max": 1,
+              "field": 10411
+            },
+            {
+              "name": "Tier 2 Amulet not charged",
+              "internalName": "trinket_AmuletTier2",
+              "chance": 0.08,
+              "min": 1,
+              "max": 1,
+              "field": 10430
+            },
+            {
+              "name": "Ak Yaban Heart",
+              "internalName": "re_AkYabanHeart",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10449
+            },
+            {
+              "name": "Jadeite",
+              "internalName": "re_Jadeite",
+              "chance": 0.1,
+              "min": 20,
+              "max": 30,
+              "field": 10468
+            },
+            {
+              "name": "Minor Bandage",
+              "internalName": "consumable_MinorBandage",
+              "chance": 1,
+              "min": 1,
+              "max": 5,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Ak Yaban Snatcher",
+          "internalNames": [
+            "MO2_AI_Sarducaa_AkYabanSnatcher_A"
+          ],
+          "items": [
+            {
+              "name": "Minor Bandage",
+              "internalName": "consumable_MinorBandage",
+              "chance": 1,
+              "min": 1,
+              "max": 5,
+              "field": 10354
+            },
+            {
+              "name": "Flakestone",
+              "internalName": "re_Flakestone",
+              "chance": 0.25,
+              "min": 30,
+              "max": 90,
+              "field": 10373
+            },
+            {
+              "name": "Broadhead Arrow",
+              "internalName": "ammo_ArrowsB",
+              "chance": 1,
+              "min": 5,
+              "max": 15,
+              "field": 10392
+            },
+            {
+              "name": "Tier 2 Amulet not charged",
+              "internalName": "trinket_AmuletTier2",
+              "chance": 0.05,
+              "min": 1,
+              "max": 1,
+              "field": 10411
+            },
+            {
+              "name": "Tier 2 Ring not charged",
+              "internalName": "trinket_RingTier2",
+              "chance": 0.05,
+              "min": 1,
+              "max": 1,
+              "field": 10430
+            },
+            {
+              "name": "Ak Yaban Heart",
+              "internalName": "re_AkYabanHeart",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10449
+            },
+            {
+              "name": "Silver Coin",
+              "internalName": "currency_CoinSilver",
+              "chance": 0.4,
+              "min": 40,
+              "max": 80,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "resource|nymph herb": {
+      "key": "resource|nymph herb",
+      "scope": "resource",
+      "label": "Nymph Herb",
+      "profileCount": 2,
+      "definitionCount": 2,
+      "profiles": [
+        {
+          "label": "Nymph Herb",
+          "internalNames": [
+            "pickableNymphHerbA"
+          ],
+          "items": [
+            {
+              "name": "Nymph Herb",
+              "internalName": "re_NymphHerb",
+              "chance": 1,
+              "min": 1,
+              "max": 3,
+              "field": 10540
+            },
+            {
+              "name": "Rare Nymph Herb Plant Seed",
+              "internalName": "seed_NymphHerb_Plant",
+              "chance": 0.0005,
+              "min": 1,
+              "max": 1,
+              "field": 10546
+            }
+          ]
+        },
+        {
+          "label": "Nymph Herb",
+          "internalNames": [
+            "pickableNymphHerbB"
+          ],
+          "items": [
+            {
+              "name": "Nymph Herb",
+              "internalName": "re_NymphHerb",
+              "chance": 1,
+              "min": 10,
+              "max": 20,
+              "field": 10540
+            }
+          ]
+        }
+      ]
+    },
+    "resource|calamine shale": {
+      "key": "resource|calamine shale",
+      "scope": "resource",
+      "label": "Calamine Shale",
+      "profileCount": 2,
+      "definitionCount": 2,
+      "profiles": [
+        {
+          "label": "Calamine Shale",
+          "internalNames": [
+            "pickableCalamineShale"
+          ],
+          "items": [
+            {
+              "name": "Calamine",
+              "internalName": "re_Calamine",
+              "chance": 1,
+              "min": 60,
+              "max": 180,
+              "field": 10540
+            }
+          ]
+        },
+        {
+          "label": "Calamine Shale",
+          "internalNames": [
+            "pickableCalamineShaleRare"
+          ],
+          "items": [
+            {
+              "name": "Calamine",
+              "internalName": "re_Calamine",
+              "chance": 1,
+              "min": 280,
+              "max": 980,
+              "field": 10540
+            }
+          ]
+        }
+      ]
+    },
+    "resource|salvia": {
+      "key": "resource|salvia",
+      "scope": "resource",
+      "label": "Salvia",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Salvia",
+          "internalNames": [
+            "pickableSalviaA"
+          ],
+          "items": [
+            {
+              "name": "Salvia",
+              "internalName": "re_Salvia",
+              "chance": 1,
+              "min": 8,
+              "max": 16,
+              "field": 10540
+            },
+            {
+              "name": "Rare Salvia Plant Seed",
+              "internalName": "seed_Salvia_Plant",
+              "chance": 0.0005,
+              "min": 1,
+              "max": 1,
+              "field": 10546
+            }
+          ]
+        }
+      ]
+    },
+    "resource|glimmercap": {
+      "key": "resource|glimmercap",
+      "scope": "resource",
+      "label": "Glimmercap",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Glimmercap",
+          "internalNames": [
+            "pickableGlimmercap"
+          ],
+          "items": [
+            {
+              "name": "Glimmercap",
+              "internalName": "re_Glimmercap",
+              "chance": 1,
+              "min": 25,
+              "max": 75,
+              "field": 10540
+            }
+          ]
+        }
+      ]
+    },
+    "mob|rabbit": {
+      "key": "mob|rabbit",
+      "scope": "mob",
+      "label": "Rabbit",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Rabbit",
+          "internalNames": [
+            "MO2_AI_Sarducaa_Rabbit"
+          ],
+          "items": [
+            {
+              "name": "Rabbit Carcass",
+              "internalName": "carcass_Rodent_RabbitA",
+              "chance": 1,
+              "min": 100,
+              "max": 150,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "resource|nitre crystal": {
+      "key": "resource|nitre crystal",
+      "scope": "resource",
+      "label": "Nitre Crystal",
+      "profileCount": 2,
+      "definitionCount": 2,
+      "profiles": [
+        {
+          "label": "Nitre Crystal",
+          "internalNames": [
+            "pickableNitreCrystal"
+          ],
+          "items": [
+            {
+              "name": "Nitre",
+              "internalName": "re_Nitre",
+              "chance": 1,
+              "min": 20,
+              "max": 60,
+              "field": 10540
+            }
+          ]
+        },
+        {
+          "label": "Nitre Crystal",
+          "internalNames": [
+            "pickableNitreCrystalRareA"
+          ],
+          "items": [
+            {
+              "name": "Nitre",
+              "internalName": "re_Nitre",
+              "chance": 1,
+              "min": 160,
+              "max": 280,
+              "field": 10540
+            }
+          ]
+        }
+      ]
+    },
+    "mob|kizumeki": {
+      "key": "mob|kizumeki",
+      "scope": "mob",
+      "label": "Kizumeki",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Kizumeki",
+          "internalNames": [
+            "MO2_AI_Sarducaa_KaminMara_Kizumeki"
+          ],
+          "items": [
+            {
+              "name": "Pyropite",
+              "internalName": "re_Pyropite",
+              "chance": 1,
+              "min": 5,
+              "max": 20,
+              "field": 10354
+            },
+            {
+              "name": "Essence of Flame",
+              "internalName": "loot_EssenceOfFlame",
+              "chance": 0.35,
+              "min": 1,
+              "max": 1,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "resource|rock crystal": {
+      "key": "resource|rock crystal",
+      "scope": "resource",
+      "label": "Rock Crystal",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Rock Crystal",
+          "internalNames": [
+            "pickableRockCrystal"
+          ],
+          "items": [
+            {
+              "name": "Rock Crystal",
+              "internalName": "currency_GemRockCrystalB",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10540
+            },
+            {
+              "name": "Rock Crystal Geode",
+              "internalName": "currency_GemRockCrystalA",
+              "chance": 0.05,
+              "min": 1,
+              "max": 1,
+              "field": 10546
+            },
+            {
+              "name": "Rock Crystal",
+              "internalName": "currency_GemRockCrystalB",
+              "chance": 0.1,
+              "min": 1,
+              "max": 2,
+              "field": 10547
+            }
+          ]
+        }
+      ]
+    },
+    "resource|gabore": {
+      "key": "resource|gabore",
+      "scope": "resource",
+      "label": "Gabore",
+      "profileCount": 2,
+      "definitionCount": 2,
+      "profiles": [
+        {
+          "label": "Gabore10",
+          "internalNames": [
+            "RF_aGabore10"
+          ],
+          "items": [
+            {
+              "name": "Large Rough Safir",
+              "internalName": "currency_GemSafirB",
+              "chance": 0.0002,
+              "min": 1,
+              "max": 1,
+              "field": 10535
+            },
+            {
+              "name": "Small Rough Safir",
+              "internalName": "currency_GemSafirC",
+              "chance": 0.0003,
+              "min": 1,
+              "max": 1,
+              "field": 10536
+            },
+            {
+              "name": "Small Rough Smaragdus",
+              "internalName": "currency_GemSmaragdusB",
+              "chance": 0.0004,
+              "min": 1,
+              "max": 1,
+              "field": 10537
+            },
+            {
+              "name": "Small Rough Titanit",
+              "internalName": "currency_GemTitanitB",
+              "chance": 0.0009,
+              "min": 1,
+              "max": 1,
+              "field": 10538
+            },
+            {
+              "name": "Small Rough Almandin",
+              "internalName": "currency_GemAlmandinB",
+              "chance": 0.0012,
+              "min": 1,
+              "max": 1,
+              "field": 10539
+            }
+          ]
+        },
+        {
+          "label": "Gabore5",
+          "internalNames": [
+            "RF_aGabore5"
+          ],
+          "items": [
+            {
+              "name": "Small Rough Safir",
+              "internalName": "currency_GemSafirC",
+              "chance": 0.0002,
+              "min": 1,
+              "max": 1,
+              "field": 10535
+            },
+            {
+              "name": "Small Rough Smaragdus",
+              "internalName": "currency_GemSmaragdusB",
+              "chance": 0.0003,
+              "min": 1,
+              "max": 1,
+              "field": 10536
+            },
+            {
+              "name": "Small Rough Titanit",
+              "internalName": "currency_GemTitanitB",
+              "chance": 0.0006,
+              "min": 1,
+              "max": 1,
+              "field": 10537
+            },
+            {
+              "name": "Small Rough Almandin",
+              "internalName": "currency_GemAlmandinB",
+              "chance": 0.0009,
+              "min": 1,
+              "max": 1,
+              "field": 10538
+            },
+            {
+              "name": "Rock Crystal",
+              "internalName": "currency_GemRockCrystalB",
+              "chance": 0.0015,
+              "min": 1,
+              "max": 3,
+              "field": 10539
+            }
+          ]
+        }
+      ]
+    },
+    "resource|salt crystal": {
+      "key": "resource|salt crystal",
+      "scope": "resource",
+      "label": "Salt Crystal",
+      "profileCount": 3,
+      "definitionCount": 3,
+      "profiles": [
+        {
+          "label": "Salt Crystal",
+          "internalNames": [
+            "pickableSaltCrystalB"
+          ],
+          "items": [
+            {
+              "name": "Salt",
+              "internalName": "re_Salt",
+              "chance": 1,
+              "min": 5,
+              "max": 20,
+              "field": 10540
+            },
+            {
+              "name": "Salt Crystal",
+              "internalName": "re_SaltCrystal",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10546
+            },
+            {
+              "name": "Salt Crystal Clump",
+              "internalName": "re_SaltCrystalClump",
+              "chance": 0.1,
+              "min": 1,
+              "max": 2,
+              "field": 10547
+            },
+            {
+              "name": "Salt Crystal",
+              "internalName": "re_SaltCrystal",
+              "chance": 0.25,
+              "min": 1,
+              "max": 4,
+              "field": 10548
+            }
+          ]
+        },
+        {
+          "label": "Salt Crystal",
+          "internalNames": [
+            "pickableSaltrCrystalA"
+          ],
+          "items": [
+            {
+              "name": "Salt",
+              "internalName": "re_Salt",
+              "chance": 1,
+              "min": 3,
+              "max": 21,
+              "field": 10540
+            }
+          ]
+        },
+        {
+          "label": "Salt Crystal",
+          "internalNames": [
+            "pickableSaltrCrystalRareA"
+          ],
+          "items": [
+            {
+              "name": "Salt",
+              "internalName": "re_Salt",
+              "chance": 1,
+              "min": 120,
+              "max": 340,
+              "field": 10540
+            }
+          ]
+        }
+      ]
+    },
+    "resource|aloe vera": {
+      "key": "resource|aloe vera",
+      "scope": "resource",
+      "label": "Aloe Vera",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Aloe Vera",
+          "internalNames": [
+            "pickableAloeveraA"
+          ],
+          "items": [
+            {
+              "name": "Aloe Vera",
+              "internalName": "re_Aloevera",
+              "chance": 1,
+              "min": 4,
+              "max": 7,
+              "field": 10540
+            }
+          ]
+        }
+      ]
+    },
+    "resource|tephra": {
+      "key": "resource|tephra",
+      "scope": "resource",
+      "label": "Tephra",
+      "profileCount": 2,
+      "definitionCount": 2,
+      "profiles": [
+        {
+          "label": "Tephra10",
+          "internalNames": [
+            "RF_aTephra10"
+          ],
+          "items": [
+            {
+              "name": "Amethyst",
+              "internalName": "currency_GemAmethyst",
+              "chance": 0.0006,
+              "min": 1,
+              "max": 1,
+              "field": 10535
+            },
+            {
+              "name": "Rough Dravit",
+              "internalName": "currency_GemDravitB",
+              "chance": 0.001,
+              "min": 1,
+              "max": 1,
+              "field": 10536
+            },
+            {
+              "name": "Large Rough Almandin",
+              "internalName": "currency_GemAlmandinA",
+              "chance": 0.001,
+              "min": 1,
+              "max": 1,
+              "field": 10537
+            },
+            {
+              "name": "Small Rough Pyrop",
+              "internalName": "currency_GemPyropB",
+              "chance": 0.0012,
+              "min": 1,
+              "max": 1,
+              "field": 10538
+            },
+            {
+              "name": "Small Rough Black Opal",
+              "internalName": "currency_GemBlackOpalB",
+              "chance": 0.0016,
+              "min": 1,
+              "max": 2,
+              "field": 10539
+            }
+          ]
+        },
+        {
+          "label": "Tephra5",
+          "internalNames": [
+            "RF_aTephra5"
+          ],
+          "items": [
+            {
+              "name": "Amethyst",
+              "internalName": "currency_GemAmethyst",
+              "chance": 0.0004,
+              "min": 1,
+              "max": 1,
+              "field": 10535
+            },
+            {
+              "name": "Rough Dravit",
+              "internalName": "currency_GemDravitB",
+              "chance": 0.0006,
+              "min": 1,
+              "max": 1,
+              "field": 10536
+            },
+            {
+              "name": "Large Rough Almandin",
+              "internalName": "currency_GemAlmandinA",
+              "chance": 0.0007000000000000001,
+              "min": 1,
+              "max": 1,
+              "field": 10537
+            },
+            {
+              "name": "Small Rough Pyrop",
+              "internalName": "currency_GemPyropB",
+              "chance": 0.0009,
+              "min": 1,
+              "max": 1,
+              "field": 10538
+            },
+            {
+              "name": "Small Rough Black Opal",
+              "internalName": "currency_GemBlackOpalB",
+              "chance": 0.0012,
+              "min": 1,
+              "max": 1,
+              "field": 10539
+            }
+          ]
+        }
+      ]
+    },
+    "resource|argus sponge": {
+      "key": "resource|argus sponge",
+      "scope": "resource",
+      "label": "Argus Sponge",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Gather Argus Sponge A",
+          "internalNames": [
+            "RF_Gather_ArgusSpongeA"
+          ],
+          "items": [
+            {
+              "name": "Argus Sponge",
+              "internalName": "re_ArgusSponge",
+              "chance": 1,
+              "min": 2,
+              "max": 14,
+              "field": 10535
+            }
+          ]
+        }
+      ]
+    },
+    "resource|calx": {
+      "key": "resource|calx",
+      "scope": "resource",
+      "label": "Calx",
+      "profileCount": 2,
+      "definitionCount": 2,
+      "profiles": [
+        {
+          "label": "Calx10",
+          "internalNames": [
+            "RF_aCalx10"
+          ],
+          "items": [
+            {
+              "name": "Ruber",
+              "internalName": "currency_GemRuber",
+              "chance": 0.0003,
+              "min": 1,
+              "max": 1,
+              "field": 10535
+            },
+            {
+              "name": "Rough Andradit",
+              "internalName": "currency_GemAndraditA",
+              "chance": 0.0011,
+              "min": 1,
+              "max": 1,
+              "field": 10536
+            },
+            {
+              "name": "Small Rough Andradit",
+              "internalName": "currency_GemAndraditB",
+              "chance": 0.0012,
+              "min": 1,
+              "max": 1,
+              "field": 10537
+            },
+            {
+              "name": "Small Rough Grossular",
+              "internalName": "currency_GemGrossularB",
+              "chance": 0.0013,
+              "min": 1,
+              "max": 1,
+              "field": 10538
+            },
+            {
+              "name": "Rock Crystal Geode",
+              "internalName": "currency_GemRockCrystalA",
+              "chance": 0.0016,
+              "min": 1,
+              "max": 1,
+              "field": 10539
+            }
+          ]
+        },
+        {
+          "label": "Calx5",
+          "internalNames": [
+            "RF_aCalx5"
+          ],
+          "items": [
+            {
+              "name": "Ruber",
+              "internalName": "currency_GemRuber",
+              "chance": 0.0001,
+              "min": 1,
+              "max": 1,
+              "field": 10535
+            },
+            {
+              "name": "Rough Andradit",
+              "internalName": "currency_GemAndraditA",
+              "chance": 0.0006,
+              "min": 1,
+              "max": 1,
+              "field": 10536
+            },
+            {
+              "name": "Small Rough Andradit",
+              "internalName": "currency_GemAndraditB",
+              "chance": 0.0009,
+              "min": 1,
+              "max": 1,
+              "field": 10537
+            },
+            {
+              "name": "Small Rough Grossular",
+              "internalName": "currency_GemGrossularB",
+              "chance": 0.0008,
+              "min": 1,
+              "max": 1,
+              "field": 10538
+            },
+            {
+              "name": "Rock Crystal Geode",
+              "internalName": "currency_GemRockCrystalA",
+              "chance": 0.0014000000000000002,
+              "min": 1,
+              "max": 1,
+              "field": 10539
+            }
+          ]
+        }
+      ]
+    },
+    "npc|spiritist priest": {
+      "key": "npc|spiritist priest",
+      "scope": "npc",
+      "label": "Spiritist Priest",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Spiritist Priest",
+          "internalNames": [
+            "AI_NPC_PriestSpiritistBlue"
+          ],
+          "items": [
+            {
+              "name": "Human Carcass",
+              "internalName": "carcass_Human",
+              "chance": 1,
+              "min": 1500,
+              "max": 2000,
+              "field": 12244
+            }
+          ]
+        }
+      ]
+    },
+    "mob|ratzar": {
+      "key": "mob|ratzar",
+      "scope": "mob",
+      "label": "Ratzar",
+      "profileCount": 11,
+      "definitionCount": 25,
+      "profiles": [
+        {
+          "label": "Ratzar Alate",
+          "internalNames": [
+            "AI_Insect_RatzarAlate",
+            "AI_Insect_RatzarAlateB",
+            "AI_Insect_RatzarAlateDominatable",
+            "MO2_AI_Insect_RatzarAlate",
+            "MO2_AI_Insect_RatzarAlate_Pet"
+          ],
+          "items": [
+            {
+              "name": "Ratzar Wings",
+              "internalName": "re_Bugsitems_RatzarWings",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Ratzar Alate Carcass",
+              "internalName": "carcass_Insect_RatzarAlate",
+              "chance": 1,
+              "min": 4000,
+              "max": 8000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Ratzar Feeder",
+          "internalNames": [
+            "AI_Insect_RatzarFeeder",
+            "AI_Insect_RatzarFeederDominatable",
+            "MO2_AI_Insect_RatzarFeeder",
+            "MO2_AI_Insect_RatzarFeeder_Pet"
+          ],
+          "items": [
+            {
+              "name": "Ratzar Eggs",
+              "internalName": "re_Bugsitems_RatzarEggs",
+              "chance": 1,
+              "min": 1,
+              "max": 2,
+              "field": 10354
+            },
+            {
+              "name": "Ratzar Feeder Carcass",
+              "internalName": "carcass_Insect_RatzarFeeder",
+              "chance": 1,
+              "min": 4000,
+              "max": 8000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Ratzar Hatcher",
+          "internalNames": [
+            "AI_Insect_RatzarHatcher"
+          ],
+          "items": [
+            {
+              "name": "Ratzar Eggs",
+              "internalName": "re_Bugsitems_RatzarEggs",
+              "chance": 1,
+              "min": 8,
+              "max": 20,
+              "field": 10354
+            },
+            {
+              "name": "Ratzar Hatcher Carcass",
+              "internalName": "carcass_Insect_RatzarHatcher",
+              "chance": 1,
+              "min": 10000,
+              "max": 20000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Ratzar Hatcher",
+          "internalNames": [
+            "MO2_AI_Boss_RatzarHatcher"
+          ],
+          "items": [
+            {
+              "name": "Ratzar Hatcher Egg",
+              "internalName": "PlacePortable_Ratzar_Egg",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Ratzar Hatcher Carcass",
+              "internalName": "carcass_Insect_RatzarHatcher",
+              "chance": 1,
+              "min": 10000,
+              "max": 20000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Ratzar Hunter",
+          "internalNames": [
+            "AI_Insect_RatzarHunter",
+            "AI_Insect_RatzarHunterDominatable",
+            "MO2_AI_Insect_RatzarHunter",
+            "MO2_AI_Insect_RatzarHunter_Pet"
+          ],
+          "items": [
+            {
+              "name": "Ratzar Palps",
+              "internalName": "re_Bugsitems_RatzarPalps",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Ratzar Hunter Carcass",
+              "internalName": "carcass_Insect_RatzarHunter",
+              "chance": 1,
+              "min": 5000,
+              "max": 10000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Ratzar Hunter",
+          "internalNames": [
+            "AI_Insect_RatzarHunterB",
+            "AI_Insect_RatzarHunterC"
+          ],
+          "items": [
+            {
+              "name": "Ratzar Palps",
+              "internalName": "re_Bugsitems_RatzarPalps",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Ratzar Hunter Carcass",
+              "internalName": "carcass_Insect_RatzarHunter",
+              "chance": 1,
+              "min": 5200,
+              "max": 14000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Ratzar Queen",
+          "internalNames": [
+            "AI_Insect_RatzarQueen"
+          ],
+          "items": [
+            {
+              "name": "Queen Pheromone Gland",
+              "internalName": "weapon_RatzarQueenDominationA",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Ratzar Queen Acid Gland",
+              "internalName": "re_Bugsitems_QueenAcidGland",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10373
+            },
+            {
+              "name": "Ratzar Queen Carcass",
+              "internalName": "carcass_Insect_RatzarQueen",
+              "chance": 1,
+              "min": 60000,
+              "max": 80000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Ratzar Queen",
+          "internalNames": [
+            "AI_Insect_RatzarQueenB"
+          ],
+          "items": [
+            {
+              "name": "Queen Pheromone Gland",
+              "internalName": "weapon_RatzarQueenDominationA",
+              "chance": 1,
+              "min": 1,
+              "max": 2,
+              "field": 10354
+            },
+            {
+              "name": "Ratzar Queen Acid Gland",
+              "internalName": "re_Bugsitems_QueenAcidGland",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10373
+            },
+            {
+              "name": "Ratzar Queen Carcass",
+              "internalName": "carcass_Insect_RatzarQueen",
+              "chance": 1,
+              "min": 46000,
+              "max": 90000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Ratzar Queen",
+          "internalNames": [
+            "MO2_AI_Boss_RatzarQueen"
+          ],
+          "items": [
+            {
+              "name": "Ratzar Queen Acid Gland",
+              "internalName": "re_Bugsitems_QueenAcidGland",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Ratzar Queen Carcass",
+              "internalName": "carcass_Insect_RatzarQueen",
+              "chance": 1,
+              "min": 60000,
+              "max": 80000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Ratzar Worker",
+          "internalNames": [
+            "AI_Insect_RatzarWorker",
+            "MO2_AI_Insect_RatzarWorker",
+            "MO2_AI_Insect_RatzarWorker_Pet"
+          ],
+          "items": [
+            {
+              "name": "Ratzar Antennae",
+              "internalName": "re_Bugsitems_RatzarAntennae",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Ratzar Worker Carcass",
+              "internalName": "carcass_Insect_RatzarWorker",
+              "chance": 1,
+              "min": 4000,
+              "max": 8000,
+              "field": 10525
+            }
+          ]
+        },
+        {
+          "label": "Ratzar Worker Nymph",
+          "internalNames": [
+            "MO2_AI_Insect_RatzarWorkerNymph",
+            "MO2_AI_Insect_RatzarWorkerNymph_Spawned"
+          ],
+          "items": [
+            {
+              "name": "Ratzar Antennae",
+              "internalName": "re_Bugsitems_RatzarAntennae",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Ratzar Worker Carcass",
+              "internalName": "carcass_Insect_RatzarWorker",
+              "chance": 1,
+              "min": 4000,
+              "max": 8000,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "mob|spider": {
+      "key": "mob|spider",
+      "scope": "mob",
+      "label": "Spider",
+      "profileCount": 1,
+      "definitionCount": 1,
+      "profiles": [
+        {
+          "label": "Mountain Spider",
+          "internalNames": [
+            "MO2_AI_Spider_MountainSpider"
+          ],
+          "items": [
+            {
+              "name": "Mountain Spider Leg",
+              "internalName": "re_Animalitems_MountainSpider",
+              "chance": 1,
+              "min": 1,
+              "max": 1,
+              "field": 10354
+            },
+            {
+              "name": "Mountain Spider Carcass",
+              "internalName": "carcass_Spider_MountainSpider",
+              "chance": 1,
+              "min": 5000,
+              "max": 5500,
+              "field": 10525
+            }
+          ]
+        }
+      ]
+    },
+    "npc|priest": {
+      "key": "npc|priest",
+      "scope": "npc",
+      "label": "Priest",
+      "profileCount": 1,
+      "definitionCount": 4,
+      "profiles": [
+        {
+          "label": "Priest",
+          "internalNames": [
+            "AI_NPC_PriestBlueSarducaanA",
+            "AI_NPC_PriestRedSarducaa",
+            "MO2_AI_NPC_PriestBlue_Sarducaan",
+            "MO2_AI_NPC_PriestRed_Sarducaan"
+          ],
+          "items": [
+            {
+              "name": "Human Carcass",
+              "internalName": "carcass_Human",
+              "chance": 1,
+              "min": 1500,
+              "max": 2000,
+              "field": 12244
+            }
+          ]
+        }
+      ]
+    },
+    "resource|stonewood": {
+      "key": "resource|stonewood",
+      "scope": "resource",
+      "label": "Stonewood",
+      "profileCount": 2,
+      "definitionCount": 2,
+      "profiles": [
+        {
+          "label": "Stonewood",
+          "internalNames": [
+            "RF_aStonewood"
+          ],
+          "items": [
+            {
+              "name": "Rough Amber",
+              "internalName": "currency_AmberB",
+              "chance": 0.001,
+              "min": 1,
+              "max": 1,
+              "field": 10535
+            },
+            {
+              "name": "Small Rough Amber",
+              "internalName": "currency_AmberC",
+              "chance": 0.002,
+              "min": 1,
+              "max": 1,
+              "field": 10536
+            }
+          ]
+        },
+        {
+          "label": "Stonewood1",
+          "internalNames": [
+            "RF_aStonewood1"
+          ],
+          "items": [
+            {
+              "name": "Rough Amber",
+              "internalName": "currency_AmberB",
+              "chance": 0.001,
+              "min": 1,
+              "max": 1,
+              "field": 10535
+            },
+            {
+              "name": "Small Rough Amber",
+              "internalName": "currency_AmberC",
+              "chance": 0.002,
+              "min": 1,
+              "max": 1,
+              "field": 10536
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

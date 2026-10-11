@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Basileus">
+  <g stroke="#163522" stroke-width="2.5" stroke-linejoin="round">
+    <path fill="#397b45" d="M32 57V19M30 42C16 43 8 36 9 27c12-2 20 4 23 13Zm4 2c13-1 21-8 20-17-12-2-20 4-22 15Z"/>
+    <path fill="#75ad56" d="M31 32C21 27 18 18 23 11c9 2 13 9 10 19Zm3 0c10-5 13-14 8-21-9 2-13 10-10 19Z"/>
+    <path fill="#e0b83c" stroke="#674d0d" d="m20 16 5-9 7 8 7-8 6 9-3 7H23Z"/>
+  </g>
+</svg>

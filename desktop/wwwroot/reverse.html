@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0d0c" />
+    <title>Reverse Workshop | Mortal Nexus</title>
+    <meta
+      name="description"
+      content="Choose the materials you own or a target output and calculate Mortal Online II production routes."
+    />
+    <link rel="icon" href="/assets/mortal-nexus-app-icon-v2.png" type="image/png" />
+    <link rel="stylesheet" href="/styles.css?v=4" />
+    <link rel="stylesheet" href="/reverse.css?v=3" />
+    <link rel="stylesheet" href="/site-shell.css?v=24" />
+  </head>
+  <body class="reverse-page">
+    <header class="masthead reverse-masthead">
+      <div class="masthead-main reverse-masthead-main">
+        <a class="brand" href="/" aria-label="Mortal Nexus home">
+          <img src="/assets/mortal-nexus-app-icon-v2.png" alt="" width="40" height="40" />
+          <span class="brand-copy">
+            <strong>Mortal Nexus</strong>
+            <small>Mortal Online II Reference</small>
+          </span>
+        </a>
+
+        <nav class="reverse-site-nav" aria-label="Site navigation">
+          <a class="text-button" href="/">Reference</a>
+          <a class="text-button" href="/crafting">Crafting</a>
+          <a class="text-button" href="/extraction">Extraction</a>
+          <a class="text-button" href="/refining">Refining</a>
+          <a class="text-button" href="/butchery">Butchery</a>
+          <a class="text-button" href="/alchemy">Alchemy</a>
+          <a class="text-button" href="/cooking">Cooking</a>
+          <a class="text-button active" href="/reverse" aria-current="page">Reverse</a>
+          <a class="text-button" href="/building">Building</a>
+          <a class="text-button" href="/creatures">Creature Codex</a>
+          <a class="text-button" href="/map">Live map</a>
+          <a class="text-button donate-button" href="https://www.paypal.com/donate/?hosted_button_id=677CRL426BE9Q" target="_blank" rel="noreferrer">Donate</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="reverse-main">
+      <header class="reverse-intro">
+        <div>
+          <p class="kicker">Production planner</p>
+          <h1>What can I make?</h1>
+          <p>Build from the materials you have, or work backward from a target material.</p>
+        </div>
+        <div class="reverse-data-badge">
+          <span><strong id="materialCount">0</strong> materials</span>
+          <small><strong id="routeCount">0</strong> production routes</small>
+        </div>
+      </header>
+
+      <div class="reverse-mode-tabs" role="tablist" aria-label="Planner mode">
+        <button
+          id="inventoryModeTab"
+          class="active"
+          type="button"
+          role="tab"
+          aria-selected="true"
+          aria-controls="inventoryPanel"
+          data-mode="inventory"
+        >
+          <i data-lucide="package-open" aria-hidden="true"></i>
+          Use my materials
+        </button>
+        <button
+          id="targetModeTab"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          aria-controls="targetPanel"
+          data-mode="target"
+        >
+          <i data-lucide="crosshair" aria-hidden="true"></i>
+          Plan a target
+        </button>
+      </div>
+
+      <section class="reverse-tool" aria-labelledby="reverseHeading">
+        <div class="reverse-controls">
+          <section id="inventoryPanel" role="tabpanel" aria-labelledby="inventoryModeTab">
+            <div class="reverse-heading">
+              <div>
+                <span class="eyebrow">Available stock</span>
+                <h2 id="reverseHeading">Add the materials you have</h2>
+              </div>
+              <button id="clearInventoryBtn" class="quiet-command" type="button">Clear</button>
+            </div>
+
+            <div class="inventory-add-row">
+              <label class="reverse-field">
+                <span>Material</span>
+                <input
+                  id="inventoryMaterialInput"
+                  type="search"
+                  list="inventoryMaterialOptions"
+                  autocomplete="off"
+                  placeholder="Search a material..."
+                />
+                <datalist id="inventoryMaterialOptions"></datalist>
+              </label>
+              <button id="addMaterialBtn" class="primary-command" type="button">
+                <i data-lucide="plus" aria-hidden="true"></i>
+                Add
+              </button>
+            </div>
+
+            <div id="quickMaterials" class="quick-materials" aria-label="Common materials"></div>
+
+            <div class="inventory-list-heading">
+              <span>Your inventory</span>
+              <small id="inventoryCount">0 materials</small>
+            </div>
+            <div id="selectedInventory" class="selected-inventory"></div>
+          </section>
+
+          <section id="targetPanel" role="tabpanel" aria-labelledby="targetModeTab" hidden>
+            <div class="reverse-heading">
+              <div>
+                <span class="eyebrow">Target setup</span>
+                <h2>What do you want to make?</h2>
+              </div>
+            </div>
+
+            <div class="reverse-field-grid">
+              <label class="reverse-field">
+                <span>Target material</span>
+                <select id="targetSelect"></select>
+              </label>
+              <label class="reverse-field">
+                <span>Amount wanted</span>
+                <input
+                  id="amountInput"
+                  type="number"
+                  min="1"
+                  max="100000000"
+                  step="1"
+                  inputmode="numeric"
+                  value="1000"
+                />
+              </label>
+            </div>
+
+            <div class="reverse-quick-amounts" aria-label="Quick amounts">
+              <span>Quick amount</span>
+              <button type="button" data-amount="100">100</button>
+              <button type="button" data-amount="1000">1,000</button>
+              <button type="button" data-amount="5000">5,000</button>
+              <button type="button" data-amount="10000">10,000</button>
+            </div>
+          </section>
+
+          <div class="reverse-options">
+            <label class="reverse-toggle">
+              <input id="cladeBonus" type="checkbox" />
+              <span class="toggle-track" aria-hidden="true"></span>
+              <span>
+                <strong>Include clade bonuses</strong>
+                <small>Uses the relevant 3%, 5%, or 10% yield bonus</small>
+              </span>
+            </label>
+            <label class="reverse-toggle">
+              <input id="showNearMatches" type="checkbox" checked />
+              <span class="toggle-track" aria-hidden="true"></span>
+              <span>
+                <strong id="nearMatchTitle">Show near matches</strong>
+                <small id="nearMatchCopy">Includes recipes missing one inventory material</small>
+              </span>
+            </label>
+          </div>
+
+          <details class="group-filter">
+            <summary>
+              <span>Processes to include</span>
+              <small id="groupSummary"></small>
+            </summary>
+            <div id="groupFilters" class="group-filter-grid"></div>
+          </details>
+        </div>
+
+        <aside class="reverse-summary" aria-live="polite">
+          <span class="eyebrow">Current plan</span>
+          <h2 id="summaryTitle">Add your materials</h2>
+          <p id="summaryCopy">Your craftable routes will appear here.</p>
+          <dl class="summary-metrics">
+            <div>
+              <dt id="primaryMetricLabel">Ready now</dt>
+              <dd id="matchingCount">0</dd>
+            </div>
+            <div>
+              <dt id="secondaryMetricLabel">Near matches</dt>
+              <dd id="secondaryCount">0</dd>
+            </div>
+          </dl>
+          <div id="bestRoute" class="best-route"></div>
+        </aside>
+      </section>
+
+      <section class="reverse-results-section" aria-labelledby="resultsHeading">
+        <div class="reverse-results-heading">
+          <div>
+            <p id="resultsKicker" class="kicker">Inventory routes</p>
+            <h2 id="resultsHeading">Recipes you can run</h2>
+          </div>
+          <label class="route-search">
+            <i data-lucide="search" aria-hidden="true"></i>
+            <input id="routeSearch" type="search" placeholder="Filter outputs, inputs, or machines..." />
+          </label>
+        </div>
+
+        <div id="routeResults" class="route-results"></div>
+        <div id="emptyRoutes" class="empty-routes">
+          <i data-lucide="package-plus" aria-hidden="true"></i>
+          <strong>Add a material to begin</strong>
+          <span>Production routes will update as your inventory changes.</span>
+        </div>
+      </section>
+
+      <footer class="site-footer reverse-footer">
+        <span>Calculations use every documented extraction, refining, butchery, and botany route in the workbook.</span>
+        <span id="dataStamp"></span>
+      </footer>
+    </main>
+
+    <script src="/data.js"></script>
+    <script src="/assets/vendor/lucide.min.js"></script>
+  <script src="/reverse.js?v=4"></script>
+    <script src="/site-shell.js?v=22"></script>
+  </body>
+</html>

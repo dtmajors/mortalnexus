@@ -1,0 +1,1955 @@
+{
+  "format": "mortal-nexus-sarducaa-service-catalog",
+  "version": 1,
+  "generatedAt": "2026-07-30T17:12:33.150Z",
+  "source": "C:\\Users\\bleh\\Documents\\Nem Test\\MO2_Sarducca_Coordinate_Research\\coordinates\\sarducaa_useful_actor_keyword_census.json",
+  "method": "Typed BP_Workbench actor instances from city maps; exact world transforms converted with the existing 18-anchor affine calibration.",
+  "markerCount": 72,
+  "verified": true,
+  "markers": [
+    {
+      "id": "archive-pak-service-9f1b9ee2417eab",
+      "label": "Armor Crafting - Ashir",
+      "category": "service",
+      "icon": "service-crafting",
+      "manualIcon": true,
+      "notes": "Exact client-baked armor crafting actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 372.8,
+      "y": 1825.9,
+      "archived": true,
+      "sourceType": "Armor Crafting",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Ashir\\City_ashir.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Crafting_Armor"
+      ],
+      "worldX": -6324.929002411313,
+      "worldY": -589.2330588449539,
+      "worldZ": -331.6261003305077,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-adead88eadd7bd",
+      "label": "Armor Crafting - Bedia",
+      "category": "service",
+      "icon": "service-crafting",
+      "manualIcon": true,
+      "notes": "Exact client-baked armor crafting actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 2447.48,
+      "y": 2549.75,
+      "archived": true,
+      "sourceType": "Armor Crafting",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Bedia\\City_Bedia.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Crafting_Armor"
+      ],
+      "worldX": 3215.717413721676,
+      "worldY": -3759.582616800095,
+      "worldZ": -2.29660628807557,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-01e3b9a09bfeb3",
+      "label": "Armor Crafting - Kam",
+      "category": "service",
+      "icon": "service-crafting",
+      "manualIcon": true,
+      "notes": "Exact client-baked armor crafting actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 3111.62,
+      "y": 551.62,
+      "archived": true,
+      "sourceType": "Armor Crafting",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Kam\\City_Kam.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Crafting_Armor"
+      ],
+      "worldX": 6105.208165196646,
+      "worldY": 5469.3647684369935,
+      "worldZ": -327.71728016382804,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-2b558172d19d4a",
+      "label": "Armor Crafting - Kwar Migdal",
+      "category": "service",
+      "icon": "service-crafting",
+      "manualIcon": true,
+      "notes": "Exact client-baked armor crafting actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 3425.67,
+      "y": 2731.31,
+      "archived": true,
+      "sourceType": "Armor Crafting",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Kwar_Migdal\\City_Kwar_Migdal.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Crafting_Armor"
+      ],
+      "worldX": 7702.26232442862,
+      "worldY": -4520.565099285399,
+      "worldZ": -330.69755250853547,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-5bdb875eb8fbeb",
+      "label": "Armor Crafting - Pash",
+      "category": "service",
+      "icon": "service-crafting",
+      "manualIcon": true,
+      "notes": "Exact client-baked armor crafting actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 1816.42,
+      "y": 670,
+      "archived": true,
+      "sourceType": "Armor Crafting",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Pash\\City_Pash_Vendor_Area.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Crafting_Armor"
+      ],
+      "worldX": 191.21144766,
+      "worldY": 4828.76892191,
+      "worldZ": 0.7999077,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-fde8687400be0a",
+      "label": "Bow Crafting - Ashir",
+      "category": "service",
+      "icon": "service-crafting",
+      "manualIcon": true,
+      "notes": "Exact client-baked bow crafting actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 373.78,
+      "y": 1829.29,
+      "archived": true,
+      "sourceType": "Bow Crafting",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Ashir\\City_ashir.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Crafting_Bow"
+      ],
+      "worldX": -6320.198846860781,
+      "worldY": -604.7390386877271,
+      "worldZ": -331.5612326056512,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-0f1fedd99b9285",
+      "label": "Bow Crafting - Bedia",
+      "category": "service",
+      "icon": "service-crafting",
+      "manualIcon": true,
+      "notes": "Exact client-baked bow crafting actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 2447.96,
+      "y": 2550.77,
+      "archived": true,
+      "sourceType": "Bow Crafting",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Bedia\\City_Bedia.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Crafting_Bow"
+      ],
+      "worldX": 3218.0099098335963,
+      "worldY": -3764.237250262447,
+      "worldZ": -2.2289849776328197,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-29bd757e6686cb",
+      "label": "Bow Crafting - Kam",
+      "category": "service",
+      "icon": "service-crafting",
+      "manualIcon": true,
+      "notes": "Exact client-baked bow crafting actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 3111.31,
+      "y": 553.9,
+      "archived": true,
+      "sourceType": "Bow Crafting",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Kam\\City_Kam.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Crafting_Bow"
+      ],
+      "worldX": 6103.9660744204675,
+      "worldY": 5458.867522062854,
+      "worldZ": -327.6124717625552,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-f94c98cf73a188",
+      "label": "Bow Crafting - Kwar Migdal",
+      "category": "service",
+      "icon": "service-crafting",
+      "manualIcon": true,
+      "notes": "Exact client-baked bow crafting actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 3427.12,
+      "y": 2734.65,
+      "archived": true,
+      "sourceType": "Bow Crafting",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Kwar_Migdal\\City_Kwar_Migdal.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Crafting_Bow"
+      ],
+      "worldX": 7709.116900476852,
+      "worldY": -4535.800517178922,
+      "worldZ": -330.6591150085354,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-6a3a72c6683f35",
+      "label": "Bow Crafting - Pash",
+      "category": "service",
+      "icon": "service-crafting",
+      "manualIcon": true,
+      "notes": "Exact client-baked bow crafting actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 1821.07,
+      "y": 666.29,
+      "archived": true,
+      "sourceType": "Bow Crafting",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Pash\\City_Pash_Vendor_Area.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Crafting_Bow"
+      ],
+      "worldX": 212.19534682000003,
+      "worldY": 4846.14991458,
+      "worldZ": 0.8027321000000001,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-169c75a1ecba77",
+      "label": "Butcher Table - Ashir",
+      "category": "service",
+      "icon": "service-butcher",
+      "manualIcon": true,
+      "notes": "Exact client-baked butcher table actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 375.14,
+      "y": 1823.57,
+      "archived": true,
+      "sourceType": "Butcher Table",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Ashir\\City_ashir.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Butcher_Table"
+      ],
+      "worldX": -6314.397759059345,
+      "worldY": -578.3568978228147,
+      "worldZ": -331.5752891516457,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-85d24ca0ad97bc",
+      "label": "Butcher Table - Bedia",
+      "category": "service",
+      "icon": "service-butcher",
+      "manualIcon": true,
+      "notes": "Exact client-baked butcher table actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 2444.4,
+      "y": 2548.03,
+      "archived": true,
+      "sourceType": "Butcher Table",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Bedia\\City_Bedia.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Butcher_Table"
+      ],
+      "worldX": 3201.5202798563055,
+      "worldY": -3751.8884611925005,
+      "worldZ": -2.2994776942926003,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-3fadd9058f7413",
+      "label": "Butcher Table - Kam",
+      "category": "service",
+      "icon": "service-butcher",
+      "manualIcon": true,
+      "notes": "Exact client-baked butcher table actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 3111.09,
+      "y": 555.66,
+      "archived": true,
+      "sourceType": "Butcher Table",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Kam\\City_Kam.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Butcher_Table"
+      ],
+      "worldX": 6103.09522536,
+      "worldY": 5450.77691448,
+      "worldZ": -327.57696424,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-7c64c1652dc596",
+      "label": "Butcher Table - Kwar Migdal",
+      "category": "service",
+      "icon": "service-butcher",
+      "manualIcon": true,
+      "notes": "Exact client-baked butcher table actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 3421.65,
+      "y": 2735.95,
+      "archived": true,
+      "sourceType": "Butcher Table",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Kwar_Migdal\\City_Kwar_Migdal.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Butcher_Table"
+      ],
+      "worldX": 7684.225315685076,
+      "worldY": -4542.16943034296,
+      "worldZ": -326.49517222951323,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-c3da8d417276fb",
+      "label": "Butcher Table - Pash",
+      "category": "service",
+      "icon": "service-butcher",
+      "manualIcon": true,
+      "notes": "Exact client-baked butcher table actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 1831.69,
+      "y": 681.54,
+      "archived": true,
+      "sourceType": "Butcher Table",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Pash\\City_Pash.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Butcher_Table"
+      ],
+      "worldX": 261.86618614455335,
+      "worldY": 4776.911637165067,
+      "worldZ": 1.5091077850722885,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-4f7547a350bda5",
+      "label": "Cooking Fire - Aur",
+      "category": "service",
+      "icon": "service-cooking",
+      "manualIcon": true,
+      "notes": "Exact client-baked cooking fire actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 1945.03,
+      "y": 3119.54,
+      "archived": true,
+      "sourceType": "Cooking Fire",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Aur\\City_Aur_Buildings.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_CookingFire"
+      ],
+      "worldX": 960.1924970513687,
+      "worldY": -6414.6899828362675,
+      "worldZ": -331.7088316258064,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-615adb35c1b42d",
+      "label": "Cooking Fire - Aur",
+      "category": "service",
+      "icon": "service-cooking",
+      "manualIcon": true,
+      "notes": "Exact client-baked cooking fire actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 1969.2,
+      "y": 3134.84,
+      "archived": true,
+      "sourceType": "Cooking Fire",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Aur\\City_Aur_Buildings.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_CookingFire"
+      ],
+      "worldX": 1071.8201655883954,
+      "worldY": -6483.173713230873,
+      "worldZ": -332.11457795922246,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-624fdff9573ef5",
+      "label": "Cooking Fire - Aur",
+      "category": "service",
+      "icon": "service-cooking",
+      "manualIcon": true,
+      "notes": "Exact client-baked cooking fire actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 1946.7,
+      "y": 3151.24,
+      "archived": true,
+      "sourceType": "Cooking Fire",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Aur\\City_Aur_Buildings.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_CookingFire"
+      ],
+      "worldX": 970.1687363833897,
+      "worldY": -6560.178744800151,
+      "worldZ": -331.8360460958082,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-6803b86bd422c7",
+      "label": "Cooking Fire - Aur",
+      "category": "service",
+      "icon": "service-cooking",
+      "manualIcon": true,
+      "notes": "Exact client-baked cooking fire actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 1940.92,
+      "y": 3113.27,
+      "archived": true,
+      "sourceType": "Cooking Fire",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Aur\\City_Aur_Buildings.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_CookingFire"
+      ],
+      "worldX": 940.9136343496715,
+      "worldY": -6386.215898880508,
+      "worldZ": -332.0848753076536,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-878e5790bcbcb8",
+      "label": "Cooking Fire - Aur",
+      "category": "service",
+      "icon": "service-cooking",
+      "manualIcon": true,
+      "notes": "Exact client-baked cooking fire actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 1948.65,
+      "y": 3138.13,
+      "archived": true,
+      "sourceType": "Cooking Fire",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Aur\\City_Aur_Buildings.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_CookingFire"
+      ],
+      "worldX": 978.1123447272392,
+      "worldY": -6499.826511274925,
+      "worldZ": -332.69988993113196,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-a30f3d792913da",
+      "label": "Cooking Fire - Aur",
+      "category": "service",
+      "icon": "service-cooking",
+      "manualIcon": true,
+      "notes": "Exact client-baked cooking fire actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 1970.62,
+      "y": 3137.28,
+      "archived": true,
+      "sourceType": "Cooking Fire",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Aur\\City_Aur_Buildings.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_CookingFire"
+      ],
+      "worldX": 1078.5006017106984,
+      "worldY": -6494.272463066914,
+      "worldZ": -328.09379670922243,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-42a9acd33f4698",
+      "label": "Cooking Fire - Kam",
+      "category": "service",
+      "icon": "service-cooking",
+      "manualIcon": true,
+      "notes": "Exact client-baked cooking fire actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 3092.64,
+      "y": 563.08,
+      "archived": true,
+      "sourceType": "Cooking Fire",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Kam\\City_Kam.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_CookingFire"
+      ],
+      "worldX": 6019.278531516529,
+      "worldY": 5415.307406701753,
+      "worldZ": -327.3188411609455,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-6317fde8613412",
+      "label": "Cooking Fire - Kam",
+      "category": "service",
+      "icon": "service-cooking",
+      "manualIcon": true,
+      "notes": "Exact client-baked cooking fire actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 3100.71,
+      "y": 563.66,
+      "archived": true,
+      "sourceType": "Cooking Fire",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Kam\\City_Kam.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_CookingFire"
+      ],
+      "worldX": 6056.23569498373,
+      "worldY": 5413.218493295264,
+      "worldZ": -327.3698728807449,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-6f55d2b4a0055d",
+      "label": "Cooking Fire - Kam",
+      "category": "service",
+      "icon": "service-cooking",
+      "manualIcon": true,
+      "notes": "Exact client-baked cooking fire actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 3099.54,
+      "y": 554.96,
+      "archived": true,
+      "sourceType": "Cooking Fire",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Kam\\City_Kam.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_CookingFire"
+      ],
+      "worldX": 6050.201705414175,
+      "worldY": 5453.0950515680015,
+      "worldZ": -327.4407851284244,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-cee2d4d629c574",
+      "label": "Cooking Fire - Kam",
+      "category": "service",
+      "icon": "service-cooking",
+      "manualIcon": true,
+      "notes": "Exact client-baked cooking fire actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 3097.74,
+      "y": 551.35,
+      "archived": true,
+      "sourceType": "Cooking Fire",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Kam\\City_Kam.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_CookingFire"
+      ],
+      "worldX": 6041.73087254201,
+      "worldY": 5469.543861432464,
+      "worldZ": -327.3729546135072,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-d01733a0aaaf2a",
+      "label": "Cooking Fire - Kam",
+      "category": "service",
+      "icon": "service-cooking",
+      "manualIcon": true,
+      "notes": "Exact client-baked cooking fire actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 3111.49,
+      "y": 547.55,
+      "archived": true,
+      "sourceType": "Cooking Fire",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Kam\\City_Kam.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_CookingFire"
+      ],
+      "worldX": 6104.3283214084195,
+      "worldY": 5488.025380201398,
+      "worldZ": -317.00856001139607,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-d4d19334d10812",
+      "label": "Cooking Fire - Kam",
+      "category": "service",
+      "icon": "service-cooking",
+      "manualIcon": true,
+      "notes": "Exact client-baked cooking fire actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 3111.3,
+      "y": 559.39,
+      "archived": true,
+      "sourceType": "Cooking Fire",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Kam\\City_Kam.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_CookingFire"
+      ],
+      "worldX": 6104.33700540407,
+      "worldY": 5433.658189077403,
+      "worldZ": -327.4626859807997,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-d85830d1e9df21",
+      "label": "Cooking Fire - Kam",
+      "category": "service",
+      "icon": "service-cooking",
+      "manualIcon": true,
+      "notes": "Exact client-baked cooking fire actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 3108.87,
+      "y": 548.29,
+      "archived": true,
+      "sourceType": "Cooking Fire",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Kam\\City_Kam.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_CookingFire"
+      ],
+      "worldX": 6092.407260789161,
+      "worldY": 5484.454763208815,
+      "worldZ": -327.4839953403849,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-e98e347eb32d97",
+      "label": "Cooking Fire - Kam",
+      "category": "service",
+      "icon": "service-cooking",
+      "manualIcon": true,
+      "notes": "Exact client-baked cooking fire actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 3098.14,
+      "y": 569.09,
+      "archived": true,
+      "sourceType": "Cooking Fire",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Kam\\City_Kam.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_CookingFire"
+      ],
+      "worldX": 6044.88578570945,
+      "worldY": 5388.115955688612,
+      "worldZ": -327.2036079182464,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-ba2436a7cbe300",
+      "label": "Cooking Station - Ashir",
+      "category": "service",
+      "icon": "service-cooking",
+      "manualIcon": true,
+      "notes": "Exact client-baked cooking station actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 380.72,
+      "y": 1812.6,
+      "archived": true,
+      "sourceType": "Cooking Station",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Ashir\\City_ashir.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Cooking"
+      ],
+      "worldX": -6289.66586611059,
+      "worldY": -527.5606544053835,
+      "worldZ": -331.5612327414253,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-70a56e9d83dfb9",
+      "label": "Crusher - Ashir",
+      "category": "service",
+      "icon": "service-extraction",
+      "manualIcon": true,
+      "notes": "Exact client-baked crusher actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 362.84,
+      "y": 1841.18,
+      "archived": true,
+      "sourceType": "Crusher",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Ashir\\City_ashir.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Extraction_Crusher"
+      ],
+      "worldX": -6369.326544409446,
+      "worldY": -660.1553900875288,
+      "worldZ": -331.7614501786547,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-1cede090f7e2c7",
+      "label": "Crusher - Aur",
+      "category": "service",
+      "icon": "service-extraction",
+      "manualIcon": true,
+      "notes": "Exact client-baked crusher actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 1954.62,
+      "y": 3108.58,
+      "archived": true,
+      "sourceType": "Crusher",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Aur\\City_Aur_Buildings.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Extraction_Crusher"
+      ],
+      "worldX": 1003.2370222699595,
+      "worldY": -6363.644191476263,
+      "worldZ": -333.1628447413188,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-8c1399e425e2be",
+      "label": "Crusher - Belrim",
+      "category": "service",
+      "icon": "service-extraction",
+      "manualIcon": true,
+      "notes": "Exact client-baked crusher actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 414.12,
+      "y": 1216.26,
+      "archived": true,
+      "sourceType": "Crusher",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Belrim\\City_Belrim_Section_03.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Extraction_Crusher"
+      ],
+      "worldX": -6180.957462461021,
+      "worldY": 2214.494057495716,
+      "worldZ": -268.64511351015716,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-a062936db1d5cc",
+      "label": "Crusher - Beth Jedda",
+      "category": "service",
+      "icon": "service-extraction",
+      "manualIcon": true,
+      "notes": "Exact client-baked crusher actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 2425.56,
+      "y": 2204.67,
+      "archived": true,
+      "sourceType": "Crusher",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\BethJedda\\City_BethJedda_Extraction.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Extraction_Crusher"
+      ],
+      "worldX": 3090.0245093351505,
+      "worldY": -2175.905054988103,
+      "worldZ": -18.568340016912902,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-e9c76a1ca5a5a0",
+      "label": "Crusher - Beth Jedda",
+      "category": "service",
+      "icon": "service-extraction",
+      "manualIcon": true,
+      "notes": "Exact client-baked crusher actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 2417.84,
+      "y": 2183.7,
+      "archived": true,
+      "sourceType": "Crusher",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\BethJedda\\City_BethJedda_Section_03.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Extraction_Crusher"
+      ],
+      "worldX": 3053.1872936400005,
+      "worldY": -2080.18467722,
+      "worldZ": -18.50402705,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-0480229625e7a7",
+      "label": "Crusher - Pash",
+      "category": "service",
+      "icon": "service-extraction",
+      "manualIcon": true,
+      "notes": "Exact client-baked crusher actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 1826.04,
+      "y": 660.69,
+      "archived": true,
+      "sourceType": "Crusher",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Pash\\City_Pash_Vendor_Area.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Extraction_Crusher"
+      ],
+      "worldX": 234.50153712130123,
+      "worldY": 4872.246270957321,
+      "worldZ": -0.0991388256844823,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-396c90fe6a6d57",
+      "label": "Furnace - Ashir",
+      "category": "service",
+      "icon": "service-furnace",
+      "manualIcon": true,
+      "notes": "Exact client-baked furnace actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 373.97,
+      "y": 1821.72,
+      "archived": true,
+      "sourceType": "Furnace",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Ashir\\City_ashir.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Extraction_Furnace"
+      ],
+      "worldX": -6319.877648182355,
+      "worldY": -569.9413502421127,
+      "worldZ": -331.56357319925587,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-36119fea45289e",
+      "label": "Furnace - Bedia",
+      "category": "service",
+      "icon": "service-furnace",
+      "manualIcon": true,
+      "notes": "Exact client-baked furnace actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 2445.12,
+      "y": 2549.62,
+      "archived": true,
+      "sourceType": "Furnace",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Bedia\\City_Bedia.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Extraction_Furnace"
+      ],
+      "worldX": 3204.927453293764,
+      "worldY": -3759.1383869769825,
+      "worldZ": -2.3296863095053157,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-07a37132f577dd",
+      "label": "Furnace - Belrim",
+      "category": "service",
+      "icon": "service-furnace",
+      "manualIcon": true,
+      "notes": "Exact client-baked furnace actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 380.52,
+      "y": 1167.53,
+      "archived": true,
+      "sourceType": "Furnace",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Belrim\\City_Belrim_Section_04.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Extraction_Furnace"
+      ],
+      "worldX": -6338.238664136064,
+      "worldY": 2435.847197148114,
+      "worldZ": -268.73819555247815,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-95745ffd43c556",
+      "label": "Furnace - Kam",
+      "category": "service",
+      "icon": "service-furnace",
+      "manualIcon": true,
+      "notes": "Exact client-baked furnace actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 3111.25,
+      "y": 552.69,
+      "archived": true,
+      "sourceType": "Furnace",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Kam\\City_Kam.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Extraction_Furnace"
+      ],
+      "worldX": 6103.585707392219,
+      "worldY": 5464.409996000637,
+      "worldZ": -327.70923459065784,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-706dca9bf175ce",
+      "label": "Furnace - Kwar Migdal",
+      "category": "service",
+      "icon": "service-furnace",
+      "manualIcon": true,
+      "notes": "Exact client-baked furnace actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 3425.06,
+      "y": 2727.99,
+      "archived": true,
+      "sourceType": "Furnace",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Kwar_Migdal\\City_Kwar_Migdal.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Extraction_Furnace"
+      ],
+      "worldX": 7699.203442599025,
+      "worldY": -4505.345834581665,
+      "worldZ": -326.2823577113979,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-1f1239daee63df",
+      "label": "Grinder - Ashir",
+      "category": "service",
+      "icon": "service-extraction",
+      "manualIcon": true,
+      "notes": "Exact client-baked grinder actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 360.51,
+      "y": 1839.9,
+      "archived": true,
+      "sourceType": "Grinder",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Ashir\\City_ashir.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Extraction_Grinder"
+      ],
+      "worldX": -6380.083637876603,
+      "worldY": -654.4592767807378,
+      "worldZ": -331.70950815334004,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-bc30a3448bc329",
+      "label": "Grinder - Aur",
+      "category": "service",
+      "icon": "service-extraction",
+      "manualIcon": true,
+      "notes": "Exact client-baked grinder actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 1950.21,
+      "y": 3108.32,
+      "archived": true,
+      "sourceType": "Grinder",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Aur\\City_Aur_Buildings.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Extraction_Grinder"
+      ],
+      "worldX": 983.0355672728966,
+      "worldY": -6362.786694978804,
+      "worldZ": -333.2013522584249,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-8f1c50fcb80dec",
+      "label": "Grinder - Belrim",
+      "category": "service",
+      "icon": "service-extraction",
+      "manualIcon": true,
+      "notes": "Exact client-baked grinder actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 412,
+      "y": 1215.85,
+      "archived": true,
+      "sourceType": "Grinder",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Belrim\\City_Belrim_Section_03.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Extraction_Grinder"
+      ],
+      "worldX": -6190.710057391891,
+      "worldY": 2216.235628078812,
+      "worldZ": -268.5466192562149,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-3fab106e5b713a",
+      "label": "Grinder - Beth Jedda",
+      "category": "service",
+      "icon": "service-extraction",
+      "manualIcon": true,
+      "notes": "Exact client-baked grinder actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 2428.29,
+      "y": 2204.41,
+      "archived": true,
+      "sourceType": "Grinder",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\BethJedda\\City_BethJedda_Extraction.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Extraction_Grinder"
+      ],
+      "worldX": 3102.4796434668406,
+      "worldY": -2174.5487834492073,
+      "worldZ": -18.53205220786545,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-b69815b7a019a4",
+      "label": "Grinder - Beth Jedda",
+      "category": "service",
+      "icon": "service-extraction",
+      "manualIcon": true,
+      "notes": "Exact client-baked grinder actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 2420.01,
+      "y": 2183.87,
+      "archived": true,
+      "sourceType": "Grinder",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\BethJedda\\City_BethJedda_Section_03.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Extraction_Grinder"
+      ],
+      "worldX": 3063.12474762,
+      "worldY": -2080.77594925,
+      "worldZ": -18.23742394,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-525786ed98d3fa",
+      "label": "Grinder - Pash",
+      "category": "service",
+      "icon": "service-extraction",
+      "manualIcon": true,
+      "notes": "Exact client-baked grinder actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 1822.23,
+      "y": 664.69,
+      "archived": true,
+      "sourceType": "Grinder",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Pash\\City_Pash_Vendor_Area.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Extraction_Grinder"
+      ],
+      "worldX": 217.36927166500328,
+      "worldY": 4853.57939030917,
+      "worldZ": 0.5376702739060443,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-88f7e3643579a6",
+      "label": "Grizzly - Ashir",
+      "category": "service",
+      "icon": "service-extraction",
+      "manualIcon": true,
+      "notes": "Exact client-baked grizzly actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 365.19,
+      "y": 1840.87,
+      "archived": true,
+      "sourceType": "Grizzly",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Ashir\\City_ashir.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Extraction_Grizzly"
+      ],
+      "worldX": -6358.602397157652,
+      "worldY": -658.5514780377324,
+      "worldZ": -331.75817633537196,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-3bfc81f5b5f126",
+      "label": "Grizzly - Aur",
+      "category": "service",
+      "icon": "service-extraction",
+      "manualIcon": true,
+      "notes": "Exact client-baked grizzly actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 1957.08,
+      "y": 3111.48,
+      "archived": true,
+      "sourceType": "Grizzly",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Aur\\City_Aur_Buildings.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Extraction_Grizzly"
+      ],
+      "worldX": 1014.6870592895518,
+      "worldY": -6376.771636726238,
+      "worldZ": -333.0394051458415,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-a3ecf3977fdb7a",
+      "label": "Grizzly - Belrim",
+      "category": "service",
+      "icon": "service-extraction",
+      "manualIcon": true,
+      "notes": "Exact client-baked grizzly actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 414.74,
+      "y": 1213.5,
+      "archived": true,
+      "sourceType": "Grizzly",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Belrim\\City_Belrim_Section_03.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Extraction_Grizzly"
+      ],
+      "worldX": -6178.324138430892,
+      "worldY": 2227.24343351259,
+      "worldZ": -268.97966034309104,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-5f156081890218",
+      "label": "Grizzly - Beth Jedda",
+      "category": "service",
+      "icon": "service-extraction",
+      "manualIcon": true,
+      "notes": "Exact client-baked grizzly actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 2422.91,
+      "y": 2205.54,
+      "archived": true,
+      "sourceType": "Grizzly",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\BethJedda\\City_BethJedda_Extraction.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Extraction_Grizzly"
+      ],
+      "worldX": 3077.973114129738,
+      "worldY": -2180.100942436761,
+      "worldZ": -18.63169065178459,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-95c1f9be28fb40",
+      "label": "Grizzly - Beth Jedda",
+      "category": "service",
+      "icon": "service-extraction",
+      "manualIcon": true,
+      "notes": "Exact client-baked grizzly actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 2412.45,
+      "y": 2183.56,
+      "archived": true,
+      "sourceType": "Grizzly",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\BethJedda\\City_BethJedda_Section_03.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Extraction_Grizzly"
+      ],
+      "worldX": 3028.4959737500003,
+      "worldY": -2079.9391732599997,
+      "worldZ": -18.42435545,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-169beb8a26070a",
+      "label": "Grizzly - Pash",
+      "category": "service",
+      "icon": "service-extraction",
+      "manualIcon": true,
+      "notes": "Exact client-baked grizzly actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 1824.65,
+      "y": 662.98,
+      "archived": true,
+      "sourceType": "Grizzly",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Pash\\City_Pash_Vendor_Area.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Extraction_Grizzly"
+      ],
+      "worldX": 228.30871545038138,
+      "worldY": 4861.624671961221,
+      "worldZ": 0.5126347842138128,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-c7ebc70d51a256",
+      "label": "Guild Stone - Aur",
+      "category": "service",
+      "icon": "service-guild",
+      "manualIcon": true,
+      "notes": "Exact client-baked guild stone actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 1958.93,
+      "y": 3134.89,
+      "archived": true,
+      "sourceType": "Guild Stone",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Aur\\City_Aur_Buildings.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_GuildStone"
+      ],
+      "worldX": 1024.8730451851156,
+      "worldY": -6484.180851243025,
+      "worldZ": -333.6457951023398,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-b4fa2771325a05",
+      "label": "Guild Stone - Belrim",
+      "category": "service",
+      "icon": "service-guild",
+      "manualIcon": true,
+      "notes": "Exact client-baked guild stone actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 386.56,
+      "y": 1169.61,
+      "archived": true,
+      "sourceType": "Guild Stone",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Belrim\\City_Belrim_Section_04.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_GuildStone"
+      ],
+      "worldX": -6310.426541334038,
+      "worldY": 2426.7552469042084,
+      "worldZ": -268.7089320097396,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-abba48a16cad2e",
+      "label": "Guild Stone - Beth Jedda",
+      "category": "service",
+      "icon": "service-guild",
+      "manualIcon": true,
+      "notes": "Exact client-baked guild stone actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 2400.03,
+      "y": 2193.13,
+      "archived": true,
+      "sourceType": "Guild Stone",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\BethJedda\\City_BethJedda_Section_04.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_GuildStone"
+      ],
+      "worldX": 2972.429178218103,
+      "worldY": -2124.799581397503,
+      "worldZ": -18.246588001384993,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-ef2d9aec2ea9ae",
+      "label": "Guild Stone - Pash",
+      "category": "service",
+      "icon": "service-guild",
+      "manualIcon": true,
+      "notes": "Exact client-baked guild stone actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 1802.91,
+      "y": 679.68,
+      "archived": true,
+      "sourceType": "Guild Stone",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Pash\\City_Pash.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_GuildStone"
+      ],
+      "worldX": 130.14537022723417,
+      "worldY": 4783.277684796787,
+      "worldZ": 4.69893133795735,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-6df1fe7dd3b482",
+      "label": "Melee Crafting - Ashir",
+      "category": "service",
+      "icon": "service-crafting",
+      "manualIcon": true,
+      "notes": "Exact client-baked melee crafting actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 372.45,
+      "y": 1826.61,
+      "archived": true,
+      "sourceType": "Melee Crafting",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Ashir\\City_ashir.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Crafting_Melee"
+      ],
+      "worldX": -6326.452667378429,
+      "worldY": -592.5261285273733,
+      "worldZ": -331.72710374093157,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-cbf0d0a2864562",
+      "label": "Melee Crafting - Bedia",
+      "category": "service",
+      "icon": "service-crafting",
+      "manualIcon": true,
+      "notes": "Exact client-baked melee crafting actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 2445.88,
+      "y": 2548.37,
+      "archived": true,
+      "sourceType": "Melee Crafting",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Bedia\\City_Bedia.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Crafting_Melee"
+      ],
+      "worldX": 3208.315547262913,
+      "worldY": -3753.3652111294055,
+      "worldZ": -2.4614692079218443,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-21d8142435cf38",
+      "label": "Melee Crafting - Kam",
+      "category": "service",
+      "icon": "service-crafting",
+      "manualIcon": true,
+      "notes": "Exact client-baked melee crafting actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 3112.79,
+      "y": 552.37,
+      "archived": true,
+      "sourceType": "Melee Crafting",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Kam\\City_Kam.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Crafting_Melee"
+      ],
+      "worldX": 6110.632609659526,
+      "worldY": 5465.990676052519,
+      "worldZ": -327.793155202856,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-08de17cacdb41e",
+      "label": "Melee Crafting - Kwar Migdal",
+      "category": "service",
+      "icon": "service-crafting",
+      "manualIcon": true,
+      "notes": "Exact client-baked melee crafting actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 3426.46,
+      "y": 2731.16,
+      "archived": true,
+      "sourceType": "Melee Crafting",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Kwar_Migdal\\City_Kwar_Migdal.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Crafting_Melee"
+      ],
+      "worldX": 7705.845555154674,
+      "worldY": -4519.8326095207985,
+      "worldZ": -330.79005250853544,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-bd03642d035a66",
+      "label": "Melee Crafting - Pash",
+      "category": "service",
+      "icon": "service-crafting",
+      "manualIcon": true,
+      "notes": "Exact client-baked melee crafting actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 1816.83,
+      "y": 670.56,
+      "archived": true,
+      "sourceType": "Melee Crafting",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Pash\\City_Pash_Vendor_Area.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Crafting_Melee"
+      ],
+      "worldX": 193.13882748,
+      "worldY": 4826.2100758,
+      "worldZ": 0.68174915,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-2e4ac7ba6ac466",
+      "label": "Pet Equipment Crafting - Ashir",
+      "category": "service",
+      "icon": "service-crafting",
+      "manualIcon": true,
+      "notes": "Exact client-baked pet equipment crafting actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 373.14,
+      "y": 1828.7,
+      "archived": true,
+      "sourceType": "Pet Equipment Crafting",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Ashir\\City_ashir.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Crafting_PetEquipment_New"
+      ],
+      "worldX": -6323.159942426431,
+      "worldY": -602.0785775459063,
+      "worldZ": -331.5895021384684,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-924e9ac9632eb7",
+      "label": "Pet Equipment Crafting - Bedia",
+      "category": "service",
+      "icon": "service-crafting",
+      "manualIcon": true,
+      "notes": "Exact client-baked pet equipment crafting actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 2444.94,
+      "y": 2548.02,
+      "archived": true,
+      "sourceType": "Pet Equipment Crafting",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Bedia\\City_Bedia.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Crafting_PetEquipment_New"
+      ],
+      "worldX": 3204.0152117618195,
+      "worldY": -3751.823356617412,
+      "worldZ": -2.3481634141925296,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-d288682ebc2515",
+      "label": "Pet Equipment Crafting - Kam",
+      "category": "service",
+      "icon": "service-crafting",
+      "manualIcon": true,
+      "notes": "Exact client-baked pet equipment crafting actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 3113.6,
+      "y": 555.09,
+      "archived": true,
+      "sourceType": "Pet Equipment Crafting",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Kam\\City_Kam.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Crafting_PetEquipment_New"
+      ],
+      "worldX": 6114.543508899743,
+      "worldY": 5453.575094360508,
+      "worldZ": -315.6591444142052,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-5792c986c2ed2f",
+      "label": "Pet Equipment Crafting - Pash",
+      "category": "service",
+      "icon": "service-crafting",
+      "manualIcon": true,
+      "notes": "Exact client-baked pet equipment crafting actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 1821.58,
+      "y": 666.98,
+      "archived": true,
+      "sourceType": "Pet Equipment Crafting",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Pash\\City_Pash_Vendor_Area.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Crafting_PetEquipment_New"
+      ],
+      "worldX": 214.59047522,
+      "worldY": 4843.04537217,
+      "worldZ": 0.7939869500000001,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-3984dc8654e9a9",
+      "label": "Refining Oven - Belrim",
+      "category": "service",
+      "icon": "service-furnace",
+      "manualIcon": true,
+      "notes": "Exact client-baked refining oven actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 381.28,
+      "y": 1167.51,
+      "archived": true,
+      "sourceType": "Refining Oven",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Belrim\\City_Belrim_Section_04.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Refining_Oven"
+      ],
+      "worldX": -6334.753377581273,
+      "worldY": 2435.9934372368025,
+      "worldZ": -268.77191016531424,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-053130dde742d2",
+      "label": "Shield Crafting - Ashir",
+      "category": "service",
+      "icon": "service-crafting",
+      "manualIcon": true,
+      "notes": "Exact client-baked shield crafting actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 373.32,
+      "y": 1824.08,
+      "archived": true,
+      "sourceType": "Shield Crafting",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Ashir\\City_ashir.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Crafting_Shields"
+      ],
+      "worldX": -6322.6450852920625,
+      "worldY": -580.8419399246591,
+      "worldZ": -331.6430450786309,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-e299dcfa72b1e3",
+      "label": "Shield Crafting - Bedia",
+      "category": "service",
+      "icon": "service-crafting",
+      "manualIcon": true,
+      "notes": "Exact client-baked shield crafting actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 2444.28,
+      "y": 2548.68,
+      "archived": true,
+      "sourceType": "Shield Crafting",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Bedia\\City_Bedia.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Crafting_Shields"
+      ],
+      "worldX": 3201.029701653194,
+      "worldY": -3754.870841896165,
+      "worldZ": -2.350445016534041,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-1908d4554999a6",
+      "label": "Shield Crafting - Kam",
+      "category": "service",
+      "icon": "service-crafting",
+      "manualIcon": true,
+      "notes": "Exact client-baked shield crafting actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 3113.55,
+      "y": 553.08,
+      "archived": true,
+      "sourceType": "Shield Crafting",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Kam\\City_Kam.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Crafting_Shields"
+      ],
+      "worldX": 6114.149654150738,
+      "worldY": 5462.799658676872,
+      "worldZ": -315.667593615216,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-e490b4b86915cf",
+      "label": "Shield Crafting - Kwar Migdal",
+      "category": "service",
+      "icon": "service-crafting",
+      "manualIcon": true,
+      "notes": "Exact client-baked shield crafting actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 3428,
+      "y": 2732.67,
+      "archived": true,
+      "sourceType": "Shield Crafting",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Kwar_Migdal\\City_Kwar_Migdal.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Crafting_Shields"
+      ],
+      "worldX": 7713.015853241515,
+      "worldY": -4526.657790612017,
+      "worldZ": -330.6591150085354,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    },
+    {
+      "id": "archive-pak-service-6c84027eb98832",
+      "label": "Shield Crafting - Pash",
+      "category": "service",
+      "icon": "service-crafting",
+      "manualIcon": true,
+      "notes": "Exact client-baked shield crafting actor placement. This is a typed gameplay workbench, not a keyword or visual-model guess.",
+      "x": 1818.15,
+      "y": 670.1,
+      "archived": true,
+      "sourceType": "Shield Crafting",
+      "source": "Mortal Online 2 Sarducaa PAK typed actor transform",
+      "sourcePackages": [
+        "Cities\\Pash\\City_Pash_Vendor_Area.umap"
+      ],
+      "sourceAssets": [
+        "/Game/Gameplay/Actors/Workbenches/BP_Workbench_Crafting_Shields"
+      ],
+      "worldX": 199.12905498,
+      "worldY": 4828.4317122600005,
+      "worldZ": 0.86357764,
+      "nodeCount": 1,
+      "confidence": "pak-exact-typed-actor",
+      "evidenceKind": "exact",
+      "verified": true,
+      "createdAtIso": "2026-07-30T17:12:33.150Z"
+    }
+  ]
+}

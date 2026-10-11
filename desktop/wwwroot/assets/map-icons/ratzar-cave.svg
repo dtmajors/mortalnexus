@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ratzar cave">
+  <g stroke="#171613" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <path fill="#695e4d" d="M4 57C5 22 15 7 32 6s27 16 28 51Z"/>
+    <path fill="#111518" d="M15 57c1-23 7-34 17-34s16 11 17 34Z"/>
+    <path fill="#768b48" d="m23 35-7-9 11 4 5-7 5 7 11-4-7 9-3 13H26Z"/>
+    <circle cx="28" cy="36" r="2" fill="#ffd954" stroke="none"/>
+    <circle cx="36" cy="36" r="2" fill="#ffd954" stroke="none"/>
+    <path fill="none" stroke="#b6c976" d="m26 47-5 8m17-8 5 8"/>
+  </g>
+</svg>

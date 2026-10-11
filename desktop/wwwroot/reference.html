@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0d0c" />
+    <title>Mortal Nexus | Mortal Online II Reference</title>
+    <meta
+      name="description"
+      content="A fast, searchable Mortal Online II reference for crafting, books, taming, pets, housing, guilds, and world data."
+    />
+    <link rel="icon" href="assets/mortal-nexus-app-icon-v2.png" type="image/png" />
+    <link rel="stylesheet" href="styles.css?v=4" />
+    <link rel="stylesheet" href="/site-shell.css?v=24" />
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="masthead-main">
+        <a class="brand" href="#" data-action="home" aria-label="Mortal Nexus home">
+          <img src="assets/mortal-nexus-app-icon-v2.png" alt="" width="40" height="40" />
+          <span class="brand-copy">
+            <strong>Mortal Nexus</strong>
+            <small>Mortal Online II Reference</small>
+          </span>
+        </a>
+
+        <label class="global-search" for="searchInput">
+          <span class="search-glyph" aria-hidden="true"></span>
+          <input
+            id="searchInput"
+            type="search"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="Search materials, books, creatures, locations..."
+          />
+          <kbd>/</kbd>
+        </label>
+
+        <div class="masthead-actions">
+          <a class="text-button" href="/builder">Builder</a>
+          <a class="text-button" href="/crafting">Crafting</a>
+          <a class="text-button" href="/extraction">Extraction</a>
+          <a class="text-button" href="/refining">Refining</a>
+          <a class="text-button" href="/butchery">Butchery</a>
+          <a class="text-button" href="/alchemy">Alchemy</a>
+          <a class="text-button" href="/cooking">Cooking</a>
+          <a class="text-button" href="/reverse">Reverse</a>
+          <a class="text-button" href="/building">Building</a>
+          <a class="text-button" href="/creatures">Creature Codex</a>
+          <a class="text-button" href="/map">Live map</a>
+          <a class="text-button donate-button" href="https://www.paypal.com/donate/?hosted_button_id=677CRL426BE9Q" target="_blank" rel="noreferrer">Donate</a>
+          <span class="library-count"><strong id="recordTotal">0</strong> entries</span>
+          <button id="mobileNavBtn" class="text-button mobile-only" type="button" aria-expanded="false">
+            Topics
+          </button>
+        </div>
+      </div>
+
+      <nav id="categoryNav" class="category-strip" aria-label="Reference categories"></nav>
+    </header>
+
+    <div class="site-frame">
+      <aside id="topicSidebar" class="topic-sidebar" aria-label="Reference topics">
+        <div class="sidebar-heading">
+          <span>Reference topics</span>
+          <button id="closeMobileNavBtn" class="icon-button mobile-only" type="button" aria-label="Close topics">&times;</button>
+        </div>
+        <nav id="sectionNav" class="section-nav"></nav>
+      </aside>
+
+      <main class="main-content">
+        <section id="directoryView" class="directory-view">
+          <header class="intro">
+            <div class="reference-hero-copy">
+              <p class="kicker">Nexus intelligence archive</p>
+              <h1>Everything Nave.<br /><span>One command index.</span></h1>
+              <p class="intro-copy">
+                Search books, materials, creatures, vendors, builds, and field knowledge without digging through scattered references.
+              </p>
+              <div id="popularSearches" class="popular-searches" aria-label="Popular searches"></div>
+            </div>
+            <div class="reference-overview" aria-label="Reference overview">
+              <div class="reference-stat reference-stat-primary"><i data-lucide="database"></i><span><strong id="overviewRecordTotal">0</strong><small>Indexed entries</small></span></div>
+              <div class="reference-stat"><i data-lucide="layers-3"></i><span><strong id="overviewTopicTotal">0</strong><small>Knowledge topics</small></span></div>
+              <div class="reference-stat"><i data-lucide="network"></i><span><strong id="overviewCategoryTotal">0</strong><small>Core divisions</small></span></div>
+              <div class="reference-stat reference-stat-live"><i data-lucide="activity"></i><span><strong>LIVE</strong><small>Search system</small></span></div>
+            </div>
+          </header>
+
+          <div class="section-rule">
+            <h2 id="directoryTitle">Browse the reference</h2>
+            <span id="directorySummary"></span>
+          </div>
+          <div id="categoryDirectory" class="category-directory"></div>
+        </section>
+
+        <section id="browseView" class="browse-view" hidden>
+          <header class="browse-header">
+            <div>
+              <p id="browseKicker" class="kicker">Reference results</p>
+              <h1 id="resultsTitle">Search results</h1>
+              <p id="resultCount" class="result-count"></p>
+            </div>
+            <button id="copyShareBtn" class="text-button" type="button">Copy link</button>
+          </header>
+
+          <div class="browse-toolbar" aria-label="Result controls">
+            <select id="typeFilter" aria-label="Filter by record type"></select>
+            <select id="sortSelect" aria-label="Sort results">
+              <option value="relevance">Relevance</option>
+              <option value="title">Name A-Z</option>
+              <option value="section">Topic</option>
+            </select>
+            <button id="clearFiltersBtn" class="text-button" type="button">Clear filters</button>
+          </div>
+
+          <div id="activeFilters" class="active-filters"></div>
+          <div id="results" class="results"></div>
+        </section>
+
+        <footer class="site-footer">
+          <span>Community-maintained Mortal Online II reference.</span>
+          <span id="dataStamp"></span>
+        </footer>
+      </main>
+    </div>
+
+    <div id="mobileNavOverlay" class="mobile-nav-overlay" hidden></div>
+    <div id="drawerOverlay" class="drawer-overlay" hidden></div>
+    <aside id="detailDrawer" class="detail-drawer" aria-hidden="true" aria-label="Record details">
+      <div class="drawer-toolbar">
+        <span>Reference entry</span>
+        <button id="closeDrawerBtn" class="icon-button" type="button" aria-label="Close details">&times;</button>
+      </div>
+      <div id="drawerContent"></div>
+    </aside>
+
+    <script src="data.js"></script>
+    <script src="app.js?v=2"></script>
+    <script src="/site-shell.js?v=22"></script>
+  </body>
+</html>

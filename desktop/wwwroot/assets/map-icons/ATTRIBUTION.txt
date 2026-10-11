@@ -1,0 +1,15 @@
+Creature, character, camp, plant, and herb icons are derived from Twemoji.
+
+Twemoji copyright 2020 Twitter, Inc. and other contributors.
+Licensed under CC-BY 4.0:
+https://creativecommons.org/licenses/by/4.0/
+
+Source:
+https://github.com/jdecked/twemoji
+
+The town, cave, and wayshrine images were supplied by the project owner.
+The red-town, white-stone, tan-stone, grey-ore, calamine, orange-spider, stone-lizard, terror-bird, campodon, platybelodon, snapping-turtle, scorpion, panther, yellow-cepa, whitewood, and wooden-house images were created for Mortal Nexus.
+
+The source-* creature portraits are game screenshots from the project owner's prior
+community map at https://www.mortalonlinemap.info/ and are used for the corresponding
+Mortal Online 2 locations in Mortal Nexus.

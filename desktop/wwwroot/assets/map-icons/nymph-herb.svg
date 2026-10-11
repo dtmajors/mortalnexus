@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Nymph Herb">
+  <defs>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#82b94f"/><stop offset="1" stop-color="#284f2d"/>
+    </linearGradient>
+  </defs>
+  <g stroke="#152b20" stroke-width="2" stroke-linejoin="round">
+    <path fill="url(#leaf)" d="M31 53C17 57 8 49 10 39c10-4 19 0 23 10C25 35 27 25 34 20c8 7 8 19 1 29 6-11 15-16 24-11 1 11-10 20-25 16Z"/>
+    <path fill="#aa355f" d="M31 38V14h3v24Z"/>
+    <g fill="#e65a83" stroke="#6f183c">
+      <circle cx="27" cy="14" r="5"/><circle cx="37" cy="14" r="5"/>
+      <circle cx="30" cy="7" r="5"/><circle cx="35" cy="7" r="5"/>
+      <circle cx="32" cy="20" r="6"/>
+    </g>
+    <circle cx="32" cy="13" r="3" fill="#ffd0dc" stroke="none"/>
+  </g>
+</svg>

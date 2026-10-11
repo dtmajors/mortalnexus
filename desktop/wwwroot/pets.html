@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0d0c" />
+    <title>Pet Planner | Mortal Nexus</title>
+    <meta
+      name="description"
+      content="Plan Mortal Online II pet-point loadouts with Creature Control, Advanced Creature Control, Herding, and exact known pet costs."
+    />
+    <link rel="icon" href="/assets/mortal-nexus-app-icon-v2.png" type="image/png" />
+    <link rel="stylesheet" href="/styles.css?v=4" />
+    <link rel="stylesheet" href="/pets.css?v=2" />
+    <link rel="stylesheet" href="/site-shell.css?v=24" />
+  </head>
+  <body class="pets-page">
+    <header class="masthead pets-masthead">
+      <div class="masthead-main pets-masthead-main">
+        <a class="brand" href="/" aria-label="Mortal Nexus home">
+          <img src="/assets/mortal-nexus-app-icon-v2.png" alt="" width="40" height="40" />
+          <span class="brand-copy">
+            <strong>Mortal Nexus</strong>
+            <small>Mortal Online II Reference</small>
+          </span>
+        </a>
+
+        <nav class="pets-site-nav" aria-label="Site navigation">
+          <a class="text-button" href="/">Reference</a>
+          <a class="text-button" href="/crafting">Crafting</a>
+          <a class="text-button" href="/extraction">Extraction</a>
+          <a class="text-button" href="/refining">Refining</a>
+          <a class="text-button" href="/butchery">Butchery</a>
+          <a class="text-button" href="/alchemy">Alchemy</a>
+          <a class="text-button" href="/cooking">Cooking</a>
+          <a class="text-button" href="/reverse">Reverse</a>
+          <a class="text-button" href="/building">Building</a>
+          <a class="text-button active" href="/pets" aria-current="page">Pets</a>
+          <a class="text-button" href="/map">Live map</a>
+          <a class="text-button donate-button" href="https://www.paypal.com/donate/?hosted_button_id=677CRL426BE9Q" target="_blank" rel="noreferrer">Donate</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="pets-main">
+      <header class="pets-intro">
+        <div>
+          <p class="kicker">Taming and domination</p>
+          <h1>Pet Planner</h1>
+          <p>Build a two-pet loadout using your real Creature Control, Advanced Creature Control, and Herding skills.</p>
+        </div>
+        <div class="pets-data-badge">
+          <span><strong id="profileCount">0</strong> pet profiles</span>
+          <small><strong id="levelPointCount">0</strong> known level costs</small>
+        </div>
+      </header>
+
+      <section class="pet-planner" aria-labelledby="plannerHeading">
+        <div class="pet-controls">
+          <div class="pet-heading">
+            <span class="eyebrow">Loadout setup</span>
+            <h2 id="plannerHeading">Creature Control and pets</h2>
+          </div>
+
+          <div class="pet-skill-grid">
+            <label class="pet-field control-skill-field">
+              <span>Creature Control</span>
+              <input id="controlSkillInput" type="number" min="0" max="100" step="1" inputmode="numeric" value="100" />
+            </label>
+            <label class="pet-field control-skill-field">
+              <span>Advanced Creature Control</span>
+              <input id="advancedControlSkillInput" type="number" min="0" max="100" step="1" inputmode="numeric" value="100" />
+            </label>
+            <label class="pet-field control-skill-field">
+              <span>Herding</span>
+              <input id="herdingSkillInput" type="number" min="0" max="100" step="1" inputmode="numeric" value="91" />
+            </label>
+          </div>
+          <p class="pet-data-note">
+            Pet costs are the workbook's recorded max-lore values. The required zoology lineage is shown on each selected pet; lower relevant lore costs more PP in game, so these figures are minimums unless your lore is capped.
+          </p>
+
+          <div class="pet-slots">
+            <section class="pet-slot" aria-labelledby="petOneHeading">
+              <header>
+                <span>Slot 1</span>
+                <strong id="petOneHeading">First pet</strong>
+              </header>
+              <div class="pet-slot-fields">
+                <label class="pet-field">
+                  <span>Pet</span>
+                  <select id="petOneSelect"></select>
+                </label>
+                <label class="pet-field">
+                  <span>Known level</span>
+                  <select id="petOneLevel"></select>
+                </label>
+              </div>
+              <p id="petOneDetails" class="pet-slot-details"></p>
+            </section>
+
+            <section class="pet-slot" aria-labelledby="petTwoHeading">
+              <header>
+                <span>Slot 2</span>
+                <strong id="petTwoHeading">Second pet</strong>
+              </header>
+              <div class="pet-slot-fields">
+                <label class="pet-field">
+                  <span>Pet</span>
+                  <select id="petTwoSelect"></select>
+                </label>
+                <label class="pet-field">
+                  <span>Known level</span>
+                  <select id="petTwoLevel"></select>
+                </label>
+              </div>
+              <p id="petTwoDetails" class="pet-slot-details"></p>
+            </section>
+          </div>
+        </div>
+
+        <aside class="pet-summary" aria-live="polite">
+          <span class="eyebrow">Point budget</span>
+          <h2 id="loadoutStatus">Loadout fits</h2>
+          <p id="loadoutCopy"></p>
+
+          <dl class="pet-summary-metrics">
+            <div>
+              <dt>Effective cap</dt>
+              <dd id="pointCap">0</dd>
+            </div>
+            <div>
+              <dt>Points used</dt>
+              <dd id="pointsUsed">0</dd>
+            </div>
+            <div>
+              <dt>Remaining</dt>
+              <dd id="pointsRemaining">0</dd>
+            </div>
+          </dl>
+
+          <div class="point-meter" aria-hidden="true">
+            <span id="pointMeterFill"></span>
+          </div>
+          <div id="skillBreakdown" class="skill-breakdown"></div>
+          <div id="loadoutBreakdown" class="loadout-breakdown"></div>
+        </aside>
+      </section>
+
+      <section class="pet-reference-band" aria-labelledby="combatHeading">
+        <div class="pet-reference-heading">
+          <div>
+            <p class="kicker">Combat reference</p>
+            <h2 id="combatHeading">Known pet profiles</h2>
+          </div>
+          <label class="pet-field compact-field">
+            <span>Profile</span>
+            <select id="combatProfileSelect"></select>
+          </label>
+        </div>
+        <div id="combatProfileDetails" class="profile-detail-grid"></div>
+      </section>
+
+      <section class="pet-reference-band" aria-labelledby="feedingHeading">
+        <div class="pet-reference-heading">
+          <div>
+            <p class="kicker">Feeding reference</p>
+            <h2 id="feedingHeading">Known food values</h2>
+          </div>
+          <label class="pet-field compact-field">
+            <span>Animal group</span>
+            <select id="feedingSelect"></select>
+          </label>
+        </div>
+        <div id="feedingDetails" class="feeding-detail-grid"></div>
+      </section>
+
+      <footer class="site-footer pets-footer">
+        <span>Exact pet costs are used. Advanced Creature Control adds PP; Herding reduces the penalty for every pet after the first and reaches maximum benefit at 91.</span>
+        <span id="dataStamp"></span>
+      </footer>
+    </main>
+
+    <script src="/data.js"></script>
+    <script src="/pets.js?v=2"></script>
+    <script src="/site-shell.js?v=22"></script>
+  </body>
+</html>

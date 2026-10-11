@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Wooden house">
+  <path fill="#4b2b19" stroke="#21140d" stroke-width="3" stroke-linejoin="round" d="M5 29 32 7l27 22-5 7-22-17L10 36Z"/>
+  <path fill="#9a5b2f" stroke="#3a2114" stroke-width="3" stroke-linejoin="round" d="M12 31 32 16l20 15v26H12Z"/>
+  <path fill="none" stroke="#6f3c22" stroke-width="3" d="M14 38h36M14 47h36M22 27v30M42 27v30"/>
+  <path fill="#4a2a1b" stroke="#24150e" stroke-width="2" d="M27 39h11v18H27Z"/>
+  <path fill="#f4bd4f" stroke="#3a2114" stroke-width="2" d="M16 34h8v8h-8ZM41 34h7v8h-7Z"/>
+  <circle cx="35" cy="48" r="1.4" fill="#dcae56"/>
+</svg>

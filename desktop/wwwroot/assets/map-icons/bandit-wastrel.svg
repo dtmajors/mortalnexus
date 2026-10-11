@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Wastrel">
+  <path fill="#202a31" stroke="#0a0f13" stroke-width="3" d="M32 5 53 14v17c0 13-8 23-21 28C19 54 11 44 11 31V14Z"/>
+  <path fill="#69757c" d="m16 17 16-7 16 7v14c0 10-6 18-16 23-10-5-16-13-16-23Z"/>
+  <path fill="#2c353a" d="m17 22 8-11 7 5 6-5 9 12-6 8H23Z"/>
+  <path fill="#cfab83" d="M23 27h18v11l-9 8-9-8Z"/>
+  <path fill="#3b454a" d="M18 36h28l-5 12-9 6-9-6Z"/>
+  <path fill="none" stroke="#e8eef0" stroke-width="3" stroke-linecap="round" d="m25 32 4 1m10-1-4 1"/>
+  <path fill="none" stroke="#aeb7bc" stroke-width="2.5" d="m16 17 6 4-4 6m30-10-6 4 4 6"/>
+</svg>

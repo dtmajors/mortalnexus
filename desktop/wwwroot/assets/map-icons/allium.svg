@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Allium">
+  <path d="M32 58V26" stroke="#3f7c45" stroke-width="5" stroke-linecap="round"/>
+  <g fill="#9b65d8" stroke="#39205f" stroke-width="1.7">
+    <circle cx="32" cy="18" r="8"/><circle cx="22" cy="20" r="7"/><circle cx="42" cy="20" r="7"/><circle cx="26" cy="10" r="7"/><circle cx="38" cy="10" r="7"/><circle cx="32" cy="7" r="6"/>
+  </g>
+  <path fill="#4d9552" stroke="#173c25" stroke-width="2.5" d="M30 48C18 50 10 45 9 37c10-2 18 2 23 9Zm4 0c10-7 18-7 23-1-5 8-14 9-23 5Z"/>
+</svg>
